@@ -60,18 +60,6 @@
           },
           "defaultConfiguration": "production"
         },
-        "serve": {
-          "builder": "@angular/build:dev-server",
-          "configurations": {
-            "production": {
-              "buildTarget": "ragnarok-classic-library:build:production"
-            },
-            "development": {
-              "buildTarget": "ragnarok-classic-library:build:development"
-            }
-          },
-          "defaultConfiguration": "development"
-        },
         "extract-i18n": {
           "builder": "@angular/build:extract-i18n"
         },
