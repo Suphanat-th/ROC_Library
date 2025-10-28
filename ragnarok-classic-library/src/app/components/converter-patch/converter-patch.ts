@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { ItemDbService } from '../../services/itemDbService/itemDbService';
-import { CommonModule } from '@angular/common';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import html2canvas from 'html2canvas';
 import { ConverterPatchImage } from './converter-patch-image/converter-patch-image';
 import { ConverterPatchHeaderInfo } from './converter-patch-header-info/converter-patch-header-info';
@@ -27,9 +27,21 @@ export class ConverterPatch implements OnInit {
    *
    */
 
-  constructor(private itemService: ItemDbService) {}
+  constructor(
+    private itemService: ItemDbService,
+    @Inject(PLATFORM_ID) private platformId: Object,
+  ) {}
 
   ngOnInit() {
+    if (isPlatformBrowser(this.platformId)) {
+      // เรียก html-to-image เฉพาะฝั่ง browser
+      import('html-to-image').then((htmlToImage) => {
+        htmlToImage
+          .toPng(document.getElementById('item')!)
+          .then((dataUrl: string) => console.log(dataUrl))
+          .catch((err: any) => console.error(err));
+      });
+    }
     this.itemService.loadItems();
   }
 
@@ -45,28 +57,28 @@ export class ConverterPatch implements OnInit {
     return text;
   }
 
-captureCard(elementId: string) {
-  const element = document.getElementById('item' + elementId);
-  if (!element) return;
+  captureCard(elementId: string) {
+    const element = document.getElementById('item' + elementId);
+    if (!element) return;
 
-  // ให้แน่ใจว่า render เสร็จก่อน (ป้องกัน gradient หาย)
-  setTimeout(() => {
-    htmlToImage
-      .toPng(element, {
-        backgroundColor: 'transparent', // หรือกำหนดสีพื้นหลังถ้าอยาก
-        pixelRatio: 1,                   // ความละเอียดสูงขึ้น (ภาพคมกว่า)
-        quality: 1,                      // ค่าระหว่าง 0 - 1
-        cacheBust: true,                 // ป้องกัน cache เก่าจาก style เดิม
-      })
-      .then((dataUrl) => {
-        const link = document.createElement('a');
-        link.download = `Item${elementId}.png`;
-        link.href = dataUrl;
-        link.click();
-      })
-      .catch((err) => {
-        console.error('capture error:', err);
-      });
-  }, 300); // หน่วงให้ CSS โหลดครบก่อน
-}
+    // ให้แน่ใจว่า render เสร็จก่อน (ป้องกัน gradient หาย)
+    setTimeout(() => {
+      htmlToImage
+        .toPng(element, {
+          backgroundColor: 'transparent', // หรือกำหนดสีพื้นหลังถ้าอยาก
+          pixelRatio: 1, // ความละเอียดสูงขึ้น (ภาพคมกว่า)
+          quality: 1, // ค่าระหว่าง 0 - 1
+          cacheBust: true, // ป้องกัน cache เก่าจาก style เดิม
+        })
+        .then((dataUrl) => {
+          const link = document.createElement('a');
+          link.download = `Item${elementId}.png`;
+          link.href = dataUrl;
+          link.click();
+        })
+        .catch((err) => {
+          console.error('capture error:', err);
+        });
+    }, 300); // หน่วงให้ CSS โหลดครบก่อน
+  }
 }

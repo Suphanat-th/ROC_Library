@@ -6,8 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "serve:ssr:ragnarok-classic-library": "node dist/ragnarok-classic-library/server/server.mjs"
+    "test": "ng test"
   },
   "prettier": {
     "printWidth": 100,
@@ -31,8 +30,6 @@
     "@angular/platform-server": "^20.3.0",
     "@angular/router": "^20.3.0",
     "@angular/ssr": "^20.3.6",
-    "@tailwindcss/vite": "^4.1.15",
-    "express": "^5.1.0",
     "html-to-image": "^1.11.13",
     "html2canvas": "^1.4.1",
     "prettier-plugin-tailwindcss": "^0.7.1",
