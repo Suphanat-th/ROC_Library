@@ -1,0 +1,38 @@
+<footer class="fixed bottom-0 left-0 w-full px-8 py-6 bg-gradient-to-r from-purple-900 via-indigo-900 to-purple-700 z-50">
+  <div class="
+    flex flex-col-reverse   /* บน Mobile: เรียงแบบคอลัมน์และกลับด้าน (Reverse) */
+    md:flex-row             /* บน Tablet/Desktop: เรียงแบบแถวปกติ */
+    justify-around          /* จัดให้อยู่ห่างกัน */
+    items-center            /* จัดให้อยู่ตรงกลางตามแนวตั้ง */
+    text-gray-400 text-sm font-semibold
+    w-full
+  ">
+
+    <span class="
+      mt-4                  /* เพิ่มระยะห่างด้านบนบน Mobile */
+      md:mt-0               /* ลบระยะห่างบน Desktop */
+    ">
+      @2025 ROC Library. All rights reserved.
+    </span>
+
+    <div class="
+      flex flex-col         /* บน Mobile: ใช้คอลัมน์เพื่อแยกข้อความกับรูปภาพ */
+      md:flex-row md:items-center  /* บน Desktop: กลับไปเป็นแถวและจัดกลาง */
+    ">
+      <div class="inline-flex">
+        Supporter
+      </div>
+      
+      <div class="
+        flex justify-center /* จัดรูปภาพให้อยู่ตรงกลางบน Mobile */
+        mt-2                /* เพิ่มระยะห่างด้านบนของรูปภาพบน Mobile */
+        md:ml-3             /* เพิ่มระยะห่างด้านซ้ายบน Desktop */
+        md:mt-0             /* ลบระยะห่างด้านบนบน Desktop */
+      ">
+        <img src="/assets/images/GuildImage/vanCleef.png" class="w-[50px] h-[50px] mx-3">
+        <img src="/assets/images/GuildImage/dog.jpg" class="w-[50px] h-[50px] mx-3">
+        <img src="/assets/images/GuildImage/rocfun.png" class="w-[50px] h-[50px] mx-3">
+      </div>
+    </div>
+  </div>
+</footer>

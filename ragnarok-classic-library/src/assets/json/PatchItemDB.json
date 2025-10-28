@@ -1,0 +1,111 @@
+{
+    "500126": {
+        "unidentifiedDisplayName": "Bastard Sword",
+        "unidentifiedResourceName": "바스타드소드",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[Not For Sale] Gladius Daemonicus",
+        "identifiedResourceName": "글라디오스다이모니쿠스",
+        "identifiedDescriptionName": [
+            "^ff0000ไอเท็มนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "ดาบปีศาจจากนรก มีเพียงอสูรแท้จริงเท่านั้นที่สามารถควบคุมพลังได้อย่างสมบูรณ์ ว่ากันว่ามีเจ้าชายจากนรกเคยใช้มันเป็นอาวุธให้กับกองทัพของตน",
+            "",
+            "ASPD + 10%",
+            "ทุก ๆ การอัพเกรด 2 ขั้น เพิ่ม Damage ทางกายภาพที่ทำมอนสเตอร์ทุกขนาด 2%",
+            "ทุก ๆ การอัพเกรด 3 ขั้น มีโอกาส 3% ที่จะได้รับ HP 15% ของ Damage ที่ทำ",
+            "เมื่ออัพเกรดถึงขั้น 9, ASPD +3",
+            "เมื่ออัพเกรดถึงขั้น 11, เพิ่ม Damage สกิล Clashing Spiral 100%",
+            "",
+            "เมื่อสวมใส่ร่วมกับ Ring of Hunter,",
+            "หากทำการโจมตีระยะใกล้ มีโอกาส 30% ที่จะร่ายสกิล Clashing Spiral Lv.5",
+            "ประเภท : Sword พลังโจมตี : 150",
+            "น้ำหนัก : 450",
+            "เลเวลอาวุธ : 4",
+            "เลเวลที่ต้องการ : 70",
+            "อาชีพที่ใส่ได้ : High Swordman, High Merchant, High Thief"
+        ],
+        "slotCount": 3,
+        "ClassNum": 42,
+        "costume": false
+    },
+    "401011": {
+        "unidentifiedDisplayName": "Glasses",
+        "unidentifiedResourceName": "글래스",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Tiger Glass",
+        "identifiedResourceName": "Tiger_Glass",
+        "identifiedDescriptionName": [
+            "^ff0000ไอเท็มนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "หมวกเสือสุดเท่คู่กับแว่นกลมใส",
+            "เพิ่มเสน่ห์ให้ผู้สวมใส่ พร้อมพลังใจสำหรับการเริ่มต้นผจญภัย",
+            "",
+            "ATK +30, Matk +30,",
+            "สามารถใช้สกิล Teleport Lv.1 ได้,",
+            "EXP ที่ได้รับจากมอนสเตอร์ + 5%",
+            "ฟื้นฟู HP 100 และ SP 15 ทุกครั้งที่กำจัดมอนสเตอร์ด้วยการโจมตีทางกายภาพระยะประชิดหรือการโจมตีด้วยเวทมนตร์",
+            "(ธนูและสกิลที่โจมตีระยะไกลจะไม่มีผล)",
+            "เมื่อถอดมันออกจะเสีย SP 100",
+            "ประเภท : Headgear พลังป้องกัน : 2",
+            "ตำแหน่ง : Upper น้ำหนัก : 10",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 1,
+        "ClassNum": 2325,
+        "costume": false
+    },
+    "450482": {
+        "unidentifiedDisplayName": "Cotton Shirt",
+        "unidentifiedResourceName": "코튼셔츠",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "White Shirt",
+        "identifiedResourceName": "하얀친환경셔츠",
+        "identifiedDescriptionName": [
+            "^ff0000ไอเท็มนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "เสื้อสีขาวที่บ่งบอกถึงความบริสุทธิ์ของผู้เริ่มต้น",
+            "มอบความมั่นใจให้แก่ผู้สวมใส่ในก้าวแรกสู่โลกกว้าง",
+            "",
+            "HP + 444, SP + 44, EXP ที่ได้รับจากมอนสเตอร์ + 5%,",
+            "ฟื้นฟู HP 44 และ SP 4 ทุกๆ 10 วินาที",
+            "",
+            "หากสวมใส่ร่วมกับ White Manteau [1] และ Tiger Glass [1]",
+            "สามารถใช้สกิล Fire Ball Lv.10 และ Magnum Break Lv.10",
+            "ประเภท : Armor  พลังป้องกัน : 25",
+            "น้ำหนัก : 10",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "480596": {
+        "unidentifiedDisplayName": "Hood",
+        "unidentifiedResourceName": "후드",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Costume Toothless Hood",
+        "identifiedResourceName": "C_CLB_DT_TS_Hood",
+        "identifiedDescriptionName": [
+            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "Hood ที่ทำมาจากการจินตนาการว่าเจ้าเขี้ยวกุดที่กำลังขี่หลังอยู่ ทั้งอวบอ้วนราบเรียบ แถมยังอบอุ่นและน่ารัก",
+            "",
+            "[ความสามารถจำกัดเวลา]",
+            "รับบัฟความเร็วในการเคลื่อนที่ของตัวละครจะเพิ่มเป็นสองเท่าระยะเวลา 30 นาที",
+            "(ความสามารถพิเศษของไอเทมจะถูกลบหลังหมดกิจกรรม)",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Upper น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 2696,
+        "costume": true
+    }
+}
