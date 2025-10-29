@@ -8,7 +8,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "serve:ssr:ragnarok-classic-library": "node dist/ragnarok-classic-library/server/server.mjs"
   },
   "prettier": {
     "printWidth": 100,
@@ -31,7 +32,8 @@
     "@angular/platform-browser": "^20.3.0",
     "@angular/platform-server": "^20.3.0",
     "@angular/router": "^20.3.0",
-    "@angular/ssr": "^20.3.6",
+    "@angular/ssr": "^20.3.7",
+    "express": "^5.1.0",
     "html-to-image": "^1.11.13",
     "html2canvas": "^1.4.1",
     "prettier-plugin-tailwindcss": "^0.7.1",
