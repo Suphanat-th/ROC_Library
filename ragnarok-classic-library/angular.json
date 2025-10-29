@@ -86,6 +86,33 @@
               "src/styles.scss"
             ]
           }
+        },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/ragnarok-classic-library/server",
+            "main": "src/main.server.ts",
+            "tsConfig": "tsconfig.server.json"
+          },
+          "configurations": {
+            "production": {},
+            "development": {
+              "optimization": false,
+              "sourceMap": true
+            }
+          }
+        },
+        "prerender": {
+          "builder": "@angular-devkit/build-angular:prerender",
+          "options": {
+            "browserTarget": "ragnarok-classic-library:build:production",
+            "serverTarget": "ragnarok-classic-library:server:production",
+            "routes": [
+              "/",
+              "/Converter-Patch"
+            ],
+            "timeout": 60000
+          }
         }
       }
     }

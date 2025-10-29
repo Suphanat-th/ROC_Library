@@ -5,9 +5,10 @@ import { Footer } from './layout/footer/footer';
 
 @Component({
   selector: 'app-root',
+  standalone: true, // ? ต้องมี
   imports: [Navbar, Footer, RouterOutlet],
   templateUrl: './app.html',
-  styleUrl: './app.scss'
+  styleUrls: ['./app.scss']
 })
 export class App {
   protected readonly title = signal('ragnarok-classic-library');
