@@ -1,12 +1,13 @@
 import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { ItemDbService } from '../../services/itemDbService/itemDbService';
-import { CommonModule, isPlatformBrowser } from '@angular/common';
-import html2canvas from 'html2canvas';
 import { ConverterPatchImage } from './converter-patch-image/converter-patch-image';
 import { ConverterPatchHeaderInfo } from './converter-patch-header-info/converter-patch-header-info';
 import { ConverterPatchOption } from './converter-patch-option/converter-patch-option';
 import { ConverterPatchDetail } from './converter-patch-detail/converter-patch-detail';
 import * as htmlToImage from 'html-to-image';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
+import { Observable } from 'rxjs';
+import { PatchItemsDto } from '../../models/converter-patch/PatchItem-interface';
 @Component({
   selector: 'app-converter-patch',
   standalone: true,
@@ -22,7 +23,7 @@ import * as htmlToImage from 'html-to-image';
 })
 export class ConverterPatch implements OnInit {
   bgColorTheme = '#f97814';
-  items$ = this.itemService.items$;
+  items$!: Observable<Record<string, PatchItemsDto>>;
   /**
    *
    */
@@ -33,6 +34,8 @@ export class ConverterPatch implements OnInit {
   ) {}
 
   ngOnInit() {
+    this.items$ = this.itemService.items$; // initialize หลัง constructor
+    this.itemService.loadItems();
     if (isPlatformBrowser(this.platformId)) {
       // เรียก html-to-image เฉพาะฝั่ง browser
       import('html-to-image').then((htmlToImage) => {
@@ -42,7 +45,6 @@ export class ConverterPatch implements OnInit {
           .catch((err: any) => console.error(err));
       });
     }
-    this.itemService.loadItems();
   }
 
   parseColor(text: string): string {
