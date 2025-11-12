@@ -1,8 +1,9 @@
+import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-converter-patch-option',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './converter-patch-option.html',
   styleUrl: './converter-patch-option.scss',
 })
@@ -19,28 +20,30 @@ export class ConverterPatchOption {
     let textDesc: string[] = [];
     let isOption = false;
     for (let f of text) {
-      if (f.includes('ประเภท')) {
+      if (f.includes('ประเภท :')) {
         isOption = true;
       }
       if (!isOption) continue;
 
-      if (f.includes('ประเภท')) {
+      if (f.includes('ประเภท :')) {
         let splitType: string[] = [];
-        if (f.includes('พลังป้องกัน')) {
+        if (f.includes('พลังป้องกัน :')) {
           splitType = f.split('พลังป้องกัน');
         } else {
           splitType = f.split('พลังโจมตี');
         }
         console.log(splitType);
         const equimentType = splitType[0].split(':');
-        const equimentProtect = splitType[1].split(':');
         textDesc.push(
           `<span>${equimentType[0]}</span>:<span  class='text-orange-600 font-extrabold'>${equimentType[1]}</span><br>`,
         );
-        textDesc.push(
-          `<span>พลังป้องกัน</span> : <span class='text-orange-600  font-extrabold'>${equimentProtect[1]}</span><br>`,
-        );
-      } else if (f.includes('ตำแหน่ง')) {
+        if (splitType[1]) {
+          const equimentProtect = splitType[1].split(':');
+          textDesc.push(
+            `<span>พลังป้องกัน</span> : <span class='text-orange-600  font-extrabold'>${equimentProtect[1]}</span><br>`,
+          );
+        }
+      } else if (f.includes('ตำแหน่ง :')) {
         const splitType = f.split('น้ำหนัก');
         const equimentPosition = splitType[0].split(':');
         const equimentWeight = splitType[1].split(':');

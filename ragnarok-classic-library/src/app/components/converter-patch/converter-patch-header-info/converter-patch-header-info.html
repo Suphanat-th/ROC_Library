@@ -1,4 +1,6 @@
-<h2 class="text-3xl font-extrabold bg-[#f55a0c]  text-white px-6 py-3 rounded-2xl shadow-md w-fit backdrop-blur-md">
+<h2
+  class="text-3xl font-extrabold bg-[#f55a0c] text-white px-6 py-3 rounded-2xl shadow-md w-fit backdrop-blur-md"
+>
   {{ identifiedDisplayName }}
-  <span *ngIf="!isCostume">[{{ slotCount }}]</span>
+  <span *ngIf="!isCostume && slotCount > 0">[{{ slotCount }}]</span>
 </h2>
