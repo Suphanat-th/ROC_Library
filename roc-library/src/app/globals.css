@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+:root{
+--bg: #ffffff;
+--fg: #e6e6e6;
+--accent: #ffcc00;
+}
+
+
+*{box-sizing:border-box}
+html,body,#root{height:100%}
+body{
+margin:0;
+background:var(--bg);
+color:var(--fg);
+-webkit-font-smoothing:antialiased; /* ปิด smoothing เพื่อรักษา pixel look */
+-moz-osx-font-smoothing:grayscale;
+font-family: 'Press Start 2P', 'VT323', monospace;
+}
+
+
+/* B: พื้นที่ container */
+.app-root{
+padding:2rem;
+font-size:14px; /* ปรับตามต้องการ */
+}
+
+
+/* ทำให้ตัวอักษรดู "คม" ขึ้นในบางเบราว์เซอร์ */
+*{
+text-rendering: optimizeLegibility;
+}
+
+
+/* C: ตัวอย่างปุ่ม 8-bit */
+.btn-8bit{
+display:inline-block;
+padding:0.6rem 1rem;
+border:3px solid var(--accent);
+background: linear-gradient(180deg, rgba(255,204,0,0.16), rgba(255,204,0,0.06));
+font-family: inherit;
+text-transform:uppercase;
+letter-spacing:1px;
+}
