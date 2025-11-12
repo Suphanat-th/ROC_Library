@@ -93,9 +93,10 @@ export default function CentralLabPage() {
 
   return (
     <div className="antialiased sans-serif mt-[150px]">
-      <div className="container mx-auto px-4 py-2 md:py-8 ">
+      <div className="container mx-auto px-4 py-2 md:py-8">
         <div className="rounded-lg overflow-hidden bg-gray-50 shadow-2xl">
-          <div className="flex items-center justify-between py-2 px-6 ">
+          {/* Header */}
+          <div className="flex items-center justify-between py-2 px-6">
             <div>
               <span className="text-rose-500 text-3xl font-bold">
                 {monthNames[month]}
@@ -106,60 +107,73 @@ export default function CentralLabPage() {
             </div>
           </div>
 
-          {/* Day names */}
-          <div className="-mx-1 -mb-1">
-            <div className="flex flex-wrap">
-              {days.map((day) => (
-                <div
-                  key={day}
-                  className="px-2 py-2 w-[14.28%] text-sm font-bold text-center text-gray-600 uppercase tracking-wide"
-                >
-                  {day}
-                </div>
-              ))}
-            </div>
-
-            {/* Days */}
-            <div className="flex flex-wrap border-t border-l">
-              {/* Blank Days */}
-              {blankDays.map((b) => (
-                <div
-                  key={`b${b}`}
-                  className="text-center border-r border-b px-4 pt-2 w-[14.28%] h-[120px]"
-                ></div>
-              ))}
-
-              {/* Actual Days */}
-              {noOfDays.map((date) => (
-                <div
-                  key={date}
-                  className={`text-center border-r border-b px-4 pt-2 w-[14.28%] h-[120px] relative ${
-                    isToday(date) ? "bg-blue-100" : ""
-                  }`}
-                >
-                  <div
-                    className={`inline-flex w-6 h-6 items-center justify-center rounded-full ${
-                      isToday(date)
-                        ? "bg-blue-500 text-white"
-                        : "text-white bg-purple-700"
-                    }`}
-                  >
-                    {date}
-                  </div>
-
-                  {/* Events */}
-                  {getEventsForDate(date).map((event, idx) => (
+          {/* ✅ Scroll container */}
+          <div className="overflow-x-auto">
+            <div className="min-w-[900px]">
+              {/* Day names */}
+              <div className="-mx-1 -mb-1">
+                <div className="flex flex-wrap">
+                  {days.map((day) => (
                     <div
-                      key={idx}
-                      onClick={() => setSelectedEvent(event)}
-                      className={`overflow-hidden mt-1 text-xl p-1 rounded-lg cursor-pointer truncate text-white ${event.event_theme}`}
-                      dangerouslySetInnerHTML={{ __html: event.event_title }}
-                    ></div>
+                      key={day}
+                      className="px-2 py-2 w-[14.28%] text-sm font-bold text-center text-gray-600 uppercase tracking-wide"
+                    >
+                      {day}
+                    </div>
                   ))}
                 </div>
-              ))}
+
+                {/* Days grid */}
+                <div className="flex flex-wrap border-t border-l shadow-md">
+                  {/* Blank Days */}
+                  {blankDays.map((b) => (
+                    <div
+                      key={`b${b}`}
+                      className="text-center border-r border-b px-4 pt-2 w-[14.28%] h-[120px]"
+                    ></div>
+                  ))}
+
+                  {/* Actual Days */}
+                  {noOfDays.map((date) => (
+                    <div
+                      key={date}
+                      className={`text-center border-r border-b px-4 pt-2 w-[14.28%] h-[120px] relative ${
+                        isToday(date) ? "bg-blue-100" : ""
+                      }`}
+                    >
+                      <div
+                        className={`inline-flex w-6 h-6 items-center justify-center rounded-full ${
+                          isToday(date)
+                            ? "bg-blue-500 text-white"
+                            : "text-white bg-purple-700"
+                        } text-base`}
+                      >
+                        {date}
+                      </div>
+
+                      {/* Events */}
+                      {getEventsForDate(date).map((event, idx) => (
+                        <div
+                          key={idx}
+                          onClick={() => setSelectedEvent(event)}
+                          className={`
+      overflow-hidden mt-1 text-sm p-1 rounded-lg cursor-pointer truncate text-white 
+      ${event.event_theme}
+      shadow-xl shadow-gray-500 hover:shadow-2xl active:shadow-sm 
+      transition-all duration-200 transform hover:-translate-y-[2px] active:translate-y-[1px]
+    `}
+                          dangerouslySetInnerHTML={{
+                            __html: event.event_title,
+                          }}
+                        ></div>
+                      ))}
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
+          {/* ✅ End scroll container */}
         </div>
       </div>
 
