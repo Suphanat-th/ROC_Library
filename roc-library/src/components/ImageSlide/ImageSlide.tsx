@@ -8,12 +8,17 @@ import "swiper/css/pagination";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import Image from "next/image";
 import centralLabImage from "../../../public/assets/images/Events/central_lab.png";
+import Link from "next/link";
 
-const images = [centralLabImage,centralLabImage];
+
+const slides = [
+  { src: centralLabImage, href: "/central-lab" },
+  { src: centralLabImage, href: "/central-lab" },
+];
 
 export default function ImageSlider() {
   return (
-    <Swiper
+ <Swiper
       modules={[Navigation, Pagination, Autoplay]}
       navigation
       pagination={{ clickable: true }}
@@ -21,13 +26,17 @@ export default function ImageSlider() {
       loop
       className="w-full"
     >
-      {images.map((src, i) => (
-        <SwiperSlide key={i} className="w-full">
-          <Image
-            src={src}
-            alt={`Slide ${i + 1}`}
-            className="object-cover h-[150px] w-full sm:h-[400px]"
-          />
+      {slides.map((slide, i) => (
+        <SwiperSlide key={i} className="w-full cursor-pointer">
+          <Link href={slide.href} passHref>
+            <Image
+              src={slide.src}
+              alt={`Slide ${i + 1}`}
+              className="object-cover h-[150px] w-full sm:h-[400px]"
+              width={800}   // กำหนด width/height สำหรับ next/image
+              height={400}
+            />
+          </Link>
         </SwiperSlide>
       ))}
     </Swiper>
