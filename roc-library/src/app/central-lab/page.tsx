@@ -1,6 +1,7 @@
 "use client"; // 🔹 ต้องอยู่บนสุด
 import { useMemo, useState } from "react";
 import EventModal from "./cenlab-modal";
+import MonsterTablePage from "./monster-lab";
 
 interface CalendarEvent {
   event_date: string;
@@ -174,6 +175,8 @@ export default function CentralLabPage() {
             </div>
           </div>
           {/* ✅ End scroll container */}
+
+          <MonsterTablePage></MonsterTablePage>
         </div>
       </div>
 
