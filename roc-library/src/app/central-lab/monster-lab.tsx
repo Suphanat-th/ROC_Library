@@ -46,11 +46,9 @@ export default function MonsterTablePage() {
                 <h2 className="text-2xl font-semibold text-cyan-300">
                   {m.name} (#{m.id})
                 </h2>
-                <Image
+                <img
                   src={m.image}
                   alt={m.name}
-                  width={96}
-                  height={96}
                   className="object-contain mb-3 h-[150px] w-[200px]"
                 />
                 <div className="text-xl mt-3 space-y-1">
