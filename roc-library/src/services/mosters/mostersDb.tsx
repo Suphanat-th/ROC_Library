@@ -5,7 +5,7 @@ export default function MonstersDb(): Monster[] {
     {
       id: 1087,
       name: "Orc Hero",
-      image: "/assets/images/MonsterDb/1087.gif",
+      image: "/assets/images/monsterDb/1087.gif",
       lv: 50,
       hp: 362000,
       race: "Demi-Human",
@@ -30,7 +30,7 @@ export default function MonstersDb(): Monster[] {
     {
       id: 1190,
       name: "Orc Lord",
-      image: "/assets/images/MonsterDb/1190.gif",
+      image: "/assets/images/monsterDb/1190.gif",
       lv: 55,
       hp: 552000,
       race: "Demi-Human",
@@ -55,7 +55,7 @@ export default function MonstersDb(): Monster[] {
     {
       id: 1115,
       name: "Eddga",
-      image: "/assets/images/MonsterDb/1115.gif",
+      image: "/assets/images/monsterDb/1115.gif",
       lv: 65,
       hp: 947500,
       race: "Brute",
@@ -80,7 +80,7 @@ export default function MonstersDb(): Monster[] {
     {
       id: 1086,
       name: "Golden Thief Bug",
-      image: "/assets/images/MonsterDb/1086.gif",
+      image: "/assets/images/monsterDb/1086.gif",
       lv: 65,
       hp: 222750,
       race: "Insect",
@@ -105,7 +105,7 @@ export default function MonstersDb(): Monster[] {
     {
       id: 1038,
       name: "Osiris",
-      image: "/assets/images/MonsterDb/1038.gif",
+      image: "/assets/images/monsterDb/1038.gif",
       lv: 68,
       hp: 1175840,
       race: "Undead",
@@ -130,7 +130,7 @@ export default function MonstersDb(): Monster[] {
     {
       id: 1159,
       name: "Phreeoni",
-      image: "/assets/images/MonsterDb/1159.gif",
+      image: "/assets/images/monsterDb/1159.gif",
       lv: 71,
       hp: 300000,
       race: "Brute",
@@ -155,7 +155,7 @@ export default function MonstersDb(): Monster[] {
     {
       id: 2097,
       name: "Dracula",
-      image: "/assets/images/MonsterDb/2097.gif",
+      image: "/assets/images/monsterDb/2097.gif",
       lv: 75,
       hp: 350000,
       race: "Demon",
@@ -180,7 +180,7 @@ export default function MonstersDb(): Monster[] {
     {
       id: 1046,
       name: "Doppelganger",
-      image: "/assets/images/MonsterDb/1046.gif",
+      image: "/assets/images/monsterDb/1046.gif",
       lv: 77,
       hp: 380000,
       race: "Demon",
@@ -205,7 +205,7 @@ export default function MonstersDb(): Monster[] {
     {
       id: 2099,
       name: "Mistress",
-      image: "/assets/images/MonsterDb/2099.gif",
+      image: "/assets/images/monsterDb/2099.gif",
       lv: 78,
       hp: 378000,
       race: "Insect",
@@ -230,7 +230,7 @@ export default function MonstersDb(): Monster[] {
     {
       id: 1150,
       name: "Moonlight Flower",
-      image: "/assets/images/MonsterDb/1150.gif",
+      image: "/assets/images/monsterDb/1150.gif",
       lv: 79,
       hp: 324000,
       race: "Demon",
@@ -255,7 +255,7 @@ export default function MonstersDb(): Monster[] {
     {
       id: 1688,
       name: "Lady Tanee",
-      image: "/assets/images/MonsterDb/1688.gif",
+      image: "/assets/images/monsterDb/1688.gif",
       lv: 80,
       hp: 360000,
       race: "Plant",
@@ -280,7 +280,7 @@ export default function MonstersDb(): Monster[] {
     {
       id: 1039,
       name: "Baphomet",
-      image: "/assets/images/MonsterDb/1039.gif",
+      image: "/assets/images/monsterDb/1039.gif",
       lv: 81,
       hp: 668000,
       race: "Demon",
@@ -305,7 +305,7 @@ export default function MonstersDb(): Monster[] {
     {
       id: 1147,
       name: "Maya",
-      image: "/assets/images/MonsterDb/1147.gif",
+      image: "/assets/images/monsterDb/1147.gif",
       lv: 55,
       hp: 380000,
       race: "Insect",
