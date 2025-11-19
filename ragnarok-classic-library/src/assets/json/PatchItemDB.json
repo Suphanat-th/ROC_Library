@@ -1,305 +1,555 @@
 {
-    "401044": {
-        "unidentifiedDisplayName": "Costume Petal Hood",
-        "unidentifiedResourceName": "C_Petal_Hood",
+    "1100028": {
+        "unidentifiedDisplayName": "Noodle",
+        "unidentifiedResourceName": "어질요리02",
+        "unidentifiedDescriptionName": [
+            "ก๋วยเตี๋ยวแสนอร่อย",
+            "ช่วยฟื้นฟู ^000088SP 300",
+            "^ff0000(ไอเท็มนี้จะถูกลบออกหลังสิ้นสุดระยะเวลากิจกรรม)"
+        ],
+        "identifiedDisplayName": "Noodle",
+        "identifiedResourceName": "어질요리02",
+        "identifiedDescriptionName": [
+            "ก๋วยเตี๋ยวแสนอร่อย",
+            "ช่วยฟื้นฟู ^000088SP 300",
+            "^ff0000(ไอเท็มนี้จะถูกลบออกหลังสิ้นสุดระยะเวลากิจกรรม)",
+            "น้ำหนัก : 1"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "1100029": {
+        "unidentifiedDisplayName": "Dumpling",
+        "unidentifiedResourceName": "추억이가득한고기만두",
+        "unidentifiedDescriptionName": [
+            "ของขึ้นชื่อจาก Louyang! เกี๊ยวแสนอร่อยที่ไม่ว่าใครก็ชอบ",
+            "ช่วยฟื้นฟู ^000088HP 2500",
+            "^ff0000(ไอเท็มนี้จะถูกลบออกหลังสิ้นสุดระยะเวลากิจกรรม) "
+        ],
+        "identifiedDisplayName": "Dumpling",
+        "identifiedResourceName": "추억이가득한고기만두",
+        "identifiedDescriptionName": [
+            "ของขึ้นชื่อจาก Louyang! เกี๊ยวแสนอร่อยที่ไม่ว่าใครก็ชอบ",
+            "ช่วยฟื้นฟู ^000088HP 2500",
+            "^ff0000(ไอเท็มนี้จะถูกลบออกหลังสิ้นสุดระยะเวลากิจกรรม) ",
+            "น้ำหนัก : 1"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "400744": {
+        "unidentifiedDisplayName": "Cap",
+        "unidentifiedResourceName": "캡",
         "unidentifiedDescriptionName": [
             "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "Costume Petal Hood",
-        "identifiedResourceName": "C_Petal_Hood",
+        "identifiedDisplayName": "Costume Po Doll",
+        "identifiedResourceName": "C_CLB_KP_Po",
         "identifiedDescriptionName": [
-            "ฮู้ดขนนุ่มฟูสำหรับแต่งกายที่ทำออกมาให้เหมือนกับกลีบดอกไม้",
-            "ทำขนออกมาได้ดีทีเดียว",
-            "",
-            "สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box17 ได้",
+            "ตุ๊กตาที่ทำขึ้นมาเลียนแบบ Po ดู ๆ ไปก็แอบน่ารักอยู่เหมือนกันนะ",
+            " ",
+            "เมื่อสังหารมอนสเตอร์มีโอกาศได้รับ Dumpling 5%",
+            "^ff0000(ความสามารถจะถูกลบออกหลังสิ้นสุดระยะเวลากิจกรรม) ",
             "ประเภท : Costume พลังป้องกัน : 0",
             "ตำแหน่ง : Upper น้ำหนัก : 0",
             "เลเวลที่ต้องการ : 1",
             "อาชีพที่ใส่ได้ : ทุกอาชีพ"
         ],
         "slotCount": 0,
-        "ClassNum": 2700,
+        "ClassNum": 2638,
         "costume": true
     },
-    "401045": {
-        "unidentifiedDisplayName": "Costume Evil Druid Hat Black",
-        "unidentifiedResourceName": "C칠흑의이블드루이드모자",
+    "400748": {
+        "unidentifiedDisplayName": "Cap",
+        "unidentifiedResourceName": "캡",
         "unidentifiedDescriptionName": [
             "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "Costume Evil Druid Hat Black",
-        "identifiedResourceName": "C칠흑의이블드루이드모자",
+        "identifiedDisplayName": "Costume Zhen Doll",
+        "identifiedResourceName": "C_CLB_KP_Zh",
         "identifiedDescriptionName": [
-            "หมวกที่ดึงดูดความโดดเดี่ยวและเย็นชาของผู้สวมใส่ออกมา",
-            "",
-            "สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box16 ได้",
+            "ตุ๊กตาที่ทำขึ้นมาเลียนแบบ Zhen ผู้เป็นศิษย์ของ Po รู้สึกเหมือนหางจะชอบมาตีที่ท้ายทอยอยู่เรื่อย ไม่รู้ว่าคิดไปเองรึเปล่านะ?",
+            " ",
+            "เมื่อสังหารมอนสเตอร์มีโอกาศได้รับ Noodle 5%",
+            "^ff0000(ความสามารถจะถูกลบออกหลังสิ้นสุดระยะเวลากิจกรรม) ",
             "ประเภท : Costume พลังป้องกัน : 0",
             "ตำแหน่ง : Upper น้ำหนัก : 0",
             "เลเวลที่ต้องการ : 1",
             "อาชีพที่ใส่ได้ : ทุกอาชีพ"
         ],
         "slotCount": 0,
-        "ClassNum": 1337,
+        "ClassNum": 2642,
         "costume": true
     },
-    "410068": {
-        "unidentifiedDisplayName": "Ribbon",
-        "unidentifiedResourceName": "리본",
+    "1001886": {
+        "unidentifiedDisplayName": "Kung Fu Panda Collaboration Coin",
+        "unidentifiedResourceName": "카프라코인",
         "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+            "เหรียญที่ระลึก Kung Fu Panda Collaboration"
         ],
-        "identifiedDisplayName": "Costume Fish Marche",
-        "identifiedResourceName": "C_Fish_Marche",
+        "identifiedDisplayName": "Kung Fu Panda Collaboration Coin",
+        "identifiedResourceName": "카프라코인",
         "identifiedDescriptionName": [
-            "รถเข็นสำหรับประดับตกแต่ง ทำขึ้นให้กับโดรัมที่ชื่นชอบรถเข็น",
-            "มาลองเปิดร้านขายปลาน่ารัก ๆ กันเถอะ!",
-            "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Middle น้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 1",
-            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
-        ],
-        "slotCount": 0,
-        "ClassNum": 2126,
-        "costume": true
-    },
-    "410519": {
-        "unidentifiedDisplayName": "Costume Evil Eye of False Gods",
-        "unidentifiedResourceName": "EvilEye_of_FalseGods",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "Costume Evil Eye of False Gods",
-        "identifiedResourceName": "EvilEye_of_FalseGods",
-        "identifiedDescriptionName": [
-            "เครื่องแต่งกายที่ได้รับแรงบันดาลใจจากดวงตาชั่วร้ายอันบิดเบี้ยวของเทพเจ้าที่เกิดจากความเชื่อที่ผิด",
+            "เหรียญที่ระลึก Kung Fu Panda Collaboration",
             "",
-            "สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box21 ได้",
-            "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Middle น้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 1",
-            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
-        ],
-        "slotCount": 0,
-        "ClassNum": 2450,
-        "costume": true
-    },
-    "410520": {
-        "unidentifiedDisplayName": "Costume Eyes Of Ifrit",
-        "unidentifiedResourceName": "이프리트의눈",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "Costume Eyes Of Ifrit",
-        "identifiedResourceName": "이프리트의눈",
-        "identifiedDescriptionName": [
-            "ความสว่างที่เจิดจ้าจนแทบจะลืมตาไม่ขึ้น ผู้ที่สวมใส่มันก็จะเจิดจรัสมากไม่แพ้กัน",
-            "",
-            "สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box15 ได้",
-            "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Middle น้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 1",
-            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
-        ],
-        "slotCount": 0,
-        "ClassNum": 886,
-        "costume": true
-    },
-    "410521": {
-        "unidentifiedDisplayName": "Costume Ears of Grisly Soul",
-        "unidentifiedResourceName": "Grisly_Soul",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "Costume Ears of Grisly Soul",
-        "identifiedResourceName": "Grisly_Soul",
-        "identifiedDescriptionName": [
-            "เมื่อสวมใส่วิญญาญอันชั่วร้ายจะปกคลุมรอบใบหูทั้งสองข้าง",
-            "และทำให้รอบข้างเกิดความหวาดกลัว",
-            "",
-            "สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box21 ได้",
-            "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Middle น้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 1",
-            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
-        ],
-        "slotCount": 0,
-        "ClassNum": 2212,
-        "costume": true
-    },
-    "410522": {
-        "unidentifiedDisplayName": "Costume Ear of Abyss",
-        "unidentifiedResourceName": "Ear_OF_Abyss",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "Costume Ear of Abyss",
-        "identifiedResourceName": "Ear_OF_Abyss",
-        "identifiedDescriptionName": [
-            "หมวกที่ทำเลียนแบบส่วนหูของจ้าวแห่งความมืด",
-            "",
-            "สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box21 ได้",
-            "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Middle น้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 1",
-            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
-        ],
-        "slotCount": 0,
-        "ClassNum": 2322,
-        "costume": true
-    },
-    "410523": {
-        "unidentifiedDisplayName": "Costume Ifrit's Ear",
-        "unidentifiedResourceName": "이프리트의귀",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "Costume Ifrit's Ear",
-        "identifiedResourceName": "이프리트의귀",
-        "identifiedDescriptionName": [
-            "หมวกที่ทำเลียนแบบส่วนหูของ Ifrit จ้าวแห่งไฟ",
-            "",
-            "สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box21 ได้",
-            "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Middle น้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 1",
-            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
-        ],
-        "slotCount": 0,
-        "ClassNum": 422,
-        "costume": true
-    },
-    "420628": {
-        "unidentifiedDisplayName": "Costume Durumagi",
-        "unidentifiedResourceName": "Durumagi",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "Costume Durumagi",
-        "identifiedResourceName": "Durumagi",
-        "identifiedDescriptionName": [
-            "ผ้าคลุมศีรษะที่ใช้ปิดบังใบหน้าในอดีต",
-            "ถูกดัดแปลงให้สั้นลงเพื่อความคล่องตัวในการเคลื่อนไหว",
-            "",
-            "สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box14 ได้",
-            "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Lower น้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 1",
-            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
-        ],
-        "slotCount": 0,
-        "ClassNum": 1936,
-        "costume": true
-    },
-    "420629": {
-        "unidentifiedDisplayName": "Costume Book of Sorcery",
-        "unidentifiedResourceName": "Book_of_Sorcery",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "Costume Book of Sorcery",
-        "identifiedResourceName": "Book_of_Sorcery",
-        "identifiedDescriptionName": [
-            "หนังสือมหัศจรรย์ที่เต็มไปด้วยพลังเวทย์ ดูเหมือนจะบันทึกความรู้ของ Sorcerer ไว้",
-            "",
-            "สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box19 ได้",
-            "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Lower น้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 1",
-            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
-        ],
-        "slotCount": 0,
-        "ClassNum": 2327,
-        "costume": true
-    },
-    "480667": {
-        "unidentifiedDisplayName": "Costume Three Poring Dango",
-        "unidentifiedResourceName": "C_3color_dumplings_P",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "Costume Three Poring Dango",
-        "identifiedResourceName": "C_3color_dumplings_P",
-        "identifiedDescriptionName": [
-            "นี่ไม่ใช่ Poing ตัวใหญ่ 3 สี!! แต่ว่ามันคือ..ขนมดังโงะที่ทำมาให้คล้ายกัน",
-            "",
-            "สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box13 ได้",
-            "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Garment น้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 1",
-            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
-        ],
-        "slotCount": 0,
-        "ClassNum": 266,
-        "costume": true
-    },
-    "105702": {
-        "unidentifiedDisplayName": "Costume Forest Shrines Scroll",
-        "unidentifiedResourceName": "Re_Costama_Box_2023_1",
-        "unidentifiedDescriptionName": [
-            "กล่องปริศนาที่อยู่ใต้ร่มไม้หนาทึบของป่าโบราณ มันมีสิ่งมีชีวิตลึกลับของธรรมชาติซ่อนอยู่"
-        ],
-        "identifiedDisplayName": "Costume Forest Shrines Scroll",
-        "identifiedResourceName": "Re_Costama_Box_2023_1",
-        "identifiedDescriptionName": [
-            "กล่องปริศนาที่อยู่ใต้ร่มไม้หนาทึบของป่าโบราณ มันมีสิ่งมีชีวิตลึกลับของธรรมชาติซ่อนอยู่",
-            "^ff0000หากเปิดใช้งานหลังวันที่ 12 พฤศจิกายน 2568 หลังปิดปรับปรุงประจำสัปดาห์ จะไม่ได้รับ   Event Stone Coin",
+            "^ff0000(ไอเท็มนี้จะถูกลบออกหลังสิ้นสุดระยะเวลากิจกรรม) ",
             "น้ำหนัก : 1"
         ],
         "slotCount": 0,
         "ClassNum": 0,
         "costume": false
     },
-    "105703": {
-        "unidentifiedDisplayName": "Costume Shadow Shrines Scroll",
-        "unidentifiedResourceName": "Re_Costama_Box_2023_4",
+    "300618": {
+        "unidentifiedDisplayName": "Kung Fu Panda Collaboration Card",
+        "unidentifiedResourceName": "이름없는카드",
         "unidentifiedDescriptionName": [
-            "กล่องแห่งความมืดที่เต็มไปด้วยของต้องสาป"
+            "ทุก ๆ Base Lv.10, MHP + 200, MSP + 50, DEF + 5, MDEF + 2",
+            "(เพิ่มขึ้นไปได้สูงสุด Base Lv.200)"
         ],
-        "identifiedDisplayName": "Costume Shadow Shrines Scroll",
-        "identifiedResourceName": "Re_Costama_Box_2023_4",
+        "identifiedDisplayName": "Kung Fu Panda Collaboration Card",
+        "identifiedResourceName": "이름없는카드",
         "identifiedDescriptionName": [
-            "กล่องแห่งความมืดที่เต็มไปด้วยของต้องสาป",
-            "^ff0000หากเปิดใช้งานหลังวันที่ 12 พฤศจิกายน 2568 หลังปิดปรับปรุงประจำสัปดาห์ จะไม่ได้รับ   Event Stone Coin",
+            "ทุก ๆ Base Lv.10, MHP + 200, MSP + 50, DEF + 5, MDEF + 2",
+            "(เพิ่มขึ้นไปได้สูงสุด Base Lv.200)",
+            "ประเภท : Card",
+            "ใช้กับ : Garment",
+            "น้ำหนัก : 1"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "EffectID": 1186
+    },
+    "401112": {
+        "unidentifiedDisplayName": "Cap",
+        "unidentifiedResourceName": "캡",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Dragon Warrior Hat",
+        "identifiedResourceName": "C_CLB_KP_DC",
+        "identifiedDescriptionName": [
+            "หมวกที่นักรบมังกรชอบใส่",
+            "รู้สึกได้ถึงพลังมังกรเลยละ",
+            "",
+            "ทุก ๆ การอัพเกรด 2 ขั้น MATK + 10",
+            "ทุก ๆ การอัพเกรด 3 ขั้น ATK + 20",
+            "",
+            "เมื่ออัพเกรดถึงขั้น 7,",
+            "เพิ่ม Damage ทางกายภาพระยะใกล้และไกล 10%,",
+            "เพิ่ม Damage ทางเวทมนตร์ทุกธาตุ 15%",
+            "",
+            "เมื่ออัพเกรดถึงขั้น 10",
+            "ลด Fixed Cast Time 0.2 วินาที",
+            "ประเภท : Headgear พลังป้องกัน : 10",
+            "ตำแหน่ง : Upper น้ำหนัก : 40",
+            "เลเวลที่ต้องการ : 74",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 1,
+        "ClassNum": 2639,
+        "costume": false
+    },
+    "480690": {
+        "unidentifiedDisplayName": "Hood",
+        "unidentifiedResourceName": "후드",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Dragon Warrior Cloak",
+        "identifiedResourceName": "C_CLB_KP_DMS",
+        "identifiedDescriptionName": [
+            "เสื้อคลุมที่นักรบมังกรชอบใส่",
+            "รู้สึกได้ถึงพลังมังกรเลยละ",
+            "",
+            "ทุก ๆ การอัพเกรด 2 ขั้น ATK + 15, MATK + 15",
+            "ทุก ๆ การอัพเกรด 3 ขั้น ลด Variable Cast Time 3%",
+            "ทุก ๆ การอัพเกรด 4 ขั้น ลด Delay หลังใช้สกิล 4%",
+            "",
+            "เมื่ออัพเกรดถึงขั้น 7,",
+            "ASPD + 10%,",
+            "ATK + 10%, MATK + 10%",
+            "",
+            "เมื่ออัพเกรดถึงขั้น 10,",
+            "เพิ่ม Damage ทางกายภาพระยะใกล้และไกล 10%,",
+            "เพิ่ม Damage ทางเวทมนตร์ทุกธาตุ 10%",
+            "",
+            "เมื่อสวมใส่ร่วมกับ Dragon Warrior Hat,",
+            "สามารถใช้สกิล Greed Lv.1,",
+            "เพิ่มค่าประสบการณ์ที่ได้รับจากมอนสเตอร์ 10%",
+            "ประเภท : Garment  พลังป้องกัน : 30",
+            "น้ำหนัก : 30",
+            "เลเวลที่ต้องการ : 74",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "490845": {
+        "unidentifiedDisplayName": "Belt",
+        "unidentifiedResourceName": "벨트",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Shinobi's Belt",
+        "identifiedResourceName": "상급닌자의허리띠",
+        "identifiedDescriptionName": [
+            "เข็มขัดที่ครั้งหนึ่งเคยเป็นของนินจาผู้มีชื่อเสียงซึ่งเชี่ยวชาญด้านวิชานินจุตสึ",
+            "INT +5, AGI +5, VIT +5, MATK +20",
+            "ทุก ๆ 1 Base Job Lv, ",
+            "เพิ่ม Damage สกิล Exploding Dragon , Snow Flake Draft , First Wind 1%",
+            "เมื่ออัพเกรดถึงขั้น 7,",
+            "เพิ่ม Damage สกิล Exploding Dragon , Snow Flake Draft , First Wind 30%",
+            "เมื่ออัพเกรดถึงขั้น 9,",
+            "เพิ่ม Damage ทางเวทมนตร์ต่อศัตรูธาตุ Shadow 40%",
+            "^ff0000ไม่สามารถใช้ได้ในพื้นที่ GvG และ PvP",
+            "ประเภท : Accessory  พลังป้องกัน : 0",
+            "น้ำหนัก : 10",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพที่ใส่ได้ : Ninja Class"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "490846": {
+        "unidentifiedDisplayName": "Belt",
+        "unidentifiedResourceName": "벨트",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[NFS] Shinobi's Belt",
+        "identifiedResourceName": "상급닌자의허리띠",
+        "identifiedDescriptionName": [
+            "^ff0000ไอเท็มนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "เข็มขัดที่ครั้งหนึ่งเคยเป็นของนินจาผู้มีชื่อเสียงซึ่งเชี่ยวชาญด้านวิชานินจุตสึ",
+            "INT +5, AGI +5, VIT +5, MATK +20",
+            "ทุก ๆ 1 Base Job Lv, ",
+            "เพิ่ม Damage สกิล Exploding Dragon , Snow Flake Draft , First Wind 1%",
+            "เมื่ออัพเกรดถึงขั้น 7,",
+            "เพิ่ม Damage สกิล Exploding Dragon , Snow Flake Draft , First Wind 30%",
+            "เมื่ออัพเกรดถึงขั้น 9,",
+            "เพิ่ม Damage ทางเวทมนตร์ต่อศัตรูธาตุ Shadow 40%",
+            "^ff0000ไม่สามารถใช้ได้ในพื้นที่ GvG และ PvP",
+            "ประเภท : Accessory  พลังป้องกัน : 0",
+            "น้ำหนัก : 10",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพที่ใส่ได้ : Ninja Class"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "490847": {
+        "unidentifiedDisplayName": "Orb",
+        "unidentifiedResourceName": "Ball_Of_RasenHuuma",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Rasen Huuma's Orb",
+        "identifiedResourceName": "Ball_Of_RasenHuuma",
+        "identifiedDescriptionName": [
+            "สมบัติอันล้ำค่าของคนกลุ่มหนึ่ง จำเป็นต้องมีความรู้เกี่ยวกับทักษะมนตราจึงจะหยั่งถึง",
+            "STR +5, AGI +5, VIT +5",
+            "เพิ่ม Damage ทางกายภาพต่อศัตรูทุกประเภท 5%",
+            "―――――――――――――",
+            "ทุก ๆ 2 Base Lv.,",
+            "เพิ่ม Damage สกิล Kunai Splash 2%,",
+            "เพิ่ม Damage สกิล Swirling Petal 1%",
+            "―――――――――――――",
+            "ทุกๆ 1 ขั้นอัพเกรด ลด Cooldown สกิล Swirling Petal 0.15 วินาที",
+            "―――――――――――――",
+            "เมื่ออัพเกรดถึงขึ้น 5 ลด Variable Cast Time สกิล Swirling Petal 50%",
+            "เมื่ออัพเกรดถึงขึ้น 7 เพิ่ม Damage สกิล Kunai Splash 30%",
+            "เมื่ออัพเกรดถึงขึ้น 9 เพิ่ม Damage ที่ทำต่อมอนสเตอร์ขนาดกลางและใหญ่ 15%",
+            "",
+            "^ff0000ไม่สามารถใช้ได้ในพื้นที่ GvG และ PvP",
+            "ประเภท : Accessory   พลังป้องกัน : 0",
+            "น้ำหนัก : 10",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพที่ใส่ได้ : Ninja Class"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "490848": {
+        "unidentifiedDisplayName": "Orb",
+        "unidentifiedResourceName": "Ball_Of_RasenHuuma",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[NFS] Rasen Huuma's Orb",
+        "identifiedResourceName": "Ball_Of_RasenHuuma",
+        "identifiedDescriptionName": [
+            "^ff0000ไอเท็มนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "สมบัติอันล้ำค่าของคนกลุ่มหนึ่ง จำเป็นต้องมีความรู้เกี่ยวกับทักษะมนตราจึงจะหยั่งถึง",
+            "STR +5, AGI +5, VIT +5",
+            "เพิ่ม Damage ทางกายภาพต่อศัตรูทุกประเภท 5%",
+            "―――――――――――――",
+            "ทุก ๆ 2 Base Lv.,",
+            "เพิ่ม Damage สกิล Kunai Splash 2%,",
+            "เพิ่ม Damage สกิล Swirling Petal 1%",
+            "―――――――――――――",
+            "ทุกๆ 1 ขั้นอัพเกรด ลด Cooldown สกิล Swirling Petal 0.15 วินาที",
+            "―――――――――――――",
+            "เมื่ออัพเกรดถึงขึ้น 5 ลด Variable Cast Time สกิล Swirling Petal 50%",
+            "เมื่ออัพเกรดถึงขึ้น 7 เพิ่ม Damage สกิล Kunai Splash 30%",
+            "เมื่ออัพเกรดถึงขึ้น 9 เพิ่ม Damage ที่ทำต่อมอนสเตอร์ขนาดกลางและใหญ่ 15%",
+            "",
+            "^ff0000ไม่สามารถใช้ได้ในพื้นที่ GvG และ PvP",
+            "ประเภท : Accessory   พลังป้องกัน : 0",
+            "น้ำหนัก : 10",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพที่ใส่ได้ : Ninja Class"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "105852": {
+        "unidentifiedDisplayName": "Kung Fu Panda Scroll",
+        "unidentifiedResourceName": "Costama_Egg80",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Kung Fu Panda Scroll",
+        "identifiedResourceName": "Costama_Egg80",
+        "identifiedDescriptionName": [
+            "กาชาที่มีศักยภาพไม่สิ้นสุด",
+            "สร้างขึ้นตามรูปลักษณ์ของมาสเตอร์แพนด้า ผู้ที่ถูกเลือกเท่านั้นจึงจะสามารถใช้พลังของนักรบมังกรได้",
+            "คำเตือน! หากเปิดใช้งานหลังวันที่ 9 ธันวาคม 2568 หลังปิดปรับปรุงประจำสัปดาห์ จะไม่ได้รับ 4th Anniversary Coin",
             "น้ำหนัก : 1"
         ],
         "slotCount": 0,
         "ClassNum": 0,
         "costume": false
     },
-    "105704": {
-        "unidentifiedDisplayName": "Costume Inferno Shrines Scroll",
-        "unidentifiedResourceName": "Re_Costama_Box_2023_3",
+    "28256": {
+        "unidentifiedDisplayName": "Shotgun",
+        "unidentifiedResourceName": "싱글샷건",
         "unidentifiedDescriptionName": [
-            "กล่องที่เต็มไปด้วยสิ่งของถูกปกคุมด้วยเปลวเพลิง"
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "Costume Inferno Shrines Scroll",
-        "identifiedResourceName": "Re_Costama_Box_2023_3",
+        "identifiedDisplayName": "Demon Slayer Shot",
+        "identifiedResourceName": "데몬샷건",
         "identifiedDescriptionName": [
-            "กล่องที่เต็มไปด้วยสิ่งของถูกปกคุมด้วยเปลวเพลิง",
-            "^ff0000หากเปิดใช้งานหลังวันที่ 12 พฤศจิกายน 2568 หลังปิดปรับปรุงประจำสัปดาห์ จะไม่ได้รับ   Event Stone Coin",
-            "น้ำหนัก : 1"
+            "ปืนลูกซองสำหรับกำจัดปีศาจร้ายที่ใช้โดยเหล่านักแม่นปืนระดับสูงที่สามารถควบคุมปืนทุกประเภทได้อย่างชำนาญ",
+            "ดูกลมกลืนเข้ากับ Ancient Hero Boots",
+            "",
+            "การโจมตีแบบกระจาย",
+            "ทุก ๆ การอัปเกรด 2 ขั้น เพิ่ม Damage ทางกายภาพระยะไกล 3%",
+            "ทุก ๆ การอัปเกรด 3 ขั้น MSP +2%",
+            "เมื่ออัปเกรดถึงขั้น 7 เพิ่ม Damage ทางกายภาพต่อมอนสเตอร์ประเภท Boss 10%",
+            "เมื่ออัปเกรดถึงขั้น 9 เมื่อใช้สกิล [Platinum Altar], ATK +50, เพิ่ม Damage ทางกายภาพระยะไกล 10% เป็นเวลา 90 วินาที",
+            "เมื่ออัปเกรดถึงขั้น 11 เพิ่ม Damage ทางกายภาพต่อมอนสเตอร์ประเภท Demon, Undead 15%",
+            "เมื่อสวมใส่ร่วมกับ Ancient Hero Boots และทำการโจมตีทางกายภาพ มีโอกาสที่จะ DEX +20, เพิ่ม Damage ทางกายภาพระยะไกล 10% เป็นเวลา 7 วินาที",
+            "ประเภท : Shotgun พลังโจมตี : 275",
+            "น้ำหนัก : 140",
+            "เลเวลของอาวุธ : 4",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพที่ใส่ได้ : Rebellion"
         ],
-        "slotCount": 0,
-        "ClassNum": 0,
+        "slotCount": 2,
+        "ClassNum": 20,
         "costume": false
     },
-    "1002510": {
-        "unidentifiedDisplayName": "OOC Gold Bar",
-        "unidentifiedResourceName": "Heros_Gold_Bar",
+    "28261": {
+        "unidentifiedDisplayName": "Shotgun",
+        "unidentifiedResourceName": "싱글샷건",
         "unidentifiedDescriptionName": [
-            "แร่สีทองที่ดูเหมือนมีมูลค่าได้รับจากการเข้าร่วมโปรโมชั่นพิเศษจาก OneOne เท่านั้น",
-            "สามารถสะสมเพื่อแลกรับไอเทมต่าง ๆ ได้ที่ NPC ที่อยู่ที่เมือง Prontera ใน Rune Midgarts (prontera 150  191)"
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "OOC Gold Bar",
-        "identifiedResourceName": "Heros_Gold_Bar",
+        "identifiedDisplayName": "[NFS] Demon Slayer Shot",
+        "identifiedResourceName": "데몬샷건",
         "identifiedDescriptionName": [
-            "แร่สีทองที่ดูเหมือนมีมูลค่าได้รับจากการเข้าร่วมโปรโมชั่นพิเศษจาก OneOne เท่านั้น",
-            "สามารถสะสมเพื่อแลกรับไอเทมต่าง ๆ ได้ที่ NPC ที่อยู่ที่เมือง Prontera ใน Rune Midgarts (prontera 150  191)",
-            "ไอเทมนี้จะถูกลบออกหลังจบกิจกรรม",
-            "น้ำหนัก : 1"
+            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "ปืนลูกซองสำหรับกำจัดปีศาจร้ายที่ใช้โดยเหล่านักแม่นปืนระดับสูงที่สามารถควบคุมปืนทุกประเภทได้อย่างชำนาญ",
+            "ดูกลมกลืนเข้ากับ Ancient Hero Boots",
+            "",
+            "การโจมตีแบบกระจาย",
+            "ทุก ๆ การอัปเกรด 2 ขั้น เพิ่ม Damage ทางกายภาพระยะไกล 3%",
+            "ทุก ๆ การอัปเกรด 3 ขั้น MSP +2%",
+            "เมื่ออัปเกรดถึงขั้น 7 เพิ่ม Damage ทางกายภาพต่อมอนสเตอร์ประเภท Boss 10%",
+            "เมื่ออัปเกรดถึงขั้น 9 เมื่อใช้สกิล [Platinum Altar], ATK +50, เพิ่ม Damage ทางกายภาพระยะไกล 10% เป็นเวลา 90 วินาที",
+            "เมื่ออัปเกรดถึงขั้น 11 เพิ่ม Damage ทางกายภาพต่อมอนสเตอร์ประเภท Demon, Undead 15%",
+            "เมื่อสวมใส่ร่วมกับ Ancient Hero Boots และทำการโจมตีทางกายภาพ มีโอกาสที่จะ DEX +20, เพิ่ม Damage ทางกายภาพระยะไกล 10% เป็นเวลา 7 วินาที",
+            "ประเภท : Shotgun พลังโจมตี : 275",
+            "น้ำหนัก : 140",
+            "เลเวลของอาวุธ : 4",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพที่ใส่ได้ : Rebellion"
         ],
-        "slotCount": 0,
-        "ClassNum": 0,
+        "slotCount": 2,
+        "ClassNum": 20,
+        "costume": false
+    },
+    "28764": {
+        "unidentifiedDisplayName": "Knife",
+        "unidentifiedResourceName": "나이프",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Kiri no Tsuyu",
+        "identifiedResourceName": "안개의요도",
+        "identifiedDescriptionName": [
+            "หนึ่งในดาบนินจาที่นินจาผู้ชำนาญการใช้ดาบคู่ในอดีต",
+            "ความสามารถที่แท้จริงของมันสามารถรับรู้ได้เมื่อสวมใส่กับดาบนินจา Surudoi Kaze อีกเล่มหนึ่ง",
+            "",
+            "เมื่อสวมใส่กับ Surudoi Kaze, ",
+            "ทุกๆ ขั้นอัพเกรดรวมครบ 3 ขั้น ATK + 10.",
+            "ทุกๆ ขั้นอัพเกรดรวมครบ 5 ขั้น ATK + 2%.",
+            "เมื่อขั้นอัพเกรดรวมครบ 14 ขึ้นไป, ดาเมจของ Cross Slash เพิ่มขึ้น 25%",
+            "เมื่อขั้นอัพเกรดรวมครบ 16 ขึ้นไป, ลดเวลาคูลไทม์ของสกิล Cross Slash ลง 2 วินาที",
+            "เมื่อขั้นอัพเกรดรวมครบ 18 ขึ้นไป, จะสามารถใช้งานสกิล Distorted Cresent ได้เท่ากับจำนวนเลเวลการเรียนรู้ของสกิล Shadow Trampling, จะสามารถใช้งานสกิล Shadow Trampling ได้เท่ากับจำนวนเลเวลการเรียนรู้ของสกิล Distorted Cresent",
+            "เมื่อขั้นอัพเกรดรวมครบ 20 ขึ้นไป, ดาเมจของ Cross Slash เพิ่มขึ้นอีก 25%",
+            "ประเภท : Dagger พลังโจมตี : 150",
+            "น้ำหนัก : 100",
+            "เลเวลอาวุธ : 4",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพที่ใส่ได้ : Ninja Class"
+        ],
+        "slotCount": 2,
+        "ClassNum": 1,
+        "costume": false
+    },
+    "510067": {
+        "unidentifiedDisplayName": "Knife",
+        "unidentifiedResourceName": "나이프",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[NFS] Kiri no Tsuyu",
+        "identifiedResourceName": "안개의요도",
+        "identifiedDescriptionName": [
+            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "หนึ่งในดาบนินจาที่นินจาผู้ชำนาญการใช้ดาบคู่ในอดีต",
+            "ความสามารถที่แท้จริงของมันสามารถรับรู้ได้เมื่อสวมใส่กับดาบนินจา Surudoi Kaze อีกเล่มหนึ่ง",
+            "",
+            "เมื่อสวมใส่กับ Surudoi Kaze, ",
+            "ทุกๆ ขั้นอัพเกรดรวมครบ 3 ขั้น ATK + 10.",
+            "ทุกๆ ขั้นอัพเกรดรวมครบ 5 ขั้น ATK + 2%.",
+            "เมื่อขั้นอัพเกรดรวมครบ 14 ขึ้นไป, ดาเมจของ Cross Slash เพิ่มขึ้น 25%",
+            "เมื่อขั้นอัพเกรดรวมครบ 16 ขึ้นไป, ลดเวลาคูลไทม์ของสกิล Cross Slash ลง 2 วินาที",
+            "เมื่อขั้นอัพเกรดรวมครบ 18 ขึ้นไป, จะสามารถใช้งานสกิล Distorted Cresent ได้เท่ากับจำนวนเลเวลการเรียนรู้ของสกิล Shadow Trampling, จะสามารถใช้งานสกิล Shadow Trampling ได้เท่ากับจำนวนเลเวลการเรียนรู้ของสกิล Distorted Cresent",
+            "เมื่อขั้นอัพเกรดรวมครบ 20 ขึ้นไป, ดาเมจของ Cross Slash เพิ่มขึ้นอีก 25%",
+            "",
+            "ประเภท : Dagger พลังโจมตี : 150",
+            "น้ำหนัก : 100",
+            "เลเวลอาวุธ : 4",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพที่ใส่ได้ : Ninja Class"
+        ],
+        "slotCount": 2,
+        "ClassNum": 1,
+        "costume": false
+    },
+    "28763": {
+        "unidentifiedDisplayName": "Knife",
+        "unidentifiedResourceName": "나이프",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Surudoi Kaze",
+        "identifiedResourceName": "후츠노미타마",
+        "identifiedDescriptionName": [
+            "หนึ่งในดาบนินจาที่นินจาผู้ชำนาญการใช้ดาบคู่ในอดีต",
+            "ความสามารถที่แท้จริงของมันสามารถรับรู้ได้เมื่อสวมใส่กับดาบนินจา Kiri no Tsuyu อีกเล่มหนึ่ง",
+            "",
+            "เมื่อสวมใส่กับ Kiri no Tsuyu และ Ancient Hero Boots หากทำการโจมตึทางกายภาพ มีโอกาสเล็กน้อย ที่จะเพิ่ม STR + 20, ATK 10% เป็นเวลา 7 วินาที",
+            "ประเภท : Dagger พลังโจมตี : 150",
+            "น้ำหนัก : 100",
+            "เลเวลอาวุธ : 4",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพที่ใส่ได้ : Ninja Class"
+        ],
+        "slotCount": 2,
+        "ClassNum": 1,
+        "costume": false
+    },
+    "510068": {
+        "unidentifiedDisplayName": "Knife",
+        "unidentifiedResourceName": "나이프",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[NFS] Surudoi Kaze",
+        "identifiedResourceName": "후츠노미타마",
+        "identifiedDescriptionName": [
+            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "หนึ่งในดาบนินจาที่นินจาผู้ชำนาญการใช้ดาบคู่ในอดีต",
+            "ความสามารถที่แท้จริงของมันสามารถรับรู้ได้เมื่อสวมใส่กับดาบนินจา Kiri no Tsuyu อีกเล่มหนึ่ง",
+            "",
+            "เมื่อสวมใส่กับ Kiri no Tsuyu และ Ancient Hero Boots หากทำการโจมตึทางกายภาพ มีโอกาสเล็กน้อย ที่จะเพิ่ม STR + 20, ATK 10% เป็นเวลา 7 วินาที",
+            "ประเภท : Dagger พลังโจมตี : 150",
+            "น้ำหนัก : 100",
+            "เลเวลอาวุธ : 4",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพที่ใส่ได้ : Ninja Class"
+        ],
+        "slotCount": 2,
+        "ClassNum": 1,
+        "costume": false
+    },
+    "13345": {
+        "unidentifiedDisplayName": "Shuriken",
+        "unidentifiedResourceName": "풍마_편익",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Huuma Shuriken Clearness",
+        "identifiedResourceName": "미라쥬풍마수리검",
+        "identifiedDescriptionName": [
+            "Shuriken ที่นินจาผู้โด่งดังในตำนานใช้งาน",
+            "ดูกลมกลืนเข้ากับ Ancient Hero Boots",
+            "ไม่สามารถทำลายได้",
+            "",
+            "ทุก ๆ การอัพเกรด 2 ขั้น ATK +10",
+            "ทุก ๆ การอัพเกรด 3 ขั้น เพิ่ม Damage ทางกายภาพระยะไกล 2%",
+            "เมื่ออัพเกรดถึงขั้น 7 เพิ่ม Damage สกิล Swirling Petal 30%",
+            "เมื่ออัพเกรดถึงขั้น 9 ลด Cooldown สกิล Swirling Petal 1 วินาที",
+            "เมื่ออัพเกรดถึงขั้น 11 เพิ่ม Damage ทางกายภาพต่อศัตรูธาตุ Fire, Shadow 15% และเพิ่ม Damage ทางกายภาพต่อศัตรูประเภท Undead, Demon 20%",
+            "เมื่อสวมใส่ร่วมกับ Ancient Hero Boots เมื่อโจมตีทางกายภาพ มีโอกาสที่ STR +20, เพิ่ม Damage ทางกายภาพระยะไกล 10% เป็นเวลา 7 วินาที",
+            "ประเภท : Huuma Shuriken พลังโจมตี : 230",
+            "น้ำหนัก : 130",
+            "เลเวลของอาวุธ : 4",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพที่ใส่ได้ : Ninja Class"
+        ],
+        "slotCount": 2,
+        "ClassNum": 22,
+        "costume": false
+    },
+    "13348": {
+        "unidentifiedDisplayName": "Shuriken",
+        "unidentifiedResourceName": "풍마_편익",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[NFS] Huuma Shuriken Clearness",
+        "identifiedResourceName": "미라쥬풍마수리검",
+        "identifiedDescriptionName": [
+            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "Shuriken ที่นินจาผู้โด่งดังในตำนานใช้งาน",
+            "ดูกลมกลืนเข้ากับ Ancient Hero Boots",
+            "ไม่สามารถทำลายได้",
+            "",
+            "ทุก ๆ การอัพเกรด 2 ขั้น ATK +10",
+            "ทุก ๆ การอัพเกรด 3 ขั้น เพิ่ม Damage ทางกายภาพระยะไกล 2%",
+            "เมื่ออัพเกรดถึงขั้น 7 เพิ่ม Damage สกิล Swirling Petal 30%",
+            "เมื่ออัพเกรดถึงขั้น 9 ลด Cooldown สกิล Swirling Petal 1 วินาที",
+            "เมื่ออัพเกรดถึงขั้น 11 เพิ่ม Damage ทางกายภาพต่อศัตรูธาตุ Fire, Shadow 15% และเพิ่ม Damage ทางกายภาพต่อศัตรูประเภท Undead, Demon 20%",
+            "เมื่อสวมใส่ร่วมกับ Ancient Hero Boots เมื่อโจมตีทางกายภาพ มีโอกาสที่ STR +20, เพิ่ม Damage ทางกายภาพระยะไกล 10% เป็นเวลา 7 วินาที",
+            "ประเภท : Huuma Shuriken พลังโจมตี : 230",
+            "น้ำหนัก : 130",
+            "เลเวลของอาวุธ : 4",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพที่ใส่ได้ : Ninja Class"
+        ],
+        "slotCount": 2,
+        "ClassNum": 22,
         "costume": false
     }
 }
