@@ -3,7 +3,6 @@ function parseDetail(text: string[]): string {
   const textDesc: string[] = [];
   const redColor = "^ff0000";
   for (let f of text) {
-    console.log('sasadad',f)
     const str = f.split(redColor);
     f =
       str.length > 1 ? `<span class="text-[#ff0000]">${str[1]}</span>` : str[0];
