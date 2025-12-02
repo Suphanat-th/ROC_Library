@@ -4,8 +4,6 @@ import localFont from "next/font/local";
 import NavBarPage from "@/layout/navbar/navbar";
 import FooterPage from "@/layout/footer/footer";
 
-
-
 const mali = localFont({
   src: "../../public/font/Mali-Regular.ttf",
   variable: "--font-tcs4",
@@ -29,7 +27,7 @@ export default function RootLayout({
         className={`${mali.className} antialiased flex flex-col min-h-screen`}
       >
         <NavBarPage></NavBarPage>
-        {children}
+        <div className="mt-[70px]">{children}</div>
         <FooterPage></FooterPage>
       </body>
     </html>

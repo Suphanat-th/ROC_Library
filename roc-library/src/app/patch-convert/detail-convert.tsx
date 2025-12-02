@@ -8,7 +8,7 @@ function parseDetail(text: string[]): string {
       str.length > 1 ? `<span class="text-[#ff0000]">${str[1]}</span>` : str[0];
     if (f === "") {
       f =
-        "___________________________________________________________________________";
+        "<span class='block w-full overflow-hidden whitespace-nowrap'>___________________________________________________________________________<span>";
     }
     if (f.includes("ประเภท :")) {
       break;
@@ -26,7 +26,7 @@ export default function DetailConvertPage({
   console.log(identifiedDescription)
   return (
     <div className="col-span-6 sm:col-span-4 bg-white/95 p-6 rounded-2xl shadow-md text-gray-800 space-y-4 border border-gray-100 text-left">
-      <div className="bg-white/95 p-6 rounded-2xl shadow-md border border-gray-100">
+      <div className=" rounded-2xl  ">
         <h2 className="text-orange-500 font-extrabold text-xl mb-3 border-b border-orange-200 pb-1">
           รายละเอียด
         </h2>

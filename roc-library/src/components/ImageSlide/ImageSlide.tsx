@@ -8,12 +8,13 @@ import "swiper/css/pagination";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import Image from "next/image";
 import centralLabImage from "../../../public/assets/images/Events/central_lab.png";
+import monsterx3Image from "../../../public/assets/images/Events/monsterx3.png";
 import Link from "next/link";
 
 
 const slides = [
   { src: centralLabImage, href: "/central-lab" },
-  { src: centralLabImage, href: "/central-lab" },
+  { src: monsterx3Image, href: "/monsterx3" },
 ];
 
 export default function ImageSlider() {

@@ -192,7 +192,7 @@ export default function MonsterTablePage() {
       <div className="mb-6 flex gap-3 items-center">
         <input
           type="text"
-          placeholder="ค้นหามอนสเตอร์ 1st Round"
+          placeholder="ค้นหามอนสเตอร์ 2st Round"
           value={searchS2}
           onChange={(e) => setSearchS2(e.target.value)}
           className="px-4 py-2 rounded-lg bg-gray-700 border border-gray-600 focus:border-cyan-400 outline-none w-80"
@@ -266,7 +266,7 @@ export default function MonsterTablePage() {
       <div className="mb-6 flex gap-3 items-center">
         <input
           type="text"
-          placeholder="ค้นหามอนสเตอร์ 1st Round"
+          placeholder="ค้นหามอนสเตอร์ 3st Round"
           value={searchS3}
           onChange={(e) => setSearchS3(e.target.value)}
           className="px-4 py-2 rounded-lg bg-gray-700 border border-gray-600 focus:border-cyan-400 outline-none w-80"

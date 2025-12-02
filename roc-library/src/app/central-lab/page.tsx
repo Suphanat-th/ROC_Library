@@ -158,7 +158,7 @@ export default function CentralLabPage() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
   return (
-    <div className="antialiased sans-serif mt-[100px]">
+    <div className="antialiased sans-serif">
       {/* Top Navigation */}
       <div className="sticky top-[70px] left-0 w-full bg-gray-400 border-b shadow-lg z-50">
         <div className="flex justify-around">
