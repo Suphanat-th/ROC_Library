@@ -1,38 +1,42 @@
 export default function StatusServerPage() {
-  // เวลาปัจจุบันแบบไทย (ไม่แปลงเป็นสตริง)
-  const current = new Date(Date.now() + 7 * 60 * 60 * 1000); // GMT+7
+  const current = new Date();
+  const start = new Date(2025, 11, 17, 6, 0, 0);
+  const end = new Date(2025, 11, 17, 13, 0, 0);
 
-  // ดึงวันที่วันนี้ (ตาม timezone ไทย)
-  const y = current.getUTCFullYear();
-  const m = current.getUTCMonth();
-  const d = current.getUTCDate();
-
-  // ช่วงปิดเซิร์ฟ 06:00 - 12:00
-  const start = new Date(Date.UTC(y, m, d, 6, 0, 0));
-  const end = new Date(Date.UTC(y, m, d, 12, 0, 0));
-
-  // ถ้าอยู่ในช่วง 06:00–12:00 = ปิดเซิร์ฟ
   const serverOn = !(current >= start && current <= end);
 
-  const textServer = serverOn ? "Server On" : "Server Off";
-  const color = serverOn ? "green" : "rose";
-  
-  
-   return (
+  return (
     <div className="col-span-1">
       <div className="p-8 relative z-10">
         <div className="flex flex-col items-center text-center">
-          <div className="relative">
-
-            <div className={`absolute inset-0 rounded-full border-2 border-${color}-400/90 animate-ping`}></div>
-            <div className={`absolute inset-0 rounded-full border border-${color}-400/80 animate-pulse delay-500`}></div>
-
-            <div className={`p-6 rounded-full backdrop-blur-lg border border-${color}-500/50 bg-linear-to-br from-${color}-500/80 to-${color}-800/60 shadow-2xl transition-all duration-500`}>
-              <div>{textServer}</div>
-            </div>
-
-          </div>
+          {serverOn ? <ServerOnTemplate /> : <ServerOffTemplate />}
         </div>
+      </div>
+    </div>
+  );
+}
+
+function ServerOnTemplate() {
+  return (
+    <div className="relative">
+      <div className="absolute inset-0 rounded-full border-2 border-green-400/90 animate-ping"></div>
+      <div className="absolute inset-0 rounded-full border border-green-400/80 animate-pulse delay-500"></div>
+
+      <div className="p-6 rounded-full backdrop-blur-lg border border-green-500/50 bg-gradient-to-br from-green-500/80 to-green-800/60 shadow-2xl">
+        Server On
+      </div>
+    </div>
+  );
+}
+
+function ServerOffTemplate() {
+  return (
+    <div className="relative">
+      <div className="absolute inset-0 rounded-full border-2 border-rose-400/90 animate-ping"></div>
+      <div className="absolute inset-0 rounded-full border border-rose-400/80 animate-pulse delay-500"></div>
+
+      <div className="p-6 rounded-full backdrop-blur-lg border border-rose-500/50 bg-gradient-to-br from-rose-500/80 to-rose-800/60 shadow-2xl">
+        Server Off
       </div>
     </div>
   );

@@ -30,6 +30,17 @@ function parseOption(text: string[]): string {
           `<span>พลังป้องกัน</span> : <span class='text-orange-600 font-extrabold'>${equimentProtect[1]}</span><br>`
         );
       }
+    } else if (f.includes("ธาตุ :")) {
+      const splitType = f.split("ธาตุ");
+      console.log(splitType)
+      const equimentPosition = splitType[0].split(":");
+      const equimentType = splitType[1].split(":");
+      textDesc.push(
+        `<span>${equimentPosition[0]}</span>:<span class='text-orange-600 font-extrabold'>${equimentPosition[1]}</span><br>`
+      );
+      textDesc.push(
+        `<span>ธาตุ</span> : <span class='text-orange-600 font-extrabold'> ${equimentType[1]}</span><br>`
+      );
     } else if (f.includes("ตำแหน่ง :")) {
       const splitType = f.split("น้ำหนัก");
       const equimentPosition = splitType[0].split(":");

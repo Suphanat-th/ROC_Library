@@ -2,10 +2,14 @@ function parseDetail(text: string[]): string {
   if (!text) return "";
   const textDesc: string[] = [];
   const redColor = "^ff0000";
+  const grayColor = "^b4b4b4";
   for (let f of text) {
     const str = f.split(redColor);
+    const gray = f.split(grayColor);
     f =
       str.length > 1 ? `<span class="text-[#ff0000]">${str[1]}</span>` : str[0];
+    f =
+      gray.length > 1 ? `<span class="text-[#b4b4b4]">${gray[1]}</span>` : gray[0];
     if (f === "") {
       f =
         "<span class='block w-full overflow-hidden whitespace-nowrap'>___________________________________________________________________________<span>";

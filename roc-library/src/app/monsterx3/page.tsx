@@ -1,3 +1,9 @@
+import Monsterx3ElementPage from "./moster-element";
+
 export default function MonsterX3Page() {
-  return (<div>test Monster x 3</div>);
+  return (
+    <div>
+      <Monsterx3ElementPage></Monsterx3ElementPage>
+    </div>
+  );
 }
