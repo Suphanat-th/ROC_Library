@@ -1,277 +1,44 @@
 {
-    "400475": {
-        "unidentifiedDisplayName": "Hairband",
-        "unidentifiedResourceName": "머리띠",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "Costume Luminous Bulb Tube",
-        "identifiedResourceName": "C_Bulb_Wreath",
-        "identifiedDescriptionName": [
-            "มงกุฎแห่งอำนาจของคณะกรรมการตลาดกลางคืน เดิมทีเป็นการทำมงกุฎจากดอกไม้หรือเถาวัลย์อ่อน ๆ แต่ต่อมากลับถูกเข้าใจผิดและสืบทอดต่อมาอย่างแปลกประหลาด… ยังไงก็เถอะ มันมีพลังในการแสดงอำนาจอย่างน่าประหลาด เมื่อสวมใส่และเดินไปซื้อของตามแผงลอย รู้สึกว่าอาหารที่ได้จะอร่อยและสะอาดเป็นพิเศษ!",
-            "^ffffff_",
-            "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Upper น้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 1",
-            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
-        ],
-        "slotCount": 0,
-        "ClassNum": 2409,
-        "costume": true
-    },
-    "400232": {
-        "unidentifiedDisplayName": "Cap",
-        "unidentifiedResourceName": "캡",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "Costume Crushed Snow Man",
-        "identifiedResourceName": "Crushed_Snow_Man",
-        "identifiedDescriptionName": [
-            "มนุษย์หิมะที่หน้าตาบูดเบี้ยวเพราะใครบางคน",
-            "เพิ่มความความแรงการฟื้นฟูด้วย Ice Cream 300%",
-            "^ff0000หมดระยะเวลาความสามารถวันที่ 7 มกราคม 2569",
-            "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Upper น้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 1",
-            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
-        ],
-        "slotCount": 0,
-        "ClassNum": 2204,
-        "costume": true
-    },
-    "480060": {
+    "20625": {
         "unidentifiedDisplayName": "Hood",
         "unidentifiedResourceName": "후드",
         "unidentifiedDescriptionName": [
             "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "Costume Wavy Green Angel Wings",
-        "identifiedResourceName": "Wing_Of_Angel_Move_GR",
+        "identifiedDisplayName": "Costume Classic Champion's Manteau",
+        "identifiedResourceName": "C_ROS2023_Cape_1",
         "identifiedDescriptionName": [
-            "ปีกนางฟ้าสีเขียวพลิ้วไสว",
-            "ขนนกที่ลอยละล่องแผ่วเบา ทำให้มันดูราวกับมีชีวิตขึ้นมา",
+            "^ff0000ไอเท็มนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "ผ้าคลุมแห่งเกียรติยศที่ถูกมอบให้กับผู้แข็งแกร่งที่สุดในการแข่งขัน Ragnarok Classic Champion's 2025",
+            "",
             "ประเภท : Costume พลังป้องกัน : 0",
             "ตำแหน่ง : Garment น้ำหนัก : 0",
             "เลเวลที่ต้องการ : 1",
             "อาชีพที่ใส่ได้ : ทุกอาชีพ"
         ],
         "slotCount": 0,
-        "ClassNum": 78,
+        "ClassNum": 197,
         "costume": true
     },
-    "400743": {
-        "unidentifiedDisplayName": "Ribbon",
-        "unidentifiedResourceName": "리본",
+    "20626": {
+        "unidentifiedDisplayName": "Hood",
+        "unidentifiedResourceName": "후드",
         "unidentifiedDescriptionName": [
             "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "Costume Winter Tree",
-        "identifiedResourceName": "C_Winter_Tree",
+        "identifiedDisplayName": "Costume Classic Runner-Up Manteau",
+        "identifiedResourceName": "C_ROS2023_Cape_2",
         "identifiedDescriptionName": [
-            "เสื้อคลุมที่ทำขึ้นเลียนแบบรูปร่างของต้นไม้ในฤดูหนาวที่ประดับประดาด้วยของตกแต่งมากมาย",
-            "ขอแค่มีเสื้อคลุมตัวนี้ตัวเดียว ก็สามารถผ่านพ้นหน้าหนาวไปได้อย่างอบอุ่นแล้ว!",
+            "^ff0000ไอเท็มนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "ผ้าคลุมแห่งความภาคภูมิที่ถูกมอบให้กับผู้แข็งแกร่งในการแข่งขัน Ragnarok Classic Champion's 2025",
+            "",
             "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Upper น้ำหนัก : 0",
+            "ตำแหน่ง : Garment น้ำหนัก : 0",
             "เลเวลที่ต้องการ : 1",
             "อาชีพที่ใส่ได้ : ทุกอาชีพ"
         ],
         "slotCount": 0,
-        "ClassNum": 2609,
+        "ClassNum": 198,
         "costume": true
-    },
-    "401145": {
-        "unidentifiedDisplayName": "Hat",
-        "unidentifiedResourceName": "햇",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "[NFS] SnowFlake Tiara",
-        "identifiedResourceName": "SnowFlake_Tiara",
-        "identifiedDescriptionName": [
-            "^ff0000ไอเท็มนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
-            "ผงหิมะโปรยปรายอยู่บนศรีษะ มันดูระยิบระยับคล้ายกับดวงดาว",
-            "เพิ่ม Damage ทางเวทมนตร์ธาตุ Water 10%",
-            "ลด Fixed Cast Time 0.2 วินาที",
-            "_",
-            "เมื่ออัพเกรดถึงขั้น 7 เพิ่ม Damage สกิล Storm Gust 20%",
-            "เมื่ออัพเกรดถึงขั้น 9 หากเรียนรู้สกิล Energy Coat, Def + 300, Mdef + 15",
-            "เมื่ออัพเกรดถึงขั้น 12 เพิ่ม Damage ทางเวทมนตร์ที่ทำต่อศัตรูขนาดกลางและใหญ่ 15%",
-            "",
-            "เมื่อสวมใส่ร่วมกับ [NFS] Magictool Ice [1] หรือ Magictool Ice [1]",
-            "เพิ่ม Damage สกิล Storm Gust ขึ้นอีก 50%",
-            "ลด Global Cooldown 10%",
-            "ประเภท : Headgear พลังป้องกัน : 5",
-            "ตำแหน่ง : Upper น้ำหนัก : 50",
-            "เลเวลที่ต้องการ : 80",
-            "อาชีพที่ใส่ได้ : Hi-Mage Class"
-        ],
-        "slotCount": 1,
-        "ClassNum": 1799,
-        "costume": false
-    },
-    "470410": {
-        "unidentifiedDisplayName": "Sandal",
-        "unidentifiedResourceName": "샌들",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "Santa's Shoes",
-        "identifiedResourceName": "루이제의붉은구두",
-        "identifiedDescriptionName": [
-            "รองเท้าซานต้าสุดน่ารักที่ออกแบบโดย Louise ว่ากันว่าความปรารถนาดีของเด็ก ๆ จะเป็นจริง",
-            "MDEF + 15",
-            "สามารถใช้งาน Lex Aeterna Lv.1 ได้",
-            "เพิ่ม Damage ทางเวทมนตร์ธาตุ Wind 2%",
-            "",
-            "เมื่ออัพเกรดถึงขั้น 7",
-            "MATK + 3%, MAXHP + 7%, MAXSP + 7%, เพิ่ม Damage ทางเวทมนตร์ธาตุ Wind ขึ้นอีก 3%",
-            "เมื่ออัพเกรดถึงขั้น 9",
-            "MATK + 5%, MAXHP + 10%, MAXSP + 10%, เพิ่ม Damage ทางเวทมนตร์ธาตุ Wind ขึ้นอีก 5%",
-            "เมื่ออัพเกรดถึงขั้น 11",
-            "ลด Fixed Cast Time 0.5 วินาที",
-            "",
-            "เมื่อสวมใส่ร่วมกับ Candy Cane Rod,[NFS]Candy Cane Rod",
-            "ทุก ๆ การเรียนรู้สกิล Thunder Storm 1 เลเวล เพิ่ม Damage สกิล Thunder Storm 30%",
-            "ทุก ๆ การเรียนรู้สกิล Lightening Bolt 1 เลเวล เพิกเฉยต่อพลังป้องกันเวทมนตร์ของศัตรูทุกเผ่า 5%",
-            "ทุก ๆ การอัพเกรด Candy Cane Rod 1 ขั้น เพิ่ม Damage สกิล Thunder Storm ขึ้นอีก 20%, เพิ่ม Damage ทางเวทมนตร์ธาตุ Wind 4%",
-            "ประเภท : Shoes  พลังป้องกัน : 15",
-            "น้ำหนัก : 50",
-            "เลเวลที่ต้องการ : 70",
-            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
-        ],
-        "slotCount": 1,
-        "ClassNum": 0,
-        "costume": false
-    },
-    "550192": {
-        "unidentifiedDisplayName": "Candy Cane Rod",
-        "unidentifiedResourceName": "막대사탕",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "Candy Cane Rod",
-        "identifiedResourceName": "CandyCaneRod",
-        "identifiedDescriptionName": [
-            "ลูกกวาดรูปไม้เท้า มีรสหวาน หอมออกมาทุกครั้งที่เปล่งพลัง",
-            "",
-            "MATK +140, INT +2",
-            "ทุก ๆ การอัพเกรด 1 ขั้น FLEE + 5",
-            "",
-            "เมื่ออัพเกรดถึงขั้น 7 ลด Fixed Cast Time 0.2 วินาที",
-            "เมื่ออัพเกรดถึงขั้น 9 ลดระยะเวลาร่ายสกิล Thunder Storm 100%",
-            "เมื่ออัพเกรดถึงขั้น 10 Perfect Dodge + 10",
-            "เมื่ออัพเกรดถึงขั้น 12 Global Cooldown - 10%",
-            "ประเภท : Rod พลังโจมตี : 10",
-            "น้ำหนัก : 50",
-            "เลเวลที่ต้องการ : 4",
-            "เลเวลที่ต้องการ : 85",
-            "อาชีพที่ใส่ได้ : Novice Class, Magician Class, Acolyte Class, Soul Linker"
-        ],
-        "slotCount": 2,
-        "ClassNum": 69,
-        "costume": false
-    },
-    "550193": {
-        "unidentifiedDisplayName": "Candy Cane Rod",
-        "unidentifiedResourceName": "막대사탕",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "[NFS] Candy Cane Rod",
-        "identifiedResourceName": "CandyCaneRod",
-        "identifiedDescriptionName": [
-            "^ff0000ไอเท็มนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
-            "ลูกกวาดรูปไม้เท้า มีรสหวาน หอมออกมาทุกครั้งที่เปล่งพลัง",
-            "",
-            "MATK +140, INT +2",
-            "ทุก ๆ การอัพเกรด 1 ขั้น FLEE + 5",
-            "",
-            "เมื่ออัพเกรดถึงขั้น 7 ลด Fixed Cast Time 0.2 วินาที",
-            "เมื่ออัพเกรดถึงขั้น 9 ลดระยะเวลาร่ายสกิล Thunder Storm 100%",
-            "เมื่ออัพเกรดถึงขั้น 10 Perfect Dodge + 10",
-            "เมื่ออัพเกรดถึงขั้น 12 Global Cooldown - 10%",
-            "ประเภท : Rod พลังโจมตี : 10",
-            "น้ำหนัก : 50",
-            "เลเวลที่ต้องการ : 4",
-            "เลเวลที่ต้องการ : 85",
-            "อาชีพที่ใส่ได้ : Novice Class, Magician Class, Acolyte Class, Soul Linker"
-        ],
-        "slotCount": 2,
-        "ClassNum": 69,
-        "costume": false
-    },
-    "28630": {
-        "unidentifiedDisplayName": "Book",
-        "unidentifiedResourceName": "북",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "Exorcist's Bible",
-        "identifiedResourceName": "퇴마의성서",
-        "identifiedDescriptionName": [
-            "คัมภีร์ทางศาสนาเกี่ยวกับการขับไล่ปีศาจที่บาทหลวงระดับสูงในสมัยโบราณเคยใช้",
-            "ดูเหมือนมันจะเข้าคู่กับ Ancient Hero Boots ",
-            "",
-            "MATK +160 ",
-            "ทุก ๆ การอัพเกรด 2 ขั้น MATK+ 10. ",
-            "ทุก ๆ การอัพเกรด 3 ขั้น ความสามารถในการใช้สกิล Heal และ Sanctuary 20%",
-            "เมื่ออัพเกรดถึงขั้น 9 เพิ่ม Damage ทางเวทมนตร์ธาตุ Holy 10%",
-            "เเมื่ออัพเกรดถึงขั้น 11 เพิ่ม Damage สกิล Magnus Exorcismus ขึ้น 30% ",
-            "เมื่อทำการโจมตีเวทมนตร์ในระหว่างที่สวมใส่ร่วมกับ Ancient Hero Boots มีโอกาส INT + 20, MATK+ 15% เป็นเวลา 7 วินาที ",
-            "",
-            "ประเภท : Book พลังโจมตี : 165",
-            "น้ำหนัก : 50",
-            "เลเวลอาวุธ : 4",
-            "เลเวลที่ต้องการ : 70",
-            "อาชีพที่ใส่ได้ : High Priest Class"
-        ],
-        "slotCount": 2,
-        "ClassNum": 15
-    },
-    "28646": {
-        "unidentifiedDisplayName": "Book",
-        "unidentifiedResourceName": "북",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "[NFS]Exorcist's Bible",
-        "identifiedResourceName": "퇴마의성서",
-        "identifiedDescriptionName": [
-            "คัมภีร์ทางศาสนาเกี่ยวกับการขับไล่ปีศาจที่บาทหลวงระดับสูงในสมัยโบราณเคยใช้",
-            "ดูเหมือนมันจะเข้าคู่กับ Ancient Hero Boots ",
-            "",
-            "MATK +160 ",
-            "ทุก ๆ การอัพเกรด 2 ขั้น MATK+ 10. ",
-            "ทุก ๆ การอัพเกรด 3 ขั้น ความสามารถในการใช้สกิล Heal และ Sanctuary 20%",
-            "เมื่ออัพเกรดถึงขั้น 9 เพิ่ม Damage ทางเวทมนตร์ธาตุ Holy 10%",
-            "เเมื่ออัพเกรดถึงขั้น 11 เพิ่ม Damage สกิล Magnus Exorcismus ขึ้น 30% ",
-            "เมื่อทำการโจมตีเวทมนตร์ในระหว่างที่สวมใส่ร่วมกับ Ancient Hero Boots มีโอกาส INT + 20, MATK+ 15% เป็นเวลา 7 วินาที ",
-            "",
-            "ประเภท : Book พลังโจมตี : 165",
-            "น้ำหนัก : 50",
-            "เลเวลอาวุธ : 4",
-            "เลเวลที่ต้องการ : 70",
-            "อาชีพที่ใส่ได้ : High Priest Class"
-        ],
-        "slotCount": 2,
-        "ClassNum": 15
-    },
-    "106096": {
-        "unidentifiedDisplayName": "Snowy Mind Scroll",
-        "unidentifiedResourceName": "EvilMind_Scroll_TW",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "Snowy Mind Scroll",
-        "identifiedResourceName": "EvilMind_Scroll_TW",
-        "identifiedDescriptionName": [
-            "Scroll สุดงดงามราวกับหิมะยามค่ำคืน หิมะที่โปรยปรายใต้แสงจันทร์ระยิบระยับ ดูโดดเด่นและน่าหลงใหลยามค่ำคืน ",
-            "หากเปิดใช้งานหลังวันที่ 7 มกราคม 2569 หลังปิดปรับปรุงประจำสัปดาห์ จะไม่ได้รับ Snowy Mind Coin",
-            "น้ำหนัก : 1"
-        ],
-        "slotCount": 0,
-        "ClassNum": 0,
-        "costume": false
     }
 }

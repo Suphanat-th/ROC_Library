@@ -7,13 +7,28 @@ function parseDetail(text: string[]): string {
     const str = f.split(redColor);
     const gray = f.split(grayColor);
     f =
-      str.length > 1 ? `<span class="text-[#ff0000]">${str[1]}</span>` : str[0];
+    str.length > 1 ? `<span class="text-[#ff0000]">${str[1]}</span>` : str[0];
     f =
-      gray.length > 1 ? `<span class="text-[#b4b4b4]">${gray[1]}</span>` : gray[0];
-    if (f === "") {
+    gray.length > 1 ? `<span class="text-[#b4b4b4]">${gray[1]}</span>` : gray[0];
+    
+    if (f === "" || f === "_") {
       f =
-        "<span class='block w-full overflow-hidden whitespace-nowrap'>___________________________________________________________________________<span>";
+      "<span class='block w-full overflow-hidden whitespace-nowrap'>___________________________________________________________________________</span>";
     }
+
+        // แปลงโค้ดสี RO → HTML
+    f = f
+      .replace(/\^ff0000/g, `<span class="text-[#ff0000]">`)
+      .replace(/\^b4b4b4/g, `<span class="text-[#b4b4b4]">`)
+      .replace(/\^00ff00/g, `<span class="text-[#00ff00]">`)
+      .replace(/\^ffff00/g, `<span class="text-[#ffff00]">`)
+      .replace(/\^ffffff_/g, `<span class="text-[#ffffff]">`);
+
+    // ถ้ามี span เปิด → ปิดตอนท้ายบรรทัด
+    if (f.includes("<span")) {
+      f += "</span>";
+    }
+
     if (f.includes("ประเภท :")) {
       break;
     }
@@ -27,7 +42,6 @@ export default function DetailConvertPage({
 }: {
   identifiedDescription: string[];
 }) {
-  console.log(identifiedDescription)
   return (
     <div className="col-span-6 sm:col-span-4 bg-white/95 p-6 rounded-2xl shadow-md text-gray-800 space-y-4 border border-gray-100 text-left">
       <div className=" rounded-2xl  ">

@@ -13,11 +13,13 @@ function parseOption(text: string[]): string {
     }
     if (!isOption) continue;
 
+    let typeEquiment = "พลังป้องกัน";
     if (f.includes("ประเภท :")) {
       let splitType: string[] = [];
       if (f.includes("พลังป้องกัน :")) {
         splitType = f.split("พลังป้องกัน");
       } else {
+        typeEquiment = "พลังโจมตี";
         splitType = f.split("พลังโจมตี");
       }
       const equimentType = splitType[0].split(":");
@@ -27,12 +29,11 @@ function parseOption(text: string[]): string {
       if (splitType[1]) {
         const equimentProtect = splitType[1].split(":");
         textDesc.push(
-          `<span>พลังป้องกัน</span> : <span class='text-orange-600 font-extrabold'>${equimentProtect[1]}</span><br>`
+          `<span>${typeEquiment}</span> : <span class='text-orange-600 font-extrabold'>${equimentProtect[1]}</span><br>`
         );
       }
     } else if (f.includes("ธาตุ :")) {
       const splitType = f.split("ธาตุ");
-      console.log(splitType)
       const equimentPosition = splitType[0].split(":");
       const equimentType = splitType[1].split(":");
       textDesc.push(
