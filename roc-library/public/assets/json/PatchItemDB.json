@@ -1,44 +1,590 @@
 {
-    "20625": {
-        "unidentifiedDisplayName": "Hood",
-        "unidentifiedResourceName": "후드",
+    "100275": {
+        "unidentifiedDisplayName": "Dragonic Slayer Modification Cube",
+        "unidentifiedResourceName": "RemodelCube",
+        "unidentifiedDescriptionName": [
+            "ลูกบาศก์ที่ช่วยอัพเกรด Dragonic Slayer ให้กลายเป็น Awakened Dragonic Slayer",
+            "ใช้วัตถุดิบเป็น Dragonic Slayer ตั้งแต่ +9 ขึ้นไป",
+            "และจะได้รับ Awakened Dragonic Slayer +7 ออกมา",
+            "^ff0000คำเตื่อน! - เมื่ออัพเกรดแล้ว การ์ดและ Random Option ที่ใช้อยู่จะสูญหาย"
+        ],
+        "identifiedDisplayName": "Dragonic Slayer Modification Cube",
+        "identifiedResourceName": "RemodelCube",
+        "identifiedDescriptionName": [
+            "ลูกบาศก์ที่ช่วยอัพเกรด Dragonic Slayer ให้กลายเป็น Awakened Dragonic Slayer",
+            "ใช้วัตถุดิบเป็น Dragonic Slayer ตั้งแต่ +9 ขึ้นไป",
+            "และจะได้รับ Awakened Dragonic Slayer +7 ออกมา",
+            "^ff0000คำเตื่อน! - เมื่ออัพเกรดแล้ว การ์ดและ Random Option ที่ใช้อยู่จะสูญหาย",
+            "<ITEM>Awakened Dragonic Slayer<INFO>21058</INFO></ITEM>",
+            "",
+            "น้ำหนัก : 1"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "101483": {
+        "unidentifiedDisplayName": "Blessed Knife Modification Cube",
+        "unidentifiedResourceName": "RemodelCube",
+        "unidentifiedDescriptionName": [
+            "ลูกบาศก์ที่ช่วยอัพเกรด Blessed Knife ให้กลายเป็น Awakened Blessed Knife",
+            "ใช้วัตถุดิบเป็น Blessed Knife ตั้งแต่ +9 ขึ้นไป",
+            "และจะได้รับ Awakened Blessed Knife +7 ออกมา",
+            "^ff0000คำเตื่อน! - เมื่ออัพเกรดแล้ว การ์ดและ Random Option ที่ใช้อยู่จะสูญหาย",
+            ""
+        ],
+        "identifiedDisplayName": "Blessed Knife Modification Cube",
+        "identifiedResourceName": "RemodelCube",
+        "identifiedDescriptionName": [
+            "ลูกบาศก์ที่ช่วยอัพเกรด Blessed Knife ให้กลายเป็น Awakened Blessed Knife",
+            "ใช้วัตถุดิบเป็น Blessed Knife ตั้งแต่ +9 ขึ้นไป",
+            "และจะได้รับ Awakened Blessed Knife +7 ออกมา",
+            "^ff0000คำเตื่อน! - เมื่ออัพเกรดแล้ว การ์ดและ Random Option ที่ใช้อยู่จะสูญหาย",
+            "<ITEM>Awakened Blessed Knife<INFO>510071</INFO></ITEM>",
+            "",
+            "น้ำหนัก : 1"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "21058": {
+        "unidentifiedDisplayName": "Bastard Sword",
+        "unidentifiedResourceName": "바스타드소드",
         "unidentifiedDescriptionName": [
             "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "Costume Classic Champion's Manteau",
-        "identifiedResourceName": "C_ROS2023_Cape_1",
+        "identifiedDisplayName": "Awakened Dragonic Slayer",
+        "identifiedResourceName": "UpHetairoi_Sword",
         "identifiedDescriptionName": [
-            "^ff0000ไอเท็มนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
-            "ผ้าคลุมแห่งเกียรติยศที่ถูกมอบให้กับผู้แข็งแกร่งที่สุดในการแข่งขัน Ragnarok Classic Champion's 2025",
+            "ดาบขนาดใหญ่ที่เล่าขานกันว่าผู้ปราบมังกรในอดีตเคยใช้",
+            "ดูกลมกลืนเข้ากับ Ancient Hero Boots",
+            "",
+            "ทุก ๆ การอัพเกรด 2 ขั้น ATK +20",
+            "ทุก ๆ การอัพเกรด 3 ขั้น เพิ่ม Damage สกิล Bowling Bash 50%",
+            "เมื่ออัพเกรดถึงขั้น 9 ลดระยะเวลาในการร่ายสกิลแบบแปรผัน 40%",
+            "เมื่ออัพเกรดถึงขั้น 11 เพิ่ม MHP/MSP +30%",
+            "",
+            "ประเภท : Two-Handed Sword พลังโจมตี : 250",
+            "น้ำหนัก : 200",
+            "เลเวลของอาวุธ : 4",
+            "เลเวลที่ต้องการ : 98",
+            "อาชีพที่ใส่ได้ : Lord Knight"
+        ],
+        "slotCount": 2,
+        "ClassNum": 3,
+        "costume": false
+    },
+    "510071": {
+        "unidentifiedDisplayName": "Knife",
+        "unidentifiedResourceName": "나이프",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Awakened Blessed Knife",
+        "identifiedResourceName": "Up_Blessed_Knife",
+        "identifiedDescriptionName": [
+            "มีดสั้นที่วีรชนผู้กล้าในอดีตเคยใช้มันสู้รบ",
+            "กล่าวขานกันว่า ภายในเปี่ยมไปด้วยพรของเหล่าเทวทูต จึงทำให้ผู้ที่ได้รับการคุ้มครองจากทูตสวรรค์เท่านั้นที่ใช้มีดนี้ได้",
+            "เริ่มเผยพลังอันแท้จริงออกมา ด้วยพลังโบราณอันกล้าแกร่ง",
+            "ดูกลมกลืนเข้ากับ Ancient Hero Boots",
+            " ",
+            "ทุก ๆ การอัพเกรด 2 ขั้น ATK +20",
+            "ทุก ๆ การอัพเกรด 3 ขั้น เพิ่ม Damage สกิล Holy Cross 50%",
+            "เมื่ออัพเกรดถึงขั้น 9, ASPD +20%, เพิ่ม Damage สกิล Holy Cross 20%",
+            "เมื่ออัพเกรดถึงขั้น 11,  เพิ่ม Damage ทางกายภาพระยะใกล้ 15%, เมื่อโจมตีกายภาพระยะใกล้มีโอกาส 10% ที่จะร่าย Holy Cross Lv.10",
+            "",
+            "ประเภท : Dagger พลังโจมตี : 210",
+            "น้ำหนัก : 120",
+            "เลเวลของอาวุธ : 4",
+            "เลเวลที่ต้องการ : 98",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 2,
+        "ClassNum": 31,
+        "costume": false
+    },
+    "26118": {
+        "unidentifiedDisplayName": "One-handed Staff",
+        "unidentifiedResourceName": "롯드",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Shadow Staff",
+        "identifiedResourceName": "쉐도우스태프",
+        "identifiedDescriptionName": [
+            "คทาเก่าแก่ที่กล่าวกันว่าฮีโร่โบราณได้เคยใช้",
+            "ถึงจะดูเก่าแต่พลังเวทที่หลับใหลอยู่ภายในดูจะตอบสนองกับ Ancient Hero Boots",
+            "MATK + 155",
+            "ไม่สามารถทำลายได้",
+            "ทุกๆ การอัพเกรด 2 ขั้น MATK+ 10",
+            "ทุกๆ การอัพเกรด 3 ขั้น เพิ่ม Damage ของสกิล [Earth Spike,Heaven's Drive] 20%",
+            "เมื่ออัพเกรดถึงขั้น 9 ลด Variable Cast Time 10%",
+            "เมื่ออัพเกรดถึงขั้น 11 เมื่อใช้ Heaven's Drive มีโอกาส 30% ที่จะร่าย Heaven's Drive ใส่บริเวณผู้ใช้อีก 1 ครั้ง",
+            "เมื่อสวมใส่ร่วมกันกับ Ancient Hero Boots เมื่อทำการโจมตีทางเวทมนตร์จะมีโอกาส (3%) เพิ่ม INT + 20, MATK+ 15% เป็นเวลา 7 วินาที",
+            "ประเภท : One-handed Staff พลังโจมตี : 40",
+            "น้ำหนัก : 50",
+            "เลเวลอาวุธ : 4",
+            "เลเวลที่ต้องการ : 70",
+            "อาชีพที่ใส่ได้ : Professer"
+        ],
+        "slotCount": 2,
+        "ClassNum": 10
+    },
+    "26178": {
+        "unidentifiedDisplayName": "Rod",
+        "unidentifiedResourceName": "롯드",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[Not For Sale] Shadow Staff",
+        "identifiedResourceName": "쉐도우스태프",
+        "identifiedDescriptionName": [
+            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "คทาเก่าแก่ที่กล่าวกันว่าฮีโร่โบราณได้เคยใช้",
+            "ถึงจะดูเก่าแต่พลังเวทที่หลับใหลอยู่ภายในดูจะเข้ากันกับ Ancient Hero Boots",
+            "MATK +155",
+            "ไม่สามารถทำลายได้",
+            "ทุก ๆ การอัพเกรด 2 ขั้น MATK +10",
+            "ทุก ๆ การอัพเกรด 3 ขั้น เพิ่ม Damage สกิล [Earth Spike,Heaven's Drive] 20%",
+            "เมื่ออัพเกรดถึงขั้น 9 ลด Variable Cast Time 10%",
+            "เมื่ออัพเกรดถึงขั้น 11 เมื่อใช้ Heaven's Drive มีโอกาส 30% ที่จะร่าย Heaven's Drive ใส่บริเวณผู้ใช้อีก 1 ครั้ง",
+            "เมื่อสวมใส่ร่วมกับ Ancient Hero Boots เมื่อโจมตีทางเวทมนตร์ มีโอกาส 3% ที่ INT +20, MATK +15 เป็นเวลา 7 วินาที",
+            "",
+            "ประเภท : One-Handed Staff พลังโจมตี : 40",
+            "น้ำหนัก : 50",
+            "เลเวลของอาวุธ : 4",
+            "เลเวลที่ต้องการ : 70",
+            "อาชีพที่ใส่ได้ : Professer"
+        ],
+        "slotCount": 2,
+        "ClassNum": 69,
+        "costume": false
+    },
+    "420351": {
+        "unidentifiedDisplayName": "Mask",
+        "unidentifiedResourceName": "마스크",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Costume Auspicious Clouds",
+        "identifiedResourceName": "C_Auspicloud",
+        "identifiedDescriptionName": [
+            "ชุดนี้เป็นตัวแทนของความคล่องแคล่ว ความแข็งแกร่ง สติปัญญา และความทุ่มเท",
+            "ของผู้สวมใส่ในการผจญภัย ว่ากันว่าเมฆในชุดนี้จะนำโชคดีมาให้",
             "",
             "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Garment น้ำหนัก : 0",
+            "ตำแหน่ง : Lower น้ำหนัก : 0",
             "เลเวลที่ต้องการ : 1",
             "อาชีพที่ใส่ได้ : ทุกอาชีพ"
         ],
         "slotCount": 0,
-        "ClassNum": 197,
+        "ClassNum": 383,
         "costume": true
     },
-    "20626": {
+    "24370": {
+        "unidentifiedDisplayName": "Shadow Weapon",
+        "unidentifiedResourceName": "웨폰쉐도우",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Mortal Blow Shadow Weapon",
+        "identifiedResourceName": "웨폰쉐도우",
+        "identifiedDescriptionName": [
+            "ถุงมือที่สวมใส่ที่มือข้างที่ใช้ถืออาวุธ เพื่อดึงศักยภาพแฝงของผู้สวมใส่ออกมา",
+            "Critical Damage + 2%",
+            "เมื่ออัพเกรดถึงขั้น 7 Critical Damage + 2%",
+            "เมื่ออัพเกรดถึงขั้น 9 Critical Damage + 3%",
+            "เมื่อสวมใส่ร่วมกับ Mortal Blow Shadow Earring, Mortal Blow Shadow Pendant, Critical Damage + 2%",
+            "เมื่อขั้นอัพเกรด ^32CD32Mortal Blow Shadow (Weapon, Earrings, Pendant) รวมกันตั้งแต่ 25 ขึ้นไป, Critical Damage + 10%",
+            "เมื่อขั้นอัพเกรด ^32CD32Mortal Blow Shadow (Weapon, Earrings, Pendant) รวมกันตั้งแต่ 30 ขึ้นไป, ASPD + 3",
+            "ประเภท : Shadow Equipment",
+            "ตำแหน่ง : Weapon น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": true
+    },
+    "24371": {
+        "unidentifiedDisplayName": "Shadow Earring",
+        "unidentifiedResourceName": "이어링쉐도우",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Mortal Blow Shadow Earring",
+        "identifiedResourceName": "이어링쉐도우",
+        "identifiedDescriptionName": [
+            "ต่างหูศักดิ์สิทธิ์ที่เล่าขานกันว่าสามารถปกป้องผู้สวมใส่ได้ และช่วยดึงศักยภาพแฝงของผู้สวมใส่ออกมา",
+            "Critical Damage + 1%",
+            "เมื่ออัพเกรดถึงขั้น 7 Critical Damage + 1%",
+            "เมื่ออัพเกรดถึงขั้น 9 Critical Damage + 1%",
+            "ประเภท : Shadow Equipment",
+            "ตำแหน่ง : Earrings น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": true
+    },
+    "24372": {
+        "unidentifiedDisplayName": "Shadow Pendant",
+        "unidentifiedResourceName": "펜던트쉐도우",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Mortal Blow Shadow Pendant",
+        "identifiedResourceName": "펜던트쉐도우",
+        "identifiedDescriptionName": [
+            "สร้อยคอศักดิ์สิทธิ์ที่เล่าขานกันว่าสามารถปกป้องผู้สวมใส่ได้ และช่วยดึงศักยภาพแฝงของผู้สวมใส่ออกมา",
+            "Critical Damage + 1%",
+            "เมื่ออัพเกรดถึงขั้น 7 Critical Damage + 1%",
+            "เมื่ออัพเกรดถึงขั้น 9 Critical Damage + 1%",
+            "ประเภท : Shadow Equipment",
+            "ตำแหน่ง : Pendant น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": true
+    },
+    "480720": {
         "unidentifiedDisplayName": "Hood",
         "unidentifiedResourceName": "후드",
         "unidentifiedDescriptionName": [
             "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "Costume Classic Runner-Up Manteau",
-        "identifiedResourceName": "C_ROS2023_Cape_2",
+        "identifiedDisplayName": "God's Spiritual Earth",
+        "identifiedResourceName": "Plain_Rune_Hood",
+        "identifiedDescriptionName": [
+            "ผ้าคลุมลมที่มีจิตวิญญาณของพระเจ้าควบคุมอยู่ เพิ่มพลังทำลายล้างสูง",
+            "ทุก ๆ การอัพเกรด 2 ขั้น MATK + 10",
+            "ทุก ๆ การอัพเกรด 4 ขั้น เพิ่ม Damage ทางเวทมนตร์ธาตุ Earth, Ghost 3%,",
+            "เมื่ออัพเกรดถึงขั้น 7 เพิ่ม Damage ทางเวทมนตร์ต่อศัตรูทุกขนาด 10%,",
+            "เมื่ออัพเกรดถึงขั้น 11 ลด Delay หลังใช้สกิล 12%,",
+            "เมื่ออัพเกรดถึงขั้น 13 เพิกเฉยต่อพลังป้องกันทางเวทมนตร์ของมอนสเตอร์ประเภท Boss 10%",
+            "",
+            "เมื่อใช้งานร่วมกับ Arc Elder Card,",
+            "เพิ่ม Damage ทางเวทมนตร์ธาตุ Earth 10%",
+            "สามารถใช้สกิล Heaven's Drive Lv.5 ได้,",
+            "ทุก ๆ การอัพเกรด Garment 2 ขั้น เพิ่ม Damage ทางเวทมนตร์ธาตุ Earth ขึ้นอีก 3%",
+            "",
+            "เมื่อใช้งานร่วมกับ Kathryne Keyron Card,",
+            "เพิ่ม Damage ทางเวทมนตร์ธาตุ Ghost 10%,",
+            "ทุก ๆ การอัพเกรด Garment 2 ขั้น เพิ่ม Damage ทางเวทมนตร์ธาตุ Ghost ขึ้นอีก 3%",
+            "เมื่ออัพเกรด Garment ถึงขั้น 12 เพิ่ม Damage ทางเวทมนตร์ต่อศัตรูทุกขนาด 15%",
+            "ประเภท : Garment  พลังป้องกัน : 10",
+            "น้ำหนัก : 30",
+            "เลเวลที่ต้องการ : 71",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "480721": {
+        "unidentifiedDisplayName": "Hood",
+        "unidentifiedResourceName": "후드",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[NFS] God's Spiritual Earth",
+        "identifiedResourceName": "Plain_Rune_Hood",
         "identifiedDescriptionName": [
             "^ff0000ไอเท็มนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
-            "ผ้าคลุมแห่งความภาคภูมิที่ถูกมอบให้กับผู้แข็งแกร่งในการแข่งขัน Ragnarok Classic Champion's 2025",
+            "ผ้าคลุมลมที่มีจิตวิญญาณของพระเจ้าควบคุมอยู่ เพิ่มพลังทำลายล้างสูง",
+            "ทุก ๆ การอัพเกรด 2 ขั้น MATK + 10",
+            "ทุก ๆ การอัพเกรด 4 ขั้น เพิ่ม Damage ทางเวทมนตร์ธาตุ Earth, Ghost 3%,",
+            "เมื่ออัพเกรดถึงขั้น 7 เพิ่ม Damage ทางเวทมนตร์ที่ต่อศัตรูทุกขนาด 10%,",
+            "เมื่ออัพเกรดถึงขั้น 11 ลด Delay หลังใช้สกิล 12%,",
+            "เมื่ออัพเกรดถึงขั้น 13 เพิกเฉยต่อพลังป้องกันทางเวทมนตร์ของมอนสเตอร์ประเภท Boss 10%",
             "",
+            "เมื่อใช้งานร่วมกับ Arc Elder Card,",
+            "เพิ่ม Damage เวทมนตร์ธาตุ Earth 10%",
+            "สามารถใช้สกิล Heaven's Drive Lv.5 ได้,",
+            "ทุก ๆ การอัพเกรด Garment 2 ขั้น เพิ่ม Damage ทางเวทมนตร์ธาตุ Earth ขึ้นอีก 3%",
+            "",
+            "เมื่อใช้งานร่วมกับ Kathryne Keyron Card,",
+            "เพิ่ม Damage ทางเวทมนตร์ธาตุ Ghost 10%,",
+            "ทุก ๆ การอัพเกรด Garment 2 ขั้น เพิ่ม Damage ทางเวทมนตร์ธาตุ Ghost ขึ้นอีก 3%",
+            "เมื่ออัพเกรด Garment ถึงขั้น 12 เพิ่ม Damage ทางเวทมนตร์ที่ทำต่อศัตรูทุกขนาด 15%",
+            "ประเภท : Garment  พลังป้องกัน : 10",
+            "น้ำหนัก : 30",
+            "เลเวลที่ต้องการ : 71",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "490904": {
+        "unidentifiedDisplayName": "Ribbon",
+        "unidentifiedResourceName": "리본",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Fairy Lamp",
+        "identifiedResourceName": "입에문램프",
+        "identifiedDescriptionName": [
+            "ตะเกียงที่หากพกติดตัวในยามค่ำคืน จะส่องสว่างทางข้างหน้าให้สว่างไสว",
+            "All Stats + 2",
+            "ลดระยะเวลาร่ายแบบคงที่ 0.2 วินาที",
+            "",
+            "เมื่อสวมใส่ร่วมกับ Clockwork Device (ASPD), ASPD + 2",
+            "เมื่อสวมใส่ร่วมกับ Clockwork Device (ATK), ATK + 50",
+            "เมื่อสวมใส่ร่วมกับ Clockwork Device (MATK), MATK + 50",
+            "เมื่อสวมใส่ร่วมกับ Clockwork Device (CRT), Critical Damage + 50%",
+            "เมื่อสวมใส่ร่วมกับ Clockwork Device (Delay), ลด Delay หลังใช้สกิล 10%",
+            "เมื่อสวมใส่ร่วมกับ Clockwork Device (Variable Casting), ลดระยะเวลาร่ายแบบแปรผัน 10%",
+            "ประเภท : Headgear พลังป้องกัน : 0",
+            "ตำแหน่ง : Lower น้ำหนัก : 10",
+            "เลเวลที่ต้องการ : 70",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "106309": {
+        "unidentifiedDisplayName": "Time Sacred Scroll",
+        "unidentifiedResourceName": "Time_Eggs",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Time Sacred Scroll",
+        "identifiedResourceName": "Time_Eggs",
+        "identifiedDescriptionName": [
+            "ม้วนคัมภีร์แห่งกาลเวลา บันทึกพลังศักดิ์สิทธิ์ที่ไหลเวียนข้ามอดีตและอนาคต",
+            "ผู้ครอบครองสามารถปลุกพลังที่ถูกผนึกไว้ในห้วงเวลา",
+            "",
+            "^ff0000หากเปิดใช้งานหลังวันที่ 11 กุมภาพันธ์ 2569 หลังปิดปรับปรุงประจำสัปดาห์ จะไม่ได้รับ Time Sacred Coin",
+            "น้ำหนัก : 1"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "480255": {
+        "unidentifiedDisplayName": "Hood",
+        "unidentifiedResourceName": "후드",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[NFS] Candy Bag Backpack (Range)",
+        "identifiedResourceName": "안토니오가방",
+        "identifiedDescriptionName": [
+            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "กระเป๋าที่เต็มไปด้วยลูกอม",
+            "อาจจะเพราะมีพลังเวทมนตร์อยู่ เมื่อสะพายแล้วจะได้รับ Effect หลากหลายอย่าง",
+            "ทุก ๆ การอัพเกรด 2 ขั้น เพิ่ม Damage ทางกายภาพระยะไกล 1%",
+            "เมื่ออัพเกรดถึงขั้น 9, ASPD +10%",
+            "เมื่ออัพเกรดถึงขั้น 12 ลด Delay หลังใช้สกิล 7%",
+            "เมื่อเลเวลตัวละครน้อยกว่า 100 : เพิ่ม EXP ที่ได้รับจากมอนสเตอร์ 10%",
+            "เมื่อเลเวลตัวละครมากกว่า 100 : เพิ่ม EXP ที่ได้รับจากมอนสเตอร์ 4%",
+            "ประเภท : Garment  พลังป้องกัน : 30",
+            "น้ำหนัก : 20",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 1,
+        "ClassNum": 13,
+        "costume": false
+    },
+    "480248": {
+        "unidentifiedDisplayName": "Hood",
+        "unidentifiedResourceName": "후드",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[NFS] Candy Bag Backpack (Physical)",
+        "identifiedResourceName": "안토니오가방",
+        "identifiedDescriptionName": [
+            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "กระเป๋าที่เต็มไปด้วยลูกอม",
+            "อาจจะเพราะมีพลังเวทมนตร์อยู่ เมื่อสะพายแล้วจะได้รับ Effect หลากหลายอย่าง",
+            "ทุก ๆ การอัพเกรด 2 ขั้น ATK +1%",
+            "เมื่ออัพเกรดถึงขั้น 9, ASPD +10%",
+            "เมื่ออัพเกรดถึงขั้น 12, ลด Delay หลังใช้สกิล 7%",
+            "เมื่อเลเวลตัวละครน้อยกว่า 100 : เพิ่ม EXP ที่ได้รับจากมอนสเตอร์ 10%",
+            "เมื่อเลเวลตัวละครมากกว่า 100 : เพิ่ม EXP ที่ได้รับจากมอนสเตอร์ 4%",
+            "ประเภท : Garment พลังป้องกัน : 30",
+            "น้ำหนัก : 20",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 1,
+        "ClassNum": 13,
+        "costume": false
+    },
+    "480263": {
+        "unidentifiedDisplayName": "Hood",
+        "unidentifiedResourceName": "후드",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[NFS] Candy Bag Backpack (Magical)",
+        "identifiedResourceName": "안토니오가방",
+        "identifiedDescriptionName": [
+            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "กระเป๋าที่เต็มไปด้วยลูกอม",
+            "อาจจะเพราะมีพลังเวทมนตร์อยู่ เมื่อสะพายแล้วจะได้รับ Effect หลากหลายอย่าง",
+            "ทุก ๆ การอัพเกรด 3 ขั้น MATK +2%",
+            "เมื่ออัพเกรดถึงขั้น 9 ลดระยะเวลาร่ายแบบแปรผัน 10%",
+            "เมื่ออัพเกรดถึงขั้น 12 ลด Delay หลังใช้สกิล 7%",
+            "เมื่อเลเวลตัวละครน้อยกว่า 100 : เพิ่ม EXP ที่ได้รับจากมอนสเตอร์ 10%",
+            "เมื่อเลเวลตัวละครมากกว่า 100 : เพิ่ม EXP ที่ได้รับจากมอนสเตอร์ 4%",
+            "ประเภท : Garment  พลังป้องกัน : 30",
+            "น้ำหนัก : 20",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 1,
+        "ClassNum": 13,
+        "costume": false
+    },
+    "401213": {
+        "unidentifiedDisplayName": "Ribbon",
+        "unidentifiedResourceName": "리본",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Costume Jaow Pirun Sra Yok",
+        "identifiedResourceName": "C_Jaow_Pirun",
+        "identifiedDescriptionName": [
+            "มังกรครามชิงหลง",
+            "มังกรฟ้าแห่งตำนาน ผู้ปกป้องสายน้ำและสกุณาโบราณ",
+            "ทุกลมหายใจของมันเต็มไปด้วยพลังแห่งฟากฟ้า จงเคารพและระวังเมื่อได้พบสายตาที่เฉียบคมของมัน",
+            "",
+            "Original Design by the seasons",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Upper น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 2810,
+        "costume": true
+    },
+    "410576": {
+        "unidentifiedDisplayName": "Ribbon",
+        "unidentifiedResourceName": "리본",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Costume Eye of Necromancer",
+        "identifiedResourceName": "C_Eye_of_Necromancer",
+        "identifiedDescriptionName": [
+            "ดวงตาของผู้ที่ได้รับอาชีพ Necromancer Class",
+            "ดวงตาที่เต็มไปด้วยเงามืด แฝงพลังปลุกทหารเงาจากซากศพ ผู้ใดถือครอง จะสามารถเรียกเหล่าทหารรับใช้จากความตายได้",
+            "ว่ากันว่าการได้ครอบครองดวงตานี้ ต้องผ่านทางเลือดและความมืดแห่งจิตใจของตนเอง",
+            "",
+            "Original Design by PLAYERDEEMAN",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Middle น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 2809,
+        "costume": true
+    },
+    "420743": {
+        "unidentifiedDisplayName": "Ribbon",
+        "unidentifiedResourceName": "리본",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Costume Spirit Cat",
+        "identifiedResourceName": "C_Spirit_Cat_TH",
+        "identifiedDescriptionName": [
+            "ภูตแมวมหัศจรรย์!",
+            "เหล่าเจ้านายที่น่ารักไม่เคยจากเราไปไหน กลับกลายเป็นภูตน้อยผู้เปล่งประกาย Aura คอยอยู่เคียงข้าง",
+            "",
+            "Original Design by J.Julie",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Lower น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 2811,
+        "costume": true
+    },
+    "480725": {
+        "unidentifiedDisplayName": "Hood",
+        "unidentifiedResourceName": "후드",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Costume Sixth Sense Satan",
+        "identifiedResourceName": "C_Sixth_Sense_Satan",
+        "identifiedDescriptionName": [
+            "ปีกทมิฬที่โอบกอดเงามืดแห่งมิติ แผ่ขยายออกราวกับพลังเหนือธรรมชาติ",
+            "เสียงกระซิบเรื่องลึกลับของโลกที่ซ่อนอยู่ เบา ๆ แต่ทรงพลังในทุกการเคลื่อนไหว",
+            "",
+            "Original Design by BETTERFIND",
             "ประเภท : Costume พลังป้องกัน : 0",
             "ตำแหน่ง : Garment น้ำหนัก : 0",
             "เลเวลที่ต้องการ : 1",
             "อาชีพที่ใส่ได้ : ทุกอาชีพ"
         ],
         "slotCount": 0,
-        "ClassNum": 198,
+        "ClassNum": 299,
+        "costume": true
+    },
+    "24327": {
+        "unidentifiedDisplayName": "Shadow Shield",
+        "unidentifiedResourceName": "쉴드쉐도우",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Sigrun Shadow Shield",
+        "identifiedResourceName": "쉴드쉐도우2",
+        "identifiedDescriptionName": [
+            "Shadow ที่ได้รับพลังป้องกันของ Valkyrie",
+            "โล่เล็กที่สามารถสวมใส่ที่แขนได้ สามารถใช้งานแบบชิ้นเดียวได้แต่เอฟเฟกต์การป้องกันของมันจะลดน้อยลง",
+            "VIT +1, ทุกๆ 1 ขั้นอัพเกรด DEF +5, MDEF +1",
+            "เมื่ออาชีพ Swordman Class, Thief Class, Taekwon, Star Gradiator สวมใส่, ASPD +1",
+            "เมื่ออาชีพ Merchant Class, Archer Class, Gunslinger Class สวมใส่, FLEE +15",
+            "เมื่ออาชีพ Magician Class, Acolyte Class, Ninja Class, Soul Linker Class สวมใส่, MaxSP +2%, ปริมาณ Heal ที่ตัวเองใช้ +3%",
+            "เมื่ออาชีพ Novice Class สวมใส่, การร่ายแบบแปรผันลดลง 5%, MaxSP +300",
+            "เมื่อสวมใส่ Sigrun Armor กับ Sigrun Shield, แล้วขั้นอัพเกรดรวมกันได้มากกว่า 17 ขึ้นไป ความสามารถที่เพิ่มขึ้นของแต่ละอาชีพ จะเพิ่มขึ้นอีก 100%",
+            "ประเภท : Shadow ",
+            "ตำแหน่ง : Shield น้ำหนัก :  0 ",
+            "เลเวลที่ต้องการ: 1 ",
+            "อาชีพที่สวมใส่ได้ : ทุกอาชีพ "
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": true
+    },
+    "24326": {
+        "unidentifiedDisplayName": "Shadow Armor",
+        "unidentifiedResourceName": "아머쉐도우",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Sigrun Shadow Armor",
+        "identifiedResourceName": "아머쉐도우2",
+        "identifiedDescriptionName": [
+            "Shadow ที่ได้รับพลังป้องกันของ Valkyrie",
+            "มีพลังลึกลับที่เปลี่ยนแปลงพละกำลังให้เข้ากับอาชีพของผู้สวมใส่",
+            "LUK +1, ทุกๆ 1 ขั้นอัพเกรด HIT +1.",
+            "เมื่ออาชีพ Swordman Class, Thief Class, Taekwon, Star Gradiator สวมใส่, ATK +15.",
+            "เมื่ออาชีพ Merchant Class, Archer Class, Gunslinger Class สวมใส่, พลังโจมตีทางกายภาพระยะไกล +3%.",
+            "เมื่ออาชีพ Magician Class, Acolyte Class, Ninja Class, Soul Linker Class สวมใส่, MATK +15.",
+            "เมื่ออาชีพ Novice Class สวมใส่ เพิ่ม ASPD 5%), MaxHP +1000.",
+            "เมื่อสวมใส่ Sigrun Armor กับ Sigrun Shield, แล้วขั้นอัพเกรดรวมกันได้มากกว่า 17 ขึ้นไป ความสามารถที่เพิ่มขึ้นของแต่ละอาชีพ จะเพิ่มขึ้นอีก 100%",
+            "ประเภท : Shadow",
+            "ตำแหน่ง : Armor น้ำหนัก :  0",
+            "เลเวลที่ต้องการ: 1",
+            "อาชีพที่สวมใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
         "costume": true
     }
 }

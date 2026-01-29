@@ -13,7 +13,7 @@ import Link from "next/link";
 
 
 const slides = [
-  { src: centralLabImage, href: "/central-lab" },
+  // { src: centralLabImage, href: "/central-lab" },
   { src: monsterx3Image, href: "/monsterx3" },
 ];
 

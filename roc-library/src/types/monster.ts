@@ -1,7 +1,11 @@
-
 export interface Monster {
   id: number;
   name: string;
+  expCurrent: number;
+  expUp: number;
+  jobCurrent: number;
+  jobUp: number;
+  map: string;
   image: string;
   lv: number;
   hp: number;

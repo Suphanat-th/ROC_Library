@@ -22,6 +22,7 @@ function parseDetail(text: string[]): string {
       .replace(/\^b4b4b4/g, `<span class="text-[#b4b4b4]">`)
       .replace(/\^00ff00/g, `<span class="text-[#00ff00]">`)
       .replace(/\^ffff00/g, `<span class="text-[#ffff00]">`)
+      .replace(/\^32CD32/g, `<span class="text-[#32CD32]">`)
       .replace(/\^ffffff_/g, `<span class="text-[#ffffff]">`);
 
     // ถ้ามี span เปิด → ปิดตอนท้ายบรรทัด
