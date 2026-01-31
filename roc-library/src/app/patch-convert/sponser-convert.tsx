@@ -6,7 +6,7 @@ import React from "react";
 export default function SponserConvert() {
   
   return (
-    <div className="mx-auto">
+    <div className="w-full">
 <img
         className="w-full"
         src={`/assets/images/PatchTemplate/FooterP2W.png`}
