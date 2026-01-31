@@ -7,6 +7,7 @@ import OptionConvertPage from "./option-convert";
 import DetailConvertPage from "./detail-convert";
 import { useItemDb } from "@/services/patchData/itemsService";
 import * as htmlToImage from "html-to-image";
+import SponserConvert from "./sponser-convert";
 
 export default function PatchConvertPage() {
   const { items, loading, error } = useItemDb();
@@ -62,6 +63,7 @@ export default function PatchConvertPage() {
                 identifiedDescription={item.identifiedDescriptionName}
               />
             </div>
+          <SponserConvert ></SponserConvert>
           </div>
 
           <br />
