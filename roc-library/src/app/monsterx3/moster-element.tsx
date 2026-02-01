@@ -158,11 +158,11 @@ export default function MonsterEcomDatabase() {
             <select
               className="bg-gray-800 border border-gray-700 rounded-lg px-3 py-1.5 text-sm outline-none focus:border-cyan-500 text-gray-200"
               onChange={(e) => setSortBy(e.target.value)}
-            >
-              <option value="hp">Max HP</option>
-              <option value="lv">Base Level</option>
+            > 
               <option value="exp">EXP</option>
               <option value="job">JOB</option>
+              <option value="lv">Base Level</option>
+              <option value="hp">Max HP</option>
             </select>
             <span className="text-xs text-gray-500 uppercase font-bold">
               เรียงลำดับ
