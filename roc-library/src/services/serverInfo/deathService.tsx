@@ -6,7 +6,7 @@ export function deathService() {
   const deathDefault: ServerInfoDto[] = [];
   deathDefault.push({
     name: "Death Default",
-    ratePercent: 0,
+    ratePercent: 100,
     DateFrom: null,
     DateTo: null,
   });
