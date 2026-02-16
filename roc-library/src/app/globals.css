@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@plugin "daisyui";
+
 
 :root{
 --bg: #ffffff;
@@ -13,26 +15,26 @@ body{
 margin:0;
 background:var(--bg);
 color:var(--fg);
--webkit-font-smoothing:antialiased; /* ปิด smoothing เพื่อรักษา pixel look */
+-webkit-font-smoothing:antialiased; /* ๏ฟฝิด smoothing ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝัก๏ฟฝ๏ฟฝ pixel look */
 -moz-osx-font-smoothing:grayscale;
 font-family: 'Press Start 2P', 'VT323', monospace;
 }
 
 
-/* B: พื้นที่ container */
+/* B: ๏ฟฝ๏ฟฝ้นท๏ฟฝ๏ฟฝ container */
 .app-root{
 padding:2rem;
-font-size:14px; /* ปรับตามต้องการ */
+font-size:14px; /* ๏ฟฝ๏ฟฝับ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอง๏ฟฝ๏ฟฝ๏ฟฝ */
 }
 
 
-/* ทำให้ตัวอักษรดู "คม" ขึ้นในบางเบราว์เซอร์ */
+/* ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝัก๏ฟฝรด๏ฟฝ "๏ฟฝ๏ฟฝ" ๏ฟฝ๏ฟฝ๏ฟฝในบาง๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ */
 *{
 text-rendering: optimizeLegibility;
 }
 
 
-/* C: ตัวอย่างปุ่ม 8-bit */
+/* C: ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝาง๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ 8-bit */
 .btn-8bit{
 display:inline-block;
 padding:0.6rem 1rem;

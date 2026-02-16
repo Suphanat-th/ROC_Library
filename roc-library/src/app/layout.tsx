@@ -22,12 +22,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" data-theme="light">
       <body
         className={`${mali.className} antialiased flex flex-col min-h-screen`}
       >
         <NavBarPage></NavBarPage>
-        <div className="mt-[70px]">{children}</div>
+        <div className="mt-[70px]  pb-[50px]">{children}</div>
         <FooterPage></FooterPage>
       </body>
     </html>
