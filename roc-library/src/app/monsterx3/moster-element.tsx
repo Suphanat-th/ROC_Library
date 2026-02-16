@@ -12,7 +12,7 @@ export default function MonsterEcomDatabase() {
   const [search, setSearch] = useState("");
   const [selectedRace, setSelectedRace] = useState("All");
   const [selectedMap, setSelectedMap] = useState("All");
-  const [sortBy, setSortBy] = useState("id");
+  const [sortBy, setSortBy] = useState("exp");
   const [sortType, setSortType] = useState("desc");
 
   // รายชื่อ ID ที่ต้องการแสดง
@@ -38,7 +38,6 @@ export default function MonsterEcomDatabase() {
         else if (sortBy === "lv") result = b.lv - a.lv;
         else if (sortBy === "exp") result = b.expUp - a.expUp;
         else if (sortBy === "job") result = b.jobUp - a.jobUp;
-        else result = b.id - a.id; // หรือ a.id - b.id ตามต้องการ
 
         // สำคัญ: ต้องนำผลต่างมาคูณกับ modifier เพื่อสลับทิศทาง
         return result * modifier;
@@ -52,6 +51,7 @@ export default function MonsterEcomDatabase() {
     ),
   ];
   const uniqueMaps = [
+    "All",
     ...new Set(
       monsters
         .filter((m) => monsterx3Ids.includes(m.id))
@@ -158,12 +158,11 @@ export default function MonsterEcomDatabase() {
             <select
               className="bg-gray-800 border border-gray-700 rounded-lg px-3 py-1.5 text-sm outline-none focus:border-cyan-500 text-gray-200"
               onChange={(e) => setSortBy(e.target.value)}
-            >
-              <option value="id">ID Number</option>
-              <option value="hp">Max HP</option>
-              <option value="lv">Base Level</option>
+            > 
               <option value="exp">EXP</option>
               <option value="job">JOB</option>
+              <option value="lv">Base Level</option>
+              <option value="hp">Max HP</option>
             </select>
             <span className="text-xs text-gray-500 uppercase font-bold">
               เรียงลำดับ
