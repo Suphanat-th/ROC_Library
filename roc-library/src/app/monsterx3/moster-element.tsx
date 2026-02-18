@@ -273,9 +273,9 @@ export default function MonsterEcomDatabase() {
                           <span
                             className={`text-lg font-black ${
                               (val as number) > 100
-                                ? "text-red-400"
+                                ? "text-green-400"
                                 : (val as number) < 100
-                                  ? "text-green-400"
+                                  ? "text-red-400"
                                   : "text-white"
                             }`}
                           >

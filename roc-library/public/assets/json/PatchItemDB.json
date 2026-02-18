@@ -1,106 +1,102 @@
 {
-    "20040": {
-        "unidentifiedDisplayName": "Headgear",
-        "unidentifiedResourceName": "캡",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา ต้องทำการตรวจสอบโดยใช้ [Magnifier]"
-        ],
-        "identifiedDisplayName": "Costume Rose Crown",
-        "identifiedResourceName": "청나라머리장식",
-        "identifiedDescriptionName": [
-            "มงกุฎพระราชพิธีที่มีดอกกุหลาบดอกใหญ่ประดับอยู่ ในประวัติศาสตร์ถูกใช้โดยพระราชธิดาของกษัตริย์",
-            "",
-            "All Status +2",
-            "ATK + 20, MATK + 20, CRI + 10, HIT + 10",
-            "การร่ายแบบแปรผันลดลง 10% , ลด Delay หลังใช้สกิล 10 % , ASPD + 1",
-            "อัตราดรอปไอเทม + 5%",
-            "เมื่อล่ามอนสเตอร์ค่าประการณ์ที่ได้รับ + 10%",
-            "",
-            "^ff0000 (ความสามารถของไอเท็มจะถูกลบหลังสิ้นสุดระยะเวลากิจกรรม 25 กุมภาพันธ์ 2569) ",
-            "ประเภท : Costume",
-            "ตำแหน่ง : Upper น้ำหนัก : 0",
-            "ต้องการ Lv. : 1",
-            "อาชีพ : ทุกอาชีพ"
-        ],
-        "slotCount": 0,
-        "ClassNum": 0
-    },
-    "5817": {
-        "unidentifiedDisplayName": "Valentine's Emblem",
-        "unidentifiedResourceName": "세이프티링",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา ต้องทำการตรวจสอบโดยใช้ [Magnifier]"
-        ],
-        "identifiedDisplayName": "Valentine Emblem",
-        "identifiedResourceName": "세이프티링",
-        "identifiedDescriptionName": [
-            "^ff0000ไอเท็มชนิดนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
-            "สัญลักษณ์พิเศษที่มอบให้กับตัวละครที่โดดเด่นที่สุด",
-            "ATK + 5% MATK + 3% All Status +2 Flee +10 ASPD +1",
-            "เพิ่มความสามารถของสกิล Heal, Potion Pitcher และยาฟื้นพลังต่างๆ 10% เมื่อผู้ใช้สวมใส่ไอเทมชิ้นนี้",
-            "MDEF + 3",
-            "มีโอกาสได้รับ Thankful Flowers 1% เมื่อสังหารมอนสเตอร์",
-            "ประเภท : Accessory พลังป้องกัน : 3",
-            "น้ำหนัก : 0",
-            "อาชีพ : ทุกอาชีพ"
-        ],
-        "slotCount": 0,
-        "ClassNum": 0
-    },
-    "101773": {
-        "unidentifiedDisplayName": "Holgren's Shadow Smelting Hammer",
-        "unidentifiedResourceName": "홀그랜제련망치",
-        "unidentifiedDescriptionName": [
-            "ค้อนที่จะช่วยอัพเกรด Shadow แบบสุ่ม 1-7 ขั้นอัพเกรด +2 จะมีโอกาสติดมากที่สุด พร้อม Random Option พิเศษ 1 แถว",
-            "คำเตือน!! - เมื่อใช้ Shadow ที่อัพเกรดแล้ว มีโอกาสที่ขั้นอัพเกรดจะลดลง!"
-        ],
-        "identifiedDisplayName": "Holgren's Shadow Smelting Hammer",
-        "identifiedResourceName": "홀그랜제련망치",
-        "identifiedDescriptionName": [
-            "ค้อนที่จะช่วยอัพเกรด Shadow แบบสุ่ม 1-7 ขั้นอัพเกรด +2 จะมีโอกาสติดมากที่สุด พร้อม Random Option พิเศษ 1 แถว",
-            "คำเตือน!! - เมื่อใช้ Shadow ที่อัพเกรดแล้ว มีโอกาสที่ขั้นอัพเกรดจะลดลง!",
-            "น้ำหนัก : 1"
-        ],
-        "slotCount": 0,
-        "ClassNum": 0,
-        "costume": false
-    },
-    "102854": {
-        "unidentifiedDisplayName": "Hero's Shadow Smelting Hammer",
-        "unidentifiedResourceName": "비바투스제련망치",
+    "410287": {
+        "unidentifiedDisplayName": "Ribbon",
+        "unidentifiedResourceName": "리본",
         "unidentifiedDescriptionName": [
             "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "Hero's Shadow Smelting Hammer",
-        "identifiedResourceName": "비바투스제련망치",
+        "identifiedDisplayName": "Costume Cosmic Connection",
+        "identifiedResourceName": "Cosmic_Connection",
         "identifiedDescriptionName": [
-            "ค้อนที่จะช่วยอัพเกรด Shadow ขั้น 3-9 แบบสุ่ม",
-            "โดยมีโอกาสอัพเกรดเป็นขั้นอัพเกรด 4 มากที่สุด พร้อม Random Option พิเศษ 2 แถว",
-            "ระวัง! : หากใช้กับ Shadow ที่อัพเกรดแล้ว อาจทำให้ขั้นอัพเกรดลดลงได้",
-            "น้ำหนัก : 1"
-        ],
-        "slotCount": 0,
-        "ClassNum": 0,
-        "costume": false
-    },
-    "20527": {
-        "unidentifiedDisplayName": "Hood",
-        "unidentifiedResourceName": "후드",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "Costume Pink Butterfly Wing",
-        "identifiedResourceName": "C_PinkButterfly_Wing",
-        "identifiedDescriptionName": [
-            "ปีกสีชมพูที่เหมือนกับปีกผีเสื้อ",
-            "ให้ความรู้สึกเหมือนกับเป็นผีเสื้อตัวน้อย ๆ!",
-            "ประเภท : Garment พลังป้องกัน : 0",
-            "น้ำหนัก : 0",
+            "อุปกรณสังเกตการณ์ดาราศาสตร์ที่ถูกสร้างขึ้นมาด้วยพลังเวทย์คณานับที่หลั่งไหลมาจากฟากฟ้า",
+            "ถูกสร้างขึ้นโดยใช้แนวคิดตรรกะนอกกรอบซึ่งไม่สามารถอธิบายในทางวิทยาศาสตร์และเวทมนตร์สมัยใหม่ได้",
+            "",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Garment น้ำหนัก : 0",
             "เลเวลที่ต้องการ : 1",
             "อาชีพที่ใส่ได้ : ทุกอาชีพ"
         ],
         "slotCount": 0,
-        "ClassNum": 35,
+        "ClassNum": 0,
+        "costume": true
+    },
+    "15483": {
+        "unidentifiedDisplayName": "[NFS] ROE T-Shirt",
+        "unidentifiedResourceName": "라그티셔츠",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[NFS] ROE T-Shirt",
+        "identifiedResourceName": "라그티셔츠",
+        "identifiedDescriptionName": [
+            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "เสื้อ Ragnarok Endless Trails",
+            "ดูเหมือนว่าตัวนี้ก็จะถูกใช้งานจนสภาพเกือบจะนำไปใช้ต่อไม่ได้แล้ว",
+            "",
+            "ATK +25, MATK+25, ลด Delay หลังใช้สกิล 5%",
+            "",
+            "เมื่ออัพเกรดตั้งแต่ 7 ขึ้นไป,",
+            "ASPD +10%",
+            "",
+            "เมื่ออัพเกรดตั้งแต่ 9 ขึ้นไป,",
+            "ลด Delay หลังใช้สกิลลงอีก 10%",
+            "",
+            "เมื่ออัพเกรดตั้งแต่ 11 ขึ้นไป,",
+            "ATK +20 เพิ่มเติม",
+            "MATK +20 เพิ่มเติม",
+            "ลด Delay หลังใช้สกิลลงอีก 15%",
+            "",
+            "ประเภท : Armor  พลังป้องกัน : 0",
+            "น้ำหนัก : 80",
+            "เลเวลที่ต้องการ : 80",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "31180": {
+        "unidentifiedDisplayName": "Headband",
+        "unidentifiedResourceName": "두건",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Costume Hero Headband (Red)",
+        "identifiedResourceName": "수라왕의두건",
+        "identifiedDescriptionName": [
+            "ตำนานกล่าวว่ามีเพียงผู้แข็งแกร่งที่สุดเท่านั้นที่คู่ควรกับผ้าคาดศีรษะนี้",
+            "",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Upper น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 1581,
+        "costume": true
+    },
+    "480289": {
+        "unidentifiedDisplayName": "Ribbon",
+        "unidentifiedResourceName": "리본",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Costume Moonlight Bell",
+        "identifiedResourceName": "C_Moonlight_Bell",
+        "identifiedDescriptionName": [
+            "^ff0000ไอเท็มนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "ชุดที่ทำขึ้นมาเลียนแบบระฆังของ Moonlight",
+            "",
+            "All State + 1",
+            "EXP + 10%, DROP + 5%",
+            "^ff0000(คุณสมบัติในช่วงเวลากิจกรรม 11 มีนาคม 2569 ~ 13 พฤษภาคม 2569)",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Garment น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 165,
         "costume": true
     }
 }
