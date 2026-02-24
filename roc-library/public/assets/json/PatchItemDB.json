@@ -1,102 +1,28 @@
 {
-    "410287": {
-        "unidentifiedDisplayName": "Ribbon",
-        "unidentifiedResourceName": "리본",
+    "101976": {
+        "unidentifiedDisplayName": "Treasure Box I (Battle Pass)",
+        "unidentifiedResourceName": "동보물상자",
         "unidentifiedDescriptionName": [
             "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "Costume Cosmic Connection",
-        "identifiedResourceName": "Cosmic_Connection",
-        "identifiedDescriptionName": [
-            "อุปกรณสังเกตการณ์ดาราศาสตร์ที่ถูกสร้างขึ้นมาด้วยพลังเวทย์คณานับที่หลั่งไหลมาจากฟากฟ้า",
-            "ถูกสร้างขึ้นโดยใช้แนวคิดตรรกะนอกกรอบซึ่งไม่สามารถอธิบายในทางวิทยาศาสตร์และเวทมนตร์สมัยใหม่ได้",
-            "",
-            "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Garment น้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 1",
-            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
-        ],
-        "slotCount": 0,
-        "ClassNum": 0,
-        "costume": true
-    },
-    "15483": {
-        "unidentifiedDisplayName": "[NFS] ROE T-Shirt",
-        "unidentifiedResourceName": "라그티셔츠",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "[NFS] ROE T-Shirt",
-        "identifiedResourceName": "라그티셔츠",
+        "identifiedDisplayName": "Treasure Box I (Battle Pass)",
+        "identifiedResourceName": "동보물상자",
         "identifiedDescriptionName": [
             "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
-            "เสื้อ Ragnarok Endless Trails",
-            "ดูเหมือนว่าตัวนี้ก็จะถูกใช้งานจนสภาพเกือบจะนำไปใช้ต่อไม่ได้แล้ว",
+            "กล่องสมบัติระดับต่ำที่จะได้รับจาก Chrono Battle Pass",
             "",
-            "ATK +25, MATK+25, ลด Delay หลังใช้สกิล 5%",
+            "^4D4DFF[เมื่อเปิดออกจะได้รับ]",
+            "Basic Diagnose (Battle Pass) 2 ea",
+            "Advanced Diagnose (Battle Pass) 1 ea",
             "",
-            "เมื่ออัพเกรดตั้งแต่ 7 ขึ้นไป,",
-            "ASPD +10%",
+            "^4D4DFF[มีโอกาสสุ่มรับ]",
+            "Mysterious Medal 5/10/15/20 ea",
             "",
-            "เมื่ออัพเกรดตั้งแต่ 9 ขึ้นไป,",
-            "ลด Delay หลังใช้สกิลลงอีก 10%",
-            "",
-            "เมื่ออัพเกรดตั้งแต่ 11 ขึ้นไป,",
-            "ATK +20 เพิ่มเติม",
-            "MATK +20 เพิ่มเติม",
-            "ลด Delay หลังใช้สกิลลงอีก 15%",
-            "",
-            "ประเภท : Armor  พลังป้องกัน : 0",
-            "น้ำหนัก : 80",
-            "เลเวลที่ต้องการ : 80",
-            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+            "^ff0000(ไอเท็มชิ้นนี้จะถูกลบเมื่อสิ้นสุดระยะเวลากิจกรรม)",
+            "น้ำหนัก : 0"
         ],
-        "slotCount": 1,
+        "slotCount": 0,
         "ClassNum": 0,
         "costume": false
-    },
-    "31180": {
-        "unidentifiedDisplayName": "Headband",
-        "unidentifiedResourceName": "두건",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "Costume Hero Headband (Red)",
-        "identifiedResourceName": "수라왕의두건",
-        "identifiedDescriptionName": [
-            "ตำนานกล่าวว่ามีเพียงผู้แข็งแกร่งที่สุดเท่านั้นที่คู่ควรกับผ้าคาดศีรษะนี้",
-            "",
-            "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Upper น้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 1",
-            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
-        ],
-        "slotCount": 0,
-        "ClassNum": 1581,
-        "costume": true
-    },
-    "480289": {
-        "unidentifiedDisplayName": "Ribbon",
-        "unidentifiedResourceName": "리본",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "Costume Moonlight Bell",
-        "identifiedResourceName": "C_Moonlight_Bell",
-        "identifiedDescriptionName": [
-            "^ff0000ไอเท็มนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
-            "ชุดที่ทำขึ้นมาเลียนแบบระฆังของ Moonlight",
-            "",
-            "All State + 1",
-            "EXP + 10%, DROP + 5%",
-            "^ff0000(คุณสมบัติในช่วงเวลากิจกรรม 11 มีนาคม 2569 ~ 13 พฤษภาคม 2569)",
-            "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Garment น้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 1",
-            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
-        ],
-        "slotCount": 0,
-        "ClassNum": 165,
-        "costume": true
     }
 }
