@@ -1,25 +1,228 @@
 {
-    "101976": {
-        "unidentifiedDisplayName": "Treasure Box I (Battle Pass)",
-        "unidentifiedResourceName": "동보물상자",
+    "19624": {
+        "unidentifiedDisplayName": "Headgear",
+        "unidentifiedResourceName": "발그레",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา ต้องทำการตรวจสอบโดยใช้ [Magnifier]"
+        ],
+        "identifiedDisplayName": "Costume Round Eyes",
+        "identifiedResourceName": "배틀온라인",
+        "identifiedDescriptionName": [
+            "Item พิเศษที่ทำให้เรากลายเป็นตัวละครใน Ragnarok Battle ด้วยดวงตาเล็กๆ ที่แสนจะน่ารัก",
+            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 16 ได้",
+            "ประเภท : Costume",
+            "ตำแหน่ง : Middle  น้ำหนัก : 0",
+            "Lv ที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ :  ทุกอาชีพ ไม่รวม Summoner "
+        ],
+        "slotCount": 0,
+        "ClassNum": 185,
+        "costume": true
+    },
+    "400656": {
+        "unidentifiedDisplayName": "Headgear",
+        "unidentifiedResourceName": "캡",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา ต้องทำการตรวจสอบโดยใช้ [Magnifier]"
+        ],
+        "identifiedDisplayName": "Costume White Khalitzburg Knight Helm",
+        "identifiedResourceName": "Khalitzburg_KN_Helm_W",
+        "identifiedDescriptionName": [
+            "^ff0000ไอเท็มนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "หมวกเกราะประดับที่ดูคล้ายกับหมวกเกราะของกองอัศวิน Khalitzburg",
+            "",
+            "All Status +2",
+            "ATK + 5%, MATK + 5%, CRI + 10, HIT + 10",
+            "การร่ายแบบแปรผันลดลง 10% ",
+            "อัตราดรอปไอเทม + 5%",
+            "เมื่อล่ามอนสเตอร์ค่าประการณ์ที่ได้รับ + 10%",
+            "",
+            "^ff0000 (ความสามารถของไอเท็มจะถูกลบหลังสิ้นสุดระยะเวลากิจกรรม 6  พฤษภาคม 2569) ",
+            "ประเภท : Costume",
+            "ตำแหน่ง : Upper น้ำหนัก : 0",
+            "ต้องการ Lv. : 1",
+            "อาชีพ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0
+    },
+    "410474": {
+        "unidentifiedDisplayName": "Ribbon",
+        "unidentifiedResourceName": "리본",
         "unidentifiedDescriptionName": [
             "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "Treasure Box I (Battle Pass)",
-        "identifiedResourceName": "동보물상자",
+        "identifiedDisplayName": "Costume Chained Bear",
+        "identifiedResourceName": "C_Chained_Bear",
         "identifiedDescriptionName": [
-            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
-            "กล่องสมบัติระดับต่ำที่จะได้รับจาก Chrono Battle Pass",
+            "ตุ๊กตาที่ถูกพันธนาการโดยโซ่ของ Piamette และต้องทนทุกข์ทรมานจากฝันร้าย",
+            "หากเผลอล่ะก็ มันอาจจะวิ่งหนีไปเลยก็ได้..",
             "",
-            "^4D4DFF[เมื่อเปิดออกจะได้รับ]",
-            "Basic Diagnose (Battle Pass) 2 ea",
-            "Advanced Diagnose (Battle Pass) 1 ea",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Middle น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 2739,
+        "costume": true
+    },
+    "31316": {
+        "unidentifiedDisplayName": "Ribbon",
+        "unidentifiedResourceName": "리본",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Costume Black Swallowtail Wings",
+        "identifiedResourceName": "C_FlutterButterfly_BL",
+        "identifiedDescriptionName": [
+            "Costume เหล่าผีเสื้อกระพือปีกท่ามกลางแสงระยิบระยับ",
+            "การนำทางของผีเสื้อเหล่านี้ จะนำพาไปสู่โลกแห่งจินตนาการ",
             "",
-            "^4D4DFF[มีโอกาสสุ่มรับ]",
-            "Mysterious Medal 5/10/15/20 ea",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Lower น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": true
+    },
+    "420409": {
+        "unidentifiedDisplayName": "Ribbon",
+        "unidentifiedResourceName": "리본",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Costume Ranger Wolf Shorts (Purple)",
+        "identifiedResourceName": "C_RAM_Hair_LPP",
+        "identifiedDescriptionName": [
+            "วิกผมแฟชั่นที่ทำให้คุณรู้สึกเหมือนได้เปลี่ยนทรงผมเป็นคนละคน",
+            "ว่ากันว่าวิกผมนี้ได้รับแรงบันดาลใจมาจากทรงผมของ Ranger สุดเท่คนหนึ่ง",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Lower น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 2626,
+        "costume": true
+    },
+    "15987": {
+        "unidentifiedDisplayName": "Cap",
+        "unidentifiedResourceName": "캡",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Costume Violet Rune Helm",
+        "identifiedResourceName": "Viva_Adul_Hat_GC",
+        "identifiedDescriptionName": [
+            "หมวกประดับ Rune สีม่วงที่แผ่พลังเร้นลับออกมาอย่างอ่อนโยน",
+            "เมื่อสวมใส่จะให้ประกายแสงแห่งเวทมนตร์ สื่อถึงปัญญาและการปกป้อง",
             "",
-            "^ff0000(ไอเท็มชิ้นนี้จะถูกลบเมื่อสิ้นสุดระยะเวลากิจกรรม)",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Upper น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 2202,
+        "costume": true
+    },
+    "480591": {
+        "unidentifiedDisplayName": "Garment",
+        "unidentifiedResourceName": "후드",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Costume Glutton Cerberus",
+        "identifiedResourceName": "Glutton_Cerberus",
+        "identifiedDescriptionName": [
+            "สุนัขเฝ้าวิญญาณแห่งยมโลกที่ซื่อสัตย์ต่อเจ้าของ และคอยเฝ้าดูวิญญาณผู้ล่วงลับ",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Garment น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 267,
+        "costume": true
+    },
+    "20441": {
+        "unidentifiedDisplayName": "Ribbon",
+        "unidentifiedResourceName": "리본",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Costume Large Ribbon Muffler (Red)",
+        "identifiedResourceName": "큰리본머플러_빨강",
+        "identifiedDescriptionName": [
+            "ผ้าพันคอผืนใหญ่ผูกด้วยริบบิ้น",
+            "ไอเทมที่จำเป็นต้องมีเอาไว้ในวันที่หนาวเหน็บ เพราะจะช่วยทำให้คุณรู้สึกอบอุ่น",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Lower น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 1448,
+        "costume": true
+    },
+    "106397": {
+        "unidentifiedDisplayName": "OneOne Costume Violet Box",
+        "unidentifiedResourceName": "NewServer_Package",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "OneOne Costume Violet Box",
+        "identifiedResourceName": "NewServer_Package",
+        "identifiedDescriptionName": [
+            "กล่องที่บรรจุ Costume น่ารักๆไว้มากมาย",
+            "เมื่อเปิดออก จะมีโอกาสได้รับไอเท็ม 1 ชิ้นแบบสุ่มดังต่อไปนี้",
+            "",
+            "[ไอเท็มที่จะได้รับ]",
+            "Costume Chained Bear",
+            "Costume Black Swallowtail Wings",
+            "Costume Ranger Wolf Shorts (Purple)",
+            "Costume Violet Rune Helm",
+            "Costume Glutton Cerberus",
             "น้ำหนัก : 0"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "1002796": {
+        "unidentifiedDisplayName": "God Furnace",
+        "unidentifiedResourceName": "금색용광로",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "God Furnace",
+        "identifiedResourceName": "금색용광로",
+        "identifiedDescriptionName": [
+            "God Furnace",
+            "เตาหลอมเทวะ God's Furnace ที่ได้มาจาก Lapio",
+            "^000088ป้องกันการเสียหายจากการอัพเกรดกิจกรรม Chrono Pass",
+            "น้ำหนัก : 1"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "1002797": {
+        "unidentifiedDisplayName": "God Hammer",
+        "unidentifiedResourceName": "금색망치",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "God Hammer",
+        "identifiedResourceName": "금색망치",
+        "identifiedDescriptionName": [
+            "God Hammer",
+            "ฆ้อนมหาเทพ God's Hammer ที่ได้มาจาก Gonk",
+            " ^000088เพิ่มเปอร์เซนการอัพเกรดจากกิจกรรม Chrono Pass 10%",
+            "น้ำหนัก : 1"
         ],
         "slotCount": 0,
         "ClassNum": 0,
