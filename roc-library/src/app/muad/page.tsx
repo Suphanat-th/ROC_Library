@@ -329,6 +329,7 @@ interface FloatingItemProps {
     imageSrc: string; // เปลี่ยนจาก icon เป็น imageSrc
     onClick: () => void;
     delay?: number;   // เพิ่มเพื่อทำให้ไอเทมแต่ละชิ้นลอยไม่พร้อมกัน (ดูเป็นธรรมชาติขึ้น)
+
 }
 function FloatingItem({ pos, label, imageSrc, onClick, delay = 0 }: FloatingItemProps) {
     return (
