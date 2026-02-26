@@ -53,7 +53,7 @@ export default function DetailConvertPage({
         </h2>
 
         <div
-          className="text-sm text-gray-800 leading-7 text-left space-y-2 break-words"
+          className="text-sm text-gray-800 leading-7 text-left space-y-2 wrap-break-word"
           dangerouslySetInnerHTML={{
             __html: parseDetail(identifiedDescription),
           }}
