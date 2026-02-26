@@ -1,0 +1,247 @@
+{
+    "5744": {
+        "unidentifiedDisplayName": "Headgear",
+        "unidentifiedResourceName": "헬름",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา ต้องทำการตรวจสอบโดยใช้ [Magnifier]"
+        ],
+        "identifiedDisplayName": "Capricorn Crown",
+        "identifiedResourceName": "마갈궁왕관",
+        "identifiedDescriptionName": [
+            "มงกุฎที่งดงาม ซึ่งเป็นสัญลักษณ์ที่ 2 ของจักรราศี Capricorn the Goat ด้านหน้าประดับด้วยเพชร Garnet หินประจำราศรีเกิด",
+            "DEX + 2, VIT + 2",
+            "ถ้าอัพเกรดตั้งแต่ +7 ขึ้นไป, เมื่อโจมตีทางกายภาพ, มีโอกาสที่จะร่าย Lv 1 Warm Wind",
+            "ประเภท : Headgear",
+            "พลังป้องกัน : 3",
+            "ใช้สำหรับ : Upper ",
+            "น้ำหนัก : 30",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพ : ทุกอาชีพ"
+        ],
+        "slotCount": 1,
+        "ClassNum": 621
+    },
+    "410517": {
+        "unidentifiedDisplayName": "Karasu Tengu Mask",
+        "unidentifiedResourceName": "타나토스의슬픔가면",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Karasu Tengu Mask",
+        "identifiedResourceName": "타나토스의슬픔가면",
+        "identifiedDescriptionName": [
+            "หน้ากากของหน่วยลับเมื่อใส่แล้วรู้สึกว่ามีพลังเอ่อล้น",
+            "",
+            "ATK + 40",
+            "ลด Delay หลังใช้สกิล 10%",
+            "",
+            "เมื่อทำการโจมตีทางกายภาพ มีโอกาส 5% ที่จะฟื้นฟู HP เท่ากับ 5% ของ Damage",
+            "เมื่อทำการโจมตีทางกายภาพ มีโอกาส 3% ที่จะฟื้นฟู SP เท่ากับ 3% ของ Damage",
+            "",
+            "เมื่อ Base STR ตั้งแต่ 99 ขึ้นไป",
+            "ATK + 60 เพิ่มเติม,",
+            "เพิ่ม Damage ที่ทำต่อศัตรูทุกธาตุ 15%,",
+            "เพิ่ม Damage ทางกายภาพระยะไกล 15%",
+            "ประเภท : Headgear พลังป้องกัน : 0",
+            "ตำแหน่ง : Middle น้ำหนัก : 30",
+            "เลเวลที่ต้องการ : 80",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 666,
+        "costume": false
+    },
+    "28502": {
+        "unidentifiedDisplayName": "Ribbon",
+        "unidentifiedResourceName": "리본",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Mob Scarf",
+        "identifiedResourceName": "폭주의스카프",
+        "identifiedDescriptionName": [
+            "ผ้าปิดปากสีดำที่ถูกสวมใส่โดยจอมโจรแห่ง El Dicastes",
+            "",
+            "เมื่อผลรวมของ Base Int กับ Base Dex รวมกันรวมกันเท่ากับ120 ขึ้นไป",
+            "Matk + 40,",
+            "ลด Variable Cast Time 5%,",
+            "เพิ่มปริมาณ Heal 10%",
+            "",
+            "เมื่อผลรวมของ Base Str กับ Base Luk รวมกันเท่ากับ120 ขึ้นไป",
+            "Atk + 5%,",
+            "Cri+5,",
+            "Critical Damage 5%",
+            "",
+            "เมื่อผลรวมของ Base Vit กับ Base Agi รวมกันเท่ากับ120 ขึ้นไป",
+            "Max HP + 5%,",
+            "Aspd + 5%,",
+            "ลด Damage ที่ได้รับจากมอนสเตอร์ประเภท Demi-Human 2%",
+            "",
+            "เมื่อสวมใส่ร่วมกับ sunglasses หรือ sunglasses []",
+            "ลด Damage ที่ได้รับจาก Player 2%",
+            "ประเภท : Headgear พลังป้องกัน : 0",
+            "ตำแหน่ง : Lower น้ำหนัก : 10",
+            "เลเวลที่ต้องการ : 90",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 1568,
+        "costume": false
+    },
+    "450394": {
+        "unidentifiedDisplayName": "Wooden Mail",
+        "unidentifiedResourceName": "우든메일",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Fallen Cool Armor",
+        "identifiedResourceName": "청룡의갑옷",
+        "identifiedDescriptionName": [
+            "ชุดเกราะที่เคยเป็นของเทวดาแห่งน้ำแข็งตกสวรรค์ แฝงไว้ด้วยพลังมหาศาล",
+            "",
+            "All State + 1",
+            "",
+            "ลดความต้านทานการโจมตีธาตุ Earth 10%, 10%, ลดความต้านทานการโจมตีจากมอนสเตอร์เผ่า Plant 15%",
+            "ทุก ๆ การเรียนรู้สกิล Double Strafe 1 Lv, ลด Delay หลังใช้สกิล 3%",
+            "",
+            "เมื่ออัพเกรดถึงขั้น 7 เพิ่มพลังโจมตีทางกายภาพระยะไกล 10%",
+            "เมื่ออัพเกรดถึงขั้น 9 CRI + 10, Critical Damage + 10%",
+            "เมื่ออัพเกรดถึงขั้น 11 เมื่อใช้สกิล Focused Arrow Strike,  Arrow Vulcan มีโอกาส 5% ที่จะติด Perfect Hit 100% เป็นระยะเวลา 5 วินาที",
+            "",
+            "เมื่อใส่ร่วมกับ Fallen Angel Wing ที่อัพเกรดถึงขั้น 9 ขึ้นไป",
+            "เพิ่มความต้านทานต่อมอนสเตอร์ทุกเผ่า (ยกเว้น Angel) 3%",
+            "",
+            "หากสวมใส่กับ Gang Scarf, Vit +2, Max HP + 10%.",
+            "",
+            "ประเภท : Armor  พลังป้องกัน : 50",
+            "น้ำหนัก : 100",
+            "เลเวลที่ต้องการ : 30",
+            "อาชีพที่ใส่ได้ : High Archer Cls"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "700003": {
+        "unidentifiedDisplayName": "Bow",
+        "unidentifiedResourceName": "보우",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Scarlet Dragon Leather Bow",
+        "identifiedResourceName": "아크오스다이모니쿠스",
+        "identifiedDescriptionName": [
+            "ธนูที่ทำขึ้นโดยติดหนังของมังกรเพลิงซ้อนกับคันธนูอันทรงพลัง",
+            "ดูกลมกลืนเข้ากับ Ancient Hero Boots",
+            "ทุก ๆ การอัพเกรด 2 ขั้น ATK +10",
+            "ทุก ๆ การอัพเกรด 3 ขั้น ลด Delay หลังใช้สกิล 4%",
+            "เมื่ออัพเกรดตั้งแต่ 9 ขึ้นไป เพิ่ม Damage สกิล Focused Arrow Strike 35%",
+            "เมื่ออัพเกรดถึงขั้น 11, ลด VCT ของสกิล Focused Arrow Strike 100%",
+            "เมื่อสวมใส่ร่วมกับ Ancient Hero Boots และทำการโจมตีทางกายภาพ",
+            "มีโอกาสที่จะ DEX +20 และลด Delay หลังใช้สกิล 20% เป็นเวลา 7 วินาที",
+            "ประเภท : Bow พลังโจมตี : 170",
+            "น้ำหนัก : 80",
+            "เลเวลของอาวุธ : 4",
+            "เลเวลที่ต้องการ : 70",
+            "อาชีพที่ใส่ได้ : Sniper"
+        ],
+        "slotCount": 2,
+        "ClassNum": 11,
+        "costume": false
+    },
+    "20964": {
+        "unidentifiedDisplayName": "Hood",
+        "unidentifiedResourceName": "후드",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Temporal Agi Manteau",
+        "identifiedResourceName": "Temporal_Manteau",
+        "identifiedDescriptionName": [
+            "สุดยอดผ้าคลุมที่แม้จะผ่านกาลเวลามาเนิ่นนาน แต่กลับไม่มีร่องรอยเลยแม้แต่นิดเดียว",
+            "ความสามารถของมันจะช่วยดึงศักยภาพแห่งพละกำลังออกมา",
+            "",
+            "ทุก ๆ การอัพเกรด 2 ขั้น ATK +10, Critical Damage +3%",
+            "ทุก ๆ การอัพเกรด 4 ขั้น เพิ่ม Damage ทางกายภาพต่อศัตรูทุกขนาด 5%",
+            "เมื่ออัพเกรดถึงขั้น 7, ATK +7%",
+            "เมื่ออัพเกรดถึงขั้น 9 เพิกเฉยต่อพลังป้องกันทางกายภาพ/เวทมนตร์ของมอนสเตอร์ประเภท Brute, Demon 20%",
+            "เมื่ออัพเกรดถึงขั้น 11 เพิกเฉยต่อพลังป้องกันทางกายภาพ/เวทมนตร์ของมอนสเตอร์ประเภท Brute, Demon เพิ่มอีก 10%",
+            "",
+            "เมื่อสวมใส่ร่วมกับ Incursion Temporal Ring [1]",
+            "Critical Damage +7%,เมื่ออัพเกรดผ้าคลุมตั้งแต่ขั้น 10 ขึ้นไป เพิกเฉยต่อพลังป้องกันทางกายภาพ/เวทมนตร์ของมอนสเตอร์ประเภท Brute, Demon 30%",
+            "ประเภท : Garment พลังป้องกัน : 38",
+            "น้ำหนัก : 40",
+            "เลเวลที่ต้องการ : 90",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "470361": {
+        "unidentifiedDisplayName": "Infinity Luck Boots",
+        "unidentifiedResourceName": "MD_Airboat_Boots6",
+        "unidentifiedDescriptionName": [
+            "รองเท้าทรงพลังที่หล่อหลอมจากพลังงานนิรันดร์ของมิติลึกลับ",
+            "เพิ่มขีดจำกัดพละกำลังของผู้สวมใส่ให้เหนือขอบเขตมนุษย์",
+            "_",
+            "ทุก ๆ การอัพเกรด 2 ขั้น CRI + 2",
+            "ทุก ๆ การอัพเกรด 3 ขั้น MHP + 110, MSP + 10, Critical Damage + 2%",
+            "เมื่ออัพเกรดถึงขั้น 9 Critical Damage + 20% เพิ่มเติม",
+            "เมื่ออัพเกรดถึงขั้น 11 เพิกเฉยต่อพลังป้องกันทางกายภาพของมอนสเตอร์ทุกเผ่า 20%",
+            "เมื่ออัพเกรดถึงขั้น 13 Critical Damage + 10%, CRI + 10"
+        ],
+        "identifiedDisplayName": "Infinity Luck Boots",
+        "identifiedResourceName": "MD_Airboat_Boots6",
+        "identifiedDescriptionName": [
+            "รองเท้าทรงพลังที่หล่อหลอมจากพลังงานนิรันดร์ของมิติลึกลับ",
+            "เพิ่มขีดจำกัดพละกำลังของผู้สวมใส่ให้เหนือขอบเขตมนุษย์",
+            "_",
+            "ทุก ๆ การอัพเกรด 2 ขั้น CRI + 2",
+            "ทุก ๆ การอัพเกรด 3 ขั้น MHP + 110, MSP + 10, Critical Damage + 2%",
+            "เมื่ออัพเกรดถึงขั้น 9 Critical Damage + 20% เพิ่มเติม",
+            "เมื่ออัพเกรดถึงขั้น 11 เพิกเฉยต่อพลังป้องกันทางกายภาพของมอนสเตอร์ทุกเผ่า 20%",
+            "เมื่ออัพเกรดถึงขั้น 13 Critical Damage + 10%, CRI + 10",
+            "ประเภท : Shoes  พลังป้องกัน : 30",
+            "น้ำหนัก : 20",
+            "เลเวลที่ต้องการ : 90",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "28573": {
+        "unidentifiedDisplayName": "Clip",
+        "unidentifiedResourceName": "클립",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Emerald Ring",
+        "identifiedResourceName": "Emerald_Ring",
+        "identifiedDescriptionName": [
+            "แหวนที่รวมอัญมณีมรกตขนาดใหญ่ มีประกายระยิบระยับที่สวยงาม",
+            "DEX+3, AGI+3, LUK+3",
+            "ลด Delay หลังใช้สกิล 10% ",
+            "ทุก ๆ การเรียนรู้สกิล Improve Concentration 2 เลเวล,",
+            "เพิ่ม Damage ทางกายภาพระยะไกลต่อศัตรูทั้งหมด 2%",
+            "---------------------------------------",
+            "ทุกๆการเพิ่ม BaseLv 1 ขั้น",
+            "ดาเมจของ [Arrow Shower]และ[Focused Arrow Strike]",
+            "เพิ่มขึ้นทีละ +1% (สูงสุดถึง Lv. 90)",
+            "---------------------------------------",
+            "ทุกๆการเรียนรู้สกิล [Focused Arrow Strike] 2 ขั้น",
+            "DEX+1, AGI+1, LUK+1, ATK+10",
+            "---------------------------------------",
+            "ทุกๆ 3 ขั้นอัพเกรด โจมตีทางกายภาพระยะไกล CRI + 5, Critical Damage + 5%",
+            "Ban PVP, Ban Guild War",
+            "ประเภท : Accessory พลังป้องกัน : 0",
+            "น้ำหนัก : 30",
+            "เลเวลที่ต้องการ : 40",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    }
+}
