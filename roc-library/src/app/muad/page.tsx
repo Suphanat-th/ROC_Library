@@ -10,10 +10,15 @@ import DetailConvertPage from "../patch-convert/detail-convert";
 import SponserConvert from "../patch-convert/sponser-convert";
 import { useItemDbItemMUAD, useItemDbShadowMUAD } from "@/services/patchData/itemsService";
 import ImageConvertPageMuad from "./ImageConvertPageMuad";
+import { ItemInfoMuad } from "@/types/muad";
 export default function ROPage() {
     const scrollToDetail = (id: string) => {
         const element = document.getElementById(id);
-        element?.scrollIntoView({ behavior: "smooth" });
+        element?.scrollIntoView({
+            behavior: "smooth",
+            block: "center",    // เลื่อนมาไว้กลางจอในแนวตั้ง
+            inline: "nearest"   // จัดการในแนวนอน (ถ้ามี)
+        });
     };// 2. สร้าง State สำหรับสลับโหมด
     const [isCostume, setIsCostume] = useState(false);
 
@@ -22,12 +27,73 @@ export default function ROPage() {
 
     const { itemsShadow, loadingShadow, errorShadow } = useItemDbShadowMUAD();
 
-    const entriesItem = Object.entries(items || {}); // เหมือน keyvalue pipe: [{key,value}, ...]
-    const entriesShadow = Object.entries(itemsShadow || {}); // เหมือน keyvalue pipe: [{key,value}, ...]
 
-    console.log('ITEM:=>', entriesItem.filter(f => f[0]["410517"]))
-    console.log(items["410517"])
+    const itemInfoList = [
+        {
+            id: "5744",
+            idClass: "item-head-upper",
+            nameImg: "upperhead.png"
+        },
+        {
+            id: "410517",
+            idClass: "item-head-middle",
+            nameImg: "middlehead.png"
+        },
+        {
+            id: "28502",
+            idClass: "item-head-lower",
+            nameImg: "lowerhead.png"
+        },
+        {
+            id: "450394",
+            idClass: "item-armor",
+            nameImg: "armor.png"
+        },
+        {
+            id: "700003",
+            idClass: "item-weapon",
+            nameImg: "weapon.png"
+        },
+        {
+            id: "20964",
+            idClass: "item-garment",
+            nameImg: "garment.png"
+        },
+        {
+            id: "470361",
+            idClass: "item-shoes",
+            nameImg: "shoes.png"
+        },
+        {
+            id: "28573",
+            idClass: "item-accessories",
+            nameImg: "accessories.png"
+        }
+    ] as ItemInfoMuad[];
 
+
+    const cosInfoList = [
+        {
+            id: "19797",
+            idClass: "cos-head-upper",
+            nameImg: "uppercos.png"
+        },
+        {
+            id: "410127",
+            idClass: "cos-head-middle",
+            nameImg: "middlecos.png"
+        },
+        {
+            id: "31803",
+            idClass: "cos-head-lower",
+            nameImg: "lowercos.png"
+        },
+        {
+            id: "15280",
+            idClass: "shadow-armor",
+            nameImg: "armorshadow.png"
+        },
+    ] as ItemInfoMuad[];
 
     if (loading) return <p>Loading...</p>;
     if (error) return <p>Error: {error}</p>;
@@ -108,28 +174,28 @@ export default function ROPage() {
                             {/* หัว - บน (Upper) */}
                             < FloatingItem
                                 pos="top-[10%] left-[10%] md:left-[20%]"
-                                label="+9 Capricorn Cown []"
+                                label="<span class='underline font-bold text-[15px]'>+9 Capricorn Cown []</span><br><br>Acute Lv. 4 ( Cri Dam+65% , CRI +12 )"
                                 imageSrc="/assets/images/muad/upperhead.png"
                                 onClick={() => scrollToDetail('item-head-upper')}
                             />
                             {/* หัว - กลาง (Middle) */}
                             <FloatingItem
                                 pos="top-[10%] right-[10%] md:right-[20%]"
-                                label="Karasu Tengu Mask"
+                                label="<span class='underline font-bold text-[15px]'>Karasu Tengu Mask</span><br><br><span class='text-red-500'>ลดดีเลย์หลังการใช้งาน Skill 5 %</span> <br><span class='text-red-500'>เพิ่ม Physical Damage ต่อมอนสเตอร์ประเภท Boss 8%</span>"
                                 imageSrc="/assets/images/muad/middlehead.png"
                                 onClick={() => scrollToDetail('item-head-middle')}
                             />
                             {/* หัว - ล่าง (Lower) */}
                             <FloatingItem
                                 pos="top-[25%] left-[5%] md:left-[15%]"
-                                label="Mob Scarf"
+                                label="<span class='underline font-bold text-[15px]'>Mob Scarf"
                                 imageSrc="/assets/images/muad/lowerhead.png"
                                 onClick={() => scrollToDetail('item-head-lower')}
                             />
                             {/* เสื้อ (Armor) */}
                             <FloatingItem
                                 pos="top-[25%] right-[10%] md:right-[10%]"
-                                label="+9 Fallen Cool Armor <br><br>[Gloom Under Night Card]"
+                                label="<span class='underline font-bold text-[15px]'>+9 Fallen Cool Armor</span> <br><br><span class='text-blue-500'>[ Gloom Under Night ]</span>"
                                 imageSrc="/assets/images/muad/armor.png"
                                 onClick={() => scrollToDetail('item-armor')}
                             />
@@ -137,7 +203,7 @@ export default function ROPage() {
                             {/* อาวุธหลัก (Main Hand) */}
                             <FloatingItem
                                 pos="top-[40%] left-[5%] md:left-[5%]"
-                                label="+12 Scalet Dragon Leather Bow <br><br>[White Knight Card] <br>[Sealed Thanatos Card]"
+                                label="<span class='underline font-bold text-[15px]'>+12 Scalet Dragon Leather Bow</span> <br><br><span class='text-blue-500'>[ White Knight ] <br>[ Sealed Thanatos ]</span> <br><br><span class='text-red-500'>ASPD+1<br>เพิ่ม Physical Damage 4% ต่อมอนสเตอร์เผ่า Insect</span>"
                                 imageSrc="/assets/images/muad/weapon.png"
                                 onClick={() => scrollToDetail('item-weapon')}
                             />
@@ -153,14 +219,14 @@ export default function ROPage() {
                             {/* ผ้าคลุม (Garment) - สังเกตจากภาพต้นฉบับจะอยู่ฝั่งขวา */}
                             <FloatingItem
                                 pos="bottom-[30%] left-[5%] md:left-[15%]"
-                                label="+8 Temporal Agi Manteau []"
+                                label="<span class='underline font-bold text-[15px]'>+8 Temporal Agi Manteau []</span><br><br><span class='text-red-500'>ลดดีเลย์หลังการใช้งาน Skill 15%<br>เพิ่ม Physical Damage ระยะไกล 10%</span>"
                                 imageSrc="/assets/images/muad/garment.png"
                                 onClick={() => scrollToDetail('item-garment')}
                             />
                             {/* รองเท้า (Shoes) */}
                             <FloatingItem
                                 pos="bottom-[30%] right-[5%] md:right-[15%]"
-                                label="+13 Inifinity Luck Boots <br><br>[Hase Card]"
+                                label="<span class='underline font-bold text-[15px]'>+13 Inifinity Luck Boots</span> <br><br><span class='text-blue-500'>[Hase Card]</span><br><br><span class='text-red-500'>Hawkeye<br>Expert Archer Lv.7 (เพิ่มดาเมจระยะไกล 14%)</span>"
                                 imageSrc="/assets/images/muad/shoes.png"
                                 onClick={() => scrollToDetail('item-shoes')}
                             />
@@ -168,16 +234,16 @@ export default function ROPage() {
                             {/* ประดับ 1 (Accessory L) */}
                             <FloatingItem
                                 pos="bottom-[15%] left-[10%] md:left-[20%]"
-                                label="+12 Emerald Ring []"
+                                label="<span class='underline font-bold text-[15px]'>+12 Emerald Ring []</span>"
                                 imageSrc="/assets/images/muad/accessories.png"
                                 onClick={() => scrollToDetail('item-accessories')}
                             />
                             {/* ประดับ 2 (Accessory R) */}
                             <FloatingItem
                                 pos="bottom-[15%] right-[10%] md:right-[20%]"
-                                label="+12 Emerald Ring []"
+                                label="<span class='underline font-bold text-[15px]'>+12 Emerald Ring []</span>"
                                 imageSrc="/assets/images/muad/accessories.png"
-                                onClick={() => scrollToDetail('item-accessories2')}
+                                onClick={() => scrollToDetail('item-accessories')}
                             />
 
                         </>
@@ -186,21 +252,21 @@ export default function ROPage() {
                             {/* หัว - บน (Upper) */}
                             < FloatingItem
                                 pos="top-[10%] left-[10%] md:left-[20%]"
-                                label="Costume Apple Of Archer <br><br>[Sniper I]"
+                                label="<span class='underline font-bold text-[15px]'>Costume Apple Of Archer</span><br><br><span class='text-cyan-500'>[ Sniper I ]</span>"
                                 imageSrc="/assets/images/muad/uppercos.png"
                                 onClick={() => scrollToDetail('cos-head-upper')}
                             />
                             {/* หัว - กลาง (Middle) */}
                             <FloatingItem
                                 pos="top-[10%] right-[10%] md:right-[20%]"
-                                label="Costume Spotlight <br><br>[Sniper I]"
+                                label="<span class='underline font-bold text-[15px]'>Costume Spotlight</span><br><br><span class='text-cyan-500'>[ Sniper I ]</span>"
                                 imageSrc="/assets/images/muad/middlecos.png"
                                 onClick={() => scrollToDetail('cos-head-middle')}
                             />
                             {/* หัว - ล่าง (Lower) */}
                             <FloatingItem
                                 pos="top-[25%] left-[5%] md:left-[15%]"
-                                label="Costume Aura of Tornado <br><br>[Sniper II] "
+                                label="<span class='underline font-bold text-[15px]'>Costume Aura of Tornado</span><br><br><span class='text-cyan-500'>[ Sniper II ]</span>"
                                 imageSrc="/assets/images/muad/lowercos.png"
                                 onClick={() => scrollToDetail('cos-head-lower')}
                             />
@@ -208,7 +274,7 @@ export default function ROPage() {
                             {/* เสื้อ (Armor) */}
                             <FloatingItem
                                 pos="top-[25%] right-[10%] md:right-[10%]"
-                                label="+9 Critical Hit Shadow Armor"
+                                label="<span class='underline font-bold text-[15px]'>+9 Critical Hit Shadow Armor</span><br><br><span class='text-red-500'>MATK + 19<br>เพิ่ม Physical Damage ระยะไกล 5%<br>ATK + 1%</span>"
                                 imageSrc="/assets/images/muad/armorshadow.png"
                                 onClick={() => scrollToDetail('shadow-armor')}
                             />
@@ -216,14 +282,14 @@ export default function ROPage() {
                             {/* อาวุธหลัก (Main Hand) */}
                             <FloatingItem
                                 pos="top-[40%] left-[5%] md:left-[5%]"
-                                label="+11 Shadow Sniper Weapon"
+                                label="<span class='underline font-bold text-[15px]'>+11 Shadow Sniper Weapon</span><br><br><span class='text-red-500'>Max SP 3%<br> ASPD  + 4%<br>ASPD + 1</span>"
                                 imageSrc="/assets/images/muad/weaponshadow.png"
                                 onClick={() => scrollToDetail('shadow-weapon')}
                             />
 
                             <FloatingItem
                                 pos="top-[40%] right-[5%] md:right-[5%]"
-                                label="+9 Shadow Sniper Shield"
+                                label="<span class='underline font-bold text-[15px]'>+9 Shadow Sniper Shield</span><br><br><span class='text-red-500'>Max HP + 940<br>เพิ่มผล Heal 1%<br>Max HP + 504</span>"
                                 imageSrc="/assets/images/muad/shieldshadow.png"
                                 onClick={() => scrollToDetail('shadow-shield')}
                             />
@@ -232,14 +298,14 @@ export default function ROPage() {
                             {/* ผ้าคลุม (Garment) - สังเกตจากภาพต้นฉบับจะอยู่ฝั่งขวา */}
                             <FloatingItem
                                 pos="bottom-[30%] left-[5%] md:left-[15%]"
-                                label="Costume Evil Druid Cross <br><br>[0.5]"
+                                label="<span class='underline font-bold text-[15px]'>Costume Evil Druid Cross </span><br><br><span class='text-cyan-500'>[0.5]</span>"
                                 imageSrc="/assets/images/muad/garmentcos.png"
                                 onClick={() => scrollToDetail('cos-garment')}
                             />
                             {/* รองเท้า (Shoes) */}
                             <FloatingItem
                                 pos="bottom-[30%] right-[5%] md:right-[15%]"
-                                label="+9 Blitz Shadow Shoes"
+                                label="<span class='underline font-bold text-[15px]'>+9 Blitz Shadow Shoes</span><br><br><span class='text-red-500'>ASPD + 1</span>"
                                 imageSrc="/assets/images/muad/shoesshadow.png"
                                 onClick={() => scrollToDetail('shadow-shoes')}
                             />
@@ -247,14 +313,14 @@ export default function ROPage() {
                             {/* ประดับ 1 (Accessory L) */}
                             <FloatingItem
                                 pos="bottom-[15%] left-[10%] md:left-[20%]"
-                                label="+9 Infinity Shadow Pendant"
+                                label="<span class='underline font-bold text-[15px]'>+9 Infinity Shadow Pendant</span><br><br><span class='text-red-500'>Max HP + 976<br>CRI + 1<br>ASPD + 1</span>"
                                 imageSrc="/assets/images/muad/pendantshadow.png"
                                 onClick={() => scrollToDetail('shadow-pendant')}
                             />
                             {/* ประดับ 2 (Accessory R) */}
                             <FloatingItem
                                 pos="bottom-[15%] right-[10%] md:right-[20%]"
-                                label="+9 Infinity Shadow Earring"
+                                label="<span class='underline font-bold text-[15px]'>+9 Infinity Shadow Earring</span><br><br><span class='text-red-500'>Max HP + 657<br>เพิ่ม Critical Damage 4%<br>Max HP + 884</span>"
                                 imageSrc="/assets/images/muad/earringshadow.png"
                                 onClick={() => scrollToDetail('shadow-earring')}
                             />
@@ -270,52 +336,60 @@ export default function ROPage() {
                 !isCostume ? (
                     <>
                         <section id="item-head" className="min-h-screen grid items-center justify-center p-10">
+                            {itemInfoList.map((item) => {
+                                return (<div key={item.id}
+                                    id={item.idClass}
+                                    className="lg:max-w-5xl w-full mx-auto p-6 rounded-3xl shadow-[0_8px_30px_rgba(0,0,0,0.12)] bg-linear-to-tr from-[#fd6c01] to-[#f0d29c] backdrop-blur-md border border-orange-200 flex flex-col gap-8 transition-all duration-300 hover:scale-[1.02]  bg-transparent my-4"
+                                >
+                                    <div className="grid grid-cols-6 items-start justify-center text-center w-full gap-6">
+                                        <HeaderConvertPage item={items[item.id]} />
 
-                            <div
-                                id="item-head-upper"
-                                className="lg:max-w-5xl w-full mx-auto p-6 rounded-3xl shadow-[0_8px_30px_rgba(0,0,0,0.12)] bg-linear-to-tr from-[#fd6c01] to-[#f0d29c] backdrop-blur-md border border-orange-200 flex flex-col gap-8 transition-all duration-300 hover:scale-[1.02]  bg-transparent my-4"
-                            >
-                                <div className="grid grid-cols-6 items-start justify-center text-center w-full gap-6">
-                                    <HeaderConvertPage item={items["5744"]} />
+                                        <div className="row-span-2 col-span-6 sm:col-span-6 md:col-span-2 mx-3 flex flex-col items-center bg-white/90 rounded-2xl p-4 shadow-inner">
+                                            <ImageConvertPageMuad patchKey={item.nameImg} />
 
-                                    <div className="row-span-2 col-span-6 sm:col-span-6 md:col-span-2 mx-3 flex flex-col items-center bg-white/90 rounded-2xl p-4 shadow-inner">
-                                        <ImageConvertPageMuad patchKey="upperhead.png" />
+                                            <OptionConvertPage
+                                                identifiedDescriptionName={items[item.id]?.identifiedDescriptionName}
+                                            />
+                                        </div>
 
-                                        <OptionConvertPage
-                                            identifiedDescriptionName={items["5744"]?.identifiedDescriptionName}
+                                        <DetailConvertPage
+                                            identifiedDescription={items[item.id]?.identifiedDescriptionName}
                                         />
                                     </div>
-
-                                    <DetailConvertPage
-                                        identifiedDescription={items["5744"]?.identifiedDescriptionName}
-                                    />
-                                </div>
-                            </div>
-
-                            <div
-                                id="item-head-middle"
-                                className="lg:max-w-5xl w-full mx-auto p-6 rounded-3xl shadow-[0_8px_30px_rgba(0,0,0,0.12)] bg-linear-to-tr from-[#fd6c01] to-[#f0d29c] backdrop-blur-md border border-orange-200 flex flex-col gap-8 transition-all duration-300 hover:scale-[1.02]  bg-transparent"
-                            >
-                                <div className="grid grid-cols-6 items-start justify-center text-center w-full gap-6">
-                                    <HeaderConvertPage item={items["410517"]} />
-
-                                    <div className="row-span-2 col-span-6 sm:col-span-6 md:col-span-2 mx-3 flex flex-col items-center bg-white/90 rounded-2xl p-4 shadow-inner">
-                                        <ImageConvertPageMuad patchKey="middlehead.png" />
-
-                                        <OptionConvertPage
-                                            identifiedDescriptionName={items["410517"]?.identifiedDescriptionName}
-                                        />
-                                    </div>
-
-                                    <DetailConvertPage
-                                        identifiedDescription={items["410517"]?.identifiedDescriptionName}
-                                    />
-                                </div>
-                            </div>
+                                </div>)
+                            })}
 
 
                         </section>
-                    </>) : (<></>)
+                    </>) : (<>
+                    
+                        <section id="cos-head" className="min-h-screen grid items-center justify-center p-10">
+                            {cosInfoList.map((item) => {
+                                return (<div key={item.id}
+                                    id={item.idClass}
+                                    className="lg:max-w-5xl w-full mx-auto p-6 rounded-3xl shadow-[0_8px_30px_rgba(0,0,0,0.12)] bg-linear-to-tr from-[#fd6c01] to-[#f0d29c] backdrop-blur-md border border-orange-200 flex flex-col gap-8 transition-all duration-300 hover:scale-[1.02]  bg-transparent my-4"
+                                >
+                                    <div className="grid grid-cols-6 items-start justify-center text-center w-full gap-6">
+                                        <HeaderConvertPage item={itemsShadow[item.id]} />
+
+                                        <div className="row-span-2 col-span-6 sm:col-span-6 md:col-span-2 mx-3 flex flex-col items-center bg-white/90 rounded-2xl p-4 shadow-inner">
+                                            <ImageConvertPageMuad patchKey={item.nameImg} />
+
+                                            <OptionConvertPage
+                                                identifiedDescriptionName={itemsShadow[item.id]?.identifiedDescriptionName}
+                                            />
+                                        </div>
+
+                                        <DetailConvertPage
+                                            identifiedDescription={itemsShadow[item.id]?.identifiedDescriptionName}
+                                        />
+                                    </div>
+                                </div>)
+                            })}
+
+
+                        </section>
+                        </>)
             }
 
         </main >
@@ -344,23 +418,29 @@ function FloatingItem({ pos, label, imageSrc, onClick, delay = 0 }: FloatingItem
             className={`absolute ${pos} pointer-events-auto cursor-pointer group z-30`}
             onClick={onClick}
         >
-            <div className="relative bg-white/80 backdrop-blur-md p-3 rounded-2xl shadow-xl group-hover:bg-orange-500/90 transition-all duration-500 group-hover:scale-110 group-hover:shadow-orange-300/50 flex flex-col items-center justify-center">
+            {/* ปรับ flex-col เป็น flex-row และเพิ่ม gap-3 เพื่อเว้นระยะรูปกับข้อความ */}
+            <div className="relative bg-white/80 backdrop-blur-md p-3 px-4 rounded-2xl shadow-xl 
+                            group-hover:bg-orange-500/90 transition-all duration-500 
+                            group-hover:scale-110 group-hover:shadow-orange-300/50 
+                            flex flex-row items-center justify-center min-w-[150px]">
 
-                {/* ส่วนแสดงรูปไอเทม - ใช้ Flexbox เพื่อจัดให้อยู่กึ่งกลางเป๊ะ */}
-                <div className="w-20 h-20 md:w-24 md:h-24 flex items-center justify-center rounded-xl mb-1 overflow-hidden transition-colors">
+                {/* ส่วนแสดงรูปไอเทม - อยู่ซ้ายมือ */}
+                <div className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-xl overflow-hidden transition-colors shrink-0">
                     <img src={imageSrc}
                         alt={label}
-                        className="w-[80%] h-[80%] object-contain drop-shadow-md group-hover:rotate-12 transition-transform duration-300"
+                        className="w-full h-full object-contain drop-shadow-md group-hover:rotate-12 transition-transform duration-300"
                     />
                 </div>
 
-                {/* ชื่อประเภทไอเทม */}
-                <div className="text-[12px] font-black uppercase text-slate-500 group-hover:text-white text-center tracking-widest leading-none mt-1" dangerouslySetInnerHTML={{ __html: label }}>
-
+                <div className="ml-3 flex flex-col items-start">
+                    <div
+                        className="text-[12px] font-black uppercase text-slate-500 group-hover:text-white text-left tracking-wider leading-tight"
+                        dangerouslySetInnerHTML={{ __html: label }}
+                    />
                 </div>
 
                 {/* Effect แสงวิ้งๆ */}
-                <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/40 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-2xl" />
+                <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/40 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-2xl pointer-events-none" />
             </div>
         </motion.div>
     );
