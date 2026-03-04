@@ -11,5 +11,11 @@ export function dropService() {
 
   const dropAdd: ServerInfoDto[] = [];
 
+  dropAdd.push({
+    name: "จากกิจกรรม x Event สุดพิเศษจากเกม Ragnarok Endless Trails",
+    ratePercent: 15,
+    DateFrom: new Date(2026, 1, 27, 0, 0, 0),
+    DateTo: new Date(2026, 2, 6, 0, 0, 0),
+  });
   return [...dropDefault,...dropAdd];
 }
