@@ -7,8 +7,8 @@ import { Monster } from "@/types/monster";
 const monsters: Monster[] = MonstersDb();
 
 export default function MonsterEcomDatabase() {
-  const DateFrom = new Date(2026, 0, 28, 6, 0, 0);
-  const DateTo = new Date(2026, 1, 25, 6, 0, 0);
+  const DateFrom = new Date(2026, 2, 4, 6, 0, 0);
+  const DateTo = new Date(2026, 2, 31, 6, 0, 0);
   const [search, setSearch] = useState("");
   const [selectedRace, setSelectedRace] = useState("All");
   const [selectedMap, setSelectedMap] = useState("All");
@@ -17,9 +17,9 @@ export default function MonsterEcomDatabase() {
 
   // รายชื่อ ID ที่ต้องการแสดง
   const monsterx3Ids = [
-    1023, 1273, 1686, 1152, 1153, 1177, 1213, 1189, 1369, 1368, 1378, 1372,
-    1376, 1386, 2313, 2314, 2316, 2309, 2310, 2312, 2315, 2311, 2478, 2479,
-    2919, 2917, 2920, 1270, 2923, 2921, 2916,
+    1165, 1127, 1055, 1271, 1391, 1317, 1323, 1206, 2152, 2154, 2153, 2155,
+    2151, 1305, 1311, 1988, 1989, 1987, 1999, 1986, 2024, 2092, 1995, 1994,
+    1993, 1992,
   ];
 
   const filteredMonsters = useMemo(() => {
@@ -158,7 +158,7 @@ export default function MonsterEcomDatabase() {
             <select
               className="bg-gray-800 border border-gray-700 rounded-lg px-3 py-1.5 text-sm outline-none focus:border-cyan-500 text-gray-200"
               onChange={(e) => setSortBy(e.target.value)}
-            > 
+            >
               <option value="exp">EXP</option>
               <option value="job">JOB</option>
               <option value="lv">Base Level</option>
