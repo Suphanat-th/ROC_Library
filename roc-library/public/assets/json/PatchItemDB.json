@@ -1,148 +1,112 @@
 {
-    "24298": {
-        "unidentifiedDisplayName": "Shadow Weapon",
-        "unidentifiedResourceName": "웨폰쉐도우",
+    "106887": {
+        "unidentifiedDisplayName": "Necromancer Scroll",
+        "unidentifiedResourceName": "환영무상",
         "unidentifiedDescriptionName": [
             "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "Shadow Sniper Weapon",
-        "identifiedResourceName": "웨폰쉐도우",
+        "identifiedDisplayName": "Necromancer Scroll",
+        "identifiedResourceName": "환영무상",
         "identifiedDescriptionName": [
-            "ถุงมือที่สวมใส่กับมือที่ถืออาวุธ เพื่อดึงศักยภาพของผู้สวมใส่ออกมา",
-            "สำหรับ Sniper เท่านั้น ",
-            "เพิ่มดาเมจ Focused Arrow Strike 20%",
-            "ทุกๆ การอัพเกรด 1 ขั้น เพิ่มดาเมจ Focused Arrow Strike 5%",
-            "ประเภท : Shadow",
-            "ตำแหน่ง : Weapon น้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 90",
-            "อาชีพที่ใส่ได้ : Sniper"
+            "Necromancer Scroll ถูกทำขึ้นด้วยพลังแห่งเงามืดจากโลกวิญญาณ มอบพลังให้กับผู้ถือครอง",
+            "^ff0000หากเปิดใช้งานหลังวันที่ 1 เมษายน 2569 หลังปิดปรับปรุงประจำสัปดาห์ จะไม่ได้รับ Necromancer Coin",
+            "น้ำหนัก : 1"
         ],
         "slotCount": 0,
         "ClassNum": 0,
-        "costume": true
+        "costume": false
     },
-    "24311": {
-        "unidentifiedDisplayName": "Shadow Shield",
-        "unidentifiedResourceName": "쉴드쉐도우",
+    "410328": {
+        "unidentifiedDisplayName": "Ribbon",
+        "unidentifiedResourceName": "리본",
         "unidentifiedDescriptionName": [
             "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "Shadow Sniper Shield",
-        "identifiedResourceName": "쉴드쉐도우",
+        "identifiedDisplayName": "Costume Fluffy Bakery",
+        "identifiedResourceName": "C_Fluffy_Bakery",
         "identifiedDescriptionName": [
-            "โล่เล็กที่สามารถสวมใส่ที่แขนได้ สามารถใช้งานแบบชิ้นเดียวได้แต่เอฟเฟกต์การป้องกันของมันจะลดน้อยลง",
-            "สำหรับ Sniper เท่านั้น ",
-            "ลด SP ที่ใช้ในการร่ายสกิล Falcon Assault 20%",
-            "ทุกๆ การอัพเกรด 1 ขั้น ลด SP ที่ใช้ในการร่ายสกิล Falcon Assault เพิ่มอีก 5%",
-            "--------------------------------------- ",
-            "เมื่อสวมใส่ร่วมกับ ^32CD32Sniper Shadow Weapon",
-            "เพิ่มดาเมจ Falcon Assault 20%, เพิ่มดาเมจ Focused Arrow Strike 20%",
-            "--------------------------------------- ",
-            "เมื่อสวมใส่ ^32CD32Archer Shadow 2 ชิ้น, ^32CD32Hunter Shadow 2 ชิ้น,  ^32CD32Sniper Shadow 2 ชิ้นทั้งหมด จะได้รับเอฟเฟกต์ดังต่อไปนี้ ",
-            "All State + 10, MaxHP + 5%, MaxSP + 5%",
-            "เพิกเฉยต่อพลังป้องกันทางกายภาพและทางเวทย์ของศัตรูทั่วไป 50%",
-            "ประเภท : Shadow",
-            "ตำแหน่ง : Shield น้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 90",
-            "อาชีพที่ใส่ได้ : Sniper"
-        ],
-        "slotCount": 0,
-        "ClassNum": 0,
-        "costume": true
-    },
-    "20590": {
-        "unidentifiedDisplayName": "Garment",
-        "unidentifiedResourceName": "후드",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "Costume Evil Druid Cross",
-        "identifiedResourceName": "C_Evil_Druid_Cross",
-        "identifiedDescriptionName": [
-            "ไม้กางเขนสำหรับเครื่องแต่งกายที่จำลองมาจากไม้กางเขนของ Evil Druid",
-            "สัมผัสได้ถึงความรู้สึกของการเป็นนักบวชแห่งความมืด",
-            "ประเภท : Costume พลังป้องกัน :  0",
-            "ตำแหน่ง : Garment  น้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 1",
-            "อาชีพที่ใส่ได้ :ทุกอาชีพ"
-        ],
-        "slotCount": 0,
-        "ClassNum": 67,
-        "costume": true
-    },
-    "24231": {
-        "unidentifiedDisplayName": "Shadow Shoes",
-        "unidentifiedResourceName": "슈즈쉐도우",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "Blitz Shadow Shoes",
-        "identifiedResourceName": "슈즈쉐도우",
-        "identifiedDescriptionName": [
-            "รองเท้าที่สวมใส่เพิ่มเติม สามารถใช้งานแบบชิ้นเดียวได้แต่เอฟเฟกต์ของมันจะลดน้อยลง",
-            "FLEE + 5.",
-            "ทุกๆ อัพเกรด 2 ขั้น FLEE + 1.",
-            "เมื่ออัพเกรดขั้น 7 ขึ้นไป, ASPD + 1.",
-            "เมื่ออัพเกรดขั้น 9 ขึ้นไป, ASPD + 1.",
-            "^32CD32Blitz Shadow Shoes กับ",
-            "^32CD32Blitz Shadow Shield",
-            "เมื่อสวมใส่ไอเท็มดังกล่าวด้วยกัน, FLEE + 5.",
-            "เมื่อขั้นการอัพเกรดรวมกันตั้งแต่ 15 ขึ้นไป ASPD + 1.",
-            "ประเภท : Shadow",
-            "ตำแหน่ง : Shoes น้ำหนัก : 0",
+            "รถเข็นที่มีกลิ่นหอมอบอวลของขนมปังลอยฟุ้งอยู่รอบ ๆ",
+            "ลองเสิร์ฟขนมปังอบใหม่ ๆ ให้เหล่านักผจญภัยที่กำลังหิวกันเถอะ!",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Middle น้ำหนัก : 0",
             "เลเวลที่ต้องการ : 1",
             "อาชีพที่ใส่ได้ : ทุกอาชีพ"
         ],
         "slotCount": 0,
-        "ClassNum": 0,
+        "ClassNum": 2536,
         "costume": true
     },
-    "24151": {
-        "unidentifiedDisplayName": "Shadow Pendant",
-        "unidentifiedResourceName": "펜던트쉐도우",
+    "15931": {
+        "unidentifiedDisplayName": "Old Gold Trophy Hat",
+        "unidentifiedResourceName": "캡",
         "unidentifiedDescriptionName": [
             "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "Infinity Shadow Pendant",
-        "identifiedResourceName": "펜던트쉐도우",
+        "identifiedDisplayName": "Old Gold Trophy Hat",
+        "identifiedResourceName": "황금천사조각상",
         "identifiedDescriptionName": [
-            "สร้อยคอศักดิ์สิทธิ์ที่กล่าวกันว่าปกป้องผู้สวมใส่ ดึงศักยภาพของผู้สวมใส่ออกมา ",
-            "ลด Damage เมื่อถูกศัตรูขนาดเล็ก, กลาง, ใหญ่โจมตี 1%.",
-            "เมื่ออัพเกรดถึงขั้น 7, ลด Damage เพิ่มเติม เมื่อถูกศัตรูขนาดเล็ก, กลาง, ใหญ่โจมตี 1%",
-            "เมื่ออัพเกรดถึงขั้น 9, ลด Damage เพิ่มเติม เมื่อถูกศัตรูขนาดเล็ก, กลาง, ใหญ่โจมตี 1%",
-            "Iเมื่อสวมใส่ร่วมกันกับ Infinity Shadow Pendant และ Infinity Shadow Earring, ATK + 1%.",
-            "เมื่อผลรวมค่าอัพเกรดรวมกันตั้งแต่ 18 ขึ้นไป, ยกเลิกการลงโทษขนาดของอาวุธ ",
-            "ประเภท : Shadow",
-            "ตำแหน่ง : Pandant น้ำหนัก :  0",
-            "เลเวลที่ต้องการ: 1",
+            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "ดูเหมือนจะเป็นถ้วยรางวัลเก่า ๆ ที่บางคนนำมาวางไว้บนศีรษะและไม่มีประโยชน์อะไร",
+            "แต่ในช่วงระยะเวลากิจกรรม (วันที่ 18 มีนาคม 2569 - วันที่ 8 เมษายน 2569 ก่อนปรับปรุงเซิฟเวอร์) จะสามารถนำไปอัปเกรดขั้นและรับรางวัลเพิ่มเติมได้",
+            "(ไอเทมดังกล่าวจะถูกลบทิ้งเมื่อสิ้นสุดระยะเวลากิจกรรม )",
+            "ประเภท : Headgear พลังป้องกัน : 0",
+            "ตำแหน่ง : Upper น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
             "อาชีพที่ใส่ได้ : ทุกอาชีพ"
         ],
         "slotCount": 0,
-        "ClassNum": 0,
-        "costume": true
+        "ClassNum": 646,
+        "costume": false
     },
-    "24150": {
-        "unidentifiedDisplayName": "Shadow Earring",
-        "unidentifiedResourceName": "이어링쉐도우",
+    "400656": {
+        "unidentifiedDisplayName": "Headgear",
+        "unidentifiedResourceName": "캡",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา ต้องทำการตรวจสอบโดยใช้ [Magnifier]"
+        ],
+        "identifiedDisplayName": "Costume White Khalitzburg Knight Helm",
+        "identifiedResourceName": "Khalitzburg_KN_Helm_W",
+        "identifiedDescriptionName": [
+            "^ff0000ไอเท็มนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "หมวกเกราะประดับที่ดูคล้ายกับหมวกเกราะของกองอัศวิน Khalitzburg",
+            "",
+            "All Status +2",
+            "ATK + 5%, MATK + 5%, CRI + 10, HIT + 10",
+            "การร่ายแบบแปรผันลดลง 10% ",
+            "อัตราดรอปไอเทม + 5%",
+            "เมื่อล่ามอนสเตอร์ค่าประการณ์ที่ได้รับ + 10%",
+            "",
+            "^ff0000 (ความสามารถของไอเท็มจะถูกลบหลังสิ้นสุดระยะเวลากิจกรรม 6 พฤษภาคม 2569) ",
+            "ประเภท : Costume",
+            "ตำแหน่ง : Upper น้ำหนัก : 0",
+            "ต้องการ Lv. : 1",
+            "อาชีพ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0
+    },
+    "31716": {
+        "unidentifiedDisplayName": "Ribbon",
+        "unidentifiedResourceName": "리본",
         "unidentifiedDescriptionName": [
             "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "Infinity Shadow Earring",
-        "identifiedResourceName": "이어링쉐도우",
+        "identifiedDisplayName": "Costume Twinkling Red Eyes",
+        "identifiedResourceName": "C_Blinking_Eyes_RD",
         "identifiedDescriptionName": [
-            "ต่างหูมงคลที่กล่าวกันว่าปกป้องผู้สวมใส่ ดึงศักยภาพของผู้สวมใส่ออกมา ",
-            "เพิ่ม Damage เมื่อโจมตีศัตรูขนาดเล็ก, กลาง, ใหญ่ด้วยการโจมตีทางกายภาพและทางเวทย์ 1%",
-            "เมื่ออัพเกรดถึงขั้น 7, เพิ่ม Damage เพิ่มเติม เมื่อโจมตีศัตรูขนาดเล็ก, กลาง, ใหญ่ด้วยการโจมตีทางกายภาพและทางเวทย์1%",
-            "เมื่ออัพเกรดถึงขั้น 9, เพิ่ม Damage เพิ่มเติม เมื่อโจมตีศัตรูขนาดเล็ก, กลาง, ใหญ่ด้วยการโจมตีทางกายภาพและทางเวทย์ 1%",
-            "เมื่อสวมใส่ร่วมกันกับ Infinity Shadow Earring และ Infinity Shadow Pendant, ATK + 1% ",
-            "เมื่อผลรวมค่าอัพเกรดรวมกันตั้งแต่ 18 ขึ้นไป, ยกเลิกการลงโทษขนาดของอาวุธ  ",
-            "ประเภท : Shadow",
-            "ตำแหน่ง : Earring น้ำหนัก :  0",
-            "เลเวลที่ต้องการ: 1",
+            "คอนแทคเลนส์สีแดงที่เมื่อใส่แล้วตาจะกระพริบ",
+            "",
+            "เพิ่มผลการฟื้นพลังจาก Delicious Fish ขึ้น 300%",
+            "เพิ่มอัตราดรอปไอเท็ม + 5 %",
+            "",
+            "^ff0000(ความสามารของไอเท็มนี้จะถูกลบในวันที่ 13 พฤษภาคม 2569 หลังปิดปรับปรุงเซิฟเวอร์)",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Middle น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
             "อาชีพที่ใส่ได้ : ทุกอาชีพ"
         ],
         "slotCount": 0,
-        "ClassNum": 0,
+        "ClassNum": 1888,
         "costume": true
     }
 }

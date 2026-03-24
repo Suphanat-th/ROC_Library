@@ -1,26 +1,29 @@
-
-interface SprData {
-  version: number;
-  indexedCount: number;
-  rgbaCount: number;
-  totalCount: number;
-  arrayBuffer: ArrayBuffer;
-  isRle: boolean;
+export interface SPRFrame {
+  width: number
+  height: number
+  pixels: Uint8Array
 }
 
-interface ActData {
-  version: number;
-  actionCount: number;
-  arrayBuffer: ArrayBuffer;
+export interface SPRData {
+  palette: Uint8Array
+  frames: SPRFrame[]
 }
 
-interface FileState {
-  spr: SprData | null;
-  act: ActData | null;
+export interface ActLayer {
+  spriteIndex: number
+  x: number
+  y: number
 }
 
-interface SpriteCanvasProps {
-  spr: SprData;
-  frameIndex: number;
-  scale?: number;
+export interface ActFrame {
+  layers: ActLayer[]
+}
+
+export interface ActAction {
+  frames: ActFrame[]
+  delay: number
+}
+
+export interface ActData {
+  actions: ActAction[]
 }
