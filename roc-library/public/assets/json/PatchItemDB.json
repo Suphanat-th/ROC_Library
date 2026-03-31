@@ -1,112 +1,688 @@
 {
-    "106887": {
-        "unidentifiedDisplayName": "Necromancer Scroll",
-        "unidentifiedResourceName": "환영무상",
+    "835": {
+        "unidentifiedDisplayName": "Guarantee Costume Coin",
+        "unidentifiedResourceName": "Dalcom_Coin",
         "unidentifiedDescriptionName": [
             "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "Necromancer Scroll",
-        "identifiedResourceName": "환영무상",
+        "identifiedDisplayName": "Guarantee Costume Coin",
+        "identifiedResourceName": "Dalcom_Coin",
         "identifiedDescriptionName": [
-            "Necromancer Scroll ถูกทำขึ้นด้วยพลังแห่งเงามืดจากโลกวิญญาณ มอบพลังให้กับผู้ถือครอง",
-            "^ff0000หากเปิดใช้งานหลังวันที่ 1 เมษายน 2569 หลังปิดปรับปรุงประจำสัปดาห์ จะไม่ได้รับ Necromancer Coin",
+            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นอื่นได้",
+            "เหรียญสุดพิเศษที่ได้จากการเปิด Machine Slot Costume",
+            "สามารถสะสมไว้แลกไอเทมล้ำค่าในช่วงกิจกรรมที่ Exchange Costume Garantree เมือง Payon Market 118 77 (กลางตลาด Payon Market)",
+            "(ไอเท็มชิ้นนี้จะถูกลบหลังสิ้นสุดเวลากิจกรรม)",
+            "น้ำหนัก : 0"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "600080": {
+        "unidentifiedDisplayName": "Two-Handed Sword",
+        "unidentifiedResourceName": "바스타드소드",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[NFS] Awakened Dragonic Slayer",
+        "identifiedResourceName": "UpHetairoi_Sword",
+        "identifiedDescriptionName": [
+            "^ff0000ไอเท็มนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "ดาบขนาดใหญ่ที่เล่าขานกันว่าผู้ปราบมังกรในอดีตเคยใช้",
+            "ทุก ๆ การอัพเกรด 2 ขั้น ATK +20",
+            "ทุก ๆ การอัพเกรด 3 ขั้น เพิ่ม Damage สกิล Bowling Bash 50%",
+            "เมื่ออัพเกรดถึงขั้น 9 ลดระยะเวลาในการร่ายสกิลลง 40%",
+            "เมื่ออัพเกรดถึงขั้น 11 MHP/MSP +30%",
+            "",
+            "ประเภท : Two-Handed Sword พลังโจมตี : 250",
+            "น้ำหนัก : 200",
+            "เลเวลของอาวุธ : 4",
+            "เลเวลที่ต้องการ : 98",
+            "อาชีพที่ใส่ได้ : Lord Knight"
+        ],
+        "slotCount": 2,
+        "ClassNum": 3,
+        "costume": false
+    },
+    "700136": {
+        "unidentifiedDisplayName": "Bow",
+        "unidentifiedResourceName": "보우",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[NFS] Awakened Narcissus Bow",
+        "identifiedResourceName": "Up_Narcis_Bow",
+        "identifiedDescriptionName": [
+            "^ff0000ไอเท็มนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "คันธนูของนักรบผู้กล้าหาญในการต่อสู้สมัยอดีตกาล",
+            "",
+            "ทุก ๆ การอัพเกรด 2 ขั้น ATK +30 ,Luk +3",
+            "ทุก ๆ การอัพเกรด 3 ขั้น เพิ่มดาเมจ Blitz Beat  100% ,Int +5",
+            "เมื่ออัพเกรดถึงขั้น 9 เมื่อโจมตีทางกายภาพระยะไกล CRI + 15%",
+            "เมื่ออัพเกรดถึงขั้น 11 Critical Damage +30%, พลังโจมตีมอนสเตอร์ประเภท MVP ขึ้น 15%",
+            "",
+            "เมื่อติดตั้งคู่กับ Sharp Arrow เพิ่ม การโจมตีระยะไกลเพิ่มโอกาสการ Critical 20%",
+            "ประเภท : Bow พลังโจมตี : 220",
+            "น้ำหนัก : 120",
+            "เลเวลของอาวุธ : 4",
+            "เลเวลที่ต้องการ : 98",
+            "อาชีพที่ใส่ได้ : Sniper"
+        ],
+        "slotCount": 2,
+        "ClassNum": 73,
+        "costume": false
+    },
+    "106859": {
+        "unidentifiedDisplayName": "[NFS]Dragonic Slayer Modification Cube",
+        "unidentifiedResourceName": "RemodelCube",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[NFS]Dragonic Slayer Modification Cube",
+        "identifiedResourceName": "RemodelCube",
+        "identifiedDescriptionName": [
+            "^ff0000ไอเท็มนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "ลูกบาศก์ที่ช่วยอัพเกรด [NFS]Dragonic Slayer ให้กลายเป็น [NFS]Awakened Dragonic Slayer ",
+            "ใช้วัตถุดิบเป็น [NFS] Dragonic Slayer ตั้งแต่ +9 ขึ้นไป",
+            "และจะได้รับ [NFS] Awakened Dragonic Slayer +7 ออกมา",
+            "^ff0000คำเตื่อน! - เมื่ออัพเกรดแล้ว การ์ดและ Random Option ที่ใช้อยู่จะสูญหาย",
+            "<ITEM>ข้อมูลไอเทมใหม่<INFO>600080</INFO></ITEM>",
             "น้ำหนัก : 1"
         ],
         "slotCount": 0,
         "ClassNum": 0,
         "costume": false
     },
-    "410328": {
-        "unidentifiedDisplayName": "Ribbon",
-        "unidentifiedResourceName": "리본",
+    "106860": {
+        "unidentifiedDisplayName": "[NFS]Blessed Knife Modification Cube",
+        "unidentifiedResourceName": "RemodelCube",
         "unidentifiedDescriptionName": [
             "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "Costume Fluffy Bakery",
-        "identifiedResourceName": "C_Fluffy_Bakery",
+        "identifiedDisplayName": "[NFS]Blessed Knife Modification Cube",
+        "identifiedResourceName": "RemodelCube",
         "identifiedDescriptionName": [
-            "รถเข็นที่มีกลิ่นหอมอบอวลของขนมปังลอยฟุ้งอยู่รอบ ๆ",
-            "ลองเสิร์ฟขนมปังอบใหม่ ๆ ให้เหล่านักผจญภัยที่กำลังหิวกันเถอะ!",
-            "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Middle น้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 1",
-            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+            "^ff0000ไอเท็มนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "ลูกบาศก์ที่ช่วยอัพเกรด [NFS] Blessed Knife ให้กลายเป็น [NFS] Awakened Blessed Knife",
+            "ใช้วัตถุดิบเป็น [NFS] Blessed Knife ตั้งแต่ +9 ขึ้นไป",
+            "และจะได้รับ [NFS] Awakened Blessed Knife +7 ออกมา",
+            "^ff0000คำเตื่อน! - เมื่ออัพเกรดแล้ว การ์ดและ Random Option ที่ใช้อยู่จะสูญหาย",
+            "<ITEM>ข้อมูลไอเทมใหม่<INFO>510210</INFO></ITEM>",
+            "น้ำหนัก : 1"
         ],
         "slotCount": 0,
-        "ClassNum": 2536,
-        "costume": true
-    },
-    "15931": {
-        "unidentifiedDisplayName": "Old Gold Trophy Hat",
-        "unidentifiedResourceName": "캡",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "Old Gold Trophy Hat",
-        "identifiedResourceName": "황금천사조각상",
-        "identifiedDescriptionName": [
-            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
-            "ดูเหมือนจะเป็นถ้วยรางวัลเก่า ๆ ที่บางคนนำมาวางไว้บนศีรษะและไม่มีประโยชน์อะไร",
-            "แต่ในช่วงระยะเวลากิจกรรม (วันที่ 18 มีนาคม 2569 - วันที่ 8 เมษายน 2569 ก่อนปรับปรุงเซิฟเวอร์) จะสามารถนำไปอัปเกรดขั้นและรับรางวัลเพิ่มเติมได้",
-            "(ไอเทมดังกล่าวจะถูกลบทิ้งเมื่อสิ้นสุดระยะเวลากิจกรรม )",
-            "ประเภท : Headgear พลังป้องกัน : 0",
-            "ตำแหน่ง : Upper น้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 1",
-            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
-        ],
-        "slotCount": 0,
-        "ClassNum": 646,
+        "ClassNum": 0,
         "costume": false
     },
-    "400656": {
-        "unidentifiedDisplayName": "Headgear",
+    "106861": {
+        "unidentifiedDisplayName": "[NFS]Narcissus Bow Modification Cube",
+        "unidentifiedResourceName": "RemodelCube",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[NFS]Narcissus Bow Modification Cube",
+        "identifiedResourceName": "RemodelCube",
+        "identifiedDescriptionName": [
+            "^ff0000ไอเท็มนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "ลูกบาศก์ที่ช่วยอัพเกรด [NFS] Narcissus Bow ให้กลายเป็น  [NFS] Awakened Narcissus Bow",
+            "ใช้วัตถุดิบเป็น  [NFS] Narcissus Bow ตั้งแต่ +9 ขึ้นไป",
+            "และจะได้รับ  [NFS] Awakened Narcissus Bow +7 ออกมา",
+            "^ff0000คำเตื่อน! - เมื่ออัพเกรดแล้ว การ์ดและ Random Option ที่ใช้อยู่จะสูญหาย",
+            "<ITEM>ข้อมูลไอเทมใหม่ <INFO>700136</INFO></ITEM>",
+            "น้ำหนัก : 1"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "106862": {
+        "unidentifiedDisplayName": "[NFS]Exorcist's Bible Modification Cube",
+        "unidentifiedResourceName": "RemodelCube",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[NFS]Exorcist's Bible Modification Cube",
+        "identifiedResourceName": "RemodelCube",
+        "identifiedDescriptionName": [
+            "^ff0000ไอเท็มนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "ลูกบาศก์ที่ช่วยอัพเกรด [NFS]Exorcist's Bible ให้กลายเป็น [NFS]Awakened Exorcist's Bible",
+            "ใช้วัตถุดิบเป็น [NFS]Exorcist's Bible ตั้งแต่ +9 ขึ้นไป",
+            "และจะได้รับ [NFS]Awakened Exorcist's Bible +7 ออกมา",
+            "^ff0000คำเตื่อน! - เมื่ออัพเกรดแล้ว การ์ดและ Random Option ที่ใช้อยู่จะสูญหาย",
+            "<ITEM>ข้อมูลไอเทมใหม่<INFO>540133</INFO></ITEM>",
+            "น้ำหนัก : 1"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "100329": {
+        "unidentifiedDisplayName": "Narcissus Bow Modification Cube",
+        "unidentifiedResourceName": "RemodelCube",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Narcissus Bow Modification Cube",
+        "identifiedResourceName": "RemodelCube",
+        "identifiedDescriptionName": [
+            "ลูกบาศก์ที่ช่วยอัพเกรด  Narcissus Bow ให้กลายเป็น   Awakened Narcissus Bow",
+            "ใช้วัตถุดิบเป็น   Narcissus Bow ตั้งแต่ +9 ขึ้นไป",
+            "และจะได้รับ   Awakened Narcissus Bow +7 ออกมา",
+            "^ff0000คำเตื่อน! - เมื่ออัพเกรดแล้ว การ์ดและ Random Option ที่ใช้อยู่จะสูญหาย",
+            "<ITEM>ข้อมูลไอเทมใหม่<INFO>700013</INFO></ITEM>",
+            "น้ำหนัก : 1"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "100397": {
+        "unidentifiedDisplayName": "Exorcist's Bible Modification Cube",
+        "unidentifiedResourceName": "RemodelCube",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Exorcist's Bible Modification Cube",
+        "identifiedResourceName": "RemodelCube",
+        "identifiedDescriptionName": [
+            "ลูกบาศก์ที่ช่วยอัพเกรด Exorcist's Bible ให้กลายเป็น Awakened Exorcist's Bible",
+            "ใช้วัตถุดิบเป็น Exorcist's Bible ตั้งแต่ +9 ขึ้นไป",
+            "และจะได้รับ Awakened Exorcist's Bible +7 ออกมา",
+            "^ff0000คำเตื่อน! - เมื่ออัพเกรดแล้ว การ์ดและ Random Option ที่ใช้อยู่จะสูญหาย",
+            "<ITEM>ข้อมูลไอเทมใหม่<INFO>540011</INFO></ITEM>",
+            "น้ำหนัก : 1"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "106863": {
+        "unidentifiedDisplayName": "Golden Holy Scroll",
+        "unidentifiedResourceName": "기도스크롤",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Golden Holy Scroll",
+        "identifiedResourceName": "기도스크롤",
+        "identifiedDescriptionName": [
+            "คัมภีร์แสงทองศักดิ์สิทธิ์ที่ผนึกสมบัติล้ำค่าจากสรวงสวรรค์",
+            "พร้อมมอบพลังที่เปลี่ยนแปลงได้ทุกสิ่ง ไอเทมระดับตำนานที่หายากที่สุด",
+            "^ff0000หากเปิดใช้งานหลังวันที่ 8 เมษายน 2569 หลังปิดปรับปรุงประจำสัปดาห์ จะไม่ได้รับ   Golden Holy Coin ",
+            "น้ำหนัก : 1"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "510210": {
+        "unidentifiedDisplayName": "Knife",
+        "unidentifiedResourceName": "나이프",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[NFS] Awakened Blessed Knife ",
+        "identifiedResourceName": "Up_Blessed_Knife",
+        "identifiedDescriptionName": [
+            "^ff0000ไอเท็มนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "มีดสั้นที่วีรชนผู้กล้าในอดีตเคยใช้มันสู้รบ",
+            "กล่าวขานกันว่า ภายในเปี่ยมไปด้วยพรของเหล่าเทวทูต จึงทำให้ผู้ที่ได้รับการคุ้มครองจากทูตสวรรค์เท่านั้นที่ใช้มีดนี้ได้",
+            "ทุก ๆ การอัพเกรด 2 ขั้น ATK +20",
+            "ทุก ๆ การอัพเกรด 3 ขั้น เพิ่ม Damage สกิล Holy Cross 50%",
+            "เมื่ออัพเกรดถึงขั้น 9 ASPD +20% , เพิ่ม Damage สกิล Holy Cross 20%",
+            "เมื่ออัพเกรดถึงขั้น 11 เพิ่ม Damage ทางกายภาพระยะใกล้ 15%,",
+            "เมื่อโจมตีกายภาพระยะใกล้มีโอกาส 10% Auto Spell Holy Cross Lv.10",
+            "ประเภท : Dagger พลังโจมตี : 210",
+            "น้ำหนัก : 120",
+            "เลเวลของอาวุธ : 4",
+            "เลเวลที่ต้องการ : 98",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 2,
+        "ClassNum": 31,
+        "costume": false
+    },
+    "540133": {
+        "unidentifiedDisplayName": "Book",
+        "unidentifiedResourceName": "북",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[NFS] Awakened Exorcist's Bible",
+        "identifiedResourceName": "Up_Demon_Hunting_Bible",
+        "identifiedDescriptionName": [
+            "^ff0000ไอเท็มนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "คัมภีร์ทางศาสนาเกี่ยวกับการขับไล่ปีศาจที่บาทหลวงระดับสูงในสมัยโบราณเคยใช้",
+            "",
+            "MATK +190, Matk + 5%.",
+            "ทุก ๆ การอัพเกรด 2 ขั้น MATK+ 20 , ความสามารถในการใช้สกิล Heal และ Sanctuary 10%",
+            "",
+            "เมื่ออัพเกรดขั้น 7 ทุก ๆ การเรียนรู้สกิล Meditation 1 เลเวล เพิ่ม Damage ทางเวทมนตร์ธาตุ Holy 1%",
+            "เมื่ออัพเกรดถึงขั้น 9 เพิ่ม Damage สกิล Magnus Exorcismus ขึ้น 60%",
+            "เมื่ออัพเกรดถึงขั้น 11, เมื่อโจมตีศัตรูด้วยสกิล Holy Light มีโอกาส 10% ที่จะร่าย Lex Aeterna , Lex Divina , Turn Undead",
+            "ประเภท : Book พลังโจมตี : 210",
+            "น้ำหนัก : 80",
+            "เลเวลของอาวุธ : 4",
+            "เลเวลที่ต้องการ : 98",
+            "อาชีพที่ใส่ได้ : High Priest Class"
+        ],
+        "slotCount": 2,
+        "ClassNum": 15,
+        "costume": false
+    },
+    "19956": {
+        "unidentifiedDisplayName": "Hat",
         "unidentifiedResourceName": "캡",
         "unidentifiedDescriptionName": [
             "ไอเท็มปริศนา ต้องทำการตรวจสอบโดยใช้ [Magnifier]"
         ],
-        "identifiedDisplayName": "Costume White Khalitzburg Knight Helm",
-        "identifiedResourceName": "Khalitzburg_KN_Helm_W",
+        "identifiedDisplayName": "Costume Soldier Hat",
+        "identifiedResourceName": "병정모자",
         "identifiedDescriptionName": [
-            "^ff0000ไอเท็มนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
-            "หมวกเกราะประดับที่ดูคล้ายกับหมวกเกราะของกองอัศวิน Khalitzburg",
-            "",
-            "All Status +2",
-            "ATK + 5%, MATK + 5%, CRI + 10, HIT + 10",
-            "การร่ายแบบแปรผันลดลง 10% ",
-            "อัตราดรอปไอเทม + 5%",
-            "เมื่อล่ามอนสเตอร์ค่าประการณ์ที่ได้รับ + 10%",
-            "",
-            "^ff0000 (ความสามารถของไอเท็มจะถูกลบหลังสิ้นสุดระยะเวลากิจกรรม 6 พฤษภาคม 2569) ",
-            "ประเภท : Costume",
-            "ตำแหน่ง : Upper น้ำหนัก : 0",
-            "ต้องการ Lv. : 1",
+            "หมวกของ Cruiser มันช่วยกระตุ้นในเกิดความรู้สึกกำลังเดินขบวนสวนสนาม",
+            "^b4b4b4สามารถแลกเปลี่ยนเป็น Enchant Stone Box 7 ได้.",
+            "ประเภท : Costume ป้องกัน : 0",
+            "ตำแหน่ง : Upper  น้ำหนัก : 0",
+            "Lv ที่ต้องการ : 1",
             "อาชีพ : ทุกอาชีพ"
         ],
         "slotCount": 0,
         "ClassNum": 0
     },
-    "31716": {
+    "19524": {
+        "unidentifiedDisplayName": "Hat",
+        "unidentifiedResourceName": "리본",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา ต้องทำการตรวจสอบโดยใช้ [Magnifier]"
+        ],
+        "identifiedDisplayName": "Costume Green Feeler",
+        "identifiedResourceName": "초록더듬이",
+        "identifiedDescriptionName": [
+            "หนวดสีเขียวที่ให้ความรู้สึกเหมือนเป็นตั๊กแตน",
+            "^b4b4b4สามารถแลกเปลี่ยนเป็น Enchant Stone Box 7 ได้.",
+            "ประเภท : Costume",
+            "ตำแหน่ง : Upper  น้ำหนัก : 0",
+            "Lv ที่ต้องการ : 1",
+            "อาชีพ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 85,
+        "costume": true
+    },
+    "19528": {
+        "unidentifiedDisplayName": "Hat",
+        "unidentifiedResourceName": "리본",
+        "unidentifiedDescriptionName": [
+            "ไอเทมปริศนา สามารถตรวจสอบได้ด้วยไอเทม [Magnifier]"
+        ],
+        "identifiedDisplayName": "Costume Iron Cane",
+        "identifiedResourceName": "아이언케인",
+        "identifiedDescriptionName": [
+            "เครื่องป้องกันปากที่ทำด้วยเหล็ก, คุณสามารถป้องกันฟันของคุณในระหว่างการต่อสู้ได้",
+            "^b4b4b4สามารถแลกเปลี่ยนเป็น Enchant Stone Box 7 ได้.",
+            "ประเภท : Costume",
+            "ใช้สำหรับ : Lower  น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใช้ได่ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 53,
+        "costume": true
+    },
+    "19533": {
+        "unidentifiedDisplayName": "Headgear",
+        "unidentifiedResourceName": "햇",
+        "unidentifiedDescriptionName": [
+            "ไอเทมปริศนา สามารถตรวจสอบได้ด้วยไอเทม [Magnifier]"
+        ],
+        "identifiedDisplayName": "Costume Spore Hat",
+        "identifiedResourceName": "스포아모자",
+        "identifiedDescriptionName": [
+            "ไอเท็มแนะนำสำหรับผู้ที่ต้องการจะเป็น Spore เจ้าสัตว์ประหลาดเห็ด สวมใส่มันและรับรู้ถึงความเป็นเห็ดซะ!!",
+            "^b4b4b4สามารถแลกเปลี่ยนเป็น Enchant Stone Box 8 ได้.",
+            "ประเภท : Costume",
+            "ใช้สำหรับ : Upper  น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใช้ได่ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 114,
+        "costume": true
+    },
+    "19789": {
+        "unidentifiedDisplayName": "Hat",
+        "unidentifiedResourceName": "캡",
+        "unidentifiedDescriptionName": [
+            "ไอเทมปริศนา สามารถตรวจสอบได้ด้วยไอเทม [Magnifier]"
+        ],
+        "identifiedDisplayName": "Costume Sweet Gent",
+        "identifiedResourceName": "스위트젠틀",
+        "identifiedDescriptionName": [
+            "หมวกปีกกว้างสีเลือดนกปนน้ำตาล, นิยมสวมใส่โดยสุภาพบุรุษ ดูโรแมนติกและมีเสน่ห์",
+            "^b4b4b4สามารถแลกเปลี่ยนเป็น Enchant Stone Box 8 ได้.",
+            "ประเภท : Costume",
+            "ใช้สำหรับ : Upper น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใช้ได่ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 29,
+        "costume": true
+    },
+    "20057": {
+        "unidentifiedDisplayName": "Cap",
+        "unidentifiedResourceName": "캡",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา ต้องใช้ [Magnifier] ในการตรวจสอบไอเท็ม"
+        ],
+        "identifiedDisplayName": "Costume Feather Bonnet",
+        "identifiedResourceName": "깃털모자",
+        "identifiedDescriptionName": [
+            "หมวกที่มีขนนกโบราณติดอยู่สุดเท่",
+            "^b4b4b4สามารถแลกเปลี่ยนเป็น Enchant Stone Box 7 ได้.",
+            "ประเภท : Costume",
+            "ตำแหน่ง : Upperน้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 104,
+        "costume": true
+    },
+    "19832": {
+        "unidentifiedDisplayName": "Headgear",
+        "unidentifiedResourceName": "캡",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา ต้องทำการตรวจสอบโดยใช้ [Magnifier]"
+        ],
+        "identifiedDisplayName": "Costume Poring Hat",
+        "identifiedResourceName": "포링모자",
+        "identifiedDescriptionName": [
+            "หมวก Poring monster ยอดนิยม มันไม่ได้ทำจากถุงมือยางนะ!!!",
+            "^b4b4b4สามารถแลกเปลี่ยนเป็น Enchant Stone Box 7 ได้.",
+            "ประเภท : Costume",
+            "ตำแหน่ง : Upper  น้ำหนัก : 0",
+            "Lv ที่ต้องการ : 1",
+            "อาชีพ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0
+    },
+    "19833": {
+        "unidentifiedDisplayName": "Hairband",
+        "unidentifiedResourceName": "머리띠",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา ต้องทำการตรวจสอบโดยใช้ [Magnifier]"
+        ],
+        "identifiedDisplayName": "Costume Fillet",
+        "identifiedResourceName": "머리끈",
+        "identifiedDescriptionName": [
+            "โบว์ผูกผมแสนน่ารัก",
+            "^b4b4b4สามารถแลกเปลี่ยนเป็น Enchant Stone Box 8 ได้.",
+            "ประเภท : Costume",
+            "ตำแหน่ง : Upper  น้ำหนัก : 0",
+            "Lv ที่ต้องการ : 1",
+            "อาชีพ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 34,
+        "costume": true
+    },
+    "19585": {
+        "unidentifiedDisplayName": "Hat",
+        "unidentifiedResourceName": "캡",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา ต้องทำการตรวจสอบโดยใช้ [Magnifier]"
+        ],
+        "identifiedDisplayName": "Costume Feather Beret",
+        "identifiedResourceName": "깃털베레모",
+        "identifiedDescriptionName": [
+            "หมวกเกรดพรีเมี่ยมที่ทำขึ้นมาอย่างเหมาะสมดีเยี่ยม ตกแต่งด้วยขนนกอย่างดีเติมเต็มท้องฟ้าสีฟ้าสดใส",
+            "^b4b4b4สามารถแลกเปลี่ยนเป็น Enchant Stone Box 9 ได้.",
+            "ประเภท : Costume",
+            "ตำแหน่ง : Upper น้ำหนัก : 0",
+            "Lv ที่ต้องการ : 1",
+            "อาชีพ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 224,
+        "costume": true
+    },
+    "19850": {
+        "unidentifiedDisplayName": "Headgear",
+        "unidentifiedResourceName": "캡",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา ต้องทำการตรวจสอบไอเท็มโดย [Magnifier]"
+        ],
+        "identifiedDisplayName": "Costume Bongun Hat",
+        "identifiedResourceName": "본건모자",
+        "identifiedDescriptionName": [
+            "หมวกที่สวมใส่โดยสัตว์ Bongun จุดสำคัญของหมวกนี้คือเครื่องรางที่ขาดไปครึ่งหนึ่ง ค่อนข้างแข็งแกร่ง แต่เครื่องรางที่บังทำให้มองเห็นข้างหน้าได้เพียงครึ่งเดียวเท่านั้น",
+            "^b4b4b4สามารถแลกเปลี่ยนเป็น Enchant Stone Box 8 ได้.",
+            "ประเภท : Costume",
+            "ตำแหน่ง : Upper-Middle-Lowerน้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อุปกรณ์สวมใส่ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 139,
+        "costume": true
+    },
+    "19621": {
+        "unidentifiedDisplayName": "Headgear",
+        "unidentifiedResourceName": "발그레",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา ต้องทำการตรวจสอบโดยใช้ [Magnifier]"
+        ],
+        "identifiedDisplayName": "Costume Ear Of Devils Wing",
+        "identifiedResourceName": "악마날개귀",
+        "identifiedDescriptionName": [
+            "เครื่องประดับที่ตกแต่งด้วยปีกสีดำ คุณสามารถรู้สึกได้ถึงพลังพิเศษของ Devil อาจทำให้คุณรู้สึกว่าคุณมีอำนาจลึกลับจากมัน",
+            "^b4b4b4สามารถแลกเปลี่ยนเป็น Enchant Stone Box 9 ได้.",
+            "ประเภท : Costume",
+            "ตำแหน่ง : Middle  น้ำหนัก : 0",
+            "Lv ที่ต้องการ : 1",
+            "อาชีพ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 152,
+        "costume": true
+    },
+    "13039": {
+        "unidentifiedDisplayName": "Dagger",
+        "unidentifiedResourceName": "나이프",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา ต้องทำการตรวจสอบโดยใช้ [Magnifier]"
+        ],
+        "identifiedDisplayName": "Ivory Knife",
+        "identifiedResourceName": "아이보리나이프",
+        "identifiedDescriptionName": [
+            "มีดที่ทำขึ้นจากงาของ Mammoth มันทำขึ้นได้ยากมากเพราะความแข็งของงา แต่ด้วยความแหลมของมันทำให้เหมาะกับการแทงมากกว่าฟัน",
+            "AGI + 2, เพิ่มความเร็วในการโจมตี 3%",
+            "เมื่อทำการโจมตี มีโอกาสทำให้ศัตรูติดสถานะ Fatal Wound Lv.1 หรือ Bleeding (3%)",
+            "^ff0000แก้ไขจาก Wizard Class -> Mage Class",
+            "ประเภท : Dagger พลังโจมตี : 130",
+            "น้ำหนัก : 70",
+            "อาวุธเลเวล : 3",
+            "เลเวลที่ต้องการ : 50",
+            "อาชีพ : Hi-Class Swordman / Merchant / Thief / Archer / Mage Cls"
+        ],
+        "slotCount": 2,
+        "ClassNum": 1
+    },
+    "20453": {
+        "unidentifiedDisplayName": "Cap",
+        "unidentifiedResourceName": "캡",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา ต้องใช้ [Magnifier] ในการตรวจสอบไอเท็ม"
+        ],
+        "identifiedDisplayName": "Costume Hat of Bundle",
+        "identifiedResourceName": "보따리모",
+        "identifiedDescriptionName": [
+            "ตอนผู้หญิงวัยกลางคนส่งของมักจะบอกว่าเป็นของที่ใช้อยู่เป็นประจำและเอกลักษณ์คือลายหยดน้ำมากมาย.",
+            "^b4b4b4สามารถแลกเปลี่ยนเป็น Enchant Stone Box 8 ได้.",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Upperน้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 108,
+        "costume": true
+    },
+    "19733": {
+        "unidentifiedDisplayName": "Cap",
+        "unidentifiedResourceName": "캡",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา ต้องใช้ [Magnifier] ในการตรวจสอบไอเท็ม"
+        ],
+        "identifiedDisplayName": "Costume Panda Hat",
+        "identifiedResourceName": "팬더곰모자",
+        "identifiedDescriptionName": [
+            "หมวกรูปหัวแพนด้าที่ไม่มีปาก เป็นที่นิยมในหมู่สาวๆเพราะความเหมือนหมีแพนด้าของมัน ท่านอาจจะรู้สึกตัวอีกทีว่าอยู่ในป่าไผ่ กำลังกินใบไผ่หลังจากสวมใส่มันไว้บนหัว",
+            "^b4b4b4สามารถแลกเปลี่ยนเป็น Enchant Stone Box 8 ได้.",
+            "ประเภท : Costume",
+            "ตำแหน่ง : Upperน้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 115,
+        "costume": true
+    },
+    "19547": {
+        "unidentifiedDisplayName": "Headgear",
+        "unidentifiedResourceName": "캡",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา ต้องทำการตรวจสอบโดยใช้ [Magnifier]"
+        ],
+        "identifiedDisplayName": "Costume Deviruchi Cap",
+        "identifiedResourceName": "새끼악마모자",
+        "identifiedDescriptionName": [
+            "หมวกที่เลียนแบบขึ้นมาสำหรับ Babe Devil Deviruchi การออกแบบที่ ง่ายๆ และแสนจะน่ารัก",
+            "^b4b4b4สามารถแลกเปลี่ยนเป็น Enchant Stone Box 10 ได้.",
+            "ประเภท : Costume",
+            "ตำแหน่ง : Upper  น้ำหนัก : 10",
+            "Lv ที่ต้องการ : 1",
+            "อาชีพ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 123,
+        "costume": true
+    },
+    "490505": {
+        "unidentifiedDisplayName": "Ring",
+        "unidentifiedResourceName": "링",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Exorcismus Ring",
+        "identifiedResourceName": "대사제의반지",
+        "identifiedDescriptionName": [
+            "แหวนที่สลักรูปไม้กางเขนไว้อย่างงดงาม",
+            "กล่าวกันว่าผู้นำที่มีบทบาทพิเศษได้ทิ้งสิ่งนี้ไว้",
+            "Int + 3, Dex + 3 Matk+20",
+            "หากสวมใส่โดย High Priest หรือ Awakened High Priest จะสามารถใช้งานสกิล Free Cast Lv.3 ได้",
+            "ทุก ๆ 1 Base Lv เพิ่ม Damage สกิล Holy Light 3%",
+            "ทุก ๆ 1 Base Jop Lv เพิ่ม Damage สกิล Magnus Exorcismus 2%",
+            "",
+            "^ff0000เพิ่มเติมความสามารถต่อจากเดิม",
+            "High Priest หรือ Awakened High Priest",
+            "เมื่ออัพเกรดตั้งแต่ 7 ขึ้นไป",
+            "สร้างความเสียหายทางเวทมนตร์มอนสเตอร์ประเภท Demon , Undead , Shadow 20%",
+            "เมื่ออัพเกรดตั้งแต่ 9 ขึ้นไป",
+            "สร้างความเสียหายทางเวทมนตร์ต่อศัตรูขนาดกลางและขนาดใหญ่ 15%",
+            "^ff0000ไม่สามารถใช้ได้ในพื้นที่ PvP และ Guild War",
+            "ประเภท : Accessory  พลังป้องกัน : 0",
+            "น้ำหนัก : 10",
+            "เลเวลที่ต้องการ : 70",
+            "อาชีพที่ใส่ได้ : High Priest"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "20223": {
         "unidentifiedDisplayName": "Ribbon",
         "unidentifiedResourceName": "리본",
         "unidentifiedDescriptionName": [
             "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "Costume Twinkling Red Eyes",
-        "identifiedResourceName": "C_Blinking_Eyes_RD",
+        "identifiedDisplayName": "Costume Romantic Leaf",
+        "identifiedResourceName": "풀잎",
         "identifiedDescriptionName": [
-            "คอนแทคเลนส์สีแดงที่เมื่อใส่แล้วตาจะกระพริบ",
-            "",
-            "เพิ่มผลการฟื้นพลังจาก Delicious Fish ขึ้น 300%",
-            "เพิ่มอัตราดรอปไอเท็ม + 5 %",
-            "",
-            "^ff0000(ความสามารของไอเท็มนี้จะถูกลบในวันที่ 13 พฤษภาคม 2569 หลังปิดปรับปรุงเซิฟเวอร์)",
+            "ใบหญ้าเส้นเรียวยาว เมื่อคาบเอาไว้ที่ริมฝีปาก ให้ความรู้สึกของนักพเนจรที่มากับสายลม",
+            "^b4b4b4สามารถแลกเปลี่ยนเป็น Enchant Stone Box 7 ได้.",
             "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Middle น้ำหนัก : 0",
+            "ตำแหน่ง : Lower น้ำหนัก : 0",
             "เลเวลที่ต้องการ : 1",
             "อาชีพที่ใส่ได้ : ทุกอาชีพ"
         ],
         "slotCount": 0,
-        "ClassNum": 1888,
+        "ClassNum": 57,
+        "costume": true
+    },
+    "19639": {
+        "unidentifiedDisplayName": "Cap",
+        "unidentifiedResourceName": "캡",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Costume Sukkat",
+        "identifiedResourceName": "삿갓",
+        "identifiedDescriptionName": [
+            "หมวกที่ทำจากต้นกกหรือต้นไผ่ มักใช้เพื่อกันฝนหรือแสงอาทิตย์ เคยมีเรื่องเล่าถึงบุคคลในประเทศทางตะวันออกคนหนึ่งที่ใส่หมวกนี้และแต่งกวีขณะเดินทางไปทั่วประเทศ",
+            "^b4b4b4สามารถแลกเปลี่ยนเป็น Enchant Stone Box 10 ได้.",
+            "",
+            "",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Upper น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 67,
+        "costume": true
+    },
+    "19797": {
+        "unidentifiedDisplayName": "Helm",
+        "unidentifiedResourceName": "헬름",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Costume Apple of Archer",
+        "identifiedResourceName": "명사수의사과",
+        "identifiedDescriptionName": [
+            "แอปเปิ้ลที่โด่งดังเพราะในอดีตกาลมีนักธนูชื่อดังคนหนึ่งยิงแอปเปิ้ลนี้ที่ตั้งอยู่บนหัวลูกชายของเขาอย่างแม่นยำ",
+            "^b4b4b4สามารถแลกเปลี่ยนเป็น Enchant Stone Box 9 ได้.",
+            "",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Upper น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 72,
+        "costume": true
+    },
+    "19505": {
+        "unidentifiedDisplayName": "Ribbon",
+        "unidentifiedResourceName": "리본",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Costume Cigarette",
+        "identifiedResourceName": "담배",
+        "identifiedDescriptionName": [
+            "บุหรี่ ทำมาจากใบยาสูบห่อด้วยกระดาษบางๆ คำเตือน :บุหรี่เป็นอันตรายต่อสุขภาพและเป็นต้นเหตุแห่งโรคร้ายต่างๆ โดยเฉพาะเด็กๆไม่ควรสูบบุหรี่อย่างเด็ดขาด!!",
+            "^b4b4b4สามารถแลกเปลี่ยนเป็น Enchant Stone Box 10 ได้.",
+            "",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Lower น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 54,
         "costume": true
     }
 }
