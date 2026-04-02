@@ -3,7 +3,7 @@ import { ServerInfoDto } from "@/types/serverInfo";
 export function dropService() {
   const dropDefault: ServerInfoDto[] = [];
   dropDefault.push({
-    name: "Drop Default",
+    name: "100%",
     ratePercent: 100,
     DateFrom: null,
     DateTo: null,
@@ -13,11 +13,11 @@ export function dropService() {
   const dropAdd: ServerInfoDto[] = [];
 
   dropAdd.push({
-    name: "จากกิจกรรม x Event สุดพิเศษจากเกม Ragnarok Endless Trails",
-    ratePercent: 15,
-    DateFrom: new Date(2026, 1, 27, 0, 0, 0),
-    DateTo: new Date(2026, 2, 6, 0, 0, 0),
-    description: "กิจกรรมพิเศษ: เพิ่มอัตรา DROP ตามช่วงกิจกรรม",
+    name: "75%",
+    ratePercent: 75,
+    DateFrom: new Date(2026, 3, 1, 15, 0, 0),
+    DateTo: new Date(2026, 3, 8, 6, 0, 0),
+    description: "Moon Event เพิ่ม Drop 75%",
   });
   return [...dropDefault,...dropAdd];
 }

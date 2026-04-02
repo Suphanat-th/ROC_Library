@@ -28,7 +28,7 @@ export default function ExpServerPage() {
             <div className="rounded-lg border-2 border-purple-300 bg-purple-100 p-1">EXP</div>
             <div className="font-semibold">{exp.reduce((acc, curr) => acc + curr.ratePercent, 0)}%</div>
           </button>
-          <div className="pointer-events-none invisible group-hover:visible group-hover:pointer-events-auto absolute left-full ml-3 top-0 z-10 w-72 rounded-md p-3 text-sm shadow-lg whitespace-pre-line"
+          <div className="pointer-events-none invisible group-hover:visible group-hover:pointer-events-auto absolute left-full ml-3 top-0 z-50 w-72 rounded-md p-3 text-sm shadow-lg whitespace-pre-line"
                style={{ backgroundColor: 'rgba(237, 233, 254, 1)', color: '#5b21b6' }}>
             <div className="font-semibold mb-1">EXP details</div>
             {exp.map((e, i) => (
@@ -46,7 +46,7 @@ export default function ExpServerPage() {
             <div className="rounded-lg border-2 border-blue-300 bg-blue-100 p-1">DROP</div>
             <div className="font-semibold">{drop.reduce((acc, curr) => acc + curr.ratePercent, 0)}%</div>
           </button>
-          <div className="pointer-events-none invisible group-hover:visible group-hover:pointer-events-auto absolute left-full ml-3 top-0 z-10 w-72 rounded-md p-3 text-sm shadow-lg whitespace-pre-line"
+          <div className="pointer-events-none invisible group-hover:visible group-hover:pointer-events-auto absolute left-full ml-3 top-0 z-50 w-72 rounded-md p-3 text-sm shadow-lg whitespace-pre-line"
                style={{ backgroundColor: 'rgba(224, 242, 254, 1)', color: '#1e3a8a' }}>
             <div className="font-semibold mb-1">DROP details</div>
             {drop.map((d, i) => (
@@ -64,7 +64,7 @@ export default function ExpServerPage() {
             <div className="rounded-lg border-2 border-red-300 bg-red-100 p-1">DEATH</div>
             <div className="font-semibold">{death.reduce((acc, curr) => acc + curr.ratePercent, 0)}%</div>
           </button>
-          <div className="pointer-events-none invisible group-hover:visible group-hover:pointer-events-auto absolute left-full ml-3 top-0 z-10 w-72 rounded-md p-3 text-sm shadow-lg whitespace-pre-line"
+          <div className="pointer-events-none invisible group-hover:visible group-hover:pointer-events-auto absolute left-full ml-3 top-0 z-50 w-72 rounded-md p-3 text-sm shadow-lg whitespace-pre-line"
                style={{ backgroundColor: 'rgba(254, 226, 226, 1)', color: '#991b1b' }}>
             <div className="font-semibold mb-1">DEATH details</div>
             {death.map((d, i) => (

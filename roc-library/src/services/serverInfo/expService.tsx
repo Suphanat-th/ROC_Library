@@ -5,22 +5,22 @@ export function expService() {
 
   const expDefault: ServerInfoDto[] = [];
   expDefault.push({
-    name: "Exp Default",
+    name: "100%",
     ratePercent: 100,
     DateFrom: null,
     DateTo: null,
-    description: "Base EXP rate applied to the server",
+    description: "Base Server Exp 100%",
   });
 
   const expAdd: ServerInfoDto[] = [];
 
   expAdd.push({
-    name: "จากกิจกรรม x Event สุดพิเศษจากเกม Ragnarok Endless Trails",
-    ratePercent: 100,
-    DateFrom: new Date(2026, 1, 27, 0, 0, 0),
-    DateTo: new Date(2026, 2, 6, 0, 0, 0),
+    name: "175%",
+    ratePercent: 175,
+    DateFrom: new Date(2026, 3, 1, 15, 0, 0),
+    DateTo: new Date(2026, 3, 8, 6, 0, 0),
     description:
-      "กิจกรรมพิเศษ: เพิ่มอัตรา EXP ช่วงวันที่ระบุ (โปสเตอร์: Triple Experience Mons)",
+      "Moon Event เพิ่ม Exp 175%",
   });
   return [
     ...expDefault.filter((f) => {
