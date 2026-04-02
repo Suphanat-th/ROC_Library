@@ -3,4 +3,5 @@ export interface ServerInfoDto {
   ratePercent: number;
   DateFrom: Date | null;
   DateTo: Date | null;
+  description?: string;
 }

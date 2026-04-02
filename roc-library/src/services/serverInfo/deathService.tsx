@@ -9,6 +9,7 @@ export function deathService() {
     ratePercent: 100,
     DateFrom: null,
     DateTo: null,
+    description: "Base death penalty rate applied to the server",
   });
 
   const deathAdd: ServerInfoDto[] = [];

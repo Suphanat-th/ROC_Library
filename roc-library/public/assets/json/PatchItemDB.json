@@ -260,5 +260,36 @@
         "slotCount": 0,
         "ClassNum": 0,
         "costume": false
+    },
+    "700136": {
+        "unidentifiedDisplayName": "Bow",
+        "unidentifiedResourceName": "보우",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[NFS] Awakened Narcissus Bow",
+        "identifiedResourceName": "Up_Narcis_Bow",
+        "identifiedDescriptionName": [
+            "^ff0000ไอเท็มนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "คันธนูของนักรบผู้กล้าหาญในการต่อสู้สมัยอดีตกาล",
+            "",
+            "ทุกๆ การอัพเกรด 2 ขั้น ATK +30 ,Luk +3",
+            "ทุกๆ การอัพเกรด 3 ขั้น เพิ่มดาเมจ Blitz Beat  100% ,Int +5",
+            "เมื่อค่าอัพเกรดถึงขั้น 9, การโจมตีระยะไกลเพิ่มโอกาสการ Critical 15%",
+            "เมื่อค่าอัพเกรดถึงขั้น 11, Critical Damage +30%, ",
+            "พลังโจมตีมอนสเตอร์ประเภท MVP ขึ้น 15%",
+            "",
+            "เมื่อติดตั้งคู่กับ Sharp Arrow ",
+            "เพิ่มการโจมตีระยะไกลเพิ่มโอกาสการ Critical 20%",
+            "",
+            "ประเภท : Bow พลังโจมตี : 220",
+            "น้ำหนัก : 120",
+            "เลเวลของอาวุธ : 4",
+            "เลเวลที่ต้องการ : 98",
+            "อาชีพที่ใส่ได้ : Sniper"
+        ],
+        "slotCount": 2,
+        "ClassNum": 73,
+        "costume": false
     }
 }

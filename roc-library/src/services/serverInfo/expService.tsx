@@ -9,6 +9,7 @@ export function expService() {
     ratePercent: 100,
     DateFrom: null,
     DateTo: null,
+    description: "Base EXP rate applied to the server",
   });
 
   const expAdd: ServerInfoDto[] = [];
@@ -18,6 +19,8 @@ export function expService() {
     ratePercent: 100,
     DateFrom: new Date(2026, 1, 27, 0, 0, 0),
     DateTo: new Date(2026, 2, 6, 0, 0, 0),
+    description:
+      "กิจกรรมพิเศษ: เพิ่มอัตรา EXP ช่วงวันที่ระบุ (โปสเตอร์: Triple Experience Mons)",
   });
   return [
     ...expDefault.filter((f) => {

@@ -7,8 +7,8 @@ import { Monster } from "@/types/monster";
 const monsters: Monster[] = MonstersDb();
 
 export default function MonsterEcomDatabase() {
-  const DateFrom = new Date(2026, 2, 4, 6, 0, 0);
-  const DateTo = new Date(2026, 2, 31, 6, 0, 0);
+  const DateFrom = new Date(2026, 3, 1, 6, 0, 0);
+  const DateTo = new Date(2026, 3, 29, 6, 0, 0);
   const [search, setSearch] = useState("");
   const [selectedRace, setSelectedRace] = useState("All");
   const [selectedMap, setSelectedMap] = useState("All");
@@ -17,9 +17,9 @@ export default function MonsterEcomDatabase() {
 
   // รายชื่อ ID ที่ต้องการแสดง
   const monsterx3Ids = [
-    1165, 1127, 1055, 1271, 1391, 1317, 1323, 1206, 2152, 2154, 2153, 2155,
-    2151, 1305, 1311, 1988, 1989, 1987, 1999, 1986, 2024, 2092, 1995, 1994,
-    1993, 1992,
+    1209, 1196, 1201, 1202, 1257, 1197, 1191, 1037, 1146, 1154, 1098, 1163,
+    1276, 1132, 1670, 1671, 1672, 1673, 1676, 1677, 1678, 1679, 1365, 1864,
+    1865, 1866, 1867, 1869, 1870,1208
   ];
 
   const filteredMonsters = useMemo(() => {
