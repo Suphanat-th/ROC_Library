@@ -31,7 +31,7 @@ export default function ROPage() {
 
   const itemInfoList = [
     {
-      id: "5744",
+      id: "400679",
       idClass: "item-head-upper",
       nameImg: "upperhead.png",
     },
@@ -41,7 +41,7 @@ export default function ROPage() {
       nameImg: "middlehead.png",
     },
     {
-      id: "28502",
+      id: "420137",
       idClass: "item-head-lower",
       nameImg: "lowerhead.png",
     },
@@ -51,30 +51,35 @@ export default function ROPage() {
       nameImg: "armor.png",
     },
     {
-      id: "700003",
+      id: "700013",
       idClass: "item-weapon",
       nameImg: "weapon.png",
     },
     {
-      id: "20964",
+      id: "20963",
       idClass: "item-garment",
       nameImg: "garment.png",
     },
     {
-      id: "470361",
+      id: "470356",
       idClass: "item-shoes",
       nameImg: "shoes.png",
     },
     {
-      id: "28573",
-      idClass: "item-accessories",
-      nameImg: "accessories.png",
+      id: "490826",
+      idClass: "item-accessoriesR",
+      nameImg: "accessoriesR.png",
+    },
+    {
+      id: "490323",
+      idClass: "item-accessoriesL",
+      nameImg: "accessoriesL.png",
     },
   ] as ItemInfoMuad[];
 
   const cosInfoList = [
     {
-      id: "19797",
+      id: "15987",
       idClass: "cos-head-upper",
       nameImg: "uppercos.png",
     },
@@ -94,14 +99,19 @@ export default function ROPage() {
       nameImg: "armorshadow.png",
     },
     {
-      id: "24311",
+      id: "1270076",
       idClass: "shadow-shield",
       nameImg: "shieldshadow.png",
     },
     {
-      id: "20590",
+      id: "1270063",
+      idClass: "shadow-waepon",
+      nameImg: "waeponshadow.png",
+    },
+    {
+      id: "480126",
       idClass: "cos-garment",
-      nameImg: "garmentshadow.png",
+      nameImg: "garmentcos.png",
     },
     {
       id: "24231",
@@ -109,12 +119,12 @@ export default function ROPage() {
       nameImg: "shoesshadow.png",
     },
     {
-      id: "24151",
+      id: "24340",
       idClass: "shadow-pendant",
       nameImg: "pendantshadow.png",
     },
     {
-      id: "24150",
+      id: "24339",
       idClass: "shadow-earring",
       nameImg: "earringshadow.png",
     },
@@ -200,7 +210,7 @@ export default function ROPage() {
                 <StatRow label="VIT" value="90+10" color="text-orange-400" />
                 <StatRow label="LUK" value="70+8" color="text-purple-400" />
               </div>
-
+{/* 
               <div className="mt-3 pt-2 border-t border-white/10 grid grid-cols-3 text-[10px] font-bold text-white/80 text-center">
                 <div>
                   <p className="text-white/40">ATK</p>850
@@ -211,7 +221,7 @@ export default function ROPage() {
                 <div>
                   <p className="text-white/40">CRI</p>120
                 </div>
-              </div>
+              </div> */}
             </motion.div>
           </div>
         </motion.div>
@@ -225,21 +235,21 @@ export default function ROPage() {
               {/* หัว - บน (Upper) */}
               <FloatingItem
                 pos="top-[10%] left-[10%] md:left-[20%]"
-                label="<span class='underline font-bold text-[15px]'>+9 Capricorn Cown []</span><br><br>Acute Lv. 4 ( Cri Dam+65% , CRI +12 )"
+                label="<span class='underline font-bold text-[15px]'>+11 Shampoo []</span><br><br>Acute Lv. 4 ( Cri Dam+65% , CRI +12 )"
                 imageSrc="/assets/images/muad/upperhead.png"
                 onClick={() => scrollToDetail("item-head-upper")}
               />
               {/* หัว - กลาง (Middle) */}
               <FloatingItem
                 pos="top-[10%] right-[10%] md:right-[20%]"
-                label="<span class='underline font-bold text-[15px]'>Karasu Tengu Mask</span><br><br><span class='text-red-500'>ลดดีเลย์หลังการใช้งาน Skill 5 %</span> <br><span class='text-red-500'>เพิ่ม Physical Damage ต่อมอนสเตอร์ประเภท Boss 8%</span>"
+                label="<span class='underline font-bold text-[15px]'>Karasu Tengu Mask</span><br><br><span class='text-red-500'>ลดดีเลย์หลังการใช้งาน Skill 10 %</span> <br><span class='text-red-500'>เพิ่ม Physical Damage ต่อมอนสเตอร์ประเภท Boss 8%</span>"
                 imageSrc="/assets/images/muad/middlehead.png"
                 onClick={() => scrollToDetail("item-head-middle")}
               />
               {/* หัว - ล่าง (Lower) */}
               <FloatingItem
                 pos="top-[25%] left-[5%] md:left-[15%]"
-                label="<span class='underline font-bold text-[15px]'>Mob Scarf"
+                label="<span class='underline font-bold text-[15px]'>Frenzy Galapago"
                 imageSrc="/assets/images/muad/lowerhead.png"
                 onClick={() => scrollToDetail("item-head-lower")}
               />
@@ -254,7 +264,7 @@ export default function ROPage() {
               {/* อาวุธหลัก (Main Hand) */}
               <FloatingItem
                 pos="top-[40%] left-[5%] md:left-[5%]"
-                label="<span class='underline font-bold text-[15px]'>+12 Scalet Dragon Leather Bow</span> <br><br><span class='text-blue-500'>[ White Knight ] <br>[ Sealed Thanatos ]</span> <br><br><span class='text-red-500'>ASPD+1<br>เพิ่ม Physical Damage 4% ต่อมอนสเตอร์เผ่า Insect</span>"
+                label="<span class='underline font-bold text-[15px]'>+12 Awakened Narcissus Bow</span> <br><br><span class='text-blue-500'>[ Thanatos ] <br>[ Turtle General  ]</span> <br><br><span class='text-red-500'>เพิ่ม Physical Damage ระยะไกล 10%</span>"
                 imageSrc="/assets/images/muad/weapon.png"
                 onClick={() => scrollToDetail("item-weapon")}
               />
@@ -269,14 +279,14 @@ export default function ROPage() {
               {/* ผ้าคลุม (Garment) - สังเกตจากภาพต้นฉบับจะอยู่ฝั่งขวา */}
               <FloatingItem
                 pos="bottom-[30%] left-[5%] md:left-[15%]"
-                label="<span class='underline font-bold text-[15px]'>+8 Temporal Agi Manteau []</span><br><br><span class='text-red-500'>ลดดีเลย์หลังการใช้งาน Skill 15%<br>เพิ่ม Physical Damage ระยะไกล 10%</span>"
+                label="<span class='underline font-bold text-[15px]'>+8 Temporal Str Manteau []</span><br><br><span class='text-red-500'>ลดดีเลย์หลังการใช้งาน Skill 15%<br>เพิ่ม Physical Damage ระยะไกล 10%</span>"
                 imageSrc="/assets/images/muad/garment.png"
                 onClick={() => scrollToDetail("item-garment")}
               />
               {/* รองเท้า (Shoes) */}
               <FloatingItem
                 pos="bottom-[30%] right-[5%] md:right-[15%]"
-                label="<span class='underline font-bold text-[15px]'>+13 Inifinity Luck Boots</span> <br><br><span class='text-blue-500'>[Hase Card]</span><br><br><span class='text-red-500'>Hawkeye<br>Expert Archer Lv.7 (เพิ่มดาเมจระยะไกล 14%)</span>"
+                label="<span class='underline font-bold text-[15px]'>+15 Infinity Dexterity Boots</span> <br><br><span class='text-blue-500'>[Hase Card]</span><br><br><span class='text-red-500'>Hawkeye<br>Expert Archer Lv.7 (เพิ่มดาเมจระยะไกล 14%)</span>"
                 imageSrc="/assets/images/muad/shoes.png"
                 onClick={() => scrollToDetail("item-shoes")}
               />
@@ -284,16 +294,16 @@ export default function ROPage() {
               {/* ประดับ 1 (Accessory L) */}
               <FloatingItem
                 pos="bottom-[15%] left-[10%] md:left-[20%]"
-                label="<span class='underline font-bold text-[15px]'>+12 Emerald Ring []</span>"
-                imageSrc="/assets/images/muad/accessories.png"
-                onClick={() => scrollToDetail("item-accessories")}
+                label="<span class='underline font-bold text-[15px]'>+9 4th ROC <br>Anniversary Ring []</span><br><br><span class='text-blue-500'>[ Zerom ] </span>"
+                imageSrc="/assets/images/muad/accessoriesR.png"
+                onClick={() => scrollToDetail("item-accessoriesR")}
               />
               {/* ประดับ 2 (Accessory R) */}
               <FloatingItem
                 pos="bottom-[15%] right-[10%] md:right-[20%]"
-                label="<span class='underline font-bold text-[15px]'>+12 Emerald Ring []</span>"
-                imageSrc="/assets/images/muad/accessories.png"
-                onClick={() => scrollToDetail("item-accessories")}
+                label="<span class='underline font-bold text-[15px]'>+7 Falconer Ring []</span><br><br><span class='text-blue-500'>[ Zerom ] </span>"
+                imageSrc="/assets/images/muad/accessoriesL.png"
+                onClick={() => scrollToDetail("item-accessoriesL")}
               />
             </>
           ) : (
@@ -301,14 +311,14 @@ export default function ROPage() {
               {/* หัว - บน (Upper) */}
               <FloatingItem
                 pos="top-[10%] left-[10%] md:left-[20%]"
-                label="<span class='underline font-bold text-[15px]'>Costume Apple Of Archer</span><br><br><span class='text-cyan-500'>[ Sniper I ]</span>"
+                label="<span class='underline font-bold text-[15px]'>Costume Violet Rune Helm</span><br><br><span class='text-cyan-500'>[ Sniper II ]</span>"
                 imageSrc="/assets/images/muad/uppercos.png"
                 onClick={() => scrollToDetail("cos-head-upper")}
               />
               {/* หัว - กลาง (Middle) */}
               <FloatingItem
                 pos="top-[10%] right-[10%] md:right-[20%]"
-                label="<span class='underline font-bold text-[15px]'>Costume Spotlight</span><br><br><span class='text-cyan-500'>[ Sniper I ]</span>"
+                label="<span class='underline font-bold text-[15px]'>Costume Spotlight</span><br><br><span class='text-cyan-500'>[ Sniper II ]</span>"
                 imageSrc="/assets/images/muad/middlecos.png"
                 onClick={() => scrollToDetail("cos-head-middle")}
               />
@@ -331,14 +341,14 @@ export default function ROPage() {
               {/* อาวุธหลัก (Main Hand) */}
               <FloatingItem
                 pos="top-[40%] left-[5%] md:left-[5%]"
-                label="<span class='underline font-bold text-[15px]'>+11 Shadow Sniper Weapon</span><br><br><span class='text-red-500'>Max SP 3%<br> ASPD  + 4%<br>ASPD + 1</span>"
-                imageSrc="/assets/images/muad/weaponshadow.png"
-                onClick={() => scrollToDetail("shadow-weapon")}
+                label="<span class='underline font-bold text-[15px]'>+15 Shadow Sniper Weapon</span><br><br><span class='text-red-500'>Max SP 3%<br> ASPD  + 4%<br>ASPD + 1</span>"
+                imageSrc="/assets/images/muad/waeponshadow.png"
+                onClick={() => scrollToDetail("shadow-waepon")}
               />
 
               <FloatingItem
                 pos="top-[40%] right-[5%] md:right-[5%]"
-                label="<span class='underline font-bold text-[15px]'>+9 Shadow Sniper Shield</span><br><br><span class='text-red-500'>Max HP + 940<br>เพิ่มผล Heal 1%<br>Max HP + 504</span>"
+                label="<span class='underline font-bold text-[15px]'>+12 Shadow Sniper Shield</span><br><br><span class='text-red-500'>Max HP + 940<br>เพิ่มผล Heal 1%<br>Max HP + 504</span>"
                 imageSrc="/assets/images/muad/shieldshadow.png"
                 onClick={() => scrollToDetail("shadow-shield")}
               />
@@ -346,7 +356,7 @@ export default function ROPage() {
               {/* ผ้าคลุม (Garment) - สังเกตจากภาพต้นฉบับจะอยู่ฝั่งขวา */}
               <FloatingItem
                 pos="bottom-[30%] left-[5%] md:left-[15%]"
-                label="<span class='underline font-bold text-[15px]'>Costume Evil Druid Cross </span><br><br><span class='text-cyan-500'>[0.5]</span>"
+                label="<span class='underline font-bold text-[15px]'>Costume Giant Shark </span><br><br><span class='text-cyan-500'>[Sniper II]</span>"
                 imageSrc="/assets/images/muad/garmentcos.png"
                 onClick={() => scrollToDetail("cos-garment")}
               />
@@ -361,14 +371,14 @@ export default function ROPage() {
               {/* ประดับ 1 (Accessory L) */}
               <FloatingItem
                 pos="bottom-[15%] left-[10%] md:left-[20%]"
-                label="<span class='underline font-bold text-[15px]'>+9 Infinity Shadow Pendant</span><br><br><span class='text-red-500'>Max HP + 976<br>CRI + 1<br>ASPD + 1</span>"
+                label="<span class='underline font-bold text-[15px]'>+9 Almighty Shadow Pandant</span><br><br><span class='text-red-500'>Max HP + 976<br>CRI + 1<br>ASPD + 1</span>"
                 imageSrc="/assets/images/muad/pendantshadow.png"
                 onClick={() => scrollToDetail("shadow-pendant")}
               />
               {/* ประดับ 2 (Accessory R) */}
               <FloatingItem
                 pos="bottom-[15%] right-[10%] md:right-[20%]"
-                label="<span class='underline font-bold text-[15px]'>+9 Infinity Shadow Earring</span><br><br><span class='text-red-500'>Max HP + 657<br>เพิ่ม Critical Damage 4%<br>Max HP + 884</span>"
+                label="<span class='underline font-bold text-[15px]'>+9 Almighty Shadow Earring</span><br><br><span class='text-red-500'>Max HP + 657<br>เพิ่ม Critical Damage 4%<br>Max HP + 884</span>"
                 imageSrc="/assets/images/muad/earringshadow.png"
                 onClick={() => scrollToDetail("shadow-earring")}
               />
@@ -453,7 +463,48 @@ export default function ROPage() {
           </section>
         </>
       )}
+      <ScrollUpButton />
     </main>
+  );
+}
+
+function ScrollUpButton() {
+  const smoothScroll = () => {
+    if (typeof window === "undefined") return;
+
+    const start = window.scrollY || window.pageYOffset;
+    if (start === 0) return; // already at top
+
+    const duration = 1000;
+    const startTime = Date.now();
+
+    const easeInOutQuad = (t: number) => (t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t);
+
+    const animateScroll = () => {
+      const elapsed = Date.now() - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const easeProgress = easeInOutQuad(progress);
+      
+      window.scrollTo(0, Math.max(0, start * (1 - easeProgress)));
+      
+      if (progress < 1) {
+        requestAnimationFrame(animateScroll);
+      }
+    };
+
+    requestAnimationFrame(animateScroll);
+  };
+
+  return (
+    <button
+      aria-label="Scroll to top"
+      onClick={smoothScroll}
+      className="fixed bottom-24 right-6 z-[9999] w-12 h-12 rounded-full bg-linear-to-r from-purple-900 via-indigo-900 to-purple-700 text-white shadow-lg flex items-center justify-center hover:opacity-90 transition-colors"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-5 h-5">
+        <path fill="currentColor" d="M12 4l-8 8h5v8h6v-8h5z" />
+      </svg>
+    </button>
   );
 }
 

@@ -1,14 +1,15 @@
 {
-    "19797": {
-        "unidentifiedDisplayName": "Helm",
-        "unidentifiedResourceName": "헬름",
+    "15987": {
+        "unidentifiedDisplayName": "Cap",
+        "unidentifiedResourceName": "캡",
         "unidentifiedDescriptionName": [
             "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "Costume Apple of Archer",
-        "identifiedResourceName": "명사수의사과",
+        "identifiedDisplayName": "Costume Violet Rune Helm",
+        "identifiedResourceName": "Viva_Adul_Hat_GC",
         "identifiedDescriptionName": [
-            "แอปเปิ้ลที่โด่งดังเพราะในอดีตกาลมีนักธนูชื่อดังคนหนึ่งยิงแอปเปิ้ลนี้ที่ตั้งอยู่บนหัวลูกชายของเขาอย่างแม่นยำ",
+            "หมวกประดับ Rune สีม่วงที่แผ่พลังเร้นลับออกมาอย่างอ่อนโยน",
+            "เมื่อสวมใส่จะให้ประกายแสงแห่งเวทมนตร์ สื่อถึงปัญญาและการปกป้อง",
             "",
             "ประเภท : Costume พลังป้องกัน : 0",
             "ตำแหน่ง : Upper น้ำหนัก : 0",
@@ -16,7 +17,7 @@
             "อาชีพที่ใส่ได้ : ทุกอาชีพ"
         ],
         "slotCount": 0,
-        "ClassNum": 72,
+        "ClassNum": 2202,
         "costume": true
     },
     "410127": {
@@ -49,7 +50,7 @@
         "identifiedResourceName": "C_Cons_Of_Wind",
         "identifiedDescriptionName": [
             "เครื่องแต่งกายที่โอบล้อมด้วยลมราวกับพายุที่โหมกระหน่ำ",
-            "ใช้เดินอวดไปอวดมา เพราะลมที่ล้อมรอบตัวนั้นดูแข็งแกร่งอย่างมาก ",
+            "ใช้เดินอวดไปอวดมา เพราะลมที่ล้อมรอบตัวนั้นดูแข็งแกร่งอย่างมาก",
             "ประเภท : Costume พลังป้องกัน :0",
             "ตำแหน่ง : Lower น้ำหนัก :0",
             "เลเวลที่ต้องการ :1",
@@ -57,6 +58,27 @@
         ],
         "slotCount": 0,
         "ClassNum": 1924,
+        "costume": true
+    },
+    "480126": {
+        "unidentifiedDisplayName": "Garment",
+        "unidentifiedResourceName": "후드",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Costume Giant Shark",
+        "identifiedResourceName": "C_Giant_Shark",
+        "identifiedDescriptionName": [
+            "ตุ๊กตาฉลามตัวยักษ์",
+            "ได้ความรู้สึกถึงพลังแห่งฉลามทั้งตัว",
+            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 8 ได้",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Garment น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 109,
         "costume": true
     },
     "15280": {
@@ -69,7 +91,8 @@
         "identifiedResourceName": "아머쉐도우3",
         "identifiedDescriptionName": [
             "ชุดเกราะที่เพิ่มพลังป้องกันเมื่อสวมใส่เพิ่มบนเกราะอีกที สามารถใส่แบบชิ้นเดียวได้ แต่ความสามารถในการป้องกันจะลดลงไปอีก",
-            "ATK + 15, CRI + 7.",
+            "ATK + 15",
+            "CRI + 7.",
             "ทุกๆ การอัพเกรด 2 ขั้น เพิ่ม Critical Damage 1%",
             "เมื่ออัพเกรดถึงขั้น 7 ขึ้นไป CRI + 7 เพิ่มเติม",
             "ประเภท : Shadow",
@@ -81,20 +104,21 @@
         "ClassNum": 0,
         "costume": true
     },
-    "24298": {
+    "1270063": {
         "unidentifiedDisplayName": "Shadow Weapon",
         "unidentifiedResourceName": "웨폰쉐도우",
         "unidentifiedDescriptionName": [
             "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "Shadow Sniper Weapon",
+        "identifiedDisplayName": "Shadow Sniper II Weapon",
         "identifiedResourceName": "웨폰쉐도우",
         "identifiedDescriptionName": [
+            "^ff0000ไอเท็มนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
             "ถุงมือที่สวมใส่กับมือที่ถืออาวุธ เพื่อดึงศักยภาพของผู้สวมใส่ออกมา",
-            "สำหรับ Sniper เท่านั้น ",
-            "เพิ่มดาเมจ Focused Arrow Strike 20%",
-            "ทุกๆ การอัพเกรด 1 ขั้น เพิ่มดาเมจ Focused Arrow Strike 5%",
-            "ประเภท : Shadow",
+            "มีเพียงอาชีพ Sniper เท่านั้นที่สามารถสวมใส่ได้",
+            "เพิ่ม Damage สกิล Blitz Beat 20%",
+            "ทุก ๆ การอัพเกรด 1 ขั้น เพิ่ม Damage สกิล Blitz Beat ขึ้นอีก 5%",
+            "ประเภท : Shadow Equipment",
             "ตำแหน่ง : Weapon น้ำหนัก : 0",
             "เลเวลที่ต้องการ : 90",
             "อาชีพที่ใส่ได้ : Sniper"
@@ -103,53 +127,39 @@
         "ClassNum": 0,
         "costume": true
     },
-    "24311": {
+    "1270076": {
         "unidentifiedDisplayName": "Shadow Shield",
         "unidentifiedResourceName": "쉴드쉐도우",
         "unidentifiedDescriptionName": [
             "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "Shadow Sniper Shield",
+        "identifiedDisplayName": "Shadow Sniper II Shield",
         "identifiedResourceName": "쉴드쉐도우",
         "identifiedDescriptionName": [
+            "^ff0000ไอเท็มนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
             "โล่เล็กที่สามารถสวมใส่ที่แขนได้ สามารถใช้งานแบบชิ้นเดียวได้แต่เอฟเฟกต์การป้องกันของมันจะลดน้อยลง",
-            "สำหรับ Sniper เท่านั้น ",
-            "ลด SP ที่ใช้ในการร่ายสกิล Falcon Assault 20%",
-            "ทุกๆ การอัพเกรด 1 ขั้น ลด SP ที่ใช้ในการร่ายสกิล Falcon Assault เพิ่มอีก 5%",
-            "--------------------------------------- ",
-            "เมื่อสวมใส่ร่วมกับ ^32CD32Sniper Shadow Weapon",
-            "เพิ่มดาเมจ Falcon Assault 20%, เพิ่มดาเมจ Focused Arrow Strike 20%",
-            "--------------------------------------- ",
-            "เมื่อสวมใส่ ^32CD32Archer Shadow 2 ชิ้น, ^32CD32Hunter Shadow 2 ชิ้น,  ^32CD32Sniper Shadow 2 ชิ้นทั้งหมด จะได้รับเอฟเฟกต์ดังต่อไปนี้ ",
-            "All State + 10, MaxHP + 5%, MaxSP + 5%",
-            "เพิกเฉยต่อพลังป้องกันทางกายภาพและทางเวทย์ของศัตรูทั่วไป 50%",
-            "ประเภท : Shadow",
+            "มีเพียงอาชีพ Sniper เท่านั้นที่สามารถสวมใส่ได้",
+            "เพิ่ม Damage สกิล Blitz Beat 20%",
+            "ทุก ๆ การอัพเกรด 1 ขั้น เพิ่ม Damage สกิล Blitz Beat ขึ้นอีก 5%",
+            "",
+            "เมื่อสวมใส่ร่วมกับ Shadow Sniper II Weapon จะได้รับเอฟเฟกต์เพิ่มเติม",
+            "เพิ่ม Damage สกิล Falcon Assault 20%",
+            "เพิ่ม Damage สกิล Blitz Beat 20%",
+            "",
+            "เมื่อสวมใส่ Archer Shadow 2 ประเภท",
+            "Hunter Shadow 2 ประเภท",
+            "Sniper II Shadow 2 ประเภท ร่วมกันทั้งหมด จะได้รับเอฟเฟกต์ต่อไปนี้",
+            "All State + 10",
+            "MaxHP + 5%",
+            "MaxSP + 5%",
+            "เพิกเฉยต่อพลังป้องกันทางกายภาพและเวทมนตร์ของศัตรูทั่วไป 50%",
+            "ประเภท : Shadow Equipment",
             "ตำแหน่ง : Shield น้ำหนัก : 0",
             "เลเวลที่ต้องการ : 90",
             "อาชีพที่ใส่ได้ : Sniper"
         ],
         "slotCount": 0,
         "ClassNum": 0,
-        "costume": true
-    },
-    "20590": {
-        "unidentifiedDisplayName": "Garment",
-        "unidentifiedResourceName": "후드",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "Costume Evil Druid Cross",
-        "identifiedResourceName": "C_Evil_Druid_Cross",
-        "identifiedDescriptionName": [
-            "ไม้กางเขนสำหรับเครื่องแต่งกายที่จำลองมาจากไม้กางเขนของ Evil Druid",
-            "สัมผัสได้ถึงความรู้สึกของการเป็นนักบวชแห่งความมืด",
-            "ประเภท : Costume พลังป้องกัน :  0",
-            "ตำแหน่ง : Garment  น้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 1",
-            "อาชีพที่ใส่ได้ :ทุกอาชีพ"
-        ],
-        "slotCount": 0,
-        "ClassNum": 67,
         "costume": true
     },
     "24231": {
@@ -164,11 +174,14 @@
             "รองเท้าที่สวมใส่เพิ่มเติม สามารถใช้งานแบบชิ้นเดียวได้แต่เอฟเฟกต์ของมันจะลดน้อยลง",
             "FLEE + 5.",
             "ทุกๆ อัพเกรด 2 ขั้น FLEE + 1.",
-            "เมื่ออัพเกรดขั้น 7 ขึ้นไป, ASPD + 1.",
-            "เมื่ออัพเกรดขั้น 9 ขึ้นไป, ASPD + 1.",
+            "เมื่ออัพเกรดขั้น 7 ขึ้นไป",
+            "ASPD + 1.",
+            "เมื่ออัพเกรดขั้น 9 ขึ้นไป",
+            "ASPD + 1.",
             "^32CD32Blitz Shadow Shoes กับ",
             "^32CD32Blitz Shadow Shield",
-            "เมื่อสวมใส่ไอเท็มดังกล่าวด้วยกัน, FLEE + 5.",
+            "เมื่อสวมใส่ไอเท็มดังกล่าวด้วยกัน",
+            "FLEE + 5.",
             "เมื่อขั้นการอัพเกรดรวมกันตั้งแต่ 15 ขึ้นไป ASPD + 1.",
             "ประเภท : Shadow",
             "ตำแหน่ง : Shoes น้ำหนัก : 0",
@@ -179,49 +192,41 @@
         "ClassNum": 0,
         "costume": true
     },
-    "24151": {
-        "unidentifiedDisplayName": "Shadow Pendant",
+    "24340": {
+        "unidentifiedDisplayName": "Shadow Pandant",
         "unidentifiedResourceName": "펜던트쉐도우",
         "unidentifiedDescriptionName": [
             "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "Infinity Shadow Pendant",
-        "identifiedResourceName": "펜던트쉐도우",
+        "identifiedDisplayName": "Almighty Shadow Pandant",
+        "identifiedResourceName": "펜던트쉐도우3",
         "identifiedDescriptionName": [
-            "สร้อยคอศักดิ์สิทธิ์ที่กล่าวกันว่าปกป้องผู้สวมใส่ ดึงศักยภาพของผู้สวมใส่ออกมา ",
-            "ลด Damage เมื่อถูกศัตรูขนาดเล็ก, กลาง, ใหญ่โจมตี 1%.",
-            "เมื่ออัพเกรดถึงขั้น 7, ลด Damage เพิ่มเติม เมื่อถูกศัตรูขนาดเล็ก, กลาง, ใหญ่โจมตี 1%",
-            "เมื่ออัพเกรดถึงขั้น 9, ลด Damage เพิ่มเติม เมื่อถูกศัตรูขนาดเล็ก, กลาง, ใหญ่โจมตี 1%",
-            "Iเมื่อสวมใส่ร่วมกันกับ Infinity Shadow Pendant และ Infinity Shadow Earring, ATK + 1%.",
-            "เมื่อผลรวมค่าอัพเกรดรวมกันตั้งแต่ 18 ขึ้นไป, ยกเลิกการลงโทษขนาดของอาวุธ ",
+            "สร้อยคอศักดิ์สิทธิ์ที่กล่าวกันว่าปกป้องผู้สวมใส่ ดึงศักยภาพของผู้สวมใส่ออกมา",
+            "ทุกๆ 1 ขั้นอัพเกรด All State + 1.",
             "ประเภท : Shadow",
             "ตำแหน่ง : Pandant น้ำหนัก :  0",
             "เลเวลที่ต้องการ: 1",
-            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+            "อาชีพที่สวมใส่ได้ : ทุกอาชีพ"
         ],
         "slotCount": 0,
         "ClassNum": 0,
         "costume": true
     },
-    "24150": {
+    "24339": {
         "unidentifiedDisplayName": "Shadow Earring",
         "unidentifiedResourceName": "이어링쉐도우",
         "unidentifiedDescriptionName": [
             "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "Infinity Shadow Earring",
-        "identifiedResourceName": "이어링쉐도우",
+        "identifiedDisplayName": "Almighty Shadow Earring",
+        "identifiedResourceName": "이어링쉐도우3",
         "identifiedDescriptionName": [
-            "ต่างหูมงคลที่กล่าวกันว่าปกป้องผู้สวมใส่ ดึงศักยภาพของผู้สวมใส่ออกมา ",
-            "เพิ่ม Damage เมื่อโจมตีศัตรูขนาดเล็ก, กลาง, ใหญ่ด้วยการโจมตีทางกายภาพและทางเวทย์ 1%",
-            "เมื่ออัพเกรดถึงขั้น 7, เพิ่ม Damage เพิ่มเติม เมื่อโจมตีศัตรูขนาดเล็ก, กลาง, ใหญ่ด้วยการโจมตีทางกายภาพและทางเวทย์1%",
-            "เมื่ออัพเกรดถึงขั้น 9, เพิ่ม Damage เพิ่มเติม เมื่อโจมตีศัตรูขนาดเล็ก, กลาง, ใหญ่ด้วยการโจมตีทางกายภาพและทางเวทย์ 1%",
-            "เมื่อสวมใส่ร่วมกันกับ Infinity Shadow Earring และ Infinity Shadow Pendant, ATK + 1% ",
-            "เมื่อผลรวมค่าอัพเกรดรวมกันตั้งแต่ 18 ขึ้นไป, ยกเลิกการลงโทษขนาดของอาวุธ  ",
+            "ต่างหูมงคลที่กล่าวกันว่าปกป้องผู้สวมใส่ ดึงศักยภาพของผู้สวมใส่ออกมา",
+            "ทุกๆ 1 ขั้นอัพเกรด All State + 1.",
             "ประเภท : Shadow",
-            "ตำแหน่ง : Earring น้ำหนัก :  0",
+            "ตำแหน่ง : Earring  น้ำหนัก :  0",
             "เลเวลที่ต้องการ: 1",
-            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+            "อาชีพที่สวมใส่ได้ : ทุกอาชีพ"
         ],
         "slotCount": 0,
         "ClassNum": 0,
