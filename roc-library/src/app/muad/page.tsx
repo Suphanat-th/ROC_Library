@@ -179,9 +179,9 @@ export default function ROPage() {
           <motion.div
             initial={{ y: -20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            className="absolute -top-35 bg-black/40 backdrop-blur-md border border-white/20 p-6 rounded-2xl shadow-2xl min-w-[300px]"
+            className="absolute -top-32 sm:-top-28 md:-top-35 bg-black/40 backdrop-blur-md border border-white/20 p-3 sm:p-4 md:p-6 rounded-2xl shadow-2xl min-w-[220px] sm:min-w-[260px] md:min-w-[300px]"
           >
-            <div className="grid grid-cols-2 gap-x-8 gap-y-3">
+            <div className="grid grid-cols-3 sm:grid-cols-2 gap-x-3 sm:gap-x-6 md:gap-x-8 gap-y-2 sm:gap-y-3">
               <StatRow label="STR" value="99+45" color="text-red-400" />
               <StatRow label="INT" value="61+82" color="text-blue-400" />
               <StatRow label="AGI" value="32+79" color="text-green-400" />
@@ -192,8 +192,8 @@ export default function ROPage() {
           </motion.div>
 
           {/* ป้ายชื่อและปุ่ม ด้านล่าง */}
-          <div className="absolute -bottom-24 flex flex-col items-center gap-3 z-30">
-            <div className="bg-white/90 px-6 py-2 rounded-full shadow-lg font-black text-orange-600">
+          <div className="absolute -bottom-20 sm:-bottom-22 md:-bottom-24 flex flex-col items-center gap-2 sm:gap-3 z-30">
+            <div className="bg-white/90 px-4 sm:px-6 py-1.5 sm:py-2 rounded-full shadow-lg font-black text-orange-600 text-sm sm:text-base">
               หมากัดหมวด
             </div>
 
@@ -201,7 +201,7 @@ export default function ROPage() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => setIsCostume(!isCostume)}
-              className={`cursor-pointer flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold transition-colors shadow-md ${
+              className={`cursor-pointer flex items-center gap-2 px-3 sm:px-4 py-1 sm:py-1.5 rounded-full text-[11px] sm:text-xs font-bold transition-colors shadow-md ${
                 isCostume
                   ? "bg-purple-600 text-white"
                   : "bg-white text-slate-700 hover:bg-orange-100"
@@ -214,35 +214,35 @@ export default function ROPage() {
         </motion.div>
 
         {/* ไอเทมที่ลอยอยู่รอบๆ (Floating Elements) */}
-        <div className="absolute inset-0 z-20 container mx-auto pointer-events-none">
+        <div className="absolute inset-0 z-20 w-full h-full pointer-events-none">
           {/* --- ฝั่งซ้าย (Left Side) --- */}
 
           {!isCostume ? (
             <>
               {/* หัว - บน (Upper) */}
               <FloatingItem
-                pos="top-[10%] left-[10%] md:left-[20%]"
+                pos="top-[5%] left-[5%] sm:left-[5%] md:left-[3%] lg:left-[10%]"
                 label="<span class='underline font-bold text-[15px]'>+11 Shampoo []</span>"
                 imageSrc="/assets/images/muad/upperhead.png"
                 onClick={() => scrollToDetail("item-head-upper")}
               />
               {/* หัว - กลาง (Middle) */}
               <FloatingItem
-                pos="top-[10%] right-[10%] md:right-[20%]"
+                pos="top-[5%] right-[5%] sm:right-[10%] md:right-[3%] lg:right-[10%]"
                 label="<span class='underline font-bold text-[15px]'>Karasu Tengu Mask</span><br><br><span class='text-red-500'>ลดดีเลย์หลังการใช้งาน Skill 10 %</span> <br><span class='text-red-500'>เพิ่ม Physical Damage ต่อมอนสเตอร์ประเภท Boss 8%</span>"
                 imageSrc="/assets/images/muad/middlehead.png"
                 onClick={() => scrollToDetail("item-head-middle")}
               />
               {/* หัว - ล่าง (Lower) */}
               <FloatingItem
-                pos="top-[25%] left-[5%] md:left-[15%]"
+                pos="top-[20%] left-[3%] sm:left-[5%] md:left-[2%] lg:left-[5%]"
                 label="<span class='underline font-bold text-[15px]'>Frenzy Galapago"
                 imageSrc="/assets/images/muad/lowerhead.png"
                 onClick={() => scrollToDetail("item-head-lower")}
               />
               {/* เสื้อ (Armor) */}
               <FloatingItem
-                pos="top-[25%] right-[10%] md:right-[10%]"
+                pos="top-[20%] right-[3%] sm:right-[5%] md:right-[2%] lg:right-[5%]"
                 label="<span class='underline font-bold text-[15px]'>+9 Fallen Cool Armor []</span>"
                 imageSrc="/assets/images/muad/armor.png"
                 onClick={() => scrollToDetail("item-armor")}
@@ -250,7 +250,7 @@ export default function ROPage() {
 
               {/* อาวุธหลัก (Main Hand) */}
               <FloatingItem
-                pos="top-[40%] left-[5%] md:left-[5%]"
+                pos="top-[35%] left-[0%] sm:left-[5%] md:left-[1%] lg:left-[2%]"
                 label="<span class='underline font-bold text-[15px]'>+12 Awakened Narcissus Bow</span> <br><br><span class='text-blue-500'>[ Thanatos ] <br>[ Turtle General  ]</span> <br><br><span class='text-red-500'>เพิ่ม Physical Damage ระยะไกล 10%</span>"
                 imageSrc="/assets/images/muad/weapon.png"
                 onClick={() => scrollToDetail("item-weapon")}
@@ -265,14 +265,14 @@ export default function ROPage() {
 
               {/* ผ้าคลุม (Garment) - สังเกตจากภาพต้นฉบับจะอยู่ฝั่งขวา */}
               <FloatingItem
-                pos="bottom-[30%] left-[5%] md:left-[15%]"
+                pos="bottom-[28%] left-[3%] sm:left-[5%] md:left-[2%] lg:left-[5%]"
                 label="<span class='underline font-bold text-[15px]'>+8 Temporal Agi Manteau []</span><br><br><span class='text-red-500'>ลดดีเลย์หลังการใช้งาน Skill 15%<br>เพิ่ม Physical Damage ระยะไกล 10%</span>"
                 imageSrc="/assets/images/muad/garment.png"
                 onClick={() => scrollToDetail("item-garment")}
               />
               {/* รองเท้า (Shoes) */}
               <FloatingItem
-                pos="bottom-[30%] right-[5%] md:right-[15%]"
+                pos="bottom-[28%] right-[3%] sm:right-[5%] md:right-[2%] lg:right-[5%]"
                 label="<span class='underline font-bold text-[15px]'>+15 Infinity Dexterity Boots []</span> <br><br><span class='text-red-500'>Hawkeye<br>Expert Archer Lv.7 (เพิ่มดาเมจระยะไกล 14%)</span>"
                 imageSrc="/assets/images/muad/shoes.png"
                 onClick={() => scrollToDetail("item-shoes")}
@@ -280,38 +280,39 @@ export default function ROPage() {
 
               {/* ประดับ 1 (Accessory L) */}
               <FloatingItem
-                pos="bottom-[15%] left-[10%] md:left-[20%]"
+                pos="bottom-[12%] left-[5%] sm:left-[5%] md:left-[3%] lg:left-[10%]"
                 label="<span class='underline font-bold text-[15px]'>+9 4th ROC <br>Anniversary Ring []</span><br><br><span class='text-blue-500'>[ Zerom ] </span><br><br><span class='text-red-500'>Expert Archer Lv.10 (เพิ่มดาเมจระยะไกล 20% , ASPD+1)<br>Agi3<br>Agi4</span>"
                 imageSrc="/assets/images/muad/accessoriesR.png"
                 onClick={() => scrollToDetail("item-accessoriesR")}
               />
               {/* ประดับ 2 (Accessory R) */}
               <FloatingItem
-                pos="bottom-[15%] right-[10%] md:right-[20%]"
+                pos="bottom-[12%] right-[5%] sm:right-[5%] md:right-[3%] lg:right-[10%]"
                 label="<span class='underline font-bold text-[15px]'>+7 Falconer Ring []</span><br><br><span class='text-blue-500'>[ Zerom ] </span>"
                 imageSrc="/assets/images/muad/accessoriesL.png"
                 onClick={() => scrollToDetail("item-accessoriesL")}
               />
+
             </>
           ) : (
             <>
               {/* หัว - บน (Upper) */}
               <FloatingItem
-                pos="top-[10%] left-[10%] md:left-[20%]"
+                pos="top-[5%] left-[5%] sm:left-[2%] md:left-[20%]"
                 label="<span class='underline font-bold text-[15px]'>Costume Violet Rune Helm</span><br><br><span class='text-cyan-500'>[ Sniper II ]</span>"
                 imageSrc="/assets/images/muad/uppercos.png"
                 onClick={() => scrollToDetail("cos-head-upper")}
               />
               {/* หัว - กลาง (Middle) */}
               <FloatingItem
-                pos="top-[10%] right-[10%] md:right-[20%]"
+                pos="top-[5%] right-[5%] sm:right-[2%] md:right-[20%]"
                 label="<span class='underline font-bold text-[15px]'>Costume Spotlight</span><br><br><span class='text-cyan-500'>[ Sniper II ]</span>"
                 imageSrc="/assets/images/muad/middlecos.png"
                 onClick={() => scrollToDetail("cos-head-middle")}
               />
               {/* หัว - ล่าง (Lower) */}
               <FloatingItem
-                pos="top-[25%] left-[5%] md:left-[15%]"
+                pos="top-[20%] left-[2%] sm:left-[2%] sm:top-[35%] md:top-[25%] md:left-[15%]"
                 label="<span class='underline font-bold text-[15px]'>Costume Aura of Tornado</span><br><br><span class='text-cyan-500'>[ Sniper II ]</span>"
                 imageSrc="/assets/images/muad/lowercos.png"
                 onClick={() => scrollToDetail("cos-head-lower")}
@@ -319,7 +320,7 @@ export default function ROPage() {
 
               {/* เสื้อ (Armor) */}
               <FloatingItem
-                pos="top-[25%] right-[10%] md:right-[10%]"
+                pos="top-[20%] right-[2%] sm:right-[2%] sm:top-[35%] md:top-[25%] md:right-[10%]"
                 label="<span class='underline font-bold text-[15px]'>+9 Critical Hit Shadow Armor</span><br><br><span class='text-red-500'>MATK + 19<br>เพิ่ม Physical Damage ระยะไกล 5%<br>ATK + 1%</span>"
                 imageSrc="/assets/images/muad/armorshadow.png"
                 onClick={() => scrollToDetail("shadow-armor")}
@@ -327,14 +328,14 @@ export default function ROPage() {
 
               {/* อาวุธหลัก (Main Hand) */}
               <FloatingItem
-                pos="top-[40%] left-[5%] md:left-[5%]"
+                pos="top-[35%] left-[1%] sm:left-[5%] sm:top-[50%] md:top-[40%] md:left-[5%]"
                 label="<span class='underline font-bold text-[15px]'>+15 Shadow Sniper II Weapon</span>"
                 imageSrc="/assets/images/muad/waeponshadow.png"
                 onClick={() => scrollToDetail("shadow-waepon")}
               />
 
               <FloatingItem
-                pos="top-[40%] right-[5%] md:right-[5%]"
+                pos="top-[35%] right-[1%] sm:right-[5%] sm:top-[50%] md:top-[40%] md:right-[5%]"
                 label="<span class='underline font-bold text-[15px]'>+12 Shadow Sniper II Shield</span>"
                 imageSrc="/assets/images/muad/shieldshadow.png"
                 onClick={() => scrollToDetail("shadow-shield")}
@@ -342,14 +343,14 @@ export default function ROPage() {
 
               {/* ผ้าคลุม (Garment) - สังเกตจากภาพต้นฉบับจะอยู่ฝั่งขวา */}
               <FloatingItem
-                pos="bottom-[30%] left-[5%] md:left-[15%]"
+                pos="bottom-[28%] left-[2%] sm:left-[2%] md:left-[15%]"
                 label="<span class='underline font-bold text-[15px]'>Costume Giant Shark </span><br><br><span class='text-cyan-500'>[Sniper II]</span>"
                 imageSrc="/assets/images/muad/garmentcos.png"
                 onClick={() => scrollToDetail("cos-garment")}
               />
               {/* รองเท้า (Shoes) */}
               <FloatingItem
-                pos="bottom-[30%] right-[5%] md:right-[15%]"
+                pos="bottom-[28%] right-[2%] sm:right-[2%] md:right-[15%]"
                 label="<span class='underline font-bold text-[15px]'>+9 Blitz Shadow Shoes</span><br><br><span class='text-red-500'>ASPD + 1</span>"
                 imageSrc="/assets/images/muad/shoesshadow.png"
                 onClick={() => scrollToDetail("shadow-shoes")}
@@ -357,14 +358,14 @@ export default function ROPage() {
 
               {/* ประดับ 1 (Accessory L) */}
               <FloatingItem
-                pos="bottom-[15%] left-[10%] md:left-[20%]"
+                pos="bottom-[12%] left-[5%] sm:left-[2%] md:left-[20%]"
                 label="<span class='underline font-bold text-[15px]'>+9 Almighty Shadow Pandant</span><br><br><span class='text-red-500'>Max HP + 976<br>CRI + 1<br>ASPD + 1</span>"
                 imageSrc="/assets/images/muad/pendantshadow.png"
                 onClick={() => scrollToDetail("shadow-pendant")}
               />
               {/* ประดับ 2 (Accessory R) */}
               <FloatingItem
-                pos="bottom-[15%] right-[10%] md:right-[20%]"
+                pos="bottom-[12%] right-[5%] sm:right-[2%] md:right-[20%]"
                 label="<span class='underline font-bold text-[15px]'>+9 Almighty Shadow Earring</span><br><br><span class='text-red-500'>ATK + 12 <br>ลดร่าย 4% <br> MHP+612</span>"
                 imageSrc="/assets/images/muad/earringshadow.png"
                 onClick={() => scrollToDetail("shadow-earring")}
@@ -523,13 +524,13 @@ function FloatingItem({
     >
       {/* ปรับ flex-col เป็น flex-row และเพิ่ม gap-3 เพื่อเว้นระยะรูปกับข้อความ */}
       <div
-        className="relative bg-white/80 backdrop-blur-md p-3 px-4 rounded-2xl shadow-xl 
+        className="relative bg-white/80 backdrop-blur-md p-1 px-1 sm:p-1.5 sm:px-1.5 md:p-2 md:px-2 lg:p-3 lg:px-4 rounded-lg sm:rounded-lg md:rounded-xl lg:rounded-2xl shadow-xl 
                             group-hover:bg-orange-500/90 transition-all duration-500 
                             group-hover:scale-110 group-hover:shadow-orange-300/50 
-                            flex flex-row items-center justify-center min-w-[150px]"
+                            flex flex-row items-center justify-center min-w-[85px] sm:min-w-[110px] md:min-w-[130px] lg:min-w-[150px]"
       >
         {/* ส่วนแสดงรูปไอเทม - อยู่ซ้ายมือ */}
-        <div className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-xl overflow-hidden transition-colors shrink-0">
+        <div className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 xl:w-12 xl:h-12 flex items-center justify-center rounded-lg sm:rounded-lg md:rounded-lg lg:rounded-xl overflow-hidden transition-colors shrink-0">
           <img
             src={imageSrc}
             alt={label}
@@ -537,9 +538,9 @@ function FloatingItem({
           />
         </div>
 
-        <div className="ml-3 flex flex-col items-start">
+        <div className="ml-0.5 sm:ml-1 md:ml-1.5 lg:ml-2 flex flex-col items-start">
           <div
-            className="text-[12px] font-black uppercase text-slate-500 group-hover:text-white text-left tracking-wider leading-tight"
+            className="text-[6px] sm:text-[8px] md:text-[10px] lg:text-[12px] font-black uppercase text-slate-500 group-hover:text-white text-left tracking-wider leading-tight"
             dangerouslySetInnerHTML={{ __html: label }}
           />
         </div>
@@ -560,11 +561,11 @@ function StatRow({
   color: string;
 }) {
   return (
-    <div className="flex justify-between items-center gap-4">
-      <span className="text-[14px] font-black text-white/60 tracking-tighter">
+    <div className="flex justify-between items-center gap-2 sm:gap-4">
+      <span className="text-[11px] sm:text-[14px] font-black text-white/60 tracking-tighter">
         {label}
       </span>
-      <span className={`text-[16px] font-black ${color} drop-shadow-sm`}>
+      <span className={`text-[12px] sm:text-[16px] font-black ${color} drop-shadow-sm`}>
         {value}
       </span>
     </div>
