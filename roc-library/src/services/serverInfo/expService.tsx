@@ -18,7 +18,7 @@ export function expService() {
     name: "175%",
     ratePercent: 175,
     DateFrom: new Date(2026, 3, 1, 15, 0, 0),
-    DateTo: new Date(2026, 3, 8, 6, 0, 0),
+    DateTo: new Date(2026, 3, 15, 6, 0, 0),
     description:
       "Moon Event เพิ่ม Exp 175%",
   });

@@ -8,18 +8,7 @@ export default function ExpServerPage() {
   const exp = expService();
   const drop = dropService();
   const death = deathService();
-  console.log(exp);
-  console.log(drop);
-  console.log(death);
-  const expTip = exp
-    .map((e) => `${e.name}${e.description ? `: ${e.description}` : ""}`)
-    .join(" \n");
-  const dropTip = drop
-    .map((e) => `${e.name}${e.description ? `: ${e.description}` : ""}`)
-    .join(" \n");
-  const deathTip = death
-    .map((e) => `${e.name}${e.description ? `: ${e.description}` : ""}`)
-    .join(" \n");
+
   return (
     <ul className="w-full flex flex-col gap-2 col-span-1">
       <li className="flex-center cursor-pointer p-16-semibold w-full whitespace-nowrap">

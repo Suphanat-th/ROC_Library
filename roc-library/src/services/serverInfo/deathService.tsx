@@ -18,7 +18,7 @@ export function deathService() {
     name: "-100%",
     ratePercent: -100,
     DateFrom: new Date(2026, 3, 1, 15, 0, 0),
-    DateTo: new Date(2026, 3, 8, 6, 0, 0),
+    DateTo: new Date(2026, 3, 15, 6, 0, 0),
     description: "Moon Event ลด Death Penalty 100%",
   });
   return [
