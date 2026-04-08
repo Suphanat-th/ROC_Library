@@ -182,12 +182,12 @@ export default function ROPage() {
             className="absolute -top-35 bg-black/40 backdrop-blur-md border border-white/20 p-6 rounded-2xl shadow-2xl min-w-[300px]"
           >
             <div className="grid grid-cols-2 gap-x-8 gap-y-3">
-              <StatRow label="STR" value="99+44" color="text-red-400" />
-              <StatRow label="INT" value="61+84" color="text-blue-400" />
-              <StatRow label="AGI" value="32+78" color="text-green-400" />
-              <StatRow label="DEX" value="102+89" color="text-yellow-400" />
-              <StatRow label="VIT" value="33+50" color="text-orange-400" />
-              <StatRow label="LUK" value="1+54" color="text-purple-400" />
+              <StatRow label="STR" value="99+45" color="text-red-400" />
+              <StatRow label="INT" value="61+82" color="text-blue-400" />
+              <StatRow label="AGI" value="32+79" color="text-green-400" />
+              <StatRow label="DEX" value="102+91" color="text-yellow-400" />
+              <StatRow label="VIT" value="33+49" color="text-orange-400" />
+              <StatRow label="LUK" value="1+55" color="text-purple-400" />
             </div>
           </motion.div>
 
