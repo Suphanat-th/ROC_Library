@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import localFont from "next/font/local";
 import NavBarPage from "@/layout/navbar/navbar";
-import FooterPage from "@/layout/footer/footer";
+import SidebarPage from "@/layout/sidebar/sidebar";
 
 const mali = localFont({
   src: "../../public/font/Mali-Regular.ttf",
@@ -24,11 +24,36 @@ export default function RootLayout({
   return (
     <html lang="en" data-theme="light">
       <body
-        className={`${mali.className} antialiased flex flex-col min-h-screen`}
+        className={`${mali.className} antialiased m-0 p-0 h-screen`}
       >
-        <NavBarPage></NavBarPage>
-        <div className="mt-[70px]  pb-[50px]">{children}</div>
-        <FooterPage></FooterPage>
+        <div className="drawer h-screen">
+          <input
+            id="is-drawer-open"
+            type="checkbox"
+            className="drawer-toggle"
+          />
+
+          {/* Content */}
+          <div className="drawer-content flex flex-col h-full">
+            {/* Navbar */}
+            <NavBarPage />
+
+            {/* Page Content */}
+            <div className="flex-1 overflow-auto bg-gray-50 pt-[70px]">{children}</div>
+          </div>
+
+          {/* Sidebar */}
+          <div className="drawer-side">
+            <label
+              htmlFor="is-drawer-open"
+              aria-label="close sidebar"
+              className="drawer-overlay"
+            ></label>
+            <div className="bg-blue-600 min-h-full w-64 text-white flex flex-col">
+              <SidebarPage />
+            </div>
+          </div>
+        </div>
       </body>
     </html>
   );

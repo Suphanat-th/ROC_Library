@@ -44,7 +44,7 @@ export default function MonsterTablePage() {
       <div className="mb-6 flex gap-3 items-center">
         <input
           type="text"
-          placeholder="ค้นหามอนสเตอร์ 1st Round"
+          placeholder="ค้นหามอนสเตอร์ Mini Boss"
           value={searchMiniBoss}
           onChange={(e) => setSearchMiniBoss(e.target.value)}
           className="px-4 py-2 rounded-lg bg-gray-700 border border-gray-600 focus:border-cyan-400 outline-none w-80"
@@ -56,7 +56,7 @@ export default function MonsterTablePage() {
           ล้าง
         </button>
       </div>
-      <div className="overflow-x-auto pb-4">
+      <div className="overflow-x-auto pb-4 w-full">
         <div className="flex gap-6 w-max">
           {monstersMiniBoss.map((m) => (
             <div
@@ -130,7 +130,7 @@ export default function MonsterTablePage() {
           ล้าง
         </button>
       </div>
-      <div className="overflow-x-auto pb-4">
+      <div className="overflow-x-auto pb-4 w-full">
         <div className="flex gap-6 w-max">
           {monstersStage1.map((m) => (
             <div
@@ -204,7 +204,7 @@ export default function MonsterTablePage() {
           ล้าง
         </button>
       </div>
-      <div className="overflow-x-auto pb-4">
+      <div className="overflow-x-auto pb-4 w-full">
         <div className="flex gap-6 w-max">
           {monstersStage2.map((m) => (
             <div
@@ -278,7 +278,7 @@ export default function MonsterTablePage() {
           ล้าง
         </button>
       </div>
-      <div className="overflow-x-auto pb-4">
+      <div className="overflow-x-auto pb-4 w-full">
         <div className="flex gap-6 w-max">
           {monstersStage3.map((m) => (
             <div

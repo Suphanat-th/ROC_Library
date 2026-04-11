@@ -146,7 +146,7 @@ export default function ROPage() {
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 1 }}
-          className="relative z-10 w-64 h-64 md:w-96 md:h-96 flex items-center justify-center bg-white/20 backdrop-blur-3xl rounded-full border border-white/30 shadow-[0_0_100px_rgba(255,255,255,0.3)]"
+          className="relative z-0 w-64 h-64 md:w-96 md:h-96 flex items-center justify-center bg-white/20 backdrop-blur-3xl rounded-full border border-white/30 shadow-[0_0_100px_rgba(255,255,255,0.3)]"
         >
           {/* 1. รูปตัวละครหลัก (Base Layer) */}
           <img
@@ -172,7 +172,7 @@ export default function ROPage() {
               ease: "easeInOut",
             }}
             // ใช้ absolute เพื่อให้ซ้อนทับ preview.png พอดี
-            className="absolute inset-0 z-20 w-full h-auto pointer-events-none mix-blend-screen"
+            className="absolute inset-0 z-10 w-full h-auto pointer-events-none mix-blend-screen"
           />
 
           {/* Status Card ด้านบน */}
@@ -214,7 +214,7 @@ export default function ROPage() {
         </motion.div>
 
         {/* ไอเทมที่ลอยอยู่รอบๆ (Floating Elements) */}
-        <div className="absolute inset-0 z-20 w-full h-full pointer-events-none">
+        <div className="absolute inset-0 z-10 w-full h-full pointer-events-none">
           {/* --- ฝั่งซ้าย (Left Side) --- */}
 
           {!isCostume ? (
@@ -222,7 +222,7 @@ export default function ROPage() {
               {/* หัว - บน (Upper) */}
               <FloatingItem
                 pos="top-[5%] left-[5%] sm:left-[5%] md:left-[3%] lg:left-[10%]"
-                label="<span class='underline font-bold text-[15px]'>+11 Shampoo []</span>"
+                label="<span class='underline font-bold text-[15px]'>+11 Shampoo []</span><br><br><span class='text-blue-500'>[ Orc Hero ] </span>"
                 imageSrc="/assets/images/muad/upperhead.png"
                 onClick={() => scrollToDetail("item-head-upper")}
               />
@@ -487,7 +487,7 @@ function ScrollUpButton() {
     <button
       aria-label="Scroll to top"
       onClick={smoothScroll}
-      className="fixed bottom-24 right-6 z-[9999] w-12 h-12 rounded-full bg-linear-to-r from-purple-900 via-indigo-900 to-purple-700 text-white shadow-lg flex items-center justify-center hover:opacity-90 transition-colors"
+      className="fixed bottom-24 right-6 z-20 w-12 h-12 rounded-full bg-linear-to-r from-purple-900 via-indigo-900 to-purple-700 text-white shadow-lg flex items-center justify-center hover:opacity-90 transition-colors"
     >
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-5 h-5">
         <path fill="currentColor" d="M12 4l-8 8h5v8h6v-8h5z" />
@@ -519,7 +519,7 @@ function FloatingItem({
         ease: "easeInOut",
         delay: delay,
       }}
-      className={`absolute ${pos} pointer-events-auto cursor-pointer group z-30`}
+      className={`absolute ${pos} pointer-events-auto cursor-pointer group z-10`}
       onClick={onClick}
     >
       {/* ปรับ flex-col เป็น flex-row และเพิ่ม gap-3 เพื่อเว้นระยะรูปกับข้อความ */}

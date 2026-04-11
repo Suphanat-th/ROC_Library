@@ -44,3 +44,12 @@ font-family: inherit;
 text-transform:uppercase;
 letter-spacing:1px;
 }
+/* Speed up drawer closing animation */
+.drawer-toggle:checked ~ .drawer-side .drawer-overlay,
+.drawer-toggle:checked ~ .drawer-side > div {
+  transition: all 0.2s ease-in-out;
+}
+
+.drawer-side .drawer-overlay {
+  transition: all 0.2s ease-in-out;
+}

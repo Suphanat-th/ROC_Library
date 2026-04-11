@@ -17,13 +17,13 @@ export default function CentralLabPage() {
   const [month] = useState(today.getMonth());
   const [year] = useState(today.getFullYear());
   const [selectedEvent, setSelectedEvent] = useState<CalendarEvent | null>(
-    null
+    null,
   );
   const [selectedEventNow, setSelectedEventNow] =
     useState<CalendarEvent | null>(null);
 
   const [activeTab, setActiveTab] = useState<"daily" | "calendar" | "monster">(
-    "daily"
+    "daily",
   );
 
   // Refs สำหรับ scroll
@@ -63,19 +63,19 @@ export default function CentralLabPage() {
 
   const daysInMonth = useMemo(
     () => new Date(year, month + 1, 0).getDate(),
-    [year, month]
+    [year, month],
   );
   const firstDayOfMonth = useMemo(
     () => new Date(year, month).getDay(),
-    [year, month]
+    [year, month],
   );
   const blankDays = useMemo(
     () => Array.from({ length: firstDayOfMonth }, (_, i) => i + 1),
-    [firstDayOfMonth]
+    [firstDayOfMonth],
   );
   const noOfDays = useMemo(
     () => Array.from({ length: daysInMonth }, (_, i) => i + 1),
-    [daysInMonth]
+    [daysInMonth],
   );
   const events: CalendarEvent[] = useMemo(
     () =>
@@ -88,7 +88,7 @@ export default function CentralLabPage() {
           event_binary: base2,
         };
       }),
-    [noOfDays, year, month]
+    [noOfDays, year, month],
   );
 
   const isToday = (date: number) => {
@@ -108,8 +108,8 @@ export default function CentralLabPage() {
       tab === "daily"
         ? dailyRef
         : tab === "calendar"
-        ? calendarRef
-        : monsterRef;
+          ? calendarRef
+          : monsterRef;
     if (ref.current) {
       const yOffset = -70; // header offset
       const y =
@@ -160,7 +160,7 @@ export default function CentralLabPage() {
   return (
     <div className="antialiased sans-serif">
       {/* Top Navigation */}
-      <div className="sticky top-[70px] left-0 w-full bg-gray-400 border-b shadow-lg z-50">
+      <div className="sticky top-[70px] left-0 w-full bg-gray-400 border-b shadow-lg z-5">
         <div className="flex justify-around">
           {tabs.map((tab) => (
             <button
