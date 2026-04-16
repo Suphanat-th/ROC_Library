@@ -19,5 +19,36 @@ export function dropService() {
     DateTo: new Date(2026, 3, 15, 6, 0, 0),
     description: "Moon Event เพิ่ม Drop 75%",
   });
+
+
+  
+
+  dropAdd.push({
+    name: "75%",
+    ratePercent: 75,
+    DateFrom: new Date(2026, 3, 16, 6, 0, 0),
+    DateTo: new Date(2026, 3, 22, 6, 0, 0),
+    description: "Moon Event เพิ่ม Drop 75%",
+  });
+
+  
+  dropAdd.push({
+    name: "50",
+    ratePercent: 50,
+    DateFrom: new Date(2026, 3, 22, 6, 0, 0),
+    DateTo: new Date(2026, 3, 29, 6, 0, 0),
+    description: "Moon Event เพิ่ม Drop 50%",
+  });
+
+  
+  dropAdd.push({
+    name: "25",
+    ratePercent: 25,
+    DateFrom: new Date(2026, 3, 29, 6, 0, 0),
+    DateTo: new Date(2026, 4, 6, 6, 0, 0),
+    description: "Moon Event เพิ่ม Drop 25%",
+  });
+
+
   return [...dropDefault,...dropAdd];
 }
