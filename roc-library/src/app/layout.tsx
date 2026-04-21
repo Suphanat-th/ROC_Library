@@ -3,6 +3,8 @@ import "./globals.css";
 import localFont from "next/font/local";
 import NavBarPage from "@/layout/navbar/navbar";
 import SidebarPage from "@/layout/sidebar/sidebar";
+import { LoadingProvider } from "@/context/LoadingContext";
+import { LoadingOverlay } from "@/components/Loader";
 
 const mali = localFont({
   src: "../../public/font/Mali-Regular.ttf",
@@ -26,34 +28,37 @@ export default function RootLayout({
       <body
         className={`${mali.className} antialiased m-0 p-0 h-screen`}
       >
-        <div className="drawer h-screen">
-          <input
-            id="is-drawer-open"
-            type="checkbox"
-            className="drawer-toggle"
-          />
+        <LoadingProvider>
+          <LoadingOverlay />
+          <div className="drawer h-screen">
+            <input
+              id="is-drawer-open"
+              type="checkbox"
+              className="drawer-toggle"
+            />
 
-          {/* Content */}
-          <div className="drawer-content flex flex-col h-full">
-            {/* Navbar */}
-            <NavBarPage />
+            {/* Content */}
+            <div className="drawer-content flex flex-col h-full">
+              {/* Navbar */}
+              <NavBarPage />
 
-            {/* Page Content */}
-            <div className="flex-1 overflow-auto bg-gray-50 pt-[70px]">{children}</div>
-          </div>
+              {/* Page Content */}
+              <div className="flex-1 overflow-auto bg-gray-50 pt-17.5">{children}</div>
+            </div>
 
-          {/* Sidebar */}
-          <div className="drawer-side">
-            <label
-              htmlFor="is-drawer-open"
-              aria-label="close sidebar"
-              className="drawer-overlay"
-            ></label>
-            <div className="bg-blue-600 min-h-full w-64 text-white flex flex-col">
-              <SidebarPage />
+            {/* Sidebar */}
+            <div className="drawer-side">
+              <label
+                htmlFor="is-drawer-open"
+                aria-label="close sidebar"
+                className="drawer-overlay"
+              ></label>
+              <div className="bg-blue-600 min-h-full w-64 text-white flex flex-col">
+                <SidebarPage />
+              </div>
             </div>
           </div>
-        </div>
+        </LoadingProvider>
       </body>
     </html>
   );

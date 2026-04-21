@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useLoading } from "@/context/LoadingContext";
 import teteGuild from "../../../public/assets/images/GuildImage/vanCleef.png";
 import dogGuild from "../../../public/assets/images/GuildImage/dog.jpg";
 import rocFunGuild from "../../../public/assets/images/GuildImage/rocfun.png";
@@ -29,7 +30,7 @@ const fileTree: FileTreeItem[] = [
     id: "features",
     name: "Features",
     type: "folder",
-    icon: "⭐",
+    icon: "",
     children: [
       // {
       //   id: "classes",
@@ -40,24 +41,31 @@ const fileTree: FileTreeItem[] = [
       // },
       {
         id: "lab",
-        name: "Monster Lab",
+        name: "- Monster Lab",
         type: "file",
-        icon: "🔬",
+        icon: "",
         href: "/central-lab"
       },
       {
         id: "monster",
-        name: "Monster x3",
+        name: "- Monster x3",
         type: "file",
-        icon: "👹",
+        icon: "",
         href: "/monsterx3"
+      },
+      {
+        id: "facewormnest",
+        name: "- Faceworm Nest Guide",
+        type: "file",
+        icon: "",
+        href: "/facewormnest-guide"
       }
     ]
   },{
     id: "muad",
     name: "MUAD",
     type: "file",
-    icon: "🐕",
+    icon: "",
     href: "/muad"
   },
   // {
@@ -101,6 +109,7 @@ function FileTreeNode({
   toggleDrawer: () => void;
 }) {
   const [expanded, setExpanded] = useState(false);
+  const { setIsLoading } = useLoading();
   const isFolder = item.type === "folder";
 
   const closeSidebarOnMobile = () => {
@@ -109,6 +118,15 @@ function FileTreeNode({
     }
   };
 
+  const handleLinkClick = () => {
+    setIsLoading(true);
+    closeSidebarOnMobile();
+    // setTimeout ให้ loader แสดง ออกแบบให้ดูดีขึ้น
+    setTimeout(() => setIsLoading(false), 500);
+  };
+
+  const paddingLeft = level * 12;
+
   return (
     <div key={item.id}>
       {isFolder ? (
@@ -116,16 +134,20 @@ function FileTreeNode({
           <button
             onClick={() => setExpanded(!expanded)}
             title={item.name}
-            className="w-full flex items-center px-3 py-2 rounded-lg hover:bg-blue-500 transition-colors text-white text-sm"
+            style={{ paddingLeft: `${8 + paddingLeft}px` }}
+            className="w-full flex items-center py-2.5 px-3 rounded-lg hover:bg-blue-500/20 active:bg-blue-600/30 transition-all text-white text-sm font-medium gap-2 group"
           >
-            <span className="mr-2 text-base w-5 text-center shrink-0">
-              {expanded ? "▼" : "▶"}
+            <span className="text-base w-5 text-center shrink-0 transition-transform duration-200 text-blue-300 group-hover:text-blue-200">
+              {expanded ? "📂" : "📁"}
             </span>
-            <span className="text-base mr-2 shrink-0">{item.icon}</span>
-            <span className="truncate">{item.name}</span>
+            <span className="text-sm shrink-0 text-yellow-300">{item.icon}</span>
+            <span className="truncate text-blue-100 group-hover:text-white">{item.name}</span>
+            <span className="ml-auto text-xs text-blue-300 group-hover:text-blue-200 transition-transform duration-200">
+              {expanded ? "−" : "+"}
+            </span>
           </button>
           {expanded && (
-            <div className="pl-4">
+            <div className="border-l-2 border-blue-600/30 ml-6">
               {item.children?.map((child) => (
                 <FileTreeNode 
                   key={child.id} 
@@ -140,13 +162,13 @@ function FileTreeNode({
       ) : (
         <Link
           href={item.href || "#"}
-          onClick={closeSidebarOnMobile}
+          onClick={handleLinkClick}
           title={item.name}
-          className="flex items-center px-3 py-2 rounded-lg hover:bg-blue-500 transition-colors text-white text-sm w-full"
+          style={{ paddingLeft: `${8 + paddingLeft}px` }}
+          className="flex items-center py-2.5 px-3 rounded-lg hover:bg-green-500/20 active:bg-green-600/30 transition-all text-white text-sm w-full gap-2 group"
         >
-          <span className="w-5 shrink-0"></span>
-          <span className="text-base mr-2 shrink-0">{item.icon}</span>
-          <span className="truncate">{item.name}</span>
+          <span className="text-sm shrink-0 text-purple-300">{item.icon}</span>
+          <span className="truncate text-gray-100 group-hover:text-white font-medium">{item.name}</span>
         </Link>
       )}
     </div>

@@ -62,9 +62,9 @@ export default function MonsterEcomDatabase() {
   ];
 
   return (
-    <div className="flex min-h-screen bg-gray-950 text-gray-100 font-sans ">
+    <div className="flex min-h-screen bg-gray-950 text-gray-100 font-sans">
       {/* --- SIDEBAR --- */}
-      <aside className="w-64 bg-gray-900 border-r border-gray-800 p-6 sticky top-0 h-screen hidden md:block">
+      <aside className="w-64 bg-gray-900 border-r border-gray-800 p-6 fixed top-0 left-0 h-screen overflow-y-auto hidden md:block">
         <h2 className="text-xl font-bold mb-6 text-cyan-400 tracking-tight">
           Filters
         </h2>
@@ -124,7 +124,7 @@ export default function MonsterEcomDatabase() {
       </aside>
 
       {/* --- MAIN CONTENT --- */}
-      <main className="flex-1 p-4 md:p-8">
+      <main className="flex-1 p-4 md:p-8 md:ml-64">
         <div className="flex flex-col sm:flex-row justify-between items-center mb-8 gap-4 bg-gray-900/50 p-5 rounded-2xl border border-gray-800 backdrop-blur-sm">
           <div className="text-sm text-gray-400">
             Results:{" "}

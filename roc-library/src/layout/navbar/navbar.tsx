@@ -2,11 +2,18 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { useLoading } from "@/context/LoadingContext";
 import logo from "../../../public/assets/images/web/Logo.png";
 
 export default function NavBarPage() {
+  const { setIsLoading } = useLoading();
+
+  const handleNavClick = () => {
+    setIsLoading(true);
+    setTimeout(() => setIsLoading(false), 500);
+  };
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-4 sm:px-8 py-4 bg-blue-600 text-white h-17.5 shadow-lg shrink-0">
+    <nav className="fixed top-0 left-0 right-0 z-40 flex justify-between items-center px-4 sm:px-8 py-4 bg-blue-600 text-white h-17.5 shadow-lg shrink-0">
       <div className="flex items-center gap-2 sm:gap-4">
         {/* Sidebar Toggle Button */}
         <label
@@ -22,6 +29,7 @@ export default function NavBarPage() {
         {/* Logo and Branding */}
         <Link
           href="/"
+          onClick={handleNavClick}
           className="flex items-center space-x-1 sm:space-x-2 cursor-pointer text-xs sm:text-xl hover:text-blue-100 transition-colors"
         >
           <Image
@@ -37,7 +45,7 @@ export default function NavBarPage() {
       </div>
 
       <div className="flex space-x-3 sm:space-x-6 font-semibold text-xs sm:text-xl">
-        <Link href="/" className="hover:text-blue-100 transition-colors">ROC Library</Link>
+        <Link href="/" onClick={handleNavClick} className="hover:text-blue-100 transition-colors">ROC Library</Link>
       </div>
     </nav>
   );
