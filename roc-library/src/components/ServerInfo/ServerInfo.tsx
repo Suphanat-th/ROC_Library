@@ -18,7 +18,7 @@ export default function ServerInfo() {
         "
       >
         <span className="text-xl text-pink-600 underline font-semibold col-span-2 text-center">
-          Server Info (Baphomet)
+          Server Info (Baphomet,Moonlight)
         </span>
 
         {/* Your components */}
