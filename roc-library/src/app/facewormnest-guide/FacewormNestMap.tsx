@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import L from "leaflet";
+// @ts-expect-error - leaflet CSS doesn't have type declarations
 import "leaflet/dist/leaflet.css";
 import { facewormNestMapData } from "@/services/mapData/facewormNestData";
 
@@ -106,9 +107,7 @@ export default function FacewormNestMap() {
       const marker = L.marker([warp.coordinates[1], warp.coordinates[0]] as L.LatLngExpression, {
         icon: warpIcon,
       }).addTo(map.current!);
-      marker.bindPopup(popupContent, { maxWidth: 300 });
-      marker.on("mouseover", () => marker.openPopup());
-      marker.on("mouseout", () => marker.closePopup());
+      marker.bindPopup(popupContent, { maxWidth: 300, autoPan: false });
       markersRef.current.push(marker);
     });
 
@@ -125,9 +124,7 @@ export default function FacewormNestMap() {
       const marker = L.marker([miniBoss.coordinates[1], miniBoss.coordinates[0]] as L.LatLngExpression, {
         icon: miniBossIcon,
       }).addTo(map.current!);
-      marker.bindPopup(popupContent, { maxWidth: 300 });
-      marker.on("mouseover", () => marker.openPopup());
-      marker.on("mouseout", () => marker.closePopup());
+      marker.bindPopup(popupContent, { maxWidth: 300, autoPan: false });
       markersRef.current.push(marker);
     });
 
@@ -143,9 +140,7 @@ export default function FacewormNestMap() {
       const marker = L.marker([treasure.coordinates[1], treasure.coordinates[0]] as L.LatLngExpression, {
         icon: treasureIcon,
       }).addTo(map.current!);
-      marker.bindPopup(popupContent, { maxWidth: 900 });
-      marker.on("mouseover", () => marker.openPopup());
-      marker.on("mouseout", () => marker.closePopup());
+      marker.bindPopup(popupContent, { maxWidth: 900, autoPan: false });
       markersRef.current.push(marker);
 
       // Group treasures by stage
@@ -169,9 +164,7 @@ export default function FacewormNestMap() {
       const marker = L.marker([boss.coordinates[1], boss.coordinates[0]] as L.LatLngExpression, {
         icon: bossIcon,
       }).addTo(map.current!);
-      marker.bindPopup(popupContent, { maxWidth: 300 });
-      marker.on("mouseover", () => marker.openPopup());
-      marker.on("mouseout", () => marker.closePopup());
+      marker.bindPopup(popupContent, { maxWidth: 300, autoPan: false });
       markersRef.current.push(marker);
     });
 

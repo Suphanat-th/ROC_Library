@@ -28,6 +28,7 @@ export default function FacewormNestGuidePage() {
           </h1>
           <p className="text-gray-600 text-base">Interactive map with boss & mini-boss locations</p>
           <p className="text-gray-500 text-sm mt-3 italic">*ขอบคุณข้อมูลจาก Peet ROC</p>
+          <p className="text-error text-sm mt-3 italic">*สามารถกดคลิกดูที่กล่งอสมบัติ หรือ ตัว Monster ภายในแมพได้</p>
         </div>
       </div>
 
