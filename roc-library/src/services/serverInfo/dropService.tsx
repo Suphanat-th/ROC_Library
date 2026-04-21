@@ -1,6 +1,8 @@
 import { ServerInfoDto } from "@/types/serverInfo";
 
 export function dropService() {
+  const current = new Date();
+  
   const dropDefault: ServerInfoDto[] = [];
   dropDefault.push({
     name: "100%",
@@ -50,5 +52,18 @@ export function dropService() {
   });
 
 
-  return [...dropDefault,...dropAdd];
+  return [
+    ...dropDefault.filter((f) => {
+      const isStarted = f.DateFrom === null || f.DateFrom <= current;
+      const isNotEnded = f.DateTo === null || f.DateTo >= current;
+      return isStarted && isNotEnded;
+    }),
+    ...dropAdd.filter((f) => {
+      const isStarted = f.DateFrom === null || f.DateFrom <= current;
+      console.log("isStarted", isStarted);
+      const isNotEnded = f.DateTo === null || f.DateTo >= current;
+      console.log("isStarted", isNotEnded);
+      return isStarted && isNotEnded;
+    }),
+  ];
 }
