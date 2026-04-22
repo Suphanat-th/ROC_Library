@@ -24,7 +24,14 @@ const fileTree: FileTreeItem[] = [
     name: "Home",
     type: "file",
     icon: "🏠",
-    href: "/"
+    href: "/",
+  },
+  {
+    id: "muad",
+    name: "MUAD",
+    type: "file",
+    icon: "",
+    href: "/muad",
   },
   {
     id: "features",
@@ -44,23 +51,23 @@ const fileTree: FileTreeItem[] = [
         name: "- Monster Lab",
         type: "file",
         icon: "",
-        href: "/central-lab"
+        href: "/central-lab",
       },
       {
         id: "monster",
         name: "- Monster x3",
         type: "file",
         icon: "",
-        href: "/monsterx3"
+        href: "/monsterx3",
       },
       {
         id: "facewormnest",
         name: "- Faceworm Nest Guide",
         type: "file",
         icon: "",
-        href: "/facewormnest-guide"
-      }
-    ]
+        href: "/facewormnest-guide",
+      },
+    ],
   },
   // {
   //   id: "vip",
@@ -69,19 +76,13 @@ const fileTree: FileTreeItem[] = [
   //   icon: "👥",
   //   href: "/vip-search"
   // },
-  {
-    id: "muad",
-    name: "MUAD",
-    type: "file",
-    icon: "",
-    href: "/muad"
-  },
+
   {
     id: "calcbp",
     name: "Battle Pass Calculator",
     type: "file",
     icon: "⚔️",
-    href: "/calc-bp"
+    href: "/calc-bp",
   },
   // {
   //   id: "tools",
@@ -114,12 +115,12 @@ const fileTree: FileTreeItem[] = [
   // }
 ];
 
-function FileTreeNode({ 
-  item, 
+function FileTreeNode({
+  item,
   level = 0,
-  toggleDrawer
-}: { 
-  item: FileTreeItem; 
+  toggleDrawer,
+}: {
+  item: FileTreeItem;
   level?: number;
   toggleDrawer: () => void;
 }) {
@@ -155,8 +156,12 @@ function FileTreeNode({
             <span className="text-base w-5 text-center shrink-0 transition-transform duration-200 text-blue-300 group-hover:text-blue-200">
               {expanded ? "📂" : "📁"}
             </span>
-            <span className="text-sm shrink-0 text-yellow-300">{item.icon}</span>
-            <span className="truncate text-blue-100 group-hover:text-white">{item.name}</span>
+            <span className="text-sm shrink-0 text-yellow-300">
+              {item.icon}
+            </span>
+            <span className="truncate text-blue-100 group-hover:text-white">
+              {item.name}
+            </span>
             <span className="ml-auto text-xs text-blue-300 group-hover:text-blue-200 transition-transform duration-200">
               {expanded ? "−" : "+"}
             </span>
@@ -164,9 +169,9 @@ function FileTreeNode({
           {expanded && (
             <div className="border-l-2 border-blue-600/30 ml-6">
               {item.children?.map((child) => (
-                <FileTreeNode 
-                  key={child.id} 
-                  item={child} 
+                <FileTreeNode
+                  key={child.id}
+                  item={child}
                   level={level + 1}
                   toggleDrawer={toggleDrawer}
                 />
@@ -183,7 +188,9 @@ function FileTreeNode({
           className="flex items-center py-2.5 px-3 rounded-lg hover:bg-green-500/20 active:bg-green-600/30 transition-all text-white text-sm w-full gap-2 group"
         >
           <span className="text-sm shrink-0 text-purple-300">{item.icon}</span>
-          <span className="truncate text-gray-100 group-hover:text-white font-medium">{item.name}</span>
+          <span className="truncate text-gray-100 group-hover:text-white font-medium">
+            {item.name}
+          </span>
         </Link>
       )}
     </div>
@@ -196,7 +203,7 @@ export default function SidebarPage() {
       {/* Sidebar Header */}
       <div className="border-b-2 border-blue-700 bg-blue-700 flex items-center justify-center h-17.5 shrink-0">
         <Link href="/" className="hover:opacity-80 transition-opacity">
-          <Image 
+          <Image
             src={logo}
             alt="ROC Library Logo"
             width={50}
@@ -211,11 +218,13 @@ export default function SidebarPage() {
       <nav className="p-4 flex-1 overflow-y-auto">
         <div className="space-y-2">
           {fileTree.map((item) => (
-            <FileTreeNode 
-              key={item.id} 
+            <FileTreeNode
+              key={item.id}
               item={item}
               toggleDrawer={() => {
-                const checkbox = document.getElementById('is-drawer-open') as HTMLInputElement;
+                const checkbox = document.getElementById(
+                  "is-drawer-open",
+                ) as HTMLInputElement;
                 if (checkbox) checkbox.checked = false;
               }}
             />
