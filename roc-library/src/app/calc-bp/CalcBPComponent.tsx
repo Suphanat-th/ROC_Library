@@ -49,7 +49,8 @@ export default function CalcBPComponent() {
   const [isDailyDone, setIsDailyDone] = useState<boolean>(false);
   const [isWeeklyDone, setIsWeeklyDone] = useState<boolean>(false);
   const [isPremiumOpened, setIsPremiumOpened] = useState<boolean>(false);
-  const [isLastDayDone, setIsLastDayDone] = useState<boolean>(false);
+  const [isLastDayDailyDone, setIsLastDayDailyDone] = useState<boolean>(false);
+  const [isLastDayWeeklyDone, setIsLastDayWeeklyDone] = useState<boolean>(false);
   
   // Auto-calculate level and remaining points from total
   const levelData = calculateLevelFromExp(totalPoints);
@@ -172,8 +173,13 @@ export default function CalcBPComponent() {
     const dailyPoints = isPremiumOpened ? 50 : 40;
     let additionalPoints = (daysForDailyCalc * dailyPoints) + (weeksForCalculation * BATTLE_PASS_CONFIG.weeklyPoints);
     
+    // Add Daily points for last day if checked
+    if (isLastDayDailyDone) {
+      additionalPoints += dailyPoints;
+    }
+    
     // Add Weekly points for last day if checked
-    if (isLastDayDone) {
+    if (isLastDayWeeklyDone) {
       additionalPoints += BATTLE_PASS_CONFIG.weeklyPoints;
     }
     
@@ -290,11 +296,22 @@ export default function CalcBPComponent() {
                   <label className="label cursor-pointer">
                     <input
                       type="checkbox"
-                      checked={isLastDayDone}
-                      onChange={(e) => setIsLastDayDone(e.target.checked)}
+                      checked={isLastDayDailyDone}
+                      onChange={(e) => setIsLastDayDailyDone(e.target.checked)}
                       className="checkbox checkbox-warning"
                     />
-                    <span className="label-text text-gray-700 font-medium ml-2">ทำวันสุดท้ายหลังตี 4 ก่อน 6 โมง</span>
+                    <span className="label-text text-gray-700 font-medium ml-2">ทำวันสุดท้ายหลังตี 4 (พุธ 24 มิถุนายน) Daily</span>
+                  </label>
+                </div>
+                <div className="form-control">
+                  <label className="label cursor-pointer">
+                    <input
+                      type="checkbox"
+                      checked={isLastDayWeeklyDone}
+                      onChange={(e) => setIsLastDayWeeklyDone(e.target.checked)}
+                      className="checkbox checkbox-warning"
+                    />
+                    <span className="label-text text-gray-700 font-medium ml-2">ทำวันสุดท้ายหลังตี 4 (พุธ 24 มิถุนายน) Weekly</span>
                   </label>
                 </div>
               </div>
@@ -390,14 +407,19 @@ export default function CalcBPComponent() {
                         </div>
                       )}
                       
-                      {isLastDayDone && (
+                      {isLastDayDailyDone && (
                         <div>
-                          • วันสุดท้าย (หลังตี 4 ก่อน 6 โมง): {BATTLE_PASS_CONFIG.weeklyPoints} (Weekly)
+                          • วันสุดท้าย (หลังตี 4): {dailyPoints} (Daily)
+                        </div>
+                      )}
+                      
+                      {isLastDayWeeklyDone && (
+                        <div>
+                          • วันสุดท้าย (หลังตี 4): {BATTLE_PASS_CONFIG.weeklyPoints} (Weekly)
                         </div>
                       )}
                       
                       <div className="font-bold mt-2 text-amber-900 pt-2 border-t border-amber-200">
-                        {isLastDayDone && (totalAdditional += BATTLE_PASS_CONFIG.weeklyPoints)}
                         รวม: {totalPoints} + {totalAdditional} = {totalPoints + totalAdditional} แต้ม
                       </div>
                     </>
