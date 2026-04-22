@@ -3,6 +3,9 @@ export default function StatusServerPage() {
   const start = new Date(2026, 3, 22, 6, 0, 0);
   const end = new Date(2026, 3, 22, 14, 1, 0);
 
+  console.log("current", current);
+  console.log("start", start);
+  console.log("end", end);
   const serverOn = !(current >= start && current <= end);
 
   return (
