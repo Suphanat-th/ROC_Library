@@ -76,6 +76,13 @@ const fileTree: FileTreeItem[] = [
     icon: "",
     href: "/muad"
   },
+  {
+    id: "calcbp",
+    name: "Battle Pass Calculator",
+    type: "file",
+    icon: "⚔️",
+    href: "/calc-bp"
+  },
   // {
   //   id: "tools",
   //   name: "Tools",
