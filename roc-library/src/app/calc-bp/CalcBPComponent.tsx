@@ -240,6 +240,7 @@ export default function CalcBPComponent() {
     if (targetLevel <= currentLevel) {
       return {
         daysNeeded: 0,
+        weeksNeeded: 0,
         pointsNeeded: 0,
         isAlreadyReached: targetLevel <= currentLevel,
       };
@@ -250,16 +251,39 @@ export default function CalcBPComponent() {
       targetLevel <= 0 ? 0 : 50 + (targetLevel - 1) * 10;
     const pointsNeeded = Math.max(0, pointsForTargetLevel - totalPoints);
 
-    // Daily points (without last day bonus, just regular daily)
+    if (pointsNeeded === 0) {
+      return {
+        daysNeeded: 0,
+        weeksNeeded: 0,
+        pointsNeeded: 0,
+        isAlreadyReached: true,
+      };
+    }
+
+    // Daily points and weekly calculation
     const dailyPointsPerDay = isPremiumOpened
       ? dailyPremiumTotal
       : dailyNormalTotal;
 
-    // Days needed (ceil to round up)
-    const daysNeeded =
-      pointsNeeded > 0 ? Math.ceil(pointsNeeded / dailyPointsPerDay) : 0;
+    // Find minimum days where: (days × dailyPoints) + (weeks × 100) >= pointsNeeded
+    // weeks = Math.ceil(days / 7)
+    let daysNeeded = 0;
+    let accumulatedPoints = 0;
 
-    return { daysNeeded, pointsNeeded, isAlreadyReached: false };
+    while (accumulatedPoints < pointsNeeded) {
+      daysNeeded++;
+      const weeksFromDays = Math.ceil(daysNeeded / 7);
+      accumulatedPoints = (daysNeeded * dailyPointsPerDay) + (weeksFromDays * 100); // 100 = weekly points
+    }
+
+    const weeksNeeded = Math.ceil(daysNeeded / 7);
+
+    return {
+      daysNeeded,
+      weeksNeeded,
+      pointsNeeded,
+      isAlreadyReached: false,
+    };
   };
 
   const daysNeededData = calculateDaysNeeded();
@@ -940,7 +964,7 @@ export default function CalcBPComponent() {
                           ต้องใช้เวลา (สัปดาห์)
                         </div>
                         <div className="text-3xl font-bold text-orange-600">
-                          {Math.ceil(daysNeededData.daysNeeded / 7)}
+                          {daysNeededData.weeksNeeded}
                         </div>
                         <div className="text-xs text-gray-500">สัปดาห์</div>
                       </div>
@@ -971,9 +995,19 @@ export default function CalcBPComponent() {
 
                   {/* Quest Breakdown */}
                   <div className="bg-white rounded-lg p-4 shadow-md border-l-4 border-purple-500">
-                    <div className="text-xs font-bold text-purple-700 mb-3">
-                      📋 Quest ที่ต้องทำ ({daysNeededData.daysNeeded} วัน):
-                    </div>
+                    {(() => {
+                      const sumDaily = daysNeededData.daysNeeded * currentDailyPoints;
+                      return (
+                        <div className="flex justify-between items-center mb-3">
+                          <div className="text-xs font-bold text-purple-700">
+                            📋 Quest ที่ต้องทำ ({daysNeededData.daysNeeded} วัน):
+                          </div>
+                          <div className="text-sm font-bold text-purple-600">
+                            {formatNumber(sumDaily.toString())} P
+                          </div>
+                        </div>
+                      );
+                    })()}
                     <div className="space-y-2 text-sm">
                       {/* Daily: Monster Hunt */}
                       <div className="flex justify-between items-center p-2 bg-blue-600 rounded text-white">
@@ -1000,12 +1034,17 @@ export default function CalcBPComponent() {
                       </div>
 
                       {/* Weekly: Boss Hunt */}
-                      {Math.ceil(daysNeededData.daysNeeded / 7) > 0 && (
+                      {daysNeededData.weeksNeeded > 0 && (
                         <>
                           <div className="border-t border-gray-300 my-2 pt-2">
-                            <div className="text-xs font-bold text-gray-700 mb-2">
-                              Weekly ({Math.ceil(daysNeededData.daysNeeded / 7)}{" "}
-                              สัปดาห์):
+                            <div className="flex justify-between items-center mb-2">
+                              <div className="text-xs font-bold text-gray-700">
+                                Weekly ({daysNeededData.weeksNeeded}{" "}
+                                สัปดาห์):
+                              </div>
+                              <div className="text-xs font-bold text-gray-600">
+                                {daysNeededData.weeksNeeded * 100} P
+                              </div>
                             </div>
                           </div>
 
@@ -1013,9 +1052,9 @@ export default function CalcBPComponent() {
                             <span>👑 Celine Kimi</span>
                             <span className="font-bold">
                               {WEEKLY_QUESTS.bosses[0].reward} P ×{" "}
-                              {Math.ceil(daysNeededData.daysNeeded / 7)} ={" "}
+                              {daysNeededData.weeksNeeded} ={" "}
                               {WEEKLY_QUESTS.bosses[0].reward *
-                                Math.ceil(daysNeededData.daysNeeded / 7)}
+                                daysNeededData.weeksNeeded}
                             </span>
                           </div>
 
@@ -1023,9 +1062,9 @@ export default function CalcBPComponent() {
                             <span>👑 Faceworm Queen</span>
                             <span className="font-bold">
                               {WEEKLY_QUESTS.bosses[1].reward} P ×{" "}
-                              {Math.ceil(daysNeededData.daysNeeded / 7)} ={" "}
+                              {daysNeededData.weeksNeeded} ={" "}
                               {WEEKLY_QUESTS.bosses[1].reward *
-                                Math.ceil(daysNeededData.daysNeeded / 7)}
+                                daysNeededData.weeksNeeded}
                             </span>
                           </div>
 
@@ -1033,9 +1072,9 @@ export default function CalcBPComponent() {
                             <span>👑 Ancient Gigantes</span>
                             <span className="font-bold">
                               {WEEKLY_QUESTS.bosses[2].reward} P ×{" "}
-                              {Math.ceil(daysNeededData.daysNeeded / 7)} ={" "}
+                              {daysNeededData.weeksNeeded} ={" "}
                               {WEEKLY_QUESTS.bosses[2].reward *
-                                Math.ceil(daysNeededData.daysNeeded / 7)}
+                                daysNeededData.weeksNeeded}
                             </span>
                           </div>
 
@@ -1044,9 +1083,9 @@ export default function CalcBPComponent() {
                             <span>💰 Weekly: Send Zeny (2M)</span>
                             <span className="font-bold">
                               {weeklySendZenyReward} P ×{" "}
-                              {Math.ceil(daysNeededData.daysNeeded / 7)} ={" "}
+                              {daysNeededData.weeksNeeded} ={" "}
                               {weeklySendZenyReward *
-                                Math.ceil(daysNeededData.daysNeeded / 7)}
+                                daysNeededData.weeksNeeded}
                             </span>
                           </div>
                         </>
@@ -1064,7 +1103,7 @@ export default function CalcBPComponent() {
                         {formatNumber(
                           (
                             1000000 * daysNeededData.daysNeeded +
-                            2000000 * Math.ceil(daysNeededData.daysNeeded / 7)
+                            2000000 * daysNeededData.weeksNeeded
                           ).toString(),
                         )}{" "}
                         Zeny
@@ -1080,10 +1119,10 @@ export default function CalcBPComponent() {
                       </div>
                       <div>
                         Weekly Zeny: 2,000,000 ×{" "}
-                        {Math.ceil(daysNeededData.daysNeeded / 7)} ={" "}
+                        {daysNeededData.weeksNeeded} ={" "}
                         {formatNumber(
                           (
-                            2000000 * Math.ceil(daysNeededData.daysNeeded / 7)
+                            2000000 * daysNeededData.weeksNeeded
                           ).toString(),
                         )}{" "}
                         Zeny
@@ -1120,11 +1159,11 @@ export default function CalcBPComponent() {
                         {currentLevel}
                       </div>
                       <div className="text-blue-600 mt-2 text-base">
-                        ✓ ต้องทำ {daysNeededData.daysNeeded} วัน เสีย{" "}
+                        ✓ ต้องทำ {daysNeededData.daysNeeded} วัน ({daysNeededData.weeksNeeded} สัปดาห์) เสีย{" "}
                         {formatNumber(
                           (
                             1000000 * daysNeededData.daysNeeded +
-                            2000000 * Math.ceil(daysNeededData.daysNeeded / 7)
+                            2000000 * daysNeededData.weeksNeeded
                           ).toString(),
                         )}{" "}
                         Zeny
