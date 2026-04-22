@@ -5,8 +5,8 @@ export function dropService() {
 
   const dropDefault: ServerInfoDto[] = [];
   dropDefault.push({
-    name: "0%",
-    ratePercent: 0,
+    name: "100%",
+    ratePercent: 100,
     DateFrom: null,
     DateTo: null,
     description: "Base drop rate applied to the server",
