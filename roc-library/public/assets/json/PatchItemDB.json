@@ -1,239 +1,1232 @@
 {
-    "12563": {
-        "unidentifiedDisplayName": "Battle Manual 75",
-        "unidentifiedResourceName": "전투교범",
-        "unidentifiedDescriptionName": [
-            "คู่มืออธิบายวิธีการต่อสู้ที่ให้ประสิทธิภาพสูงยิ่งขึ้น คำอธิบายของคู่มือที่เขียนออกมาได้อย่างละเอียด ทำให้ผู้อ่านเข้าใจได้โดยง่าย",
-            "^ff0000อัพเดตเพิ่มเติม",
-            "^000088เพิ่มค่าประสบการณ์ 75% ให้ทั้ง Base & Job EXP",
-            "^000088เป็นเวลา 30 นาที เมื่อตัวละครเปิดใช้งาน Item",
-            "น้ำหนัก : 1"
-        ],
-        "identifiedDisplayName": "Battle Manual 75",
-        "identifiedResourceName": "전투교범",
-        "identifiedDescriptionName": [
-            "คู่มืออธิบายวิธีการต่อสู้ที่ให้ประสิทธิภาพสูงยิ่งขึ้น คำอธิบายของคู่มือที่เขียนออกมาได้อย่างละเอียด ทำให้ผู้อ่านเข้าใจได้โดยง่าย",
-            "^000088เพิ่มค่าประสบการณ์ 75% ให้ทั้ง Base & Job EXP",
-            "^000088เป็นเวลา 30 นาที เมื่อตัวละครเปิดใช้งาน Item",
-            "น้ำหนัก : 1"
-        ],
-        "slotCount": 0,
-        "ClassNum": 0
-    },
-    "18798": {
-        "unidentifiedDisplayName": "Hairband",
-        "unidentifiedResourceName": "머리띠",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา ใช้ [Magnifier] ในการตรวจสอบไอเท็ม"
-        ],
-        "identifiedDisplayName": "Pink Angel Hairband",
-        "identifiedResourceName": "핑크천사의머리띠",
-        "identifiedDescriptionName": [
-            "มันเป็นหมวกรูปปีกอันสวยงามที่ทำขึ้นโดยรวบรวมขนนกเทวดามาติดกับที่คาดผม",
-            "AGI + 1 , LUK + 1",
-            "MDEF + 3",
-            "ลดดาเมจต่อศัตรูประเภท Demon 3%",
-            "^ff0000อัพเดตเพิ่มเติม",
-            "เมื่ออัพเกรดถึงขั้น 7 , เพิ่มการโจมตีกายภาพและเวทมนตร์ต่อมอนสเตอร์ Demi Human และ Player10 %",
-            "ประเภท: Helm พลังป้องกัน : 4",
-            "ตำแหน่ง: Upper น้ำหนัก : 10",
-            "อาชีพที่สวมใส่ได้ : ทุกอาชีพ ยกเว้น Novice"
-        ],
-        "slotCount": 1,
-        "ClassNum": 916
-    },
-    "18797": {
-        "unidentifiedDisplayName": "Hairband",
-        "unidentifiedResourceName": "머리띠",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา ใช้ [Magnifier] ในการตรวจสอบไอเท็ม"
-        ],
-        "identifiedDisplayName": "Deep Blue Angel Hairband",
-        "identifiedResourceName": "딥블루천사의머리띠",
-        "identifiedDescriptionName": [
-            "มันเป็นหมวกรูปปีกอันสวยงามที่ทำขึ้นโดยรวบรวมขนนกเทวดามาติดกับที่คาดผม",
-            "AGI + 1 , LUK + 1",
-            "MDEF + 3",
-            "ลดดาเมจต่อศัตรูประเภท Demon 3%",
-            "^ff0000อัพเดตเพิ่มเติม",
-            "เมื่ออัพเกรดถึงขั้น 7 , เพิ่มพลังป้องกันการโจมตีกายภาพและเวทมนตร์จากมอนสเตอร์ Demi Human และ Player10 %",
-            "ประเภท: Helm พลังป้องกัน : 4",
-            "ตำแหน่ง: Upper น้ำหนัก : 10",
-            "อาชีพที่สวมใส่ได้ : ทุกอาชีพ ยกเว้น Novice"
-        ],
-        "slotCount": 1,
-        "ClassNum": 915
-    },
-    "1000896": {
-        "unidentifiedDisplayName": "Blessed Angel Coin",
-        "unidentifiedResourceName": "금화",
+    "31579": {
+        "unidentifiedDisplayName": "Hat",
+        "unidentifiedResourceName": "햇",
         "unidentifiedDescriptionName": [
             "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "Blessed Angel Coin",
-        "identifiedResourceName": "금화",
+        "identifiedDisplayName": "Costume I Love Game RO",
+        "identifiedResourceName": "러브게임햇",
         "identifiedDescriptionName": [
-            "^ff0000ไอเท็มชิ้นนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
-            "เหรียญสีทองแวววาวระยิบระยับ",
-            "ลองเอาไปหยอดที่ [Guarantee Gacha] พิกัดแผนที่กิจกรรมกันเถอะ",
-            "(ไอเท็มดังกล่าวจะถูกลบออกหลังจากปิดปรับปรุงเซิฟเวอร์วันที่ 29 เมษายน 2569)",
-            "น้ำหนัก : 1"
-        ],
-        "slotCount": 0,
-        "ClassNum": 0,
-        "costume": false
-    },
-    "31062": {
-        "unidentifiedDisplayName": "Ribbon",
-        "unidentifiedResourceName": "리본",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "Costume Eleanor Wig",
-        "identifiedResourceName": "엘레노아가발",
-        "identifiedDescriptionName": [
-            "คอสตูมตกแต่งที่สร้างขึ้นมาจากแรงบันดาลใจเมื่อเห็นทรงผมของ Eleanor",
-            "เพื่อเป็นการดึงเอาความน่ารักของ Eleanor ออกมา จึงมีการเพิ่มให้หูสามารถเคลื่อนไหวได้",
-            "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Upper น้ำหนัก : 0",
+            "หมวก I Love Game RO สุดคูล ไอเทมปังที่ต้องมีติดตัว",
+            "ประเภท : Costumeพลังป้องกัน : 0",
+            "ตำแหน่ง : Upperน้ำหนัก : 0",
             "เลเวลที่ต้องการ : 1",
             "อาชีพที่ใส่ได้ : ทุกอาชีพ"
         ],
         "slotCount": 0,
-        "ClassNum": 1502,
+        "ClassNum": 1306,
         "costume": true
     },
-    "31315": {
+    "420221": {
         "unidentifiedDisplayName": "Ribbon",
         "unidentifiedResourceName": "리본",
         "unidentifiedDescriptionName": [
             "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "Costume Stall of Angel",
-        "identifiedResourceName": "C_Stall_Of_Angel",
+        "identifiedDisplayName": "Costume Skia Hairstyle",
+        "identifiedResourceName": "C_Skia_Two_Side_Up",
         "identifiedDescriptionName": [
-            "แผงคอที่มีปีกสีขาวขนาดเล็กติดอยู่",
-            "หากคาดไว้ที่ไหล่ จะให้ความรู้สึกเหมือนถูกโอบอุ้มไว้ด้วยขนสัตว์นุ่มนิ่ม",
+            "วิกผมที่ทำให้คุณได้ลองทรงผมอื่น ๆ ที่ต่างจากปกติได้",
+            "ผมแกละครึ่งหัวที่ทำให้ดูมีชีวิตชีวาและน่ารัก คล้ายกับทรงของ Skia Nerious",
             "ประเภท : Costume พลังป้องกัน : 0",
             "ตำแหน่ง : Lower น้ำหนัก : 0",
             "เลเวลที่ต้องการ : 1",
             "อาชีพที่ใส่ได้ : ทุกอาชีพ"
         ],
         "slotCount": 0,
-        "ClassNum": 1664,
+        "ClassNum": 2389,
         "costume": true
     },
-    "31923": {
-        "unidentifiedDisplayName": "Costume Baby Polar Bear",
-        "unidentifiedResourceName": "C_Baby_Polar_Bear",
+    "480430": {
+        "unidentifiedDisplayName": "Hood",
+        "unidentifiedResourceName": "후드",
         "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+            "ไอเท็มนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้"
         ],
-        "identifiedDisplayName": "Costume Baby Polar Bear",
-        "identifiedResourceName": "C_Baby_Polar_Bear",
+        "identifiedDisplayName": "Costume Senbon Zakura",
+        "identifiedResourceName": "C_Sakura_Rod",
         "identifiedDescriptionName": [
-            "ตุ๊กตาหมีขั้วโลกที่ทำขึ้นอย่างดี จนมีคนหลงคิดว่าเป็นลูกหมีขั้วโลกของจริง",
-            "ได้อารมณ์ราวกับใช้ชีวิตไปกับลูกหมีขั้วโลกเลยล่ะ",
-            "ประเภท: Costume พลังป้องกัน: 0",
-            "ตำแหน่ง: Middle  น้ำหนัก: 0",
-            "เลเวลที่ต้องการ: 1",
-            "อาชีพที่ใส่ได้: ทุกอาชีพ"
-        ],
-        "slotCount": 0,
-        "ClassNum": 1994,
-        "costume": true
-    },
-    "20195": {
-        "unidentifiedDisplayName": "Ribbon",
-        "unidentifiedResourceName": "리본",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "Costume Scratching Cat",
-        "identifiedResourceName": "할퀴는고양이",
-        "identifiedDescriptionName": [
-            "หน้ากากรูปแมวที่เกาะบนใบหน้าและมีรอยขีดข่วน",
-            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 3 ได้",
-            "ประเภท : Costumeพลังป้องกัน : 0",
-            "ตำแหน่ง : Middle-Lower น้ำหนัก : 0",
+            "คทาที่สร้างจากไม้ศักดิ์สิทธิ์ของต้นซากุระ",
+            "จงโปรยปราย ไม่ว่าจะในฤดูกาลใด",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Garment น้ำหนัก : 0",
             "เลเวลที่ต้องการ : 1",
             "อาชีพที่ใส่ได้ : ทุกอาชีพ"
         ],
         "slotCount": 0,
-        "ClassNum": 1292,
+        "ClassNum": 213,
         "costume": true
     },
-    "107004": {
-        "unidentifiedDisplayName": "Special April Costume Box",
-        "unidentifiedResourceName": "모범생선물상자",
+    "480458": {
+        "unidentifiedDisplayName": "Hood",
+        "unidentifiedResourceName": "후드",
         "unidentifiedDescriptionName": [
-            "กล่องที่บรรจุ Costume น่ารักๆไว้มากมาย",
-            "เมื่อเปิดออก จะมีโอกาสได้รับไอเท็ม 1 ชิ้นแบบสุ่มดังต่อไปนี้",
-            "",
-            "Costume Roast Memory",
-            "Costume Scratching Cat",
-            "Costume Baby Polar Bear",
-            "Costume Stall of Angel",
-            "Costume Eleanor Wig"
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "Special April Costume Box",
-        "identifiedResourceName": "모범생선물상자",
+        "identifiedDisplayName": "Costume Fallen Heaven Lost Wing",
+        "identifiedResourceName": "C_FH_Lostwing",
         "identifiedDescriptionName": [
-            "กล่องที่บรรจุ Costume น่ารักๆไว้มากมาย",
-            "เมื่อเปิดออก จะมีโอกาสได้รับไอเท็ม 1 ชิ้นแบบสุ่มดังต่อไปนี้",
+            "ปีกที่ทำมาจากวิญญาณของผู้วายชนม์ เมื่อสวมใส่มันจะทำให้รับรู้ถึงพลังที่ถูกสกัดกั้นเอาไว้",
+            "ราวกับว่าความทรงจำของผู้ที่จากไปได้หล่อหลอมกลายเป็นพลังในตัวเรา",
             "",
-            "Costume Roast Memory",
-            "Costume Scratching Cat",
-            "Costume Baby Polar Bear",
-            "Costume Stall of Angel",
-            "Costume Eleanor Wig",
-            "น้ำหนัก : 0"
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Garment น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 225,
+        "costume": true
+    },
+    "24240": {
+        "unidentifiedDisplayName": "Shadow Shoes",
+        "unidentifiedResourceName": "슈즈쉐도우",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Caster Shadow Shoes",
+        "identifiedResourceName": "슈즈쉐도우",
+        "identifiedDescriptionName": [
+            "รองเท้าที่สวมใส่เพิ่มเติม สามารถใช้งานแบบชิ้นเดียวได้แต่เอฟเฟกต์ของมันจะลดน้อยลง",
+            "MATK +5",
+            "เมื่อใช้สกิล ลดปริมาณ SP ที่ใช้ 1%",
+            "ทุก ๆ การอัพเกรด 2 ขั้น ลดระยะเวลาร่ายแบบแปรผัน 1%",
+            "เมื่อสวมใส่ ^32CD32Caster Shadow (Shoes, Shield, Armor) ร่วมกัน",
+            "เมื่อใช้สกิล ลดปริมาณ SP ที่ใช้ 1%",
+            "ทุก ๆ ค่าอัพเกรดรวมของเซตไอเท็ม 5 ขั้น ลดระยะเวลาร่ายแบบแปรผัน 1%",
+            "เมื่อค่าอัพเกรดรวมกันตั้งแต่ 25 ขึ้นไป เมื่อใช้สกิล ลดปริมาณ SP ที่ใช้ 1% เพิ่มเติม",
+            "ประเภท : Shadow",
+            "ตำแหน่ง : Shoes น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": true
+    },
+    "24241": {
+        "unidentifiedDisplayName": "Shadow Shield",
+        "unidentifiedResourceName": "쉴드쉐도우",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Caster Shadow Shield",
+        "identifiedResourceName": "쉴드쉐도우",
+        "identifiedDescriptionName": [
+            "โล่เล็กที่สามารถสวมใส่ที่แขนได้ สามารถใช้งานแบบชิ้นเดียวได้แต่เอฟเฟกต์การป้องกันของมันจะลดน้อยลง",
+            "MATK +5",
+            "เมื่อใช้สกิล ลดปริมาณ SP ที่ใช้ 1%",
+            "ทุก ๆ การอัพเกรด 2 ขั้น ลดระยะเวลาร่ายแบบแปรผัน 1%",
+            "เมื่อสวมใส่ ^32CD32Caster Shadow (Shoes, Shield, Armor) ร่วมกัน",
+            "เมื่อใช้สกิล ลดปริมาณ SP ที่ใช้ 1%",
+            "ทุก ๆ ค่าอัพเกรดรวมของเซตไอเท็ม 5 ขั้น ลดระยะเวลาร่ายแบบแปรผัน 1%",
+            "เมื่อค่าอัพเกรดรวมกันตั้งแต่ 25 ขึ้นไป เมื่อใช้สกิล ลดปริมาณ SP ที่ใช้ 1% เพิ่มเติม",
+            "ประเภท : Shadow",
+            "ตำแหน่ง : Shield น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": true
+    },
+    "24242": {
+        "unidentifiedDisplayName": "Shadow Armor",
+        "unidentifiedResourceName": "아머쉐도우",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Caster Shadow Armor",
+        "identifiedResourceName": "아머쉐도우",
+        "identifiedDescriptionName": [
+            "ชุดเกราะที่เพิ่มพลังป้องกันเมื่อสวมใส่เพิ่มบนเกราะอีกที สามารถใส่แบบชิ้นเดียวได้ แต่ความสามารถในการป้องกันจะลดลงไปอีก",
+            "MATK +5",
+            "เมื่อใช้สกิล ลดปริมาณ SP ที่ใช้ 1%",
+            "ทุก ๆ การอัพเกรด 2 ขั้น ลดระยะเวลาร่ายแบบแปรผัน 1%",
+            "เมื่อสวมใส่ ^32CD32Caster Shadow (Shoes, Shield, Armor) ร่วมกัน",
+            "เมื่อใช้สกิล ลดปริมาณ SP ที่ใช้ 1%",
+            "ทุก ๆ ค่าอัพเกรดรวมของเซตไอเท็ม 5 ขั้น ลดระยะเวลาร่ายแบบแปรผัน 1%",
+            "เมื่อค่าอัพเกรดรวมกันตั้งแต่ 25 ขึ้นไป เมื่อใช้สกิล ลดปริมาณ SP ที่ใช้ 1% เพิ่มเติม",
+            "ประเภท : Shadow",
+            "ตำแหน่ง : Armor น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": true
+    },
+    "24033": {
+        "unidentifiedDisplayName": "Shadow Weapon",
+        "unidentifiedResourceName": "웨폰쉐도우",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Healing Shadow Weapon",
+        "identifiedResourceName": "웨폰쉐도우",
+        "identifiedDescriptionName": [
+            "ถุงมือที่สวมใส่กับมือที่ถืออาวุธ เพื่อดึงศักยภาพของผู้สวมใส่ออกมา",
+            "MATK +10",
+            "เมื่ออัพเกรดถึงขั้น 7 เพิ่มปริมาณการ Heal 5%",
+            "ประเภท : Shadow",
+            "ตำแหน่ง : Weapon น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": true
+    },
+    "24366": {
+        "unidentifiedDisplayName": "Shadow Shield",
+        "unidentifiedResourceName": "쉴드쉐도우",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Healing Shadow Shield",
+        "identifiedResourceName": "쉴드쉐도우",
+        "identifiedDescriptionName": [
+            "โล่เล็กที่สามารถสวมใส่ที่แขนได้ สามารถใช้งานแบบชิ้นเดียวได้แต่เอฟเฟกต์การฟื้นฝูของมันจะลดน้อยลง",
+            "MATK +10",
+            "เมื่ออัพเกรดถึงขั้น 7 เพิ่มปริมาณการ Heal 3%",
+            "เมื่ออัพเกรดถึงขั้น 9 เพิ่มปริมาณการ Heal อีก 5%",
+            "ประเภท : Shadow",
+            "ตำแหน่ง : Shield น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": true
+    },
+    "24367": {
+        "unidentifiedDisplayName": "Shadow Shoes",
+        "unidentifiedResourceName": "슈즈쉐도우",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Healing Shadow Shoes",
+        "identifiedResourceName": "슈즈쉐도우",
+        "identifiedDescriptionName": [
+            "รองเท้าที่สวมใส่เพิ่มเติม สามารถใช้งานแบบชิ้นเดียวได้แต่เอฟเฟกต์ของมันจะลดน้อยลง",
+            "MATK +10",
+            "ทุก ๆ การอัพเกรดเพิ่ม HP 10",
+            "เมื่ออัพเกรดถึงขั้น 7 เพิ่มปริมาณการ Heal 3%",
+            "เมื่ออัพเกรดถึงขั้น 9 เพิ่มปริมาณการ Heal อีก 5%",
+            "เมื่อสวมใส่ ^32CD32Healing Shadow (Shoes, Shield, Armor) ร่วมกัน",
+            "เมื่อใช้สกิล ลดปริมาณ SP ที่ใช้ 1%",
+            "ทุก ๆ ค่าอัพเกรดรวมของเซตไอเท็ม 5 ขั้น ลดระยะเวลาร่ายแบบแปรผัน 1%",
+            "เมื่อค่าอัพเกรดรวมกันตั้งแต่ 25 ขึ้นไป เมื่อใช้สกิล ลดปริมาณ SP ที่ใช้ 1% เพิ่มเติม",
+            "ประเภท : Shadow",
+            "ตำแหน่ง : Shoes น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": true
+    },
+    "450545": {
+        "unidentifiedDisplayName": "Armor",
+        "unidentifiedResourceName": "우든메일",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Capricorn Mail",
+        "identifiedResourceName": "Capricon_Mail_J",
+        "identifiedDescriptionName": [
+            "Mdef + 5",
+            "เมื่ออัพเกรดถึงขั้น 8 ลดการใช้ SP ของสกิลลง 20%",
+            "เมื่ออัพเกรดถึงขั้น 9 Atk + 50, Matk + 50",
+            "เมื่ออัพเกรดถึงขั้น 11 MaxHP + 1000 , Perfect Dodge + 10",
+            "เมื่ออัพเกรดถึงขั้น 13 เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อเป้าหมายทุกธาตุ 10%",
+            "เมื่อสวมใส่โดย Stalker Cls จะเพิ่ม Atk + 80, Matk + 80,",
+            "MaxHP + 10%, MaxSP + 10%",
+            "",
+            "ประเภท : Armor  พลังป้องกัน : 100",
+            "น้ำหนัก : 100",
+            "เลเวลที่ต้องการ : 70",
+            "อาชีพที่ใส่ได้ : Stalker Class"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "450546": {
+        "unidentifiedDisplayName": "Armor",
+        "unidentifiedResourceName": "우든메일",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Aquarius Mail",
+        "identifiedResourceName": "Aquarius_Mail_J",
+        "identifiedDescriptionName": [
+            "Mdef + 5",
+            "เมื่ออัพเกรดถึงขั้น 8 ลดเวลาการร่าย Heaven's Drive ลง 100%",
+            "เมื่ออัพเกรดถึงขั้น 9 Matk + 50 ",
+            "เมื่ออัพเกรดถึงขั้น 11 MaxHP + 1000 , ลดดีเลย์หลังใช้สกิลลง 10%",
+            "เมื่ออัพเกรดถึงขั้น 13 เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อเป้าหมายทุกธาตุ 10%",
+            "เมื่อสวมใส่โดย Professor Cls จะเพิ่ม Matk + 80, MaxHP + 10%,",
+            "MaxSP + 10%, เพิ่มความเสียหายเวทมนตร์ต่อศัตรูธาตุ Shadow 20%",
+            "",
+            "ประเภท : Armor  พลังป้องกัน : 100",
+            "น้ำหนัก : 100",
+            "เลเวลที่ต้องการ : 70",
+            "อาชีพที่ใส่ได้ : Professor Cls"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "450547": {
+        "unidentifiedDisplayName": "Armor",
+        "unidentifiedResourceName": "우든메일",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Pisces Mail",
+        "identifiedResourceName": "Pisces_Mail_J",
+        "identifiedDescriptionName": [
+            "Mdef + 5",
+            "เมื่ออัพเกรดถึงขั้น 8 เพิ่มความเสียหายเวทมนตร์ธาตุไฟ น้ำ ลม และดิน 15%",
+            "เมื่ออัพเกรดถึงขั้น 9 Matk + 50",
+            "เมื่ออัพเกรดถึงขั้น 11 ความเร็วโจมตี + 10%, MaxHP + 1000",
+            "เมื่ออัพเกรดถึงขั้น 13 เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อเป้าหมายทุกธาตุ 10%",
+            "เมื่อสวมใส่โดย High Wizard Cls, Matk + 80, MaxHP + 10%, MaxSP + 10%,",
+            "ลดดีเลย์หลังใช้สกิลลง 10%",
+            "",
+            "ประเภท : Armor  พลังป้องกัน : 100",
+            "น้ำหนัก : 100",
+            "เลเวลที่ต้องการ : 70",
+            "อาชีพที่ใส่ได้ : High Wizard Cls"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "450548": {
+        "unidentifiedDisplayName": "Armor",
+        "unidentifiedResourceName": "메일",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Aries Mail",
+        "identifiedResourceName": "Aries_Mail_J",
+        "identifiedDescriptionName": [
+            "Mdef + 5",
+            "เมื่ออัพเกรดถึงขั้น 8 ลดความเสียหายที่ได้รับจากบอสลง 5%",
+            "เมื่ออัพเกรดถึงขั้น 9 Atk + 50",
+            "เมื่ออัพเกรดถึงขั้น 11 MaxHP + 1000 , ลดดีเลย์หลังใช้สกิลลง 10%",
+            "เมื่ออัพเกรดถึงขั้น 13 เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อเป้าหมายทุกธาตุ 10%",
+            "เมื่อสวมใส่โดย Paladin Cls จะเพิ่ม Atk + 80, MaxHP + 10%, MaxSP + 10%",
+            "",
+            "ประเภท : Armor  พลังป้องกัน : 100",
+            "น้ำหนัก : 100",
+            "เลเวลที่ต้องการ : 70",
+            "อาชีพที่ใส่ได้ : Paladin Cls"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "450549": {
+        "unidentifiedDisplayName": "Armor",
+        "unidentifiedResourceName": "우든메일",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Taurus Mail",
+        "identifiedResourceName": "Taurus_Mail_J",
+        "identifiedDescriptionName": [
+            "Mdef + 5",
+            "เมื่ออัพเกรดถึงขั้น 8 ลดความเสียหายที่ได้รับจาก Critical Slash ลง 100%",
+            "เมื่ออัพเกรดถึงขั้น 9 Atk + 50, Hit + 50",
+            "เมื่ออัพเกรดถึงขั้น 11 MaxHP + 1000 , INT + 10",
+            "เมื่ออัพเกรดถึงขั้น 13 เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อเป้าหมายทุกธาตุ 10%",
+            "เมื่อสวมใส่โดย Creator Cls, Atk + 80, เสริมพลังเกราะด้วยคุณสมบัติศักดิ์สิทธิ์",
+            "",
+            "ประเภท : Armor  พลังป้องกัน : 100",
+            "น้ำหนัก : 100",
+            "เลเวลที่ต้องการ : 70",
+            "อาชีพที่ใส่ได้ : Creator Cls"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "450550": {
+        "unidentifiedDisplayName": "Armor",
+        "unidentifiedResourceName": "우든메일",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Gemini Mail",
+        "identifiedResourceName": "Gemini_Mail_J",
+        "identifiedDescriptionName": [
+            "Mdef + 5",
+            "เมื่ออัพเกรดถึงขั้น 8 เพิ่มความเสียหายทางกายภาพและเวทมนตร์ 30%",
+            "เมื่ออัพเกรดถึงขั้น 9 Atk + 50, Matk + 50",
+            "เมื่ออัพเกรดถึงขั้น 11 MaxHP + 1000 , ลดดีเลย์หลังใช้สกิลลง 10%",
+            "เมื่ออัพเกรดถึงขั้น 13 เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อเป้าหมายทุกธาตุ 10%",
+            "เมื่อสวมใส่โดย Clown Cls หรือ Gypsy Cls จะเพิ่ม Atk + 80, Matk + 80, MaxHP + 10%, MaxSP + 10%",
+            "",
+            "ประเภท : Armor  พลังป้องกัน : 100",
+            "น้ำหนัก : 100",
+            "เลเวลที่ต้องการ : 70",
+            "อาชีพที่ใส่ได้ : Archer Class"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "450551": {
+        "unidentifiedDisplayName": "Armor",
+        "unidentifiedResourceName": "우든메일",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Cancer Mail",
+        "identifiedResourceName": "Cancer_Mail",
+        "identifiedDescriptionName": [
+            "Mdef + 5.",
+            "เมื่ออัพเกรดถึงขั้น 8 ลดความเสียหายที่ได้รับจาก Critical Slash ลง 100%",
+            "เมื่ออัพเกรดถึงขั้น 9 Atk + 50, Hit + 50.",
+            "เมื่ออัพเกรดถึงขั้น 11 MaxHP + 1000 , ทำให้ไม่กระเด็น",
+            "เมื่ออัพเกรดถึงขั้น 13 เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อเป้าหมายทุกธาตุ 10%",
+            "เมื่อสวมใส่โดย Whitesmith Cls, Atk + 80, MaxHP + 10%, MaxSP + 10%,",
+            "",
+            "ประเภท : Armor  พลังป้องกัน : 100",
+            "น้ำหนัก : 100",
+            "เลเวลที่ต้องการ : 70",
+            "อาชีพที่ใส่ได้ : Whitesmith Cls"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "450552": {
+        "unidentifiedDisplayName": "Armor",
+        "unidentifiedResourceName": "우든메일",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Leo Mail",
+        "identifiedResourceName": "Leo_Mail_J",
+        "identifiedDescriptionName": [
+            "Mdef + 5.",
+            "เมื่ออัพเกรดถึงขั้น 8 ทำให้ไม่กระเด็น",
+            "เมื่ออัพเกรดถึงขั้น 9 Atk + 50, SP + 80.",
+            "เมื่ออัพเกรดถึงขั้น 11 MaxHP + 1000 , MaxSP + 100",
+            "เมื่ออัพเกรดถึงขั้น 13 เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อเป้าหมายทุกธาตุ 10%",
+            "เมื่อสวมใส่โดย Champion Cls, Atk + 80, MaxHP + 10%, MaxSP + 10%,",
+            "",
+            "ประเภท : Armor  พลังป้องกัน : 100",
+            "น้ำหนัก : 100",
+            "เลเวลที่ต้องการ : 70",
+            "อาชีพที่ใส่ได้ : Champion Cls"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "450553": {
+        "unidentifiedDisplayName": "Armor",
+        "unidentifiedResourceName": "우든메일",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Virgo Mail",
+        "identifiedResourceName": "Virgo_Mail_J",
+        "identifiedDescriptionName": [
+            "Mdef + 5",
+            "เมื่ออัพเกรดถึงขั้น 8 ลดความเสียหายที่ได้รับจากบอสลง 5%",
+            "เมื่ออัพเกรดถึงขั้น 9 Matk + 50",
+            "เมื่ออัพเกรดถึงขั้น 11 MaxHP + 1000, ลดดีเลย์หลังใช้สกิลลง 10%",
+            "เมื่ออัพเกรดถึงขั้น 13 เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อเป้าหมายทุกธาตุ 10%",
+            "เมื่อสวมใส่โดย High Priest Cls, Matk + 80, MaxHP + 10%, MaxSP + 10%",
+            "",
+            "ประเภท : Armor  พลังป้องกัน : 100",
+            "น้ำหนัก : 100",
+            "เลเวลที่ต้องการ : 70",
+            "อาชีพที่ใส่ได้ : High Priest Cls"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "450554": {
+        "unidentifiedDisplayName": "Armor",
+        "unidentifiedResourceName": "메일",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Libra Mail",
+        "identifiedResourceName": "Libra_Mail_J",
+        "identifiedDescriptionName": [
+            "Mdef + 5",
+            "เมื่ออัพเกรดถึงขั้น 8 ลดความเสียหายที่ได้รับจากบอสลง 5%",
+            "เมื่ออัพเกรดถึงขั้น 9 Atk + 50",
+            "เมื่ออัพเกรดถึงขั้น 11 MaxHP + 1000 , ลดระยะเวลาร่ายหลังใช้สกิลลง 10%",
+            "เมื่ออัพเกรดถึงขั้น 13 เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อเป้าหมายทุกธาตุ 10%",
+            "เมื่อสวมใส่โดย Lord Knight Cls, Atk + 80, MaxHP + 10%, MaxSP + 10%",
+            "",
+            "ประเภท : Armor  พลังป้องกัน : 100",
+            "น้ำหนัก : 100",
+            "เลเวลที่ต้องการ : 70",
+            "อาชีพที่ใส่ได้ : Lord Knight Cls"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "450555": {
+        "unidentifiedDisplayName": "Armor",
+        "unidentifiedResourceName": "우든메일",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Scorpio Mail",
+        "identifiedResourceName": "Scorpio_Mail_J",
+        "identifiedDescriptionName": [
+            "Mdef + 5",
+            "เมื่ออัพเกรดถึงขั้น 8 ทำให้ไม่กระเด็น",
+            "เมื่ออัพเกรดถึงขั้น 9 Atk + 50, Flee + 50",
+            "เมื่ออัพเกรดถึงขั้น 11 MaxHP + 1000 , Flee + 50",
+            "เมื่ออัพเกรดถึงขั้น 13 เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อเป้าหมายทุกธาตุ 10%",
+            "เมื่อสวมใส่โดย Assasin Cross Cls, Atk + 80, MaxHP + 10%, MaxSP + 10%",
+            "",
+            "ประเภท : Armor  พลังป้องกัน : 100",
+            "น้ำหนัก : 100",
+            "เลเวลที่ต้องการ : 70",
+            "อาชีพที่ใส่ได้ : Assasin Cross Cls"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "450556": {
+        "unidentifiedDisplayName": "Armor",
+        "unidentifiedResourceName": "우든메일",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Sagittarius Mail",
+        "identifiedResourceName": "Sagittarius_Mail_J",
+        "identifiedDescriptionName": [
+            "Mdef + 5",
+            "เมื่ออัพเกรดถึงขั้น 8 เพิ่มความเสียหายคริติคอล 20%",
+            "เมื่ออัพเกรดถึงขั้น 9 Atk + 50",
+            "เมื่ออัพเกรดถึงขั้น 11 MaxHP + 1000 , ลดดีเลย์หลังใช้สกิลลง 10%",
+            "เมื่ออัพเกรดถึงขั้น 13 เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อเป้าหมายทุกธาตุ 10%",
+            "เมื่อสวมใส่โดย Sniper Cls จะเพิ่ม Atk + 80, MaxHP + 10%, MaxSP + 10%",
+            "",
+            "ประเภท : Armor  พลังป้องกัน : 100",
+            "น้ำหนัก : 100",
+            "เลเวลที่ต้องการ : 70",
+            "อาชีพที่ใส่ได้ : Sniper Cls"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "450557": {
+        "unidentifiedDisplayName": "Armor",
+        "unidentifiedResourceName": "코튼셔츠",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Ophiuchus Suit",
+        "identifiedResourceName": "Noblesse_Sharpen_Suit",
+        "identifiedDescriptionName": [
+            "Mdef + 5",
+            "เมื่ออัพเกรดถึงขั้น 8 MaxHP + 3000",
+            "เมื่ออัพเกรดถึงขั้น 9 Atk + 50, Matk + 50,",
+            "เมื่ออัพเกรดถึงขั้น 11 MaxHP + 1000 , ลดดีเลย์หลังใช้สกิลลง 10%",
+            "เมื่ออัพเกรดถึงขั้น 13 เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อเป้าหมายทุกธาตุ 10%",
+            "เมื่อสวมใส่โดย Extended Cls เพิ่ม Atk + 80, Matk + 80,",
+            "MaxHP + 10%, MaxSP + 10%",
+            "",
+            "ประเภท : Armor  พลังป้องกัน : 100",
+            "น้ำหนัก : 100",
+            "เลเวลที่ต้องการ : 99",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "300534": {
+        "unidentifiedDisplayName": "[Event] Seyren's Memory",
+        "unidentifiedResourceName": "검사의혼",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[Event] Seyren's Memory",
+        "identifiedResourceName": "검사의혼",
+        "identifiedDescriptionName": [
+            "Seyren's Memory,",
+            "เมื่อโจมตีทางกายภาพ มีโอกาส 3% ที่จะเพิ่ม Damage ทางกายภาพระยะใกล้และไกล  10% เป็นระยะเวลา 5 วินาที ",
+            "เพิ่ม Damage สกิล Clashing Spiral 15%",
+            "เพิ่ม Damage สกิล Bowling Bash 15%",
+            "เพิ่ม Damage สกิล Brandish Spear 15%",
+            "^ff0000ไม่แสดงผลในพื้นที่ GvG และ PvP"
         ],
         "slotCount": 0,
         "ClassNum": 0,
         "costume": false
     },
-    "107016": {
-        "unidentifiedDisplayName": "Blessed Angel Scroll",
-        "unidentifiedResourceName": "Angelgolt_Egg",
+    "300535": {
+        "unidentifiedDisplayName": "[Event] Howard's Memory",
+        "unidentifiedResourceName": "상인의혼",
         "unidentifiedDescriptionName": [
-            "ม้วนคัมภีร์ศักดิ์สิทธิ์ที่ถูกผนึกด้วยพลังแห่งเทวทูตชั้นสูง",
-            "ตัวอักษรโบราณสลักด้วยแสงสีทองจะปรากฏขึ้นเมื่อผู้ถือครองมีจิตบริสุทธิ์เท่านั้น"
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "Blessed Angel Scroll",
-        "identifiedResourceName": "Angelgolt_Egg",
+        "identifiedDisplayName": "[Event] Howard's Memory",
+        "identifiedResourceName": "상인의혼",
         "identifiedDescriptionName": [
-            "ม้วนคัมภีร์ศักดิ์สิทธิ์ที่ถูกผนึกด้วยพลังแห่งเทวทูตชั้นสูง",
-            "ตัวอักษรโบราณสลักด้วยแสงสีทองจะปรากฏขึ้นเมื่อผู้ถือครองมีจิตบริสุทธิ์เท่านั้น",
-            "^ff0000หากเปิดใช้งานหลังวันที่ 29 เมษายน 2569 หลังปิดปรับปรุงประจำสัปดาห์ จะไม่ได้รับ   Blessed Angel Coin ",
+            "Howard's Memory,",
+            "ลด Cooldown สกิล Hammerfall 1 วินาที",
+            "เพิ่ม Damage สกิล Hammerfall 15%",
+            "เพิ่ม Damage สกิล Cart Termination 15%",
+            "เพิ่ม Damage สกิล Mammonite 15%",
+            "^ff0000ไม่แสดงผลในพื้นที่ GvG และ PvP"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "300536": {
+        "unidentifiedDisplayName": "[Event] Eremes's Memory",
+        "unidentifiedResourceName": "도둑의혼",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[Event] Eremes's Memory",
+        "identifiedResourceName": "도둑의혼",
+        "identifiedDescriptionName": [
+            "Eremes's Memory,",
+            "CRI + 21",
+            "ลด Cooldown สกิล Soul Destroyer 0.2 วินาที",
+            "เพิ่ม Damage สกิล Sonic Blow 15%",
+            "เพิ่ม Damage สกิล Soul Destroyer 15%",
+            "เพิ่ม Damage สกิล Meteor Assault 15%",
+            "^ff0000ไม่แสดงผลในพื้นที่ GvG และ PvP"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "300537": {
+        "unidentifiedDisplayName": "[Event] Kathryne's Memory",
+        "unidentifiedResourceName": "마법사의혼",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[Event] Kathryne's Memory",
+        "identifiedResourceName": "마법사의혼",
+        "identifiedDescriptionName": [
+            "Kathryne's Memory,",
+            "ลดระยะเวลาร่ายแบบแปรผัน 15%",
+            "ลด Delay หลังใช้สกิล 9%",
+            "เพิ่ม Damage สกิล Meteor Storm 15%",
+            "เพิ่ม Damage สกิล Napalm Vulcan 15%",
+            "เพิ่ม Damage สกิล Gravitational Field 15%",
+            "^ff0000ไม่แสดงผลในพื้นที่ GvG และ PvP"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "300538": {
+        "unidentifiedDisplayName": "[Event] Margaretha's Memory",
+        "unidentifiedResourceName": "복사의혼",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[Event] Margaretha's Memory",
+        "identifiedResourceName": "복사의혼",
+        "identifiedDescriptionName": [
+            "Margaretha's Memory,",
+            "ลด Cooldown สกิล Magnus Exorcismus 2 วินาที",
+            "เพิ่ม Damage สกิล Magnus Exorcismus 15%",
+            "เพิ่มความรุนแรงของสกิล Sanctuary 15%",
+            "เพิ่ม Damage สกิล Holy Light 15%",
+            "^ff0000ไม่แสดงผลในพื้นที่ GvG และ PvP"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "300539": {
+        "unidentifiedDisplayName": "[Event] Cecil's Memory",
+        "unidentifiedResourceName": "궁수의혼",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[Event] Cecil's Memory",
+        "identifiedResourceName": "궁수의혼",
+        "identifiedDescriptionName": [
+            "Cecil's Memory,",
+            "ลด Delay หลังใช้สกิล 9%",
+            "Critical Damage + 15%",
+            "เพิ่ม Damage สกิล Focused Arrow Strike 15%",
+            "เพิ่ม Damage สกิล Double Strafe 15%",
+            "เพิ่ม Damage สกิล Blitz Beat 15%",
+            "^ff0000ไม่แสดงผลในพื้นที่ GvG และ PvP"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "300540": {
+        "unidentifiedDisplayName": "[Event] Randel's Memory",
+        "unidentifiedResourceName": "검사피규어",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[Event] Randel's Memory",
+        "identifiedResourceName": "검사피규어",
+        "identifiedDescriptionName": [
+            "Randel's Memory,",
+            "เพิ่ม Damage ทางกายภาพระยะใกล้ 5%",
+            "เพิ่ม Damage ทางกายภาพระยะไกล 5%",
+            "เพิ่ม Damage สกิล Holy Cross 15%",
+            "เพิ่ม Damage สกิล Shield Chain 15%",
+            "เพิ่ม Damage สกิล Grand Cross 15%",
+            "^ff0000ไม่แสดงผลในพื้นที่ GvG และ PvP"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "300541": {
+        "unidentifiedDisplayName": "[Event] Flamel's Memory",
+        "unidentifiedResourceName": "상인피규어",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[Event] Flamel's Memory",
+        "identifiedResourceName": "상인피규어",
+        "identifiedDescriptionName": [
+            "Flamel's Memory,",
+            "ลดระยะเวลาร่ายแบบแปรผัน 10%",
+            "เพิ่ม Damage ทางกายภาพระยะไกล 5%",
+            "เพิ่ม Damage สกิล Acid Demonstration 15%",
+            "เพิ่มความรุนแรงของสกิล Slim Potion Pitcher และผลของการฟื้นฟูขึ้น 15%",
+            "^ff0000ไม่แสดงผลในพื้นที่ GvG และ PvP"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "300542": {
+        "unidentifiedDisplayName": "[Event] Gertie's Memory",
+        "unidentifiedResourceName": "도둑피규어",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[Event] Gertie's Memory",
+        "identifiedResourceName": "도둑피규어",
+        "identifiedDescriptionName": [
+            "Gertie's Memory,",
+            "เมื่อโจมตีทางกายภาพระยะใกล้ มีโอกาส 5% ที่จะใช้สกิล Steal Coin Lv. 5",
+            "เพิ่ม ATK 15%",
+            "เพิ่ม Damage สกิล Raid 15%",
+            "เพิ่ม Damage สกิล Back Stab 15%",
+            "เพิ่ม Damage สกิล Double Strafe 15%",
+            "^ff0000ไม่แสดงผลในพื้นที่ GvG และ PvP"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "300543": {
+        "unidentifiedDisplayName": "[Event] Celia's Memory",
+        "unidentifiedResourceName": "마술사피규어",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[Event] Celia's Memory",
+        "identifiedResourceName": "마술사피규어",
+        "identifiedDescriptionName": [
+            "Celia's Memory,",
+            "ลด Cooldown สกิล Bolt 1 วินาที",
+            "เพิ่ม Damage ทางเวทมนตร์ธาตุ Fire , Earth 10%",
+            "เพิ่ม Damage สกิล Heaven's Drive 15%",
+            "เพิ่ม Damage สกิล Fire Bolt 15%",
+            "เพิ่ม Damage สกิล Soul Strike 15%",
+            "^ff0000ไม่แสดงผลในพื้นที่ GvG และ PvP"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "300544": {
+        "unidentifiedDisplayName": "[Event] Chen's Memory",
+        "unidentifiedResourceName": "복사피규어",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[Event] Chen's Memory",
+        "identifiedResourceName": "복사피규어",
+        "identifiedDescriptionName": [
+            "Chen's Memory,",
+            "Perfect Hit + 20%",
+            "เพิ่ม Damage ทางกายภาพระยะไกล 5%",
+            "เพิ่ม Damage ทางกายภาพระยะใกล้  5%",
+            "เพิ่ม Damage สกิล Chain Combo 5%",
+            "เพิ่ม Damage สกิล Chain Crush Combo 15%",
+            "เพิ่ม Damage สกิล Finger Offensive 15%",
+            "^ff0000ไม่แสดงผลในพื้นที่ GvG และ PvP"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "300545": {
+        "unidentifiedDisplayName": "[Event] Trentini's Memory",
+        "unidentifiedResourceName": "궁수피규어",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[Event] Trentini's Memory",
+        "identifiedResourceName": "궁수피규어",
+        "identifiedDescriptionName": [
+            "Trentini's Memory,",
+            "เพิ่มความเร็วในการโจมตี 10%",
+            "เพิ่ม Damage ทางกายภาพระยะไกล 5%",
+            "เพิ่ม Damage ทางกายภาพระยะใกล้  5%",
+            "เเพิ่ม Damage สกิล Arrow Vulcan 15%",
+            "เพิ่ม Damage สกิล Double Strafe 15%",
+            "เพิ่ม Damage สกิล Dart Arrow 15%",
+            "^ff0000ไม่แสดงผลในพื้นที่ GvG และ PvP"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "300546": {
+        "unidentifiedDisplayName": "[Event] Alphoccio's Memory",
+        "unidentifiedResourceName": "궁수피규어",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[Event] Alphoccio's Memory",
+        "identifiedResourceName": "궁수피규어",
+        "identifiedDescriptionName": [
+            "Alphoccio's Memory,",
+            "เพิ่มความเร็วในการโจมตี 10%",
+            "เพิ่ม Damage ทางกายภาพระยะไกล 5%",
+            "เพิ่ม Damage ทางกายภาพระยะใกล้  5%",
+            "เเพิ่ม Damage สกิล Arrow Vulcan 15%",
+            "เพิ่ม Damage สกิล Double Strafe 15%",
+            "เพิ่ม Damage สกิล Musical Strike 15%",
+            "^ff0000ไม่แสดงผลในพื้นที่ GvG และ PvP"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "315142": {
+        "unidentifiedDisplayName": "[Event] External's Memory",
+        "unidentifiedResourceName": "피규어",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[Event] External's Memory",
+        "identifiedResourceName": "피규어",
+        "identifiedDescriptionName": [
+            "External's Memory",
+            "เมื่อสวมใส่โดย Expanded Super Novice,",
+            "เพิ่มดาเมจทางกายภาพระยะใกล้ 10%",
+            "เพิ่ม Damage ทางเวทมนตร์ทุกธาตุ 10%",
+            "เพิ่ม Damage สกิล Jupitel Thunder 15%",
+            "เพิ่ม Damage สกิล Bowling Bash 15%",
+            "เพิ่ม Damage สกิล Holy Cross 15%",
+            "",
+            "เมื่อสวมใส่โดย Rebellion,",
+            "เพิ่มดาเมจทางกายภาพระยะไกล 10%",
+            "เพิ่ม Damage สกิล Round Trip 15%",
+            "เพิ่ม Damage สกิล Fire Dance 15%",
+            "เพิ่ม Damage สกิล Dragon Tail 15%",
+            "",
+            "เมื่อสวมใส่โดย Kagerou,",
+            "MaxHP + 10%, MaxSP + 5%.",
+            "ลดคูลไทม์ของสกิล Cross Slash 1 วินาที",
+            "เพิ่ม Damage สกิล Cross Slash 15%",
+            "เพิ่ม Damage สกิล Swirling Petal 15%",
+            "เพิ่ม Damage สกิล Kunai Splash 15%",
+            "",
+            "เมื่อสวมใส่โดย Oboro,",
+            "MaxHP + 5%, MaxSP + 10%.",
+            "เพิ่ม Damage ทางเวทมนตร์ทุกธาตุ 10%,",
+            "เพิ่ม Damage สกิล Flaming Petals 15%,",
+            "เพิ่ม Damage สกิล Freezing Spear15%,",
+            "เพิ่ม Damage สกิล Wind Blade 15%",
+            "",
+            "เมื่อสวมใส่โดย Star Gradiator , Soul Linker,",
+            "เพิ่ม Damage ทางกายภาพระยะใกล้ 20%,",
+            "เพิ่ม Damage ทางเวทมนตร์ต่อมอนสเตอร์ทุกเผ่า 20%",
+            "",
+            "^ff0000ไม่แสดงผลในพื้นที่ GvG และ PvP",
+            "ประเภท : Card",
+            "ใช้กับ : ทุกสล็อต",
             "น้ำหนัก : 1"
         ],
         "slotCount": 0,
         "ClassNum": 0,
         "costume": false
     },
-    "400023": {
-        "unidentifiedDisplayName": "Helm",
-        "unidentifiedResourceName": "헬름",
+    "29238": {
+        "unidentifiedDisplayName": "FLEE+10",
+        "unidentifiedResourceName": "안실라",
+        "unidentifiedDescriptionName": [
+            "FLEE + 10"
+        ],
+        "identifiedDisplayName": "FLEE+10",
+        "identifiedResourceName": "안실라",
+        "identifiedDescriptionName": [
+            "FLEE + 10"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "15121": {
+        "unidentifiedDisplayName": "Clothes",
+        "unidentifiedResourceName": "코튼셔츠",
+        "unidentifiedDescriptionName": [
+            "ไอเทมปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Robe Of Sarah",
+        "identifiedResourceName": "사라의전투로브",
+        "identifiedDescriptionName": [
+            "เสื้อคลุมที่ซาราห์เคยสวมใส่เต็มไปด้วยพลังอันแปลกประหลาด",
+            "เมื่อโจมตีเวทย์จะมีโอกาสที่จะเพิ่ม MATK 8 เท่าของระดับ Refine เป็นเวลา 10 วินาที",
+            "ประเภท : Armor ป้องกัน : 35",
+            "น้ำหนัก : 80",
+            "เลเวลที่ต้องการ : 90",
+            "ติดตั้ง : ทุกอาชีพ"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0
+    },
+    "28311": {
+        "unidentifiedDisplayName": "Accessory",
+        "unidentifiedResourceName": "이어링",
+        "unidentifiedDescriptionName": [
+            "ไอเทมปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Sarah's Right Earring",
+        "identifiedResourceName": "사라귀걸이",
+        "identifiedDescriptionName": [
+            "Sarah's Right Earring ราวกับสามารถใช้พลังของ Sarah ได้เมื่อสวมใส่ ",
+            "สามารถใช้ Teleport Lv.1 ได้",
+            "^ff0000ไอเทมนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "ประเภท : Accessory ป้องกัน : 0",
+            "น้ำหนัก : 10",
+            "เลเวลที่ต้องการ : 70",
+            "อาชีพสวมใส่ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0
+    },
+    "22046": {
+        "unidentifiedDisplayName": "Shoes",
+        "unidentifiedResourceName": "샌들",
+        "unidentifiedDescriptionName": [
+            "ไอเทมปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Airship Boots",
+        "identifiedResourceName": "비공정부츠",
+        "identifiedDescriptionName": [
+            "ชุดเกราะที่นักเดินทางใช้เมื่อเดินทางโดย Airship ",
+            "ไอเทมนี้ถูกปล้นโดยเหล่ามอนสเตอร์ระหว่างการโจมตี Airship ",
+            "AGI + 1",
+            "ความเร็วในการโจมตีเพิ่มขึ้น (ดีเลย์หลังการโจมตีลดลง 10% )",
+            "ไม่สามารถอัพเกรดและแลกเปลี่ยนได้",
+            "ประเภท : Shoes    ป้องกัน : 26",
+            "น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 125",
+            "อาชีพสวมใส่  : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0
+    },
+    "19914": {
+        "unidentifiedDisplayName": "Hat",
+        "unidentifiedResourceName": "캡",
+        "unidentifiedDescriptionName": [
+            "ไอเทมปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Felrock’s Hat",
+        "identifiedResourceName": "파란선장모자",
+        "identifiedDescriptionName": [
+            "หมวกของ Airship Captain Felrock",
+            "สีแตกต่างจากหมวกที่เขาใช้เป็นประจำ",
+            "ประเภท : Costume",
+            "ตำแหน่ง : Upper น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพสวมใส่  : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 1101
+    },
+    "28310": {
+        "unidentifiedDisplayName": "Accessory",
+        "unidentifiedResourceName": "이어링",
+        "unidentifiedDescriptionName": [
+            "ไอเทมปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Sarah's Left Earring",
+        "identifiedResourceName": "사라귀걸이",
+        "identifiedDescriptionName": [
+            "Sarah's Left Earring ราวกับสามารถใช้พลังของ Sarah ได้เมื่อสวมใส่",
+            "สามารถใช้ Heal Lv.1 ได้",
+            "^ff0000ไอเทมนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "ประเภท : Accessory ป้องกัน : 0",
+            "น้ำหนัก : 10",
+            "เลเวลที่ต้องการ : 70",
+            "อาชีพสวมใส่  : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0
+    },
+    "101976": {
+        "unidentifiedDisplayName": "Treasure Box I (Battle Pass)",
+        "unidentifiedResourceName": "동보물상자",
         "unidentifiedDescriptionName": [
             "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "Drooping Thanatos's Dolor",
-        "identifiedResourceName": "고뇌의모자",
+        "identifiedDisplayName": "Treasure Box I (Battle Pass)",
+        "identifiedResourceName": "동보물상자",
         "identifiedDescriptionName": [
-            "หมวกตุ๊กตาที่คล้ายกับ Donor of Thanatos ได้ยินมาว่าตุ๊กตาตัวนี้พูดกับเจ้าของได้ด้วยล่ะ",
-            "เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อมอนสเตอร์ธาตุ Holy, Shadow และเผ่า Dragon, Angel 10% (ทุก ๆ การอัพเกรด 2 ขั้น เพิ่มขึ้นอีก 1%)",
-            "MHP +5%, MSP +5%",
-            "เมื่ออัพเกรดถึงขั้น 7 ATK + 5%, MATK + 5%.",
-            "เมื่ออัพเกรดถึงขั้น 9 ลดระยะเวลาร่ายแบบแปรผัน 10%",
-            "เมื่ออัพเกรดถึงขั้น 11 ลด Delay หลังใช้สกิล 15%",
-            "ประเภท : Headgear พลังป้องกัน : 30",
-            "ตำแหน่ง : Upper  น้ำหนัก : 10",
-            "เลเวลที่ต้องการ : 1",
-            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "กล่องสมบัติระดับต่ำที่จะได้รับจาก Battle Pass",
+            "",
+            "^4D4DFF[เมื่อเปิดออกจะได้รับ]",
+            "Basic Diagnose (Battle Pass) 2 ea",
+            "Advanced Diagnose (Battle Pass) 1 ea",
+            "",
+            "^4D4DFF[มีโอกาสสุ่มรับ]",
+            "Mysterious Medal 5/10/15/20 ea",
+            "",
+            "^ff0000(ไอเท็มชิ้นนี้จะถูกลบเมื่อสิ้นสุดระยะเวลากิจกรรม)",
+            "น้ำหนัก : 0"
         ],
-        "slotCount": 1,
-        "ClassNum": 547,
+        "slotCount": 0,
+        "ClassNum": 0,
         "costume": false
+    },
+    "101977": {
+        "unidentifiedDisplayName": "Treasure Box II (Battle Pass)",
+        "unidentifiedResourceName": "은보물상자",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Treasure Box II (Battle Pass)",
+        "identifiedResourceName": "은보물상자",
+        "identifiedDescriptionName": [
+            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "กล่องสมบัติระดับกลางที่จะได้รับจาก Battle Pass",
+            "",
+            "^4D4DFF[เมื่อเปิดออกจะได้รับ]",
+            "Basic Diagnose (Battle Pass) 5 ea",
+            "Advanced Diagnose (Battle Pass) 2 ea",
+            "",
+            "^4D4DFF[มีโอกาสสุ่มรับ]",
+            "Mysterious Medal 15/30/45/60 ea",
+            "",
+            "^ff0000(ไอเท็มชิ้นนี้จะถูกลบเมื่อสิ้นสุดระยะเวลากิจกรรม)",
+            "น้ำหนัก : 0"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "101978": {
+        "unidentifiedDisplayName": "Treasure Box III (Battle Pass)",
+        "unidentifiedResourceName": "금보물상자",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Treasure Box III (Battle Pass)",
+        "identifiedResourceName": "금보물상자",
+        "identifiedDescriptionName": [
+            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "กล่องสมบัติระดับสูงที่จะได้รับจาก  Battle Pass",
+            "",
+            "^4D4DFF[เมื่อเปิดออกจะได้รับ]",
+            "Basic Diagnose (Battle Pass) 15 ea",
+            "Advanced Diagnose (Battle Pass) 5 ea",
+            "",
+            "^4D4DFF[มีโอกาสสุ่มรับ]",
+            "Mysterious Medal 200/300/400 ea",
+            "",
+            "^ff0000(ไอเท็มชิ้นนี้จะถูกลบเมื่อสิ้นสุดระยะเวลากิจกรรม)",
+            "น้ำหนัก : 0"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "810": {
+        "unidentifiedDisplayName": "Battle Pass Invitation Card",
+        "unidentifiedResourceName": "영주의통행증",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Battle Pass Invitation Card",
+        "identifiedResourceName": "영주의통행증",
+        "identifiedDescriptionName": [
+            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "บัตรเชิญเข้าร่วมกิจกรรม Sarah & Fenrir Battle Pass",
+            "เมื่อนำไปคุยกับ [Merde] ที่ prontera พิกัด 147,301 จะสามารถรับ [Normal] Sarah & Fenrir Battle Pass ได้",
+            "^ff0000(ไอเท็มชิ้นนี้จะถูกลบเมื่อสิ้นสุดระยะเวลากิจกรรม 24 มิถุนายน 2569 05.59 น.)",
+            "",
+            "น้ำหนัก : 0"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "801": {
+        "unidentifiedDisplayName": "[Normal] Sarah & Fenrir Battle Pass",
+        "unidentifiedResourceName": "식물병제조책",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[Normal] Sarah & Fenrir Battle Pass",
+        "identifiedResourceName": "식물병제조책",
+        "identifiedDescriptionName": [
+            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "สมุดทั่วไปที่สามารถนำไปใช้งานกับกิจกรรม Sarah & Fenrir Battle Pass ได้",
+            "",
+            "^ff0000(ไอเท็มชิ้นนี้จะถูกลบเมื่อสิ้นสุดระยะเวลากิจกรรม)",
+            "น้ำหนัก : 0"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "802": {
+        "unidentifiedDisplayName": "[Premium] Sarah & Fenrir Battle Pass",
+        "unidentifiedResourceName": "화염병제조책",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[Premium] Sarah & Fenrir Battle Pass",
+        "identifiedResourceName": "화염병제조책",
+        "identifiedDescriptionName": [
+            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "สมุดพรีเมียมที่สามารถนำไปใช้งานกับกิจกรรม Sarah & Fenrir Battle Pass ได้",
+            "",
+            "^ff0000(ไอเท็มชิ้นนี้จะถูกลบเมื่อสิ้นสุดระยะเวลากิจกรรม)",
+            "น้ำหนัก : 0"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "805": {
+        "unidentifiedDisplayName": "Mysterious Medal",
+        "unidentifiedResourceName": "방벽강화코인",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Mysterious Medal",
+        "identifiedResourceName": "방벽강화코인",
+        "identifiedDescriptionName": [
+            "Mysterious Medal เหรียญรางวัลที่ผู้เล่นสามารถนำไปแลกเปลี่ยนเป็นของรางวัลต่างๆได้ในกิจกรรม Battle Pass",
+            "^ff0000(ไอเท็มชิ้นนี้จะถูกลบเมื่อสิ้นสุดระยะเวลากิจกรรม)",
+            "น้ำหนัก :  0"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "813": {
+        "unidentifiedDisplayName": "[Event] Special Enchant Temporal & Diabolus Ticket",
+        "unidentifiedResourceName": "Re_Costama_Ticket_4",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[Event] Special Enchant Temporal & Diabolus Ticket",
+        "identifiedResourceName": "Re_Costama_Ticket_4",
+        "identifiedDescriptionName": [
+            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "คูปองที่ได้รับจากกิจกรรม Sarah & Fenrir Battle Pass",
+            "นำไปใช้งานกับ Xiao ในการ Option ช่อง 3 Temporal Boots& Diabolus Boots",
+            "",
+            "(ไอเท็มชิ้นนี้จะถูกลบเมื่อสิ้นสุดระยะเวลากิจกรรม)",
+            "น้ำหนัก : 0"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "814": {
+        "unidentifiedDisplayName": "[Event] Enchant Temporal & Diabolusa Slot4 Ticket",
+        "unidentifiedResourceName": "Re_Costama_Ticket_3",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[Event] Enchant Temporal & Diabolus Slot4 Ticket",
+        "identifiedResourceName": "Re_Costama_Ticket_3",
+        "identifiedDescriptionName": [
+            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "คูปองที่ได้รับจากกิจกรรม Sarah & Fenrir Battle Pass",
+            "นำไปใช้งานกับ Xiao ในการ Option ช่อง 4 Temporal Boots& Diabolus Boots",
+            "",
+            "(ไอเท็มชิ้นนี้จะถูกลบเมื่อสิ้นสุดระยะเวลากิจกรรม)",
+            "น้ำหนัก : 0"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "27183": {
+        "unidentifiedDisplayName": "Gigantes Card",
+        "unidentifiedResourceName": "이름없는카드",
+        "unidentifiedDescriptionName": [
+            "ATK + 20 ",
+            "เมื่อ Base STR ตั้งแต่ 120 ขึ้นไป ATK +20 เพิ่มเติม, ASPD -3%",
+            "ประเภท : Card",
+            "ใช้กับ : Accessory(Left)",
+            "น้ำหนัก : 1"
+        ],
+        "identifiedDisplayName": "Gigantes Card",
+        "identifiedResourceName": "이름없는카드",
+        "identifiedDescriptionName": [
+            "ATK + 20 ",
+            "เมื่อ Base STR ตั้งแต่ 120 ขึ้นไป ATK +20 เพิ่มเติม, ASPD -3%",
+            "ประเภท : Card",
+            "ใช้กับ : Accessory(Left)",
+            "น้ำหนัก : 1"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false,
+        "EffectID": 1186
+    },
+    "4610": {
+        "unidentifiedDisplayName": "Card",
+        "unidentifiedResourceName": "이름없는카드",
+        "unidentifiedDescriptionName": [
+            "ไอเทมปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Sarah Card",
+        "identifiedResourceName": "이름없는카드",
+        "identifiedDescriptionName": [
+            "เมื่อได้รับ ความเสียหาย ที่เกินกว่า 40% ของ Max HP ของตัวละคร  ผู้ใช้จะได้รับความเสียหายเพียง 40% ของ MaxHP เท่านั้น",
+            "การโจมตีแบบ Fixed damage จะไม่สามารถลดความเสียหายได้",
+            "ประเภท : Card",
+            "ติดตั้ง : Armor",
+            "น้ำหนัก : 1"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "EffectID": 1186
     }
 }

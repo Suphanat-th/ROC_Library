@@ -61,7 +61,15 @@ const fileTree: FileTreeItem[] = [
         href: "/facewormnest-guide"
       }
     ]
-  },{
+  },
+  // {
+  //   id: "vip",
+  //   name: "VIP Search",
+  //   type: "file",
+  //   icon: "👥",
+  //   href: "/vip-search"
+  // },
+  {
     id: "muad",
     name: "MUAD",
     type: "file",
