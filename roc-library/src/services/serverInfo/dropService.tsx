@@ -2,11 +2,11 @@ import { ServerInfoDto } from "@/types/serverInfo";
 
 export function dropService() {
   const current = new Date();
-  
+
   const dropDefault: ServerInfoDto[] = [];
   dropDefault.push({
-    name: "100%",
-    ratePercent: 100,
+    name: "0%",
+    ratePercent: 0,
     DateFrom: null,
     DateTo: null,
     description: "Base drop rate applied to the server",

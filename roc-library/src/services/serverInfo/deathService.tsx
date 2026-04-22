@@ -25,8 +25,8 @@ export function deathService() {
   
 
   deathAdd.push({
-    name: "-50%",
-    ratePercent: -50,
+    name: "-0%",
+    ratePercent: 0,
     DateFrom: new Date(2026, 3, 16, 6, 0, 0),
     DateTo: new Date(2026, 3, 22, 6, 0, 0),
     description: "Moon Event ลด Death Penalty 50%",
@@ -34,8 +34,8 @@ export function deathService() {
 
   
   deathAdd.push({
-    name: "-25",
-    ratePercent: 25,
+    name: "25%",
+    ratePercent: -25,
     DateFrom: new Date(2026, 3, 22, 6, 0, 0),
     DateTo: new Date(2026, 3, 29, 6, 0, 0),
     description: "Moon Event ลด Death Penalty 25%",
@@ -44,7 +44,7 @@ export function deathService() {
   
   deathAdd.push({
     name: "15",
-    ratePercent: 15,
+    ratePercent: -15,
     DateFrom: new Date(2026, 3, 29, 6, 0, 0),
     DateTo: new Date(2026, 4, 6, 6, 0, 0),
     description: "Moon Event ลด Death Penalty 15%",
