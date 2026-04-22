@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useMemo, useState } from 'react';
-import { BATTLE_PASS_CONFIG, QUEST_DETAILS } from '@/data/battlepassData';
+import { BATTLE_PASS_CONFIG } from '@/data/battlepassData';
 
 interface CalculationResult {
   dailyNormalPoints: number;
@@ -78,7 +78,6 @@ export default function CalcBPComponent() {
     // Calculate current progress (days completed up to today)
     const completedDays = Math.max(0, daysSinceStart);
     const completedWeeks = Math.floor(completedDays / 7);
-    const extraDaysAfterWeeks = completedDays % 7;
 
     // Normal Pass
     const normalPointsFromCompletedDays = completedDays * BATTLE_PASS_CONFIG.dailyNormalPoints;
@@ -148,28 +147,30 @@ export default function CalcBPComponent() {
     // Days remaining in current week (including today)
     const daysRemainingInWeek = 7 - dayIndexInWeek;
     
-    let daysForCalculation = calculation.daysRemaining;
-    let weeksForCalculation = 0;
+    // Days for daily calculation: starts with full remaining days, minus last Wednesday
+    let daysForDailyCalc = Math.max(0, calculation.daysRemaining - 1);
     
-    // Subtract 1 day for the last day (Wednesday) when server is closed
-    daysForCalculation = Math.max(0, daysForCalculation - 1);
-    
-    // If Weekly done: Don't count this week, start from next week
-    if (isWeeklyDone) {
-      daysForCalculation = Math.max(0, daysForCalculation - daysRemainingInWeek);
-      weeksForCalculation = Math.ceil(daysForCalculation / 7);
-    } else {
-      weeksForCalculation = Math.ceil(daysForCalculation / 7);
+    // If Daily quest is done: Don't count today
+    if (isDailyDone) {
+      daysForDailyCalc = Math.max(0, daysForDailyCalc - 1);
     }
     
-    // If Daily done: Don't count today
-    if (isDailyDone) {
-      daysForCalculation = Math.max(0, daysForCalculation - 1);
+    // Days for weekly calculation: independent from daily
+    let daysForWeeklyCalc = calculation.daysRemaining - 1; // Always subtract last Wednesday
+    let weeksForCalculation = 0;
+    
+    // If Weekly quest is done: Don't count remaining days in current week
+    if (isWeeklyDone) {
+      daysForWeeklyCalc = Math.max(0, daysForWeeklyCalc - daysRemainingInWeek);
+      weeksForCalculation = Math.ceil(daysForWeeklyCalc / 7);
+    } else {
+      // Not done with weekly: include this week's remaining days
+      weeksForCalculation = Math.ceil(daysForWeeklyCalc / 7);
     }
     
     // Daily points: Monster (10 normal / 20 premium) + Send Zeny (30) = 40 normal / 50 premium
     const dailyPoints = isPremiumOpened ? 50 : 40;
-    let additionalPoints = (daysForCalculation * dailyPoints) + (weeksForCalculation * BATTLE_PASS_CONFIG.weeklyPoints);
+    let additionalPoints = (daysForDailyCalc * dailyPoints) + (weeksForCalculation * BATTLE_PASS_CONFIG.weeklyPoints);
     
     // Add Weekly points for last day if checked
     if (isLastDayDone) {
@@ -183,6 +184,7 @@ export default function CalcBPComponent() {
   const projectedLevelData = calculateProjectedLevel();
 
   // Thai summary text
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const generateThaiSummary = () => {
     const days = calculation.daysRemaining;
     const weeks = Math.ceil(days / 7);
@@ -210,7 +212,7 @@ export default function CalcBPComponent() {
   return (
     <div className="w-full max-w-7xl mx-auto space-y-6 p-2 sm:p-4">
       {/* Card 1: Current Points Input (w-full) */}
-      <div className="card w-full bg-gradient-to-br from-indigo-50 via-indigo-50 to-indigo-100 shadow-xl border-2 border-indigo-200">
+      <div className="card w-full bg-linear-to-br from-indigo-50 via-indigo-50 to-indigo-100 shadow-xl border-2 border-indigo-200">
         <div className="card-body p-4 sm:p-6">
           <h2 className="card-title text-xl sm:text-2xl font-bold text-indigo-900 mb-6 flex items-center gap-2">
             <span className="text-2xl">📊</span> Status ปัจจุบัน
@@ -322,7 +324,7 @@ export default function CalcBPComponent() {
           </div>
 
           {/* Projected Final Level */}
-          <div className="mt-6 pt-6 border-t border-indigo-200 bg-gradient-to-r from-amber-50 to-orange-50 rounded-xl p-4">
+          <div className="mt-6 pt-6 border-t border-indigo-200 bg-linear-to-r from-amber-50 to-orange-50 rounded-xl p-4">
             <div className="text-center">
               <div className="text-sm font-bold text-amber-900 mb-3">
                 จนถึงวันสุดท้าย จะได้ Level ถ้าทำ Daily, Weekly ครบ
@@ -343,42 +345,36 @@ export default function CalcBPComponent() {
                   const dayIndexInWeek = (dayOfWeek - WEDNESDAY + 7) % 7;
                   const daysRemainingInWeek = 7 - dayIndexInWeek;
                   
-                  let daysForCalc = calculation.daysRemaining;
-                  let weeksForCalc = 0;
-                  
-                  // Subtract 1 day for the last day (Wednesday) when server is closed
-                  daysForCalc = Math.max(0, daysForCalc - 1);
-                  
-                  if (isWeeklyDone) {
-                    daysForCalc = Math.max(0, daysForCalc - daysRemainingInWeek);
-                    weeksForCalc = Math.ceil(daysForCalc / 7);
-                  } else {
-                    weeksForCalc = Math.ceil(daysForCalc / 7);
+                  // Daily calculation: independent from weekly
+                  let daysForDailyCalc = Math.max(0, calculation.daysRemaining - 1); // Always subtract last Wednesday
+                  if (isDailyDone) {
+                    daysForDailyCalc = Math.max(0, daysForDailyCalc - 1); // Don't count today
                   }
                   
-                  if (isDailyDone) {
-                    daysForCalc = Math.max(0, daysForCalc - 1);
+                  // Weekly calculation: independent from daily
+                  let daysForWeeklyCalc = calculation.daysRemaining - 1; // Always subtract last Wednesday
+                  let weeksForCalc = 0;
+                  if (isWeeklyDone) {
+                    daysForWeeklyCalc = Math.max(0, daysForWeeklyCalc - daysRemainingInWeek);
+                    weeksForCalc = Math.ceil(daysForWeeklyCalc / 7);
+                  } else {
+                    weeksForCalc = Math.ceil(daysForWeeklyCalc / 7);
                   }
                   
                   const dailyPoints = isPremiumOpened ? 50 : 40;
-                  let totalAdditional = (daysForCalc * dailyPoints) + (weeksForCalc * BATTLE_PASS_CONFIG.weeklyPoints);
-                  if (isLastDayDone) {
-                    totalAdditional += BATTLE_PASS_CONFIG.weeklyPoints;
-                  }
+                  let totalAdditional = (daysForDailyCalc * dailyPoints) + (weeksForCalc * BATTLE_PASS_CONFIG.weeklyPoints);
                   
                   return (
                     <>
                       {isDailyDone && (
                         <div>
-                          • Daily: {daysForCalc} วัน × {dailyPoints} = {daysForCalc * dailyPoints}
-                          {isWeeklyDone && <span className="text-gray-600"> (หักวันนี้, หักวันที่เหลือ week นี้, หักวันพุธสุดท้าย)</span>}
-                          {!isWeeklyDone && <span className="text-gray-600"> (หักวันนี้, หักวันพุธสุดท้าย)</span>}
+                          • Daily: {daysForDailyCalc} วัน × {dailyPoints} = {daysForDailyCalc * dailyPoints}
+                          <span className="text-gray-600"> (หักวันนี้)</span>
                         </div>
                       )}
                       {!isDailyDone && (
                         <div>
-                          • Daily: {daysForCalc} วัน × {dailyPoints} = {daysForCalc * dailyPoints}
-                          <span className="text-gray-600"> (หักวันพุธสุดท้าย)</span>
+                          • Daily: {daysForDailyCalc} วัน × {dailyPoints} = {daysForDailyCalc * dailyPoints}
                         </div>
                       )}
                       
@@ -401,6 +397,7 @@ export default function CalcBPComponent() {
                       )}
                       
                       <div className="font-bold mt-2 text-amber-900 pt-2 border-t border-amber-200">
+                        {isLastDayDone && (totalAdditional += BATTLE_PASS_CONFIG.weeklyPoints)}
                         รวม: {totalPoints} + {totalAdditional} = {totalPoints + totalAdditional} แต้ม
                       </div>
                     </>
@@ -417,33 +414,49 @@ export default function CalcBPComponent() {
       {/* Card 2 & 3: Daily and Weekly Quests - 2 Columns on Large Screens */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Card 2: Daily Quest */}
-        <div className="card bg-gradient-to-br from-blue-50 via-blue-50 to-blue-100 shadow-xl border-2 border-blue-200">
+        <div className="card bg-linear-to-br from-blue-50 via-blue-50 to-blue-100 shadow-xl border-2 border-blue-200">
           <div className="card-body p-4 sm:p-6">
             <h2 className="card-title text-xl sm:text-2xl font-bold text-blue-900 mb-6 flex items-center gap-2">
               <span className="text-2xl">📅</span> Daily Quest
             </h2>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-              {/* Kill Monster Quest */}
+              {/* Monster Hunt Quest */}
               <div className="bg-white rounded-xl p-4 shadow-md border-l-4 border-blue-500">
-                <div className="flex justify-between items-start">
+                <div className="flex justify-between items-start mb-3">
                   <div>
-                    <div className="text-xs text-gray-600 font-semibold mb-2">สังหาร Monster</div>
-                    <div className="text-3xl sm:text-4xl font-bold text-blue-600">
+                    <div className="text-xs text-gray-600 font-semibold mb-2">🐉 Monster Hunt</div>
+                    <div className="text-2xl sm:text-3xl font-bold text-blue-600">
                       {isPremiumOpened ? '20' : '10'}
                     </div>
-                    <div className="text-xs text-gray-500 mt-1">Point</div>
+                    <div className="text-xs text-gray-500">Point</div>
                   </div>
                   <div className="text-4xl">⚔️</div>
                 </div>
-                <div className="text-xs text-gray-600 bg-blue-50 rounded p-2 mt-3">
+                <div className="text-xs space-y-2 bg-blue-50 rounded p-3">
                   {isPremiumOpened ? (
-                    <div>
-                      <div>Premium: 20 Point</div>
-                    </div>
+                    <>
+                      <div className="flex justify-between">
+                        <span>HILLSRION ×20</span>
+                        <span className="text-blue-600 font-bold">22/04 - 06/05</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span>CENTIPEDE ×20</span>
+                        <span className="text-blue-600 font-bold">06/05 - 20/05</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span>TATACHO ×20</span>
+                        <span className="text-blue-600 font-bold">20/05 - 03/06</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span>DOLOMEDES ×20</span>
+                        <span className="text-blue-600 font-bold">03/06 - 24/06</span>
+                      </div>
+                    </>
                   ) : (
-                    <div>
-                      <div>Normal: 10 Point</div>
+                    <div className="flex justify-between">
+                      <span>Cornus ×20</span>
+                      <span className="text-blue-600 font-bold">22/04 - 24/06</span>
                     </div>
                   )}
                 </div>
@@ -451,24 +464,25 @@ export default function CalcBPComponent() {
 
               {/* Send Zeny */}
               <div className="bg-white rounded-xl p-4 shadow-md border-l-4 border-green-500">
-                <div className="flex justify-between items-start">
+                <div className="flex justify-between items-start mb-3">
                   <div>
-                    <div className="text-xs text-gray-600 font-semibold mb-2">ส่งเงิน 1M Zeny</div>
-                    <div className="text-3xl sm:text-4xl font-bold text-green-600">
+                    <div className="text-xs text-gray-600 font-semibold mb-2">💰 Send Zeny</div>
+                    <div className="text-2xl sm:text-3xl font-bold text-green-600">
                       30
                     </div>
-                    <div className="text-xs text-gray-500 mt-1">Point</div>
+                    <div className="text-xs text-gray-500">Point</div>
                   </div>
-                  <div className="text-4xl">💰</div>
+                  <div className="text-4xl">💸</div>
                 </div>
-                <div className="text-xs text-gray-600 bg-green-50 rounded p-2 mt-3">
+                <div className="text-xs text-gray-600 bg-green-50 rounded p-3">
                   <div>ส่ง 1,000,000 Zeny</div>
+                  <div className="text-green-600 font-semibold mt-2">22/04 - 24/06</div>
                 </div>
               </div>
             </div>
 
             {/* Daily Summary */}
-            <div className="bg-gradient-to-r from-blue-100 to-blue-50 rounded-xl p-4 border border-blue-200">
+            <div className="bg-linear-to-r from-blue-100 to-blue-50 rounded-xl p-4 border border-blue-200">
               <div className="text-center">
                 <div className="text-xs text-blue-900 font-semibold mb-2">รวม Daily ต่อวัน</div>
                 <div className="flex justify-center gap-4 items-center">
@@ -491,13 +505,52 @@ export default function CalcBPComponent() {
         </div>
 
         {/* Card 3: Weekly Quest Summary */}
-        <div className="card bg-gradient-to-br from-purple-50 via-purple-50 to-purple-100 shadow-xl border-2 border-purple-200">
+        <div className="card bg-linear-to-br from-purple-50 via-purple-50 to-purple-100 shadow-xl border-2 border-purple-200">
           <div className="card-body p-4 sm:p-6">
             <h2 className="card-title text-xl sm:text-2xl font-bold text-purple-900 mb-6 flex items-center gap-2">
               <span className="text-2xl">📊</span> Weekly Quest Summary
             </h2>
 
             <div className="space-y-4">
+              {/* Boss Hunt Section */}
+              <div className="bg-white rounded-xl p-4 shadow-md border-l-4 border-red-500">
+                <div className="text-xs text-gray-600 font-semibold mb-3 flex items-center gap-2">
+                  <span>👑 Boss Hunt</span>
+                </div>
+                <div className="space-y-3 text-xs">
+                  <div className="flex justify-between items-start p-2 bg-red-50 rounded">
+                    <div>
+                      <div className="font-bold text-red-700">Celine Kimi</div>
+                      <div className="text-gray-600">Horror Toy Factory</div>
+                    </div>
+                    <div className="text-right">
+                      <div className="font-bold text-red-600">20 P</div>
+                      <div className="text-gray-600">×1</div>
+                    </div>
+                  </div>
+                  <div className="flex justify-between items-start p-2 bg-orange-50 rounded">
+                    <div>
+                      <div className="font-bold text-orange-700">Faceworm Queen</div>
+                      <div className="text-gray-600">The Nest of Faceworm</div>
+                    </div>
+                    <div className="text-right">
+                      <div className="font-bold text-orange-600">20 P</div>
+                      <div className="text-gray-600">×1</div>
+                    </div>
+                  </div>
+                  <div className="flex justify-between items-start p-2 bg-purple-50 rounded">
+                    <div>
+                      <div className="font-bold text-purple-700">Ancient Gigantes</div>
+                      <div className="text-gray-600">Sarah and Fenrir</div>
+                    </div>
+                    <div className="text-right">
+                      <div className="font-bold text-purple-600">30 P</div>
+                      <div className="text-gray-600">×1</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               {/* Weekly Points */}
               <div className="bg-white rounded-xl p-4 shadow-md border-l-4 border-purple-500">
                 <div className="flex justify-between items-center">
@@ -508,24 +561,13 @@ export default function CalcBPComponent() {
                   <div className="text-4xl">⭐</div>
                 </div>
               </div>
-
-              {/* Total Weekly Points (Daily + Weekly) */}
-              <div className="bg-white rounded-xl p-4 shadow-md border-l-4 border-indigo-500">
-                <div className="flex justify-between items-center">
-                  <div>
-                    <div className="text-xs text-gray-600 font-semibold mb-1">รวม Daily + Weekly (7 วัน)</div>
-                    <div className="text-2xl sm:text-3xl font-bold text-indigo-600">{calculation.weeklyTotalNormalPoints}</div>
-                  </div>
-                  <div className="text-4xl">📈</div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
       </div>
 
       {/* Card 4: Weekly Complete Summary */}
-      <div className="card bg-gradient-to-br from-emerald-50 via-emerald-50 to-emerald-100 shadow-xl border-2 border-emerald-200">
+      <div className="card bg-linear-to-br from-emerald-50 via-emerald-50 to-emerald-100 shadow-xl border-2 border-emerald-200">
         <div className="card-body p-4 sm:p-6">
           <h2 className="card-title text-xl sm:text-2xl font-bold text-emerald-900 mb-6 flex items-center gap-2">
             <span className="text-2xl">🎯</span> สรุปทั้งสัปดาห์
@@ -533,7 +575,7 @@ export default function CalcBPComponent() {
 
           <div className="space-y-4">
             {/* Total Weekly Points */}
-            <div className="bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl p-4 shadow-md text-white">
+            <div className="bg-linear-to-r from-blue-500 to-blue-600 rounded-xl p-4 shadow-md text-white">
               <div className="flex justify-between items-center">
                 <div>
                   <div className="text-sm font-semibold mb-1">ได้แต้มรวม</div>
@@ -544,7 +586,7 @@ export default function CalcBPComponent() {
             </div>
 
             {/* Total Weekly Zeny */}
-            <div className="bg-gradient-to-r from-green-500 to-green-600 rounded-xl p-4 shadow-md text-white">
+            <div className="bg-linear-to-r from-green-500 to-green-600 rounded-xl p-4 shadow-md text-white">
               <div className="flex justify-between items-center">
                 <div>
                   <div className="text-sm font-semibold mb-1">จ่ายเงิน Zeny</div>
