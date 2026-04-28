@@ -2,7 +2,6 @@
 
 import React, { useEffect, useRef } from "react";
 import L from "leaflet";
-// @ts-expect-error - leaflet CSS doesn't have type declarations
 import "leaflet/dist/leaflet.css";
 import { ToyFactoryMapData } from "@/types/toyFactory";
 import { map1Bounds, map2Bounds, map3Bounds, map4Bounds } from "@/services/mapData/toyFactoryData";
