@@ -121,15 +121,14 @@ export default function ToyFactoryGuidePage() {
       logoPath="/assets/images/horrortoyfactory/logo.webp"
       credits="ขอบคุณข้อมูลจาก Orawanpanmit"
       notes={[
-        "1.คุยกับ <span class='underline'>Catherine</span> เพื่อเริ่มต้น และ รอคุยกับ <span class='underline'>Employee Box</span> เพื่อทำการแปลงร่าง <p class='badge badge-warning'>ถ้าไม่แปลงร่างจะมีทหารรับจ้าง Spawn เกิดมาเรื่อยๆ</p>",
-        "2. หลังจากแปลงร่างแล้ว ให้กำจัด Monster ภายใน Map1 ให้หมด โดยเดินตามเส้นสีฟ้า <kbd class='kbd bg-cyan-500'>- -</kbd>",
-        "3. หลังจากกำจัด Monster ใน Map1 หมดแล้ว ไปคุยกับ <span class='underline'>Cookies</span> จากนั้นแปลงร่ายเป็น <span class='underline'>Employee Box</span> เพื่อเข้าไปใน Map2",
-        "4. ใน Map2 ให้คุยกับ <span class='underline'>Catherine</span> เพื่อดำเนินเรื่องต่อ จากนั้นให้แปลงร่างเป็น <span class='underline'>Employee Box</span> แล้วก็เดินตามเส้นสีแดง <kbd class='kbd bg-red-500'>- -</kbd> ",
-        "5. พอลงมาถึงปลายเส้นสีแดงแล้ว ให้คุยกับ  <span class='underline'>Employee Box</span> ที่อยู่ฝั่งซ้ายนอกกำแพง (Employee Box ตัวแรกใน Map 1) แล้วก็เดินตามเส้นสีเขียว <kbd class='kbd bg-green-500'>- -</kbd>",
-        "6. หลังจากคุยแล้ว เวลาในการแปลร่างจะลดลง จากนั้นให้คุยกับ <span class='underline'>Worker</span> แล้วเลือกข้อ 2 จากนั้นก็ตาม Guide Line สีเขียวไปเรื่อยๆ และคุยกับ Worker ทุกตัวที่เจอ",
-        "7. หลังจากเข้า Warp ให้เดินกลับและเดินตามเส้นสีน้ำเงิน <kbd class='kbd bg-blue-700'>- -</kbd> เพื่อไปยัง Map3 เพื่อทำการ แก้มัดเชือก <span class='underline'>Captured Santa</span>",
-        "8. พอ Warp ซ้ายเปิด ให้ทำการเดินตามเส้นสีขาว <kbd class='kbd bg-white'>- -</kbd> เพื่อไปกำจัด <span class='underline'>Antonio</span> จากนั้นให้กลับมาห้องเดิน ตามเส้นสีขาวอีกครั้งเพื่อไปกำจัด <span class='underline'>Celine</span>",
-        "9. หลังจากกำจัด <span class='underline'>Celine</span> แล้ว ให้เดินตามเส้นสีเหลือง <kbd class='kbd bg-yellow-500'>- -</kbd> เพื่อไปยังห้องสมบัติ",
+        "1.คุยกับ <span class='underline'>Catherine</span> เพื่อเริ่มต้น และ รอคุยกับ <span class='underline'>Employee Box</span> เพื่อทำการแปลงร่าง <p class='badge badge-warning'>ถ้าไม่แปลงร่างจะมีทหารรับจ้าง Spawn เกิดมาเรื่อยๆ</p><br>หลังจากแปลงร่างแล้ว ให้กำจัด Monster ภายใน Map1 ให้หมด โดยเดินตามเส้นสีฟ้า <kbd class='kbd bg-cyan-500'>- -</kbd>",
+        "หลังจากกำจัด Monster ใน Map1 หมดแล้ว ไปคุยกับ <span class='underline'>Cookies</span> จากนั้นแปลงร่ายเป็น <span class='underline'>Employee Box</span> เพื่อเข้าไปใน Map2",
+        "2. ใน Map2 ให้คุยกับ <span class='underline'>Catherine</span> เพื่อดำเนินเรื่องต่อ จากนั้นให้แปลงร่างเป็น <span class='underline'>Employee Box</span> แล้วก็เดินตามเส้นสีแดง <kbd class='kbd bg-red-500'>- -</kbd> ",
+        "พอลงมาถึงปลายเส้นสีแดงแล้ว ให้คุยกับ  <span class='underline'>Employee Box</span> ที่อยู่ฝั่งซ้ายนอกกำแพง (Employee Box ตัวแรกใน Map 1) แล้วก็เดินตามเส้นสีเขียว <kbd class='kbd bg-green-500'>- -</kbd>",
+        "หลังจากคุยแล้ว เวลาในการแปลร่างจะลดลง จากนั้นให้คุยกับ <span class='underline'>Worker</span> แล้วเลือกข้อ 2 จากนั้นก็ตาม Guide Line สีเขียวไปเรื่อยๆ และคุยกับ Worker ทุกตัวที่เจอ",
+        "3. หลังจากเข้า Warp ให้เดินกลับและเดินตามเส้นสีน้ำเงิน <kbd class='kbd bg-blue-700'>- -</kbd> เพื่อไปยัง Map3 เพื่อทำการ แก้มัดเชือก <span class='underline'>Captured Santa</span>",
+        "พอ Warp ซ้ายเปิด ให้ทำการเดินตามเส้นสีขาว <kbd class='kbd bg-white'>- -</kbd> เพื่อไปกำจัด <span class='underline'>Antonio</span> จากนั้นให้กลับมาห้องเดิน ตามเส้นสีขาวอีกครั้งเพื่อไปกำจัด <span class='underline'>Celine</span>",
+        "4.หลังจากกำจัด <span class='underline'>Celine</span> แล้ว ให้เดินตามเส้นสีเหลือง <kbd class='kbd bg-yellow-500'>- -</kbd> เพื่อไปยังห้องสมบัติ",
       ]}
       filters={filters}
       onFilterChange={handleFilterChange}
