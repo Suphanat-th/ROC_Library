@@ -24,7 +24,7 @@ const filterOptions: MapFilter[] = [
   { label: "Mini Boss", icon: "⚔️", color: "error", key: "miniBoss" },
   { label: "Boss", icon: "👑", color: "secondary", key: "boss" },
   { label: "Worker", icon: "👷", color: "info", key: "worker" },
-  { label: "NPC", icon: "💬", color: "accent", key: "npc" },
+  { label: "NPC", icon: "💬", color: "ghost", key: "npc" },
   { label: "Paths", icon: "📏", color: "success", key: "paths" },
 ];
 
