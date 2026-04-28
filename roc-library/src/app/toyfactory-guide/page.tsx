@@ -137,8 +137,6 @@ export default function ToyFactoryGuidePage() {
       onReset={handleReset}
       zoom={zoom}
       onZoomChange={setZoom}
-      minZoom={0}
-      maxZoom={3}
       showControls={false}
       additionalControls={
         <div className="bg-gray-900 p-3 botder-b border-gray-700 space-y-3">
