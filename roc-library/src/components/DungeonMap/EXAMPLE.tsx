@@ -68,8 +68,6 @@ export default function ExampleDungeonPage() {
       onReset={handleReset}
       zoom={zoom}
       onZoomChange={handleZoomChange}
-      minZoom={0}
-      maxZoom={3}
     >
       {/* Insert your map component here */}
       <div className="w-full h-full flex items-center justify-center bg-gray-300">
