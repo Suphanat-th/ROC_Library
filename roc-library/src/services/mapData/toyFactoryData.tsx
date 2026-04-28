@@ -633,10 +633,10 @@ export const toyFactoryMergedMapData: ToyFactoryMapData = {
     ...(toyFactoryMap4Data.npcs || []),
   ],
   paths: [
-    ...toyFactoryMap1Data.paths,
-    ...toyFactoryMap2Data.paths,
-    ...toyFactoryMap3Data.paths,
-    ...toyFactoryMap4Data.paths,
+    ...(toyFactoryMap1Data.paths || []),
+    ...(toyFactoryMap2Data.paths || []),
+    ...(toyFactoryMap3Data.paths || []),
+    ...(toyFactoryMap4Data.paths || []),
   ],
 };
 
