@@ -60,13 +60,6 @@ const fileTree: FileTreeItem[] = [
         icon: "",
         href: "/monsterx3",
       },
-      {
-        id: "facewormnest",
-        name: "- Faceworm Nest Guide",
-        type: "file",
-        icon: "",
-        href: "/facewormnest-guide",
-      },
     ],
   },
   // {
@@ -76,6 +69,28 @@ const fileTree: FileTreeItem[] = [
   //   icon: "👥",
   //   href: "/vip-search"
   // },
+  {
+    id: "dungeon",
+    name: "Dungeon",
+    type: "folder",
+    icon: "",
+    children: [
+      {
+        id: "facewormnest",
+        name: "- Faceworm Nest Guide",
+        type: "file",
+        icon: "",
+        href: "/facewormnest-guide",
+      },
+      {
+        id: "toyfactory",
+        name: "- Toy Factory Guide",
+        type: "file",
+        icon: "",
+        href: "/toyfactory-guide",
+      },
+    ],
+  },
 
   {
     id: "calcbp",
