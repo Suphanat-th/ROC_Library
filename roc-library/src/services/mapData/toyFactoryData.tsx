@@ -229,7 +229,7 @@ export const toyFactoryMap4Data: ToyFactoryMapData = {
     {
       id: "boss_celine_mvp",
       name: "Celine (MVP)",
-      type: "boss",
+      type: "monster",
       coordinates: [365, 275],
       description: "ฆ่า celine ทิ้งให้หมดทั้งตัวจริงและตัวปลอม",
       imagePath: "/assets/images/horrortoyfactory/Celine.gif",
