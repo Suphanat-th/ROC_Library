@@ -33,8 +33,16 @@ const guideLineColorFilters = [
   { label: "Cyan (Map 1)", color: "cyan-500", key: "cyan" },
   { label: "Red (Map 2 เดินไปคุย Employee Box)", color: "red-500", key: "red" },
   { label: "Green (Map 2 เดินคุย Worker)", color: "green-500", key: "green" },
-  { label: "Blue (Map 3 เดินไปคุย Sanda ปล่อยชืแก)", color: "blue-500", key: "blue" },
-  { label: "White (Map 3 เดินไปกำจัด Antonio และ Celine)", color: "black", key: "white" },
+  {
+    label: "Blue (Map 3 เดินไปคุย Sanda ปล่อยชืแก)",
+    color: "blue-500",
+    key: "blue",
+  },
+  {
+    label: "White (Map 3 เดินไปกำจัด Antonio และ Celine)",
+    color: "black",
+    key: "white",
+  },
   { label: "Yellow (Map 4 ไปห้องสมบัติ)", color: "yellow-500", key: "yellow" },
 ];
 
@@ -89,8 +97,12 @@ export default function ToyFactoryGuidePage() {
   };
 
   // Check if all colors are selected
-  const areAllColorsSelected = Object.values(guideLineColors).every(v => v === true);
-  const areAnyColorsSelected = Object.values(guideLineColors).some(v => v === true);
+  const areAllColorsSelected = Object.values(guideLineColors).every(
+    (v) => v === true,
+  );
+  const areAnyColorsSelected = Object.values(guideLineColors).some(
+    (v) => v === true,
+  );
 
   const handleReset = () => {
     setZoom(0);
@@ -102,7 +114,7 @@ export default function ToyFactoryGuidePage() {
       cyan: true,
       red: true,
       green: true,
-    });  // All colors selected by default
+    }); // All colors selected by default
     setFilters({
       warp: true,
       treasure: true,
@@ -117,6 +129,42 @@ export default function ToyFactoryGuidePage() {
   return (
     <DungeonMapContainer
       mapName="🗺️ Toy Factory Guide"
+      mapDescription={
+        <>
+          {/* <div className="collapse collapse-plus bg-base-100 border border-base-300">
+            <input type="radio" name="my-accordion-3" />
+            <div className="collapse-title font-semibold">
+              How do I create an account?
+            </div>
+            <div className="collapse-content text-sm">
+              Click the Sign Up button in the top right corner and follow the
+              registration process.
+            </div>
+          </div>
+          <div className="collapse collapse-plus bg-base-100 border border-base-300">
+            <input type="radio" name="my-accordion-3" />
+            <div className="collapse-title font-semibold">
+              I forgot my password. What should I do?
+            </div>
+            <div className="collapse-content text-sm">
+              Click on Forgot Password on the login page and follow the
+              instructions sent to your email.
+            </div>
+          </div>
+          <div className="collapse collapse-plus bg-base-100 border border-base-300">
+            <input type="radio" name="my-accordion-3" />
+            <div className="collapse-title font-semibold">
+              How do I update my profile information?
+            </div>
+            <div className="collapse-content text-sm">
+              Go to My Account settings and select Edit Profile to make changes.
+            </div>
+          </div>
+          <p className="text-warning mt-2">
+            ⚠️ ห้ามข้ามขั้นตอนใดๆ มิฉะนั้นอาจล้มเหลว
+          </p> */}
+        </>
+      }
       mapSubtitle="Interactive map with boss & mini-boss locations"
       logoPath="/assets/images/horrortoyfactory/logo.webp"
       credits="ขอบคุณข้อมูลจาก Orawanpanmit"
@@ -176,9 +224,16 @@ export default function ToyFactoryGuidePage() {
               <div className="space-y-2">
                 {guideLineColorFilters.map((filter) => {
                   const isAllCheckbox = filter.key === "all";
-                  const isChecked = isAllCheckbox ? areAllColorsSelected : (guideLineColors[filter.key as keyof typeof guideLineColors] ?? true);
-                  const isIndeterminate = isAllCheckbox && areAnyColorsSelected && !areAllColorsSelected;
-                  
+                  const isChecked = isAllCheckbox
+                    ? areAllColorsSelected
+                    : (guideLineColors[
+                        filter.key as keyof typeof guideLineColors
+                      ] ?? true);
+                  const isIndeterminate =
+                    isAllCheckbox &&
+                    areAnyColorsSelected &&
+                    !areAllColorsSelected;
+
                   return (
                     <div key={filter.key} className="flex items-center gap-2">
                       <input
@@ -191,7 +246,10 @@ export default function ToyFactoryGuidePage() {
                           }
                         }}
                         onChange={(e) =>
-                          handleGuideLineColorChange(filter.key, e.target.checked)
+                          handleGuideLineColorChange(
+                            filter.key,
+                            e.target.checked,
+                          )
                         }
                         className="checkbox checkbox-warning"
                       />

@@ -451,48 +451,7 @@ export default function ROPage() {
           </section>
         </>
       )}
-      <ScrollUpButton />
     </main>
-  );
-}
-
-function ScrollUpButton() {
-  const smoothScroll = () => {
-    if (typeof window === "undefined") return;
-
-    const start = window.scrollY || window.pageYOffset;
-    if (start === 0) return; // already at top
-
-    const duration = 1000;
-    const startTime = Date.now();
-
-    const easeInOutQuad = (t: number) => (t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t);
-
-    const animateScroll = () => {
-      const elapsed = Date.now() - startTime;
-      const progress = Math.min(elapsed / duration, 1);
-      const easeProgress = easeInOutQuad(progress);
-      
-      window.scrollTo(0, Math.max(0, start * (1 - easeProgress)));
-      
-      if (progress < 1) {
-        requestAnimationFrame(animateScroll);
-      }
-    };
-
-    requestAnimationFrame(animateScroll);
-  };
-
-  return (
-    <button
-      aria-label="Scroll to top"
-      onClick={smoothScroll}
-      className="fixed bottom-24 right-6 z-20 w-12 h-12 rounded-full bg-linear-to-r from-purple-900 via-indigo-900 to-purple-700 text-white shadow-lg flex items-center justify-center hover:opacity-90 transition-colors"
-    >
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-5 h-5">
-        <path fill="currentColor" d="M12 4l-8 8h5v8h6v-8h5z" />
-      </svg>
-    </button>
   );
 }
 

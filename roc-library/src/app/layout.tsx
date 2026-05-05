@@ -5,6 +5,7 @@ import NavBarPage from "@/layout/navbar/navbar";
 import SidebarPage from "@/layout/sidebar/sidebar";
 import { LoadingProvider } from "@/context/LoadingContext";
 import { LoadingOverlay } from "@/components/Loader";
+import { ToTopButton } from "@/components/ToTopButton";
 
 const mali = localFont({
   src: "../../public/font/Mali-Regular.ttf",
@@ -30,6 +31,7 @@ export default function RootLayout({
       >
         <LoadingProvider>
           <LoadingOverlay />
+          <ToTopButton />
           <div className="drawer h-screen">
             <input
               id="is-drawer-open"

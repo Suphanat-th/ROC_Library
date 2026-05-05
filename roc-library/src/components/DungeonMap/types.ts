@@ -7,7 +7,7 @@ export interface MapFilter {
 
 export interface DungeonMapHeaderProps {
   title: string;
-  description?: string;
+  description?: React.ReactNode;
   subtitle?: string;
   credits?: string;
   notes?: string[];
@@ -28,7 +28,7 @@ export interface DungeonMapControlsProps {
 
 export interface DungeonMapContainerProps {
   mapName: string;
-  mapDescription?: string;
+  mapDescription?: React.ReactNode;
   mapSubtitle?: string;
   credits?: string;
   notes?: string[];
