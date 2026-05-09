@@ -15,37 +15,11 @@ export function expService() {
   const expAdd: ServerInfoDto[] = [];
 
   expAdd.push({
-    name: "150%",
+    name: "Sun Moon 150%",
     ratePercent: 150,
-    DateFrom: new Date(2026, 3, 1,  6, 0, 0),
-    DateTo: new Date(2026, 3, 16, 6, 0, 0),
-    description: "Moon Event เพิ่ม Exp 150%",
-  });
-
-  expAdd.push({
-    name: "150%",
-    ratePercent: 150,
-    DateFrom: new Date(2026, 3, 16, 6, 0, 0),
-    DateTo: new Date(2026, 3, 22, 6, 0, 0),
-    description: "Moon Event เพิ่ม Exp 150%",
-  });
-
-  
-  expAdd.push({
-    name: "125%",
-    ratePercent: 125,
-    DateFrom: new Date(2026, 3, 22, 6, 0, 0),
-    DateTo: new Date(2026, 3, 29, 6, 0, 0),
-    description: "Moon Event เพิ่ม Exp 125%",
-  });
-
-  
-  expAdd.push({
-    name: "75%",
-    ratePercent: 75,
-    DateFrom: new Date(2026, 3, 29, 6, 0, 0),
-    DateTo: new Date(2026, 4, 6, 6, 0, 0),
-    description: "Moon Event เพิ่ม Exp 75%",
+    DateFrom: new Date(2026, 4, 6, 6, 0, 0),
+    DateTo: new Date(2026, 4, 27, 6, 0, 0),
+    description: "Sun Moon Event เพิ่ม Exp 150%",
   });
 
   return [

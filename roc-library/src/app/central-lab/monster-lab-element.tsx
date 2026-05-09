@@ -19,31 +19,26 @@ const BASE_COLORS: Record<string, string> = {
   undead: "bg-pink-400",
 };
 
-const BASE_TEXT: Record<string, string> = {
-  neutral: "text-gray-400",
-  water: "text-blue-400",
-  earth: "text-yellow-600",
-  fire: "text-red-400",
-  wind: "text-green-400",
-  poison: "text-purple-500",
-  holy: "text-yellow-300",
-  shadow: "text-gray-800",
-  ghost: "text-indigo-300",
-  undead: "text-pink-400",
-};
 export const ElementBadges: React.FC<ElementProps> = ({ element }) => {
   return (
     <div className="flex flex-wrap gap-2">
       {Object.entries(element).map(([key, value]) => {
-        // สีตัวเลขตามค่า %
-        let textColor = "text-white";
-        if (value > 100) textColor = "text-green-600";
-        else if (value < 100) textColor = "text-red-500";
+        // สีตัวเลขและ border ตามค่า %
+        let textColor = "text-base-content";
+        let borderColor = "border-base-300";
+        
+        if (value > 100) {
+          textColor = "text-success font-bold";
+          borderColor = "border-success";
+        } else if (value < 100) {
+          textColor = "text-error font-bold";
+          borderColor = "border-error";
+        }
 
         return (
           <div
             key={key}
-            className="flex items-center gap-2 px-3 py-1 rounded-full border border-gray-300"
+            className={`flex items-center gap-2 px-3 py-1 rounded-full border-2 ${borderColor}`}
           >
             {/* Circle Color */}
             <div
@@ -54,7 +49,7 @@ export const ElementBadges: React.FC<ElementProps> = ({ element }) => {
 
             {/* Label + Value */}
             <span className="font-semibold">
-              <span className={`${BASE_TEXT[key] || "bg-gray-500"}`}>
+              <span className="text-black">
                 {key.charAt(0).toUpperCase() + key.slice(1)}:
               </span>
               <span className={`ml-1 ${textColor}`}>{value}%</span>

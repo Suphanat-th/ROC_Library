@@ -48,7 +48,7 @@ const fileTree: FileTreeItem[] = [
       // },
       {
         id: "lab",
-        name: "- Monster Lab",
+        name: "- Central Laboratory",
         type: "file",
         icon: "",
         href: "/central-lab",
@@ -66,7 +66,7 @@ const fileTree: FileTreeItem[] = [
   //   id: "vip",
   //   name: "VIP Search",
   //   type: "file",
-  //   icon: "👥",
+  //   icon: "🌟",
   //   href: "/vip-search"
   // },
   {

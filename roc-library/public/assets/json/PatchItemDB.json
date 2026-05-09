@@ -1,409 +1,327 @@
 {
-    "490988": {
-        "unidentifiedDisplayName": "Clip",
-        "unidentifiedResourceName": "클립",
+    "420165": {
+        "unidentifiedDisplayName": "Ribbon",
+        "unidentifiedResourceName": "리본",
         "unidentifiedDescriptionName": [
             "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "Phoenix Ring",
-        "identifiedResourceName": "Ring_Of_Phoenix",
+        "identifiedDisplayName": "Costume Tent",
+        "identifiedResourceName": "C_Tent",
         "identifiedDescriptionName": [
-            "แหวนคุณภาพดีที่ได้รับพลังจากนกยักษ์โบราณ",
+            "เต็นท์ที่จู่ ๆ ก็ปรากฏขึ้นมารองรับคุณในตอนที่อยากจะนั่งพัก หรือล้มพับลงไป",
+            "ไม่ต้องประกอบให้มันยุ่งยาก!",
             "",
-            "ATK +50",
-            "ทุก ๆ การอัพเกรด 2 ขั้น Cri +4, Critical Damage + 2%",
-            "ทุก ๆ การอัพเกรด 4 ขั้น เพิ่ม Damage สกิล Sonic Blow, Soul Destroyer 15%",
-            "เมื่ออัพเกรดตั้งแต่ 9 ขึ้นไป ลด Cooldown สกิล Soul Destroyer 0.1 วินาที",
-            "เมื่ออัพเกรดตั้งแต่ 11 ขึ้นไป ลด Delay หลังใช้สกิล 10%",
-            "",
-            "เมื่อสวมใส่ร่วมกับ Ifrit Card , Sealed Ifrit Card",
-            "เพิ่ม Damage ทางกายภาพที่ทำต่อศัตรูทุกขนาด 20%",
-            "ประเภท : Accessory (Left)  พลังป้องกัน : 0",
-            "น้ำหนัก : 70",
-            "เลเวลที่ต้องการ : 100",
-            "อาชีพที่ใส่ได้ : Hi Thief Cls"
+            "[ความสามารถในช่วงกิจกรรม]",
+            "ค่าประสบการณ์ที่ได้รับเมื่อล่ามอนสเตอร์ +15% ",
+            "อัตราดรอปไอเทม + 10 % ",
+            "^ff0000(ความสามารถพิเศษจะถูกลบวันที่ 24 มิถุนายน 2569)",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Lower น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 2279,
+        "costume": true
+    },
+    "19289": {
+        "unidentifiedDisplayName": "Glasses",
+        "unidentifiedResourceName": "글래스",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Costume Moon Eyepatch",
+        "identifiedResourceName": "달의안대",
+        "identifiedDescriptionName": [
+            "ผ้าปิดตาที่มีพลังอันมหาศาลของ Hatii ซึมซับอยู่",
+            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 15 ได้",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Middle น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 1370,
+        "costume": true
+    },
+    "410351": {
+        "unidentifiedDisplayName": "Ribbon",
+        "unidentifiedResourceName": "리본",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Costume Blue Buoyant Parasol",
+        "identifiedResourceName": "C_Buoyant_Parasol_B",
+        "identifiedDescriptionName": [
+            "ร่มชายหาดที่ป้องกันแสงแดดจัดได้ดี",
+            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 19 ได้",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Middle น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 2560,
+        "costume": true
+    },
+    "20515": {
+        "unidentifiedDisplayName": "Garment",
+        "unidentifiedResourceName": "후드",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Costume Magic Circle",
+        "identifiedResourceName": "Magic_Circle",
+        "identifiedDescriptionName": [
+            "วงแหวนแห่งเวทย์ที่ปรากฏขึ้นจางๆ รอบเท้า",
+            "รู้สึกเหมือนได้กลายเป็นนักเวทย์ผู้ยิ่งใหญ่",
+            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 20 ได้",
+            "ประเภท : Costume",
+            "ตำแหน่ง : Garment  น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": true
+    },
+    "420525": {
+        "unidentifiedDisplayName": "Ribbon",
+        "unidentifiedResourceName": "리본",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Costume Twin Milky Way",
+        "identifiedResourceName": "C_Twin_Milkyway",
+        "identifiedDescriptionName": [
+            "วิกผมที่เมื่อสวมใส่แล้วจะทำให้รู้สึกราวกับได้เปลี่ยนสไตล์ทรงผมไปจากเดิม",
+            "โดดเด่นสะดุดตาด้วยสีสันที่ราวกับยกเอาทางช้างเผือกมาไว้ในเส้นผม",
+            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 21 ได้",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ประเภท : Lower น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 2707,
+        "costume": true
+    },
+    "410487": {
+        "unidentifiedDisplayName": "Ribbon",
+        "unidentifiedResourceName": "리본",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Costume Idol's Flower Stage",
+        "identifiedResourceName": "C_Spot_Flower",
+        "identifiedDescriptionName": [
+            "เวทีที่ถูกสร้างขึ้นเพื่อคุณผู้มีความฝันบนแสงไฟ ให้ทุกย่างก้าวเปล่งประกายราวกับอยู่บนเวทีจริง",
+            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 21 ได้",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Middle น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 1893,
+        "costume": true
+    },
+    "480393": {
+        "unidentifiedDisplayName": "Hood",
+        "unidentifiedResourceName": "후드",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Costume Blue Moon Loli Ruri's Crescent Moon",
+        "identifiedResourceName": "C_Loli_Ruri_Moon_B",
+        "identifiedDescriptionName": [
+            "ดวงจันทร์เสี้ยวสีฟ้า ที่ถอดแบบมาจากดวงจันทร์ที่ Loli Ruri ขี่อยู่",
+            "เมื่อสวมใส่ จะพาคุณเดินทางสู่โลกแห่งนิทานและความฝันที่สวยงาม",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Garment น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ต้องการ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 199,
+        "costume": true
+    },
+    "1001617": {
+        "unidentifiedDisplayName": "Purple Star Footprint (Garment)",
+        "unidentifiedResourceName": "발자국이펙트",
+        "unidentifiedDescriptionName": [
+            "มอบเอฟเฟกต์เมื่อ Enchant ช่องที่ 3 ของ Costume ประเภท Garment",
+            "^ff0000Purple Star Footprint"
+        ],
+        "identifiedDisplayName": "Purple Star Footprint (Garment)",
+        "identifiedResourceName": "발자국이펙트",
+        "identifiedDescriptionName": [
+            "มอบเอฟเฟกต์เมื่อ Enchant ช่องที่ 3 ของ Costume ประเภท Garment",
+            "^ff0000Purple Star Footprint",
+            "น้ำหนัก : 10"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "313067": {
+        "unidentifiedDisplayName": "Purple Star Footprint",
+        "unidentifiedResourceName": "발자국이펙트",
+        "unidentifiedDescriptionName": [
+            "Purple Star Footprint"
+        ],
+        "identifiedDisplayName": "Purple Star Footprint",
+        "identifiedResourceName": "발자국이펙트",
+        "identifiedDescriptionName": [
+            "Purple Star Footprint"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "107315": {
+        "unidentifiedDisplayName": "Crescent Costume Scroll",
+        "unidentifiedResourceName": "Crescent_Scroll_TW",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Crescent Costume Scroll",
+        "identifiedResourceName": "Crescent_Scroll_TW",
+        "identifiedDescriptionName": [
+            "Crescent Costume Scroll ม้วนคัมภีร์ลึกลับที่เปล่งประกายของแสงจันทร์ ราวกับเก็บพลังแห่งราตรีอันงดงามไว้ภายใน",
+            "^ff0000หากเปิดใช้งานหลังวันที่ 13 พฤษภาคม 2569 หลังปิดปรับปรุงประจำสัปดาห์ จะไม่ได้รับ   Event Stone Coin ",
+            "น้ำหนัก : 1"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "401149": {
+        "unidentifiedDisplayName": "Ribbon",
+        "unidentifiedResourceName": "리본",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Costume Hollgrehenn Aura",
+        "identifiedResourceName": "C_Success_CN",
+        "identifiedDescriptionName": [
+            "ว่ากันว่ามีพลังของ Hollgrehenn สถิตอยู่.. ไม่รู้ทำไมรู้สึกราวกับว่าตีบวกแล้วจะสำเร็จเลยแฮะ..",
+            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 18 ได้",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Upper น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 2791,
+        "costume": true
+    },
+    "490100": {
+        "unidentifiedDisplayName": "Ring",
+        "unidentifiedResourceName": "링",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Red Force Pendant",
+        "identifiedResourceName": "영원한사랑",
+        "identifiedDescriptionName": [
+            "สร้อยคอที่ปรับแต่งมาจาก Thanatos's Necklace ซึ่งโดดเด่นในเรื่องของพลังแห่งการฟื้นฟู HP",
+            "ATK + 5%, MATK + 5%",
+            "เมื่ออัพเกรดถึงขั้น 7 ATK +20, MATK +20",
+            "เมื่ออัพเกรดถึงขั้น 9 ลด Delay หลังใช้สกิล 5%",
+            "เมื่อสวมใส่ร่วมกับ Drooping Thanatos's Dolor,",
+            "ทุก ๆ การอัพเกรด Headgear 4 ขั้น ลด Delay หลังใช้สกิล 2%,",
+            "เมื่ออัพเกรด Headgear ถึงขั้น 7 เมื่อโจมตีทางกายภาพ มีโอกาส 5% ที่จะฟื้นฟู HP 5% ของ Damage ที่ทำ และเมื่อโจมตีทางเวทมนตร์ มีโอกาส 4% ที่จะฟื้นฟู HP 300 หน่วยทุก ๆ 1 วินาทีทั้งหมด 4 ครั้ง,",
+            "เมื่ออัพเกรด Headgear ถึงขั้น 9, ATK +5%, MATK +5%,",
+            "เมื่ออัพเกรด Headgear ถึงขั้น 11 ลดระยะเวลาร่ายแบบคงที่ 0.5 วินาที",
+            "ประเภท : Accessory(Right) พลังป้องกัน : 0",
+            "น้ำหนัก : 10",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
         ],
         "slotCount": 1,
         "ClassNum": 0,
         "costume": false
     },
-    "107248": {
-        "unidentifiedDisplayName": "[NFS] Ray Knuckle Modification Cube",
-        "unidentifiedResourceName": "RemodelCube",
+    "490101": {
+        "unidentifiedDisplayName": "Ring",
+        "unidentifiedResourceName": "링",
         "unidentifiedDescriptionName": [
-            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
-            "",
-            "ลูกบาศก์ที่ช่วยอัพเกรด [NFS] Ray Knuckle ให้กลายเป็น  [NFS] Awakened Ray Knuckle",
-            "ใช้วัตถุดิบเป็น  [NFS] Ray Knuckle ตั้งแต่ +9 ขึ้นไป",
-            "และจะได้รับ  [NFS] Awakened Ray Knuckle +7 ออกมา",
-            "^ff0000คำเตือน! - เมื่ออัพเกรดแล้ว การ์ดและ Random Option ที่ใช้อยู่จะสูญหาย",
-            "",
-            "<ITEM>ข้อมูลไอเทมใหม่<INFO>560093</INFO></ITEM>"
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "[NFS] Ray Knuckle Modification Cube",
-        "identifiedResourceName": "RemodelCube",
+        "identifiedDisplayName": "Blue Mental Pendant",
+        "identifiedResourceName": "수호의사랑",
         "identifiedDescriptionName": [
-            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
-            "",
-            "ลูกบาศก์ที่ช่วยอัพเกรด [NFS] Ray Knuckle ให้กลายเป็น  [NFS] Awakened Ray Knuckle",
-            "ใช้วัตถุดิบเป็น  [NFS] Ray Knuckle ตั้งแต่ +9 ขึ้นไป",
-            "และจะได้รับ  [NFS] Awakened Ray Knuckle +7 ออกมา",
-            "^ff0000คำเตือน! - เมื่ออัพเกรดแล้ว การ์ดและ Random Option ที่ใช้อยู่จะสูญหาย",
-            "",
-            "<ITEM>ข้อมูลไอเทมใหม่<INFO>560093</INFO></ITEM>",
+            "สร้อยคอที่ปรับแต่งมาจาก Thanatos's Necklace ซึ่งโดดเด่นในเรื่องของพลังแห่งการฟื้นฟู SP",
+            "ATK + 5%, MATK + 5%",
+            "เมื่ออัพเกรดถึงขั้น 7 ATK +20, MATK +20",
+            "เมื่ออัพเกรดถึงขั้น 9 ลด Delay หลังใช้สกิล 5%",
+            "เมื่อสวมใส่ร่วมกับ Drooping Thanatos's Dolor,",
+            "ทุก ๆ การอัพเกรด Headgear 4 ขั้น ลด Delay หลังใช้สกิล 2%,",
+            "เมื่ออัพเกรด Headgear ถึงขั้น 7 เมื่อโจมตีทางกายภาพ มีโอกาส 1% ที่จะฟื้นฟู SP 3% ของ Damage ที่ทำ และเมื่อโจมตีทางเวทมนตร์ มีโอกาส 4% ที่จะฟื้นฟู SP 70 หน่วยทุก ๆ 1 วินาทีทั้งหมด 4 ครั้ง,",
+            "เมื่ออัพเกรด Headgear ถึงขั้น 9, ATK +5%, MATK +5%,",
+            "เมื่ออัพเกรด Headgear ถึงขั้น 11 ลดระยะเวลาร่ายแบบคงที่ 0.5 วินาที",
+            "ประเภท : Accessory(Right) พลังป้องกัน : 0",
+            "น้ำหนัก : 10",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "107369": {
+        "unidentifiedDisplayName": "Fallen Heaven Scroll",
+        "unidentifiedResourceName": "Randgris_Egg",
+        "unidentifiedDescriptionName": [
+            "ปลดปล่อยพลังที่บิดเบือนกฎของโลก เพิ่มพลังให้ผู้ครอบครองอย่างมหาศาล แลกกับความเสี่ยงที่ไม่อาจคาดเดาได้"
+        ],
+        "identifiedDisplayName": "Fallen Heaven Scroll",
+        "identifiedResourceName": "Randgris_Egg",
+        "identifiedDescriptionName": [
+            "ปลดปล่อยพลังที่บิดเบือนกฎของโลก เพิ่มพลังให้ผู้ครอบครองอย่างมหาศาล แลกกับความเสี่ยงที่ไม่อาจคาดเดาได้",
+            "^ff0000หากเปิดใช้งานหลังวันที่ 27 พฤษภาคม 2569 หลังปิดปรับปรุงประจำสัปดาห์ จะไม่ได้รับ   Fallen Heaven Coin ",
             "น้ำหนัก : 1"
         ],
         "slotCount": 0,
         "ClassNum": 0,
         "costume": false
     },
-    "107249": {
-        "unidentifiedDisplayName": "Fortune Fang Dagger Modification Cube",
-        "unidentifiedResourceName": "RemodelCube",
+    "9140": {
+        "unidentifiedDisplayName": "[SSR] Blue Moon Loli Ruri Egg",
+        "unidentifiedResourceName": "수속성알",
         "unidentifiedDescriptionName": [
-            "ลูกบาศก์ที่ช่วยอัพเกรด Fortune Fang Dagger ให้กลายเป็น Awakened Fortune Fang Dagger",
-            "ใช้วัตถุดิบเป็น Fortune Fang Dagger ตั้งแต่ +9 ขึ้นไป",
-            "และจะได้รับ Awakened Fortune Fang Dagger +7 ออกมา",
-            "^ff0000คำเตือน! - เมื่ออัพเกรดแล้ว การ์ดและ Random Option ที่ใช้อยู่จะสูญหาย",
+            "ไข่ที่มี Q-Pet Blue Moon Loli Ruri หลับใหลอยู่ สามารถปลุกให้ตื่นขึ้นมาได้ด้วย [Pet Incubator]",
             "",
-            "<ITEM>ข้อมูลไอเทมใหม่<INFO>510219</INFO></ITEM>"
+            "หากความสัมพันธ์อยู่ในระดับไม่คุ้นเคยหรือเขินอาย, VIT + 1, MHP + 1%.",
+            "หากความสัมพันธ์อยู่ในระดับปกติ  VIT + 2, MHP + 2%.",
+            "หากความสัมพันธ์อยู่ในระดับเป็นมิตร VIT + 3, MHP + 3%",
+            "เมื่อถูกโจมตีทางกายภาพ, มีโอกาสเล็กน้อยที่จะร่าย Kyrie Eleison Lv.2 ใส่ตนเอง (เมื่อเรียนรู้ในเลเวลที่สูงขึ้น จะเกิดผลลัพธ์ตามเลเวลที่เรียนรู้)",
+            "หากความสัมพันธ์อยู่ในระดับสนิทสนม VIT + 4, MHP + 5%",
+            "เมื่อถูกโจมตีทางกายภาพ, มีโอกาสเล็กน้อยที่จะร่าย Kyrie Eleison Lv.2 ใส่ตนเอง (เมื่อเรียนรู้ในเลเวลที่สูงขึ้น จะเกิดผลลัพธ์ตามเลเวลที่เรียนรู้)",
+            "",
+            "^ff0000คุณสมบัติในช่วงเวลากิจกรรม (6 พฤษภาคม - 27 พฤษภาคม 2026)",
+            "^ff0000เพิ่มความเร็วในการเคลื่อนที่ขั้นสูง, สามารถใช้งานสกิล Resurrection Lv.1 ได้",
+            "ประเภท : Monster Egg"
         ],
-        "identifiedDisplayName": "Fortune Fang Dagger Modification Cube",
-        "identifiedResourceName": "RemodelCube",
+        "identifiedDisplayName": "[SSR] Blue Moon Loli Ruri Egg",
+        "identifiedResourceName": "수속성알",
         "identifiedDescriptionName": [
-            "ลูกบาศก์ที่ช่วยอัพเกรด Fortune Fang Dagger ให้กลายเป็น Awakened Fortune Fang Dagger",
-            "ใช้วัตถุดิบเป็น Fortune Fang Dagger ตั้งแต่ +9 ขึ้นไป",
-            "และจะได้รับ Awakened Fortune Fang Dagger +7 ออกมา",
-            "^ff0000คำเตือน! - เมื่ออัพเกรดแล้ว การ์ดและ Random Option ที่ใช้อยู่จะสูญหาย",
+            "ไข่ที่มี Q-Pet Blue Moon Loli Ruri หลับใหลอยู่ สามารถปลุกให้ตื่นขึ้นมาได้ด้วย [Pet Incubator]",
             "",
-            "<ITEM>ข้อมูลไอเทมใหม่<INFO>510219</INFO></ITEM>",
-            "น้ำหนัก : 1"
+            "หากความสัมพันธ์อยู่ในระดับไม่คุ้นเคยหรือเขินอาย, VIT + 1, MHP + 1%.",
+            "หากความสัมพันธ์อยู่ในระดับปกติ  VIT + 2, MHP + 2%.",
+            "หากความสัมพันธ์อยู่ในระดับเป็นมิตร VIT + 3, MHP + 3%",
+            "เมื่อถูกโจมตีทางกายภาพ, มีโอกาสเล็กน้อยที่จะร่าย Kyrie Eleison Lv.2 ใส่ตนเอง (เมื่อเรียนรู้ในเลเวลที่สูงขึ้น จะเกิดผลลัพธ์ตามเลเวลที่เรียนรู้)",
+            "หากความสัมพันธ์อยู่ในระดับสนิทสนม VIT + 4, MHP + 5%",
+            "เมื่อถูกโจมตีทางกายภาพ, มีโอกาสเล็กน้อยที่จะร่าย Kyrie Eleison Lv.2 ใส่ตนเอง (เมื่อเรียนรู้ในเลเวลที่สูงขึ้น จะเกิดผลลัพธ์ตามเลเวลที่เรียนรู้)",
+            "",
+            "^ff0000คุณสมบัติในช่วงเวลากิจกรรม (6 พฤษภาคม - 27 พฤษภาคม 2026)",
+            "^ff0000เพิ่มความเร็วในการเคลื่อนที่ขั้นสูง, สามารถใช้งานสกิล Resurrection Lv.1 ได้",
+            "ประเภท : Monster Egg"
         ],
         "slotCount": 0,
         "ClassNum": 0,
-        "costume": false
-    },
-    "107250": {
-        "unidentifiedDisplayName": "[NFS] Fortune Fang Dagger Modification Cube",
-        "unidentifiedResourceName": "RemodelCube",
-        "unidentifiedDescriptionName": [
-            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
-            "",
-            "ลูกบาศก์ที่ช่วยอัพเกรด [NFS] Fortune Fang Dagger ให้กลายเป็น [NFS] Awakened Fortune Fang Dagger",
-            "ใช้วัตถุดิบเป็น [NFS] Fortune Fang Dagger ตั้งแต่ +9 ขึ้นไป",
-            "และจะได้รับ [NFS] Awakened Fortune Fang Dagger +7 ออกมา",
-            "^ff0000คำเตือน! - เมื่ออัพเกรดแล้ว การ์ดและ Random Option ที่ใช้อยู่จะสูญหาย",
-            "",
-            "<ITEM>ข้อมูลไอเทมใหม่<INFO>510220</INFO></ITEM>"
-        ],
-        "identifiedDisplayName": "[NFS] Fortune Fang Dagger Modification Cube",
-        "identifiedResourceName": "RemodelCube",
-        "identifiedDescriptionName": [
-            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
-            "",
-            "ลูกบาศก์ที่ช่วยอัพเกรด [NFS] Fortune Fang Dagger ให้กลายเป็น [NFS] Awakened Fortune Fang Dagger",
-            "ใช้วัตถุดิบเป็น [NFS] Fortune Fang Dagger ตั้งแต่ +9 ขึ้นไป",
-            "และจะได้รับ [NFS] Awakened Fortune Fang Dagger +7 ออกมา",
-            "^ff0000คำเตือน! - เมื่ออัพเกรดแล้ว การ์ดและ Random Option ที่ใช้อยู่จะสูญหาย",
-            "",
-            "<ITEM>ข้อมูลไอเทมใหม่<INFO>510220</INFO></ITEM>",
-            "น้ำหนัก : 1"
-        ],
-        "slotCount": 0,
-        "ClassNum": 0,
-        "costume": false
-    },
-    "107251": {
-        "unidentifiedDisplayName": "[NFS] Meteor Striker Modification Cube",
-        "unidentifiedResourceName": "RemodelCube",
-        "unidentifiedDescriptionName": [
-            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
-            "",
-            "ลูกบาศก์ที่ช่วยอัพเกรด [NFS] Meteor Striker ให้กลายเป็น  [NFS] Awakened Meteor Striker",
-            "ใช้วัตถุดิบเป็น  [NFS] Meteor Striker ตั้งแต่ +9 ขึ้นไป",
-            "และจะได้รับ  [NFS] Awakened Meteor Striker +7 ออกมา",
-            "^ff0000คำเตือน! - เมื่ออัพเกรดแล้ว การ์ดและ Random Option ที่ใช้อยู่จะสูญหาย",
-            "",
-            "<ITEM>ข้อมูลไอเทมใหม่<INFO>590125</INFO></ITEM>"
-        ],
-        "identifiedDisplayName": "[NFS] Meteor Striker Modification Cube",
-        "identifiedResourceName": "RemodelCube",
-        "identifiedDescriptionName": [
-            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
-            "",
-            "ลูกบาศก์ที่ช่วยอัพเกรด [NFS] Meteor Striker ให้กลายเป็น  [NFS] Awakened Meteor Striker",
-            "ใช้วัตถุดิบเป็น  [NFS] Meteor Striker ตั้งแต่ +9 ขึ้นไป",
-            "และจะได้รับ  [NFS] Awakened Meteor Striker +7 ออกมา",
-            "^ff0000คำเตือน! - เมื่ออัพเกรดแล้ว การ์ดและ Random Option ที่ใช้อยู่จะสูญหาย",
-            "",
-            "<ITEM>ข้อมูลไอเทมใหม่<INFO>590125</INFO></ITEM>",
-            "น้ำหนัก : 1"
-        ],
-        "slotCount": 0,
-        "ClassNum": 0,
-        "costume": false
-    },
-    "107262": {
-        "unidentifiedDisplayName": "Spirit Cat Scroll",
-        "unidentifiedResourceName": "Betelgeuse_Soul",
-        "unidentifiedDescriptionName": [
-            "คัมภีร์จากเงามืดสู่พลังแห่งวิญญาณ Spirit Cat คือสัญลักษณ์ของนักล่าที่ไร้เสียง เคลื่อนไหวรวดเร็ว และจู่โจมโดยไม่มีใครทันตั้งตัว",
-            "^ff0000หากเปิดใช้งานหลังวันที่ 13 พฤษภาคม 2569 หลังปิดปรับปรุงประจำสัปดาห์ จะไม่ได้รับ   Spirit Cat Coin "
-        ],
-        "identifiedDisplayName": "Spirit Cat Scroll",
-        "identifiedResourceName": "Betelgeuse_Soul",
-        "identifiedDescriptionName": [
-            "คัมภีร์จากเงามืดสู่พลังแห่งวิญญาณ Spirit Cat คือสัญลักษณ์ของนักล่าที่ไร้เสียง เคลื่อนไหวรวดเร็ว และจู่โจมโดยไม่มีใครทันตั้งตัว",
-            "^ff0000หากเปิดใช้งานหลังวันที่ 13 พฤษภาคม 2569 หลังปิดปรับปรุงประจำสัปดาห์ จะไม่ได้รับ   Spirit Cat Coin ",
-            "น้ำหนัก : 1"
-        ],
-        "slotCount": 0,
-        "ClassNum": 0,
-        "costume": false
-    },
-    "510219": {
-        "unidentifiedDisplayName": "Knife",
-        "unidentifiedResourceName": "나이프",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "Awakened Fortune Fang Dagger ",
-        "identifiedResourceName": "Frontier_ABC_Dagger",
-        "identifiedDescriptionName": [
-            "กริชเขี้ยวแห่งโชคชะตา อาวุธที่เหล่าจอมโจรต่างตามหา",
-            "",
-            "Perfect Dodge + 30",
-            "ลด Cooldown สกิล Soul Destroyer 0.1 วินาที",
-            "ทุก ๆ การอัพเกรด 3 ขั้น Atk + 6%",
-            "เมื่ออัพเกรดถึงขั้น 9 ASPD +20%",
-            "เมื่ออัพเกรดถึงขั้น 11 จะไม่เกิด Penalty ขนาดอาวุธ",
-            "เมื่ออัพเกรดถึงขั้น 12 ลด Delay หลังใช้สกิล 10%",
-            "ประเภท : Dagger พลังโจมตี : 90",
-            "น้ำหนัก : 120",
-            "เลเวลอาวุธ : 2",
-            "เลเวลที่ต้องการ : 98",
-            "อาชีพที่ใส่ได้ : Swordman Class, Magician Class, Archer Class, Merchant Class, Thief Class, Ninja Class, Soul Linker Class"
-        ],
-        "slotCount": 4,
-        "ClassNum": 31,
-        "costume": false
-    },
-    "510220": {
-        "unidentifiedDisplayName": "Knife",
-        "unidentifiedResourceName": "나이프",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "[NFS] Awakened Fortune Fang Dagger ",
-        "identifiedResourceName": "Frontier_ABC_Dagger",
-        "identifiedDescriptionName": [
-            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
-            "",
-            "กริชเขี้ยวแห่งโชคชะตา อาวุธที่เหล่าจอมโจรต่างตามหา",
-            "",
-            "Perfect Dodge + 30",
-            "ลด Cooldown สกิล Soul Destroyer 0.1 วินาที",
-            "ทุก ๆ การอัพเกรด 3 ขั้น Atk + 6%",
-            "เมื่ออัพเกรดถึงขั้น 9 ASPD +20%",
-            "เมื่ออัพเกรดถึงขั้น 11 จะไม่เกิด Penalty ขนาดอาวุธ",
-            "เมื่ออัพเกรดถึงขั้น 12 ลด Delay หลังใช้สกิล 10%",
-            "ประเภท : Dagger พลังโจมตี : 90",
-            "น้ำหนัก : 120",
-            "เลเวลอาวุธ : 2",
-            "เลเวลที่ต้องการ : 98",
-            "อาชีพที่ใส่ได้ : Swordman Class, Magician Class, Archer Class, Merchant Class, Thief Class, Ninja Class, Soul Linker Class"
-        ],
-        "slotCount": 4,
-        "ClassNum": 31,
-        "costume": false
-    },
-    "560093": {
-        "unidentifiedDisplayName": "Knuckle",
-        "unidentifiedResourceName": "바그낙",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "[NFS] Awakened Ray Knuckle ",
-        "identifiedResourceName": "Up_Ray_Knuckle",
-        "identifiedDescriptionName": [
-            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
-            "",
-            "สนับมือติดใบมีดที่ทำจากแร่ส่องประกายซึ่งค้นพบจากอุกกาบาตชิ้นหนึ่ง",
-            "ทุก ๆ การอัพเกรด 2 ขั้น ATK + 30",
-            "ทุก ๆ การอัพเกรด 3 ขั้น เพิ่ม Damage สกิล Asura Strike 15%",
-            "เมื่ออัพเกรดถึงขั้น 9, เพิ่มดาเมจต่อศัตรูขนาดใหญ่ 30%",
-            "เมื่ออัพเกรดถึงขั้น 11, สกิล Asura Strike จะยกเลิกผลการห้ามฟื้นฟู SP หลังใช้สกิล",
-            "เมื่ออัพเกรดถึงขั้น 12, MHP/MSP +20%",
-            "ประเภท :  Knuckle  พลังโจมตี : 230",
-            "น้ำหนัก : 100",
-            "เลเวลอาวุธ : 4",
-            "เลเวลที่ต้องการ : 98",
-            "อาชีพที่ใส่ได้ : Champion Class"
-        ],
-        "slotCount": 2,
-        "ClassNum": 78,
-        "costume": false
-    },
-    "560094": {
-        "unidentifiedDisplayName": "Knuckle",
-        "unidentifiedResourceName": "바그낙",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "[NFS] Ray Knuckle ",
-        "identifiedResourceName": "섬광의손톱",
-        "identifiedDescriptionName": [
-            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
-            "",
-            "สนับมือติดใบมีดที่ทำจากแร่ส่องประกายซึ่งค้นพบจากอุกกาบาตชิ้นหนึ่ง",
-            "ทุก ๆ การอัพเกรด 2 ขั้น ATK + 10.",
-            "ทุก ๆ การอัพเกรด 3 ขั้น เพิ่ม Damage สกิล Asura Strike 5%",
-            "เมื่ออัพเกรดถึงขั้น 9,  เพิ่มดาเมจต่อศัตรูขนาดใหญ่ 10%",
-            "เมื่ออัพเกรดถึงขั้น 11, เมื่อใช้สกิล Asura Strike จะยกเลิกผลการห้ามฟื้นฟู SP หลังใช้สกิล",
-            "เมื่อสวมใส่ร่วมกับ Ancient Hero Boots เมื่อโจมตีทางกายภาพ มีโอกาสที่ STR +20, ATK +15% เป็นเวลา 7 วินาที",
-            "",
-            "ประเภท : Knuckle พลังโจมตี : 185",
-            "น้ำหนัก : 70",
-            "เลเวลอาวุธ : 4",
-            "เลเวลที่ต้องการ : 70",
-            "อาชีพที่ใส่ได้ : Champion Class"
-        ],
-        "slotCount": 2,
-        "ClassNum": 78,
-        "costume": false
-    },
-    "590125": {
-        "unidentifiedDisplayName": "Mace",
-        "unidentifiedResourceName": "메이스",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "[NFS] Awakened Meteor Striker ",
-        "identifiedResourceName": "Up_Meteor_Striker",
-        "identifiedDescriptionName": [
-            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
-            "",
-            "ค้อนที่ทำจากแร่หายากที่ค้นพบจากอุกกาบาตชิ้นหนึ่ง",
-            "ไม่สามารถทำลายได้",
-            "ทุก ๆ การอัพเกรด 2 ขั้น ATK + 30 , Hit + 10",
-            "ทุก ๆ การอัพเกรด 3 ขั้น เพิ่ม Damage สกิล  Cart Termination 50% , Hammerfall 50%",
-            "เมื่ออัพเกรดถึงขั้น 9 เพิ่ม Damage สกิล Cart Termination 40% ,  Hammerfall 40%",
-            "เมื่ออัพเกรดถึงขั้น 11 Perfect Hit + 50%, เพิ่ม Physical Damage ระยะใกล้ 15%",
-            "เมื่ออัพเกรดถึงขั้น 12 ลด Cooldown สกิล Hammerfall 1 วินาที",
-            "ประเภท : Mace พลังโจมตี : 350",
-            "น้ำหนัก : 400",
-            "เลเวลอาวุธ : 4",
-            "เลเวลที่ต้องการ : 98",
-            "อาชีพที่ใส่ได้ : Whitesmith Class"
-        ],
-        "slotCount": 2,
-        "ClassNum": 62,
-        "costume": false
-    },
-    "100390": {
-        "unidentifiedDisplayName": "Ray Knuckle Modification Cube",
-        "unidentifiedResourceName": "RemodelCube",
-        "unidentifiedDescriptionName": [
-            "ลูกบาศก์ที่ช่วยอัพเกรด Ray Knuckle ให้กลายเป็น Awakened Ray Knuckle",
-            "ใช้วัตถุดิบเป็น Ray Knuckle ตั้งแต่ +9 ขึ้นไป",
-            "และจะได้รับ Awakened Ray Knuckle +7 ออกมา",
-            "^ff0000คำเตื่อน! - เมื่ออัพเกรดแล้ว การ์ดและ Random Option ที่ใช้อยู่จะสูญหาย",
-            "",
-            "<ITEM>ข้อมูลไอเทมใหม่<INFO>560009</INFO></ITEM>",
-            "น้ำหนัก : 1"
-        ],
-        "identifiedDisplayName": "Ray Knuckle Modification Cube",
-        "identifiedResourceName": "RemodelCube",
-        "identifiedDescriptionName": [
-            "ลูกบาศก์ที่ช่วยอัพเกรด Ray Knuckle ให้กลายเป็น Awakened Ray Knuckle",
-            "ใช้วัตถุดิบเป็น Ray Knuckle ตั้งแต่ +9 ขึ้นไป",
-            "และจะได้รับ Awakened Ray Knuckle +7 ออกมา",
-            "^ff0000คำเตื่อน! - เมื่ออัพเกรดแล้ว การ์ดและ Random Option ที่ใช้อยู่จะสูญหาย",
-            "",
-            "<ITEM>ข้อมูลไอเทมใหม่<INFO>560009</INFO></ITEM>",
-            "น้ำหนัก : 1"
-        ],
-        "slotCount": 0,
-        "ClassNum": 0,
-        "costume": false
-    },
-    "100361": {
-        "unidentifiedDisplayName": "Meteor Striker Modification Cube",
-        "unidentifiedResourceName": "RemodelCube",
-        "unidentifiedDescriptionName": [
-            "ลูกบาศก์ที่ช่วยอัพเกรด Meteor Striker ให้กลายเป็น Awakened Meteor Striker",
-            "ใช้วัตถุดิบเป็น Meteor Striker ตั้งแต่ +9 ขึ้นไป",
-            "และจะได้รับ Awakened Meteor Striker +7 ออกมา",
-            "^ff0000คำเตื่อน! - เมื่ออัพเกรดแล้ว การ์ดและ Random Option ที่ใช้อยู่จะสูญหาย",
-            "",
-            "<ITEM>ข้อมูลไอเทมใหม่<INFO>590011</INFO></ITEM>",
-            "น้ำหนัก : 1"
-        ],
-        "identifiedDisplayName": "Meteor Striker Modification Cube",
-        "identifiedResourceName": "RemodelCube",
-        "identifiedDescriptionName": [
-            "ลูกบาศก์ที่ช่วยอัพเกรด Meteor Striker ให้กลายเป็น Awakened Meteor Striker",
-            "ใช้วัตถุดิบเป็น Meteor Striker ตั้งแต่ +9 ขึ้นไป",
-            "และจะได้รับ Awakened Meteor Striker +7 ออกมา",
-            "^ff0000คำเตื่อน! - เมื่ออัพเกรดแล้ว การ์ดและ Random Option ที่ใช้อยู่จะสูญหาย",
-            "",
-            "<ITEM>ข้อมูลไอเทมใหม่<INFO>590011</INFO></ITEM>",
-            "น้ำหนัก : 1"
-        ],
-        "slotCount": 0,
-        "ClassNum": 0,
-        "costume": false
-    },
-    "560009": {
-        "unidentifiedDisplayName": "Claw",
-        "unidentifiedResourceName": "바그낙",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "Awakened Ray Knuckle",
-        "identifiedResourceName": "Up_Ray_Knuckle",
-        "identifiedDescriptionName": [
-            "สนับมือติดใบมีดที่ทำจากแร่ส่องประกายซึ่งค้นพบจากอุกกาบาตชิ้นหนึ่ง",
-            "ทุก ๆ การอัพเกรด 2 ขั้น ATK + 30",
-            "ทุก ๆ การอัพเกรด 3 ขั้น เพิ่ม Damage สกิล Asura Strike 15%",
-            "เมื่ออัพเกรดถึงขั้น 9, เพิ่มดาเมจต่อศัตรูขนาดใหญ่ 30%",
-            "เมื่ออัพเกรดถึงขั้น 11, สกิล Asura Strike จะยกเลิกผลการห้ามฟื้นฟู SP หลังใช้สกิล",
-            "เมื่ออัพเกรดถึงขั้น 12, MHP/MSP +20%",
-            "ประเภท :  Knuckle  พลังโจมตี : 230",
-            "น้ำหนัก : 100",
-            "เลเวลอาวุธ : 4",
-            "เลเวลที่ต้องการ : 98",
-            "อาชีพที่ใส่ได้ : Champion Class"
-        ],
-        "slotCount": 2,
-        "ClassNum": 12,
-        "costume": false
-    },
-    "590011": {
-        "unidentifiedDisplayName": "Mace",
-        "unidentifiedResourceName": "클럽",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "Awakened Meteor Striker",
-        "identifiedResourceName": "Up_Meteor_Striker",
-        "identifiedDescriptionName": [
-            "ค้อนที่ทำจากแร่หายากที่ค้นพบจากอุกกาบาตชิ้นหนึ่ง",
-            "",
-            "ไม่สามารถทำลายได้",
-            "ทุก ๆ การอัพเกรด 2 ขั้น ATK + 30 , Hit + 10",
-            "ทุก ๆ การอัพเกรด 3 ขั้น เพิ่ม Damage สกิล  Cart Termination 50% , Hammerfall 50%",
-            "เมื่ออัพเกรดถึงขั้น 9 เพิ่ม Damage สกิล Cart Termination 40% ,  Hammerfall 40%",
-            "เมื่ออัพเกรดถึงขั้น 11 Perfect Hit + 50%, เพิ่ม Physical Damage ระยะใกล้ 15%",
-            "เมื่ออัพเกรดถึงขั้น 12 ลด Cooldown สกิล Hammerfall 1 วินาที",
-            "ประเภท : Mace พลังโจมตี : 350",
-            "น้ำหนัก : 400",
-            "เลเวลอาวุธ : 4",
-            "เลเวลที่ต้องการ : 98",
-            "อาชีพที่ใส่ได้ : Whitesmith Class"
-        ],
-        "slotCount": 2,
-        "ClassNum": 8,
         "costume": false
     }
 }
