@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useMemo, useState } from "react";
-import { BATTLE_PASS_CONFIG } from "@/data/battlepassData";
-import { DAILY_QUESTS, WEEKLY_QUESTS } from "@/data/QuestBattlePassData";
+import { CURRENT_SEASON_CONFIG } from "./CalcBPConfig";
+import { DAILY_QUESTS, PREMIUM_DAILY_ROTATION, WEEKLY_QUESTS, RequestItem } from "@/data/battlePassQuestData";
 
 interface CalculationResult {
   dailyNormalPoints: number;
@@ -13,6 +13,7 @@ interface CalculationResult {
   weeklyTotalPremiumPoints: number;
   weeklyZenyCost: number;
   daysRemaining: number;
+  weeksRemaining: number;
   currentProgress: {
     normalPoints: number;
     premiumPoints: number;
@@ -26,7 +27,8 @@ interface CalculationResult {
 
 // Calculate level from points: >= 50 = Level 1, every 10 points = 1 level
 // 50-59 = Level 1, 60-69 = Level 2, 70-79 = Level 3, etc.
-const calculateLevelFromExp = (totalPoints: number) => {
+// Max level is 100
+const calculateLevelFromExp = (totalPoints: number, isPremium: boolean = false) => {
   if (totalPoints < 50) {
     return {
       level: 0,
@@ -35,8 +37,13 @@ const calculateLevelFromExp = (totalPoints: number) => {
     };
   }
 
-  const level = 1 + Math.floor((totalPoints - 50) / 10);
+  let level = 1 + Math.floor((totalPoints - 50) / 10);
   const currentExp = (totalPoints - 50) % 10;
+
+  // Cap max level at 100 only for Normal Pass
+  if (!isPremium && level > 100) {
+    level = 100;
+  }
 
   return {
     level,
@@ -45,34 +52,159 @@ const calculateLevelFromExp = (totalPoints: number) => {
   };
 };
 
+// Helper function to get the currently active premium daily quest
+// based on today's date and the dateRange (format: "DD/MM - DD/MM")
+const getActivePremiumDailyQuest = (today: Date = new Date()): typeof PREMIUM_DAILY_ROTATION[0] | null => {
+  const currentYear = today.getFullYear();
+  const currentMonth = today.getMonth() + 1; // getMonth is 0-indexed
+  const currentDay = today.getDate();
+
+  for (const quest of PREMIUM_DAILY_ROTATION) {
+    const [startStr, endStr] = quest.dateRange.split(' - ');
+    const [startDay, startMonth] = startStr.split('/').map(Number);
+    const [endDay, endMonth] = endStr.split('/').map(Number);
+
+    // Create comparable dates (same year)
+    const startDate = new Date(currentYear, startMonth - 1, startDay);
+    const endDate = new Date(currentYear, endMonth - 1, endDay);
+    const checkDate = new Date(currentYear, currentMonth - 1, currentDay);
+
+    if (checkDate >= startDate && checkDate <= endDate) {
+      return quest;
+    }
+  }
+
+  return null;
+};
+
 export default function CalcBPComponent() {
   const [totalPoints, setTotalPoints] = useState<number>(0);
-  const [isDailyDone, setIsDailyDone] = useState<boolean>(false);
-  const [isWeeklyDone, setIsWeeklyDone] = useState<boolean>(false);
+  
+  // Daily Quests - track completion by quest name (auto-checked on initial load)
+  const [completedDailyQuests, setCompletedDailyQuests] = useState<Record<string, boolean>>({
+    'Monster Hunt': true,
+    'Send Zeny': true,
+  });
+  
+  // Weekly Quests - track completion by quest name (auto-checked on initial load)
+  const [completedWeeklyQuests, setCompletedWeeklyQuests] = useState<Record<string, boolean>>({
+    'Celine Kimi': true,
+    'Faceworm Queen': true,
+    'Ancient Gigantes': true,
+    'Send Zeny/Items': true,
+  });
+  
   const [isPremiumOpened, setIsPremiumOpened] = useState<boolean>(false);
   const [isLastDayDailyDone, setIsLastDayDailyDone] = useState<boolean>(false);
-  const [isLastDayWeeklyDone, setIsLastDayWeeklyDone] =
-    useState<boolean>(false);
+  const [isLastDayWeeklyDone, setIsLastDayWeeklyDone] = useState<boolean>(false);
+  const [isDailyCompleted, setIsDailyCompleted] = useState<boolean>(false);
+  const [isWeeklyCompleted, setIsWeeklyCompleted] = useState<boolean>(false);
+  
+  // Last Day quest selections
+  const [isLastDayDailyQuests, setIsLastDayDailyQuests] = useState<Record<string, boolean>>({});
+  const [isLastDayWeeklyQuests, setIsLastDayWeeklyQuests] = useState<Record<string, boolean>>({});
+  
+  // Quest Completion Status - for calculating reduced remaining days/weeks
+  const [completedDailyQuestsList, setCompletedDailyQuestsList] = useState<Record<string, boolean>>({});
+  const [completedWeeklyQuestsList, setCompletedWeeklyQuestsList] = useState<Record<string, boolean>>({});
+  
   const [targetLevel, setTargetLevel] = useState<number>(0);
 
+  // Get the active premium daily quest for today
+  const activePremiumDailyQuest = getActivePremiumDailyQuest();
+
+  // Helper function to get all daily quests (premium or normal)
+  const getAllDailyQuests = () => {
+    if (isPremiumOpened && activePremiumDailyQuest) {
+      return [activePremiumDailyQuest, DAILY_QUESTS[1]]; // Premium + Send Zeny
+    }
+    return DAILY_QUESTS;
+  };
+
+  // Handler for Last Day Daily with auto-check children
+  const handleLastDayDailyChange = (checked: boolean) => {
+    setIsLastDayDailyDone(checked);
+    if (checked) {
+      // Auto-check all children when parent is checked
+      const allDailyQuests = getAllDailyQuests();
+      const newState: Record<string, boolean> = {};
+      allDailyQuests.forEach(quest => {
+        newState[quest.name] = true;
+      });
+      // Also explicitly ensure Send Zeny is checked if Premium
+      if (isPremiumOpened) {
+        newState['Send Zeny'] = true;
+      }
+      setIsLastDayDailyQuests(newState);
+    } else {
+      // Uncheck all children when parent is unchecked
+      setIsLastDayDailyQuests({});
+    }
+  };
+
+  // Handler for Last Day Weekly with auto-check children
+  const handleLastDayWeeklyChange = (checked: boolean) => {
+    setIsLastDayWeeklyDone(checked);
+    if (checked) {
+      const newState: Record<string, boolean> = {};
+      WEEKLY_QUESTS.forEach(quest => {
+        newState[quest.name] = true;
+      });
+      setIsLastDayWeeklyQuests(newState);
+    } else {
+      setIsLastDayWeeklyQuests({});
+    }
+  };
+
+  // Handler for Daily Completed with auto-check children
+  const handleDailyCompletedChange = (checked: boolean) => {
+    setIsDailyCompleted(checked);
+    if (checked) {
+      const allDailyQuests = getAllDailyQuests();
+      const newState: Record<string, boolean> = {};
+      allDailyQuests.forEach(quest => {
+        newState[quest.name] = true;
+      });
+      setCompletedDailyQuestsList(newState);
+    } else {
+      setCompletedDailyQuestsList({});
+    }
+  };
+
+  // Handler for Weekly Completed with auto-check children
+  const handleWeeklyCompletedChange = (checked: boolean) => {
+    setIsWeeklyCompleted(checked);
+    if (checked) {
+      const newState: Record<string, boolean> = {};
+      WEEKLY_QUESTS.forEach(quest => {
+        newState[quest.name] = true;
+      });
+      setCompletedWeeklyQuestsList(newState);
+    } else {
+      setCompletedWeeklyQuestsList({});
+    }
+  };
+
+  // Check if all daily quests are completed
+  const isDailyDone = Object.values(completedDailyQuests).every((val) => val);
+  
+  // Check if all weekly quests are completed
+  const isWeeklyDone = Object.values(completedWeeklyQuests).every((val) => val);
+
   // Auto-calculate level and remaining points from total
-  const levelData = calculateLevelFromExp(totalPoints);
+  const levelData = calculateLevelFromExp(totalPoints, isPremiumOpened);
   const currentLevel = levelData.level;
   const currentPoints = levelData.currentExp;
   const maxExpForLevel = levelData.maxExp;
 
-  // Quest configuration from QuestBattlePassData
-  const dailyNormalTotal = DAILY_QUESTS.normal.total;
-  const dailyPremiumTotal = DAILY_QUESTS.premium.total;
-  const dailyMonsterNormalReward = DAILY_QUESTS.normal.monsterHunt.reward;
-  const dailyMonsterPremiumReward = DAILY_QUESTS.premium.monsterHunt.reward;
-  const dailySendZenyReward = DAILY_QUESTS.normal.sendZeny.reward;
-  const weeklyTotal = WEEKLY_QUESTS.total;
-  const weeklySendZenyReward = WEEKLY_QUESTS.sendZeny.reward;
-  const dailyZenyCostAmount: number =
-    DAILY_QUESTS.normal.sendZeny.zenyRequired ?? 1000000;
-  const weeklyZenyCostAmount: number =
-    WEEKLY_QUESTS.sendZeny.zenyRequired ?? 2000000;
+  // Quest configuration from current season
+  const dailyNormalTotal = CURRENT_SEASON_CONFIG.dailyQuests.normal.reward;
+  const dailyPremiumTotal = CURRENT_SEASON_CONFIG.dailyQuests.premium.reward;
+  const weeklyTotal = CURRENT_SEASON_CONFIG.weeklyQuests.reward;
+  
+  // Fixed Zeny costs for quests
+  const dailyZenyCostAmount = 1000000; // 1M Zeny per day
+  const weeklyZenyCostAmount = 2000000; // 2M Zeny per week
 
   // Calculate daily points for current account type
   const currentDailyPoints = isPremiumOpened
@@ -83,10 +215,10 @@ export default function CalcBPComponent() {
     const today = new Date();
     today.setHours(0, 0, 0, 0);
 
-    const startDate = new Date(BATTLE_PASS_CONFIG.eventStartDate);
+    const startDate = new Date(CURRENT_SEASON_CONFIG.eventStartDate);
     startDate.setHours(0, 0, 0, 0);
 
-    const endDate = new Date(BATTLE_PASS_CONFIG.eventEndDate);
+    const endDate = new Date(CURRENT_SEASON_CONFIG.eventEndDate);
     endDate.setHours(23, 59, 59, 999);
 
     // Calculate days from start to today
@@ -96,18 +228,45 @@ export default function CalcBPComponent() {
       Math.floor((today.getTime() - startDate.getTime()) / millisecondsPerDay) +
         1,
     );
-    const daysRemaining = Math.max(
+    let daysRemaining = Math.max(
       0,
-      Math.floor((endDate.getTime() - today.getTime()) / millisecondsPerDay) +
-        1,
+      Math.floor((endDate.getTime() - today.getTime()) / millisecondsPerDay),
     );
 
-    // Weekly calculation
-    const weeksRemaining = Math.ceil(daysRemaining / 7);
+    // Weekly calculation - count Wednesday resets from this week (Week 1 = today's week) until endDate
+    const WEDNESDAY = 3;
+    let weeksRemaining = 0;
+    
+    // Start from the Wednesday of this week (or earlier if today is after Wed)
+    const weekStartDate = new Date(today);
+    const daysToWednesday = (weekStartDate.getDay() - WEDNESDAY + 7) % 7;
+    weekStartDate.setDate(weekStartDate.getDate() - daysToWednesday);
+    
+    // Count Wednesdays from this week's Wednesday until endDate
+    const currentDate = new Date(weekStartDate);
+    while (currentDate <= endDate) {
+      if (currentDate.getDay() === WEDNESDAY) {
+        weeksRemaining++;
+      }
+      currentDate.setDate(currentDate.getDate() + 1);
+    }
+    
+    // Subtract 1 week for cooldown (จะคำนวนอาทิตย์ปัจจุบัน และ Cooldown 1 อาทิตย์)
+    weeksRemaining = Math.max(0, weeksRemaining - 1);
 
     // Calculate current progress (days completed up to today)
     const completedDays = Math.max(0, daysSinceStart);
-    const completedWeeks = Math.floor(completedDays / 7);
+    
+    // Count completed weeks (Wednesday resets that have occurred)
+    let completedWeeks = 0;
+    const checkDate = new Date(startDate);
+    
+    while (checkDate < today) {
+      if (checkDate.getDay() === WEDNESDAY) {
+        completedWeeks++;
+      }
+      checkDate.setDate(checkDate.getDate() + 1);
+    }
 
     // Normal Pass
     const normalPointsFromCompletedDays = completedDays * dailyNormalTotal;
@@ -143,6 +302,7 @@ export default function CalcBPComponent() {
       weeklyTotalPremiumPoints: dailyPremiumTotal * 7 + weeklyTotal,
       weeklyZenyCost,
       daysRemaining,
+      weeksRemaining,
       currentProgress: {
         normalPoints: currentNormalPoints,
         premiumPoints: currentPremiumPoints,
@@ -159,11 +319,24 @@ export default function CalcBPComponent() {
     weeklyTotal,
     dailyZenyCostAmount,
     weeklyZenyCostAmount,
+    isDailyCompleted,
+    completedDailyQuestsList,
+    isWeeklyCompleted,
+    completedWeeklyQuestsList,
   ]);
 
   const formatNumber = (num: number | string) => {
     const numValue = typeof num === "string" ? parseInt(num, 10) : num;
     return numValue.toLocaleString("th-TH");
+  };
+
+  // Helper function to format request array to string
+  const formatRequest = (request: RequestItem[] | undefined): string => {
+    if (!request || request.length === 0) return 'N/A';
+    
+    return request
+      .map((req) => `${req.amount}x ${req.name}`)
+      .join(' + ');
   };
 
   // Total current points is just the input
@@ -173,64 +346,105 @@ export default function CalcBPComponent() {
   const totalPremiumProjectionPoints =
     totalCurrentPoints + calculation.projection.premiumPoints;
 
-  const finalNormalData = calculateLevelFromExp(totalNormalProjectionPoints);
+  const finalNormalData = calculateLevelFromExp(totalNormalProjectionPoints, false);
   const finalNormalLevel = finalNormalData.level;
   const finalNormalRemainingPoints = finalNormalData.currentExp;
 
-  const finalPremiumData = calculateLevelFromExp(totalPremiumProjectionPoints);
+  const finalPremiumData = calculateLevelFromExp(totalPremiumProjectionPoints, true);
   const finalPremiumLevel = finalPremiumData.level;
   const finalPremiumRemainingPoints = finalPremiumData.currentExp;
 
   // Calculate projected level based on checkboxes with smart calculation
   const calculateProjectedLevel = () => {
-    const today = new Date();
-    const WEDNESDAY = 3; // Wednesday = first day of week
-    const dayOfWeek = today.getDay();
-
-    // Calculate day index in current week (Wednesday = 0, Thursday = 1, ..., Tuesday = 6)
-    const dayIndexInWeek = (dayOfWeek - WEDNESDAY + 7) % 7;
-
-    // Days remaining in current week (including today)
-    const daysRemainingInWeek = 7 - dayIndexInWeek;
-
-    // Days for daily calculation: starts with full remaining days, minus last Wednesday
-    let daysForDailyCalc = Math.max(0, calculation.daysRemaining - 1);
-
-    // If Daily quest is done: Don't count today
-    if (isDailyDone) {
-      daysForDailyCalc = Math.max(0, daysForDailyCalc - 1);
-    }
-
-    // Days for weekly calculation: independent from daily
-    let daysForWeeklyCalc = calculation.daysRemaining - 1; // Always subtract last Wednesday
-    let weeksForCalculation = 0;
-
-    // If Weekly quest is done: Don't count remaining days in current week
-    if (isWeeklyDone) {
-      daysForWeeklyCalc = Math.max(0, daysForWeeklyCalc - daysRemainingInWeek);
-      weeksForCalculation = Math.ceil(daysForWeeklyCalc / 7);
-    } else {
-      // Not done with weekly: include this week's remaining days
-      weeksForCalculation = Math.ceil(daysForWeeklyCalc / 7);
-    }
+    // Check if any daily quest is checked in main section
+    const hasDailyQuestChecked = completedDailyQuests['Monster Hunt'] || completedDailyQuests['Send Zeny'];
+    
+    // Check if any weekly quest is checked in main section
+    const hasWeeklyQuestChecked = Object.values(completedWeeklyQuests).some((checked) => checked);
 
     // Daily points: Monster (10 normal / 20 premium) + Send Zeny (30) = 40 normal / 50 premium
     const dailyPoints = isPremiumOpened ? dailyPremiumTotal : dailyNormalTotal;
-    let additionalPoints =
-      daysForDailyCalc * dailyPoints + weeksForCalculation * weeklyTotal;
+    
+    let additionalPoints = 0;
 
-    // Add Daily points for last day if checked
-    if (isLastDayDailyDone) {
-      additionalPoints += dailyPoints;
+    // Only add daily points if at least one daily quest is checked in main section
+    if (hasDailyQuestChecked) {
+      let daysForDailyCalc = Math.max(0, calculation.daysRemaining);
+      additionalPoints += daysForDailyCalc * dailyPoints;
     }
 
-    // Add Weekly points for last day if checked
+    // Only add weekly points if at least one weekly quest is checked in main section
+    if (hasWeeklyQuestChecked) {
+      let weeksForCalculation = calculation.weeksRemaining;
+      additionalPoints += weeksForCalculation * weeklyTotal;
+    }
+
+    // Subtract points for "Quest ที่ทำสำเร็จแล้ว - Daily" - subtract sum of checked daily quest rewards
+    if (isDailyCompleted) {
+      let completionDailyPointsDeduct = 0;
+      if (isPremiumOpened && activePremiumDailyQuest) {
+        if (completedDailyQuestsList[activePremiumDailyQuest.name]) {
+          completionDailyPointsDeduct += activePremiumDailyQuest.reward;
+        }
+      } else {
+        DAILY_QUESTS.forEach(quest => {
+          if (completedDailyQuestsList[quest.name]) {
+            completionDailyPointsDeduct += quest.reward;
+          }
+        });
+      }
+      if (completedDailyQuestsList['Send Zeny'] && isPremiumOpened && activePremiumDailyQuest) {
+        completionDailyPointsDeduct += DAILY_QUESTS[1].reward;
+      }
+      // Subtract the sum of checked quest rewards
+      additionalPoints -= completionDailyPointsDeduct;
+    }
+
+    // Subtract points for "Quest ที่ทำสำเร็จแล้ว - Weekly" - subtract sum of checked weekly quest rewards
+    if (isWeeklyCompleted) {
+      let completionWeeklyPointsDeduct = 0;
+      WEEKLY_QUESTS.forEach((quest) => {
+        if (completedWeeklyQuestsList[quest.name]) {
+          completionWeeklyPointsDeduct += quest.reward;
+        }
+      });
+      // Subtract the sum of checked quest rewards
+      additionalPoints -= completionWeeklyPointsDeduct;
+    }
+
+    // Add Last Day Daily points - only count from CHECKED children
+    if (isLastDayDailyDone) {
+      let lastDayDailyPointsCalc = 0;
+      if (isPremiumOpened && activePremiumDailyQuest) {
+        if (isLastDayDailyQuests[activePremiumDailyQuest.name]) {
+          lastDayDailyPointsCalc += activePremiumDailyQuest.reward;
+        }
+      } else {
+        DAILY_QUESTS.forEach(quest => {
+          if (isLastDayDailyQuests[quest.name]) {
+            lastDayDailyPointsCalc += quest.reward;
+          }
+        });
+      }
+      if (isLastDayDailyQuests['Send Zeny'] && isPremiumOpened && activePremiumDailyQuest) {
+        lastDayDailyPointsCalc += DAILY_QUESTS[1].reward;
+      }
+      additionalPoints += lastDayDailyPointsCalc;
+    }
+
+    // Add Last Day Weekly points - only count from CHECKED children
     if (isLastDayWeeklyDone) {
-      additionalPoints += weeklyTotal;
+      let lastDayWeeklyPointsCalc = 0;
+      WEEKLY_QUESTS.forEach((quest) => {
+        if (isLastDayWeeklyQuests[quest.name]) {
+          lastDayWeeklyPointsCalc += quest.reward;
+        }
+      });
+      additionalPoints += lastDayWeeklyPointsCalc;
     }
 
     const projectedTotalPoints = totalPoints + additionalPoints;
-    return calculateLevelFromExp(projectedTotalPoints);
+    return calculateLevelFromExp(projectedTotalPoints, isPremiumOpened);
   };
 
   const projectedLevelData = calculateProjectedLevel();
@@ -287,6 +501,69 @@ export default function CalcBPComponent() {
   };
 
   const daysNeededData = calculateDaysNeeded();
+
+  // Calculate total resource requirements based on checked quests × remaining time periods
+  const calculateResourcesNeeded = () => {
+    let totalZeny = 0;
+    const items: Record<string, number> = {};
+
+    // Daily quests - multiply by remaining days
+    if (completedDailyQuests['Monster Hunt']) {
+      if (isPremiumOpened && activePremiumDailyQuest) {
+        // Premium monster hunt
+        if (Array.isArray(activePremiumDailyQuest.request)) {
+          activePremiumDailyQuest.request.forEach((req: RequestItem) => {
+            if (req.type === 'zeny') {
+              totalZeny += req.amount * calculation.daysRemaining;
+            } else if (req.type === 'item') {
+              items[req.name] = (items[req.name] || 0) + req.amount * calculation.daysRemaining;
+            }
+          });
+        }
+      } else {
+        // Normal Monster Hunt
+        if (Array.isArray(DAILY_QUESTS[0].request)) {
+          DAILY_QUESTS[0].request.forEach((req: RequestItem) => {
+            if (req.type === 'zeny') {
+              totalZeny += req.amount * calculation.daysRemaining;
+            } else if (req.type === 'item') {
+              items[req.name] = (items[req.name] || 0) + req.amount * calculation.daysRemaining;
+            }
+          });
+        }
+      }
+    }
+
+    if (completedDailyQuests['Send Zeny']) {
+      if (Array.isArray(DAILY_QUESTS[1].request)) {
+        DAILY_QUESTS[1].request.forEach((req: RequestItem) => {
+          if (req.type === 'zeny') {
+            totalZeny += req.amount * calculation.daysRemaining;
+          } else if (req.type === 'item') {
+            items[req.name] = (items[req.name] || 0) + req.amount * calculation.daysRemaining;
+          }
+        });
+      }
+    }
+
+    // Weekly quests - multiply by remaining weeks
+    WEEKLY_QUESTS.forEach((quest) => {
+      if (completedWeeklyQuests[quest.name] && Array.isArray(quest.request)) {
+        quest.request.forEach((req: RequestItem) => {
+          if (req.type === 'zeny') {
+            totalZeny += req.amount * calculation.weeksRemaining;
+          } else if (req.type === 'item') {
+            items[req.name] = (items[req.name] || 0) + req.amount * calculation.weeksRemaining;
+          }
+        });
+      }
+    });
+
+    return { totalZeny, items };
+  };
+
+  const resourcesNeeded = calculateResourcesNeeded();
+
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const generateThaiSummary = () => {
     const days = calculation.daysRemaining;
@@ -314,6 +591,118 @@ export default function CalcBPComponent() {
 
   return (
     <div className="w-full max-w-7xl mx-auto space-y-6 p-2 sm:p-4">
+      {/* Card 0: Event Timeline - TOP CARD */}
+      <div className="card w-full bg-linear-to-br from-orange-50 via-orange-50 to-orange-100 shadow-xl border-2 border-orange-200">
+        <div className="card-body p-4 sm:p-6">
+          <h2 className="card-title text-2xl sm:text-3xl font-bold text-orange-900 mb-6 flex items-center gap-2">
+            <span className="text-3xl">📅</span> Event Timeline
+          </h2>
+
+          {/* Date and Time Remaining Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-6">
+            {/* Start Date */}
+            <div className="bg-white rounded-xl p-5 shadow-md border-l-4 border-green-500">
+              <div className="text-xs text-gray-600 font-semibold mb-2 uppercase tracking-wide">เริ่มวันที่</div>
+              <div className="text-3xl sm:text-4xl font-bold text-green-600 mb-1">
+                {CURRENT_SEASON_CONFIG.eventStartDate.getDate()}
+              </div>
+              <div className="text-sm text-gray-700 font-semibold">
+                {CURRENT_SEASON_CONFIG.eventStartDate.toLocaleDateString("en-GB", {
+                  month: "long",
+                })}{" "}
+                {CURRENT_SEASON_CONFIG.eventStartDate.getFullYear()}
+              </div>
+              <div className="text-xs text-gray-500 mt-1">
+                เวลา {CURRENT_SEASON_CONFIG.eventStartDate.getHours().toString().padStart(2, "0")}:
+                {CURRENT_SEASON_CONFIG.eventStartDate.getMinutes().toString().padStart(2, "0")} น.
+              </div>
+            </div>
+
+            {/* End Date */}
+            <div className="bg-white rounded-xl p-5 shadow-md border-l-4 border-red-500">
+              <div className="text-xs text-gray-600 font-semibold mb-2 uppercase tracking-wide">จบวันที่</div>
+              <div className="text-3xl sm:text-4xl font-bold text-red-600 mb-1">
+                {CURRENT_SEASON_CONFIG.eventEndDate.getDate()}
+              </div>
+              <div className="text-sm text-gray-700 font-semibold">
+                {CURRENT_SEASON_CONFIG.eventEndDate.toLocaleDateString("en-GB", {
+                  month: "long",
+                })}{" "}
+                {CURRENT_SEASON_CONFIG.eventEndDate.getFullYear()}
+              </div>
+              <div className="text-xs text-gray-500 mt-1">
+                เวลา {CURRENT_SEASON_CONFIG.eventEndDate.getHours().toString().padStart(2, "0")}:
+                {CURRENT_SEASON_CONFIG.eventEndDate.getMinutes().toString().padStart(2, "0")} น.
+              </div>
+            </div>
+          </div>
+
+          {/* Time Remaining Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+            {/* Days Remaining */}
+            <div className="bg-linear-to-br from-blue-500 to-blue-600 rounded-xl p-5 shadow-md text-white">
+              <div className="text-xs font-semibold mb-3 opacity-90 uppercase tracking-wide">เหลือเวลา (วัน)</div>
+              <div className="flex items-baseline gap-2">
+                <div className="text-4xl sm:text-5xl font-bold">{calculation.daysRemaining}</div>
+                <div className="text-lg font-semibold">วัน</div>
+              </div>
+            </div>
+
+            {/* Weeks Remaining */}
+            <div className="bg-linear-to-br from-cyan-500 to-cyan-600 rounded-xl p-5 shadow-md text-white">
+              <div className="text-xs font-semibold mb-3 opacity-90 uppercase tracking-wide">เหลือเวลา (อาทิตย์)</div>
+              <div className="flex items-baseline gap-2">
+                <div className="text-4xl sm:text-5xl font-bold">{calculation.weeksRemaining}</div>
+                <div className="text-lg font-semibold">สัปดาห์</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Resources Calculator for Quest Submission */}
+          <div className="bg-linear-to-r from-green-100 to-emerald-100 rounded-xl p-6 border-2 border-green-400 shadow-md">
+            <div className="space-y-4 text-green-900">
+              <div className="font-bold flex items-center gap-2 text-lg sm:text-xl">
+                <span>💰</span> ทรัพยากรณ์ตามระยะยเวลาที่เหลือ
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 ml-6 text-sm sm:text-base">
+                {/* Zeny Amount */}
+                <div className="bg-white bg-opacity-60 rounded-lg p-4 border border-green-300">
+                  <div className="font-semibold text-green-800 mb-2">💵 Zeny ที่ต้องใช้</div>
+                  {resourcesNeeded.totalZeny > 0 ? (
+                    <div className="text-green-700 font-bold text-lg">
+                      {(resourcesNeeded.totalZeny / 1_000_000).toLocaleString('th-TH', { maximumFractionDigits: 0 })} M Zeny
+                    </div>
+                  ) : (
+                    <div className="text-gray-500 italic">ไม่มี</div>
+                  )}
+                </div>
+
+                {/* Items Needed */}
+                <div className="bg-white bg-opacity-60 rounded-lg p-4 border border-green-300">
+                  <div className="font-semibold text-green-800 mb-2">📦 Item ที่ต้องใช้</div>
+                  {Object.keys(resourcesNeeded.items).length > 0 ? (
+                    <div className="text-green-700 font-bold space-y-1">
+                      {Object.entries(resourcesNeeded.items).map(([item, quantity]) => (
+                        <div key={item} className="text-sm">
+                          • {quantity}x {item}
+                        </div>
+                      ))}
+                    </div>
+                  ) : (
+                    <div className="text-gray-500 italic">ไม่มี</div>
+                  )}
+                </div>
+              </div>
+
+              {/* No resources if nothing checked */}
+              {resourcesNeeded.totalZeny === 0 && Object.keys(resourcesNeeded.items).length === 0 && (
+                <div className="text-center text-gray-600 italic ml-6">ไม่มีการเลือก Quest</div>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Card 1: Current Points Input (w-full) */}
       <div className="card w-full bg-linear-to-br from-indigo-50 via-indigo-50 to-indigo-100 shadow-xl border-2 border-indigo-200">
         <div className="card-body p-4 sm:p-6">
@@ -321,23 +710,8 @@ export default function CalcBPComponent() {
             <span className="text-2xl">📊</span> Status ปัจจุบัน
           </h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {/* Current Level Display Only */}
-            <div className="bg-white rounded-xl p-4 sm:p-5 shadow-md border-l-4 border-indigo-500">
-              <label className="label">
-                <span className="label-text font-bold text-gray-700 text-sm sm:text-base">
-                  Level ปัจจุบัน
-                </span>
-              </label>
-              <div className="text-4xl sm:text-5xl font-bold text-indigo-600 mt-3 text-center">
-                {currentLevel}
-              </div>
-              <div className="text-center text-xs text-gray-600 mt-2">
-                ระดับ Battle Pass ปัจจุบัน
-              </div>
-            </div>
-
-            {/* Current Points Input */}
+          {/* Row 1: Current Points Input */}
+          <div className="mb-6">
             <div className="form-control">
               <label className="label">
                 <span className="label-text font-bold text-gray-700 text-sm sm:text-base">
@@ -359,102 +733,380 @@ export default function CalcBPComponent() {
                   กรอกแต้มรวมปัจจุบัน
                 </span>
               </label>
-
-              {/* Checkboxes */}
-              <div className="space-y-3 mt-4">
-                <div className="form-control">
-                  <label className="label cursor-pointer">
-                    <input
-                      type="checkbox"
-                      checked={isDailyDone}
-                      onChange={(e) => setIsDailyDone(e.target.checked)}
-                      className="checkbox checkbox-primary"
-                    />
-                    <span className="label-text text-gray-700 font-medium ml-2">
-                      ทำ Daily แล้ว
-                    </span>
-                  </label>
-                </div>
-                <div className="form-control">
-                  <label className="label cursor-pointer">
-                    <input
-                      type="checkbox"
-                      checked={isWeeklyDone}
-                      onChange={(e) => setIsWeeklyDone(e.target.checked)}
-                      className="checkbox checkbox-primary"
-                    />
-                    <span className="label-text text-gray-700 font-medium ml-2">
-                      ทำ Weekly แล้ว
-                    </span>
-                  </label>
-                </div>
-                <div className="form-control">
-                  <label className="label cursor-pointer">
-                    <input
-                      type="checkbox"
-                      checked={isPremiumOpened}
-                      onChange={(e) => setIsPremiumOpened(e.target.checked)}
-                      className="checkbox checkbox-accent"
-                    />
-                    <span className="label-text text-gray-700 font-medium ml-2">
-                      Premium Account
-                    </span>
-                  </label>
-                </div>
-                <div className="form-control">
-                  <label className="label cursor-pointer">
-                    <input
-                      type="checkbox"
-                      checked={isLastDayDailyDone}
-                      onChange={(e) => setIsLastDayDailyDone(e.target.checked)}
-                      className="checkbox checkbox-warning"
-                    />
-                    <span className="label-text text-gray-700 font-medium ml-2">
-                      ทำวันสุดท้ายหลังตี 4 (พุธ 24 มิถุนายน) Daily
-                    </span>
-                  </label>
-                </div>
-                <div className="form-control">
-                  <label className="label cursor-pointer">
-                    <input
-                      type="checkbox"
-                      checked={isLastDayWeeklyDone}
-                      onChange={(e) => setIsLastDayWeeklyDone(e.target.checked)}
-                      className="checkbox checkbox-warning"
-                    />
-                    <span className="label-text text-gray-700 font-medium ml-2">
-                      ทำวันสุดท้ายหลังตี 4 (พุธ 24 มิถุนายน) Weekly
-                    </span>
-                  </label>
+              {/* Display Current Level */}
+              <div className="mt-3 bg-indigo-100 rounded-lg p-4 border border-indigo-300">
+                <div className="text-center">
+                  <div className="text-xs text-indigo-700 font-semibold mb-1">Level ปัจจุบัน</div>
+                  <div className="text-3xl sm:text-4xl font-bold text-indigo-600">
+                    {currentLevel}
+                  </div>
+                  <div className="text-xs text-indigo-600 mt-1">
+                    {currentPoints}/{maxExpForLevel} แต้ม
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Display breakdown */}
-          <div className="mt-6 pt-6 border-t border-indigo-200 grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
-            <div className="text-center">
-              <div className="text-xs text-gray-600 font-semibold mb-2">
-                Level
+          {/* Row 2: Checkboxes Section - Organized */}
+          <div className="mb-6 pb-6 border-b border-indigo-200">
+            <div className="text-xs font-bold text-indigo-900 mb-4">⚙️ Options & Filter</div>
+            <div className="space-y-4">
+              {/* Section 1: Account Type */}
+              <div className="bg-yellow-50 rounded-xl p-4 border border-yellow-200">
+                <div className="text-xs font-bold text-yellow-900 mb-3 flex items-center gap-2">
+                  <span>💛</span> Account Type
+                </div>
+                <div className="form-control">
+                  <label className="label cursor-pointer gap-3">
+                    <input
+                      type="checkbox"
+                      checked={isPremiumOpened}
+                      onChange={(e) => setIsPremiumOpened(e.target.checked)}
+                      className="checkbox checkbox-lg checkbox-accent"
+                    />
+                    <span className="label-text font-semibold text-gray-700">
+                      {isPremiumOpened ? '💛 Premium Pass เปิดอยู่ (+10 แต้ม/วัน)' : '⚪ Normal Pass'}
+                    </span>
+                  </label>
+                </div>
               </div>
-              <div className="text-3xl sm:text-4xl font-bold text-indigo-600">
-                {currentLevel}
+
+              {/* Section 2: Daily Quests Progress */}
+              <div className="bg-blue-50 rounded-xl p-4 border border-blue-200">
+                <div className="text-xs font-bold text-blue-900 mb-3 flex items-center gap-2">
+                  <span>✅</span> Daily Quest Progress
+                </div>
+                <div className="space-y-2">
+                  {isPremiumOpened ? (
+                    <>
+                      {/* Show only the currently active Premium Daily Quest */}
+                      {activePremiumDailyQuest ? (
+                        <div className="form-control">
+                          <label className="label cursor-pointer gap-3">
+                            <input
+                              type="checkbox"
+                              checked={completedDailyQuests[activePremiumDailyQuest.name] || false}
+                              onChange={(e) =>
+                                setCompletedDailyQuests({
+                                  ...completedDailyQuests,
+                                  [activePremiumDailyQuest.name]: e.target.checked,
+                                })
+                              }
+                              className="checkbox checkbox-primary"
+                            />
+                            <span className="label-text text-gray-700 font-medium">
+                              {activePremiumDailyQuest.name} ({formatRequest(activePremiumDailyQuest.request)}) {activePremiumDailyQuest.reward} แต้ม
+                            </span>
+                          </label>
+                        </div>
+                      ) : (
+                        <div className="text-sm text-gray-500">No active premium quest</div>
+                      )}
+                      {/* Send Zeny is same for both */}
+                      <div className="form-control">
+                        <label className="label cursor-pointer gap-3">
+                          <input
+                            type="checkbox"
+                            checked={completedDailyQuests['Send Zeny'] || false}
+                            onChange={(e) =>
+                              setCompletedDailyQuests({
+                                ...completedDailyQuests,
+                                'Send Zeny': e.target.checked,
+                              })
+                            }
+                            className="checkbox checkbox-primary"
+                          />
+                          <span className="label-text text-gray-700 font-medium">
+                            Send Zeny ({formatRequest(DAILY_QUESTS[1].request)}) {DAILY_QUESTS[1].reward} แต้ม
+                          </span>
+                        </label>
+                      </div>
+                    </>
+                  ) : (
+                    DAILY_QUESTS.map((quest) => (
+                      <div key={quest.name} className="form-control">
+                        <label className="label cursor-pointer gap-3">
+                          <input
+                            type="checkbox"
+                            checked={completedDailyQuests[quest.name] || false}
+                            onChange={(e) =>
+                              setCompletedDailyQuests({
+                                ...completedDailyQuests,
+                                [quest.name]: e.target.checked,
+                              })
+                            }
+                            className="checkbox checkbox-primary"
+                          />
+                          <span className="label-text text-gray-700 font-medium">
+                            {quest.name} ({formatRequest(quest.request)}) {quest.reward} แต้ม
+                          </span>
+                        </label>
+                      </div>
+                    ))
+                  )}
+                </div>
               </div>
-            </div>
-            <div className="text-center">
-              <div className="text-xs text-gray-600 font-semibold mb-2">
-                แต้มใน Level นี้
+
+              {/* Section 3: Weekly Quests Progress */}
+              <div className="bg-purple-50 rounded-xl p-4 border border-purple-200">
+                <div className="text-xs font-bold text-purple-900 mb-3 flex items-center gap-2">
+                  <span>🐉</span> Weekly Quest Progress
+                </div>
+                <div className="space-y-2">
+                  {WEEKLY_QUESTS.map((quest) => (
+                    <div key={quest.name} className="form-control">
+                      <label className="label cursor-pointer gap-3">
+                        <input
+                          type="checkbox"
+                          checked={completedWeeklyQuests[quest.name] || false}
+                          onChange={(e) =>
+                            setCompletedWeeklyQuests({
+                              ...completedWeeklyQuests,
+                              [quest.name]: e.target.checked,
+                            })
+                          }
+                          className="checkbox checkbox-warning"
+                        />
+                        <span className="label-text text-gray-700 font-medium">
+                          {quest.name} ({formatRequest(quest.request)}) {quest.reward} แต้ม
+                        </span>
+                      </label>
+                    </div>
+                  ))}
+                </div>
               </div>
-              <div className="text-2xl sm:text-3xl font-bold text-blue-600">
-                {currentPoints}
+
+              {/* Section 4: Last Day Bonus (24 มิถุนายน) */}
+              <div className="bg-orange-50 rounded-xl p-4 border border-orange-200">
+                <div className="text-xs font-bold text-orange-900 mb-3 flex items-center gap-2">
+                  <span>⏰</span> Last Day Bonus (24 มิถุนายน)
+                </div>
+                <div className="space-y-3">
+                  <div className="form-control">
+                    <label className="label cursor-pointer gap-3">
+                      <input
+                        type="checkbox"
+                        checked={isLastDayDailyDone}
+                        onChange={(e) => handleLastDayDailyChange(e.target.checked)}
+                        className="checkbox checkbox-info"
+                      />
+                      <span className="label-text text-gray-700 font-medium">ทำ Daily ในวันสุดท้าย</span>
+                    </label>
+                    {isLastDayDailyDone && (
+                      <div className="ml-8 mt-2 p-2 bg-white rounded border border-orange-200 text-xs text-gray-600 space-y-1">
+                        <div className="font-semibold text-orange-900 mb-2">เลือก quest ที่จะทำ:</div>
+                        {isPremiumOpened ? (
+                          activePremiumDailyQuest ? (
+                            <div className="form-control">
+                              <label className="label cursor-pointer gap-2 p-1">
+                                <input
+                                  type="checkbox"
+                                  checked={isLastDayDailyQuests[activePremiumDailyQuest.name] || false}
+                                  onChange={(e) =>
+                                    setIsLastDayDailyQuests({
+                                      ...isLastDayDailyQuests,
+                                      [activePremiumDailyQuest.name]: e.target.checked,
+                                    })
+                                  }
+                                  className="checkbox checkbox-xs"
+                                />
+                                <span className="label-text text-xs">{activePremiumDailyQuest.name} ({formatRequest(activePremiumDailyQuest.request)}) • {activePremiumDailyQuest.reward} แต้ม</span>
+                              </label>
+                            </div>
+                          ) : null
+                        ) : (
+                          DAILY_QUESTS.map((quest) => (
+                            <div key={quest.name} className="form-control">
+                              <label className="label cursor-pointer gap-2 p-1">
+                                <input
+                                  type="checkbox"
+                                  checked={isLastDayDailyQuests[quest.name] || false}
+                                  onChange={(e) =>
+                                    setIsLastDayDailyQuests({
+                                      ...isLastDayDailyQuests,
+                                      [quest.name]: e.target.checked,
+                                    })
+                                  }
+                                  className="checkbox checkbox-xs"
+                                />
+                                <span className="label-text text-xs">{quest.name} ({formatRequest(quest.request)}) • {quest.reward} แต้ม</span>
+                              </label>
+                            </div>
+                          ))
+                        )}
+                        {isPremiumOpened && activePremiumDailyQuest && (
+                          <div className="form-control">
+                            <label className="label cursor-pointer gap-2 p-1">
+                              <input
+                                type="checkbox"
+                                checked={isLastDayDailyQuests['Send Zeny'] || false}
+                                onChange={(e) =>
+                                  setIsLastDayDailyQuests({
+                                    ...isLastDayDailyQuests,
+                                    'Send Zeny': e.target.checked,
+                                  })
+                                }
+                                className="checkbox checkbox-xs"
+                              />
+                              <span className="label-text text-xs">Send Zeny ({formatRequest(DAILY_QUESTS[1].request)}) • {DAILY_QUESTS[1].reward} แต้ม</span>
+                            </label>
+                          </div>
+                        )}
+                      </div>
+                    )}
+                  </div>
+                  <div className="form-control">
+                    <label className="label cursor-pointer gap-3">
+                      <input
+                        type="checkbox"
+                        checked={isLastDayWeeklyDone}
+                        onChange={(e) => handleLastDayWeeklyChange(e.target.checked)}
+                        className="checkbox checkbox-info"
+                      />
+                      <span className="label-text text-gray-700 font-medium">ทำ Weekly ในวันสุดท้าย</span>
+                    </label>
+                    {isLastDayWeeklyDone && (
+                      <div className="ml-8 mt-2 p-2 bg-white rounded border border-orange-200 text-xs text-gray-600 space-y-1">
+                        <div className="font-semibold text-orange-900 mb-2">เลือก quest ที่จะทำ:</div>
+                        {WEEKLY_QUESTS.map((quest) => (
+                          <div key={quest.name} className="form-control">
+                            <label className="label cursor-pointer gap-2 p-1">
+                              <input
+                                type="checkbox"
+                                checked={isLastDayWeeklyQuests[quest.name] || false}
+                                onChange={(e) =>
+                                  setIsLastDayWeeklyQuests({
+                                    ...isLastDayWeeklyQuests,
+                                    [quest.name]: e.target.checked,
+                                  })
+                                }
+                                className="checkbox checkbox-xs"
+                              />
+                              <span className="label-text text-xs">{quest.name} ({formatRequest(quest.request)}) • {quest.reward} แต้ม</span>
+                            </label>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                </div>
               </div>
-            </div>
-            <div className="text-center">
-              <div className="text-xs text-gray-600 font-semibold mb-2">
-                แต้มถึง Level ต่อไป
-              </div>
-              <div className="text-2xl sm:text-3xl font-bold text-green-600">
-                {formatNumber((maxExpForLevel - currentPoints).toString())}
+
+              {/* Section 5: Quest Already Completed */}
+              <div className="bg-green-50 rounded-xl p-4 border border-green-200">
+                <div className="text-xs font-bold text-green-900 mb-3 flex items-center gap-2">
+                  <span>✅</span> Quest ที่ทำสำเร็จแล้ว
+                </div>
+                <div className="space-y-3">
+                  <div className="form-control">
+                    <label className="label cursor-pointer gap-3">
+                      <input
+                        type="checkbox"
+                        checked={isDailyCompleted}
+                        onChange={(e) => handleDailyCompletedChange(e.target.checked)}
+                        className="checkbox checkbox-success"
+                      />
+                      <span className="label-text text-gray-700 font-medium">Daily completed</span>
+                    </label>
+                    {isDailyCompleted && (
+                      <div className="ml-8 mt-2 p-2 bg-white rounded border border-green-200 text-xs text-gray-600 space-y-1">
+                        <div className="font-semibold text-green-900 mb-2">เลือก quest ที่ทำไปแล้ว:</div>
+                        {isPremiumOpened ? (
+                          activePremiumDailyQuest ? (
+                            <div className="form-control">
+                              <label className="label cursor-pointer gap-2 p-1">
+                                <input
+                                  type="checkbox"
+                                  checked={completedDailyQuestsList[activePremiumDailyQuest.name] || false}
+                                  onChange={(e) =>
+                                    setCompletedDailyQuestsList({
+                                      ...completedDailyQuestsList,
+                                      [activePremiumDailyQuest.name]: e.target.checked,
+                                    })
+                                  }
+                                  className="checkbox checkbox-xs"
+                                />
+                                <span className="label-text text-xs">{activePremiumDailyQuest.name} • {activePremiumDailyQuest.reward} แต้ม</span>
+                              </label>
+                            </div>
+                          ) : null
+                        ) : (
+                          DAILY_QUESTS.map((quest) => (
+                            <div key={quest.name} className="form-control">
+                              <label className="label cursor-pointer gap-2 p-1">
+                                <input
+                                  type="checkbox"
+                                  checked={completedDailyQuestsList[quest.name] || false}
+                                  onChange={(e) =>
+                                    setCompletedDailyQuestsList({
+                                      ...completedDailyQuestsList,
+                                      [quest.name]: e.target.checked,
+                                    })
+                                  }
+                                  className="checkbox checkbox-xs"
+                                />
+                                <span className="label-text text-xs">{quest.name} • {quest.reward} แต้ม</span>
+                              </label>
+                            </div>
+                          ))
+                        )}
+                        {isPremiumOpened && activePremiumDailyQuest && (
+                          <div className="form-control">
+                            <label className="label cursor-pointer gap-2 p-1">
+                              <input
+                                type="checkbox"
+                                checked={completedDailyQuestsList['Send Zeny'] || false}
+                                onChange={(e) =>
+                                  setCompletedDailyQuestsList({
+                                    ...completedDailyQuestsList,
+                                    'Send Zeny': e.target.checked,
+                                  })
+                                }
+                                className="checkbox checkbox-xs"
+                              />
+                              <span className="label-text text-xs">Send Zeny • {DAILY_QUESTS[1].reward} แต้ม</span>
+                            </label>
+                          </div>
+                        )}
+                      </div>
+                    )}
+                  </div>
+                  <div className="form-control">
+                    <label className="label cursor-pointer gap-3">
+                      <input
+                        type="checkbox"
+                        checked={isWeeklyCompleted}
+                        onChange={(e) => handleWeeklyCompletedChange(e.target.checked)}
+                        className="checkbox checkbox-success"
+                      />
+                      <span className="label-text text-gray-700 font-medium">Weekly completed</span>
+                    </label>
+                    {isWeeklyCompleted && (
+                      <div className="ml-8 mt-2 p-2 bg-white rounded border border-green-200 text-xs text-gray-600 space-y-1">
+                        <div className="font-semibold text-green-900 mb-2">เลือก quest ที่ทำไปแล้ว:</div>
+                        {WEEKLY_QUESTS.map((quest) => (
+                          <div key={quest.name} className="form-control">
+                            <label className="label cursor-pointer gap-2 p-1">
+                              <input
+                                type="checkbox"
+                                checked={completedWeeklyQuestsList[quest.name] || false}
+                                onChange={(e) =>
+                                  setCompletedWeeklyQuestsList({
+                                    ...completedWeeklyQuestsList,
+                                    [quest.name]: e.target.checked,
+                                  })
+                                }
+                                className="checkbox checkbox-xs"
+                              />
+                              <span className="label-text text-xs">{quest.name} • {quest.reward} แต้ม</span>
+                            </label>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -475,88 +1127,161 @@ export default function CalcBPComponent() {
                 <div>• แต้มปัจจุบัน: {totalPoints}</div>
 
                 {(() => {
-                  const today = new Date();
-                  const WEDNESDAY = 3;
-                  const dayOfWeek = today.getDay();
-                  const dayIndexInWeek = (dayOfWeek - WEDNESDAY + 7) % 7;
-                  const daysRemainingInWeek = 7 - dayIndexInWeek;
+                  // Calculate original daily points
+                  let originalDailyPoints = 0;
+                  if (completedDailyQuests['Monster Hunt']) {
+                    originalDailyPoints += isPremiumOpened ? 20 : 10;
+                  }
+                  if (completedDailyQuests['Send Zeny']) {
+                    originalDailyPoints += 30;
+                  }
+
+                  // Calculate Last Day Daily points separately
+                  // Only count from children that are actually checked
+                  let lastDayDailyPoints = 0;
+                  if (isLastDayDailyDone) {
+                    // Only add points from checked children
+                    if (isPremiumOpened && activePremiumDailyQuest) {
+                      if (isLastDayDailyQuests[activePremiumDailyQuest.name]) {
+                        lastDayDailyPoints += activePremiumDailyQuest.reward;
+                      }
+                    } else {
+                      DAILY_QUESTS.forEach(quest => {
+                        if (isLastDayDailyQuests[quest.name]) {
+                          lastDayDailyPoints += quest.reward;
+                        }
+                      });
+                    }
+                    if (isLastDayDailyQuests['Send Zeny'] && isPremiumOpened && activePremiumDailyQuest) {
+                      lastDayDailyPoints += DAILY_QUESTS[1].reward;
+                    }
+                  }
+
+                  // Calculate Completion Status Daily points separately
+                  let completionDailyPoints = 0;
+                  if (isDailyCompleted) {
+                    if (isPremiumOpened && activePremiumDailyQuest) {
+                      if (completedDailyQuestsList[activePremiumDailyQuest.name]) {
+                        completionDailyPoints += activePremiumDailyQuest.reward;
+                      }
+                    } else {
+                      DAILY_QUESTS.forEach(quest => {
+                        if (completedDailyQuestsList[quest.name]) {
+                          completionDailyPoints += quest.reward;
+                        }
+                      });
+                    }
+                    if (completedDailyQuestsList['Send Zeny'] && isPremiumOpened && activePremiumDailyQuest) {
+                      completionDailyPoints += DAILY_QUESTS[1].reward;
+                    }
+                  }
+
+                  // Calculate original weekly points
+                  let originalWeeklyPoints = 0;
+                  WEEKLY_QUESTS.forEach((quest) => {
+                    if (completedWeeklyQuests[quest.name]) {
+                      originalWeeklyPoints += quest.reward;
+                    }
+                  });
+
+                  // Calculate Last Day Weekly points separately
+                  // Only count from children that are actually checked
+                  let lastDayWeeklyPoints = 0;
+                  if (isLastDayWeeklyDone) {
+                    // Only add points from checked children
+                    WEEKLY_QUESTS.forEach((quest) => {
+                      if (isLastDayWeeklyQuests[quest.name]) {
+                        lastDayWeeklyPoints += quest.reward;
+                      }
+                    });
+                  }
+
+                  // Calculate Completion Status Weekly points separately
+                  let completionWeeklyPoints = 0;
+                  if (isWeeklyCompleted) {
+                    WEEKLY_QUESTS.forEach((quest) => {
+                      if (completedWeeklyQuestsList[quest.name]) {
+                        completionWeeklyPoints += quest.reward;
+                      }
+                    });
+                  }
 
                   // Daily calculation: independent from weekly
-                  let daysForDailyCalc = Math.max(
-                    0,
-                    calculation.daysRemaining - 1,
-                  ); // Always subtract last Wednesday
-                  if (isDailyDone) {
-                    daysForDailyCalc = Math.max(0, daysForDailyCalc - 1); // Don't count today
-                  }
+                  const daysForDailyCalc = Math.max(0, calculation.daysRemaining);
 
                   // Weekly calculation: independent from daily
-                  let daysForWeeklyCalc = calculation.daysRemaining - 1; // Always subtract last Wednesday
-                  let weeksForCalc = 0;
-                  if (isWeeklyDone) {
-                    daysForWeeklyCalc = Math.max(
-                      0,
-                      daysForWeeklyCalc - daysRemainingInWeek,
-                    );
-                    weeksForCalc = Math.ceil(daysForWeeklyCalc / 7);
-                  } else {
-                    weeksForCalc = Math.ceil(daysForWeeklyCalc / 7);
-                  }
+                  const weeksForCalc = calculation.weeksRemaining;
 
-                  const dailyPoints = isPremiumOpened ? 50 : 40;
-                  let totalAdditional =
-                    daysForDailyCalc * dailyPoints + weeksForCalc * weeklyTotal;
-
-                  // Add last day bonuses to display
-                  if (isLastDayDailyDone) {
-                    totalAdditional += dailyPoints;
+                  // Calculate total additional points
+                  let totalAdditional = 0;
+                  
+                  // Add original daily points
+                  if (originalDailyPoints > 0) {
+                    totalAdditional += daysForDailyCalc * originalDailyPoints;
                   }
-                  if (isLastDayWeeklyDone) {
-                    totalAdditional += weeklyTotal;
+                  
+                  // Subtract Quest Completion Daily points (simple subtraction, no multiplication)
+                  if (isDailyCompleted && completionDailyPoints > 0) {
+                    totalAdditional -= completionDailyPoints;
+                  }
+                  
+                  // Add original weekly points
+                  if (originalWeeklyPoints > 0) {
+                    totalAdditional += weeksForCalc * originalWeeklyPoints;
+                  }
+                  
+                  // Subtract Quest Completion Weekly points (simple subtraction, no multiplication)
+                  if (isWeeklyCompleted && completionWeeklyPoints > 0) {
+                    totalAdditional -= completionWeeklyPoints;
+                  }
+                  
+                  // Add Last Day Daily points (simple addition, no multiplication)
+                  if (isLastDayDailyDone && lastDayDailyPoints > 0) {
+                    totalAdditional += lastDayDailyPoints;
+                  }
+                  
+                  // Add Last Day Weekly points (simple addition, no multiplication)
+                  if (isLastDayWeeklyDone && lastDayWeeklyPoints > 0) {
+                    totalAdditional += lastDayWeeklyPoints;
                   }
 
                   return (
                     <>
-                      {isDailyDone && (
+                      {originalDailyPoints > 0 && (
                         <div>
-                          • Daily: {daysForDailyCalc} วัน × {dailyPoints} ={" "}
-                          {daysForDailyCalc * dailyPoints}
-                          <span className="text-gray-600"> (หักวันนี้)</span>
-                        </div>
-                      )}
-                      {!isDailyDone && (
-                        <div>
-                          • Daily: {daysForDailyCalc} วัน × {dailyPoints} ={" "}
-                          {daysForDailyCalc * dailyPoints}
+                          • Daily: {daysForDailyCalc} วัน × {originalDailyPoints} ={" "}
+                          {daysForDailyCalc * originalDailyPoints}
                         </div>
                       )}
 
-                      {isWeeklyDone && (
-                        <div>
-                          • Weekly: {weeksForCalc} สัปดาห์ × {weeklyTotal} ={" "}
-                          {weeksForCalc * weeklyTotal}
-                          <span className="text-gray-600">
-                            {" "}
-                            (หักสัปดาห์นี้)
-                          </span>
-                        </div>
-                      )}
-                      {!isWeeklyDone && (
-                        <div>
-                          • Weekly: {weeksForCalc} สัปดาห์ × {weeklyTotal} ={" "}
-                          {weeksForCalc * weeklyTotal}
+                      {isDailyCompleted && completionDailyPoints > 0 && (
+                        <div className="text-red-600 font-semibold">
+                          • Quest Completion Daily: - {completionDailyPoints}
                         </div>
                       )}
 
-                      {isLastDayDailyDone && (
+                      {originalWeeklyPoints > 0 && (
                         <div>
-                          • วันสุดท้าย (หลังตี 4): {dailyPoints} (Daily)
+                          • Weekly: {weeksForCalc} สัปดาห์ × {originalWeeklyPoints} ={" "}
+                          {weeksForCalc * originalWeeklyPoints}
                         </div>
                       )}
 
-                      {isLastDayWeeklyDone && (
-                        <div>
-                          • วันสุดท้าย (หลังตี 4): {weeklyTotal} (Weekly)
+                      {isWeeklyCompleted && completionWeeklyPoints > 0 && (
+                        <div className="text-red-600 font-semibold">
+                          • Quest Completion Weekly: - {completionWeeklyPoints}
+                        </div>
+                      )}
+
+                      {isLastDayDailyDone && lastDayDailyPoints > 0 && (
+                        <div className="text-yellow-600 font-semibold">
+                          • Last Day Daily: + {lastDayDailyPoints}
+                        </div>
+                      )}
+
+                      {isLastDayWeeklyDone && lastDayWeeklyPoints > 0 && (
+                        <div className="text-yellow-600 font-semibold">
+                          • Last Day Weekly: + {lastDayWeeklyPoints}
                         </div>
                       )}
 
@@ -589,7 +1314,7 @@ export default function CalcBPComponent() {
             </h2>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-              {/* Monster Hunt Quest */}
+              {/* Monster Hunt Quest - From DAILY_QUESTS or PREMIUM_DAILY_ROTATION */}
               <div className="bg-white rounded-xl p-4 shadow-md border-l-4 border-blue-500">
                 <div className="flex justify-between items-start mb-3">
                   <div>
@@ -597,7 +1322,7 @@ export default function CalcBPComponent() {
                       🐉 Monster Hunt
                     </div>
                     <div className="text-2xl sm:text-3xl font-bold text-blue-600">
-                      {isPremiumOpened ? "20" : "10"}
+                      {isPremiumOpened ? PREMIUM_DAILY_ROTATION[0].reward : DAILY_QUESTS[0].reward}
                     </div>
                     <div className="text-xs text-gray-500">Point</div>
                   </div>
@@ -606,60 +1331,44 @@ export default function CalcBPComponent() {
                 <div className="text-xs space-y-2 bg-blue-50 rounded p-3">
                   {isPremiumOpened ? (
                     <>
-                      <div className="flex justify-between">
-                        <span>HILLSRION ×20</span>
-                        <span className="text-blue-600 font-bold">
-                          22/04 - 06/05
-                        </span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span>CENTIPEDE ×20</span>
-                        <span className="text-blue-600 font-bold">
-                          06/05 - 20/05
-                        </span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span>TATACHO ×20</span>
-                        <span className="text-blue-600 font-bold">
-                          20/05 - 03/06
-                        </span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span>DOLOMEDES ×20</span>
-                        <span className="text-blue-600 font-bold">
-                          03/06 - 24/06
-                        </span>
-                      </div>
+                      {PREMIUM_DAILY_ROTATION.map((quest) => (
+                        <div key={quest.name} className="flex justify-between">
+                          <span>{formatRequest(quest.request)}</span>
+                          <span className="text-blue-600 font-bold">
+                            {quest.dateRange}
+                          </span>
+                        </div>
+                      ))}
                     </>
                   ) : (
                     <div className="flex justify-between">
-                      <span>Cornus ×20</span>
+                      <span>{formatRequest(DAILY_QUESTS[0].request)}</span>
                       <span className="text-blue-600 font-bold">
-                        22/04 - 24/06
+                        {DAILY_QUESTS[0].dateRange}
                       </span>
                     </div>
                   )}
                 </div>
               </div>
 
-              {/* Send Zeny */}
+              {/* Send Zeny - From DAILY_QUESTS */}
               <div className="bg-white rounded-xl p-4 shadow-md border-l-4 border-green-500">
                 <div className="flex justify-between items-start mb-3">
                   <div>
                     <div className="text-xs text-gray-600 font-semibold mb-2">
-                      💰 Send Zeny
+                      💰 {DAILY_QUESTS[1].name}
                     </div>
                     <div className="text-2xl sm:text-3xl font-bold text-green-600">
-                      30
+                      {DAILY_QUESTS[1].reward}
                     </div>
                     <div className="text-xs text-gray-500">Point</div>
                   </div>
                   <div className="text-4xl">💸</div>
                 </div>
                 <div className="text-xs text-gray-600 bg-green-50 rounded p-3">
-                  <div>ส่ง 1,000,000 Zeny</div>
+                  <div>{formatRequest(DAILY_QUESTS[1].request)}</div>
                   <div className="text-green-600 font-semibold mt-2">
-                    22/04 - 24/06
+                    {DAILY_QUESTS[1].dateRange}
                   </div>
                 </div>
               </div>
@@ -674,19 +1383,19 @@ export default function CalcBPComponent() {
                 <div className="flex justify-center gap-4 items-center">
                   <div>
                     <div className="text-sm text-gray-700 font-medium mb-1">
-                      สังหาร: {isPremiumOpened ? "20" : "10"} Point
+                      สังหาร: {isPremiumOpened ? PREMIUM_DAILY_ROTATION[0].reward : DAILY_QUESTS[0].reward} Point
                     </div>
                   </div>
                   <div className="text-gray-400">+</div>
                   <div>
                     <div className="text-sm text-gray-700 font-medium mb-1">
-                      ส่งเงิน: 30 Point
+                      ส่งเงิน: {DAILY_QUESTS[1].reward} Point
                     </div>
                   </div>
                   <div className="text-lg font-bold text-blue-600">=</div>
                   <div>
                     <div className="text-3xl font-bold text-blue-600">
-                      {isPremiumOpened ? "50" : "40"}
+                      {isPremiumOpened ? PREMIUM_DAILY_ROTATION[0].reward + DAILY_QUESTS[1].reward : DAILY_QUESTS[0].reward + DAILY_QUESTS[1].reward}
                     </div>
                     <div className="text-xs text-gray-600">Point</div>
                   </div>
@@ -710,40 +1419,41 @@ export default function CalcBPComponent() {
                   <span>👑 Boss Hunt</span>
                 </div>
                 <div className="space-y-3 text-xs">
-                  <div className="flex justify-between items-start p-2 bg-red-50 rounded">
-                    <div>
-                      <div className="font-bold text-red-700">Celine Kimi</div>
-                      <div className="text-gray-600">Horror Toy Factory</div>
-                    </div>
-                    <div className="text-right">
-                      <div className="font-bold text-red-600">20 P</div>
-                      <div className="text-gray-600">×1</div>
-                    </div>
-                  </div>
-                  <div className="flex justify-between items-start p-2 bg-orange-50 rounded">
-                    <div>
-                      <div className="font-bold text-orange-700">
-                        Faceworm Queen
+                  {WEEKLY_QUESTS.slice(0, 3).map((quest, index) => {
+                    const colors = ['red', 'orange', 'purple'];
+                    return (
+                      <div key={quest.name} className={`flex justify-between items-start p-2 bg-${colors[index]}-50 rounded`}>
+                        <div>
+                          <div className={`font-bold text-${colors[index]}-700`}>{quest.name}</div>
+                          <div className="text-gray-600">{quest.details?.location}</div>
+                          <div className="text-gray-500 mt-1">{quest.dateRange}</div>
+                        </div>
+                        <div className="text-right">
+                          <div className={`font-bold text-${colors[index]}-600`}>{quest.reward} P</div>
+                          <div className="text-gray-600">×{quest.details?.quantity || 1}</div>
+                        </div>
                       </div>
-                      <div className="text-gray-600">The Nest of Faceworm</div>
-                    </div>
-                    <div className="text-right">
-                      <div className="font-bold text-orange-600">20 P</div>
-                      <div className="text-gray-600">×1</div>
-                    </div>
-                  </div>
-                  <div className="flex justify-between items-start p-2 bg-purple-50 rounded">
-                    <div>
-                      <div className="font-bold text-purple-700">
-                        Ancient Gigantes
+                    );
+                  })}
+                </div>
+              </div>
+
+              {/* Send Zeny/Items Section */}
+              <div className="bg-white rounded-xl p-4 shadow-md border-l-4 border-cyan-500">
+                <div className="text-xs text-gray-600 font-semibold mb-3 flex items-center gap-2">
+                  <span>💸 Submission Quest</span>
+                </div>
+                <div className="p-2 bg-cyan-50 rounded">
+                  {WEEKLY_QUESTS[3] && (
+                    <>
+                      <div className="font-bold text-cyan-700">{WEEKLY_QUESTS[3].name}</div>
+                      <div className="text-gray-600 mt-1">{formatRequest(WEEKLY_QUESTS[3].request)}</div>
+                      <div className="text-gray-500 mt-1">{WEEKLY_QUESTS[3].dateRange}</div>
+                      <div className="text-right mt-2">
+                        <div className="font-bold text-cyan-600">{WEEKLY_QUESTS[3].reward} P</div>
                       </div>
-                      <div className="text-gray-600">Sarah and Fenrir</div>
-                    </div>
-                    <div className="text-right">
-                      <div className="font-bold text-purple-600">30 P</div>
-                      <div className="text-gray-600">×1</div>
-                    </div>
-                  </div>
+                    </>
+                  )}
                 </div>
               </div>
 
@@ -1009,86 +1719,29 @@ export default function CalcBPComponent() {
                       );
                     })()}
                     <div className="space-y-2 text-sm">
-                      {/* Daily: Monster Hunt */}
-                      <div className="flex justify-between items-center p-2 bg-blue-600 rounded text-white">
-                        <span>🐉 Daily: Monster Hunt</span>
-                        <span className="font-bold">
+                      {/* Daily Points */}
+                      <div className="flex justify-between items-center p-2 bg-blue-600 rounded text-white font-bold">
+                        <span>📅 Daily Quest</span>
+                        <span>
                           {isPremiumOpened
-                            ? dailyMonsterPremiumReward
-                            : dailyMonsterNormalReward}{" "}
+                            ? dailyPremiumTotal
+                            : dailyNormalTotal}{" "}
                           P × {daysNeededData.daysNeeded} ={" "}
                           {(isPremiumOpened
-                            ? dailyMonsterPremiumReward
-                            : dailyMonsterNormalReward) *
-                            daysNeededData.daysNeeded}
+                            ? dailyPremiumTotal
+                            : dailyNormalTotal) * daysNeededData.daysNeeded}
                         </span>
                       </div>
 
-                      {/* Daily: Send Zeny */}
-                      <div className="flex justify-between items-center p-2 bg-green-600 rounded text-white">
-                        <span>💰 Daily: Send Zeny (1M)</span>
-                        <span className="font-bold">
-                          {dailySendZenyReward} P × {daysNeededData.daysNeeded}{" "}
-                          = {dailySendZenyReward * daysNeededData.daysNeeded}
-                        </span>
-                      </div>
-
-                      {/* Weekly: Boss Hunt */}
+                      {/* Weekly Points */}
                       {daysNeededData.weeksNeeded > 0 && (
-                        <>
-                          <div className="border-t border-gray-300 my-2 pt-2">
-                            <div className="flex justify-between items-center mb-2">
-                              <div className="text-xs font-bold text-gray-700">
-                                Weekly ({daysNeededData.weeksNeeded}{" "}
-                                สัปดาห์):
-                              </div>
-                              <div className="text-xs font-bold text-gray-600">
-                                {daysNeededData.weeksNeeded * 100} P
-                              </div>
-                            </div>
-                          </div>
-
-                          <div className="flex justify-between items-center p-2 bg-red-600 rounded text-xs text-white">
-                            <span>👑 Celine Kimi</span>
-                            <span className="font-bold">
-                              {WEEKLY_QUESTS.bosses[0].reward} P ×{" "}
-                              {daysNeededData.weeksNeeded} ={" "}
-                              {WEEKLY_QUESTS.bosses[0].reward *
-                                daysNeededData.weeksNeeded}
-                            </span>
-                          </div>
-
-                          <div className="flex justify-between items-center p-2 bg-orange-600 rounded text-xs text-white">
-                            <span>👑 Faceworm Queen</span>
-                            <span className="font-bold">
-                              {WEEKLY_QUESTS.bosses[1].reward} P ×{" "}
-                              {daysNeededData.weeksNeeded} ={" "}
-                              {WEEKLY_QUESTS.bosses[1].reward *
-                                daysNeededData.weeksNeeded}
-                            </span>
-                          </div>
-
-                          <div className="flex justify-between items-center p-2 bg-purple-600 rounded text-xs text-white">
-                            <span>👑 Ancient Gigantes</span>
-                            <span className="font-bold">
-                              {WEEKLY_QUESTS.bosses[2].reward} P ×{" "}
-                              {daysNeededData.weeksNeeded} ={" "}
-                              {WEEKLY_QUESTS.bosses[2].reward *
-                                daysNeededData.weeksNeeded}
-                            </span>
-                          </div>
-
-                          {/* Weekly: Send Zeny */}
-                          <div className="flex justify-between items-center p-2 bg-yellow-600 rounded text-xs text-white">
-                            <span>💰 Weekly: Send Zeny (2M)</span>
-                            <span className="font-bold">
-                              {weeklySendZenyReward} P ×{" "}
-                              {daysNeededData.weeksNeeded} ={" "}
-                              {weeklySendZenyReward *
-                                daysNeededData.weeksNeeded}
-                            </span>
-                          </div>
-                        </>
+                        <div className="flex justify-between items-center p-2 bg-purple-600 rounded text-white font-bold">
+                          <span>📊 Weekly Quest</span>
+                          <span>
+                            {weeklyTotal} P × {daysNeededData.weeksNeeded} ={" "}
+                            {weeklyTotal * daysNeededData.weeksNeeded}
+                          </span>
+                        </div>
                       )}
                     </div>
                   </div>

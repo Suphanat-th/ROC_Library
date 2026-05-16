@@ -1,327 +1,372 @@
 {
-    "420165": {
-        "unidentifiedDisplayName": "Ribbon",
-        "unidentifiedResourceName": "리본",
+    "18740": {
+        "unidentifiedDisplayName": "Accessory",
+        "unidentifiedResourceName": "헬름",
         "unidentifiedDescriptionName": [
             "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "Costume Tent",
-        "identifiedResourceName": "C_Tent",
+        "identifiedDisplayName": "Costume Hair Of The Strong",
+        "identifiedResourceName": "강한자의헤어",
         "identifiedDescriptionName": [
-            "เต็นท์ที่จู่ ๆ ก็ปรากฏขึ้นมารองรับคุณในตอนที่อยากจะนั่งพัก หรือล้มพับลงไป",
-            "ไม่ต้องประกอบให้มันยุ่งยาก!",
-            "",
-            "[ความสามารถในช่วงกิจกรรม]",
-            "ค่าประสบการณ์ที่ได้รับเมื่อล่ามอนสเตอร์ +15% ",
-            "อัตราดรอปไอเทม + 10 % ",
-            "^ff0000(ความสามารถพิเศษจะถูกลบวันที่ 24 มิถุนายน 2569)",
-            "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Lower น้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 1",
-            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
-        ],
-        "slotCount": 0,
-        "ClassNum": 2279,
-        "costume": true
-    },
-    "19289": {
-        "unidentifiedDisplayName": "Glasses",
-        "unidentifiedResourceName": "글래스",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "Costume Moon Eyepatch",
-        "identifiedResourceName": "달의안대",
-        "identifiedDescriptionName": [
-            "ผ้าปิดตาที่มีพลังอันมหาศาลของ Hatii ซึมซับอยู่",
-            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 15 ได้",
-            "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Middle น้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 1",
-            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
-        ],
-        "slotCount": 0,
-        "ClassNum": 1370,
-        "costume": true
-    },
-    "410351": {
-        "unidentifiedDisplayName": "Ribbon",
-        "unidentifiedResourceName": "리본",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "Costume Blue Buoyant Parasol",
-        "identifiedResourceName": "C_Buoyant_Parasol_B",
-        "identifiedDescriptionName": [
-            "ร่มชายหาดที่ป้องกันแสงแดดจัดได้ดี",
-            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 19 ได้",
-            "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Middle น้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 1",
-            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
-        ],
-        "slotCount": 0,
-        "ClassNum": 2560,
-        "costume": true
-    },
-    "20515": {
-        "unidentifiedDisplayName": "Garment",
-        "unidentifiedResourceName": "후드",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "Costume Magic Circle",
-        "identifiedResourceName": "Magic_Circle",
-        "identifiedDescriptionName": [
-            "วงแหวนแห่งเวทย์ที่ปรากฏขึ้นจางๆ รอบเท้า",
-            "รู้สึกเหมือนได้กลายเป็นนักเวทย์ผู้ยิ่งใหญ่",
-            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 20 ได้",
-            "ประเภท : Costume",
-            "ตำแหน่ง : Garment  น้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 1",
-            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
-        ],
-        "slotCount": 0,
-        "ClassNum": 0,
-        "costume": true
-    },
-    "420525": {
-        "unidentifiedDisplayName": "Ribbon",
-        "unidentifiedResourceName": "리본",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "Costume Twin Milky Way",
-        "identifiedResourceName": "C_Twin_Milkyway",
-        "identifiedDescriptionName": [
-            "วิกผมที่เมื่อสวมใส่แล้วจะทำให้รู้สึกราวกับได้เปลี่ยนสไตล์ทรงผมไปจากเดิม",
-            "โดดเด่นสะดุดตาด้วยสีสันที่ราวกับยกเอาทางช้างเผือกมาไว้ในเส้นผม",
-            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 21 ได้",
-            "ประเภท : Costume พลังป้องกัน : 0",
-            "ประเภท : Lower น้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 1",
-            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
-        ],
-        "slotCount": 0,
-        "ClassNum": 2707,
-        "costume": true
-    },
-    "410487": {
-        "unidentifiedDisplayName": "Ribbon",
-        "unidentifiedResourceName": "리본",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "Costume Idol's Flower Stage",
-        "identifiedResourceName": "C_Spot_Flower",
-        "identifiedDescriptionName": [
-            "เวทีที่ถูกสร้างขึ้นเพื่อคุณผู้มีความฝันบนแสงไฟ ให้ทุกย่างก้าวเปล่งประกายราวกับอยู่บนเวทีจริง",
-            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 21 ได้",
-            "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Middle น้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 1",
-            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
-        ],
-        "slotCount": 0,
-        "ClassNum": 1893,
-        "costume": true
-    },
-    "480393": {
-        "unidentifiedDisplayName": "Hood",
-        "unidentifiedResourceName": "후드",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "Costume Blue Moon Loli Ruri's Crescent Moon",
-        "identifiedResourceName": "C_Loli_Ruri_Moon_B",
-        "identifiedDescriptionName": [
-            "ดวงจันทร์เสี้ยวสีฟ้า ที่ถอดแบบมาจากดวงจันทร์ที่ Loli Ruri ขี่อยู่",
-            "เมื่อสวมใส่ จะพาคุณเดินทางสู่โลกแห่งนิทานและความฝันที่สวยงาม",
-            "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Garment น้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 1",
-            "อาชีพที่ต้องการ : ทุกอาชีพ"
-        ],
-        "slotCount": 0,
-        "ClassNum": 199,
-        "costume": true
-    },
-    "1001617": {
-        "unidentifiedDisplayName": "Purple Star Footprint (Garment)",
-        "unidentifiedResourceName": "발자국이펙트",
-        "unidentifiedDescriptionName": [
-            "มอบเอฟเฟกต์เมื่อ Enchant ช่องที่ 3 ของ Costume ประเภท Garment",
-            "^ff0000Purple Star Footprint"
-        ],
-        "identifiedDisplayName": "Purple Star Footprint (Garment)",
-        "identifiedResourceName": "발자국이펙트",
-        "identifiedDescriptionName": [
-            "มอบเอฟเฟกต์เมื่อ Enchant ช่องที่ 3 ของ Costume ประเภท Garment",
-            "^ff0000Purple Star Footprint",
-            "น้ำหนัก : 10"
-        ],
-        "slotCount": 0,
-        "ClassNum": 0,
-        "costume": false
-    },
-    "313067": {
-        "unidentifiedDisplayName": "Purple Star Footprint",
-        "unidentifiedResourceName": "발자국이펙트",
-        "unidentifiedDescriptionName": [
-            "Purple Star Footprint"
-        ],
-        "identifiedDisplayName": "Purple Star Footprint",
-        "identifiedResourceName": "발자국이펙트",
-        "identifiedDescriptionName": [
-            "Purple Star Footprint"
-        ],
-        "slotCount": 0,
-        "ClassNum": 0,
-        "costume": false
-    },
-    "107315": {
-        "unidentifiedDisplayName": "Crescent Costume Scroll",
-        "unidentifiedResourceName": "Crescent_Scroll_TW",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "Crescent Costume Scroll",
-        "identifiedResourceName": "Crescent_Scroll_TW",
-        "identifiedDescriptionName": [
-            "Crescent Costume Scroll ม้วนคัมภีร์ลึกลับที่เปล่งประกายของแสงจันทร์ ราวกับเก็บพลังแห่งราตรีอันงดงามไว้ภายใน",
-            "^ff0000หากเปิดใช้งานหลังวันที่ 13 พฤษภาคม 2569 หลังปิดปรับปรุงประจำสัปดาห์ จะไม่ได้รับ   Event Stone Coin ",
-            "น้ำหนัก : 1"
-        ],
-        "slotCount": 0,
-        "ClassNum": 0,
-        "costume": false
-    },
-    "401149": {
-        "unidentifiedDisplayName": "Ribbon",
-        "unidentifiedResourceName": "리본",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "Costume Hollgrehenn Aura",
-        "identifiedResourceName": "C_Success_CN",
-        "identifiedDescriptionName": [
-            "ว่ากันว่ามีพลังของ Hollgrehenn สถิตอยู่.. ไม่รู้ทำไมรู้สึกราวกับว่าตีบวกแล้วจะสำเร็จเลยแฮะ..",
-            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 18 ได้",
+            "วิกผมที่ทำเลียนแบบชนเผ่าอะไรสักอย่างที่เมื่อพัฒนาพลังของตนเองจนถึงขีดสุดแล้วทรงผมจะเปลี่ยนไป",
+            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 10 ได้ ",
             "ประเภท : Costume พลังป้องกัน : 0",
             "ตำแหน่ง : Upper น้ำหนัก : 0",
             "เลเวลที่ต้องการ : 1",
             "อาชีพที่ใส่ได้ : ทุกอาชีพ"
         ],
         "slotCount": 0,
-        "ClassNum": 2791,
+        "ClassNum": 879,
         "costume": true
     },
-    "490100": {
-        "unidentifiedDisplayName": "Ring",
-        "unidentifiedResourceName": "링",
+    "18742": {
+        "unidentifiedDisplayName": "Ribbon",
+        "unidentifiedResourceName": "리본",
         "unidentifiedDescriptionName": [
             "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "Red Force Pendant",
-        "identifiedResourceName": "영원한사랑",
+        "identifiedDisplayName": "Costume Moon and Stars",
+        "identifiedResourceName": "달과별의장식",
         "identifiedDescriptionName": [
-            "สร้อยคอที่ปรับแต่งมาจาก Thanatos's Necklace ซึ่งโดดเด่นในเรื่องของพลังแห่งการฟื้นฟู HP",
-            "ATK + 5%, MATK + 5%",
-            "เมื่ออัพเกรดถึงขั้น 7 ATK +20, MATK +20",
-            "เมื่ออัพเกรดถึงขั้น 9 ลด Delay หลังใช้สกิล 5%",
-            "เมื่อสวมใส่ร่วมกับ Drooping Thanatos's Dolor,",
-            "ทุก ๆ การอัพเกรด Headgear 4 ขั้น ลด Delay หลังใช้สกิล 2%,",
-            "เมื่ออัพเกรด Headgear ถึงขั้น 7 เมื่อโจมตีทางกายภาพ มีโอกาส 5% ที่จะฟื้นฟู HP 5% ของ Damage ที่ทำ และเมื่อโจมตีทางเวทมนตร์ มีโอกาส 4% ที่จะฟื้นฟู HP 300 หน่วยทุก ๆ 1 วินาทีทั้งหมด 4 ครั้ง,",
-            "เมื่ออัพเกรด Headgear ถึงขั้น 9, ATK +5%, MATK +5%,",
-            "เมื่ออัพเกรด Headgear ถึงขั้น 11 ลดระยะเวลาร่ายแบบคงที่ 0.5 วินาที",
-            "ประเภท : Accessory(Right) พลังป้องกัน : 0",
-            "น้ำหนัก : 10",
+            "อา.. ข้ารู้สึกได้ ถึงพลังแห่งจักรวาลที่เปี่ยมล้นอยู่ในกายข้า",
+            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 8 ได้ ",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Middle น้ำหนัก : 0",
             "เลเวลที่ต้องการ : 1",
             "อาชีพที่ใส่ได้ : ทุกอาชีพ"
         ],
-        "slotCount": 1,
-        "ClassNum": 0,
-        "costume": false
+        "slotCount": 0,
+        "ClassNum": 881,
+        "costume": true
     },
-    "490101": {
-        "unidentifiedDisplayName": "Ring",
-        "unidentifiedResourceName": "링",
+    "19823": {
+        "unidentifiedDisplayName": "Hat",
+        "unidentifiedResourceName": "캡",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา ต้องทำการตรวจสอบไอเท็มโดย [Magnifier]"
+        ],
+        "identifiedDisplayName": "Costume White Cat Hood",
+        "identifiedResourceName": "흰고양이후드",
+        "identifiedDescriptionName": [
+            "หูแมวตรงฮู้ดนี่มันให้ความรู้สึกนุ่มนิ่มสุดๆ ไปเลย",
+            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 10 ได้ ",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Upper-Middleน้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อุปกรณ์สวมใส่ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 1052,
+        "costume": true
+    },
+    "31120": {
+        "unidentifiedDisplayName": "Ribbon",
+        "unidentifiedResourceName": "리본",
         "unidentifiedDescriptionName": [
             "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "Blue Mental Pendant",
-        "identifiedResourceName": "수호의사랑",
+        "identifiedDisplayName": "Costume Vampire Familiar",
+        "identifiedResourceName": "뱀파이어의사역마",
         "identifiedDescriptionName": [
-            "สร้อยคอที่ปรับแต่งมาจาก Thanatos's Necklace ซึ่งโดดเด่นในเรื่องของพลังแห่งการฟื้นฟู SP",
-            "ATK + 5%, MATK + 5%",
-            "เมื่ออัพเกรดถึงขั้น 7 ATK +20, MATK +20",
-            "เมื่ออัพเกรดถึงขั้น 9 ลด Delay หลังใช้สกิล 5%",
-            "เมื่อสวมใส่ร่วมกับ Drooping Thanatos's Dolor,",
-            "ทุก ๆ การอัพเกรด Headgear 4 ขั้น ลด Delay หลังใช้สกิล 2%,",
-            "เมื่ออัพเกรด Headgear ถึงขั้น 7 เมื่อโจมตีทางกายภาพ มีโอกาส 1% ที่จะฟื้นฟู SP 3% ของ Damage ที่ทำ และเมื่อโจมตีทางเวทมนตร์ มีโอกาส 4% ที่จะฟื้นฟู SP 70 หน่วยทุก ๆ 1 วินาทีทั้งหมด 4 ครั้ง,",
-            "เมื่ออัพเกรด Headgear ถึงขั้น 9, ATK +5%, MATK +5%,",
-            "เมื่ออัพเกรด Headgear ถึงขั้น 11 ลดระยะเวลาร่ายแบบคงที่ 0.5 วินาที",
-            "ประเภท : Accessory(Right) พลังป้องกัน : 0",
-            "น้ำหนัก : 10",
+            "เครื่องประดับหูและ Familiar ที่ทำให้รู้สึกเหมือนได้กลายเป็นแวมไพร์",
+            "เป็นไอเท็มที่เข้ากับช่วงฮัลโลวีนมากๆ เลย ",
+            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 9 ได้ ",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Middle น้ำหนัก : 0",
             "เลเวลที่ต้องการ : 1",
             "อาชีพที่ใส่ได้ : ทุกอาชีพ"
         ],
-        "slotCount": 1,
-        "ClassNum": 0,
-        "costume": false
+        "slotCount": 0,
+        "ClassNum": 1548,
+        "costume": true
     },
-    "107369": {
-        "unidentifiedDisplayName": "Fallen Heaven Scroll",
-        "unidentifiedResourceName": "Randgris_Egg",
+    "31673": {
+        "unidentifiedDisplayName": "Picnic Basket",
+        "unidentifiedResourceName": "과일바구니",
         "unidentifiedDescriptionName": [
-            "ปลดปล่อยพลังที่บิดเบือนกฎของโลก เพิ่มพลังให้ผู้ครอบครองอย่างมหาศาล แลกกับความเสี่ยงที่ไม่อาจคาดเดาได้"
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "Fallen Heaven Scroll",
-        "identifiedResourceName": "Randgris_Egg",
+        "identifiedDisplayName": "Costume Picnic Basket",
+        "identifiedResourceName": "C_Picnic_Basket",
         "identifiedDescriptionName": [
-            "ปลดปล่อยพลังที่บิดเบือนกฎของโลก เพิ่มพลังให้ผู้ครอบครองอย่างมหาศาล แลกกับความเสี่ยงที่ไม่อาจคาดเดาได้",
-            "^ff0000หากเปิดใช้งานหลังวันที่ 27 พฤษภาคม 2569 หลังปิดปรับปรุงประจำสัปดาห์ จะไม่ได้รับ   Fallen Heaven Coin ",
-            "น้ำหนัก : 1"
+            "ตะกร้าปิกนิกสำหรับใส่เสื้อผ้าที่พกพาสะดวก",
+            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 9 ได้ ",
+            "ไปปิกนิกที่วิวดีๆ เติมพลังให้ร่างกายกันเถอะ!",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Middle น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
         ],
         "slotCount": 0,
-        "ClassNum": 0,
-        "costume": false
+        "ClassNum": 1867,
+        "costume": true
     },
-    "9140": {
-        "unidentifiedDisplayName": "[SSR] Blue Moon Loli Ruri Egg",
-        "unidentifiedResourceName": "수속성알",
+    "20197": {
+        "unidentifiedDisplayName": "Cap",
+        "unidentifiedResourceName": "캡",
         "unidentifiedDescriptionName": [
-            "ไข่ที่มี Q-Pet Blue Moon Loli Ruri หลับใหลอยู่ สามารถปลุกให้ตื่นขึ้นมาได้ด้วย [Pet Incubator]",
-            "",
-            "หากความสัมพันธ์อยู่ในระดับไม่คุ้นเคยหรือเขินอาย, VIT + 1, MHP + 1%.",
-            "หากความสัมพันธ์อยู่ในระดับปกติ  VIT + 2, MHP + 2%.",
-            "หากความสัมพันธ์อยู่ในระดับเป็นมิตร VIT + 3, MHP + 3%",
-            "เมื่อถูกโจมตีทางกายภาพ, มีโอกาสเล็กน้อยที่จะร่าย Kyrie Eleison Lv.2 ใส่ตนเอง (เมื่อเรียนรู้ในเลเวลที่สูงขึ้น จะเกิดผลลัพธ์ตามเลเวลที่เรียนรู้)",
-            "หากความสัมพันธ์อยู่ในระดับสนิทสนม VIT + 4, MHP + 5%",
-            "เมื่อถูกโจมตีทางกายภาพ, มีโอกาสเล็กน้อยที่จะร่าย Kyrie Eleison Lv.2 ใส่ตนเอง (เมื่อเรียนรู้ในเลเวลที่สูงขึ้น จะเกิดผลลัพธ์ตามเลเวลที่เรียนรู้)",
-            "",
-            "^ff0000คุณสมบัติในช่วงเวลากิจกรรม (6 พฤษภาคม - 27 พฤษภาคม 2026)",
-            "^ff0000เพิ่มความเร็วในการเคลื่อนที่ขั้นสูง, สามารถใช้งานสกิล Resurrection Lv.1 ได้",
-            "ประเภท : Monster Egg"
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "[SSR] Blue Moon Loli Ruri Egg",
-        "identifiedResourceName": "수속성알",
+        "identifiedDisplayName": "Costume Amistr Beret",
+        "identifiedResourceName": "아미스트르베레모",
         "identifiedDescriptionName": [
-            "ไข่ที่มี Q-Pet Blue Moon Loli Ruri หลับใหลอยู่ สามารถปลุกให้ตื่นขึ้นมาได้ด้วย [Pet Incubator]",
-            "",
-            "หากความสัมพันธ์อยู่ในระดับไม่คุ้นเคยหรือเขินอาย, VIT + 1, MHP + 1%.",
-            "หากความสัมพันธ์อยู่ในระดับปกติ  VIT + 2, MHP + 2%.",
-            "หากความสัมพันธ์อยู่ในระดับเป็นมิตร VIT + 3, MHP + 3%",
-            "เมื่อถูกโจมตีทางกายภาพ, มีโอกาสเล็กน้อยที่จะร่าย Kyrie Eleison Lv.2 ใส่ตนเอง (เมื่อเรียนรู้ในเลเวลที่สูงขึ้น จะเกิดผลลัพธ์ตามเลเวลที่เรียนรู้)",
-            "หากความสัมพันธ์อยู่ในระดับสนิทสนม VIT + 4, MHP + 5%",
-            "เมื่อถูกโจมตีทางกายภาพ, มีโอกาสเล็กน้อยที่จะร่าย Kyrie Eleison Lv.2 ใส่ตนเอง (เมื่อเรียนรู้ในเลเวลที่สูงขึ้น จะเกิดผลลัพธ์ตามเลเวลที่เรียนรู้)",
-            "",
-            "^ff0000คุณสมบัติในช่วงเวลากิจกรรม (6 พฤษภาคม - 27 พฤษภาคม 2026)",
-            "^ff0000เพิ่มความเร็วในการเคลื่อนที่ขั้นสูง, สามารถใช้งานสกิล Resurrection Lv.1 ได้",
-            "ประเภท : Monster Egg"
+            "หมวกเบเร่ต์ที่ทำเลียนแบบหูของ Amistr ",
+            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 10 ได้ ",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง: Upper น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
         ],
         "slotCount": 0,
-        "ClassNum": 0,
-        "costume": false
+        "ClassNum": 1294,
+        "costume": true
+    },
+    "31456": {
+        "unidentifiedDisplayName": "Hat",
+        "unidentifiedResourceName": "캡",
+        "unidentifiedDescriptionName": [
+            "ไอเทมปริศนา สามารถตรวจสอบได้ด้วยไอเทม [Magnifier]"
+        ],
+        "identifiedDisplayName": "Costume Baby Leopard Cat",
+        "identifiedResourceName": "C_Baby_Leopard_Cat",
+        "identifiedDescriptionName": [
+            "ลูกเสือดาวที่อยู่ในวัยกำลังน่ารักและชอบเกาะบนศรีษะของเจ้าของ",
+            "^b4b4b4สามารถแลกเปลี่ยนเป็น Enchant Stone Box 7 ได้.",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Upper  น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0
+    },
+    "20130": {
+        "unidentifiedDisplayName": "Cap",
+        "unidentifiedResourceName": "캡",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา ต้องใช้ [Magnifier] ในการตรวจสอบไอเท็ม"
+        ],
+        "identifiedDisplayName": "Costume Whisper Tall Hat",
+        "identifiedResourceName": "위스퍼톨햇",
+        "identifiedDescriptionName": [
+            "หมวกยาวแบบจำลองตามรูปร่าง Whisper",
+            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 9 ได้ ",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Upperน้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 1265,
+        "costume": true
+    },
+    "20459": {
+        "unidentifiedDisplayName": "Accessory",
+        "unidentifiedResourceName": "리본",
+        "unidentifiedDescriptionName": [
+            "ไอเทมปริศนา สามารถตรวจสอบได้ด้วยไอเทม [Magnifier]"
+        ],
+        "identifiedDisplayName": "Costume Valhalla Idol",
+        "identifiedResourceName": "발할라아이돌",
+        "identifiedDescriptionName": [
+            "เครื่องประดับศรีษะของหญิงสาวที่ต่อสู้ราวกับกำลังร่ายรำอยู่ในสนามรบ",
+            "แสงสว่างที่คุ้มกันหญิงสาวอยู่นั้นเป็นเหมือนกับสปอร์ตไลท์ที่กำลังส่องอยู่",
+            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 11 ได้",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Middle น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 1423,
+        "costume": true
+    },
+    "410228": {
+        "unidentifiedDisplayName": "Ribbon",
+        "unidentifiedResourceName": "리본",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Costume Tomboy Fairy",
+        "identifiedResourceName": "C말썽꾸러기요정",
+        "identifiedDescriptionName": [
+            "หมวกทรงหูแฟรี่ตัวกวน",
+            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 7 ได้ ",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Middle น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 998,
+        "costume": true
+    },
+    "420200": {
+        "unidentifiedDisplayName": "Costume",
+        "unidentifiedResourceName": "리본",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Costume Eremes Scarf",
+        "identifiedResourceName": "에레메스스카프",
+        "identifiedDescriptionName": [
+            "ผ้าพันคอสีแดงนี่อยู่ในสภาพถูกฉีกขาด",
+            "ให้ความรู้สึกเหมือนกับผ้าพันขอของ Eremes Guile ที่สถาบันวิจัยวิศวกรรมชีวการแพทย์",
+            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 11 ได้",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Lower น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 1416,
+        "costume": true
+    },
+    "31732": {
+        "unidentifiedDisplayName": "Ribbon",
+        "unidentifiedResourceName": "리본",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Costume Teddy Bear Balloon",
+        "identifiedResourceName": "BearBalloon",
+        "identifiedDescriptionName": [
+            "ลูกโป่งลายตุ๊กตาหมีที่เด็ก ๆ ชอบ",
+            "",
+            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 8 ได้ ",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Lower น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 1734,
+        "costume": true
+    },
+    "31525": {
+        "unidentifiedDisplayName": "Cap",
+        "unidentifiedResourceName": "캡",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Costume Little Deviling",
+        "identifiedResourceName": "꼬마데빌링",
+        "identifiedDescriptionName": [
+            "Deviling น้อยแสนซนที่จะคอยตามหลังเจ้านายต้อย ๆ ",
+            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 8 ได้ ",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Middle น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 1036,
+        "costume": true
+    },
+    "400351": {
+        "unidentifiedDisplayName": "Helm",
+        "unidentifiedResourceName": "헬름",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Costume Poring Helmet",
+        "identifiedResourceName": "C_20Y_Anniv_Helmet",
+        "identifiedDescriptionName": [
+            "หมวกแฟชั่นที่ด้านหลังมีรูปวาดของโปริ่งเอาไว้",
+            "ดูทนทานใช้ได้ เพราะมีขนาดที่ใหญ่มาก",
+            "",
+            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 12 ได้",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Upper น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 2302,
+        "costume": true
+    },
+    "19625": {
+        "unidentifiedDisplayName": "Ribbon",
+        "unidentifiedResourceName": "리본",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Costume Bunny Band",
+        "identifiedResourceName": "토끼머리띠",
+        "identifiedDescriptionName": [
+            "ที่คาดผมประดับหูกระต่าย ถึงทรงของมันจะดูเหมือนจะหล่นได้ทุกเมื่อ แต่เอาเข้าจริงกลับเคลื่อนไหวได้คล่องอย่างคาดไม่ถึง",
+            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 7 ได้ ",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Upper น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 15,
+        "costume": true
+    },
+    "31158": {
+        "unidentifiedDisplayName": "Cap",
+        "unidentifiedResourceName": "캡",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Costume Squirrel Ear Hat",
+        "identifiedResourceName": "다람쥐귀모자",
+        "identifiedDescriptionName": [
+            "หมวกกระรอกหูตั้งน่ารัก เมื่อสวมใส่แล้วรู้สึกเหมือนจะกลายเป็นกระรอกตัวเล็กที่มีความเฉียบแหลมในการโจมตี",
+            "",
+            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 12 ได้",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Upper น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 1486,
+        "costume": true
+    },
+    "410219": {
+        "unidentifiedDisplayName": "Ribbon",
+        "unidentifiedResourceName": "리본",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Costume Jumbo Rabbit",
+        "identifiedResourceName": "C_Jumbo_Rabbit",
+        "identifiedDescriptionName": [
+            "ตุ๊กตารูปร่างกระต่ายตัวใหญ่ที่ช่างฝีมือแห่ง Rune-Midgarts ตั้งอกตั้งใจทำขึ้น",
+            "เป็นที่นิยมในหมู่นักสะสมตุ๊กตา เพราะทำขึ้นอย่างประณีตจนเหมือนกับมันมีชีวิตจริง ๆ",
+            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 12 ได้",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Middle น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 2334,
+        "costume": true
+    },
+    "20468": {
+        "unidentifiedDisplayName": "Mask",
+        "unidentifiedResourceName": "스마일",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Costume You in ONE",
+        "identifiedResourceName": "유인원마스크",
+        "identifiedDescriptionName": [
+            "หน้ากากที่สื่อความหมายว่าพวกเราและพวกเขาเป็นหนึ่งเดียวกัน",
+            "ทำขึ้นเพื่อช่วยผู้คนที่กลัวการเข้าหาชนเผ่าอื่น ๆ ",
+            "...ถึงแม้ว่ามันจะไม่ค่อยเป็นผลเท่าไหร่ก็เถอะ",
+            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 11 ได้",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Upper/Middle/Lower น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 1462,
+        "costume": true
     }
 }
