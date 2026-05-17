@@ -20,6 +20,11 @@ export default function ExpCalculator() {
   });
   const [startPercentInput, setStartPercentInput] = useState('0');
   const [endPercentInput, setEndPercentInput] = useState('0');
+  const [hours, setHours] = useState('0');
+  const [minutes, setMinutes] = useState('0');
+  const [serverMultiplier, setServerMultiplier] = useState('100');
+  const [equipmentExp, setEquipmentExp] = useState('0');
+  const [expBuff, setExpBuff] = useState('0');
 
   const classData = EXP_TABLES[selectedClass];
   const availableLevels = Object.keys(classData.levels)
@@ -116,12 +121,14 @@ export default function ExpCalculator() {
                 </label>
                 <select
                   value={expRange.startLevel}
-                  onChange={(e) =>
+                  onChange={(e) => {
+                    const newStartLevel = Number(e.target.value);
                     setExpRange((prev) => ({
                       ...prev,
-                      startLevel: Number(e.target.value),
-                    }))
-                  }
+                      startLevel: newStartLevel,
+                      endLevel: Math.max(newStartLevel, prev.endLevel),
+                    }));
+                  }}
                   className="select select-bordered select-warning w-full text-slate-800"
                 >
                   {availableLevels.map((lvl) => (
@@ -174,19 +181,22 @@ export default function ExpCalculator() {
                 </label>
                 <select
                   value={expRange.endLevel}
-                  onChange={(e) =>
+                  onChange={(e) => {
+                    const newEndLevel = Number(e.target.value);
                     setExpRange((prev) => ({
                       ...prev,
-                      endLevel: Number(e.target.value),
-                    }))
-                  }
+                      endLevel: Math.max(prev.startLevel, newEndLevel),
+                    }));
+                  }}
                   className="select select-bordered select-warning w-full text-slate-800"
                 >
-                  {availableLevels.map((lvl) => (
-                    <option key={lvl} value={lvl}>
-                      Level {lvl}
-                    </option>
-                  ))}
+                  {availableLevels
+                    .filter((lvl) => lvl >= expRange.startLevel)
+                    .map((lvl) => (
+                      <option key={lvl} value={lvl}>
+                        Level {lvl}
+                      </option>
+                    ))}
                 </select>
               </div>
 
@@ -217,47 +227,180 @@ export default function ExpCalculator() {
               </div>
             </div>
 
-            {/* Result Section */}
-            <div className="divider text-slate-400">Result</div>
-            <div className="bg-linear-to-r from-amber-500/10 to-orange-500/10 border border-amber-500/30 rounded-lg p-6 mb-4">
-              <div className="text-center">
-                <p className="text-slate-400 text-sm mb-2">Experience Required</p>
-                <p className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-linear-to-r from-amber-400 to-orange-400">
+            {/* Time and Multiplier Settings */}
+            <div className="divider text-slate-400">Settings</div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {/* Hours */}
+              <div>
+                <label className="block text-xs font-semibold text-slate-400 mb-2 uppercase">
+                  ชั่วโมง
+                </label>
+                <input
+                  type="text"
+                  inputMode="numeric"
+                  value={hours}
+                  onChange={(e) => {
+                    setHours(e.target.value);
+                  }}
+                  onBlur={(e) => {
+                    const val = Math.max(0, parseInt(e.target.value) || 0);
+                    setHours(val.toString());
+                  }}
+                  className="input input-bordered input-info w-full text-slate-800 text-sm"
+                  placeholder="0"
+                />
+              </div>
+
+              {/* Minutes */}
+              <div>
+                <label className="block text-xs font-semibold text-slate-400 mb-2 uppercase">
+                  นาที
+                </label>
+                <input
+                  type="text"
+                  inputMode="numeric"
+                  value={minutes}
+                  onChange={(e) => {
+                    setMinutes(e.target.value);
+                  }}
+                  onBlur={(e) => {
+                    const val = Math.max(0, Math.min(59, parseInt(e.target.value) || 0));
+                    setMinutes(val.toString());
+                  }}
+                  className="input input-bordered input-info w-full text-slate-800 text-sm"
+                  placeholder="0"
+                />
+              </div>
+
+              {/* Server Multiplier */}
+              <div>
+                <label className="block text-xs font-semibold text-slate-400 mb-2 uppercase">
+                  Server Exp %
+                </label>
+                <input
+                  type="text"
+                  inputMode="decimal"
+                  value={serverMultiplier}
+                  onChange={(e) => {
+                    setServerMultiplier(e.target.value);
+                  }}
+                  onBlur={(e) => {
+                    const val = Math.max(0, parseFloat(e.target.value) || 100);
+                    setServerMultiplier(val.toString());
+                  }}
+                  className="input input-bordered input-info w-full text-slate-800 text-sm"
+                  placeholder="100"
+                />
+              </div>
+
+              {/* Equipment Exp % */}
+              <div>
+                <label className="block text-xs font-semibold text-slate-400 mb-2 uppercase">
+                  Equipment Exp %
+                </label>
+                <input
+                  type="text"
+                  inputMode="decimal"
+                  value={equipmentExp}
+                  onChange={(e) => {
+                    setEquipmentExp(e.target.value);
+                  }}
+                  onBlur={(e) => {
+                    const val = Math.max(0, Math.min(100, parseFloat(e.target.value) || 0));
+                    setEquipmentExp(val.toString());
+                  }}
+                  className="input input-bordered input-info w-full text-slate-800 text-sm"
+                  placeholder="0"
+                />
+              </div>
+
+              {/* Exp Buff % */}
+              <div>
+                <label className="block text-xs font-semibold text-slate-400 mb-2 uppercase">
+                  Exp Buff %
+                </label>
+                <input
+                  type="text"
+                  inputMode="decimal"
+                  value={expBuff}
+                  onChange={(e) => {
+                    setExpBuff(e.target.value);
+                  }}
+                  onBlur={(e) => {
+                    const val = Math.max(0, Math.min(100, parseFloat(e.target.value) || 0));
+                    setExpBuff(val.toString());
+                  }}
+                  className="input input-bordered input-info w-full text-slate-800 text-sm"
+                  placeholder="0"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Summary Card */}
+        <div className="card bg-slate-800/50 backdrop-blur border border-slate-700 shadow-2xl mt-6">
+          <div className="card-body p-6 md:p-8">
+            <h2 className="text-2xl font-bold text-amber-400 mb-6">Summary</h2>
+
+            {/* Exp and Time Row */}
+            <div className="grid md:grid-cols-2 gap-6 mb-6">
+              {/* Exp */}
+              <div>
+                <p className="text-slate-400 text-sm mb-2">Exp</p>
+                <p className="text-4xl font-bold text-amber-400">
                   {calculateExpNeeded.toLocaleString('en-US', {
                     maximumFractionDigits: 2,
                   })}
                 </p>
               </div>
+
+              {/* Time - Only show if not 0:00 */}
+              {(parseInt(hours) > 0 || parseInt(minutes) > 0) && (
+                <div>
+                  <p className="text-slate-400 text-sm mb-2">เวลาเล่น</p>
+                  <p className="text-4xl font-bold text-blue-400">
+                    {parseInt(hours)}:{String(parseInt(minutes) || 0).padStart(2, '0')} <span className="text-lg">hrs</span>
+                  </p>
+                </div>
+              )}
             </div>
 
-            {/* Summary */}
-            <div className="bg-slate-700/30 rounded-lg p-4 border border-slate-600">
-              <p className="text-slate-300 text-center">
-                <span className="font-semibold text-amber-400">
-                  {EXP_TABLES[selectedClass].name}
-                </span>
-                {' • '}
-                <span>
-                  Lv{expRange.startLevel} {expRange.startPercent}%
-                </span>
-                {' → '}
-                <span>
-                  Lv{expRange.endLevel} {expRange.endPercent}%
-                </span>
-              </p>
+            {/* Multipliers Row - Server Exp %, Equipment Exp %, Exp Buff % */}
+            <div className="grid md:grid-cols-3 gap-6">
+              {/* Server Exp % - Only show if not 100 */}
+              {parseFloat(serverMultiplier) !== 100 && (
+                <div>
+                  <p className="text-slate-400 text-sm mb-2">Server Exp %</p>
+                  <p className="text-4xl font-bold text-green-400">
+                    {serverMultiplier}%
+                  </p>
+                </div>
+              )}
+
+              {/* Equipment Exp % - Only show if not 0 */}
+              {parseFloat(equipmentExp) > 0 && (
+                <div>
+                  <p className="text-slate-400 text-sm mb-2">Equipment Exp %</p>
+                  <p className="text-4xl font-bold text-purple-400">
+                    +{equipmentExp}%
+                  </p>
+                </div>
+              )}
+
+              {/* Exp Buff % - Only show if not 0 */}
+              {parseFloat(expBuff) > 0 && (
+                <div>
+                  <p className="text-slate-400 text-sm mb-2">Exp Buff %</p>
+                  <p className="text-4xl font-bold text-pink-400">
+                    +{expBuff}%
+                  </p>
+                </div>
+              )}
             </div>
           </div>
         </div>
 
-        {/* Info Section */}
-        <div className="mt-8 bg-slate-800/30 backdrop-blur border border-slate-700 rounded-lg p-6">
-          <h3 className="text-lg font-semibold text-amber-400 mb-3">How it works</h3>
-          <ul className="space-y-2 text-slate-300 text-sm">
-            <li>• <span className="font-semibold">Progress %</span>: Your current progress towards the next level (0-99.99%)</li>
-            <li>• <span className="font-semibold">Example</span>: Lv1 50% means you&apos;re halfway to level 2</li>
-            <li>• The calculator shows total EXP needed to reach your target level and progress</li>
-          </ul>
-        </div>
       </div>
     </div>
   );

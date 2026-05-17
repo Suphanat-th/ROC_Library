@@ -99,13 +99,13 @@ const fileTree: FileTreeItem[] = [
     icon: "⚔️",
     href: "/calc-bp",
   },
-  {
-    id: "expcalc",
-    name: "Exp Calculator",
-    type: "file",
-    icon: "📊",
-    href: "/exp-calc",
-  },
+  // {
+  //   id: "expcalc",
+  //   name: "Exp Calculator",
+  //   type: "file",
+  //   icon: "📊",
+  //   href: "/exp-calc",
+  // },
   // {
   //   id: "tools",
   //   name: "Tools",
