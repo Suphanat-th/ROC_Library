@@ -1,372 +1,687 @@
 {
-    "18740": {
-        "unidentifiedDisplayName": "Accessory",
-        "unidentifiedResourceName": "헬름",
+    "1002381": {
+        "unidentifiedDisplayName": "Mid Powder",
+        "unidentifiedResourceName": "CLB_GAT_powder",
         "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+            "วัตถุดิบสำคัญในการสร้าง Mid Missile",
+            "จะได้รับเมื่อกำจัดพวก Galactor",
+            "^ff0000(ไอเท็มนี้จะถูกลบออกหลังสิ้นสุดระยะเวลากิจกรรม)"
         ],
-        "identifiedDisplayName": "Costume Hair Of The Strong",
-        "identifiedResourceName": "강한자의헤어",
+        "identifiedDisplayName": "Mid Powder",
+        "identifiedResourceName": "CLB_GAT_powder",
         "identifiedDescriptionName": [
-            "วิกผมที่ทำเลียนแบบชนเผ่าอะไรสักอย่างที่เมื่อพัฒนาพลังของตนเองจนถึงขีดสุดแล้วทรงผมจะเปลี่ยนไป",
-            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 10 ได้ ",
-            "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Upper น้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 1",
-            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+            "วัตถุดิบสำคัญในการสร้าง Mid Missile",
+            "จะได้รับเมื่อกำจัดพวก Galactor",
+            "^ff0000(ไอเท็มนี้จะถูกลบออกหลังสิ้นสุดระยะเวลากิจกรรม)",
+            "น้ำหนัก : 0"
         ],
         "slotCount": 0,
-        "ClassNum": 879,
-        "costume": true
+        "ClassNum": 0,
+        "costume": false
     },
-    "18742": {
-        "unidentifiedDisplayName": "Ribbon",
-        "unidentifiedResourceName": "리본",
+    "1002382": {
+        "unidentifiedDisplayName": "Mid Missile Button",
+        "unidentifiedResourceName": "CLB_GAT_coin",
         "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+            "ปุ่มสำหรับกดยิง Mid Missile",
+            "นำไปให้ Joe The Condor น่าจะดีนะ",
+            "^ff0000(ไอเท็มนี้จะถูกลบออกหลังสิ้นสุดระยะเวลากิจกรรม)"
         ],
-        "identifiedDisplayName": "Costume Moon and Stars",
-        "identifiedResourceName": "달과별의장식",
+        "identifiedDisplayName": "Mid Missile Button",
+        "identifiedResourceName": "CLB_GAT_coin",
         "identifiedDescriptionName": [
-            "อา.. ข้ารู้สึกได้ ถึงพลังแห่งจักรวาลที่เปี่ยมล้นอยู่ในกายข้า",
-            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 8 ได้ ",
-            "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Middle น้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 1",
-            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+            "ปุ่มสำหรับกดยิง Mid Missile",
+            "นำไปให้ Joe The Condor น่าจะดีนะ",
+            "^ff0000(ไอเท็มนี้จะถูกลบออกหลังสิ้นสุดระยะเวลากิจกรรม)",
+            "น้ำหนัก : 0"
         ],
         "slotCount": 0,
-        "ClassNum": 881,
-        "costume": true
+        "ClassNum": 0,
+        "costume": false
     },
-    "19823": {
-        "unidentifiedDisplayName": "Hat",
-        "unidentifiedResourceName": "캡",
+    "300732": {
+        "unidentifiedDisplayName": "Gatchaman Card",
+        "unidentifiedResourceName": "이름없는카드",
         "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา ต้องทำการตรวจสอบไอเท็มโดย [Magnifier]"
+            "ทุก ๆ Base Lv.10, ATK + 3, DEF + 3, MDEF + 1",
+            "(สูงสุดจนถึง Base Lv.200)",
+            "^CC3D3D[ความสามารถช่วงระยะเวลากิจกรรม]",
+            "เพิ่มค่าประสบการณ์ที่ได้รับเมื่อกำจัดมอนสเตอร์ 5%",
+            "เพิ่มอัตราดรอปไอเทม 3%",
+            "(ความสามารถของไอเท็มชิ้นนี้จะถูกลบหลังสิ้นสุดระยะเวลากิจกรรม)"
         ],
-        "identifiedDisplayName": "Costume White Cat Hood",
-        "identifiedResourceName": "흰고양이후드",
+        "identifiedDisplayName": "Gatchaman Card",
+        "identifiedResourceName": "이름없는카드",
         "identifiedDescriptionName": [
-            "หูแมวตรงฮู้ดนี่มันให้ความรู้สึกนุ่มนิ่มสุดๆ ไปเลย",
-            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 10 ได้ ",
-            "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Upper-Middleน้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 1",
-            "อุปกรณ์สวมใส่ : ทุกอาชีพ"
+            "ทุก ๆ Base Lv.10, ATK + 3, DEF + 3, MDEF + 1",
+            "(สูงสุดจนถึง Base Lv.200)",
+            "^CC3D3D[ความสามารถช่วงระยะเวลากิจกรรม]",
+            "เพิ่มค่าประสบการณ์ที่ได้รับเมื่อกำจัดมอนสเตอร์ 5%",
+            "เพิ่มอัตราดรอปไอเทม 3%",
+            "(ความสามารถของไอเท็มชิ้นนี้จะถูกลบหลังสิ้นสุดระยะเวลากิจกรรม)",
+            "ประเภท : Card",
+            "ใช้กับ : Garment",
+            "น้ำหนัก : 1"
         ],
         "slotCount": 0,
-        "ClassNum": 1052,
-        "costume": true
+        "ClassNum": 0,
+        "costume": false,
+        "EffectID": 1186
     },
-    "31120": {
-        "unidentifiedDisplayName": "Ribbon",
-        "unidentifiedResourceName": "리본",
+    "300733": {
+        "unidentifiedDisplayName": "Galactor Army Card",
+        "unidentifiedResourceName": "이름없는카드",
         "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+            "ทุก ๆ Base Lv.10, MATK + 3, DEF + 3, MDEF + 1",
+            "(สูงสุดจนถึง Base Lv.200)",
+            "^CC3D3D[ความสามารถช่วงระยะเวลากิจกรรม]",
+            "เพิ่มค่าประสบการณ์ที่ได้รับเมื่อกำจัดมอนสเตอร์ 5%",
+            "เพิ่มอัตราดรอปไอเทม 3%",
+            "(ความสามารถของไอเท็มชิ้นนี้จะถูกลบหลังสิ้นสุดระยะเวลากิจกรรม)"
         ],
-        "identifiedDisplayName": "Costume Vampire Familiar",
-        "identifiedResourceName": "뱀파이어의사역마",
+        "identifiedDisplayName": "Galactor Army Card",
+        "identifiedResourceName": "이름없는카드",
         "identifiedDescriptionName": [
-            "เครื่องประดับหูและ Familiar ที่ทำให้รู้สึกเหมือนได้กลายเป็นแวมไพร์",
-            "เป็นไอเท็มที่เข้ากับช่วงฮัลโลวีนมากๆ เลย ",
-            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 9 ได้ ",
-            "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Middle น้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 1",
-            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+            "ทุก ๆ Base Lv.10, MATK + 3, DEF + 3, MDEF + 1",
+            "(สูงสุดจนถึง Base Lv.200)",
+            "^CC3D3D[ความสามารถช่วงระยะเวลากิจกรรม]",
+            "เพิ่มค่าประสบการณ์ที่ได้รับเมื่อกำจัดมอนสเตอร์ 5%",
+            "เพิ่มอัตราดรอปไอเทม 3%",
+            "(ความสามารถของไอเท็มชิ้นนี้จะถูกลบหลังสิ้นสุดระยะเวลากิจกรรม)",
+            "ประเภท : Card",
+            "ใช้กับ : Garment",
+            "น้ำหนัก : 1"
         ],
         "slotCount": 0,
-        "ClassNum": 1548,
-        "costume": true
+        "ClassNum": 0,
+        "costume": false,
+        "EffectID": 1186
     },
-    "31673": {
-        "unidentifiedDisplayName": "Picnic Basket",
-        "unidentifiedResourceName": "과일바구니",
+    "300734": {
+        "unidentifiedDisplayName": "Bird Missile Card",
+        "unidentifiedResourceName": "이름없는카드",
         "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+            "ทุก ๆ Base Lv.10, MHP + 100, DEF + 3, MDEF + 1",
+            "(สูงสุดจนถึง Base Lv.200)",
+            "^CC3D3D[ความสามารถช่วงระยะเวลากิจกรรม]",
+            "เพิ่มค่าประสบการณ์ที่ได้รับเมื่อกำจัดมอนสเตอร์ 5%",
+            "เพิ่มอัตราดรอปไอเทม 3%",
+            "(ความสามารถของไอเท็มชิ้นนี้จะถูกลบหลังสิ้นสุดระยะเวลากิจกรรม)"
         ],
-        "identifiedDisplayName": "Costume Picnic Basket",
-        "identifiedResourceName": "C_Picnic_Basket",
+        "identifiedDisplayName": "Bird Missile Card",
+        "identifiedResourceName": "이름없는카드",
         "identifiedDescriptionName": [
-            "ตะกร้าปิกนิกสำหรับใส่เสื้อผ้าที่พกพาสะดวก",
-            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 9 ได้ ",
-            "ไปปิกนิกที่วิวดีๆ เติมพลังให้ร่างกายกันเถอะ!",
-            "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Middle น้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 1",
-            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+            "ทุก ๆ Base Lv.10, MHP + 100, DEF + 3, MDEF + 1",
+            "(สูงสุดจนถึง Base Lv.200)",
+            "^CC3D3D[ความสามารถช่วงระยะเวลากิจกรรม]",
+            "เพิ่มค่าประสบการณ์ที่ได้รับเมื่อกำจัดมอนสเตอร์ 5%",
+            "เพิ่มอัตราดรอปไอเทม 3%",
+            "(ความสามารถของไอเท็มชิ้นนี้จะถูกลบหลังสิ้นสุดระยะเวลากิจกรรม)",
+            "ประเภท : Card",
+            "ใช้กับ : Garment",
+            "น้ำหนัก : 1"
         ],
         "slotCount": 0,
-        "ClassNum": 1867,
-        "costume": true
+        "ClassNum": 0,
+        "costume": false,
+        "EffectID": 1186
     },
-    "20197": {
-        "unidentifiedDisplayName": "Cap",
-        "unidentifiedResourceName": "캡",
+    "105667": {
+        "unidentifiedDisplayName": "Heavy Feather",
+        "unidentifiedResourceName": "Feather_Of_Seraphim",
         "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+            "ขนนกที่รู้สึกได้ถึงพลังลึกลับ",
+            "เมื่อใช้ขนนกนี้ จะรู้สึกราวกับร่างกายหนักแน่นและมั่นคงขึ้น",
+            "ATK + 7%, MATK + 7% เป็นเวลา 60 นาที",
+            "^ffffff_",
+            "^ff0000(ไอเท็มนี้จะถูกลบออกหลังสิ้นสุดระยะเวลากิจกรรม)"
         ],
-        "identifiedDisplayName": "Costume Amistr Beret",
-        "identifiedResourceName": "아미스트르베레모",
+        "identifiedDisplayName": "Heavy Feather",
+        "identifiedResourceName": "Feather_Of_Seraphim",
         "identifiedDescriptionName": [
-            "หมวกเบเร่ต์ที่ทำเลียนแบบหูของ Amistr ",
-            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 10 ได้ ",
-            "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง: Upper น้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 1",
-            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+            "ขนนกที่รู้สึกได้ถึงพลังลึกลับ",
+            "เมื่อใช้ขนนกนี้ จะรู้สึกราวกับร่างกายหนักแน่นและมั่นคงขึ้น",
+            "ATK + 7%, MATK + 7% เป็นเวลา 60 นาที",
+            "^ffffff_",
+            "^ff0000(ไอเท็มนี้จะถูกลบออกหลังสิ้นสุดระยะเวลากิจกรรม)",
+            "น้ำหนัก : 0"
         ],
         "slotCount": 0,
-        "ClassNum": 1294,
-        "costume": true
+        "ClassNum": 0,
+        "costume": false
     },
-    "31456": {
-        "unidentifiedDisplayName": "Hat",
-        "unidentifiedResourceName": "캡",
+    "105668": {
+        "unidentifiedDisplayName": "Brilliant Feather",
+        "unidentifiedResourceName": "페코날개깃털",
         "unidentifiedDescriptionName": [
-            "ไอเทมปริศนา สามารถตรวจสอบได้ด้วยไอเทม [Magnifier]"
+            "ขนนกที่รู้สึกได้ถึงความเท่แบบลึกลับ",
+            "เมื่อใช้ขนนกนี้ จะรู้สึกราวกับมีออร่าที่โดดเด่นขึ้น",
+            "CRI + 10, ASPD + 1 เป็นเวลา 60 นาที",
+            "^ffffff_",
+            "^ff0000(ไอเท็มนี้จะถูกลบออกหลังสิ้นสุดระยะเวลากิจกรรม)"
         ],
-        "identifiedDisplayName": "Costume Baby Leopard Cat",
-        "identifiedResourceName": "C_Baby_Leopard_Cat",
+        "identifiedDisplayName": "Brilliant Feather",
+        "identifiedResourceName": "페코날개깃털",
         "identifiedDescriptionName": [
-            "ลูกเสือดาวที่อยู่ในวัยกำลังน่ารักและชอบเกาะบนศรีษะของเจ้าของ",
-            "^b4b4b4สามารถแลกเปลี่ยนเป็น Enchant Stone Box 7 ได้.",
-            "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Upper  น้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 1",
-            "อาชีพ : ทุกอาชีพ"
+            "ขนนกที่รู้สึกได้ถึงความเท่แบบลึกลับ",
+            "เมื่อใช้ขนนกนี้ จะรู้สึกราวกับมีออร่าที่โดดเด่นขึ้น",
+            "CRI + 10, ASPD + 1 เป็นเวลา 60 นาที",
+            "^ffffff_",
+            "^ff0000(ไอเท็มนี้จะถูกลบออกหลังสิ้นสุดระยะเวลากิจกรรม)",
+            "น้ำหนัก : 0"
         ],
         "slotCount": 0,
-        "ClassNum": 0
+        "ClassNum": 0,
+        "costume": false
     },
-    "20130": {
-        "unidentifiedDisplayName": "Cap",
-        "unidentifiedResourceName": "캡",
+    "105669": {
+        "unidentifiedDisplayName": "Swift Feather",
+        "unidentifiedResourceName": "Ep20_Huge_Feather_G",
         "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา ต้องใช้ [Magnifier] ในการตรวจสอบไอเท็ม"
+            "ขนนกที่รู้สึกได้ถึงกลิ่นแบบลึกลับ",
+            "เมื่อใช้ขนนกนี้ จะรู้สึกราวกับเคลื่อนไหวได้ปราดเปรียวขึ้น",
+            "FLEE + 25, HIT + 25 เป็นเวลา 60 นาที",
+            "^ffffff_",
+            "^ff0000(ไอเท็มนี้จะถูกลบออกหลังสิ้นสุดระยะเวลากิจกรรม)"
         ],
-        "identifiedDisplayName": "Costume Whisper Tall Hat",
-        "identifiedResourceName": "위스퍼톨햇",
+        "identifiedDisplayName": "Swift Feather",
+        "identifiedResourceName": "Ep20_Huge_Feather_G",
         "identifiedDescriptionName": [
-            "หมวกยาวแบบจำลองตามรูปร่าง Whisper",
-            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 9 ได้ ",
-            "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Upperน้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 1",
-            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+            "ขนนกที่รู้สึกได้ถึงกลิ่นแบบลึกลับ",
+            "เมื่อใช้ขนนกนี้ จะรู้สึกราวกับเคลื่อนไหวได้ปราดเปรียวขึ้น",
+            "FLEE + 25, HIT + 25 เป็นเวลา 60 นาที",
+            "^ffffff_",
+            "^ff0000(ไอเท็มนี้จะถูกลบออกหลังสิ้นสุดระยะเวลากิจกรรม)",
+            "น้ำหนัก : 0"
         ],
         "slotCount": 0,
-        "ClassNum": 1265,
-        "costume": true
+        "ClassNum": 0,
+        "costume": false
     },
-    "20459": {
-        "unidentifiedDisplayName": "Accessory",
-        "unidentifiedResourceName": "리본",
+    "105672": {
+        "unidentifiedDisplayName": "Sturdy Feather",
+        "unidentifiedResourceName": "Ep20_Huge_Feather_W",
         "unidentifiedDescriptionName": [
-            "ไอเทมปริศนา สามารถตรวจสอบได้ด้วยไอเทม [Magnifier]"
+            "ขนนกที่รู้สึกได้ถึงรสชาติแบบลึกลับ",
+            "เมื่อใช้ขนนกนี้ จะรู้สึกราวกับพละกำลังเพิ่มขึ้น",
+            "MHP + 5%, MSP + 5% เป็นเวลา 60 นาที",
+            "^ffffff_",
+            "^ff0000(ไอเท็มนี้จะถูกลบออกหลังสิ้นสุดระยะเวลากิจกรรม)"
         ],
-        "identifiedDisplayName": "Costume Valhalla Idol",
-        "identifiedResourceName": "발할라아이돌",
+        "identifiedDisplayName": "Sturdy Feather",
+        "identifiedResourceName": "Ep20_Huge_Feather_W",
         "identifiedDescriptionName": [
-            "เครื่องประดับศรีษะของหญิงสาวที่ต่อสู้ราวกับกำลังร่ายรำอยู่ในสนามรบ",
-            "แสงสว่างที่คุ้มกันหญิงสาวอยู่นั้นเป็นเหมือนกับสปอร์ตไลท์ที่กำลังส่องอยู่",
-            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 11 ได้",
-            "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Middle น้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 1",
-            "อาชีพ : ทุกอาชีพ"
+            "ขนนกที่รู้สึกได้ถึงรสชาติแบบลึกลับ",
+            "เมื่อใช้ขนนกนี้ จะรู้สึกราวกับพละกำลังเพิ่มขึ้น",
+            "MHP + 5%, MSP + 5% เป็นเวลา 60 นาที",
+            "^ffffff_",
+            "^ff0000(ไอเท็มนี้จะถูกลบออกหลังสิ้นสุดระยะเวลากิจกรรม)",
+            "น้ำหนัก : 0"
         ],
         "slotCount": 0,
-        "ClassNum": 1423,
-        "costume": true
+        "ClassNum": 0,
+        "costume": false
     },
-    "410228": {
-        "unidentifiedDisplayName": "Ribbon",
-        "unidentifiedResourceName": "리본",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "Costume Tomboy Fairy",
-        "identifiedResourceName": "C말썽꾸러기요정",
-        "identifiedDescriptionName": [
-            "หมวกทรงหูแฟรี่ตัวกวน",
-            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 7 ได้ ",
-            "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Middle น้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 1",
-            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
-        ],
-        "slotCount": 0,
-        "ClassNum": 998,
-        "costume": true
-    },
-    "420200": {
-        "unidentifiedDisplayName": "Costume",
-        "unidentifiedResourceName": "리본",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "Costume Eremes Scarf",
-        "identifiedResourceName": "에레메스스카프",
-        "identifiedDescriptionName": [
-            "ผ้าพันคอสีแดงนี่อยู่ในสภาพถูกฉีกขาด",
-            "ให้ความรู้สึกเหมือนกับผ้าพันขอของ Eremes Guile ที่สถาบันวิจัยวิศวกรรมชีวการแพทย์",
-            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 11 ได้",
-            "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Lower น้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 1",
-            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
-        ],
-        "slotCount": 0,
-        "ClassNum": 1416,
-        "costume": true
-    },
-    "31732": {
-        "unidentifiedDisplayName": "Ribbon",
-        "unidentifiedResourceName": "리본",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "Costume Teddy Bear Balloon",
-        "identifiedResourceName": "BearBalloon",
-        "identifiedDescriptionName": [
-            "ลูกโป่งลายตุ๊กตาหมีที่เด็ก ๆ ชอบ",
-            "",
-            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 8 ได้ ",
-            "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Lower น้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 1",
-            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
-        ],
-        "slotCount": 0,
-        "ClassNum": 1734,
-        "costume": true
-    },
-    "31525": {
-        "unidentifiedDisplayName": "Cap",
-        "unidentifiedResourceName": "캡",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "Costume Little Deviling",
-        "identifiedResourceName": "꼬마데빌링",
-        "identifiedDescriptionName": [
-            "Deviling น้อยแสนซนที่จะคอยตามหลังเจ้านายต้อย ๆ ",
-            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 8 ได้ ",
-            "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Middle น้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 1",
-            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
-        ],
-        "slotCount": 0,
-        "ClassNum": 1036,
-        "costume": true
-    },
-    "400351": {
+    "401207": {
         "unidentifiedDisplayName": "Helm",
         "unidentifiedResourceName": "헬름",
         "unidentifiedDescriptionName": [
             "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "Costume Poring Helmet",
-        "identifiedResourceName": "C_20Y_Anniv_Helmet",
+        "identifiedDisplayName": "Costume Honorary Gatchaman",
+        "identifiedResourceName": "C_CLB_GAT_button",
         "identifiedDescriptionName": [
-            "หมวกแฟชั่นที่ด้านหลังมีรูปวาดของโปริ่งเอาไว้",
-            "ดูทนทานใช้ได้ เพราะมีขนาดที่ใหญ่มาก",
-            "",
-            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 12 ได้",
+            "เนื่องจากท่านได้มีส่วนช่วยอย่างยิ่งในการปราบองค์กร Galactor และช่วยให้ทีม Gatchaman เดินทางกลับสู่โลกได้อย่างปลอดภัย จึงขอมอบเข็มกลัดเกียรติยศให้แก่ท่าน",
             "ประเภท : Costume พลังป้องกัน : 0",
             "ตำแหน่ง : Upper น้ำหนัก : 0",
             "เลเวลที่ต้องการ : 1",
             "อาชีพที่ใส่ได้ : ทุกอาชีพ"
         ],
         "slotCount": 0,
-        "ClassNum": 2302,
+        "ClassNum": 2805,
         "costume": true
     },
-    "19625": {
+    "420729": {
         "unidentifiedDisplayName": "Ribbon",
         "unidentifiedResourceName": "리본",
         "unidentifiedDescriptionName": [
             "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "Costume Bunny Band",
-        "identifiedResourceName": "토끼머리띠",
+        "identifiedDisplayName": "Costume Farewell, Gatchaman!",
+        "identifiedResourceName": "C_CLB_GAT_bye",
         "identifiedDescriptionName": [
-            "ที่คาดผมประดับหูกระต่าย ถึงทรงของมันจะดูเหมือนจะหล่นได้ทุกเมื่อ แต่เอาเข้าจริงกลับเคลื่อนไหวได้คล่องอย่างคาดไม่ถึง",
-            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 7 ได้ ",
+            "ฮุ… ฮุ ๆ ๆ ๆ ๆ ๆ ๆ ๆ!",
+            "ฮะ! ฮ่า ๆ ๆ ๆ ๆ ๆๆ ๆ ๆ ๆ ๆ ๆ!!",
+            "ชัยชนะเป็นของฉัน!",
+            "เจ้าพวกมนุษย์โง่!!!",
+            "^CC3D3D[ความสามารถช่วงระยะเวลากิจกรรม]",
+            "เพิ่มความเสียหายทางกายภาพและทางเวทนมตร์ต่อศัตรูทุกธาตุ +10%",
+            "ลดความเสียหายจากศัตรูทุกธาตุ +10%",
+            "เมื่อสังหารมอนสเตอร์มีโอกาศ 0.3% ได้รับ  Sturdy Feather , Swift Feather , Brilliant Feather , Heavy Feather",
+            "(ความสามารถของไอเท็มชิ้นนี้จะถูกลบหลังสิ้นสุดระยะเวลากิจกรรม)",
             "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Upper น้ำหนัก : 0",
+            "ตำแหน่ง : Lower น้ำหนัก : 0",
             "เลเวลที่ต้องการ : 1",
             "อาชีพที่ใส่ได้ : ทุกอาชีพ"
         ],
         "slotCount": 0,
-        "ClassNum": 15,
+        "ClassNum": 2802,
         "costume": true
     },
-    "31158": {
-        "unidentifiedDisplayName": "Cap",
-        "unidentifiedResourceName": "캡",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "Costume Squirrel Ear Hat",
-        "identifiedResourceName": "다람쥐귀모자",
-        "identifiedDescriptionName": [
-            "หมวกกระรอกหูตั้งน่ารัก เมื่อสวมใส่แล้วรู้สึกเหมือนจะกลายเป็นกระรอกตัวเล็กที่มีความเฉียบแหลมในการโจมตี",
-            "",
-            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 12 ได้",
-            "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Upper น้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 1",
-            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
-        ],
-        "slotCount": 0,
-        "ClassNum": 1486,
-        "costume": true
-    },
-    "410219": {
+    "420730": {
         "unidentifiedDisplayName": "Ribbon",
         "unidentifiedResourceName": "리본",
         "unidentifiedDescriptionName": [
             "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "Costume Jumbo Rabbit",
-        "identifiedResourceName": "C_Jumbo_Rabbit",
+        "identifiedDisplayName": "Costume Gatchaman, Move Out!",
+        "identifiedResourceName": "C_CLB_GAT_go",
         "identifiedDescriptionName": [
-            "ตุ๊กตารูปร่างกระต่ายตัวใหญ่ที่ช่างฝีมือแห่ง Rune-Midgarts ตั้งอกตั้งใจทำขึ้น",
-            "เป็นที่นิยมในหมู่นักสะสมตุ๊กตา เพราะทำขึ้นอย่างประณีตจนเหมือนกับมันมีชีวิตจริง ๆ",
-            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 12 ได้",
+            "หากมีสหายที่ไว้ใจได้อยู่เคียงข้าง ก็ไม่มีสิ่งใดต้องหวาดกลัว!",
+            "เตรียมใจไว้เลย!",
+            "เจ้าพวก Galactor!!",
+            "^CC3D3D[ความสามารถช่วงระยะเวลากิจกรรม]",
+            "เพิ่มความเสียหายทางกายภาพและทางเวทนมตร์ต่อศัตรูทุกธาตุ +10%",
+            "ลดความเสียหายจากศัตรูทุกธาตุ +10%",
+            "เมื่อสังหารมอนสเตอร์มีโอกาศ 0.3% ได้รับ  Sturdy Feather , Swift Feather , Brilliant Feather , Heavy Feather",
+            "(ความสามารถของไอเท็มชิ้นนี้จะถูกลบหลังสิ้นสุดระยะเวลากิจกรรม)",
             "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Middle น้ำหนัก : 0",
+            "ตำแหน่ง : Lower น้ำหนัก : 0",
             "เลเวลที่ต้องการ : 1",
             "อาชีพที่ใส่ได้ : ทุกอาชีพ"
         ],
         "slotCount": 0,
-        "ClassNum": 2334,
+        "ClassNum": 2803,
         "costume": true
     },
-    "20468": {
-        "unidentifiedDisplayName": "Mask",
-        "unidentifiedResourceName": "스마일",
+    "420731": {
+        "unidentifiedDisplayName": "Ribbon",
+        "unidentifiedResourceName": "리본",
         "unidentifiedDescriptionName": [
             "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "Costume You in ONE",
-        "identifiedResourceName": "유인원마스크",
+        "identifiedDisplayName": "Costume Dr.Nambu's Emergency Transmission",
+        "identifiedResourceName": "C_CLB_GAT_doc",
         "identifiedDescriptionName": [
-            "หน้ากากที่สื่อความหมายว่าพวกเราและพวกเขาเป็นหนึ่งเดียวกัน",
-            "ทำขึ้นเพื่อช่วยผู้คนที่กลัวการเข้าหาชนเผ่าอื่น ๆ ",
-            "...ถึงแม้ว่ามันจะไม่ค่อยเป็นผลเท่าไหร่ก็เถอะ",
-            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 11 ได้",
+            "ด็อกเตอร์นัมบุ ผู้นำทางจิตใจของทีม Gatchaman",
+            "ทุกครั้งที่มีสัญญาณติดต่อเข้ามา ก็อดกังวลไม่ได้ว่าวันนี้องค์กร Galactor จะก่อเรื่องอะไรอีก",
+            "^CC3D3D[ความสามารถช่วงระยะเวลากิจกรรม]",
+            "ATK+5% MATK+5% , CRI + 10 , HIT + 10",
+            "ลดระยะเวลาร่ายเวทมนต์ 10%",
+            "(ความสามารถของไอเท็มชิ้นนี้จะถูกลบหลังสิ้นสุดระยะเวลากิจกรรม)",
             "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Upper/Middle/Lower น้ำหนัก : 0",
+            "ตำแหน่ง : Lower น้ำหนัก : 0",
             "เลเวลที่ต้องการ : 1",
             "อาชีพที่ใส่ได้ : ทุกอาชีพ"
         ],
         "slotCount": 0,
-        "ClassNum": 1462,
+        "ClassNum": 0,
         "costume": true
+    },
+    "430025": {
+        "unidentifiedDisplayName": "Helm",
+        "unidentifiedResourceName": "헬름",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Costume Leader of Galactor",
+        "identifiedResourceName": "C_CLB_GAT_BK",
+        "identifiedDescriptionName": [
+            "Costume ที่สร้างขึ้นโดยจำลองแบบมาจากหมวกของ Berg Katse ผู้นำแห่ง Galactor",
+            "ใส่แล้วอาจจะรู้สึกอยากบุกยึดครองโลกขึ้นมาก็ได้...",
+            "^CC3D3D[ความสามารถช่วงระยะเวลากิจกรรม]",
+            "เพิ่มความเสียหายทางกายภาพและทางเวทนมตร์เมื่อโจมตีศัตรูเผ่า Demi-Human +10%",
+            "ลดความเสียหายจากศัตรูเผ่า Demi-Human +10%",
+            "เมื่อสังหารมอนสเตอร์มีโอกาศ 0.3% ได้รับ  Sturdy Feather , Swift Feather , Brilliant Feather , Heavy Feather",
+            "(ความสามารถของไอเท็มชิ้นนี้จะถูกลบหลังสิ้นสุดระยะเวลากิจกรรม)",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Upper-Middle น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 2804,
+        "costume": true
+    },
+    "430026": {
+        "unidentifiedDisplayName": "Helm",
+        "unidentifiedResourceName": "헬름",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Costume Ken the Eagle",
+        "identifiedResourceName": "C_CLB_GAT_G1",
+        "identifiedDescriptionName": [
+            "Costume ที่สร้างขึ้นโดยจำลองแบบมาจากหมวกของ Ken หัวหน้าทีม Gatchaman",
+            "ให้ความรู้สึกถึงความรับผิดชอบอันยิ่งใหญ่",
+            "^CC3D3D[ความสามารถช่วงระยะเวลากิจกรรม]",
+            "เพิ่มความเสียหายทางกายภาพและทางเวทนมตร์เมื่อโจมตีศัตรูเผ่า Insect +10%",
+            "ลดความเสียหายจากศัตรูเผ่า Insect +10%",
+            "เมื่อสังหารมอนสเตอร์มีโอกาศ 0.3% ได้รับ  Sturdy Feather , Swift Feather , Brilliant Feather , Heavy Feather",
+            "(ความสามารถของไอเท็มชิ้นนี้จะถูกลบหลังสิ้นสุดระยะเวลากิจกรรม)",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Upper-Middle น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 2797,
+        "costume": true
+    },
+    "430027": {
+        "unidentifiedDisplayName": "Helm",
+        "unidentifiedResourceName": "헬름",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Costume Joe the Condor",
+        "identifiedResourceName": "C_CLB_GAT_G2",
+        "identifiedDescriptionName": [
+            "Costume ที่สร้างขึ้นโดยจำลองแบบมาจากหมวกของ Joe สมาชิกหมายเลข 2 ของ Gatchaman",
+            "ให้ความรู้สึกถึงคาริสม่าเท่ ๆ",
+            "^CC3D3D[ความสามารถช่วงระยะเวลากิจกรรม]",
+            "เพิ่มความเสียหายทางกายภาพและทางเวทนมตร์เมื่อโจมตีศัตรูเผ่า Fish +10%",
+            "ลดความเสียหายจากศัตรูเผ่า Fish +10%",
+            "เมื่อสังหารมอนสเตอร์มีโอกาศ 0.3% ได้รับ  Sturdy Feather , Swift Feather , Brilliant Feather , Heavy Feather",
+            "(ความสามารถของไอเท็มชิ้นนี้จะถูกลบหลังสิ้นสุดระยะเวลากิจกรรม)",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Upper-Middle น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 2798,
+        "costume": true
+    },
+    "430028": {
+        "unidentifiedDisplayName": "Helm",
+        "unidentifiedResourceName": "헬름",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Costume Jun the Swan",
+        "identifiedResourceName": "C_CLB_GAT_G3",
+        "identifiedDescriptionName": [
+            "Costume ที่สร้างขึ้นโดยจำลองแบบมาจากหมวกของ Jun สมาชิกหมายเลข 3 ของ Gatchaman",
+            "ให้ความรู้สึกถึงความอ่อนโยนและจิตใจที่อบอุ่น",
+            "^CC3D3D[ความสามารถช่วงระยะเวลากิจกรรม]",
+            "เพิ่มความเสียหายทางกายภาพและทางเวทนมตร์เมื่อโจมตีศัตรูเผ่า Brute +10%",
+            "ลดความเสียหายจากศัตรูเผ่า Brute +10%",
+            "เมื่อสังหารมอนสเตอร์มีโอกาศ 0.3% ได้รับ  Sturdy Feather , Swift Feather , Brilliant Feather , Heavy Feather",
+            "(ความสามารถของไอเท็มชิ้นนี้จะถูกลบหลังสิ้นสุดระยะเวลากิจกรรม)",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Upper-Middle น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 2799,
+        "costume": true
+    },
+    "430029": {
+        "unidentifiedDisplayName": "Helm",
+        "unidentifiedResourceName": "헬름",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Costume Jinpei the Swallow",
+        "identifiedResourceName": "C_CLB_GAT_G4",
+        "identifiedDescriptionName": [
+            "Costume ที่สร้างขึ้นโดยจำลองแบบมาจากหมวกของ Jinpei สมาชิกหมายเลข 4 ของ Gatchaman",
+            "ให้ความรู้สึกถึงความซุกซนแบบเด็ก ๆ",
+            "^CC3D3D[ความสามารถช่วงระยะเวลากิจกรรม]",
+            "เพิ่มความเสียหายทางกายภาพและทางเวทนมตร์เมื่อโจมตีศัตรูเผ่า Demon +10%",
+            "ลดความเสียหายจากศัตรูเผ่า Demon +10%",
+            "เมื่อสังหารมอนสเตอร์มีโอกาศ 0.3% ได้รับ  Sturdy Feather , Swift Feather , Brilliant Feather , Heavy Feather",
+            "(ความสามารถของไอเท็มชิ้นนี้จะถูกลบหลังสิ้นสุดระยะเวลากิจกรรม)",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Upper-Middle น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 2800,
+        "costume": true
+    },
+    "430030": {
+        "unidentifiedDisplayName": "Helm",
+        "unidentifiedResourceName": "헬름",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Costume Ryu the Owl",
+        "identifiedResourceName": "C_CLB_GAT_G5",
+        "identifiedDescriptionName": [
+            "Costume ที่สร้างขึ้นโดยจำลองแบบมาจากหมวกของ Ryu สมาชิกหมายเลข 5 ของ Gatchaman",
+            "ให้ความรู้สึกถึงพลังกล้ามเนื้อที่แข็งแกร่ง",
+            "^CC3D3D[ความสามารถช่วงระยะเวลากิจกรรม]",
+            "เพิ่มความเสียหายทางกายภาพและทางเวทนมตร์เมื่อโจมตีศัตรูเผ่า Dragon +10%",
+            "ลดความเสียหายจากศัตรูเผ่า Dragon +10%",
+            "เมื่อสังหารมอนสเตอร์มีโอกาศ 0.3% ได้รับ  Sturdy Feather , Swift Feather , Brilliant Feather , Heavy Feather",
+            "(ความสามารถของไอเท็มชิ้นนี้จะถูกลบหลังสิ้นสุดระยะเวลากิจกรรม)",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Upper-Middle น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 2801,
+        "costume": true
+    },
+    "314813": {
+        "unidentifiedDisplayName": "Operation Phoenix Footprints",
+        "unidentifiedResourceName": "발자국이펙트",
+        "unidentifiedDescriptionName": [
+            "Operation Phoenix Footprints"
+        ],
+        "identifiedDisplayName": "Operation Phoenix Footprints",
+        "identifiedResourceName": "발자국이펙트",
+        "identifiedDescriptionName": [
+            "Operation Phoenix Footprints"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "1002642": {
+        "unidentifiedDisplayName": "Operation Phoenix Footprints (Garment)",
+        "unidentifiedResourceName": "발자국이펙트",
+        "unidentifiedDescriptionName": [
+            "มอบเอฟเฟกต์เมื่อ Enchant ช่องที่ 4 ของ Costume ประเภท Garment",
+            "^ff0000Operation Phoenix Footprints"
+        ],
+        "identifiedDisplayName": "Operation Phoenix Footprints (Garment)",
+        "identifiedResourceName": "발자국이펙트",
+        "identifiedDescriptionName": [
+            "มอบเอฟเฟกต์เมื่อ Enchant ช่องที่ 4 ของ Costume ประเภท Garment",
+            "^ff0000Operation Phoenix Footprints",
+            "น้ำหนัก : 10"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "106300": {
+        "unidentifiedDisplayName": "Costume Gatchaman Selection Scroll I",
+        "unidentifiedResourceName": "열혈스크롤",
+        "unidentifiedDescriptionName": [
+            "Scroll ที่เมื่อเปิดออกจะเลือกรับ Costume Gatchaman (Headgear) ได้ 1 ชิ้นจาก 6 ชิ้น",
+            " ",
+            "[ไอเท็มที่เลือกรับได้]",
+            "Costume Ken the Eagle",
+            "Costume Joe the Condor",
+            "Costume Jun the Swan",
+            "Costume Jinpei the Swallow",
+            "Costume Ryu the Owl",
+            "Costume Leader of Galactor"
+        ],
+        "identifiedDisplayName": "Costume Gatchaman Selection Scroll I",
+        "identifiedResourceName": "열혈스크롤",
+        "identifiedDescriptionName": [
+            "Scroll ที่เมื่อเปิดออกจะเลือกรับ Costume Gatchaman (Headgear) ได้ 1 ชิ้นจาก 6 ชิ้น",
+            " ",
+            "[ไอเท็มที่เลือกรับได้]",
+            "Costume Ken the Eagle",
+            "Costume Joe the Condor",
+            "Costume Jun the Swan",
+            "Costume Jinpei the Swallow",
+            "Costume Ryu the Owl",
+            "Costume Leader of Galactor",
+            "น้ำหนัก : 0"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "106301": {
+        "unidentifiedDisplayName": "Costume Gatchaman Selection Scroll II",
+        "unidentifiedResourceName": "열혈스크롤",
+        "unidentifiedDescriptionName": [
+            "Scroll ที่เมื่อเปิดออกจะเลือกรับ Costume Gatchaman (Effect) ได้ 1 ชิ้นจาก 2 ชิ้น",
+            " ",
+            "[ไอเท็มที่เลือกรับได้]",
+            "Costume Dr.Nambu's Emergency Transmission",
+            "Operation Phoenix Footprints (Garment)"
+        ],
+        "identifiedDisplayName": "Costume Gatchaman Selection Scroll II",
+        "identifiedResourceName": "열혈스크롤",
+        "identifiedDescriptionName": [
+            "Scroll ที่เมื่อเปิดออกจะเลือกรับ Costume Gatchaman (Effect) ได้ 1 ชิ้นจาก 2 ชิ้น",
+            " ",
+            "[ไอเท็มที่เลือกรับได้]",
+            "Costume Dr.Nambu's Emergency Transmission",
+            "Operation Phoenix Footprints (Garment)",
+            "น้ำหนัก : 0"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "106302": {
+        "unidentifiedDisplayName": "Costume Gatchaman Selection Scroll III",
+        "unidentifiedResourceName": "열혈스크롤",
+        "unidentifiedDescriptionName": [
+            "Scroll ที่เมื่อเปิดออกจะเลือกรับ Costume Gatchaman (Lower) ได้ 1 ชิ้นจาก 2 ชิ้น",
+            " ",
+            "[ไอเท็มที่เลือกรับได้]",
+            "Costume Gatchaman, Move Out!",
+            "Costume Farewell, Gatchaman!"
+        ],
+        "identifiedDisplayName": "Costume Gatchaman Selection Scroll III",
+        "identifiedResourceName": "열혈스크롤",
+        "identifiedDescriptionName": [
+            "Scroll ที่เมื่อเปิดออกจะเลือกรับ Costume Gatchaman (Lower) ได้ 1 ชิ้นจาก 2 ชิ้น",
+            " ",
+            "[ไอเท็มที่เลือกรับได้]",
+            "Costume Gatchaman, Move Out!",
+            "Costume Farewell, Gatchaman!",
+            "น้ำหนัก : 0"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "200949": {
+        "unidentifiedDisplayName": "Gatchaman Collaboration Package I",
+        "unidentifiedResourceName": "2019_SStarR_Tbox",
+        "unidentifiedDescriptionName": [
+            "^ff0000ไอเท็มนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "",
+            "กล่องแพ็คเกจที่บรรจุ Costume Gatchaman Selection Scroll I ไว้",
+            "ภายในบรรจุไอเท็มดังนี้",
+            "",
+            "[ไอเท็มที่ได้รับ]",
+            "VIP Black Coin 500 ea",
+            "Costume Gatchaman Selection Scroll I 1 ea",
+            "[Not For Sale] Enriched Elunium 1 ea",
+            "[Not For Sale] Enriched Oridecon 1 ea"
+        ],
+        "identifiedDisplayName": "Gatchaman Collaboration Package I",
+        "identifiedResourceName": "2019_SStarR_Tbox",
+        "identifiedDescriptionName": [
+            "^ff0000ไอเท็มนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "",
+            "กล่องแพ็คเกจที่บรรจุ Costume Gatchaman Selection Scroll I ไว้",
+            "ภายในบรรจุไอเท็มดังนี้",
+            "",
+            "[ไอเท็มที่ได้รับ]",
+            "VIP Black Coin 500 ea",
+            "Costume Gatchaman Selection Scroll I 1 ea",
+            "[Not For Sale] Enriched Elunium 1 ea",
+            "[Not For Sale] Enriched Oridecon 1 ea",
+            "น้ำหนัก 0"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "200950": {
+        "unidentifiedDisplayName": "Gatchaman Collaboration Package II",
+        "unidentifiedResourceName": "2019_SStarR_Tbox",
+        "unidentifiedDescriptionName": [
+            "^ff0000ไอเท็มนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "",
+            "กล่องแพ็คเกจที่บรรจุ Costume Gatchaman Selection Scroll II ไว้",
+            "ภายในบรรจุไอเท็มดังนี้",
+            "",
+            "[ไอเท็มที่ได้รับ]",
+            "VIP Black Coin 500 ea",
+            "Costume Gatchaman Selection Scroll II 1 ea",
+            "[Not For Sale] Enriched Elunium 1 ea",
+            "[Not For Sale] Enriched Oridecon 1 ea"
+        ],
+        "identifiedDisplayName": "Gatchaman Collaboration Package II",
+        "identifiedResourceName": "2019_SStarR_Tbox",
+        "identifiedDescriptionName": [
+            "^ff0000ไอเท็มนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "",
+            "กล่องแพ็คเกจที่บรรจุ Costume Gatchaman Selection Scroll II ไว้",
+            "ภายในบรรจุไอเท็มดังนี้",
+            "",
+            "[ไอเท็มที่ได้รับ]",
+            "VIP Black Coin 500 ea",
+            "Costume Gatchaman Selection Scroll II 1 ea",
+            "[Not For Sale] Enriched Elunium 1 ea",
+            "[Not For Sale] Enriched Oridecon 1 ea",
+            "น้ำหนัก 0"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "200951": {
+        "unidentifiedDisplayName": "Gatchaman Collaboration Package III",
+        "unidentifiedResourceName": "2019_SStarR_Tbox",
+        "unidentifiedDescriptionName": [
+            "^ff0000ไอเท็มนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "",
+            "กล่องแพ็คเกจที่บรรจุ Costume Gatchaman Selection Scroll III ไว้",
+            "ภายในบรรจุไอเท็มดังนี้",
+            "",
+            "[ไอเท็มที่ได้รับ]",
+            "VIP Black Coin 500 ea",
+            "Costume Gatchaman Selection Scroll III 1 ea",
+            "[Not For Sale] Enriched Elunium 1 ea",
+            "[Not For Sale] Enriched Oridecon 1 ea"
+        ],
+        "identifiedDisplayName": "Gatchaman Collaboration Package III",
+        "identifiedResourceName": "2019_SStarR_Tbox",
+        "identifiedDescriptionName": [
+            "^ff0000ไอเท็มนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "",
+            "กล่องแพ็คเกจที่บรรจุ Costume Gatchaman Selection Scroll III ไว้",
+            "ภายในบรรจุไอเท็มดังนี้",
+            "",
+            "[ไอเท็มที่ได้รับ]",
+            "VIP Black Coin 500 ea",
+            "Costume Gatchaman Selection Scroll III 1 ea",
+            "[Not For Sale] Enriched Elunium 1 ea",
+            "[Not For Sale] Enriched Oridecon 1 ea",
+            "",
+            "น้ำหนัก 0"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
     }
 }

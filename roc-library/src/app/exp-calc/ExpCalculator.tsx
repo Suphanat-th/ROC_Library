@@ -306,7 +306,7 @@ export default function ExpCalculator() {
                     setEquipmentExp(e.target.value);
                   }}
                   onBlur={(e) => {
-                    const val = Math.max(0, Math.min(100, parseFloat(e.target.value) || 0));
+                    const val = Math.max(0, parseFloat(e.target.value) || 0);
                     setEquipmentExp(val.toString());
                   }}
                   className="input input-bordered input-info w-full text-slate-800 text-sm"
@@ -327,7 +327,7 @@ export default function ExpCalculator() {
                     setExpBuff(e.target.value);
                   }}
                   onBlur={(e) => {
-                    const val = Math.max(0, Math.min(100, parseFloat(e.target.value) || 0));
+                    const val = Math.max(0, parseFloat(e.target.value) || 0);
                     setExpBuff(val.toString());
                   }}
                   className="input input-bordered input-info w-full text-slate-800 text-sm"
@@ -341,7 +341,20 @@ export default function ExpCalculator() {
         {/* Summary Card */}
         <div className="card bg-slate-800/50 backdrop-blur border border-slate-700 shadow-2xl mt-6">
           <div className="card-body p-6 md:p-8">
-            <h2 className="text-2xl font-bold text-amber-400 mb-6">Summary</h2>
+            <h2 className="text-2xl font-bold text-amber-400 mb-2">Summary</h2>
+
+            {/* Level Range Summary */}
+            <p className="text-slate-400 text-sm mb-6 flex items-center gap-2">
+              <span className="text-slate-200 font-semibold">
+                Lv.{expRange.startLevel}
+              </span>
+              <span className="text-amber-500/70">{expRange.startPercent}%</span>
+              <span className="text-slate-500">→</span>
+              <span className="text-slate-200 font-semibold">
+                Lv.{expRange.endLevel}
+              </span>
+              <span className="text-amber-500/70">{expRange.endPercent}%</span>
+            </p>
 
             {/* Exp and Time Row */}
             <div className="grid md:grid-cols-2 gap-6 mb-6">

@@ -89,6 +89,13 @@ const fileTree: FileTreeItem[] = [
         icon: "",
         href: "/toyfactory-guide",
       },
+      // {
+      //   id: "endlesstower",
+      //   name: "- Endless Tower",
+      //   type: "file",
+      //   icon: "🗼",
+      //   href: "/endless-tower",
+      // },
     ],
   },
 
@@ -99,6 +106,13 @@ const fileTree: FileTreeItem[] = [
     icon: "⚔️",
     href: "/calc-bp",
   },
+  // {
+  //   id: "aspd",
+  //   name: "The Flash Calc (ASPD)",
+  //   type: "file",
+  //   icon: "⚡",
+  //   href: "/aspd-calc",
+  // },
   // {
   //   id: "expcalc",
   //   name: "Exp Calculator",

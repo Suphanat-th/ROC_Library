@@ -1,0 +1,347 @@
+"use client";
+
+import React, { useState } from "react";
+import Image from "next/image";
+
+interface BossFloor {
+  floor: number;
+  bosses: {
+    name: string;
+    monsterIds: number[];
+  }[];
+}
+
+const floorData1to100: BossFloor[] = [
+  { floor: 5, bosses: [{ name: "Mistress", monsterIds: [1150] }] },
+  { floor: 10, bosses: [{ name: "Doppelganger", monsterIds: [1671] }] },
+  {
+    floor: 15,
+    bosses: [
+      { name: "Eddga", monsterIds: [1023] },
+      { name: "Detardeurus", monsterIds: [1869] },
+    ],
+  },
+  { floor: 20, bosses: [{ name: "Orc Hero", monsterIds: [1087] }] },
+  { floor: 25, bosses: [{ name: "Lord of the Dead", monsterIds: [1373] }] },
+  { floor: 30, bosses: [{ name: "Dracula", monsterIds: [1399] }] },
+  { floor: 35, bosses: [{ name: "Turtle General", monsterIds: [1259] }] },
+  { floor: 40, bosses: [{ name: "Osiris", monsterIds: [1038] }] },
+  { floor: 45, bosses: [{ name: "Gopinich", monsterIds: [1184] }] },
+  {
+    floor: 50,
+    bosses: [
+      { name: "White Lady", monsterIds: [1630] },
+      { name: "Evil Snake Lord", monsterIds: [1708] },
+    ],
+  },
+  {
+    floor: 55,
+    bosses: [
+      { name: "Stormy Knight", monsterIds: [1251] },
+      { name: "Garm", monsterIds: [1252] },
+    ],
+  },
+  { floor: 60, bosses: [{ name: "Vesper", monsterIds: [1734] }] },
+  { floor: 65, bosses: [{ name: "Valkyrie Randgris", monsterIds: [1765] }] },
+  {
+    floor: 70,
+    bosses: [
+      { name: "Dark Lord", monsterIds: [1272] },
+      { name: "Baphomet", monsterIds: [1039] },
+    ],
+  },
+  { floor: 75, bosses: [{ name: "Ktullanux", monsterIds: [1719] }] },
+  { floor: 80, bosses: [{ name: "Gloom Under Night", monsterIds: [1768] }] },
+  { floor: 85, bosses: [{ name: "Ifrit", monsterIds: [1832] }] },
+  { floor: 90, bosses: [{ name: "Golden Thief Bug", monsterIds: [1086] }] },
+  { floor: 95, bosses: [{ name: "Fallen Bishop", monsterIds: [1874] }] },
+  { floor: 100, bosses: [{ name: "Entweihen Crothen", monsterIds: [1870] }] },
+];
+
+const floorData101to200: BossFloor[] = [
+  { floor: 105, bosses: [{ name: "Mistress", monsterIds: [1150] }] },
+  { floor: 110, bosses: [{ name: "Golden Thief Bug", monsterIds: [1086] }] },
+  { floor: 115, bosses: [{ name: "Ifrit", monsterIds: [1832] }] },
+  { floor: 120, bosses: [{ name: "Gloom Under Night", monsterIds: [1768] }] },
+  { floor: 125, bosses: [{ name: "Ktullanux", monsterIds: [1719] }] },
+  {
+    floor: 130,
+    bosses: [
+      { name: "Dark Lord", monsterIds: [1272] },
+      { name: "Baphomet", monsterIds: [1039] },
+    ],
+  },
+  { floor: 135, bosses: [{ name: "Valkyrie Randgris", monsterIds: [1765] }] },
+  { floor: 140, bosses: [{ name: "Vesper", monsterIds: [1734] }] },
+  {
+    floor: 145,
+    bosses: [
+      { name: "Stormy Knight", monsterIds: [1251] },
+      { name: "Garm", monsterIds: [1252] },
+    ],
+  },
+  {
+    floor: 150,
+    bosses: [
+      { name: "White Lady", monsterIds: [1630] },
+      { name: "Evil Snake Lord", monsterIds: [1708] },
+    ],
+  },
+  { floor: 155, bosses: [{ name: "Gopinich", monsterIds: [1184] }] },
+  { floor: 160, bosses: [{ name: "Osiris", monsterIds: [1038] }] },
+  { floor: 165, bosses: [{ name: "Turtle General", monsterIds: [1259] }] },
+  { floor: 170, bosses: [{ name: "Dracula", monsterIds: [1399] }] },
+  { floor: 175, bosses: [{ name: "Lord of the Dead", monsterIds: [1373] }] },
+  { floor: 180, bosses: [{ name: "Orc Hero", monsterIds: [1087] }] },
+  {
+    floor: 185,
+    bosses: [
+      { name: "Eddga", monsterIds: [1023] },
+      { name: "Detardeurus", monsterIds: [1869] },
+    ],
+  },
+  { floor: 190, bosses: [{ name: "Doppelganger", monsterIds: [1671] }] },
+  { floor: 195, bosses: [{ name: "Fallen Bishop", monsterIds: [1874] }] },
+  { floor: 200, bosses: [{ name: "Naght Sieger", monsterIds: [1980] }] },
+];
+
+const specialMVPs = [
+  { name: "Naght Sieger", monsterId: 1980 },
+  { name: "Wounded Morroc", monsterId: 1988 },
+  { name: "Beelzebub", monsterId: 1874 },
+  { name: "Kathryne Keyron", monsterId: 1305 },
+];
+
+function MonsterImage({
+  monsterId,
+  name,
+}: {
+  monsterId: number;
+  name: string;
+}) {
+  const [imgError, setImgError] = useState(false);
+  if (imgError) {
+    return (
+      <div className="w-10 h-10 rounded-full bg-base-200 flex items-center justify-center text-xs text-base-content/40 border border-base-300">
+        ?
+      </div>
+    );
+  }
+  return (
+    <Image
+      src={`/assets/images/monsterDb/${monsterId}.gif`}
+      alt={name}
+      width={40}
+      height={40}
+      className="object-contain"
+      onError={() => setImgError(true)}
+      unoptimized
+    />
+  );
+}
+
+function FloorRow({
+  data,
+  enhanced,
+}: {
+  data: BossFloor;
+  enhanced?: boolean;
+}) {
+  const isLast = data.floor === 100 || data.floor === 200;
+  return (
+    <div
+      className={`flex items-center gap-3 px-4 py-3 rounded-lg border transition-all
+        ${
+          isLast
+            ? "border-yellow-400 bg-yellow-400/10 shadow-md shadow-yellow-400/20"
+            : enhanced
+            ? "border-red-700/40 bg-red-950/30"
+            : "border-base-content/10 bg-base-100/5 hover:bg-base-content/5"
+        }`}
+    >
+      {/* Floor Badge */}
+      <div
+        className={`min-w-14 text-center font-bold text-sm rounded-md py-1 px-2
+          ${
+            isLast
+              ? "bg-yellow-400 text-black"
+              : enhanced
+              ? "bg-red-700 text-white"
+              : "bg-primary text-primary-content"
+          }`}
+      >
+        ชั้น {data.floor}
+      </div>
+
+      {/* Monsters */}
+      <div className="flex flex-wrap items-center gap-3 flex-1">
+        {data.bosses.map((boss) => (
+          <div key={boss.name} className="flex items-center gap-2">
+            {boss.monsterIds.map((id) => (
+              <MonsterImage key={id} monsterId={id} name={boss.name} />
+            ))}
+            <span
+              className={`text-sm font-semibold ${
+                isLast ? "text-yellow-400" : enhanced ? "text-red-300" : "text-base-content"
+              }`}
+            >
+              {boss.name}
+            </span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export default function EndlessTowerPage() {
+  const [activeTab, setActiveTab] = useState<"1-100" | "101-200">("1-100");
+
+  return (
+    <div
+      className="min-h-screen w-full"
+      style={{
+        background:
+          "linear-gradient(160deg, #0a0a1a 0%, #12082a 40%, #1a0a14 100%)",
+      }}
+    >
+      {/* Header */}
+      <div className="relative overflow-hidden">
+        <div
+          className="absolute inset-0 opacity-10"
+          style={{
+            backgroundImage:
+              "repeating-linear-gradient(45deg, #8B0000 0px, #8B0000 1px, transparent 1px, transparent 10px)",
+          }}
+        />
+        <div className="relative z-10 flex flex-col items-center justify-center py-12 px-4 text-center">
+          <h1
+            className="text-5xl sm:text-6xl font-black tracking-widest uppercase mb-2"
+            style={{
+              color: "#FFD700",
+              textShadow:
+                "0 0 20px #FFD700, 0 0 40px #FF8C00, 2px 2px 0 #8B0000",
+              letterSpacing: "0.15em",
+            }}
+          >
+            Endless
+          </h1>
+          <h1
+            className="text-5xl sm:text-6xl font-black tracking-widest uppercase"
+            style={{
+              color: "#FFD700",
+              textShadow:
+                "0 0 20px #FFD700, 0 0 40px #FF8C00, 2px 2px 0 #8B0000",
+              letterSpacing: "0.15em",
+            }}
+          >
+            Tower
+          </h1>
+          <p className="mt-4 text-gray-400 text-sm tracking-widest uppercase">
+            Ragnarok Online Classic
+          </p>
+          <div className="mt-6 flex gap-2">
+            <span className="badge badge-error badge-outline text-xs">Instance Dungeon</span>
+            <span className="badge badge-warning badge-outline text-xs">Max Floor 200</span>
+          </div>
+        </div>
+      </div>
+
+      <div className="max-w-4xl mx-auto px-4 pb-16 space-y-8">
+        {/* Special Floor Section */}
+        <div
+          className="rounded-2xl border border-yellow-500/40 overflow-hidden shadow-xl shadow-yellow-500/10"
+          style={{ background: "rgba(20, 10, 40, 0.85)" }}
+        >
+          <div className="bg-yellow-500/10 border-b border-yellow-500/30 px-6 py-4">
+            <h2 className="text-lg font-bold text-yellow-400 tracking-widest uppercase text-center">
+              ⭐ Special Floor — Random MVP ⭐
+            </h2>
+            <p className="text-center text-xs text-yellow-200/60 mt-1">
+              ชั้นพิเศษที่จะสุ่ม MVP เหล่านี้
+            </p>
+          </div>
+          <div className="p-4 grid grid-cols-2 sm:grid-cols-4 gap-3">
+            {specialMVPs.map((mvp) => (
+              <div
+                key={mvp.name}
+                className="flex flex-col items-center gap-2 p-3 rounded-xl border border-yellow-500/20 bg-yellow-500/5 hover:bg-yellow-500/10 transition-colors"
+              >
+                {mvp.monsterId && (
+                  <MonsterImage monsterId={mvp.monsterId} name={mvp.name} />
+                )}
+                <span className="text-xs font-semibold text-yellow-300 text-center leading-tight">
+                  {mvp.name}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Tab Switch */}
+        <div className="flex rounded-xl overflow-hidden border border-white/10">
+          <button
+            onClick={() => setActiveTab("1-100")}
+            className={`flex-1 py-3 text-sm font-bold tracking-widest uppercase transition-all ${
+              activeTab === "1-100"
+                ? "bg-primary text-primary-content shadow-inner"
+                : "bg-white/5 text-white/50 hover:bg-white/10"
+            }`}
+          >
+            ชั้น 1 – 100
+          </button>
+          <button
+            onClick={() => setActiveTab("101-200")}
+            className={`flex-1 py-3 text-sm font-bold tracking-widest uppercase transition-all ${
+              activeTab === "101-200"
+                ? "bg-red-700 text-white shadow-inner"
+                : "bg-white/5 text-white/50 hover:bg-white/10"
+            }`}
+          >
+            ชั้น 101 – 200 🔥
+          </button>
+        </div>
+
+        {/* Floor List */}
+        <div
+          className="rounded-2xl border border-white/10 overflow-hidden shadow-xl"
+          style={{ background: "rgba(20, 10, 40, 0.85)" }}
+        >
+          <div className="px-6 py-4 border-b border-white/10">
+            <h2 className="text-base font-bold text-white tracking-widest uppercase">
+              {activeTab === "1-100" ? (
+                "👑 List BOSS MVP — ชั้น 1–100"
+              ) : (
+                <span className="text-red-400">
+                  🔥 BOSS Enhanced — ชั้น 101–200
+                </span>
+              )}
+            </h2>
+            {activeTab === "101-200" && (
+              <p className="text-xs text-red-300/70 mt-1">
+                ตั้งแต่ชั้น 101 ขึ้นไป BOSS จะมีความสามารถเพิ่มขึ้น
+              </p>
+            )}
+          </div>
+          <div className="p-4 space-y-2">
+            {(activeTab === "1-100" ? floorData1to100 : floorData101to200).map(
+              (row) => (
+                <FloorRow
+                  key={row.floor}
+                  data={row}
+                  enhanced={activeTab === "101-200"}
+                />
+              )
+            )}
+          </div>
+        </div>
+
+        {/* Footer Note */}
+        <div className="text-center text-xs text-gray-500 pb-4 space-y-1">
+          <p>* BOSS จะ Spawn ทุกๆ 5 ชั้น</p>
+          <p>* ชั้น 101-200 เป็น Enhanced Version ของ BOSS ชั้น 1-100</p>
+        </div>
+      </div>
+    </div>
+  );
+}

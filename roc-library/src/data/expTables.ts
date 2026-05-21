@@ -107,6 +107,7 @@ export const EXP_TABLES = {
   extendedClass: {
     name: 'Extended Class',
     levels: {
+      99: 0,
       100: 233218495,
       101: 260909872,
       102: 289000130,
