@@ -1,6 +1,7 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useRef } from 'react';
+import * as htmlToImage from 'html-to-image';
 import { EXP_TABLES, ClassType } from '@/data/expTables';
 
 interface ExpRange {
@@ -8,6 +9,12 @@ interface ExpRange {
   startPercent: number;
   endLevel: number;
   endPercent: number;
+}
+
+interface DetailItem {
+  id: number;
+  label: string;
+  value: string;
 }
 
 export default function ExpCalculator() {
@@ -23,8 +30,47 @@ export default function ExpCalculator() {
   const [hours, setHours] = useState('0');
   const [minutes, setMinutes] = useState('0');
   const [serverMultiplier, setServerMultiplier] = useState('100');
-  const [equipmentExp, setEquipmentExp] = useState('0');
-  const [expBuff, setExpBuff] = useState('0');
+  const [equipmentItems, setEquipmentItems] = useState<DetailItem[]>([
+    { id: 1, label: '', value: '0' },
+  ]);
+  const [expBuffItems, setExpBuffItems] = useState<DetailItem[]>([
+    { id: 1, label: '', value: '0' },
+  ]);
+
+  const addItem = (setter: React.Dispatch<React.SetStateAction<DetailItem[]>>) => {
+    setter((prev) => [...prev, { id: Date.now(), label: '', value: '0' }]);
+  };
+
+  const removeItem = (setter: React.Dispatch<React.SetStateAction<DetailItem[]>>, id: number) => {
+    setter((prev) => (prev.length > 1 ? prev.filter((item) => item.id !== id) : prev));
+  };
+
+  const updateItem = (
+    setter: React.Dispatch<React.SetStateAction<DetailItem[]>>,
+    id: number,
+    field: 'label' | 'value',
+    value: string
+  ) => {
+    setter((prev) => prev.map((item) => (item.id === id ? { ...item, [field]: value } : item)));
+  };
+
+  const totalEquipmentExp = equipmentItems.reduce((sum, item) => sum + (parseFloat(item.value) || 0), 0);
+  const totalExpBuff = expBuffItems.reduce((sum, item) => sum + (parseFloat(item.value) || 0), 0);
+
+  const summaryRef = useRef<HTMLDivElement>(null);
+
+  const downloadSummary = async () => {
+    if (!summaryRef.current) return;
+    const dataUrl = await htmlToImage.toPng(summaryRef.current, {
+      backgroundColor: '#1e293b',
+      pixelRatio: 2,
+      cacheBust: true,
+    });
+    const link = document.createElement('a');
+    link.download = `exp-summary-lv${expRange.startLevel}-to-${expRange.endLevel}.png`;
+    link.href = dataUrl;
+    link.click();
+  };
 
   const classData = EXP_TABLES[selectedClass];
   const availableLevels = Object.keys(classData.levels)
@@ -293,53 +339,121 @@ export default function ExpCalculator() {
                 />
               </div>
 
-              {/* Equipment Exp % */}
-              <div>
-                <label className="block text-xs font-semibold text-slate-400 mb-2 uppercase">
-                  Equipment Exp %
-                </label>
-                <input
-                  type="text"
-                  inputMode="decimal"
-                  value={equipmentExp}
-                  onChange={(e) => {
-                    setEquipmentExp(e.target.value);
-                  }}
-                  onBlur={(e) => {
-                    const val = Math.max(0, parseFloat(e.target.value) || 0);
-                    setEquipmentExp(val.toString());
-                  }}
-                  className="input input-bordered input-info w-full text-slate-800 text-sm"
-                  placeholder="0"
-                />
-              </div>
+            </div>
 
-              {/* Exp Buff % */}
-              <div>
-                <label className="block text-xs font-semibold text-slate-400 mb-2 uppercase">
-                  Exp Buff %
+            {/* Equipment Exp % List */}
+            <div className="mt-4">
+              <div className="flex items-center justify-between mb-2">
+                <label className="text-xs font-semibold text-slate-400 uppercase">
+                  Equipment Exp % <span className="text-purple-400 ml-1">รวม +{totalEquipmentExp}%</span>
                 </label>
-                <input
-                  type="text"
-                  inputMode="decimal"
-                  value={expBuff}
-                  onChange={(e) => {
-                    setExpBuff(e.target.value);
-                  }}
-                  onBlur={(e) => {
-                    const val = Math.max(0, parseFloat(e.target.value) || 0);
-                    setExpBuff(val.toString());
-                  }}
-                  className="input input-bordered input-info w-full text-slate-800 text-sm"
-                  placeholder="0"
-                />
+                <button
+                  type="button"
+                  onClick={() => addItem(setEquipmentItems)}
+                  className="btn btn-xs btn-outline btn-purple text-purple-400 border-purple-500 hover:bg-purple-500 hover:text-white"
+                >
+                  + เพิ่ม
+                </button>
+              </div>
+              <div className="flex flex-col gap-2">
+                {equipmentItems.map((item) => (
+                  <div key={item.id} className="flex gap-2 items-center">
+                    <input
+                      type="text"
+                      value={item.label}
+                      onChange={(e) => updateItem(setEquipmentItems, item.id, 'label', e.target.value)}
+                      className="input input-bordered input-sm w-full text-slate-800 text-sm"
+                      placeholder="เช่น ส่วนหัว, แหวน"
+                    />
+                    <div className="relative shrink-0 w-24">
+                      <input
+                        type="text"
+                        inputMode="decimal"
+                        value={item.value}
+                        onChange={(e) => updateItem(setEquipmentItems, item.id, 'value', e.target.value)}
+                        onBlur={(e) => {
+                          const val = Math.max(0, parseFloat(e.target.value) || 0);
+                          updateItem(setEquipmentItems, item.id, 'value', val.toString());
+                        }}
+                        className="input input-bordered input-sm w-full text-slate-800 text-sm pr-6"
+                        placeholder="0"
+                      />
+                      <span className="absolute right-2 top-1/2 -translate-y-1/2 text-slate-500 text-xs pointer-events-none">%</span>
+                    </div>
+                    <button
+                      type="button"
+                      onClick={() => removeItem(setEquipmentItems, item.id)}
+                      className="btn btn-xs btn-ghost text-slate-500 hover:text-red-400"
+                    >
+                      ✕
+                    </button>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Exp Buff % List */}
+            <div className="mt-4">
+              <div className="flex items-center justify-between mb-2">
+                <label className="text-xs font-semibold text-slate-400 uppercase">
+                  Exp Buff % <span className="text-pink-400 ml-1">รวม +{totalExpBuff}%</span>
+                </label>
+                <button
+                  type="button"
+                  onClick={() => addItem(setExpBuffItems)}
+                  className="btn btn-xs btn-outline text-pink-400 border-pink-500 hover:bg-pink-500 hover:text-white"
+                >
+                  + เพิ่ม
+                </button>
+              </div>
+              <div className="flex flex-col gap-2">
+                {expBuffItems.map((item) => (
+                  <div key={item.id} className="flex gap-2 items-center">
+                    <input
+                      type="text"
+                      value={item.label}
+                      onChange={(e) => updateItem(setExpBuffItems, item.id, 'label', e.target.value)}
+                      className="input input-bordered input-sm w-full text-slate-800 text-sm"
+                      placeholder="เช่น VIP Card, Blessing"
+                    />
+                    <div className="relative shrink-0 w-24">
+                      <input
+                        type="text"
+                        inputMode="decimal"
+                        value={item.value}
+                        onChange={(e) => updateItem(setExpBuffItems, item.id, 'value', e.target.value)}
+                        onBlur={(e) => {
+                          const val = Math.max(0, parseFloat(e.target.value) || 0);
+                          updateItem(setExpBuffItems, item.id, 'value', val.toString());
+                        }}
+                        className="input input-bordered input-sm w-full text-slate-800 text-sm pr-6"
+                        placeholder="0"
+                      />
+                      <span className="absolute right-2 top-1/2 -translate-y-1/2 text-slate-500 text-xs pointer-events-none">%</span>
+                    </div>
+                    <button
+                      type="button"
+                      onClick={() => removeItem(setExpBuffItems, item.id)}
+                      className="btn btn-xs btn-ghost text-slate-500 hover:text-red-400"
+                    >
+                      ✕
+                    </button>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
         </div>
 
         {/* Summary Card */}
-        <div className="card bg-slate-800/50 backdrop-blur border border-slate-700 shadow-2xl mt-6">
+        <div className="mt-6">
+          <button
+            onClick={downloadSummary}
+            className="bg-linear-to-r text-white from-amber-500 to-orange-500 px-4 py-2 rounded-md font-semibold hover:brightness-110 mb-3 flex items-center gap-2"
+          >
+            💾 Download Summary
+          </button>
+          <div ref={summaryRef} className="card bg-slate-800/50 backdrop-blur border border-slate-700 shadow-2xl">
           <div className="card-body p-6 md:p-8">
             <h2 className="text-2xl font-bold text-amber-400 mb-2">Summary</h2>
 
@@ -379,7 +493,7 @@ export default function ExpCalculator() {
               )}
             </div>
 
-            {/* Multipliers Row - Server Exp %, Equipment Exp %, Exp Buff % */}
+            {/* Multipliers Row */}
             <div className="grid md:grid-cols-3 gap-6">
               {/* Server Exp % - Only show if not 100 */}
               {parseFloat(serverMultiplier) !== 100 && (
@@ -391,26 +505,43 @@ export default function ExpCalculator() {
                 </div>
               )}
 
-              {/* Equipment Exp % - Only show if not 0 */}
-              {parseFloat(equipmentExp) > 0 && (
+              {/* Equipment Exp % - Only show if total > 0 */}
+              {totalEquipmentExp > 0 && (
                 <div>
-                  <p className="text-slate-400 text-sm mb-2">Equipment Exp %</p>
-                  <p className="text-4xl font-bold text-purple-400">
-                    +{equipmentExp}%
-                  </p>
+                  <p className="text-slate-400 text-sm mb-1">Equipment Exp %</p>
+                  <p className="text-4xl font-bold text-purple-400 mb-2">+{totalEquipmentExp}%</p>
+                  <ul className="text-xs text-slate-400 space-y-0.5">
+                    {equipmentItems
+                      .filter((item) => parseFloat(item.value) > 0)
+                      .map((item) => (
+                        <li key={item.id} className="flex justify-between gap-2">
+                          <span className="text-slate-300">{item.label || '—'}</span>
+                          <span className="text-purple-300">+{item.value}%</span>
+                        </li>
+                      ))}
+                  </ul>
                 </div>
               )}
 
-              {/* Exp Buff % - Only show if not 0 */}
-              {parseFloat(expBuff) > 0 && (
+              {/* Exp Buff % - Only show if total > 0 */}
+              {totalExpBuff > 0 && (
                 <div>
-                  <p className="text-slate-400 text-sm mb-2">Exp Buff %</p>
-                  <p className="text-4xl font-bold text-pink-400">
-                    +{expBuff}%
-                  </p>
+                  <p className="text-slate-400 text-sm mb-1">Exp Buff %</p>
+                  <p className="text-4xl font-bold text-pink-400 mb-2">+{totalExpBuff}%</p>
+                  <ul className="text-xs text-slate-400 space-y-0.5">
+                    {expBuffItems
+                      .filter((item) => parseFloat(item.value) > 0)
+                      .map((item) => (
+                        <li key={item.id} className="flex justify-between gap-2">
+                          <span className="text-slate-300">{item.label || '—'}</span>
+                          <span className="text-pink-300">+{item.value}%</span>
+                        </li>
+                      ))}
+                  </ul>
                 </div>
               )}
             </div>
+          </div>
           </div>
         </div>
 
