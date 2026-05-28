@@ -17,11 +17,11 @@ export function dropService() {
 
   
   dropAdd.push({
-    name: "Sun Moon 50%",
-    ratePercent: 50,
-    DateFrom: new Date(2026, 4, 6, 6, 0, 0),
-    DateTo: new Date(2026, 4, 27, 6, 0, 0),
-    description: "Sun Moon Event เพิ่ม Drop 50%",
+    name: "Drop 25%",
+    ratePercent: 25,
+    DateFrom: new Date(2026, 4, 29, 12, 0, 0),
+    DateTo: new Date(2026, 5, 4, 6, 0, 0),
+    description: "Drop Up หยุดยาวนี้พรี่มีคูณ 25%",
   });
 
 

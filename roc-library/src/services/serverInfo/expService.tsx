@@ -15,11 +15,11 @@ export function expService() {
   const expAdd: ServerInfoDto[] = [];
 
   expAdd.push({
-    name: "Sun Moon 150%",
-    ratePercent: 150,
-    DateFrom: new Date(2026, 4, 6, 6, 0, 0),
-    DateTo: new Date(2026, 4, 27, 6, 0, 0),
-    description: "Sun Moon Event เพิ่ม Exp 150%",
+    name: "Exp Up 100%",
+    ratePercent: 100,
+    DateFrom: new Date(2026, 4, 29, 12, 0, 0),
+    DateTo: new Date(2026, 5, 4, 6, 0, 0),
+    description: "Exp Up หยุดยาวนี้พรี่มีคูณ 100%",
   });
 
   return [

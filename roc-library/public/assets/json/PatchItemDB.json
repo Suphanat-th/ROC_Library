@@ -1,66 +1,425 @@
 {
-    "1002381": {
-        "unidentifiedDisplayName": "Mid Powder",
-        "unidentifiedResourceName": "CLB_GAT_powder",
+    "570009": {
+        "unidentifiedDisplayName": "Violin",
+        "unidentifiedResourceName": "바이올린",
         "unidentifiedDescriptionName": [
-            "วัตถุดิบสำคัญในการสร้าง Mid Missile",
-            "จะได้รับเมื่อกำจัดพวก Galactor",
-            "^ff0000(ไอเท็มนี้จะถูกลบออกหลังสิ้นสุดระยะเวลากิจกรรม)"
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "Mid Powder",
-        "identifiedResourceName": "CLB_GAT_powder",
+        "identifiedDisplayName": "Awakened Trumpet Shell",
+        "identifiedResourceName": "Up_Trumpet_Shell_K",
         "identifiedDescriptionName": [
-            "วัตถุดิบสำคัญในการสร้าง Mid Missile",
-            "จะได้รับเมื่อกำจัดพวก Galactor",
-            "^ff0000(ไอเท็มนี้จะถูกลบออกหลังสิ้นสุดระยะเวลากิจกรรม)",
-            "น้ำหนัก : 0"
+            "สามารถใช้งานสกิล [Shield Chain] Lv.10",
+            "ทุก ๆ การอัพเกรด 2 ขั้น ATK +30",
+            "ทุก ๆ การอัพเกรด 3 ขั้น เพิ่ม Damage ของสกิล [Shield Chain] 50%",
+            "เมื่ออัพเกรดถึงขั้น 9 ลด VCT ของสกิล [Shield Chain] 100%",
+            "เมื่ออัพเกรดถึงขั้น 11 เพิ่มพลังโจมตีระยะไกล + 20%, เพิ่มพลังโจมตีศัตรูประเภทบอส 15%",
+            "เมื่ออัพเกรดถึงขั้น 12 จะไม่เกิด Penalty ขนาดอาวุธ",
+            "ประเภท : Instrument พลังโจมตี : 210",
+            "น้ำหนัก : 70",
+            "เลเวลอาวุธ : 4",
+            "เลเวลที่ต้องการ : 98",
+            "อาชีพที่ใส่ได้ : Clown"
+        ],
+        "slotCount": 2,
+        "ClassNum": 13,
+        "costume": false
+    },
+    "580009": {
+        "unidentifiedDisplayName": "Rope",
+        "unidentifiedResourceName": "로프",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Awakend Barbed Wire Whip K",
+        "identifiedResourceName": "Up_Barb_Wire_K",
+        "identifiedDescriptionName": [
+            "MATK +210",
+            "สามารถใช้สกิล Heaven’s Drive Lv.10 ได้",
+            "ทุก ๆ การอัพเกรด 2 ขั้น MATK +20",
+            "ทุก ๆ การอัพเกรด 3 ขั้น เพิ่ม Damage ของสกิล [Heaven’s Drive] 50%",
+            "เมื่ออัพเกรดถึงขั้น 9 ลด VCT ของสกิล [Heaven’s Drive] 100%",
+            "เมื่ออัพเกรดถึงขั้น 11 MATK + 10%, เพิ่ม Damage ทางเวทมนตร์ต่อศัตรูประเภท Boss 15%",
+            "เมื่ออัพเกรดถึงขั้น 12 เพิ่ม Damage ทางเวทมนตร์ธาตุดิน 20%",
+            "ประเภท : Whip พลังโจมตี : 160",
+            "น้ำหนัก : 70",
+            "เลเวลอาวุธ : 4",
+            "เลเวลที่ต้องการ : 98",
+            "อาชีพที่ใส่ได้ : Gypsy"
+        ],
+        "slotCount": 2,
+        "ClassNum": 14,
+        "costume": false
+    },
+    "530006": {
+        "unidentifiedDisplayName": "Spear",
+        "unidentifiedResourceName": "쟈벨린",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Awakened Aquatic Spear ",
+        "identifiedResourceName": "Up_Undine_Spear_K",
+        "identifiedDescriptionName": [
+            "ทุก ๆ การอัพเกรด 2 ขั้น ATK + 20",
+            "ทุก ๆ การอัพเกรด 3 ขั้น เพิ่ม Damage สกิล Holy Cross 50%",
+            "เมื่ออัพเกรดถึงขั้น 9 เมื่อโจมทางกายภาพมีโอกาส 4% ที่จะ ATK + 100 หน่วยเป็นระยะเวลา 10 วินาที",
+            "เมื่ออัพเกรดถึงขั้น 11 เพิ่มพลังโจมตีระยะใกล้ + 20%, เพิ่มพลังโจมตีศัตรูปรเภทบอส 15%",
+            "เมื่ออัพเกรดถึงขั้น 12 ได้รับเอฟเฟกต์ [Endure] ตลอดเวลา",
+            "ประเภท : Two-Handed Spear พลังโจมตี : 220",
+            "น้ำหนัก : 120",
+            "เลเวลอาวุธ : 4",
+            "เลเวลที่ต้องการ : 98",
+            "อาชีพที่ใส่ได้ : High Swordman Class"
+        ],
+        "slotCount": 2,
+        "ClassNum": 4,
+        "costume": false
+    },
+    "100393": {
+        "unidentifiedDisplayName": "Aquatic Spear Modification Cube",
+        "unidentifiedResourceName": "RemodelCube",
+        "unidentifiedDescriptionName": [
+            "ลูกบาศก์ที่ช่วยอัพเกรด Aquatic Spear ให้กลายเป็น  Awakened  Aquatic Spear",
+            "ใช้วัตถุดิบเป็น  Aquatic Spear ตั้งแต่ +9 ขึ้นไป",
+            "และจะได้รับ Awakened Aquatic Spear +7 ออกมา",
+            "",
+            "^ff0000คำเตือน! - เมื่ออัพเกรดแล้ว การ์ดและ Random Option ที่ใช้อยู่จะสูญหาย",
+            "<ITEM>ข้อมูลไอเทมใหม่<INFO>530006</INFO></ITEM>",
+            "น้ำหนัก : 1"
+        ],
+        "identifiedDisplayName": "Aquatic Spear Modification Cube",
+        "identifiedResourceName": "RemodelCube",
+        "identifiedDescriptionName": [
+            "ลูกบาศก์ที่ช่วยอัพเกรด  Aquatic Spear ให้กลายเป็น  Awakened  Aquatic Spear",
+            "ใช้วัตถุดิบเป็น  Aquatic Spear ตั้งแต่ +9 ขึ้นไป",
+            "และจะได้รับ Awakened  Aquatic Spear +7 ออกมา",
+            "",
+            "^ff0000คำเตือน! - เมื่ออัพเกรดแล้ว การ์ดและ Random Option ที่ใช้อยู่จะสูญหาย",
+            "<ITEM>ข้อมูลไอเทมใหม่<INFO>530006</INFO></ITEM>",
+            "น้ำหนัก : 1"
         ],
         "slotCount": 0,
         "ClassNum": 0,
         "costume": false
     },
-    "1002382": {
-        "unidentifiedDisplayName": "Mid Missile Button",
-        "unidentifiedResourceName": "CLB_GAT_coin",
+    "100330": {
+        "unidentifiedDisplayName": "Trumpet Shell Modification Cube",
+        "unidentifiedResourceName": "RemodelCube",
         "unidentifiedDescriptionName": [
-            "ปุ่มสำหรับกดยิง Mid Missile",
-            "นำไปให้ Joe The Condor น่าจะดีนะ",
-            "^ff0000(ไอเท็มนี้จะถูกลบออกหลังสิ้นสุดระยะเวลากิจกรรม)"
+            "ลูกบาศก์ที่ช่วยอัพเกรด  Trumpet Shell ให้กลายเป็น  Awakened Trumpet Shell",
+            "ใช้วัตถุดิบเป็น Trumpet Shell ตั้งแต่+9 ขึ้นไป",
+            "และจะได้รับ  Awakened Trumpet Shell +7 ออกมา",
+            "",
+            "^ff0000คำเตือน! - เมื่ออัพเกรดแล้ว การ์ดและ Random Option ที่ใช้อยู่จะสูญหาย",
+            "<ITEM>ข้อมูลไอเทมใหม่<INFO>570009</INFO></ITEM>",
+            "น้ำหนัก : 1"
         ],
-        "identifiedDisplayName": "Mid Missile Button",
-        "identifiedResourceName": "CLB_GAT_coin",
+        "identifiedDisplayName": "Trumpet Shell Modification Cube",
+        "identifiedResourceName": "RemodelCube",
         "identifiedDescriptionName": [
-            "ปุ่มสำหรับกดยิง Mid Missile",
-            "นำไปให้ Joe The Condor น่าจะดีนะ",
-            "^ff0000(ไอเท็มนี้จะถูกลบออกหลังสิ้นสุดระยะเวลากิจกรรม)",
-            "น้ำหนัก : 0"
+            "ลูกบาศก์ที่ช่วยอัพเกรด  Trumpet Shell ให้กลายเป็น  Awakened Trumpet Shell",
+            "ใช้วัตถุดิบเป็น  Trumpet Shell ตั้งแต่+9 ขึ้นไป",
+            "และจะได้รับ  Awakened Trumpet Shell +7 ออกมา",
+            "",
+            "^ff0000คำเตือน! - เมื่ออัพเกรดแล้ว การ์ดและ Random Option ที่ใช้อยู่จะสูญหาย",
+            "<ITEM>ข้อมูลไอเทมใหม่<INFO>570009</INFO></ITEM>",
+            "น้ำหนัก : 1"
         ],
         "slotCount": 0,
         "ClassNum": 0,
         "costume": false
     },
-    "300732": {
-        "unidentifiedDisplayName": "Gatchaman Card",
+    "107430": {
+        "unidentifiedDisplayName": "[NFS] Aquatic Spear Modification Cube",
+        "unidentifiedResourceName": "RemodelCube",
+        "unidentifiedDescriptionName": [
+            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "",
+            "ลูกบาศก์ที่ช่วยอัพเกรด [NFS] Aquatic Spear ให้กลายเป็น [NFS] Awakened  Aquatic Spear",
+            "ใช้วัตถุดิบเป็น [NFS] Aquatic Spear ตั้งแต่ +9 ขึ้นไป",
+            "และจะได้รับ [NFS] Awakened Aquatic Spear +7 ออกมา",
+            "",
+            "^ff0000คำเตือน! - เมื่ออัพเกรดแล้ว การ์ดและ Random Option ที่ใช้อยู่จะสูญหาย",
+            "<ITEM>ข้อมูลไอเทมใหม่<INFO>530092</INFO></ITEM>",
+            "น้ำหนัก : 1"
+        ],
+        "identifiedDisplayName": "[NFS] Aquatic Spear Modification Cube",
+        "identifiedResourceName": "RemodelCube",
+        "identifiedDescriptionName": [
+            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "",
+            "ลูกบาศก์ที่ช่วยอัพเกรด [NFS] Aquatic Spear ให้กลายเป็น [NFS] Awakened  Aquatic Spear",
+            "ใช้วัตถุดิบเป็น [NFS] Aquatic Spear ตั้งแต่+9 ขึ้นไป",
+            "และจะได้รับ [NFS]Awakened Aquatic Spear +7 ออกมา",
+            "",
+            "^ff0000คำเตือน! - เมื่ออัพเกรดแล้ว การ์ดและ Random Option ที่ใช้อยู่จะสูญหาย",
+            "<ITEM>ข้อมูลไอเทมใหม่<INFO>530092</INFO></ITEM>",
+            "น้ำหนัก : 1"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "100331": {
+        "unidentifiedDisplayName": "Barbed Wire Whip K Modification Cube",
+        "unidentifiedResourceName": "RemodelCube",
+        "unidentifiedDescriptionName": [
+            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "",
+            "ลูกบาศก์ที่ช่วยอัพเกรด  Barbed Wire Whip K ให้กลายเป็น  Awakened Barbed Wire Whip K",
+            "ใช้วัตถุดิบเป็น  Barbed Wire Whip K ตั้งแต่ +9 ขึ้นไป",
+            "และจะได้รับ  Awakened Barbed Wire Whip K +7 ออกมา",
+            "",
+            "^ff0000คำเตือน! - เมื่ออัพเกรดแล้ว การ์ดและ Random Option ที่ใช้อยู่จะสูญหาย",
+            "<ITEM>ข้อมูลไอเทมใหม่<INFO>580009</INFO></ITEM>",
+            "น้ำหนัก : 1"
+        ],
+        "identifiedDisplayName": "Barbed Wire Whip K Modification Cube",
+        "identifiedResourceName": "RemodelCube",
+        "identifiedDescriptionName": [
+            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "",
+            "ลูกบาศก์ที่ช่วยอัพเกรด  Barbed Wire Whip K ให้กลายเป็น  Awakened Barbed Wire Whip K",
+            "ใช้วัตถุดิบเป็น  Barbed Wire Whip K ตั้งแต่ +9 ขึ้นไป",
+            "และจะได้รับ  Awakened Barbed Wire Whip K +7 ออกมา",
+            "",
+            "^ff0000คำเตือน! - เมื่ออัพเกรดแล้ว การ์ดและ Random Option ที่ใช้อยู่จะสูญหาย",
+            "<ITEM>ข้อมูลไอเทมใหม่<INFO>580009</INFO></ITEM>",
+            "น้ำหนัก : 1"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "107431": {
+        "unidentifiedDisplayName": "[NFS] Trumpet Shell Modification Cube",
+        "unidentifiedResourceName": "RemodelCube",
+        "unidentifiedDescriptionName": [
+            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "",
+            "ลูกบาศก์ที่ช่วยอัพเกรด [NFS] Trumpet Shell ให้กลายเป็น [NFS] Awakened Trumpet Shell",
+            "ใช้วัตถุดิบเป็น [NFS] Trumpet Shell ตั้งแต่+9 ขึ้นไป",
+            "และจะได้รับ [NFS] Awakened Trumpet Shell +7 ออกมา",
+            "",
+            "^ff0000คำเตือน! - เมื่ออัพเกรดแล้ว การ์ดและ Random Option ที่ใช้อยู่จะสูญหาย",
+            "<ITEM>ข้อมูลไอเทมใหม่<INFO>570103</INFO></ITEM>"
+        ],
+        "identifiedDisplayName": "[NFS] Trumpet Shell Modification Cube",
+        "identifiedResourceName": "RemodelCube",
+        "identifiedDescriptionName": [
+            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "",
+            "ลูกบาศก์ที่ช่วยอัพเกรด [NFS] Trumpet Shell ให้กลายเป็น [NFS] Awakened Trumpet Shell",
+            "ใช้วัตถุดิบเป็น [NFS] Trumpet Shell ตั้งแต่+9 ขึ้นไป",
+            "และจะได้รับ [NFS] Awakened Trumpet Shell +7 ออกมา",
+            "",
+            "^ff0000คำเตือน! - เมื่ออัพเกรดแล้ว การ์ดและ Random Option ที่ใช้อยู่จะสูญหาย",
+            "<ITEM>ข้อมูลไอเทมใหม่<INFO>570103</INFO></ITEM>",
+            "น้ำหนัก : 1"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "107432": {
+        "unidentifiedDisplayName": "[NFS] Barbed Wire Whip K Modification Cube",
+        "unidentifiedResourceName": "RemodelCube",
+        "unidentifiedDescriptionName": [
+            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "",
+            "ลูกบาศก์ที่ช่วยอัพเกรด [NFS] Barbed Wire Whip K ให้กลายเป็น [NFS] Awakened Barbed Wire Whip K",
+            "ใช้วัตถุดิบเป็น [NFS] Barbed Wire Whip K ตั้งแต่ +9 ขึ้นไป",
+            "และจะได้รับ [NFS] Awakened Barbed Wire Whip K +7 ออกมา",
+            "",
+            "^ff0000คำเตือน! - เมื่ออัพเกรดแล้ว การ์ดและ Random Option ที่ใช้อยู่จะสูญหาย",
+            "<ITEM>ข้อมูลไอเทมใหม่<INFO>580103</INFO></ITEM>"
+        ],
+        "identifiedDisplayName": "[NFS] Barbed Wire Whip K Modification Cube",
+        "identifiedResourceName": "RemodelCube",
+        "identifiedDescriptionName": [
+            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "",
+            "ลูกบาศก์ที่ช่วยอัพเกรด [NFS] Barbed Wire Whip K ให้กลายเป็น [NFS] Awakened Barbed Wire Whip K",
+            "ใช้วัตถุดิบเป็น [NFS] Barbed Wire Whip K ตั้งแต่ +9 ขึ้นไป",
+            "และจะได้รับ [NFS] Awakened Barbed Wire Whip K +7 ออกมา",
+            "",
+            "^ff0000คำเตือน! - เมื่ออัพเกรดแล้ว การ์ดและ Random Option ที่ใช้อยู่จะสูญหาย",
+            "<ITEM>ข้อมูลไอเทมใหม่<INFO>580103</INFO></ITEM>",
+            "น้ำหนัก : 1"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "107437": {
+        "unidentifiedDisplayName": "Jaow Pirun Scroll",
+        "unidentifiedResourceName": "찰랑스크롤",
+        "unidentifiedDescriptionName": [
+            "ของขลังแห่งวารี ผู้เฒ่าเล่าขานว่าถือกำเนิดจาก “เจ้าพิรุณ” ผู้พิทักษ์ฝน ผู้ใดครอบครองจะได้รับพรแห่งสายน้ำและพลังเยียวยาจากธรรมชาติ",
+            "^ff0000 หากเปิดใช้งานหลังวันที่ 10 มิถุนายน 2569 หลังปิดปรับปรุงประจำสัปดาห์ จะไม่ได้รับ Jaow Pirun Coin"
+        ],
+        "identifiedDisplayName": "Jaow Pirun Scroll",
+        "identifiedResourceName": "찰랑스크롤",
+        "identifiedDescriptionName": [
+            "ของขลังแห่งวารี ผู้เฒ่าเล่าขานว่าถือกำเนิดจาก “เจ้าพิรุณ” ผู้พิทักษ์ฝน ผู้ใดครอบครองจะได้รับพรแห่งสายน้ำและพลังเยียวยาจากธรรมชาติ",
+            "^ff0000 หากเปิดใช้งานหลังวันที่ 10 มิถุนายน 2569 หลังปิดปรับปรุงประจำสัปดาห์ จะไม่ได้รับ Jaow Pirun Coin",
+            "น้ำหนัก : 1"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "580103": {
+        "unidentifiedDisplayName": "Rope",
+        "unidentifiedResourceName": "로프",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[NFS] Awakened Barbed Wire Whip K ",
+        "identifiedResourceName": "Up_Barb_Wire_K",
+        "identifiedDescriptionName": [
+            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "",
+            "MATK +210",
+            "สามารถใช้สกิล Heaven’s Drive Lv.10 ได้",
+            "ทุก ๆ การอัพเกรด 2 ขั้น MATK +20",
+            "ทุก ๆ การอัพเกรด 3 ขั้น เพิ่ม Damage ของสกิล [Heaven’s Drive] 50%",
+            "เมื่ออัพเกรดถึงขั้น 9 ลด VCT ของสกิล [Heaven’s Drive] 100%",
+            "เมื่ออัพเกรดถึงขั้น 11 MATK + 10%, เพิ่ม Damage ทางเวทมนตร์ต่อศัตรูประเภท Boss 15%",
+            "เมื่ออัพเกรดถึงขั้น 12 เพิ่ม Damage ทางเวทมนตร์ธาตุดิน 20%",
+            "ประเภท : Whip พลังโจมตี : 160",
+            "น้ำหนัก : 70",
+            "เลเวลอาวุธ : 4",
+            "เลเวลที่ต้องการ : 98",
+            "อาชีพที่ใส่ได้ : Gypsy"
+        ],
+        "slotCount": 2,
+        "ClassNum": 14,
+        "costume": false
+    },
+    "570103": {
+        "unidentifiedDisplayName": "Volin",
+        "unidentifiedResourceName": "바이올린",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[NFS] Awakened Trumpet Shell",
+        "identifiedResourceName": "Up_Trumpet_Shell_K",
+        "identifiedDescriptionName": [
+            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "",
+            "สามารถใช้งานสกิล [Shield Chain] Lv.10",
+            "ทุก ๆ การอัพเกรด 2 ขั้น ATK +30",
+            "ทุก ๆ การอัพเกรด 3 ขั้น เพิ่ม Damage ของสกิล [Shield Chain] 50%",
+            "เมื่ออัพเกรดถึงขั้น 9 ลด VCT ของสกิล [Shield Chain] 100%",
+            "เมื่ออัพเกรดถึงขั้น 11 เพิ่มพลังโจมตีระยะไกล + 20%, เพิ่มพลังโจมตีศัตรูประเภทบอส 15%",
+            "เมื่ออัพเกรดถึงขั้น 12 จะไม่เกิด Penalty ขนาดอาวุธ",
+            "ประเภท : Instrument พลังโจมตี : 210",
+            "น้ำหนัก : 70",
+            "เลเวลอาวุธ : 4",
+            "เลเวลที่ต้องการ : 98",
+            "อาชีพที่ใส่ได้ : Clown"
+        ],
+        "slotCount": 2,
+        "ClassNum": 13,
+        "costume": false
+    },
+    "530092": {
+        "unidentifiedDisplayName": "Spear",
+        "unidentifiedResourceName": "쟈벨린",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[NFS] Awakened Aquatic Spear ",
+        "identifiedResourceName": "Up_Undine_Spear_K",
+        "identifiedDescriptionName": [
+            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "",
+            "ทุก ๆ การอัพเกรด 2 ขั้น ATK + 20",
+            "ทุก ๆ การอัพเกรด 3 ขั้น เพิ่ม Damage สกิล Holy Cross 50%",
+            "เมื่ออัพเกรดถึงขั้น 9 เมื่อโจมทางกายภาพมีโอกาส 4% ที่จะ ATK + 100 หน่วยเป็นระยะเวลา 10 วินาที",
+            "เมื่ออัพเกรดถึงขั้น 11 เพิ่มพลังโจมตีระยะใกล้ + 20%, เพิ่มพลังโจมตีศัตรูปรเภทบอส 15%",
+            "เมื่ออัพเกรดถึงขั้น 12 ได้รับเอฟเฟกต์ [Endure] ตลอดเวลา",
+            "ประเภท : Two-Handed Spear พลังโจมตี : 220",
+            "น้ำหนัก : 120",
+            "เลเวลอาวุธ : 4",
+            "เลเวลที่ต้องการ : 98",
+            "อาชีพที่ใส่ได้ : High Swordman Class"
+        ],
+        "slotCount": 2,
+        "ClassNum": 4,
+        "costume": false
+    },
+    "107453": {
+        "unidentifiedDisplayName": "Heart",
+        "unidentifiedResourceName": "Red_Flame_Heart_Gem",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Red Flame Basin Heart",
+        "identifiedResourceName": "Red_Flame_Heart_Gem",
+        "identifiedDescriptionName": [
+            "หัวใจแห่งเปลวเพลิงสีแดง",
+            "เชื่อกันว่าสามารถปลุกพลังแฝงของอุปกรณ์ให้แข็งแกร่งขึ้นได้",
+            "",
+            "[ไอเทมเป้าหมาย]",
+            "อุปกรณ์จำเป็นต้องอัพเกรดขั้นที่ 7 ขึ้นไป",
+            "Hero Plate [1]",
+            "Hero Judgement Shawl [1]",
+            "Hero Trade Mail [1]",
+            "Hero Hidden Cloth [1]",
+            "Hero Target Suit [1]",
+            "Heroic Silver Fox Leather Boots [1]",
+            "Hero Ungoliant Boots [1]",
+            "น้ำหนัก : 1"
+        ],
+        "slotCount": 2,
+        "ClassNum": 4,
+        "costume": false
+    },
+    "107454": {
+        "unidentifiedDisplayName": "Heart",
+        "unidentifiedResourceName": "Blue_Flame_Heart_Gem",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Blue Flame Basin Heart",
+        "identifiedResourceName": "Blue_Flame_Heart_Gem",
+        "identifiedDescriptionName": [
+            "หัวใจแห่งเปลวเพลิงสีน้ำเงิน",
+            "เชื่อกันว่าสามารถปลุกพลังแฝงของอุปกรณ์ให้แข็งแกร่งขึ้นได้",
+            "",
+            "[ไอเทมเป้าหมาย]",
+            "อุปกรณ์จำเป็นต้องอัพเกรดขั้นที่ 7 ขึ้นไป",
+            "Hero Magic Coat [1]",
+            "Hero Judgement Shawl [1]",
+            "Hero Trade Mail [1]",
+            "Hero Nepenthes Boots [1]",
+            "Hero Ungoliant Boots [1]",
+            "น้ำหนัก : 1"
+        ],
+        "slotCount": 2,
+        "ClassNum": 4,
+        "costume": false
+    },
+    "27326": {
+        "unidentifiedDisplayName": "Morocc Necromancer Card",
         "unidentifiedResourceName": "이름없는카드",
         "unidentifiedDescriptionName": [
-            "ทุก ๆ Base Lv.10, ATK + 3, DEF + 3, MDEF + 1",
-            "(สูงสุดจนถึง Base Lv.200)",
-            "^CC3D3D[ความสามารถช่วงระยะเวลากิจกรรม]",
-            "เพิ่มค่าประสบการณ์ที่ได้รับเมื่อกำจัดมอนสเตอร์ 5%",
-            "เพิ่มอัตราดรอปไอเทม 3%",
-            "(ความสามารถของไอเท็มชิ้นนี้จะถูกลบหลังสิ้นสุดระยะเวลากิจกรรม)"
+            "ATK +100, ASPD +25%",
+            "MHP -20%",
+            "เมื่อใช้ร่วมกับ Morroc of Despair Card, MHP +50%",
+            "ประเภท : Card",
+            "ใช้กับ : Armor",
+            "น้ำหนัก : 1"
         ],
-        "identifiedDisplayName": "Gatchaman Card",
+        "identifiedDisplayName": "Morocc Necromancer Card",
         "identifiedResourceName": "이름없는카드",
         "identifiedDescriptionName": [
-            "ทุก ๆ Base Lv.10, ATK + 3, DEF + 3, MDEF + 1",
-            "(สูงสุดจนถึง Base Lv.200)",
-            "^CC3D3D[ความสามารถช่วงระยะเวลากิจกรรม]",
-            "เพิ่มค่าประสบการณ์ที่ได้รับเมื่อกำจัดมอนสเตอร์ 5%",
-            "เพิ่มอัตราดรอปไอเทม 3%",
-            "(ความสามารถของไอเท็มชิ้นนี้จะถูกลบหลังสิ้นสุดระยะเวลากิจกรรม)",
+            "ATK +100, ASPD +25%",
+            "MHP -20%",
+            "เมื่อใช้ร่วมกับ Morroc of Despair Card, MHP +50%",
             "ประเภท : Card",
-            "ใช้กับ : Garment",
+            "ใช้กับ : Armor",
             "น้ำหนัก : 1"
         ],
         "slotCount": 0,
@@ -68,620 +427,223 @@
         "costume": false,
         "EffectID": 1186
     },
-    "300733": {
-        "unidentifiedDisplayName": "Galactor Army Card",
-        "unidentifiedResourceName": "이름없는카드",
-        "unidentifiedDescriptionName": [
-            "ทุก ๆ Base Lv.10, MATK + 3, DEF + 3, MDEF + 1",
-            "(สูงสุดจนถึง Base Lv.200)",
-            "^CC3D3D[ความสามารถช่วงระยะเวลากิจกรรม]",
-            "เพิ่มค่าประสบการณ์ที่ได้รับเมื่อกำจัดมอนสเตอร์ 5%",
-            "เพิ่มอัตราดรอปไอเทม 3%",
-            "(ความสามารถของไอเท็มชิ้นนี้จะถูกลบหลังสิ้นสุดระยะเวลากิจกรรม)"
-        ],
-        "identifiedDisplayName": "Galactor Army Card",
-        "identifiedResourceName": "이름없는카드",
-        "identifiedDescriptionName": [
-            "ทุก ๆ Base Lv.10, MATK + 3, DEF + 3, MDEF + 1",
-            "(สูงสุดจนถึง Base Lv.200)",
-            "^CC3D3D[ความสามารถช่วงระยะเวลากิจกรรม]",
-            "เพิ่มค่าประสบการณ์ที่ได้รับเมื่อกำจัดมอนสเตอร์ 5%",
-            "เพิ่มอัตราดรอปไอเทม 3%",
-            "(ความสามารถของไอเท็มชิ้นนี้จะถูกลบหลังสิ้นสุดระยะเวลากิจกรรม)",
-            "ประเภท : Card",
-            "ใช้กับ : Garment",
-            "น้ำหนัก : 1"
-        ],
-        "slotCount": 0,
-        "ClassNum": 0,
-        "costume": false,
-        "EffectID": 1186
-    },
-    "300734": {
-        "unidentifiedDisplayName": "Bird Missile Card",
-        "unidentifiedResourceName": "이름없는카드",
-        "unidentifiedDescriptionName": [
-            "ทุก ๆ Base Lv.10, MHP + 100, DEF + 3, MDEF + 1",
-            "(สูงสุดจนถึง Base Lv.200)",
-            "^CC3D3D[ความสามารถช่วงระยะเวลากิจกรรม]",
-            "เพิ่มค่าประสบการณ์ที่ได้รับเมื่อกำจัดมอนสเตอร์ 5%",
-            "เพิ่มอัตราดรอปไอเทม 3%",
-            "(ความสามารถของไอเท็มชิ้นนี้จะถูกลบหลังสิ้นสุดระยะเวลากิจกรรม)"
-        ],
-        "identifiedDisplayName": "Bird Missile Card",
-        "identifiedResourceName": "이름없는카드",
-        "identifiedDescriptionName": [
-            "ทุก ๆ Base Lv.10, MHP + 100, DEF + 3, MDEF + 1",
-            "(สูงสุดจนถึง Base Lv.200)",
-            "^CC3D3D[ความสามารถช่วงระยะเวลากิจกรรม]",
-            "เพิ่มค่าประสบการณ์ที่ได้รับเมื่อกำจัดมอนสเตอร์ 5%",
-            "เพิ่มอัตราดรอปไอเทม 3%",
-            "(ความสามารถของไอเท็มชิ้นนี้จะถูกลบหลังสิ้นสุดระยะเวลากิจกรรม)",
-            "ประเภท : Card",
-            "ใช้กับ : Garment",
-            "น้ำหนัก : 1"
-        ],
-        "slotCount": 0,
-        "ClassNum": 0,
-        "costume": false,
-        "EffectID": 1186
-    },
-    "105667": {
-        "unidentifiedDisplayName": "Heavy Feather",
-        "unidentifiedResourceName": "Feather_Of_Seraphim",
-        "unidentifiedDescriptionName": [
-            "ขนนกที่รู้สึกได้ถึงพลังลึกลับ",
-            "เมื่อใช้ขนนกนี้ จะรู้สึกราวกับร่างกายหนักแน่นและมั่นคงขึ้น",
-            "ATK + 7%, MATK + 7% เป็นเวลา 60 นาที",
-            "^ffffff_",
-            "^ff0000(ไอเท็มนี้จะถูกลบออกหลังสิ้นสุดระยะเวลากิจกรรม)"
-        ],
-        "identifiedDisplayName": "Heavy Feather",
-        "identifiedResourceName": "Feather_Of_Seraphim",
-        "identifiedDescriptionName": [
-            "ขนนกที่รู้สึกได้ถึงพลังลึกลับ",
-            "เมื่อใช้ขนนกนี้ จะรู้สึกราวกับร่างกายหนักแน่นและมั่นคงขึ้น",
-            "ATK + 7%, MATK + 7% เป็นเวลา 60 นาที",
-            "^ffffff_",
-            "^ff0000(ไอเท็มนี้จะถูกลบออกหลังสิ้นสุดระยะเวลากิจกรรม)",
-            "น้ำหนัก : 0"
-        ],
-        "slotCount": 0,
-        "ClassNum": 0,
-        "costume": false
-    },
-    "105668": {
-        "unidentifiedDisplayName": "Brilliant Feather",
-        "unidentifiedResourceName": "페코날개깃털",
-        "unidentifiedDescriptionName": [
-            "ขนนกที่รู้สึกได้ถึงความเท่แบบลึกลับ",
-            "เมื่อใช้ขนนกนี้ จะรู้สึกราวกับมีออร่าที่โดดเด่นขึ้น",
-            "CRI + 10, ASPD + 1 เป็นเวลา 60 นาที",
-            "^ffffff_",
-            "^ff0000(ไอเท็มนี้จะถูกลบออกหลังสิ้นสุดระยะเวลากิจกรรม)"
-        ],
-        "identifiedDisplayName": "Brilliant Feather",
-        "identifiedResourceName": "페코날개깃털",
-        "identifiedDescriptionName": [
-            "ขนนกที่รู้สึกได้ถึงความเท่แบบลึกลับ",
-            "เมื่อใช้ขนนกนี้ จะรู้สึกราวกับมีออร่าที่โดดเด่นขึ้น",
-            "CRI + 10, ASPD + 1 เป็นเวลา 60 นาที",
-            "^ffffff_",
-            "^ff0000(ไอเท็มนี้จะถูกลบออกหลังสิ้นสุดระยะเวลากิจกรรม)",
-            "น้ำหนัก : 0"
-        ],
-        "slotCount": 0,
-        "ClassNum": 0,
-        "costume": false
-    },
-    "105669": {
-        "unidentifiedDisplayName": "Swift Feather",
-        "unidentifiedResourceName": "Ep20_Huge_Feather_G",
-        "unidentifiedDescriptionName": [
-            "ขนนกที่รู้สึกได้ถึงกลิ่นแบบลึกลับ",
-            "เมื่อใช้ขนนกนี้ จะรู้สึกราวกับเคลื่อนไหวได้ปราดเปรียวขึ้น",
-            "FLEE + 25, HIT + 25 เป็นเวลา 60 นาที",
-            "^ffffff_",
-            "^ff0000(ไอเท็มนี้จะถูกลบออกหลังสิ้นสุดระยะเวลากิจกรรม)"
-        ],
-        "identifiedDisplayName": "Swift Feather",
-        "identifiedResourceName": "Ep20_Huge_Feather_G",
-        "identifiedDescriptionName": [
-            "ขนนกที่รู้สึกได้ถึงกลิ่นแบบลึกลับ",
-            "เมื่อใช้ขนนกนี้ จะรู้สึกราวกับเคลื่อนไหวได้ปราดเปรียวขึ้น",
-            "FLEE + 25, HIT + 25 เป็นเวลา 60 นาที",
-            "^ffffff_",
-            "^ff0000(ไอเท็มนี้จะถูกลบออกหลังสิ้นสุดระยะเวลากิจกรรม)",
-            "น้ำหนัก : 0"
-        ],
-        "slotCount": 0,
-        "ClassNum": 0,
-        "costume": false
-    },
-    "105672": {
-        "unidentifiedDisplayName": "Sturdy Feather",
-        "unidentifiedResourceName": "Ep20_Huge_Feather_W",
-        "unidentifiedDescriptionName": [
-            "ขนนกที่รู้สึกได้ถึงรสชาติแบบลึกลับ",
-            "เมื่อใช้ขนนกนี้ จะรู้สึกราวกับพละกำลังเพิ่มขึ้น",
-            "MHP + 5%, MSP + 5% เป็นเวลา 60 นาที",
-            "^ffffff_",
-            "^ff0000(ไอเท็มนี้จะถูกลบออกหลังสิ้นสุดระยะเวลากิจกรรม)"
-        ],
-        "identifiedDisplayName": "Sturdy Feather",
-        "identifiedResourceName": "Ep20_Huge_Feather_W",
-        "identifiedDescriptionName": [
-            "ขนนกที่รู้สึกได้ถึงรสชาติแบบลึกลับ",
-            "เมื่อใช้ขนนกนี้ จะรู้สึกราวกับพละกำลังเพิ่มขึ้น",
-            "MHP + 5%, MSP + 5% เป็นเวลา 60 นาที",
-            "^ffffff_",
-            "^ff0000(ไอเท็มนี้จะถูกลบออกหลังสิ้นสุดระยะเวลากิจกรรม)",
-            "น้ำหนัก : 0"
-        ],
-        "slotCount": 0,
-        "ClassNum": 0,
-        "costume": false
-    },
-    "401207": {
-        "unidentifiedDisplayName": "Helm",
-        "unidentifiedResourceName": "헬름",
+    "15098": {
+        "unidentifiedDisplayName": "Clothes",
+        "unidentifiedResourceName": "코튼셔츠",
         "unidentifiedDescriptionName": [
             "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "Costume Honorary Gatchaman",
-        "identifiedResourceName": "C_CLB_GAT_button",
+        "identifiedDisplayName": "Hero Target Suit",
+        "identifiedResourceName": "용사의타겟슈츠",
         "identifiedDescriptionName": [
-            "เนื่องจากท่านได้มีส่วนช่วยอย่างยิ่งในการปราบองค์กร Galactor และช่วยให้ทีม Gatchaman เดินทางกลับสู่โลกได้อย่างปลอดภัย จึงขอมอบเข็มกลัดเกียรติยศให้แก่ท่าน",
-            "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Upper น้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 1",
-            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+            "MaxHP, MaxSP +5%",
+            "All Stats +1, ASPD +1; เพิ่มพลังดาเมจของการโจมตีกายภาพระยะไกล 3%",
+            "เมื่อโจมตีทางกายภาพ มีโอกาสเปิดใช้งานสกิล Improve Concentration Lv 10",
+            "เมื่อโจมตีทางกายภาพ มีโอกาสเปิดใช้งานสกิล Double Strafe Lv 10",
+            "Autocasting rate โอกาสที่จะเปิดใช้งานความสามารถเพิ่มขึ้น ตามค่าอัปเกรดของอุปกรณ์",
+            "ประเภท : Armor ป้องกัน : 60",
+            "น้ำหน้ก : 20",
+            "เลเวลที่ต้องการ : 90",
+            "อาชีพที่ใส่ได้ : High Archer Cls"
         ],
-        "slotCount": 0,
-        "ClassNum": 2805,
-        "costume": true
+        "slotCount": 1,
+        "ClassNum": 0
     },
-    "420729": {
-        "unidentifiedDisplayName": "Ribbon",
-        "unidentifiedResourceName": "리본",
+    "22036": {
+        "unidentifiedDisplayName": "Shoes",
+        "unidentifiedResourceName": "슈즈",
         "unidentifiedDescriptionName": [
             "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "Costume Farewell, Gatchaman!",
-        "identifiedResourceName": "C_CLB_GAT_bye",
+        "identifiedDisplayName": "Heroic Silver Fox Leather Boots",
+        "identifiedResourceName": "용사은빛여우부츠",
         "identifiedDescriptionName": [
-            "ฮุ… ฮุ ๆ ๆ ๆ ๆ ๆ ๆ ๆ!",
-            "ฮะ! ฮ่า ๆ ๆ ๆ ๆ ๆๆ ๆ ๆ ๆ ๆ ๆ!!",
-            "ชัยชนะเป็นของฉัน!",
-            "เจ้าพวกมนุษย์โง่!!!",
-            "^CC3D3D[ความสามารถช่วงระยะเวลากิจกรรม]",
-            "เพิ่มความเสียหายทางกายภาพและทางเวทนมตร์ต่อศัตรูทุกธาตุ +10%",
-            "ลดความเสียหายจากศัตรูทุกธาตุ +10%",
-            "เมื่อสังหารมอนสเตอร์มีโอกาศ 0.3% ได้รับ  Sturdy Feather , Swift Feather , Brilliant Feather , Heavy Feather",
-            "(ความสามารถของไอเท็มชิ้นนี้จะถูกลบหลังสิ้นสุดระยะเวลากิจกรรม)",
-            "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Lower น้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 1",
+            "Fox Fur ช่วยทำให้เดินอย่างปลอดภัย ส่วนที่เป็น Silver จะช่วยให้เดินได้เร็วขึ้น",
+            "พลังโจมตีระยะไกล +5%",
+            "เมื่ออัปเกรดถึง 8 จะเพิ่มพลังโจมตีระยะไกลอีก 1% ในทุกการอัปเกรดเลเวล (จะได้จนถึงเลเวล 13)",
+            "ประเภท : Shoes ป้องกัน : 15",
+            "น้ำหน้ก : 30",
+            "เลเวลที่ต้องการ : 90",
             "อาชีพที่ใส่ได้ : ทุกอาชีพ"
         ],
-        "slotCount": 0,
-        "ClassNum": 2802,
-        "costume": true
+        "slotCount": 1,
+        "ClassNum": 0
     },
-    "420730": {
-        "unidentifiedDisplayName": "Ribbon",
-        "unidentifiedResourceName": "리본",
+    "2981": {
+        "unidentifiedDisplayName": "Accessory",
+        "unidentifiedResourceName": "네클리스",
         "unidentifiedDescriptionName": [
             "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "Costume Gatchaman, Move Out!",
-        "identifiedResourceName": "C_CLB_GAT_go",
+        "identifiedDisplayName": "Hero Ring",
+        "identifiedResourceName": "루파크의반지",
         "identifiedDescriptionName": [
-            "หากมีสหายที่ไว้ใจได้อยู่เคียงข้าง ก็ไม่มีสิ่งใดต้องหวาดกลัว!",
-            "เตรียมใจไว้เลย!",
-            "เจ้าพวก Galactor!!",
-            "^CC3D3D[ความสามารถช่วงระยะเวลากิจกรรม]",
-            "เพิ่มความเสียหายทางกายภาพและทางเวทนมตร์ต่อศัตรูทุกธาตุ +10%",
-            "ลดความเสียหายจากศัตรูทุกธาตุ +10%",
-            "เมื่อสังหารมอนสเตอร์มีโอกาศ 0.3% ได้รับ  Sturdy Feather , Swift Feather , Brilliant Feather , Heavy Feather",
-            "(ความสามารถของไอเท็มชิ้นนี้จะถูกลบหลังสิ้นสุดระยะเวลากิจกรรม)",
-            "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Lower น้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 1",
-            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+            "แหวนที่ทำขึ้นสำหรับนักรบที่ทำเควสไปปราบ Morocc",
+            "เมื่อนำแหวนไป Enchant แล้ว เจ้าของแหวนจะมีพลังไปต่อสู้กับ Morocc ได้",
+            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "ประเภท : Accessory ป้องกัน : 0",
+            "น้ำหน้ก : 20",
+            "เลเวลที่ต้องการ : 80",
+            "อาชีพที่สวมใส่: ทุกอาชีพ "
         ],
         "slotCount": 0,
-        "ClassNum": 2803,
-        "costume": true
+        "ClassNum": 0
     },
-    "420731": {
-        "unidentifiedDisplayName": "Ribbon",
-        "unidentifiedResourceName": "리본",
+    "22037": {
+        "unidentifiedDisplayName": "Shoes",
+        "unidentifiedResourceName": "슈즈",
         "unidentifiedDescriptionName": [
             "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "Costume Dr.Nambu's Emergency Transmission",
-        "identifiedResourceName": "C_CLB_GAT_doc",
+        "identifiedDisplayName": "Hero Ungoliant Boots",
+        "identifiedResourceName": "용사운골리안트부츠",
         "identifiedDescriptionName": [
-            "ด็อกเตอร์นัมบุ ผู้นำทางจิตใจของทีม Gatchaman",
-            "ทุกครั้งที่มีสัญญาณติดต่อเข้ามา ก็อดกังวลไม่ได้ว่าวันนี้องค์กร Galactor จะก่อเรื่องอะไรอีก",
-            "^CC3D3D[ความสามารถช่วงระยะเวลากิจกรรม]",
-            "ATK+5% MATK+5% , CRI + 10 , HIT + 10",
-            "ลดระยะเวลาร่ายเวทมนต์ 10%",
-            "(ความสามารถของไอเท็มชิ้นนี้จะถูกลบหลังสิ้นสุดระยะเวลากิจกรรม)",
-            "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Lower น้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 1",
+            "บูทที่ย้อมด้วยของเหลวจากตัว Ungoliant มีผลช่วยให้จิตใจปลอดโปร่ง และมีสมาธิ",
+            "เมื่อใช้สกิล จะเสีย SP 5%",
+            "หากอัปเกรดถึง 8 SP จะลดลงอีก 1% ในทุกการอัปเกรด (จนถึงเลเวล 13)",
+            "ประเภท : Shoes ป้องกัน : 10",
+            "น้ำหน้ก : 30",
+            "เลเวลที่ต้องการ : 90",
             "อาชีพที่ใส่ได้ : ทุกอาชีพ"
         ],
-        "slotCount": 0,
-        "ClassNum": 0,
-        "costume": true
+        "slotCount": 1,
+        "ClassNum": 0
     },
-    "430025": {
-        "unidentifiedDisplayName": "Helm",
-        "unidentifiedResourceName": "헬름",
+    "22035": {
+        "unidentifiedDisplayName": "Shoes",
+        "unidentifiedResourceName": "슈즈",
         "unidentifiedDescriptionName": [
             "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "Costume Leader of Galactor",
-        "identifiedResourceName": "C_CLB_GAT_BK",
+        "identifiedDisplayName": "Hero Nepenthes Boots",
+        "identifiedResourceName": "용사네펜데스구두",
         "identifiedDescriptionName": [
-            "Costume ที่สร้างขึ้นโดยจำลองแบบมาจากหมวกของ Berg Katse ผู้นำแห่ง Galactor",
-            "ใส่แล้วอาจจะรู้สึกอยากบุกยึดครองโลกขึ้นมาก็ได้...",
-            "^CC3D3D[ความสามารถช่วงระยะเวลากิจกรรม]",
-            "เพิ่มความเสียหายทางกายภาพและทางเวทนมตร์เมื่อโจมตีศัตรูเผ่า Demi-Human +10%",
-            "ลดความเสียหายจากศัตรูเผ่า Demi-Human +10%",
-            "เมื่อสังหารมอนสเตอร์มีโอกาศ 0.3% ได้รับ  Sturdy Feather , Swift Feather , Brilliant Feather , Heavy Feather",
-            "(ความสามารถของไอเท็มชิ้นนี้จะถูกลบหลังสิ้นสุดระยะเวลากิจกรรม)",
-            "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Upper-Middle น้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 1",
+            "รองเท้าที่ทำจากใบไม้ Nepenthes มีฤทธิ์ผ่อนคลายกล้ามเนื้อ",
+            "ลดเวลาในการร่ายแปรผันลง 10%",
+            "เมื่ออัปเกรดถึง 8 จะลดลงเพิ่มอีก 5% หลังจากนั้นจะลดลงอีก 1% ทุกการอัปเกรดเลเวล)",
+            "เมื่ออัปเกรดถึง 11 จะลดลงเพิ่มอีก 3% หลังจากนั้นจะลดลงอีก 3% ทุกครั้งที่อัปเกรดเลเวล (ทำได้จนถึงเลเวล 13)",
+            "ประเภท : Shoes ป้องกัน : 10",
+            "น้ำหน้ก : 30",
+            "เลเวลที่ต้องการ : 90",
             "อาชีพที่ใส่ได้ : ทุกอาชีพ"
         ],
-        "slotCount": 0,
-        "ClassNum": 2804,
-        "costume": true
+        "slotCount": 1,
+        "ClassNum": 0
     },
-    "430026": {
-        "unidentifiedDisplayName": "Helm",
-        "unidentifiedResourceName": "헬름",
+    "15093": {
+        "unidentifiedDisplayName": "Armor",
+        "unidentifiedResourceName": "우든메일",
         "unidentifiedDescriptionName": [
             "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "Costume Ken the Eagle",
-        "identifiedResourceName": "C_CLB_GAT_G1",
+        "identifiedDisplayName": "Hero Plate",
+        "identifiedResourceName": "용사의플레이트",
         "identifiedDescriptionName": [
-            "Costume ที่สร้างขึ้นโดยจำลองแบบมาจากหมวกของ Ken หัวหน้าทีม Gatchaman",
-            "ให้ความรู้สึกถึงความรับผิดชอบอันยิ่งใหญ่",
-            "^CC3D3D[ความสามารถช่วงระยะเวลากิจกรรม]",
-            "เพิ่มความเสียหายทางกายภาพและทางเวทนมตร์เมื่อโจมตีศัตรูเผ่า Insect +10%",
-            "ลดความเสียหายจากศัตรูเผ่า Insect +10%",
-            "เมื่อสังหารมอนสเตอร์มีโอกาศ 0.3% ได้รับ  Sturdy Feather , Swift Feather , Brilliant Feather , Heavy Feather",
-            "(ความสามารถของไอเท็มชิ้นนี้จะถูกลบหลังสิ้นสุดระยะเวลากิจกรรม)",
-            "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Upper-Middle น้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 1",
-            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+            "MDEF +5",
+            "MaxHP, MaxSP เพิ่ม 5%",
+            "ATK +10, MATK +10, HIT +10, FLEE +10",
+            "พลังโจมตีของ Brandish Spear เพิ่มขึ้น 10%",
+            "พลังโจมตีของ  Holy Cross เพิ่มขึ้น 10%",
+            "เมื่อทำการโจมตีทางกายภาพ มีโอกาสต่ำที่จะเปิดใช้งานการฮีลอัตโนมัติ Lv 10 และ Stormgust Lv 10",
+            "โอกาสที่จะเปิดใช้งานความสามารถเพิ่มขึ้น ตามค่าอัปเกรดของอุปกรณ์",
+            "ประเภท : Armor ป้องกัน : 60",
+            "น้ำหน้ก : 400",
+            "เลเวลที่ต้องการ : 90",
+            "อาชีพที่ใส่ได้ :  High Swordman Cls"
         ],
-        "slotCount": 0,
-        "ClassNum": 2797,
-        "costume": true
+        "slotCount": 1,
+        "ClassNum": 0
     },
-    "430027": {
-        "unidentifiedDisplayName": "Helm",
-        "unidentifiedResourceName": "헬름",
+    "15094": {
+        "unidentifiedDisplayName": "Clothes",
+        "unidentifiedResourceName": "코튼셔츠",
         "unidentifiedDescriptionName": [
             "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "Costume Joe the Condor",
-        "identifiedResourceName": "C_CLB_GAT_G2",
+        "identifiedDisplayName": "Hero Magic Coat",
+        "identifiedResourceName": "용사의매직코트",
         "identifiedDescriptionName": [
-            "Costume ที่สร้างขึ้นโดยจำลองแบบมาจากหมวกของ Joe สมาชิกหมายเลข 2 ของ Gatchaman",
-            "ให้ความรู้สึกถึงคาริสม่าเท่ ๆ",
-            "^CC3D3D[ความสามารถช่วงระยะเวลากิจกรรม]",
-            "เพิ่มความเสียหายทางกายภาพและทางเวทนมตร์เมื่อโจมตีศัตรูเผ่า Fish +10%",
-            "ลดความเสียหายจากศัตรูเผ่า Fish +10%",
-            "เมื่อสังหารมอนสเตอร์มีโอกาศ 0.3% ได้รับ  Sturdy Feather , Swift Feather , Brilliant Feather , Heavy Feather",
-            "(ความสามารถของไอเท็มชิ้นนี้จะถูกลบหลังสิ้นสุดระยะเวลากิจกรรม)",
-            "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Upper-Middle น้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 1",
-            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+            "MaxHP, MaxSP เพิ่ม 5%",
+            "MATK +10, FLEE +10",
+            "เพิ่มพลังดาเมจของสกิล Gravitational Field และ Heaven's Drive 10%",
+            "หากอัปเกรดเลเวลเป็นเลขคี่ เวลาในการร่ายแปรผันจะเพิ่มขึ้น 20% และการร่ายจะไม่ถูกรบกวน",
+            "หากอัปเกรดเลเวลเป็นเลขคู่ MDEF +1 และ เวลาในการร่ายแปรผันจะลดลง 1% ต่อทุกการอัพเกรดสองเลเวล",
+            "ประเภท : Armor ป้องกัน : 25",
+            "น้ำหน้ก : 80",
+            "เลเวลที่ต้องการ : 90",
+            "อาชีพที่ใส่ได้: High Magician Cls"
         ],
-        "slotCount": 0,
-        "ClassNum": 2798,
-        "costume": true
+        "slotCount": 1,
+        "ClassNum": 0
     },
-    "430028": {
-        "unidentifiedDisplayName": "Helm",
-        "unidentifiedResourceName": "헬름",
+    "15095": {
+        "unidentifiedDisplayName": "Clothes",
+        "unidentifiedResourceName": "코튼셔츠",
         "unidentifiedDescriptionName": [
             "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "Costume Jun the Swan",
-        "identifiedResourceName": "C_CLB_GAT_G3",
+        "identifiedDisplayName": "Hero Judgement Shawl",
+        "identifiedResourceName": "용사의저지먼트숄",
         "identifiedDescriptionName": [
-            "Costume ที่สร้างขึ้นโดยจำลองแบบมาจากหมวกของ Jun สมาชิกหมายเลข 3 ของ Gatchaman",
-            "ให้ความรู้สึกถึงความอ่อนโยนและจิตใจที่อบอุ่น",
-            "^CC3D3D[ความสามารถช่วงระยะเวลากิจกรรม]",
-            "เพิ่มความเสียหายทางกายภาพและทางเวทนมตร์เมื่อโจมตีศัตรูเผ่า Brute +10%",
-            "ลดความเสียหายจากศัตรูเผ่า Brute +10%",
-            "เมื่อสังหารมอนสเตอร์มีโอกาศ 0.3% ได้รับ  Sturdy Feather , Swift Feather , Brilliant Feather , Heavy Feather",
-            "(ความสามารถของไอเท็มชิ้นนี้จะถูกลบหลังสิ้นสุดระยะเวลากิจกรรม)",
-            "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Upper-Middle น้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 1",
-            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+            "MaxHP, MaxSP +5%",
+            "ATK +10, MATK +10, HIT +10, FLEE +10",
+            "เมื่ออัพเกรดถึงขั้น 7 เพิ่มการสร้างดาเมจของสกิล Asura Strike และ Magnus Exorcismus +10%",
+            "เมื่ออัพเกรดถึงขั้น 8 ลดระยะเวลาดีเลย์ของสกิล Magnus Exorcismus 1 วินาที",
+            "เมื่ออัพเกรดถึงขั้น 9 ลดระยะเวลาในการร่ายสกิล Asura Strike ลง 10% ",
+            "ประเภท : Armor ป้องกัน : 37",
+            "น้ำหน้ก : 50",
+            "เลเวลที่ต้องการ : 90",
+            "อาชีพที่ใส่ได้ :High Acolyte Cls"
         ],
-        "slotCount": 0,
-        "ClassNum": 2799,
-        "costume": true
+        "slotCount": 1,
+        "ClassNum": 0
     },
-    "430029": {
-        "unidentifiedDisplayName": "Helm",
-        "unidentifiedResourceName": "헬름",
+    "15096": {
+        "unidentifiedDisplayName": "Armor",
+        "unidentifiedResourceName": "우든메일",
         "unidentifiedDescriptionName": [
             "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "Costume Jinpei the Swallow",
-        "identifiedResourceName": "C_CLB_GAT_G4",
+        "identifiedDisplayName": "Hero Trade Mail",
+        "identifiedResourceName": "용사의트레이드메일",
         "identifiedDescriptionName": [
-            "Costume ที่สร้างขึ้นโดยจำลองแบบมาจากหมวกของ Jinpei สมาชิกหมายเลข 4 ของ Gatchaman",
-            "ให้ความรู้สึกถึงความซุกซนแบบเด็ก ๆ",
-            "^CC3D3D[ความสามารถช่วงระยะเวลากิจกรรม]",
-            "เพิ่มความเสียหายทางกายภาพและทางเวทนมตร์เมื่อโจมตีศัตรูเผ่า Demon +10%",
-            "ลดความเสียหายจากศัตรูเผ่า Demon +10%",
-            "เมื่อสังหารมอนสเตอร์มีโอกาศ 0.3% ได้รับ  Sturdy Feather , Swift Feather , Brilliant Feather , Heavy Feather",
-            "(ความสามารถของไอเท็มชิ้นนี้จะถูกลบหลังสิ้นสุดระยะเวลากิจกรรม)",
-            "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Upper-Middle น้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 1",
-            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+            "MDEF +5",
+            "MaxHP, MaxSP เพิ่ม 5%; ATK +10, MATK +10",
+            "ในกรณีของ Base STR 90 ขึ้นไป ทุก ๆ การอัพเกรด 2 ขั้น STR +1",
+            "ในกรณีของ INT 90 ขึ้นไป ทุก ๆ การอัพเกรด 2 ขั้น INT +1,",
+            "ในกรณีของ VIT 90 ขึ้นไป ทุก ๆ การอัพเกรด 2 ขั้น VIT +1,",
+            "ในกรณีของ AGI 90 ขึ้นไป ทุก ๆ การอัพเกรด 2 ขั้น AGI +1,",
+            "ในกรณีของ DEX 90 ขึ้นไป ทุก ๆ การอัพเกรด 2 ขั้น DEX +1,",
+            "ในกรณีของ LUK 90 ขึ้นไป ทุก ๆ การอัพเกรด 2 ขั้น LUK +1.",
+            "ในการโจมตีทางกายภาพระยะประชิด มีโอกาสที่จะทำให้เป้าหมายอยู่ในสถานะ Stun, Poison, Silence หรือ Curse",
+            "Autocasting rate โอกาสที่จะเปิดใช้งานความสามารถเพิ่มขึ้น ตามค่าอัปเกรดของอุปกรณ์",
+            "ประเภท : Armor ป้องกัน : 50",
+            "น้ำหน้ก : 50",
+            "เลเวลที่ต้องการ : 90",
+            "อาชีพที่ใส่ได้ : High Merchant Cls"
         ],
-        "slotCount": 0,
-        "ClassNum": 2800,
-        "costume": true
+        "slotCount": 1,
+        "ClassNum": 0
     },
-    "430030": {
-        "unidentifiedDisplayName": "Helm",
-        "unidentifiedResourceName": "헬름",
+    "15097": {
+        "unidentifiedDisplayName": "Armor",
+        "unidentifiedResourceName": "씨프클로스",
         "unidentifiedDescriptionName": [
             "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "Costume Ryu the Owl",
-        "identifiedResourceName": "C_CLB_GAT_G5",
+        "identifiedDisplayName": "Hero Hidden Cloth",
+        "identifiedResourceName": "용사의히든클로스",
         "identifiedDescriptionName": [
-            "Costume ที่สร้างขึ้นโดยจำลองแบบมาจากหมวกของ Ryu สมาชิกหมายเลข 5 ของ Gatchaman",
-            "ให้ความรู้สึกถึงพลังกล้ามเนื้อที่แข็งแกร่ง",
-            "^CC3D3D[ความสามารถช่วงระยะเวลากิจกรรม]",
-            "เพิ่มความเสียหายทางกายภาพและทางเวทนมตร์เมื่อโจมตีศัตรูเผ่า Dragon +10%",
-            "ลดความเสียหายจากศัตรูเผ่า Dragon +10%",
-            "เมื่อสังหารมอนสเตอร์มีโอกาศ 0.3% ได้รับ  Sturdy Feather , Swift Feather , Brilliant Feather , Heavy Feather",
-            "(ความสามารถของไอเท็มชิ้นนี้จะถูกลบหลังสิ้นสุดระยะเวลากิจกรรม)",
-            "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Upper-Middle น้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 1",
-            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+            "MaxHP, MaxSP +5%",
+            "เพิ่มพลังดาเมจของสกิล Raid และ Soul Destroyer +10%",
+            "เมื่อโจมตีกายภาพ มีโอกาสที่จะได้ CRIT +20, FLEE +20, ATK + 10%, MATK + 10% เป็นเวลา 10 วินาที",
+            "โอกาสที่จะเปิดใช้งานความสามารถเพิ่มขึ้น ตามค่าอัปเกรดของอุปกรณ์",
+            "ประเภท : Armor ป้องกัน : 35",
+            "น้ำหน้ก : 20",
+            "เลเวลที่ต้องการ : 90",
+            "อาชีพที่ใส่ได้ : High Thief Cls"
         ],
-        "slotCount": 0,
-        "ClassNum": 2801,
-        "costume": true
-    },
-    "314813": {
-        "unidentifiedDisplayName": "Operation Phoenix Footprints",
-        "unidentifiedResourceName": "발자국이펙트",
-        "unidentifiedDescriptionName": [
-            "Operation Phoenix Footprints"
-        ],
-        "identifiedDisplayName": "Operation Phoenix Footprints",
-        "identifiedResourceName": "발자국이펙트",
-        "identifiedDescriptionName": [
-            "Operation Phoenix Footprints"
-        ],
-        "slotCount": 0,
-        "ClassNum": 0,
-        "costume": false
-    },
-    "1002642": {
-        "unidentifiedDisplayName": "Operation Phoenix Footprints (Garment)",
-        "unidentifiedResourceName": "발자국이펙트",
-        "unidentifiedDescriptionName": [
-            "มอบเอฟเฟกต์เมื่อ Enchant ช่องที่ 4 ของ Costume ประเภท Garment",
-            "^ff0000Operation Phoenix Footprints"
-        ],
-        "identifiedDisplayName": "Operation Phoenix Footprints (Garment)",
-        "identifiedResourceName": "발자국이펙트",
-        "identifiedDescriptionName": [
-            "มอบเอฟเฟกต์เมื่อ Enchant ช่องที่ 4 ของ Costume ประเภท Garment",
-            "^ff0000Operation Phoenix Footprints",
-            "น้ำหนัก : 10"
-        ],
-        "slotCount": 0,
-        "ClassNum": 0,
-        "costume": false
-    },
-    "106300": {
-        "unidentifiedDisplayName": "Costume Gatchaman Selection Scroll I",
-        "unidentifiedResourceName": "열혈스크롤",
-        "unidentifiedDescriptionName": [
-            "Scroll ที่เมื่อเปิดออกจะเลือกรับ Costume Gatchaman (Headgear) ได้ 1 ชิ้นจาก 6 ชิ้น",
-            " ",
-            "[ไอเท็มที่เลือกรับได้]",
-            "Costume Ken the Eagle",
-            "Costume Joe the Condor",
-            "Costume Jun the Swan",
-            "Costume Jinpei the Swallow",
-            "Costume Ryu the Owl",
-            "Costume Leader of Galactor"
-        ],
-        "identifiedDisplayName": "Costume Gatchaman Selection Scroll I",
-        "identifiedResourceName": "열혈스크롤",
-        "identifiedDescriptionName": [
-            "Scroll ที่เมื่อเปิดออกจะเลือกรับ Costume Gatchaman (Headgear) ได้ 1 ชิ้นจาก 6 ชิ้น",
-            " ",
-            "[ไอเท็มที่เลือกรับได้]",
-            "Costume Ken the Eagle",
-            "Costume Joe the Condor",
-            "Costume Jun the Swan",
-            "Costume Jinpei the Swallow",
-            "Costume Ryu the Owl",
-            "Costume Leader of Galactor",
-            "น้ำหนัก : 0"
-        ],
-        "slotCount": 0,
-        "ClassNum": 0,
-        "costume": false
-    },
-    "106301": {
-        "unidentifiedDisplayName": "Costume Gatchaman Selection Scroll II",
-        "unidentifiedResourceName": "열혈스크롤",
-        "unidentifiedDescriptionName": [
-            "Scroll ที่เมื่อเปิดออกจะเลือกรับ Costume Gatchaman (Effect) ได้ 1 ชิ้นจาก 2 ชิ้น",
-            " ",
-            "[ไอเท็มที่เลือกรับได้]",
-            "Costume Dr.Nambu's Emergency Transmission",
-            "Operation Phoenix Footprints (Garment)"
-        ],
-        "identifiedDisplayName": "Costume Gatchaman Selection Scroll II",
-        "identifiedResourceName": "열혈스크롤",
-        "identifiedDescriptionName": [
-            "Scroll ที่เมื่อเปิดออกจะเลือกรับ Costume Gatchaman (Effect) ได้ 1 ชิ้นจาก 2 ชิ้น",
-            " ",
-            "[ไอเท็มที่เลือกรับได้]",
-            "Costume Dr.Nambu's Emergency Transmission",
-            "Operation Phoenix Footprints (Garment)",
-            "น้ำหนัก : 0"
-        ],
-        "slotCount": 0,
-        "ClassNum": 0,
-        "costume": false
-    },
-    "106302": {
-        "unidentifiedDisplayName": "Costume Gatchaman Selection Scroll III",
-        "unidentifiedResourceName": "열혈스크롤",
-        "unidentifiedDescriptionName": [
-            "Scroll ที่เมื่อเปิดออกจะเลือกรับ Costume Gatchaman (Lower) ได้ 1 ชิ้นจาก 2 ชิ้น",
-            " ",
-            "[ไอเท็มที่เลือกรับได้]",
-            "Costume Gatchaman, Move Out!",
-            "Costume Farewell, Gatchaman!"
-        ],
-        "identifiedDisplayName": "Costume Gatchaman Selection Scroll III",
-        "identifiedResourceName": "열혈스크롤",
-        "identifiedDescriptionName": [
-            "Scroll ที่เมื่อเปิดออกจะเลือกรับ Costume Gatchaman (Lower) ได้ 1 ชิ้นจาก 2 ชิ้น",
-            " ",
-            "[ไอเท็มที่เลือกรับได้]",
-            "Costume Gatchaman, Move Out!",
-            "Costume Farewell, Gatchaman!",
-            "น้ำหนัก : 0"
-        ],
-        "slotCount": 0,
-        "ClassNum": 0,
-        "costume": false
-    },
-    "200949": {
-        "unidentifiedDisplayName": "Gatchaman Collaboration Package I",
-        "unidentifiedResourceName": "2019_SStarR_Tbox",
-        "unidentifiedDescriptionName": [
-            "^ff0000ไอเท็มนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
-            "",
-            "กล่องแพ็คเกจที่บรรจุ Costume Gatchaman Selection Scroll I ไว้",
-            "ภายในบรรจุไอเท็มดังนี้",
-            "",
-            "[ไอเท็มที่ได้รับ]",
-            "VIP Black Coin 500 ea",
-            "Costume Gatchaman Selection Scroll I 1 ea",
-            "[Not For Sale] Enriched Elunium 1 ea",
-            "[Not For Sale] Enriched Oridecon 1 ea"
-        ],
-        "identifiedDisplayName": "Gatchaman Collaboration Package I",
-        "identifiedResourceName": "2019_SStarR_Tbox",
-        "identifiedDescriptionName": [
-            "^ff0000ไอเท็มนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
-            "",
-            "กล่องแพ็คเกจที่บรรจุ Costume Gatchaman Selection Scroll I ไว้",
-            "ภายในบรรจุไอเท็มดังนี้",
-            "",
-            "[ไอเท็มที่ได้รับ]",
-            "VIP Black Coin 500 ea",
-            "Costume Gatchaman Selection Scroll I 1 ea",
-            "[Not For Sale] Enriched Elunium 1 ea",
-            "[Not For Sale] Enriched Oridecon 1 ea",
-            "น้ำหนัก 0"
-        ],
-        "slotCount": 0,
-        "ClassNum": 0,
-        "costume": false
-    },
-    "200950": {
-        "unidentifiedDisplayName": "Gatchaman Collaboration Package II",
-        "unidentifiedResourceName": "2019_SStarR_Tbox",
-        "unidentifiedDescriptionName": [
-            "^ff0000ไอเท็มนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
-            "",
-            "กล่องแพ็คเกจที่บรรจุ Costume Gatchaman Selection Scroll II ไว้",
-            "ภายในบรรจุไอเท็มดังนี้",
-            "",
-            "[ไอเท็มที่ได้รับ]",
-            "VIP Black Coin 500 ea",
-            "Costume Gatchaman Selection Scroll II 1 ea",
-            "[Not For Sale] Enriched Elunium 1 ea",
-            "[Not For Sale] Enriched Oridecon 1 ea"
-        ],
-        "identifiedDisplayName": "Gatchaman Collaboration Package II",
-        "identifiedResourceName": "2019_SStarR_Tbox",
-        "identifiedDescriptionName": [
-            "^ff0000ไอเท็มนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
-            "",
-            "กล่องแพ็คเกจที่บรรจุ Costume Gatchaman Selection Scroll II ไว้",
-            "ภายในบรรจุไอเท็มดังนี้",
-            "",
-            "[ไอเท็มที่ได้รับ]",
-            "VIP Black Coin 500 ea",
-            "Costume Gatchaman Selection Scroll II 1 ea",
-            "[Not For Sale] Enriched Elunium 1 ea",
-            "[Not For Sale] Enriched Oridecon 1 ea",
-            "น้ำหนัก 0"
-        ],
-        "slotCount": 0,
-        "ClassNum": 0,
-        "costume": false
-    },
-    "200951": {
-        "unidentifiedDisplayName": "Gatchaman Collaboration Package III",
-        "unidentifiedResourceName": "2019_SStarR_Tbox",
-        "unidentifiedDescriptionName": [
-            "^ff0000ไอเท็มนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
-            "",
-            "กล่องแพ็คเกจที่บรรจุ Costume Gatchaman Selection Scroll III ไว้",
-            "ภายในบรรจุไอเท็มดังนี้",
-            "",
-            "[ไอเท็มที่ได้รับ]",
-            "VIP Black Coin 500 ea",
-            "Costume Gatchaman Selection Scroll III 1 ea",
-            "[Not For Sale] Enriched Elunium 1 ea",
-            "[Not For Sale] Enriched Oridecon 1 ea"
-        ],
-        "identifiedDisplayName": "Gatchaman Collaboration Package III",
-        "identifiedResourceName": "2019_SStarR_Tbox",
-        "identifiedDescriptionName": [
-            "^ff0000ไอเท็มนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
-            "",
-            "กล่องแพ็คเกจที่บรรจุ Costume Gatchaman Selection Scroll III ไว้",
-            "ภายในบรรจุไอเท็มดังนี้",
-            "",
-            "[ไอเท็มที่ได้รับ]",
-            "VIP Black Coin 500 ea",
-            "Costume Gatchaman Selection Scroll III 1 ea",
-            "[Not For Sale] Enriched Elunium 1 ea",
-            "[Not For Sale] Enriched Oridecon 1 ea",
-            "",
-            "น้ำหนัก 0"
-        ],
-        "slotCount": 0,
-        "ClassNum": 0,
-        "costume": false
+        "slotCount": 1,
+        "ClassNum": 0
     }
 }

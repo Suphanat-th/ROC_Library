@@ -9,59 +9,91 @@ interface JobEntry {
   icon: string;
   baseASPD: number;    // Job base ASPD (bare hand)
   shieldPenalty: number; // Shield ASPD penalty (negative, 0 = can't equip)
+  weapons: number[];   // Allowed weapon indexes (from WEAPONS array)
+  weaponFactors: Record<number, number>; // weapon idx -> ASPD factor (negative = penalty)
 }
 
 interface WeaponEntry {
   label: string;
-  factor: number;       // Weapon factor used in formula
   canOffHand: boolean;  // Can be used in off-hand (dual wield)
 }
 
 const JOBS: JobEntry[] = [
-  { label: "Novice",         icon: "🧑", baseASPD: 156, shieldPenalty: -10 },
-  { label: "Swordsman",     icon: "⚔️",  baseASPD: 156, shieldPenalty:  -5 },
-  { label: "Knight",        icon: "🛡️", baseASPD: 156, shieldPenalty:  -5 },
-  { label: "Acolyte",       icon: "✨",  baseASPD: 156, shieldPenalty:  -7 },
-  { label: "Priest",        icon: "🙏", baseASPD: 156, shieldPenalty:  -5 },
-  { label: "Mage",          icon: "🔮", baseASPD: 146, shieldPenalty: -10 },
-  { label: "Wizard",        icon: "🌀", baseASPD: 146, shieldPenalty:  -8 },
-  { label: "Merchant",      icon: "💰", baseASPD: 156, shieldPenalty:  -5 },
-  { label: "Blacksmith",    icon: "🔨", baseASPD: 156, shieldPenalty:  -5 },
-  { label: "Archer",        icon: "🏹", baseASPD: 156, shieldPenalty:  -9 },
-  { label: "Hunter",        icon: "🦅", baseASPD: 156, shieldPenalty:  -9 },
-  { label: "Thief",         icon: "🗡️", baseASPD: 156, shieldPenalty:  -6 },
-  { label: "Assassin",      icon: "💀", baseASPD: 156, shieldPenalty:  -6 },
-  { label: "Crusader",      icon: "⛪",  baseASPD: 156, shieldPenalty:  -5 },
-  { label: "Bard/Dancer",   icon: "🎵", baseASPD: 156, shieldPenalty:  -7 },
-  { label: "Sage",          icon: "📖", baseASPD: 151, shieldPenalty: -10 },
-  { label: "Monk",          icon: "👊", baseASPD: 156, shieldPenalty:  -5 },
-  { label: "Rogue",         icon: "🎭", baseASPD: 156, shieldPenalty:  -5 },
-  { label: "Alchemist",     icon: "⚗️", baseASPD: 156, shieldPenalty:  -4 },
-  { label: "Taekwon Kid",   icon: "🥋", baseASPD: 156, shieldPenalty:  -6 },
-  { label: "Taekwon Master",icon: "🏆", baseASPD: 156, shieldPenalty:  -6 },
-  { label: "Soul Linker",   icon: "🌟", baseASPD: 146, shieldPenalty:  -8 },
-  { label: "Ninja",         icon: "🌙", baseASPD: 156, shieldPenalty:  -6 },
-  { label: "Gunslinger",    icon: "🔫", baseASPD: 146, shieldPenalty: -50 },
+  { label: "Novice",          icon: "🧑",  baseASPD: 156, shieldPenalty: -10, weapons: [0,1,2,6,8,9],           weaponFactors: {1:-15,2:-17,6:-10,8:-10,9:-25} },
+  { label: "Swordsman",      icon: "⚔️",  baseASPD: 156, shieldPenalty:  -5, weapons: [0,1,2,3,4,5,6,7,8],      weaponFactors: {1:-7,2:-7,3:-14,4:-17,5:-25,6:-15,7:-20,8:-10} },
+  { label: "Knight",         icon: "🛡️", baseASPD: 156, shieldPenalty:  -5, weapons: [0,1,2,3,4,5,6,7,8],      weaponFactors: {1:-9,2:-5,3:-12,4:-15,5:-25,6:-10,7:-15,8:-5} },
+  { label: "Acolyte",        icon: "✨",  baseASPD: 156, shieldPenalty:  -7, weapons: [0,8,9],                   weaponFactors: {8:-5,9:-20} },
+  { label: "Priest",         icon: "🙏",  baseASPD: 156, shieldPenalty:  -5, weapons: [0,8,9,10,12,16],          weaponFactors: {8:-3,9:-20,10:-20,12:-20,16:-4} },
+  { label: "Mage",           icon: "🔮",  baseASPD: 146, shieldPenalty: -10, weapons: [0,1,9,10],                weaponFactors: {1:0,9:-5,10:-5} },
+  { label: "Wizard",         icon: "🌀",  baseASPD: 146, shieldPenalty:  -8, weapons: [0,1,9,10],                weaponFactors: {1:-4,9:-3,10:-3} },
+  { label: "Merchant",       icon: "💰",  baseASPD: 156, shieldPenalty:  -5, weapons: [0,1,2,6,7,8],             weaponFactors: {1:-12,2:-12,6:-8,7:-15,8:-10} },
+  { label: "Blacksmith",     icon: "🔨",  baseASPD: 156, shieldPenalty:  -5, weapons: [0,1,2,6,7,8],             weaponFactors: {1:-10,2:-10,6:-6,7:-13,8:-8} },
+  { label: "Archer",         icon: "🏹",  baseASPD: 156, shieldPenalty:  -9, weapons: [0,1,11],                  weaponFactors: {1:-15,11:-10} },
+  { label: "Hunter",         icon: "🦅",  baseASPD: 156, shieldPenalty:  -9, weapons: [0,1,11],                  weaponFactors: {1:-13,11:-8} },
+  { label: "Thief",          icon: "🗡️", baseASPD: 156, shieldPenalty:  -6, weapons: [0,1,2,6,13],              weaponFactors: {1:-8,2:-10,6:-20,13:-13} },
+  { label: "Assassin",       icon: "💀",  baseASPD: 156, shieldPenalty:  -6, weapons: [0,1,2,6,13,18,19,22],    weaponFactors: {1:-2,2:-10,6:-11,13:-2,18:-10,19:-12,22:-12} },
+  { label: "Crusader",       icon: "⛪",  baseASPD: 156, shieldPenalty:  -5, weapons: [0,1,2,3,4,5,6,7,8],      weaponFactors: {1:-8,2:-3,3:-15,4:-13,5:-12,6:-10,7:-15,8:-5} },
+  { label: "Bard/Dancer",    icon: "🎵",  baseASPD: 156, shieldPenalty:  -7, weapons: [0,1,14,15],              weaponFactors: {1:-13,14:-8,15:-8} },
+  { label: "Sage",           icon: "📖",  baseASPD: 151, shieldPenalty: -10, weapons: [0,1,9,10,16],             weaponFactors: {1:-8,9:-10,10:-10,16:2} },
+  { label: "Monk",           icon: "👊",  baseASPD: 156, shieldPenalty:  -5, weapons: [0,8,9,10,12],             weaponFactors: {8:-3,9:-20,10:-18,12:0} },
+  { label: "Rogue",          icon: "🎭",  baseASPD: 156, shieldPenalty:  -5, weapons: [0,1,2,6,13],              weaponFactors: {1:-5,2:-10,6:-159,13:-10} },
+  { label: "Alchemist",      icon: "⚗️", baseASPD: 156, shieldPenalty:  -4, weapons: [0,1,2,6,7,8],             weaponFactors: {1:-10,2:-5,6:-5,7:-12,8:-5} },
+  { label: "Taekwon Kid",    icon: "🥋",  baseASPD: 156, shieldPenalty:  -6, weapons: [0],                       weaponFactors: {} },
+  { label: "Taekwon Master", icon: "🏆",  baseASPD: 156, shieldPenalty:  -6, weapons: [0],                       weaponFactors: {} },
+  { label: "Soul Linker",    icon: "🌟",  baseASPD: 146, shieldPenalty:  -8, weapons: [0,9,10,16],               weaponFactors: {9:-3,10:-3,16:-10} },
+  { label: "Ninja",          icon: "🌙",  baseASPD: 156, shieldPenalty:  -6, weapons: [0,1,17],                  weaponFactors: {1:-3,17:-15} },
+  { label: "Gunslinger",     icon: "🔫",  baseASPD: 149, shieldPenalty: -50, weapons: [0,18,19,20,21,22],        weaponFactors: {18:5,19:-5,20:-40,21:0,22:-50} },
 ];
 
 const WEAPONS: WeaponEntry[] = [
-  { label: "No Weapon (Bare Hand)",  factor:  0, canOffHand: false },
-  { label: "Dagger",                factor:  0, canOffHand: true  },
-  { label: "One-Hand Sword",        factor:  0, canOffHand: true  },
-  { label: "Two-Hand Sword",        factor: 10, canOffHand: false },
-  { label: "One-Hand Spear",        factor: 10, canOffHand: false },
-  { label: "Two-Hand Spear",        factor: 10, canOffHand: false },
-  { label: "One-Hand Axe",          factor: 15, canOffHand: true  },
-  { label: "Two-Hand Axe",          factor: 25, canOffHand: false },
-  { label: "Mace",                  factor:  0, canOffHand: true  },
-  { label: "One-Hand Staff / Rod",  factor:  0, canOffHand: true  },
-  { label: "Two-Hand Staff",        factor: 20, canOffHand: false },
-  { label: "Bow",                   factor: 10, canOffHand: false },
-  { label: "Knuckle",               factor:  0, canOffHand: false },
-  { label: "Katar",                 factor:  0, canOffHand: true  },
-  { label: "Musical Instrument",    factor: 10, canOffHand: false },
-  { label: "Whip",                  factor: 10, canOffHand: false },
-  { label: "Book",                  factor:  0, canOffHand: true  },
+  { label: "No Weapon (Bare Hand)",  canOffHand: false },  // 0
+  { label: "Dagger",                canOffHand: true  },  // 1
+  { label: "One-Hand Sword",        canOffHand: true  },  // 2
+  { label: "Two-Hand Sword",        canOffHand: false },  // 3
+  { label: "One-Hand Spear",        canOffHand: false },  // 4
+  { label: "Two-Hand Spear",        canOffHand: false },  // 5
+  { label: "One-Hand Axe",          canOffHand: true  },  // 6
+  { label: "Two-Hand Axe",          canOffHand: false },  // 7
+  { label: "Mace",                  canOffHand: true  },  // 8
+  { label: "One-Hand Staff / Rod",  canOffHand: true  },  // 9
+  { label: "Two-Hand Staff",        canOffHand: false },  // 10
+  { label: "Bow",                   canOffHand: false },  // 11
+  { label: "Knuckle",               canOffHand: false },  // 12
+  { label: "Katar",                 canOffHand: true  },  // 13
+  { label: "Musical Instrument",    canOffHand: false },  // 14
+  { label: "Whip",                  canOffHand: false },  // 15
+  { label: "Book",                  canOffHand: true  },  // 16
+  { label: "Huuma Shuriken",        canOffHand: false },  // 17
+  { label: "Handgun",               canOffHand: false },  // 18
+  { label: "Rifle",                 canOffHand: false },  // 19
+  { label: "Shotgun",               canOffHand: false },  // 20
+  { label: "Gatling Gun",           canOffHand: false },  // 21
+  { label: "Grenade Launcher",      canOffHand: false },  // 22
+];
+
+// ─── Class Tier ───────────────────────────────────────────────────────────────
+
+type ClassTier = "class12" | "extended" | "awakened";
+
+interface ClassTierEntry {
+  label: string;
+  icon: string;
+  maxASPD: number;
+  available: boolean;
+}
+
+const CLASS_TIERS: Record<ClassTier, ClassTierEntry> = {
+  class12:  { label: "Class 1–2",      icon: "⚔️",  maxASPD: 190, available: true  },
+  extended: { label: "Extended Class",  icon: "🌟",  maxASPD: 193, available: true  },
+  awakened: { label: "Awakened Class",  icon: "✨",  maxASPD: 193, available: false },
+};
+
+// Extended Class jobs (Super Extended Novice, Rebellion, Kagerou, Oboro)
+const JOBS_EXTENDED: JobEntry[] = [
+  { label: "Super Extended Novice", icon: "🧑‍🎓", baseASPD: 156, shieldPenalty: -10, weapons: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16], weaponFactors: {1:-15,2:-17,3:-20,4:-17,5:-25,6:-10,7:-20,8:-10,9:-25,10:-25,11:-10,12:-20,13:-20,14:-10,15:-10,16:-10} },
+  { label: "Rebellion",             icon: "🔫",  baseASPD: 154, shieldPenalty: -50, weapons: [0,18,19,20,21,22],        weaponFactors: {18:5,19:-5,20:-40,21:0,22:-50} },
+  { label: "Kagerou",               icon: "🌙",  baseASPD: 156, shieldPenalty:  -6, weapons: [0,1,13,17],               weaponFactors: {1:-3,13:-2,17:-15} },
+  { label: "Oboro",                 icon: "🌸",  baseASPD: 156, shieldPenalty:  -6, weapons: [0,1,13,17],               weaponFactors: {1:-3,13:-2,17:-15} },
 ];
 
 // ─── Potion Data ─────────────────────────────────────────────────────────────
@@ -103,7 +135,8 @@ function calcASPD(
   potionMod: number,
   skillMod: number,
   equipMod: number,
-  flatASPD: number
+  flatASPD: number,
+  maxASPD = 193
 ): {
   combinedBase: number;
   aspdPenalty: number;
@@ -141,8 +174,8 @@ function calcASPD(
   const equipRaw = (195 - baseASPD) * equipMod;
   const equipContrib = parseFloat((Math.floor(equipRaw * 10) / 10).toFixed(1));
 
-  // Final ASPD — floor, cap 193
-  const final = Math.min(193, Math.max(0, Math.floor(baseASPD + equipContrib + flatASPD)));
+  // Final ASPD — floor, cap maxASPD
+  const final = Math.min(maxASPD, Math.max(0, Math.floor(baseASPD + equipContrib + flatASPD)));
 
   return { combinedBase, aspdPenalty, aspdCorrection, inner, baseASPD, equipContrib, final };
 }
@@ -159,17 +192,18 @@ function stepsToASPD(
   potionMod: number,
   skillMod: number,
   equipMod: number,
-  flatASPD: number
+  flatASPD: number,
+  maxASPD = 193
 ): { agiNeeded: number | null; dexNeeded: number | null } {
   const MAX_SCAN = 600;
   let agiNeeded: number | null = null;
   for (let extra = 1; extra <= MAX_SCAN; extra++) {
-    const r = calcASPD(jobBaseASPD, weaponFactor, shieldPenalty, agi + extra, dex, potionMod, skillMod, equipMod, flatASPD);
+    const r = calcASPD(jobBaseASPD, weaponFactor, shieldPenalty, agi + extra, dex, potionMod, skillMod, equipMod, flatASPD, maxASPD);
     if (r.final >= target) { agiNeeded = extra; break; }
   }
   let dexNeeded: number | null = null;
   for (let extra = 1; extra <= MAX_SCAN; extra++) {
-    const r = calcASPD(jobBaseASPD, weaponFactor, shieldPenalty, agi, dex + extra, potionMod, skillMod, equipMod, flatASPD);
+    const r = calcASPD(jobBaseASPD, weaponFactor, shieldPenalty, agi, dex + extra, potionMod, skillMod, equipMod, flatASPD, maxASPD);
     if (r.final >= target) { dexNeeded = extra; break; }
   }
   return { agiNeeded, dexNeeded };
@@ -335,13 +369,18 @@ export default function AspdCalcPage() {
   const [flatASPD, setFlatASPD] = useState(0);
   const [showFormula, setShowFormula] = useState(false);
   const [targetASPD, setTargetASPD] = useState(190);
+  const [classTier, setClassTier] = useState<ClassTier>("class12");
 
-  const job = JOBS[jobIdx];
-  const weapon = WEAPONS[weaponIdx];
+  const currentJobs = classTier === "extended" ? JOBS_EXTENDED : JOBS;
+  const maxASPD = CLASS_TIERS[classTier].maxASPD;
+  const job = currentJobs[Math.min(jobIdx, currentJobs.length - 1)];
+  const safeWeaponIdx = job.weapons.includes(weaponIdx) ? weaponIdx : (job.weapons[0] ?? 0);
+  const weapon = WEAPONS[safeWeaponIdx];
+  const weaponFactor = job.weaponFactors[safeWeaponIdx] ?? 0;
   const potion = POTIONS[potionIdx];
   const offHandFactor =
     offHand === "shield" ? job.shieldPenalty :
-    offHand.startsWith("w:") ? -WEAPONS[parseInt(offHand.slice(2))].factor :
+    offHand.startsWith("w:") ? (job.weaponFactors[parseInt(offHand.slice(2))] ?? 0) :
     0;
   const offHandLabel =
     offHand === "none" ? "—" :
@@ -356,18 +395,19 @@ export default function AspdCalcPage() {
     () =>
       calcASPD(
         job.baseASPD,
-        weapon.factor,
+        weaponFactor,
         offHandFactor,
         agi,
         dex,
         poisonWarning ? 0 : potion.mod,
         skillPct / 100,
         equipPct / 100,
-        flatASPD
+        flatASPD,
+        maxASPD
       ),
     [
       job.baseASPD,
-      weapon.factor,
+      weaponFactor,
       offHandFactor,
       agi,
       dex,
@@ -376,6 +416,7 @@ export default function AspdCalcPage() {
       skillPct,
       equipPct,
       flatASPD,
+      maxASPD,
     ]
   );
 
@@ -385,12 +426,12 @@ export default function AspdCalcPage() {
   const reverseCalc = useMemo(() =>
     stepsToASPD(
       targetASPD,
-      job.baseASPD, weapon.factor, offHandFactor,
+      job.baseASPD, weaponFactor, offHandFactor,
       agi, dex,
       poisonWarning ? 0 : potion.mod,
-      skillPct / 100, equipPct / 100, flatASPD
+      skillPct / 100, equipPct / 100, flatASPD, maxASPD
     ),
-    [targetASPD, job.baseASPD, weapon.factor, offHandFactor, agi, dex, potion.mod, poisonWarning, skillPct, equipPct, flatASPD]
+    [targetASPD, job.baseASPD, weaponFactor, offHandFactor, agi, dex, potion.mod, poisonWarning, skillPct, equipPct, flatASPD, maxASPD]
   );
 
   return (
@@ -448,63 +489,103 @@ export default function AspdCalcPage() {
                 ⚙️ Job &amp; Equipment
               </h2>
 
-              <SelectField label="Job Class">
+              <SelectField label="Class Tier">
                 <select
                   className="w-full rounded-lg bg-white/5 border border-white/15 text-white text-sm px-3 py-2 focus:outline-none focus:border-sky-400/60 transition-all"
-                  value={jobIdx}
-                  onChange={(e) => setJobIdx(Number(e.target.value))}
+                  value={classTier}
+                  onChange={(e) => {
+                    const newTier = e.target.value as ClassTier;
+                    const jobs = newTier === "extended" ? JOBS_EXTENDED : JOBS;
+                    const firstJob = jobs[0];
+                    setClassTier(newTier);
+                    setJobIdx(0);
+                    if (firstJob && !firstJob.weapons.includes(weaponIdx)) {
+                      setWeaponIdx(firstJob.weapons[0] ?? 0);
+                    }
+                  }}
                 >
-                  {JOBS.map((j, i) => (
-                    <option
-                      key={i}
-                      value={i}
-                      className="bg-gray-900 text-white"
-                    >
-                      {j.icon} {j.label}
-                    </option>
-                  ))}
+                  <option value="class12" className="bg-gray-900 text-white">⚔️ Class 1–2 (Max ASPD 190)</option>
+                  <option value="extended" className="bg-gray-900 text-white">🌟 Extended Class (Max ASPD 193)</option>
+                  <option value="awakened" className="bg-gray-900 text-white">✨ Awakened Class (Coming Soon)</option>
                 </select>
               </SelectField>
 
-              <SelectField
-                label="Weapon Type"
-                hint={`Weapon factor: +${weapon.factor}`}
-              >
-                <select
-                  className="w-full rounded-lg bg-white/5 border border-white/15 text-white text-sm px-3 py-2 focus:outline-none focus:border-sky-400/60 transition-all"
-                  value={weaponIdx}
-                  onChange={(e) => setWeaponIdx(Number(e.target.value))}
-                >
-                  {WEAPONS.map((w, i) => (
-                    <option
-                      key={i}
-                      value={i}
-                      className="bg-gray-900 text-white"
+              {classTier === "awakened" ? (
+                <div className="flex items-center gap-3 rounded-xl border border-yellow-500/30 bg-yellow-500/5 px-4 py-5">
+                  <span className="text-3xl">🚧</span>
+                  <div>
+                    <p className="text-sm font-bold text-yellow-400">Coming Soon</p>
+                    <p className="text-xs text-white/40 mt-0.5">ยังไม่มีข้อมูล ASPD สำหรับ Awakened Class</p>
+                  </div>
+                </div>
+              ) : (
+                <>
+                  <SelectField label="Job Class">
+                    <select
+                      className="w-full rounded-lg bg-white/5 border border-white/15 text-white text-sm px-3 py-2 focus:outline-none focus:border-sky-400/60 transition-all"
+                      value={jobIdx}
+                      onChange={(e) => {
+                        const newIdx = Number(e.target.value);
+                        const newJob = currentJobs[Math.min(newIdx, currentJobs.length - 1)];
+                        setJobIdx(newIdx);
+                        if (newJob && !newJob.weapons.includes(weaponIdx)) {
+                          setWeaponIdx(newJob.weapons[0] ?? 0);
+                        }
+                      }}
                     >
-                      {w.label} {w.factor > 0 ? `(+${w.factor})` : ""}
-                    </option>
-                  ))}
-                </select>
-              </SelectField>
+                      {currentJobs.map((j, i) => (
+                        <option
+                          key={i}
+                          value={i}
+                          className="bg-gray-900 text-white"
+                        >
+                          {j.icon} {j.label}
+                        </option>
+                      ))}
+                    </select>
+                  </SelectField>
 
-              <SelectField
-                label="Off-Hand"
-                hint={`Off-hand penalty: ${offHandFactor}`}
-              >
-                <select
-                  className="w-full rounded-lg bg-white/5 border border-white/15 text-white text-sm px-3 py-2 focus:outline-none focus:border-sky-400/60 transition-all"
-                  value={offHand}
-                  onChange={(e) => setOffHand(e.target.value)}
-                >
-                  <option value="none" className="bg-gray-900 text-white">— ว่าง (ไม่ใส่) —</option>
-                  <option value="shield" className="bg-gray-900 text-white">🛡️ Shield ({job.shieldPenalty})</option>
-                  <optgroup label="⚔️ Dual Wield" className="bg-gray-900 text-white/60">
-                    {WEAPONS.map((w, idx) => w.canOffHand ? (
-                      <option key={idx} value={`w:${idx}`} className="bg-gray-900 text-white">{w.label}</option>
-                    ) : null)}
-                  </optgroup>
-                </select>
-              </SelectField>
+                  <SelectField
+                    label="Weapon Type"
+                    hint={`Weapon factor: ${weaponFactor >= 0 ? '+' : ''}${weaponFactor}`}
+                  >
+                    <select
+                      className="w-full rounded-lg bg-white/5 border border-white/15 text-white text-sm px-3 py-2 focus:outline-none focus:border-sky-400/60 transition-all"
+                      value={safeWeaponIdx}
+                      onChange={(e) => setWeaponIdx(Number(e.target.value))}
+                    >
+                      {WEAPONS.map((w, i) => job.weapons.includes(i) ? (
+                        <option
+                          key={i}
+                          value={i}
+                          className="bg-gray-900 text-white"
+                        >
+                          {w.label} {job.weaponFactors[i] !== undefined ? `(${job.weaponFactors[i] >= 0 ? '+' : ''}${job.weaponFactors[i]})` : ""}
+                        </option>
+                      ) : null)}
+                    </select>
+                  </SelectField>
+
+                  <SelectField
+                    label="Off-Hand"
+                    hint={`Off-hand penalty: ${offHandFactor}`}
+                  >
+                    <select
+                      className="w-full rounded-lg bg-white/5 border border-white/15 text-white text-sm px-3 py-2 focus:outline-none focus:border-sky-400/60 transition-all"
+                      value={offHand}
+                      onChange={(e) => setOffHand(e.target.value)}
+                    >
+                      <option value="none" className="bg-gray-900 text-white">— ว่าง (ไม่ใส่) —</option>
+                      <option value="shield" className="bg-gray-900 text-white">🛡️ Shield ({job.shieldPenalty})</option>
+                      <optgroup label="⚔️ Dual Wield" className="bg-gray-900 text-white/60">
+                        {WEAPONS.map((w, idx) => (w.canOffHand && job.weapons.includes(idx)) ? (
+                          <option key={idx} value={`w:${idx}`} className="bg-gray-900 text-white">{w.label}</option>
+                        ) : null)}
+                      </optgroup>
+                    </select>
+                  </SelectField>
+                </>
+              )}
             </div>
 
             {/* Stats Card */}
@@ -624,7 +705,14 @@ export default function AspdCalcPage() {
                 ⚡ Result
               </h2>
 
-              <ASPDGauge aspd={result.final} />
+              {classTier === "awakened" ? (
+                <div className="w-52 h-52 flex flex-col items-center justify-center rounded-full border border-yellow-500/30 bg-yellow-500/5">
+                  <span className="text-4xl">🚧</span>
+                  <p className="text-sm font-bold text-yellow-400 mt-2">Coming Soon</p>
+                </div>
+              ) : (
+                <ASPDGauge aspd={result.final} max={maxASPD} />
+              )}
 
               {/* Breakdown */}
               <div className="w-full space-y-2 text-xs border-t border-white/10 pt-3">
@@ -635,7 +723,7 @@ export default function AspdCalcPage() {
                 </div>
                 <div className="flex justify-between">
                   <span className="text-white/40">Weapon Factor</span>
-                  <span className="text-white font-mono">+{weapon.factor}</span>
+                  <span className="text-white font-mono">{weaponFactor >= 0 ? '+' : ''}{weaponFactor}</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-white/40">Combined Base</span>
@@ -714,11 +802,11 @@ export default function AspdCalcPage() {
                 <input
                   type="number"
                   min={1}
-                  max={193}
+                  max={maxASPD}
                   value={targetASPD}
                   onChange={(e) => {
                     const v = parseInt(e.target.value);
-                    if (!isNaN(v)) setTargetASPD(Math.min(193, Math.max(1, v)));
+                    if (!isNaN(v)) setTargetASPD(Math.min(maxASPD, Math.max(1, v)));
                   }}
                   className="w-24 rounded-lg bg-white/5 border border-white/15 text-white text-sm px-3 py-1.5 focus:outline-none focus:border-purple-400/60 transition-all"
                 />
@@ -879,7 +967,7 @@ export default function AspdCalcPage() {
                 <div className="border-t border-white/10 pt-3">
                   <p className="text-green-400 font-bold text-sm mb-1">⚡ Final ASPD</p>
                   <p className="text-white/70">
-                    = floor( Base ASPD + Equip ASPD % + Flat ASPD ) , max 193
+                    = floor( Base ASPD + Equip ASPD % + Flat ASPD ) , max {maxASPD}
                   </p>
                   <p className="text-green-300 font-bold text-base mt-1">
                     = floor( {result.baseASPD.toFixed(2)} + {result.equipContrib.toFixed(1)} + {flatASPD} )
