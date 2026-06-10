@@ -7,8 +7,10 @@ import { Monster } from "@/types/monster";
 const monsters: Monster[] = MonstersDb();
 
 export default function MonsterEcomDatabase() {
-  const DateFrom = new Date(2026, 4, 6, 6, 0, 0);
-  const DateTo = new Date(2026, 5, 3, 6, 0, 0);
+  const DateFrom = new Date(2026, 5, 4, 6, 0, 0);
+  const DateTo = new Date(2026, 6, 1, 6, 0, 0);
+  const now = new Date();
+  const isEventActive = now >= DateFrom && now <= DateTo;
   const [search, setSearch] = useState("");
   const [selectedRace, setSelectedRace] = useState("All");
   const [selectedMap, setSelectedMap] = useState("All");
@@ -17,38 +19,13 @@ export default function MonsterEcomDatabase() {
 
   // รายชื่อ ID ที่ต้องการแสดง
   const monsterx3Ids = [
-    1141,
-    1066,
-    1067,
-    1068,
-    1044,
-    1144,
-    1069,
-    1045,
-    1158,
-    1264,
-    1023,
-    1273,
-    1686,
-    1152,
-    1153,
-    1177,
-    1213,
-    1189,
-    2313,
-    2314,
-    2309,
-    2310,
-    2312,
-    2315,
-    2311,
-    2201,
-    2204,
-    2203,
-    2198
+    1077, 1130, 1179, 1100, 1102, 1109, 1061, 1143, 1369, 1368, 1378, 1372,
+    1376, 1386, 2353, 2354, 2355, 2356, 2358, 2360, 3020, 3022, 3023, 3021,
+    2221, 2222, 2223, 2224, 2225, 2226, 2227,
   ];
 
   const filteredMonsters = useMemo(() => {
+    if (!isEventActive) return [];
     return monsters
       .filter((m) => monsterx3Ids.includes(m.id))
       .filter((m) => m.name.toLowerCase().includes(search.toLowerCase()))
@@ -68,7 +45,7 @@ export default function MonsterEcomDatabase() {
         // สำคัญ: ต้องนำผลต่างมาคูณกับ modifier เพื่อสลับทิศทาง
         return result * modifier;
       });
-  }, [search, selectedRace, selectedMap, sortBy, sortType]);
+  }, [search, selectedRace, selectedMap, sortBy, sortType, isEventActive]);
 
   const races = [
     "All",
@@ -204,120 +181,146 @@ export default function MonsterEcomDatabase() {
         </div>
 
         <div className="flex flex-wrap gap-8 justify-center">
-          {filteredMonsters.map((m) => (
-            <div
-              key={m.id}
-              className="group relative bg-gray-800 rounded-[2rem] p-8 w-full max-w-[500px] border border-gray-700 hover:border-cyan-500/50 shadow-2xl hover:shadow-cyan-900/10 transition-all duration-500"
-            >
-              {/* Header */}
-              <div className="flex justify-between items-center mb-6">
-                <h2 className="text-3xl font-black text-white group-hover:text-cyan-300 transition-colors uppercase tracking-tight">
-                  {m.name}
-                </h2>
-                <span className="text-sm font-mono bg-gray-700/50 px-3 py-1 rounded-full text-gray-400 border border-gray-600">
-                  #{m.id}
-                </span>
-              </div>
+          {!isEventActive ? (
+            <div className="flex flex-col items-center justify-center py-24 text-center gap-4">
+              <p className="text-4xl font-black text-gray-600 uppercase tracking-widest">
+                Event Ended
+              </p>
+              <p className="text-gray-500 text-sm">
+                Monster x3 EXP/JOB ได้สิ้นสุดลงแล้ว เมื่อวันที่{" "}
+                {DateTo.toLocaleDateString("en-GB", {
+                  day: "2-digit",
+                  month: "long",
+                  year: "numeric",
+                })}
+              </p>
+            </div>
+          ) : (
+            filteredMonsters.map((m) => (
+              <div
+                key={m.id}
+                className="group relative bg-gray-800 rounded-[2rem] p-8 w-full max-w-[500px] border border-gray-700 hover:border-cyan-500/50 shadow-2xl hover:shadow-cyan-900/10 transition-all duration-500"
+              >
+                {/* Header */}
+                <div className="flex justify-between items-center mb-6">
+                  <h2 className="text-3xl font-black text-white group-hover:text-cyan-300 transition-colors uppercase tracking-tight">
+                    {m.name}
+                  </h2>
+                  <span className="text-sm font-mono bg-gray-700/50 px-3 py-1 rounded-full text-gray-400 border border-gray-600">
+                    #{m.id}
+                  </span>
+                </div>
 
-              <div className="grid grid-cols-5 gap-6">
-                {/* Left: Avatar & HP */}
-                <div className="col-span-2 flex flex-col items-center">
-                  <div className="relative w-full aspect-square bg-gray-900 rounded-3xl flex items-center justify-center p-4 mb-4 border border-gray-700/50 shadow-inner group-hover:scale-105 transition-transform duration-500">
-                    <img
-                      src={m.image}
-                      alt={m.name}
-                      className="max-h-full max-w-full object-contain drop-shadow-[0_0_20px_rgba(34,211,238,0.2)]"
+                <div className="grid grid-cols-5 gap-6">
+                  {/* Left: Avatar & HP */}
+                  <div className="col-span-2 flex flex-col items-center">
+                    <div className="relative w-full aspect-square bg-gray-900 rounded-3xl flex items-center justify-center p-4 mb-4 border border-gray-700/50 shadow-inner group-hover:scale-105 transition-transform duration-500">
+                      <img
+                        src={m.image}
+                        alt={m.name}
+                        className="max-h-full max-w-full object-contain drop-shadow-[0_0_20px_rgba(34,211,238,0.2)]"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Right: Detailed Stats */}
+                  <div className="col-span-3 space-y-2 py-2">
+                    <StatRow
+                      label="Level"
+                      value={m.lv}
+                      color="text-yellow-400"
                     />
+                    <StatRow label="Race" value={m.race} />
+                    <StatRow label="Property" value={m.property} isElement />
+                    <StatRow label="Size" value={m.scale} />
+                    <div className="h-px bg-gradient-to-r from-transparent via-gray-700 to-transparent my-4"></div>
+                    <div className="grid grid-cols-3 gap-x-4 gap-y-2">
+                      <StatRow label="DEF" value={m.def} />
+                      <StatRow label="MDEF" value={m.mdef} />
+                      <StatRow
+                        label="HIT"
+                        value={m.hit}
+                        color="text-green-400"
+                      />
+                    </div>
                   </div>
                 </div>
+                {/* BIG HP SECTION */}
+                <div className="mt-8 pt-6 border-t border-gray-700/50 grid grid-cols-2">
+                  <div className="col-span-2">
+                    <p className="text-3xl font-black text-gray-500 uppercase tracking-[0.2em] mb-1">
+                      Health Points
+                    </p>
+                    <p className="text-2xl font-black text-red-500 drop-shadow-[0_2px_4px_rgba(239,68,68,0.3)] tabular-nums">
+                      {Number(m.hp).toLocaleString()}
+                    </p>
+                  </div>
 
-                {/* Right: Detailed Stats */}
-                <div className="col-span-3 space-y-2 py-2">
-                  <StatRow label="Level" value={m.lv} color="text-yellow-400" />
-                  <StatRow label="Race" value={m.race} />
-                  <StatRow label="Property" value={m.property} isElement />
-                  <StatRow label="Size" value={m.scale} />
-                  <div className="h-px bg-gradient-to-r from-transparent via-gray-700 to-transparent my-4"></div>
-                  <div className="grid grid-cols-3 gap-x-4 gap-y-2">
-                    <StatRow label="DEF" value={m.def} />
-                    <StatRow label="MDEF" value={m.mdef} />
-                    <StatRow label="HIT" value={m.hit} color="text-green-400" />
+                  <div className="col-span-1">
+                    <p className="text-3xl font-black text-gray-500">EXP</p>
+                    <p className="text-2xl font-black text-purple-400 drop-shadow-[0_2px_4px_rgba(239,68,68,0.3)] tabular-nums">
+                      {Number(m.expUp).toLocaleString()}
+                    </p>
+                  </div>
+                  <div className="col-span-1">
+                    <p className="text-3xl font-black text-gray-500">Job</p>
+                    <p className="text-2xl font-black text-blue-500 drop-shadow-[0_2px_4px_rgba(239,68,68,0.3)] tabular-nums">
+                      {Number(m.jobUp).toLocaleString()}
+                    </p>
                   </div>
                 </div>
-              </div>
-              {/* BIG HP SECTION */}
-              <div className="mt-8 pt-6 border-t border-gray-700/50 grid grid-cols-2">
-                <div className="col-span-2">
-                  <p className="text-3xl font-black text-gray-500 uppercase tracking-[0.2em] mb-1">
-                    Health Points
+                {/* DYNAMIC ELEMENT SECTION */}
+                <div className="mt-8 pt-6 border-t border-gray-700/50">
+                  <p className="text-xs font-black text-gray-500 uppercase tracking-widest mb-4 flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-blue-500"></span>
+                    Element Resistances & Weaknesses
                   </p>
-                  <p className="text-2xl font-black text-red-500 drop-shadow-[0_2px_4px_rgba(239,68,68,0.3)] tabular-nums">
-                    {Number(m.hp).toLocaleString()}
-                  </p>
-                </div>
-
-                <div className="col-span-1">
-                  <p className="text-3xl font-black text-gray-500">EXP</p>
-                  <p className="text-2xl font-black text-purple-400 drop-shadow-[0_2px_4px_rgba(239,68,68,0.3)] tabular-nums">
-                    {Number(m.expUp).toLocaleString()}
-                  </p>
-                </div>
-                <div className="col-span-1">
-                  <p className="text-3xl font-black text-gray-500">Job</p>
-                  <p className="text-2xl font-black text-blue-500 drop-shadow-[0_2px_4px_rgba(239,68,68,0.3)] tabular-nums">
-                    {Number(m.jobUp).toLocaleString()}
-                  </p>
-                </div>
-              </div>
-              {/* DYNAMIC ELEMENT SECTION */}
-              <div className="mt-8 pt-6 border-t border-gray-700/50">
-                <p className="text-xs font-black text-gray-500 uppercase tracking-widest mb-4 flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-blue-500"></span>
-                  Element Resistances & Weaknesses
-                </p>
-                <div className="flex flex-wrap gap-3">
-                  {m.element ? (
-                    Object.entries(m.element)
-                      // ลบ .filter อันเดิมออก หรือเปลี่ยนเงื่อนไขตามต้องการ
-                      .sort(([_, a], [__, b]) => (b as number) - (a as number))
-                      .map(([el, val]) => (
-                        <div
-                          key={el}
-                          className={`flex flex-col items-center bg-gray-900/80 border rounded-xl px-3 py-2 min-w-[70px] transition-all hover:bg-gray-800 ${
-                            (val as number) > 100
-                              ? "border-green-500/50"
-                              : (val as number) < 100
-                                ? "border-red-500/50"
-                                : "border-gray-700/50"
-                          }`}
-                        >
-                          <span
-                            className={`text-[10px] font-black uppercase mb-1 ${getElementColor(el)}`}
-                          >
-                            {el}
-                          </span>
-                          <span
-                            className={`text-lg font-black ${
+                  <div className="flex flex-wrap gap-3">
+                    {m.element ? (
+                      Object.entries(m.element)
+                        // ลบ .filter อันเดิมออก หรือเปลี่ยนเงื่อนไขตามต้องการ
+                        .sort(
+                          ([_, a], [__, b]) => (b as number) - (a as number),
+                        )
+                        .map(([el, val]) => (
+                          <div
+                            key={el}
+                            className={`flex flex-col items-center bg-gray-900/80 border rounded-xl px-3 py-2 min-w-[70px] transition-all hover:bg-gray-800 ${
                               (val as number) > 100
-                                ? "text-green-400"
+                                ? "border-green-500/50"
                                 : (val as number) < 100
-                                  ? "text-red-400"
-                                  : "text-white"
+                                  ? "border-red-500/50"
+                                  : "border-gray-700/50"
                             }`}
                           >
-                            {val}%
-                          </span>
-                        </div>
-                      ))
-                  ) : (
-                    <span className="text-xs text-gray-600 italic">
-                      No element data available
-                    </span>
-                  )}
+                            <span
+                              className={`text-[10px] font-black uppercase mb-1 ${getElementColor(el)}`}
+                            >
+                              {el}
+                            </span>
+                            <span
+                              className={`text-lg font-black ${
+                                (val as number) > 100
+                                  ? "text-green-400"
+                                  : (val as number) < 100
+                                    ? "text-red-400"
+                                    : "text-white"
+                              }`}
+                            >
+                              {val}%
+                            </span>
+                          </div>
+                        ))
+                    ) : (
+                      <span className="text-xs text-gray-600 italic">
+                        No element data available
+                      </span>
+                    )}
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))
+          )}
         </div>
       </main>
     </div>

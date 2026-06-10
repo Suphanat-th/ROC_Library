@@ -45,6 +45,7 @@ function parseOption(text: string[]): string {
     } else if (f.includes("ตำแหน่ง :")) {
       const splitType = f.split("น้ำหนัก");
       const equimentPosition = splitType[0].split(":");
+      console.log('splitType1',splitType[1])
       const equimentWeight = splitType[1].split(":");
       textDesc.push(
         `<span>${equimentPosition[0]}</span>:<span class='text-orange-600 font-extrabold'>${equimentPosition[1]}</span><br>`

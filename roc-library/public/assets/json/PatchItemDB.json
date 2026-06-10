@@ -1,649 +1,229 @@
 {
-    "570009": {
-        "unidentifiedDisplayName": "Violin",
-        "unidentifiedResourceName": "바이올린",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "Awakened Trumpet Shell",
-        "identifiedResourceName": "Up_Trumpet_Shell_K",
-        "identifiedDescriptionName": [
-            "สามารถใช้งานสกิล [Shield Chain] Lv.10",
-            "ทุก ๆ การอัพเกรด 2 ขั้น ATK +30",
-            "ทุก ๆ การอัพเกรด 3 ขั้น เพิ่ม Damage ของสกิล [Shield Chain] 50%",
-            "เมื่ออัพเกรดถึงขั้น 9 ลด VCT ของสกิล [Shield Chain] 100%",
-            "เมื่ออัพเกรดถึงขั้น 11 เพิ่มพลังโจมตีระยะไกล + 20%, เพิ่มพลังโจมตีศัตรูประเภทบอส 15%",
-            "เมื่ออัพเกรดถึงขั้น 12 จะไม่เกิด Penalty ขนาดอาวุธ",
-            "ประเภท : Instrument พลังโจมตี : 210",
-            "น้ำหนัก : 70",
-            "เลเวลอาวุธ : 4",
-            "เลเวลที่ต้องการ : 98",
-            "อาชีพที่ใส่ได้ : Clown"
-        ],
-        "slotCount": 2,
-        "ClassNum": 13,
-        "costume": false
-    },
-    "580009": {
-        "unidentifiedDisplayName": "Rope",
-        "unidentifiedResourceName": "로프",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "Awakend Barbed Wire Whip K",
-        "identifiedResourceName": "Up_Barb_Wire_K",
-        "identifiedDescriptionName": [
-            "MATK +210",
-            "สามารถใช้สกิล Heaven’s Drive Lv.10 ได้",
-            "ทุก ๆ การอัพเกรด 2 ขั้น MATK +20",
-            "ทุก ๆ การอัพเกรด 3 ขั้น เพิ่ม Damage ของสกิล [Heaven’s Drive] 50%",
-            "เมื่ออัพเกรดถึงขั้น 9 ลด VCT ของสกิล [Heaven’s Drive] 100%",
-            "เมื่ออัพเกรดถึงขั้น 11 MATK + 10%, เพิ่ม Damage ทางเวทมนตร์ต่อศัตรูประเภท Boss 15%",
-            "เมื่ออัพเกรดถึงขั้น 12 เพิ่ม Damage ทางเวทมนตร์ธาตุดิน 20%",
-            "ประเภท : Whip พลังโจมตี : 160",
-            "น้ำหนัก : 70",
-            "เลเวลอาวุธ : 4",
-            "เลเวลที่ต้องการ : 98",
-            "อาชีพที่ใส่ได้ : Gypsy"
-        ],
-        "slotCount": 2,
-        "ClassNum": 14,
-        "costume": false
-    },
-    "530006": {
-        "unidentifiedDisplayName": "Spear",
-        "unidentifiedResourceName": "쟈벨린",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "Awakened Aquatic Spear ",
-        "identifiedResourceName": "Up_Undine_Spear_K",
-        "identifiedDescriptionName": [
-            "ทุก ๆ การอัพเกรด 2 ขั้น ATK + 20",
-            "ทุก ๆ การอัพเกรด 3 ขั้น เพิ่ม Damage สกิล Holy Cross 50%",
-            "เมื่ออัพเกรดถึงขั้น 9 เมื่อโจมทางกายภาพมีโอกาส 4% ที่จะ ATK + 100 หน่วยเป็นระยะเวลา 10 วินาที",
-            "เมื่ออัพเกรดถึงขั้น 11 เพิ่มพลังโจมตีระยะใกล้ + 20%, เพิ่มพลังโจมตีศัตรูปรเภทบอส 15%",
-            "เมื่ออัพเกรดถึงขั้น 12 ได้รับเอฟเฟกต์ [Endure] ตลอดเวลา",
-            "ประเภท : Two-Handed Spear พลังโจมตี : 220",
-            "น้ำหนัก : 120",
-            "เลเวลอาวุธ : 4",
-            "เลเวลที่ต้องการ : 98",
-            "อาชีพที่ใส่ได้ : High Swordman Class"
-        ],
-        "slotCount": 2,
-        "ClassNum": 4,
-        "costume": false
-    },
-    "100393": {
-        "unidentifiedDisplayName": "Aquatic Spear Modification Cube",
-        "unidentifiedResourceName": "RemodelCube",
-        "unidentifiedDescriptionName": [
-            "ลูกบาศก์ที่ช่วยอัพเกรด Aquatic Spear ให้กลายเป็น  Awakened  Aquatic Spear",
-            "ใช้วัตถุดิบเป็น  Aquatic Spear ตั้งแต่ +9 ขึ้นไป",
-            "และจะได้รับ Awakened Aquatic Spear +7 ออกมา",
-            "",
-            "^ff0000คำเตือน! - เมื่ออัพเกรดแล้ว การ์ดและ Random Option ที่ใช้อยู่จะสูญหาย",
-            "<ITEM>ข้อมูลไอเทมใหม่<INFO>530006</INFO></ITEM>",
-            "น้ำหนัก : 1"
-        ],
-        "identifiedDisplayName": "Aquatic Spear Modification Cube",
-        "identifiedResourceName": "RemodelCube",
-        "identifiedDescriptionName": [
-            "ลูกบาศก์ที่ช่วยอัพเกรด  Aquatic Spear ให้กลายเป็น  Awakened  Aquatic Spear",
-            "ใช้วัตถุดิบเป็น  Aquatic Spear ตั้งแต่ +9 ขึ้นไป",
-            "และจะได้รับ Awakened  Aquatic Spear +7 ออกมา",
-            "",
-            "^ff0000คำเตือน! - เมื่ออัพเกรดแล้ว การ์ดและ Random Option ที่ใช้อยู่จะสูญหาย",
-            "<ITEM>ข้อมูลไอเทมใหม่<INFO>530006</INFO></ITEM>",
-            "น้ำหนัก : 1"
-        ],
-        "slotCount": 0,
-        "ClassNum": 0,
-        "costume": false
-    },
-    "100330": {
-        "unidentifiedDisplayName": "Trumpet Shell Modification Cube",
-        "unidentifiedResourceName": "RemodelCube",
-        "unidentifiedDescriptionName": [
-            "ลูกบาศก์ที่ช่วยอัพเกรด  Trumpet Shell ให้กลายเป็น  Awakened Trumpet Shell",
-            "ใช้วัตถุดิบเป็น Trumpet Shell ตั้งแต่+9 ขึ้นไป",
-            "และจะได้รับ  Awakened Trumpet Shell +7 ออกมา",
-            "",
-            "^ff0000คำเตือน! - เมื่ออัพเกรดแล้ว การ์ดและ Random Option ที่ใช้อยู่จะสูญหาย",
-            "<ITEM>ข้อมูลไอเทมใหม่<INFO>570009</INFO></ITEM>",
-            "น้ำหนัก : 1"
-        ],
-        "identifiedDisplayName": "Trumpet Shell Modification Cube",
-        "identifiedResourceName": "RemodelCube",
-        "identifiedDescriptionName": [
-            "ลูกบาศก์ที่ช่วยอัพเกรด  Trumpet Shell ให้กลายเป็น  Awakened Trumpet Shell",
-            "ใช้วัตถุดิบเป็น  Trumpet Shell ตั้งแต่+9 ขึ้นไป",
-            "และจะได้รับ  Awakened Trumpet Shell +7 ออกมา",
-            "",
-            "^ff0000คำเตือน! - เมื่ออัพเกรดแล้ว การ์ดและ Random Option ที่ใช้อยู่จะสูญหาย",
-            "<ITEM>ข้อมูลไอเทมใหม่<INFO>570009</INFO></ITEM>",
-            "น้ำหนัก : 1"
-        ],
-        "slotCount": 0,
-        "ClassNum": 0,
-        "costume": false
-    },
-    "107430": {
-        "unidentifiedDisplayName": "[NFS] Aquatic Spear Modification Cube",
-        "unidentifiedResourceName": "RemodelCube",
-        "unidentifiedDescriptionName": [
-            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
-            "",
-            "ลูกบาศก์ที่ช่วยอัพเกรด [NFS] Aquatic Spear ให้กลายเป็น [NFS] Awakened  Aquatic Spear",
-            "ใช้วัตถุดิบเป็น [NFS] Aquatic Spear ตั้งแต่ +9 ขึ้นไป",
-            "และจะได้รับ [NFS] Awakened Aquatic Spear +7 ออกมา",
-            "",
-            "^ff0000คำเตือน! - เมื่ออัพเกรดแล้ว การ์ดและ Random Option ที่ใช้อยู่จะสูญหาย",
-            "<ITEM>ข้อมูลไอเทมใหม่<INFO>530092</INFO></ITEM>",
-            "น้ำหนัก : 1"
-        ],
-        "identifiedDisplayName": "[NFS] Aquatic Spear Modification Cube",
-        "identifiedResourceName": "RemodelCube",
-        "identifiedDescriptionName": [
-            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
-            "",
-            "ลูกบาศก์ที่ช่วยอัพเกรด [NFS] Aquatic Spear ให้กลายเป็น [NFS] Awakened  Aquatic Spear",
-            "ใช้วัตถุดิบเป็น [NFS] Aquatic Spear ตั้งแต่+9 ขึ้นไป",
-            "และจะได้รับ [NFS]Awakened Aquatic Spear +7 ออกมา",
-            "",
-            "^ff0000คำเตือน! - เมื่ออัพเกรดแล้ว การ์ดและ Random Option ที่ใช้อยู่จะสูญหาย",
-            "<ITEM>ข้อมูลไอเทมใหม่<INFO>530092</INFO></ITEM>",
-            "น้ำหนัก : 1"
-        ],
-        "slotCount": 0,
-        "ClassNum": 0,
-        "costume": false
-    },
-    "100331": {
-        "unidentifiedDisplayName": "Barbed Wire Whip K Modification Cube",
-        "unidentifiedResourceName": "RemodelCube",
-        "unidentifiedDescriptionName": [
-            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
-            "",
-            "ลูกบาศก์ที่ช่วยอัพเกรด  Barbed Wire Whip K ให้กลายเป็น  Awakened Barbed Wire Whip K",
-            "ใช้วัตถุดิบเป็น  Barbed Wire Whip K ตั้งแต่ +9 ขึ้นไป",
-            "และจะได้รับ  Awakened Barbed Wire Whip K +7 ออกมา",
-            "",
-            "^ff0000คำเตือน! - เมื่ออัพเกรดแล้ว การ์ดและ Random Option ที่ใช้อยู่จะสูญหาย",
-            "<ITEM>ข้อมูลไอเทมใหม่<INFO>580009</INFO></ITEM>",
-            "น้ำหนัก : 1"
-        ],
-        "identifiedDisplayName": "Barbed Wire Whip K Modification Cube",
-        "identifiedResourceName": "RemodelCube",
-        "identifiedDescriptionName": [
-            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
-            "",
-            "ลูกบาศก์ที่ช่วยอัพเกรด  Barbed Wire Whip K ให้กลายเป็น  Awakened Barbed Wire Whip K",
-            "ใช้วัตถุดิบเป็น  Barbed Wire Whip K ตั้งแต่ +9 ขึ้นไป",
-            "และจะได้รับ  Awakened Barbed Wire Whip K +7 ออกมา",
-            "",
-            "^ff0000คำเตือน! - เมื่ออัพเกรดแล้ว การ์ดและ Random Option ที่ใช้อยู่จะสูญหาย",
-            "<ITEM>ข้อมูลไอเทมใหม่<INFO>580009</INFO></ITEM>",
-            "น้ำหนัก : 1"
-        ],
-        "slotCount": 0,
-        "ClassNum": 0,
-        "costume": false
-    },
-    "107431": {
-        "unidentifiedDisplayName": "[NFS] Trumpet Shell Modification Cube",
-        "unidentifiedResourceName": "RemodelCube",
-        "unidentifiedDescriptionName": [
-            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
-            "",
-            "ลูกบาศก์ที่ช่วยอัพเกรด [NFS] Trumpet Shell ให้กลายเป็น [NFS] Awakened Trumpet Shell",
-            "ใช้วัตถุดิบเป็น [NFS] Trumpet Shell ตั้งแต่+9 ขึ้นไป",
-            "และจะได้รับ [NFS] Awakened Trumpet Shell +7 ออกมา",
-            "",
-            "^ff0000คำเตือน! - เมื่ออัพเกรดแล้ว การ์ดและ Random Option ที่ใช้อยู่จะสูญหาย",
-            "<ITEM>ข้อมูลไอเทมใหม่<INFO>570103</INFO></ITEM>"
-        ],
-        "identifiedDisplayName": "[NFS] Trumpet Shell Modification Cube",
-        "identifiedResourceName": "RemodelCube",
-        "identifiedDescriptionName": [
-            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
-            "",
-            "ลูกบาศก์ที่ช่วยอัพเกรด [NFS] Trumpet Shell ให้กลายเป็น [NFS] Awakened Trumpet Shell",
-            "ใช้วัตถุดิบเป็น [NFS] Trumpet Shell ตั้งแต่+9 ขึ้นไป",
-            "และจะได้รับ [NFS] Awakened Trumpet Shell +7 ออกมา",
-            "",
-            "^ff0000คำเตือน! - เมื่ออัพเกรดแล้ว การ์ดและ Random Option ที่ใช้อยู่จะสูญหาย",
-            "<ITEM>ข้อมูลไอเทมใหม่<INFO>570103</INFO></ITEM>",
-            "น้ำหนัก : 1"
-        ],
-        "slotCount": 0,
-        "ClassNum": 0,
-        "costume": false
-    },
-    "107432": {
-        "unidentifiedDisplayName": "[NFS] Barbed Wire Whip K Modification Cube",
-        "unidentifiedResourceName": "RemodelCube",
-        "unidentifiedDescriptionName": [
-            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
-            "",
-            "ลูกบาศก์ที่ช่วยอัพเกรด [NFS] Barbed Wire Whip K ให้กลายเป็น [NFS] Awakened Barbed Wire Whip K",
-            "ใช้วัตถุดิบเป็น [NFS] Barbed Wire Whip K ตั้งแต่ +9 ขึ้นไป",
-            "และจะได้รับ [NFS] Awakened Barbed Wire Whip K +7 ออกมา",
-            "",
-            "^ff0000คำเตือน! - เมื่ออัพเกรดแล้ว การ์ดและ Random Option ที่ใช้อยู่จะสูญหาย",
-            "<ITEM>ข้อมูลไอเทมใหม่<INFO>580103</INFO></ITEM>"
-        ],
-        "identifiedDisplayName": "[NFS] Barbed Wire Whip K Modification Cube",
-        "identifiedResourceName": "RemodelCube",
-        "identifiedDescriptionName": [
-            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
-            "",
-            "ลูกบาศก์ที่ช่วยอัพเกรด [NFS] Barbed Wire Whip K ให้กลายเป็น [NFS] Awakened Barbed Wire Whip K",
-            "ใช้วัตถุดิบเป็น [NFS] Barbed Wire Whip K ตั้งแต่ +9 ขึ้นไป",
-            "และจะได้รับ [NFS] Awakened Barbed Wire Whip K +7 ออกมา",
-            "",
-            "^ff0000คำเตือน! - เมื่ออัพเกรดแล้ว การ์ดและ Random Option ที่ใช้อยู่จะสูญหาย",
-            "<ITEM>ข้อมูลไอเทมใหม่<INFO>580103</INFO></ITEM>",
-            "น้ำหนัก : 1"
-        ],
-        "slotCount": 0,
-        "ClassNum": 0,
-        "costume": false
-    },
-    "107437": {
-        "unidentifiedDisplayName": "Jaow Pirun Scroll",
-        "unidentifiedResourceName": "찰랑스크롤",
-        "unidentifiedDescriptionName": [
-            "ของขลังแห่งวารี ผู้เฒ่าเล่าขานว่าถือกำเนิดจาก “เจ้าพิรุณ” ผู้พิทักษ์ฝน ผู้ใดครอบครองจะได้รับพรแห่งสายน้ำและพลังเยียวยาจากธรรมชาติ",
-            "^ff0000 หากเปิดใช้งานหลังวันที่ 10 มิถุนายน 2569 หลังปิดปรับปรุงประจำสัปดาห์ จะไม่ได้รับ Jaow Pirun Coin"
-        ],
-        "identifiedDisplayName": "Jaow Pirun Scroll",
-        "identifiedResourceName": "찰랑스크롤",
-        "identifiedDescriptionName": [
-            "ของขลังแห่งวารี ผู้เฒ่าเล่าขานว่าถือกำเนิดจาก “เจ้าพิรุณ” ผู้พิทักษ์ฝน ผู้ใดครอบครองจะได้รับพรแห่งสายน้ำและพลังเยียวยาจากธรรมชาติ",
-            "^ff0000 หากเปิดใช้งานหลังวันที่ 10 มิถุนายน 2569 หลังปิดปรับปรุงประจำสัปดาห์ จะไม่ได้รับ Jaow Pirun Coin",
-            "น้ำหนัก : 1"
-        ],
-        "slotCount": 0,
-        "ClassNum": 0,
-        "costume": false
-    },
-    "580103": {
-        "unidentifiedDisplayName": "Rope",
-        "unidentifiedResourceName": "로프",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "[NFS] Awakened Barbed Wire Whip K ",
-        "identifiedResourceName": "Up_Barb_Wire_K",
-        "identifiedDescriptionName": [
-            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
-            "",
-            "MATK +210",
-            "สามารถใช้สกิล Heaven’s Drive Lv.10 ได้",
-            "ทุก ๆ การอัพเกรด 2 ขั้น MATK +20",
-            "ทุก ๆ การอัพเกรด 3 ขั้น เพิ่ม Damage ของสกิล [Heaven’s Drive] 50%",
-            "เมื่ออัพเกรดถึงขั้น 9 ลด VCT ของสกิล [Heaven’s Drive] 100%",
-            "เมื่ออัพเกรดถึงขั้น 11 MATK + 10%, เพิ่ม Damage ทางเวทมนตร์ต่อศัตรูประเภท Boss 15%",
-            "เมื่ออัพเกรดถึงขั้น 12 เพิ่ม Damage ทางเวทมนตร์ธาตุดิน 20%",
-            "ประเภท : Whip พลังโจมตี : 160",
-            "น้ำหนัก : 70",
-            "เลเวลอาวุธ : 4",
-            "เลเวลที่ต้องการ : 98",
-            "อาชีพที่ใส่ได้ : Gypsy"
-        ],
-        "slotCount": 2,
-        "ClassNum": 14,
-        "costume": false
-    },
-    "570103": {
-        "unidentifiedDisplayName": "Volin",
-        "unidentifiedResourceName": "바이올린",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "[NFS] Awakened Trumpet Shell",
-        "identifiedResourceName": "Up_Trumpet_Shell_K",
-        "identifiedDescriptionName": [
-            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
-            "",
-            "สามารถใช้งานสกิล [Shield Chain] Lv.10",
-            "ทุก ๆ การอัพเกรด 2 ขั้น ATK +30",
-            "ทุก ๆ การอัพเกรด 3 ขั้น เพิ่ม Damage ของสกิล [Shield Chain] 50%",
-            "เมื่ออัพเกรดถึงขั้น 9 ลด VCT ของสกิล [Shield Chain] 100%",
-            "เมื่ออัพเกรดถึงขั้น 11 เพิ่มพลังโจมตีระยะไกล + 20%, เพิ่มพลังโจมตีศัตรูประเภทบอส 15%",
-            "เมื่ออัพเกรดถึงขั้น 12 จะไม่เกิด Penalty ขนาดอาวุธ",
-            "ประเภท : Instrument พลังโจมตี : 210",
-            "น้ำหนัก : 70",
-            "เลเวลอาวุธ : 4",
-            "เลเวลที่ต้องการ : 98",
-            "อาชีพที่ใส่ได้ : Clown"
-        ],
-        "slotCount": 2,
-        "ClassNum": 13,
-        "costume": false
-    },
-    "530092": {
-        "unidentifiedDisplayName": "Spear",
-        "unidentifiedResourceName": "쟈벨린",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "[NFS] Awakened Aquatic Spear ",
-        "identifiedResourceName": "Up_Undine_Spear_K",
-        "identifiedDescriptionName": [
-            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
-            "",
-            "ทุก ๆ การอัพเกรด 2 ขั้น ATK + 20",
-            "ทุก ๆ การอัพเกรด 3 ขั้น เพิ่ม Damage สกิล Holy Cross 50%",
-            "เมื่ออัพเกรดถึงขั้น 9 เมื่อโจมทางกายภาพมีโอกาส 4% ที่จะ ATK + 100 หน่วยเป็นระยะเวลา 10 วินาที",
-            "เมื่ออัพเกรดถึงขั้น 11 เพิ่มพลังโจมตีระยะใกล้ + 20%, เพิ่มพลังโจมตีศัตรูปรเภทบอส 15%",
-            "เมื่ออัพเกรดถึงขั้น 12 ได้รับเอฟเฟกต์ [Endure] ตลอดเวลา",
-            "ประเภท : Two-Handed Spear พลังโจมตี : 220",
-            "น้ำหนัก : 120",
-            "เลเวลอาวุธ : 4",
-            "เลเวลที่ต้องการ : 98",
-            "อาชีพที่ใส่ได้ : High Swordman Class"
-        ],
-        "slotCount": 2,
-        "ClassNum": 4,
-        "costume": false
-    },
-    "107453": {
-        "unidentifiedDisplayName": "Heart",
-        "unidentifiedResourceName": "Red_Flame_Heart_Gem",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "Red Flame Basin Heart",
-        "identifiedResourceName": "Red_Flame_Heart_Gem",
-        "identifiedDescriptionName": [
-            "หัวใจแห่งเปลวเพลิงสีแดง",
-            "เชื่อกันว่าสามารถปลุกพลังแฝงของอุปกรณ์ให้แข็งแกร่งขึ้นได้",
-            "",
-            "[ไอเทมเป้าหมาย]",
-            "อุปกรณ์จำเป็นต้องอัพเกรดขั้นที่ 7 ขึ้นไป",
-            "Hero Plate [1]",
-            "Hero Judgement Shawl [1]",
-            "Hero Trade Mail [1]",
-            "Hero Hidden Cloth [1]",
-            "Hero Target Suit [1]",
-            "Heroic Silver Fox Leather Boots [1]",
-            "Hero Ungoliant Boots [1]",
-            "น้ำหนัก : 1"
-        ],
-        "slotCount": 2,
-        "ClassNum": 4,
-        "costume": false
-    },
-    "107454": {
-        "unidentifiedDisplayName": "Heart",
-        "unidentifiedResourceName": "Blue_Flame_Heart_Gem",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "Blue Flame Basin Heart",
-        "identifiedResourceName": "Blue_Flame_Heart_Gem",
-        "identifiedDescriptionName": [
-            "หัวใจแห่งเปลวเพลิงสีน้ำเงิน",
-            "เชื่อกันว่าสามารถปลุกพลังแฝงของอุปกรณ์ให้แข็งแกร่งขึ้นได้",
-            "",
-            "[ไอเทมเป้าหมาย]",
-            "อุปกรณ์จำเป็นต้องอัพเกรดขั้นที่ 7 ขึ้นไป",
-            "Hero Magic Coat [1]",
-            "Hero Judgement Shawl [1]",
-            "Hero Trade Mail [1]",
-            "Hero Nepenthes Boots [1]",
-            "Hero Ungoliant Boots [1]",
-            "น้ำหนัก : 1"
-        ],
-        "slotCount": 2,
-        "ClassNum": 4,
-        "costume": false
-    },
-    "27326": {
-        "unidentifiedDisplayName": "Morocc Necromancer Card",
-        "unidentifiedResourceName": "이름없는카드",
-        "unidentifiedDescriptionName": [
-            "ATK +100, ASPD +25%",
-            "MHP -20%",
-            "เมื่อใช้ร่วมกับ Morroc of Despair Card, MHP +50%",
-            "ประเภท : Card",
-            "ใช้กับ : Armor",
-            "น้ำหนัก : 1"
-        ],
-        "identifiedDisplayName": "Morocc Necromancer Card",
-        "identifiedResourceName": "이름없는카드",
-        "identifiedDescriptionName": [
-            "ATK +100, ASPD +25%",
-            "MHP -20%",
-            "เมื่อใช้ร่วมกับ Morroc of Despair Card, MHP +50%",
-            "ประเภท : Card",
-            "ใช้กับ : Armor",
-            "น้ำหนัก : 1"
-        ],
-        "slotCount": 0,
-        "ClassNum": 0,
-        "costume": false,
-        "EffectID": 1186
-    },
-    "15098": {
-        "unidentifiedDisplayName": "Clothes",
-        "unidentifiedResourceName": "코튼셔츠",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "Hero Target Suit",
-        "identifiedResourceName": "용사의타겟슈츠",
-        "identifiedDescriptionName": [
-            "MaxHP, MaxSP +5%",
-            "All Stats +1, ASPD +1; เพิ่มพลังดาเมจของการโจมตีกายภาพระยะไกล 3%",
-            "เมื่อโจมตีทางกายภาพ มีโอกาสเปิดใช้งานสกิล Improve Concentration Lv 10",
-            "เมื่อโจมตีทางกายภาพ มีโอกาสเปิดใช้งานสกิล Double Strafe Lv 10",
-            "Autocasting rate โอกาสที่จะเปิดใช้งานความสามารถเพิ่มขึ้น ตามค่าอัปเกรดของอุปกรณ์",
-            "ประเภท : Armor ป้องกัน : 60",
-            "น้ำหน้ก : 20",
-            "เลเวลที่ต้องการ : 90",
-            "อาชีพที่ใส่ได้ : High Archer Cls"
-        ],
-        "slotCount": 1,
-        "ClassNum": 0
-    },
-    "22036": {
-        "unidentifiedDisplayName": "Shoes",
-        "unidentifiedResourceName": "슈즈",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "Heroic Silver Fox Leather Boots",
-        "identifiedResourceName": "용사은빛여우부츠",
-        "identifiedDescriptionName": [
-            "Fox Fur ช่วยทำให้เดินอย่างปลอดภัย ส่วนที่เป็น Silver จะช่วยให้เดินได้เร็วขึ้น",
-            "พลังโจมตีระยะไกล +5%",
-            "เมื่ออัปเกรดถึง 8 จะเพิ่มพลังโจมตีระยะไกลอีก 1% ในทุกการอัปเกรดเลเวล (จะได้จนถึงเลเวล 13)",
-            "ประเภท : Shoes ป้องกัน : 15",
-            "น้ำหน้ก : 30",
-            "เลเวลที่ต้องการ : 90",
-            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
-        ],
-        "slotCount": 1,
-        "ClassNum": 0
-    },
-    "2981": {
+    "31731": {
         "unidentifiedDisplayName": "Accessory",
-        "unidentifiedResourceName": "네클리스",
+        "unidentifiedResourceName": "리본",
         "unidentifiedDescriptionName": [
             "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "Hero Ring",
-        "identifiedResourceName": "루파크의반지",
+        "identifiedDisplayName": "Costume Snack Party",
+        "identifiedResourceName": "C_SnackParty",
         "identifiedDescriptionName": [
-            "แหวนที่ทำขึ้นสำหรับนักรบที่ทำเควสไปปราบ Morocc",
-            "เมื่อนำแหวนไป Enchant แล้ว เจ้าของแหวนจะมีพลังไปต่อสู้กับ Morocc ได้",
-            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
-            "ประเภท : Accessory ป้องกัน : 0",
-            "น้ำหน้ก : 20",
-            "เลเวลที่ต้องการ : 80",
-            "อาชีพที่สวมใส่: ทุกอาชีพ "
+            "มีขนมและเค้กแสนอร่อยมากมายที่ลอยอยู่รอบ ๆ และคุณจะมีเวลาจิบชาอย่างสบายๆ ได้ เมื่อคุณสวมใส่มัน",
+            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 12 ได้",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Lower น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 1896,
+        "costume": true
+    },
+    "20487": {
+        "unidentifiedDisplayName": "Ribbon",
+        "unidentifiedResourceName": "리본",
+        "unidentifiedDescriptionName": [
+            "ไอเทมปริศนา สามารถตรวจสอบได้ด้วยไอเทม [Magnifier]"
+        ],
+        "identifiedDisplayName": "Costume Floral Waltz",
+        "identifiedResourceName": "C꽃의왈츠",
+        "identifiedDescriptionName": [
+            "คอสตูมน่ารักๆ ที่ถ้าหากออกเดินไปก็จะมีดอกไม้และตัวโน๊ตพุ่งออกมา",
+            "ถึงจะไม่ได้เดินอยู่ก็ยังมีความรู้สึกสนุกสนานไปกับกลีบดอกไม้ที่เต้นระบำอยู่",
+            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box9 ได้",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ใช้สำหรับ : Lower น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 1473,
+        "costume": true
+    },
+    "20052": {
+        "unidentifiedDisplayName": "AFK HAT",
+        "unidentifiedResourceName": "알림간판",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ."
+        ],
+        "identifiedDisplayName": "Costume AFK HAT",
+        "identifiedResourceName": "알림간판",
+        "identifiedDescriptionName": [
+            "ใช้บอกว่าตอนนี้ไม่มีใครอยู่",
+            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 7 ได้",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Upper น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 471,
+        "costume": true
+    },
+    "440000": {
+        "unidentifiedDisplayName": "Cap",
+        "unidentifiedResourceName": "캡",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Costume Shark Hat",
+        "identifiedResourceName": "SharkHead",
+        "identifiedDescriptionName": [
+            "หมวกไว้สวมใส่ส่วนหัว เป็นรูปหัวฉลาม",
+            "หากคุณยื่นหัวขึ้นมาจากน้ำคุณอาจคิดว่ามีฉลามโผล่มาก็เป็นได้!",
+            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 10 ได้",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Upper-Middle-Lower น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 1919,
+        "costume": true
+    },
+    "20431": {
+        "unidentifiedDisplayName": "Hat",
+        "unidentifiedResourceName": "캡",
+        "unidentifiedDescriptionName": [
+            "ไอเทมปริศนา สามารถตรวจสอบได้ด้วยไอเทม [Magnifier]"
+        ],
+        "identifiedDisplayName": "Costume Maggi Head Dress",
+        "identifiedResourceName": "마기스틴헤드드레스",
+        "identifiedDescriptionName": [
+            "เครื่องประดับส่วนหัวที่ออกแบบโดยอ้างอิงจาก Maggie Stein",
+            "ตัวหมวกดูมีความแฟนซีจากการประดับด้วยริบบิ้นและผ้าจับจีบ",
+            "^b4b4b4สามารถนำไปแลกเปลี่ยนเป็น Costume Enchant Stone Box 8 ได้",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Upper  น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพ : ทุกอาชีพ"
         ],
         "slotCount": 0,
         "ClassNum": 0
     },
-    "22037": {
-        "unidentifiedDisplayName": "Shoes",
-        "unidentifiedResourceName": "슈즈",
+    "480126": {
+        "unidentifiedDisplayName": "Garment",
+        "unidentifiedResourceName": "후드",
         "unidentifiedDescriptionName": [
             "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "Hero Ungoliant Boots",
-        "identifiedResourceName": "용사운골리안트부츠",
+        "identifiedDisplayName": "Costume Giant Shark",
+        "identifiedResourceName": "C_Giant_Shark",
         "identifiedDescriptionName": [
-            "บูทที่ย้อมด้วยของเหลวจากตัว Ungoliant มีผลช่วยให้จิตใจปลอดโปร่ง และมีสมาธิ",
-            "เมื่อใช้สกิล จะเสีย SP 5%",
-            "หากอัปเกรดถึง 8 SP จะลดลงอีก 1% ในทุกการอัปเกรด (จนถึงเลเวล 13)",
-            "ประเภท : Shoes ป้องกัน : 10",
-            "น้ำหน้ก : 30",
-            "เลเวลที่ต้องการ : 90",
+            "ตุ๊กตาฉลามตัวยักษ์",
+            "ได้ความรู้สึกถึงพลังแห่งฉลามทั้งตัว",
+            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 11 ได้",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Garment น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
             "อาชีพที่ใส่ได้ : ทุกอาชีพ"
         ],
-        "slotCount": 1,
-        "ClassNum": 0
+        "slotCount": 0,
+        "ClassNum": 109,
+        "costume": true
     },
-    "22035": {
-        "unidentifiedDisplayName": "Shoes",
-        "unidentifiedResourceName": "슈즈",
+    "20440": {
+        "unidentifiedDisplayName": "Accessory",
+        "unidentifiedResourceName": "리본",
+        "unidentifiedDescriptionName": [
+            "ไอเทมปริศนา สามารถตรวจสอบได้ด้วยไอเทม [Magnifier]"
+        ],
+        "identifiedDisplayName": "Costume Tone Of Gold",
+        "identifiedResourceName": "금빛음색",
+        "identifiedDescriptionName": [
+            "กระดิ่งสีสวยที่มีท่วงทำนองอันไพเราะออกมา",
+            "เมื่อสวมใส่คู่กับหูสัตว์ต่างๆจะดูเข้ากันมาก",
+            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box10 ได้",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Lower น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 1447,
+        "costume": true
+    },
+    "19678": {
+        "unidentifiedDisplayName": "Ribbon",
+        "unidentifiedResourceName": "리본",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา ต้องทำการตรวจสอบโดยใช้ [Magnifier]"
+        ],
+        "identifiedDisplayName": "Costume Bell Ribbon",
+        "identifiedResourceName": "방울리본",
+        "identifiedDescriptionName": [
+            "โบว์แสนน่ารักที่มีระฆังขนาดเล็กติดอยู่ ดูเหมือนว่าระฆังขนาดเล็กจะมีเสียงดังกรุ๊งกริ๊ง",
+            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 9 ได้.",
+            "ประเภท : Costume",
+            "ใช้สำหรับ : Upper น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 388,
+        "costume": true
+    },
+    "480129": {
+        "unidentifiedDisplayName": "Hood",
+        "unidentifiedResourceName": "후드",
         "unidentifiedDescriptionName": [
             "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "Hero Nepenthes Boots",
-        "identifiedResourceName": "용사네펜데스구두",
+        "identifiedDisplayName": "Costume Triple Ice Cream",
+        "identifiedResourceName": "C_Triple_Ice_Cream",
         "identifiedDescriptionName": [
-            "รองเท้าที่ทำจากใบไม้ Nepenthes มีฤทธิ์ผ่อนคลายกล้ามเนื้อ",
-            "ลดเวลาในการร่ายแปรผันลง 10%",
-            "เมื่ออัปเกรดถึง 8 จะลดลงเพิ่มอีก 5% หลังจากนั้นจะลดลงอีก 1% ทุกการอัปเกรดเลเวล)",
-            "เมื่ออัปเกรดถึง 11 จะลดลงเพิ่มอีก 3% หลังจากนั้นจะลดลงอีก 3% ทุกครั้งที่อัปเกรดเลเวล (ทำได้จนถึงเลเวล 13)",
-            "ประเภท : Shoes ป้องกัน : 10",
-            "น้ำหน้ก : 30",
-            "เลเวลที่ต้องการ : 90",
+            "เครื่องประดับรูปไอศกรีมที่มีสีสันน่ารับประทาน",
+            "อากาศร้อน ๆ แบบนี้ จู่ ๆ ก็รู้สึกอยากกัดกินขึ้นมา",
+            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box11 ได้",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Garment น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
             "อาชีพที่ใส่ได้ : ทุกอาชีพ"
         ],
-        "slotCount": 1,
-        "ClassNum": 0
+        "slotCount": 0,
+        "ClassNum": 116,
+        "costume": true
     },
-    "15093": {
-        "unidentifiedDisplayName": "Armor",
-        "unidentifiedResourceName": "우든메일",
+    "400367": {
+        "unidentifiedDisplayName": "Hat",
+        "unidentifiedResourceName": "햇",
         "unidentifiedDescriptionName": [
             "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "Hero Plate",
-        "identifiedResourceName": "용사의플레이트",
+        "identifiedDisplayName": "Costume Lady's Feather Hat",
+        "identifiedResourceName": "귀부인의깃털모자",
         "identifiedDescriptionName": [
-            "MDEF +5",
-            "MaxHP, MaxSP เพิ่ม 5%",
-            "ATK +10, MATK +10, HIT +10, FLEE +10",
-            "พลังโจมตีของ Brandish Spear เพิ่มขึ้น 10%",
-            "พลังโจมตีของ  Holy Cross เพิ่มขึ้น 10%",
-            "เมื่อทำการโจมตีทางกายภาพ มีโอกาสต่ำที่จะเปิดใช้งานการฮีลอัตโนมัติ Lv 10 และ Stormgust Lv 10",
-            "โอกาสที่จะเปิดใช้งานความสามารถเพิ่มขึ้น ตามค่าอัปเกรดของอุปกรณ์",
-            "ประเภท : Armor ป้องกัน : 60",
-            "น้ำหน้ก : 400",
-            "เลเวลที่ต้องการ : 90",
-            "อาชีพที่ใส่ได้ :  High Swordman Cls"
+            "หมวกสำหรับสตรีชั้นสูง",
+            "สีสันอันเรียบหรูและเครื่องประดับสวยงามยิ่งช่วยขับความมีสง่าราศี",
+            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box10 ได้",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Upper น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
         ],
-        "slotCount": 1,
-        "ClassNum": 0
+        "slotCount": 0,
+        "ClassNum": 1276,
+        "costume": true
     },
-    "15094": {
-        "unidentifiedDisplayName": "Clothes",
-        "unidentifiedResourceName": "코튼셔츠",
+    "410055": {
+        "unidentifiedDisplayName": "Ribbon",
+        "unidentifiedResourceName": "리본",
         "unidentifiedDescriptionName": [
             "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "Hero Magic Coat",
-        "identifiedResourceName": "용사의매직코트",
+        "identifiedDisplayName": "Costume Floating Parasol",
+        "identifiedResourceName": "C_Floating_Parasol",
         "identifiedDescriptionName": [
-            "MaxHP, MaxSP เพิ่ม 5%",
-            "MATK +10, FLEE +10",
-            "เพิ่มพลังดาเมจของสกิล Gravitational Field และ Heaven's Drive 10%",
-            "หากอัปเกรดเลเวลเป็นเลขคี่ เวลาในการร่ายแปรผันจะเพิ่มขึ้น 20% และการร่ายจะไม่ถูกรบกวน",
-            "หากอัปเกรดเลเวลเป็นเลขคู่ MDEF +1 และ เวลาในการร่ายแปรผันจะลดลง 1% ต่อทุกการอัพเกรดสองเลเวล",
-            "ประเภท : Armor ป้องกัน : 25",
-            "น้ำหน้ก : 80",
-            "เลเวลที่ต้องการ : 90",
-            "อาชีพที่ใส่ได้: High Magician Cls"
+            "ร่มกันแดดแสนสะดวก ถึงจะไม่ต้องถือด้วยมือ แต่ก็ลอยได้ด้วยตัวเอง",
+            "ขอให้สนุกกับการเที่ยวเล่นด้วยมือทั้งสองข้างนะ",
+            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box9 ได้",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Middle น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
         ],
-        "slotCount": 1,
-        "ClassNum": 0
-    },
-    "15095": {
-        "unidentifiedDisplayName": "Clothes",
-        "unidentifiedResourceName": "코튼셔츠",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "Hero Judgement Shawl",
-        "identifiedResourceName": "용사의저지먼트숄",
-        "identifiedDescriptionName": [
-            "MaxHP, MaxSP +5%",
-            "ATK +10, MATK +10, HIT +10, FLEE +10",
-            "เมื่ออัพเกรดถึงขั้น 7 เพิ่มการสร้างดาเมจของสกิล Asura Strike และ Magnus Exorcismus +10%",
-            "เมื่ออัพเกรดถึงขั้น 8 ลดระยะเวลาดีเลย์ของสกิล Magnus Exorcismus 1 วินาที",
-            "เมื่ออัพเกรดถึงขั้น 9 ลดระยะเวลาในการร่ายสกิล Asura Strike ลง 10% ",
-            "ประเภท : Armor ป้องกัน : 37",
-            "น้ำหน้ก : 50",
-            "เลเวลที่ต้องการ : 90",
-            "อาชีพที่ใส่ได้ :High Acolyte Cls"
-        ],
-        "slotCount": 1,
-        "ClassNum": 0
-    },
-    "15096": {
-        "unidentifiedDisplayName": "Armor",
-        "unidentifiedResourceName": "우든메일",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "Hero Trade Mail",
-        "identifiedResourceName": "용사의트레이드메일",
-        "identifiedDescriptionName": [
-            "MDEF +5",
-            "MaxHP, MaxSP เพิ่ม 5%; ATK +10, MATK +10",
-            "ในกรณีของ Base STR 90 ขึ้นไป ทุก ๆ การอัพเกรด 2 ขั้น STR +1",
-            "ในกรณีของ INT 90 ขึ้นไป ทุก ๆ การอัพเกรด 2 ขั้น INT +1,",
-            "ในกรณีของ VIT 90 ขึ้นไป ทุก ๆ การอัพเกรด 2 ขั้น VIT +1,",
-            "ในกรณีของ AGI 90 ขึ้นไป ทุก ๆ การอัพเกรด 2 ขั้น AGI +1,",
-            "ในกรณีของ DEX 90 ขึ้นไป ทุก ๆ การอัพเกรด 2 ขั้น DEX +1,",
-            "ในกรณีของ LUK 90 ขึ้นไป ทุก ๆ การอัพเกรด 2 ขั้น LUK +1.",
-            "ในการโจมตีทางกายภาพระยะประชิด มีโอกาสที่จะทำให้เป้าหมายอยู่ในสถานะ Stun, Poison, Silence หรือ Curse",
-            "Autocasting rate โอกาสที่จะเปิดใช้งานความสามารถเพิ่มขึ้น ตามค่าอัปเกรดของอุปกรณ์",
-            "ประเภท : Armor ป้องกัน : 50",
-            "น้ำหน้ก : 50",
-            "เลเวลที่ต้องการ : 90",
-            "อาชีพที่ใส่ได้ : High Merchant Cls"
-        ],
-        "slotCount": 1,
-        "ClassNum": 0
-    },
-    "15097": {
-        "unidentifiedDisplayName": "Armor",
-        "unidentifiedResourceName": "씨프클로스",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "Hero Hidden Cloth",
-        "identifiedResourceName": "용사의히든클로스",
-        "identifiedDescriptionName": [
-            "MaxHP, MaxSP +5%",
-            "เพิ่มพลังดาเมจของสกิล Raid และ Soul Destroyer +10%",
-            "เมื่อโจมตีกายภาพ มีโอกาสที่จะได้ CRIT +20, FLEE +20, ATK + 10%, MATK + 10% เป็นเวลา 10 วินาที",
-            "โอกาสที่จะเปิดใช้งานความสามารถเพิ่มขึ้น ตามค่าอัปเกรดของอุปกรณ์",
-            "ประเภท : Armor ป้องกัน : 35",
-            "น้ำหน้ก : 20",
-            "เลเวลที่ต้องการ : 90",
-            "อาชีพที่ใส่ได้ : High Thief Cls"
-        ],
-        "slotCount": 1,
-        "ClassNum": 0
+        "slotCount": 0,
+        "ClassNum": 2082,
+        "costume": true
     }
 }
