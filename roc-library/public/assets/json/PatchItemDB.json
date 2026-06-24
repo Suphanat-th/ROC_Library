@@ -1,229 +1,516 @@
 {
-    "31731": {
-        "unidentifiedDisplayName": "Accessory",
-        "unidentifiedResourceName": "리본",
+    "650004": {
+        "unidentifiedDisplayName": "Huuma Shuriken",
+        "unidentifiedResourceName": "풍마_편익",
         "unidentifiedDescriptionName": [
             "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "Costume Snack Party",
-        "identifiedResourceName": "C_SnackParty",
+        "identifiedDisplayName": "Awakened Huuma Shuriken Clearness",
+        "identifiedResourceName": "Up_Humma_Clear",
         "identifiedDescriptionName": [
-            "มีขนมและเค้กแสนอร่อยมากมายที่ลอยอยู่รอบ ๆ และคุณจะมีเวลาจิบชาอย่างสบายๆ ได้ เมื่อคุณสวมใส่มัน",
-            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 12 ได้",
-            "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Lower น้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 1",
-            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+            "Shuriken ที่นินจาผู้โด่งดังในตำนานใช้งาน",
+            "ด้วยพลังงานสีน้ำเงินที่ซ่อนอยู่ มันได้เริ่มเผยพลังอันแท้จริงออกมา",
+            "ทุก ๆ การอัพเกรด 2 ขั้น ATK + 20",
+            "ทุก ๆ การอัพเกรด 3 ขั้น เพิ่ม Damage สกิล Swirling Petal 50%",
+            "เมื่ออัพเกรดถึงขั้น 9 ลด Cooldown สกิล Swirling Petal 2 วินาที, เพิ่ม Damage ทางกายภาพระยะไกล 15%",
+            "เมื่ออัพเกรดถึงขั้น 11 ลดระยะเวลาร่ายแบบแปรผัน 15%,",
+            "เพิ่ม Damage ทางกายภาพต่อศัตรูธาตุ Fire, Shadow, Holy, Undead 25%,",
+            "เพิ่ม Damage ทางกายภาพต่อมอนสเตอร์เผ่า Dragon, Undead, Demon, Angel 25%",
+            "ประเภท : Huuma Shuriken พลังโจมตี : 265",
+            "น้ำหนัก : 130",
+            "เลเวลอาวุธ : 4",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพที่ใส่ได้ : Ninja Class"
         ],
-        "slotCount": 0,
-        "ClassNum": 1896,
-        "costume": true
+        "slotCount": 2,
+        "ClassNum": 22,
+        "costume": false
     },
-    "20487": {
-        "unidentifiedDisplayName": "Ribbon",
-        "unidentifiedResourceName": "리본",
-        "unidentifiedDescriptionName": [
-            "ไอเทมปริศนา สามารถตรวจสอบได้ด้วยไอเทม [Magnifier]"
-        ],
-        "identifiedDisplayName": "Costume Floral Waltz",
-        "identifiedResourceName": "C꽃의왈츠",
-        "identifiedDescriptionName": [
-            "คอสตูมน่ารักๆ ที่ถ้าหากออกเดินไปก็จะมีดอกไม้และตัวโน๊ตพุ่งออกมา",
-            "ถึงจะไม่ได้เดินอยู่ก็ยังมีความรู้สึกสนุกสนานไปกับกลีบดอกไม้ที่เต้นระบำอยู่",
-            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box9 ได้",
-            "ประเภท : Costume พลังป้องกัน : 0",
-            "ใช้สำหรับ : Lower น้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 1",
-            "อาชีพ : ทุกอาชีพ"
-        ],
-        "slotCount": 0,
-        "ClassNum": 1473,
-        "costume": true
-    },
-    "20052": {
-        "unidentifiedDisplayName": "AFK HAT",
-        "unidentifiedResourceName": "알림간판",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ."
-        ],
-        "identifiedDisplayName": "Costume AFK HAT",
-        "identifiedResourceName": "알림간판",
-        "identifiedDescriptionName": [
-            "ใช้บอกว่าตอนนี้ไม่มีใครอยู่",
-            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 7 ได้",
-            "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Upper น้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 1",
-            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
-        ],
-        "slotCount": 0,
-        "ClassNum": 471,
-        "costume": true
-    },
-    "440000": {
-        "unidentifiedDisplayName": "Cap",
-        "unidentifiedResourceName": "캡",
+    "650065": {
+        "unidentifiedDisplayName": "Huuma Shuriken",
+        "unidentifiedResourceName": "풍마_편익",
         "unidentifiedDescriptionName": [
             "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "Costume Shark Hat",
-        "identifiedResourceName": "SharkHead",
+        "identifiedDisplayName": "[NFS] Awakened Huuma Shuriken Clearness ",
+        "identifiedResourceName": "Up_Humma_Clear",
         "identifiedDescriptionName": [
-            "หมวกไว้สวมใส่ส่วนหัว เป็นรูปหัวฉลาม",
-            "หากคุณยื่นหัวขึ้นมาจากน้ำคุณอาจคิดว่ามีฉลามโผล่มาก็เป็นได้!",
-            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 10 ได้",
-            "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Upper-Middle-Lower น้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 1",
-            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "",
+            "Shuriken ที่นินจาผู้โด่งดังในตำนานใช้งาน",
+            "ด้วยพลังงานสีน้ำเงินที่ซ่อนอยู่ มันได้เริ่มเผยพลังอันแท้จริงออกมา",
+            "ทุก ๆ การอัพเกรด 2 ขั้น ATK + 20",
+            "ทุก ๆ การอัพเกรด 3 ขั้น เพิ่ม Damage สกิล Swirling Petal 50%",
+            "เมื่ออัพเกรดถึงขั้น 9 ลด Cooldown สกิล Swirling Petal 2 วินาที, เพิ่ม Damage ทางกายภาพระยะไกล 15%",
+            "เมื่ออัพเกรดถึงขั้น 11 ลดระยะเวลาร่ายแบบแปรผัน 15%,",
+            "เพิ่ม Damage ทางกายภาพต่อศัตรูธาตุ Fire, Shadow, Holy, Undead 25%,",
+            "เพิ่ม Damage ทางกายภาพต่อมอนสเตอร์เผ่า Dragon, Undead, Demon, Angel 25%",
+            "ประเภท : Huuma Shuriken พลังโจมตี : 265",
+            "น้ำหนัก : 130",
+            "เลเวลอาวุธ : 4",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพที่ใส่ได้ : Ninja Class"
         ],
-        "slotCount": 0,
-        "ClassNum": 1919,
-        "costume": true
+        "slotCount": 2,
+        "ClassNum": 22,
+        "costume": false
     },
-    "20431": {
-        "unidentifiedDisplayName": "Hat",
-        "unidentifiedResourceName": "캡",
-        "unidentifiedDescriptionName": [
-            "ไอเทมปริศนา สามารถตรวจสอบได้ด้วยไอเทม [Magnifier]"
-        ],
-        "identifiedDisplayName": "Costume Maggi Head Dress",
-        "identifiedResourceName": "마기스틴헤드드레스",
-        "identifiedDescriptionName": [
-            "เครื่องประดับส่วนหัวที่ออกแบบโดยอ้างอิงจาก Maggie Stein",
-            "ตัวหมวกดูมีความแฟนซีจากการประดับด้วยริบบิ้นและผ้าจับจีบ",
-            "^b4b4b4สามารถนำไปแลกเปลี่ยนเป็น Costume Enchant Stone Box 8 ได้",
-            "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Upper  น้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 1",
-            "อาชีพ : ทุกอาชีพ"
-        ],
-        "slotCount": 0,
-        "ClassNum": 0
-    },
-    "480126": {
-        "unidentifiedDisplayName": "Garment",
-        "unidentifiedResourceName": "후드",
+    "800002": {
+        "unidentifiedDisplayName": "Pistol",
+        "unidentifiedResourceName": "식스슈터",
         "unidentifiedDescriptionName": [
             "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "Costume Giant Shark",
-        "identifiedResourceName": "C_Giant_Shark",
+        "identifiedDisplayName": "Awakened Crimson Rose",
+        "identifiedResourceName": "Up_Crimson_Rose",
         "identifiedDescriptionName": [
-            "ตุ๊กตาฉลามตัวยักษ์",
-            "ได้ความรู้สึกถึงพลังแห่งฉลามทั้งตัว",
-            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 11 ได้",
-            "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Garment น้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 1",
+            "Revolver ที่ประดับตกแต่งด้วยดอกกุหลาบสีแดงสด ที่มือปืนสุดชำนาญการที่สุดได้เคยใช้มัน",
+            "",
+            "ทุก ๆ การอัพเกรด 2 ขั้น ATK + 20",
+            "ทุก ๆ การอัพเกรด 3 ขั้น เพิ่ม Damage สกิล Fire Dance 50%",
+            "เมื่ออัพเกรดถึงขั้น 9 APSD + 10% เพิ่ม Damage ทางกายภาพระยะไกล 15%",
+            "เมื่ออัพเกรดถึงขั้น 11 ลด Delay หลังใช้สกิล 10%, เพิ่ม Damage ทางกายภาพต่อศัตรูทุกขนาด 15%",
+            "ประเภท : Revolver พลังโจมตี : 200",
+            "น้ำหนัก : 70",
+            "เลเวลอาวุธ : 4",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพที่ใส่ได้ : Rebellion"
+        ],
+        "slotCount": 2,
+        "ClassNum": 17,
+        "costume": false
+    },
+    "800051": {
+        "unidentifiedDisplayName": "Revolver",
+        "unidentifiedResourceName": "식스슈터",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[NFS] Awakened Crimson Rose ",
+        "identifiedResourceName": "Up_Crimson_Rose",
+        "identifiedDescriptionName": [
+            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "",
+            "Revolver ที่ประดับตกแต่งด้วยดอกกุหลาบสีแดงสด ที่มือปืนสุดชำนาญการที่สุดได้เคยใช้มัน",
+            "",
+            "ทุก ๆ การอัพเกรด 2 ขั้น ATK + 20",
+            "ทุก ๆ การอัพเกรด 3 ขั้น เพิ่ม Damage สกิล Fire Dance 50%",
+            "เมื่ออัพเกรดถึงขั้น 9 APSD + 10% เพิ่ม Damage ทางกายภาพระยะไกล 15%",
+            "เมื่ออัพเกรดถึงขั้น 11 ลด Delay หลังใช้สกิล 10%, เพิ่ม Damage ทางกายภาพต่อศัตรูทุกขนาด 15%",
+            "ประเภท : Revolver พลังโจมตี : 200",
+            "น้ำหนัก : 70",
+            "เลเวลอาวุธ : 4",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพที่ใส่ได้ : Rebellion"
+        ],
+        "slotCount": 2,
+        "ClassNum": 17,
+        "costume": false
+    },
+    "107587": {
+        "unidentifiedDisplayName": "Incursion Scroll",
+        "unidentifiedResourceName": "Spell_Of_Time",
+        "unidentifiedDescriptionName": [
+            "ม้วนคัมภีร์แห่งการบุกรุก เปิดประตูสู่โชคลาภและสมบัติล้ำค่าที่รอการค้นพบ!",
+            "^ff0000หากเปิดใช้งานหลังวันที่ 8 กรกฎาคม 2569 หลังปิดปรับปรุงประจำสัปดาห์ จะไม่ได้รับ   Incursion Coin "
+        ],
+        "identifiedDisplayName": "Incursion Scroll",
+        "identifiedResourceName": "Spell_Of_Time",
+        "identifiedDescriptionName": [
+            "ม้วนคัมภีร์แห่งการบุกรุก เปิดประตูสู่โชคลาภและสมบัติล้ำค่าที่รอการค้นพบ!",
+            "^ff0000หากเปิดใช้งานหลังวันที่ 8 กรกฎาคม 2569 หลังปิดปรับปรุงประจำสัปดาห์ จะไม่ได้รับ   Incursion Coin ",
+            "",
+            "น้ำหนัก : 1"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "100404": {
+        "unidentifiedDisplayName": "Crimson Rose Modification Cube",
+        "unidentifiedResourceName": "RemodelCube",
+        "unidentifiedDescriptionName": [
+            "ลูกบาศก์ที่ช่วยอัพเกรด Crimson Rose ให้กลายเป็น Awakened Crimson Rose",
+            "ใช้วัตถุดิบเป็น Crimson Rose ตั้งแต่ +9 ขึ้นไป",
+            "และจะได้รับ Awakened Crimson Rose +7 ออกมา",
+            "^ff0000คำเตื่อน! - เมื่ออัพเกรดแล้ว การ์ดและ Random Option ที่ใช้อยู่จะสูญหาย",
+            "<ITEM>ข้อมูลไอเทมใหม่<INFO>800002</INFO></ITEM>",
+            "น้ำหนัก : 1"
+        ],
+        "identifiedDisplayName": "Crimson Rose Modification Cube",
+        "identifiedResourceName": "RemodelCube",
+        "identifiedDescriptionName": [
+            "ลูกบาศก์ที่ช่วยอัพเกรด Crimson Rose ให้กลายเป็น Awakened Crimson Rose",
+            "ใช้วัตถุดิบเป็น Crimson Rose ตั้งแต่ +9 ขึ้นไป",
+            "และจะได้รับ Awakened Crimson Rose +7 ออกมา",
+            "^ff0000คำเตื่อน! - เมื่ออัพเกรดแล้ว การ์ดและ Random Option ที่ใช้อยู่จะสูญหาย",
+            "<ITEM>ข้อมูลไอเทมใหม่<INFO>800002</INFO></ITEM>",
+            "น้ำหนัก : 1"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "107591": {
+        "unidentifiedDisplayName": "[NFS] Crimson Rose Modification Cube",
+        "unidentifiedResourceName": "RemodelCube",
+        "unidentifiedDescriptionName": [
+            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "ลูกบาศก์ที่ช่วยอัพเกรด [NFS] Crimson Rose ให้กลายเป็น [NFS] Awakened Crimson Rose",
+            "ใช้วัตถุดิบเป็น [NFS] Crimson Rose ตั้งแต่ +9 ขึ้นไป",
+            "และจะได้รับ [NFS] Awakened Crimson Rose +7 ออกมา",
+            "^ff0000คำเตื่อน! - เมื่ออัพเกรดแล้ว การ์ดและ Random Option ที่ใช้อยู่จะสูญหาย",
+            "<ITEM>ข้อมูลไอเทมใหม่<INFO>800051</INFO></ITEM>",
+            "น้ำหนัก : 1"
+        ],
+        "identifiedDisplayName": "[NFS] Crimson Rose Modification Cube",
+        "identifiedResourceName": "RemodelCube",
+        "identifiedDescriptionName": [
+            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "ลูกบาศก์ที่ช่วยอัพเกรด [NFS] Crimson Rose ให้กลายเป็น [NFS] Awakened Crimson Rose",
+            "ใช้วัตถุดิบเป็น [NFS] Crimson Rose ตั้งแต่ +9 ขึ้นไป",
+            "และจะได้รับ [NFS] Awakened Crimson Rose +7 ออกมา",
+            "^ff0000คำเตื่อน! - เมื่ออัพเกรดแล้ว การ์ดและ Random Option ที่ใช้อยู่จะสูญหาย",
+            "<ITEM>ข้อมูลไอเทมใหม่<INFO>800051</INFO></ITEM>",
+            "น้ำหนัก : 1"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "100401": {
+        "unidentifiedDisplayName": "Huuma Shuriken Clearness Modification Cube",
+        "unidentifiedResourceName": "RemodelCube",
+        "unidentifiedDescriptionName": [
+            "ลูกบาศก์ที่ช่วยอัพเกรด Huuma Shuriken Clearness ให้กลายเป็น Awakened Huuma Shuriken Clearness",
+            "ใช้วัตถุดิบเป็น Huuma Shuriken Clearness ตั้งแต่ +9 ขึ้นไป",
+            "และจะได้รับ Awakened Huuma Shuriken Clearness +7 ออกมา",
+            "^ff0000คำเตื่อน! - เมื่ออัพเกรดแล้ว การ์ดและ Random Option ที่ใช้อยู่จะสูญหาย",
+            "<ITEM>ข้อมูลไอเทมใหม่<INFO>650004</INFO></ITEM>",
+            "น้ำหนัก : 1"
+        ],
+        "identifiedDisplayName": "Huuma Shuriken Clearness Modification Cube",
+        "identifiedResourceName": "RemodelCube",
+        "identifiedDescriptionName": [
+            "ลูกบาศก์ที่ช่วยอัพเกรด Huuma Shuriken Clearness ให้กลายเป็น Awakened Huuma Shuriken Clearness",
+            "ใช้วัตถุดิบเป็น Huuma Shuriken Clearness ตั้งแต่ +9 ขึ้นไป",
+            "และจะได้รับ Awakened Huuma Shuriken Clearness +7 ออกมา",
+            "^ff0000คำเตื่อน! - เมื่ออัพเกรดแล้ว การ์ดและ Random Option ที่ใช้อยู่จะสูญหาย",
+            "<ITEM>ข้อมูลไอเทมใหม่<INFO>650004</INFO></ITEM>",
+            "น้ำหนัก : 1"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "107592": {
+        "unidentifiedDisplayName": "[NFS] Huuma Shuriken Clearness Modification Cube",
+        "unidentifiedResourceName": "RemodelCube",
+        "unidentifiedDescriptionName": [
+            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "ลูกบาศก์ที่ช่วยอัพเกรด [NFS] Huuma Shuriken Clearness ให้กลายเป็น [NFS] Awakened Huuma Shuriken Clearness",
+            "ใช้วัตถุดิบเป็น [NFS] Huuma Shuriken Clearness ตั้งแต่ +9 ขึ้นไป",
+            "และจะได้รับ [NFS] Awakened Huuma Shuriken Clearness +7 ออกมา",
+            "^ff0000คำเตื่อน! - เมื่ออัพเกรดแล้ว การ์ดและ Random Option ที่ใช้อยู่จะสูญหาย",
+            "<ITEM>ข้อมูลไอเทมใหม่<INFO>650065</INFO></ITEM>",
+            "น้ำหนัก : 1"
+        ],
+        "identifiedDisplayName": "[NFS] Huuma Shuriken Clearness Modification Cube",
+        "identifiedResourceName": "RemodelCube",
+        "identifiedDescriptionName": [
+            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "ลูกบาศก์ที่ช่วยอัพเกรด [NFS] Huuma Shuriken Clearness ให้กลายเป็น [NFS] Awakened Huuma Shuriken Clearness",
+            "ใช้วัตถุดิบเป็น [NFS] Huuma Shuriken Clearness ตั้งแต่ +9 ขึ้นไป",
+            "และจะได้รับ [NFS] Awakened Huuma Shuriken Clearness +7 ออกมา",
+            "^ff0000คำเตื่อน! - เมื่ออัพเกรดแล้ว การ์ดและ Random Option ที่ใช้อยู่จะสูญหาย",
+            "<ITEM>ข้อมูลไอเทมใหม่<INFO>650065</INFO></ITEM>",
+            "น้ำหนัก : 1"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "22258": {
+        "unidentifiedDisplayName": "Sandles",
+        "unidentifiedResourceName": "샌들",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[NFS] Incursion Temporal Boots",
+        "identifiedResourceName": "프레이야의장화",
+        "identifiedDescriptionName": [
+            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "MDEF +15",
+            "เมื่ออัพเกรดตั้งแต่ 10 ขึ้นไป All status +2",
+            "เมื่อ Base STR ตั้งแต่ 80 ขึ้นไป ATK +50",
+            "เพิ่ม Damage ทางกายภาพระยะใกล้ต่อศัตรูทั้งหมด 5%",
+            "เมื่อ Base AGI ตั้งแต่ 80 ขึ้นไป ASPD +1",
+            "เมื่อ Base VIT ตั้งแต่ 80 ขึ้นไป MaxHP +8%",
+            "เมื่อ Base INT ตั้งแต่ 80 ขึ้นไป MATK +60",
+            "เมื่อ Base DEX ตั้งแต่ 80 ขึ้นไป ลดระยะเวลาร่ายแบบคงที่ 0.5 วินาที",
+            "เพิ่ม Damage ทางกายภาพระยะไกลต่อศัตรูทั้งหมด 5%",
+            "เมื่อ Base LUK ตั้งแต่ 80 ขึ้นไป Critical Damage +30%",
+            "เมื่อสวมใส่ร่วมกับ Incursion Temporal  Manteau, MaxHP +15%, MaxSP +5%",
+            "ประเภท : Shoes พลังป้องกัน : 25",
+            "น้ำหนัก : 60",
+            "เลเวลที่ต้องการ : 70",
             "อาชีพที่ใส่ได้ : ทุกอาชีพ"
         ],
-        "slotCount": 0,
-        "ClassNum": 109,
-        "costume": true
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
     },
-    "20440": {
-        "unidentifiedDisplayName": "Accessory",
-        "unidentifiedResourceName": "리본",
+    "22202": {
+        "unidentifiedDisplayName": "Sandles",
+        "unidentifiedResourceName": "샌들",
         "unidentifiedDescriptionName": [
-            "ไอเทมปริศนา สามารถตรวจสอบได้ด้วยไอเทม [Magnifier]"
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "Costume Tone Of Gold",
-        "identifiedResourceName": "금빛음색",
+        "identifiedDisplayName": "Incursion Temporal Boots",
+        "identifiedResourceName": "프레이야의장화",
         "identifiedDescriptionName": [
-            "กระดิ่งสีสวยที่มีท่วงทำนองอันไพเราะออกมา",
-            "เมื่อสวมใส่คู่กับหูสัตว์ต่างๆจะดูเข้ากันมาก",
-            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box10 ได้",
-            "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Lower น้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 1",
-            "อาชีพ : ทุกอาชีพ"
+            "MDEF +15",
+            "เมื่ออัพเกรดตั้งแต่ 10 ขึ้นไป All status +2",
+            "เมื่อ Base STR ตั้งแต่ 80 ขึ้นไป ATK +50",
+            "เพิ่ม Damage ทางกายภาพระยะใกล้ต่อศัตรูทั้งหมด 5%",
+            "เมื่อ Base AGI ตั้งแต่ 80 ขึ้นไป ASPD +1",
+            "เมื่อ Base VIT ตั้งแต่ 80 ขึ้นไป MaxHP +8%",
+            "เมื่อ Base INT ตั้งแต่ 80 ขึ้นไป MATK +60",
+            "เมื่อ Base DEX ตั้งแต่ 80 ขึ้นไป ลดระยะเวลาร่ายแบบคงที่ 0.5 วินาที",
+            "เพิ่ม Damage ทางกายภาพระยะไกลต่อศัตรูทั้งหมด 5%",
+            "เมื่อ Base LUK ตั้งแต่ 80 ขึ้นไป Critical Damage +30%",
+            "เมื่อสวมใส่ร่วมกับ Incursion Temporal  Manteau, MaxHP +15%, MaxSP +5%",
+            "ประเภท : Shoes พลังป้องกัน : 25",
+            "น้ำหนัก : 60",
+            "เลเวลที่ต้องการ : 70",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
         ],
-        "slotCount": 0,
-        "ClassNum": 1447,
-        "costume": true
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
     },
-    "19678": {
-        "unidentifiedDisplayName": "Ribbon",
-        "unidentifiedResourceName": "리본",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา ต้องทำการตรวจสอบโดยใช้ [Magnifier]"
-        ],
-        "identifiedDisplayName": "Costume Bell Ribbon",
-        "identifiedResourceName": "방울리본",
-        "identifiedDescriptionName": [
-            "โบว์แสนน่ารักที่มีระฆังขนาดเล็กติดอยู่ ดูเหมือนว่าระฆังขนาดเล็กจะมีเสียงดังกรุ๊งกริ๊ง",
-            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 9 ได้.",
-            "ประเภท : Costume",
-            "ใช้สำหรับ : Upper น้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 1",
-            "อาชีพ : ทุกอาชีพ"
-        ],
-        "slotCount": 0,
-        "ClassNum": 388,
-        "costume": true
-    },
-    "480129": {
+    "480076": {
         "unidentifiedDisplayName": "Hood",
         "unidentifiedResourceName": "후드",
         "unidentifiedDescriptionName": [
             "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "Costume Triple Ice Cream",
-        "identifiedResourceName": "C_Triple_Ice_Cream",
+        "identifiedDisplayName": "Incursion Temporal Manteau",
+        "identifiedResourceName": "Temporal_Manteau",
         "identifiedDescriptionName": [
-            "เครื่องประดับรูปไอศกรีมที่มีสีสันน่ารับประทาน",
-            "อากาศร้อน ๆ แบบนี้ จู่ ๆ ก็รู้สึกอยากกัดกินขึ้นมา",
-            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box11 ได้",
-            "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Garment น้ำหนัก : 0",
+            "สุดยอดผ้าคลุมที่แม้จะผ่านกาลเวลามาเนิ่นนาน แต่กลับไม่มีร่องรอยเลยแม้แต่นิดเดียว",
+            "",
+            "MDEF + 10",
+            "ทุก ๆ การอัพเกรด 2 ขั้น,",
+            "ATK +1%, MATK +1%",
+            "เพิ่ม Damage ทางกายภาพระยะไกลต่อศัตรูทั้งหมด 1% ",
+            "CRI +3, Critical Damage +1%",
+            "",
+            "ทุก ๆ การอัพเกรด 4 ขั้น,",
+            "เพิ่ม Damage ทางกายภาพต่อศัตรูทุกขนาด 3%",
+            "เพิ่ม Damage ทางเวททุกธาตุ 3%",
+            "MaxHP +3%, ลด Delay หลังใช้สกิล 3%",
+            "Critical Damage +3%",
+            "ASPD +3%",
+            "",
+            "เมื่ออัพเกรดถึงขั้น 9, ",
+            "ATK +7%, MATK +7%",
+            "เมื่อสวมใส่ร่วมกับ Incursion Temporal Ring [1] และ Bear's Power,",
+            "ATK +25, เพิ่ม Damage ทางกายภาพระยะใกล้ต่อศัตรูทั้งหมด 5%",
+            "เมื่อสวมใส่ร่วมกับ Incursion Temporal Ring [1] และ Speed Of Light,",
+            "ลด Delay หลังใช้สกิล 4%",
+            "เมื่อสวมใส่ร่วมกับ Incursion Temporal Ring [1] และ Muscle Fool,",
+            "MaxHP +7%",
+            "เมื่อสวมใส่ร่วมกับ Incursion Temporal Ring [1] และ Runaway Magic, MATK +25",
+            "เมื่อสวมใส่ร่วมกับ Incursion Temporal Ring [1] และ Hawkeye,",
+            "เพิ่ม Damage ทางกายภาพระยะไกลต่อศัตรูทั้งหมด 5%",
+            "เมื่อสวมใส่ร่วมกับ  Incursion Temporal Ring [1] และ Lucky Day, Critical Damage +5%",
+            "",
+            "เมื่อสวมใส่ร่วมกับ Incursion Temporal Boots หรือ [NFS] Incursion Temporal Boots,",
+            "MDEF +5",
+            "เมื่อค่าอัพเกรดของ Incursion Temporal Manteau และ Incursion Temporal Boots/[NFS] Incursion Temporal Boots รวมกันตั้งแต่ 22 ขึ้นไป,",
+            "เมื่อ Base STR ตั้งแต่ 80 ขึ้นไป ATK +50, เพิ่ม Damage ทางกายภาพระยะใกล้ต่อศัตรูทั้งหมด 7%",
+            "เมื่อ Base AGI ตั้งแต่ 80 ขึ้นไป ASPD + 1",
+            "เมื่อ Base VIT ตั้งแต่ 80 ขึ้นไป ลด Delay หลังใช้สกิล 5%",
+            "เมื่อ Base INT ตั้งแต่ 80 ขึ้นไป MATK +50",
+            "เมื่อ Base DEX ตั้งแต่ 80 ขึ้นไป เพิ่ม Damage ทางกายภาพระยะไกลต่อศัตรูทั้งหมด 7%",
+            "เมื่อ Base LUK ตั้งแต่ 80 ขึ้นไป Critical Damage +7%",
+            "ประเภท : Garment  พลังป้องกัน : 40",
+            "น้ำหนัก : 10",
+            "เลเวลที่ต้องการ : 70",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "20524": {
+        "unidentifiedDisplayName": "Hood",
+        "unidentifiedResourceName": "후드",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Costume Shining Angel Wing",
+        "identifiedResourceName": "C_Shining_Angel_Wing",
+        "identifiedDescriptionName": [
+            "ปีกอันส่องประกายของนางฟ้า เพียงแค่มองก็รู้สึกถึงความปลอดภัยและความสุขสบาย",
+            "",
+            "^ff0000ความสามารถพิเศษในระยะเวลากิจกรรม",
+            "^ff0000(8 กรกฏาคม 2569  -  5 สิงหาคม 2569 05.59 น.)",
+            "^ff0000EXP + 15 %",
+            "^ff0000DROP + 10%",
+            "",
+            "ประเภท : Garment พลังป้องกัน : 0",
+            "น้ำหนัก : 0",
             "เลเวลที่ต้องการ : 1",
             "อาชีพที่ใส่ได้ : ทุกอาชีพ"
         ],
         "slotCount": 0,
-        "ClassNum": 116,
+        "ClassNum": 0,
         "costume": true
     },
-    "400367": {
-        "unidentifiedDisplayName": "Hat",
-        "unidentifiedResourceName": "햇",
+    "20134": {
+        "unidentifiedDisplayName": "Helm",
+        "unidentifiedResourceName": "헬름",
         "unidentifiedDescriptionName": [
             "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "Costume Lady's Feather Hat",
-        "identifiedResourceName": "귀부인의깃털모자",
+        "identifiedDisplayName": "Costume White Abyssal Knight Helm",
+        "identifiedResourceName": "흰색심연의모자",
         "identifiedDescriptionName": [
-            "หมวกสำหรับสตรีชั้นสูง",
-            "สีสันอันเรียบหรูและเครื่องประดับสวยงามยิ่งช่วยขับความมีสง่าราศี",
-            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box10 ได้",
+            "หมวกพิธีการสีขาวบริสุทธิ์ที่ถูกสร้างขึ้นโดยเลียนแบบหมวกของ White Abyssal Knight",
+            "แม้จิตวิญญาณจะถูก Himmelmez ทำให้เสื่อมลง แต่ก่อนหน้านั้นมันเคยเปล่งประกายแสงอันบริสุทธิ์เช่นนี้",
+            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 16 ได้",
             "ประเภท : Costume พลังป้องกัน : 0",
             "ตำแหน่ง : Upper น้ำหนัก : 0",
             "เลเวลที่ต้องการ : 1",
             "อาชีพที่ใส่ได้ : ทุกอาชีพ"
         ],
         "slotCount": 0,
-        "ClassNum": 1276,
+        "ClassNum": 1269,
         "costume": true
     },
-    "410055": {
+    "400899": {
+        "unidentifiedDisplayName": "Hat",
+        "unidentifiedResourceName": "햇",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Costume Unrivaled Crest Hat",
+        "identifiedResourceName": "Striking_hat_A",
+        "identifiedDescriptionName": [
+            "หมวกประดับตราประจำตระกูลเก่าแก่สืบทอดกันมาอย่างยาวนาน",
+            "เล่าขานกันว่าเคยเป็นของผู้ใช้คันธนูผู้ยิ่งใหญ่ ซึ่งได้รับการยกย่องว่าไร้ผู้ต่อกร",
+            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 17 ได้",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Upper น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 2391,
+        "costume": true
+    },
+    "410160": {
         "unidentifiedDisplayName": "Ribbon",
         "unidentifiedResourceName": "리본",
         "unidentifiedDescriptionName": [
             "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "Costume Floating Parasol",
-        "identifiedResourceName": "C_Floating_Parasol",
+        "identifiedDisplayName": "Costume Magic Celestial Globe",
+        "identifiedResourceName": "Magic_Celestial_Globe",
         "identifiedDescriptionName": [
-            "ร่มกันแดดแสนสะดวก ถึงจะไม่ต้องถือด้วยมือ แต่ก็ลอยได้ด้วยตัวเอง",
-            "ขอให้สนุกกับการเที่ยวเล่นด้วยมือทั้งสองข้างนะ",
-            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box9 ได้",
+            "วงเวทย์ที่หลอมรวมจากอุกกาบาตนับไม่ถ้วนซึ่งโปรยปรายลงมาจากห้วงอวกาศ",
+            "อาคมที่สถิตอยู่ภายในถูกสร้างขึ้นด้วยหลักการอันอยู่นอกเหนือกฎเกณฑ์ของโลกนี้ ทำให้ไม่อาจหยั่งรู้หรือทำความเข้าใจได้อย่างสมบูรณ์ด้วยเวทมนตร์หรือวิทยาศาสตร์ในยุคปัจจุบัน",
+            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 18 ได้",
             "ประเภท : Costume พลังป้องกัน : 0",
             "ตำแหน่ง : Middle น้ำหนัก : 0",
             "เลเวลที่ต้องการ : 1",
             "อาชีพที่ใส่ได้ : ทุกอาชีพ"
         ],
         "slotCount": 0,
-        "ClassNum": 2082,
+        "ClassNum": 2265,
+        "costume": true
+    },
+    "410508": {
+        "unidentifiedDisplayName": "Circlet",
+        "unidentifiedResourceName": "서클릿",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Costume Celestial Integrity",
+        "identifiedResourceName": "Midgard_Integrity",
+        "identifiedDescriptionName": [
+            "Circlet ที่สร้างขึ้นจากเศษอุกกาบาตซึ่งร่วงหล่นจากท้องฟ้า พลังแห่งปาฏิหาริย์ภายในนั้นมอบความกล้าให้แก่วีรบุรุษผู้สวมใส่",
+            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 20 ได้",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Middle น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 2750,
+        "costume": true
+    },
+    "480630": {
+        "unidentifiedDisplayName": "Hood",
+        "unidentifiedResourceName": "후드",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Costume Mechanical Fairy Wing",
+        "identifiedResourceName": "C_Mechanical_Fairy_Wing",
+        "identifiedDescriptionName": [
+            "ปีกผีเสื้อประดิษฐ์ที่สร้างขึ้นด้วยกลไกจักรกลอันประณีต",
+            "เฟืองและสปริงขนาดเล็กจะขยับอย่างนุ่มนวลตามจังหวะการกระพือปีก พร้อมเสียงโลหะเบา ๆ แผ่วดังออกมา",
+            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 21 ได้",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Garment น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 284,
+        "costume": true
+    },
+    "480783": {
+        "unidentifiedDisplayName": "Ribbon",
+        "unidentifiedResourceName": "리본",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Costume Dark Knight Cloak",
+        "identifiedResourceName": "H_NightWatch_Cloak_BK",
+        "identifiedDescriptionName": [
+            "ผ้าคลุมสีดำของอัศวินลึกลับ ผู้ถูกกล่าวขานว่าได้ยอมจำนนต่อความมืดและสูญสิ้นวิญญาณ",
+            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 21 ได้",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Lower น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 2732,
+        "costume": true
+    },
+    "480298": {
+        "unidentifiedDisplayName": "Hood",
+        "unidentifiedResourceName": "후드",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Costume Magic Wonderland",
+        "identifiedResourceName": "MCircle_Wonderland",
+        "identifiedDescriptionName": [
+            "วงแหวนเวทย์น่ารักน่าเอ็นดู เหมือนจะพาเราจมดิ่งสู่ดินแดนมหัศจรรย์",
+            "",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Garment น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
         "costume": true
     }
 }
