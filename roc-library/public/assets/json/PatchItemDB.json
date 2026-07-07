@@ -1,349 +1,4 @@
 {
-    "650004": {
-        "unidentifiedDisplayName": "Huuma Shuriken",
-        "unidentifiedResourceName": "풍마_편익",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "Awakened Huuma Shuriken Clearness",
-        "identifiedResourceName": "Up_Humma_Clear",
-        "identifiedDescriptionName": [
-            "Shuriken ที่นินจาผู้โด่งดังในตำนานใช้งาน",
-            "ด้วยพลังงานสีน้ำเงินที่ซ่อนอยู่ มันได้เริ่มเผยพลังอันแท้จริงออกมา",
-            "ทุก ๆ การอัพเกรด 2 ขั้น ATK + 20",
-            "ทุก ๆ การอัพเกรด 3 ขั้น เพิ่ม Damage สกิล Swirling Petal 50%",
-            "เมื่ออัพเกรดถึงขั้น 9 ลด Cooldown สกิล Swirling Petal 2 วินาที, เพิ่ม Damage ทางกายภาพระยะไกล 15%",
-            "เมื่ออัพเกรดถึงขั้น 11 ลดระยะเวลาร่ายแบบแปรผัน 15%,",
-            "เพิ่ม Damage ทางกายภาพต่อศัตรูธาตุ Fire, Shadow, Holy, Undead 25%,",
-            "เพิ่ม Damage ทางกายภาพต่อมอนสเตอร์เผ่า Dragon, Undead, Demon, Angel 25%",
-            "ประเภท : Huuma Shuriken พลังโจมตี : 265",
-            "น้ำหนัก : 130",
-            "เลเวลอาวุธ : 4",
-            "เลเวลที่ต้องการ : 100",
-            "อาชีพที่ใส่ได้ : Ninja Class"
-        ],
-        "slotCount": 2,
-        "ClassNum": 22,
-        "costume": false
-    },
-    "650065": {
-        "unidentifiedDisplayName": "Huuma Shuriken",
-        "unidentifiedResourceName": "풍마_편익",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "[NFS] Awakened Huuma Shuriken Clearness ",
-        "identifiedResourceName": "Up_Humma_Clear",
-        "identifiedDescriptionName": [
-            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
-            "",
-            "Shuriken ที่นินจาผู้โด่งดังในตำนานใช้งาน",
-            "ด้วยพลังงานสีน้ำเงินที่ซ่อนอยู่ มันได้เริ่มเผยพลังอันแท้จริงออกมา",
-            "ทุก ๆ การอัพเกรด 2 ขั้น ATK + 20",
-            "ทุก ๆ การอัพเกรด 3 ขั้น เพิ่ม Damage สกิล Swirling Petal 50%",
-            "เมื่ออัพเกรดถึงขั้น 9 ลด Cooldown สกิล Swirling Petal 2 วินาที, เพิ่ม Damage ทางกายภาพระยะไกล 15%",
-            "เมื่ออัพเกรดถึงขั้น 11 ลดระยะเวลาร่ายแบบแปรผัน 15%,",
-            "เพิ่ม Damage ทางกายภาพต่อศัตรูธาตุ Fire, Shadow, Holy, Undead 25%,",
-            "เพิ่ม Damage ทางกายภาพต่อมอนสเตอร์เผ่า Dragon, Undead, Demon, Angel 25%",
-            "ประเภท : Huuma Shuriken พลังโจมตี : 265",
-            "น้ำหนัก : 130",
-            "เลเวลอาวุธ : 4",
-            "เลเวลที่ต้องการ : 100",
-            "อาชีพที่ใส่ได้ : Ninja Class"
-        ],
-        "slotCount": 2,
-        "ClassNum": 22,
-        "costume": false
-    },
-    "800002": {
-        "unidentifiedDisplayName": "Pistol",
-        "unidentifiedResourceName": "식스슈터",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "Awakened Crimson Rose",
-        "identifiedResourceName": "Up_Crimson_Rose",
-        "identifiedDescriptionName": [
-            "Revolver ที่ประดับตกแต่งด้วยดอกกุหลาบสีแดงสด ที่มือปืนสุดชำนาญการที่สุดได้เคยใช้มัน",
-            "",
-            "ทุก ๆ การอัพเกรด 2 ขั้น ATK + 20",
-            "ทุก ๆ การอัพเกรด 3 ขั้น เพิ่ม Damage สกิล Fire Dance 50%",
-            "เมื่ออัพเกรดถึงขั้น 9 APSD + 10% เพิ่ม Damage ทางกายภาพระยะไกล 15%",
-            "เมื่ออัพเกรดถึงขั้น 11 ลด Delay หลังใช้สกิล 10%, เพิ่ม Damage ทางกายภาพต่อศัตรูทุกขนาด 15%",
-            "ประเภท : Revolver พลังโจมตี : 200",
-            "น้ำหนัก : 70",
-            "เลเวลอาวุธ : 4",
-            "เลเวลที่ต้องการ : 100",
-            "อาชีพที่ใส่ได้ : Rebellion"
-        ],
-        "slotCount": 2,
-        "ClassNum": 17,
-        "costume": false
-    },
-    "800051": {
-        "unidentifiedDisplayName": "Revolver",
-        "unidentifiedResourceName": "식스슈터",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "[NFS] Awakened Crimson Rose ",
-        "identifiedResourceName": "Up_Crimson_Rose",
-        "identifiedDescriptionName": [
-            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
-            "",
-            "Revolver ที่ประดับตกแต่งด้วยดอกกุหลาบสีแดงสด ที่มือปืนสุดชำนาญการที่สุดได้เคยใช้มัน",
-            "",
-            "ทุก ๆ การอัพเกรด 2 ขั้น ATK + 20",
-            "ทุก ๆ การอัพเกรด 3 ขั้น เพิ่ม Damage สกิล Fire Dance 50%",
-            "เมื่ออัพเกรดถึงขั้น 9 APSD + 10% เพิ่ม Damage ทางกายภาพระยะไกล 15%",
-            "เมื่ออัพเกรดถึงขั้น 11 ลด Delay หลังใช้สกิล 10%, เพิ่ม Damage ทางกายภาพต่อศัตรูทุกขนาด 15%",
-            "ประเภท : Revolver พลังโจมตี : 200",
-            "น้ำหนัก : 70",
-            "เลเวลอาวุธ : 4",
-            "เลเวลที่ต้องการ : 100",
-            "อาชีพที่ใส่ได้ : Rebellion"
-        ],
-        "slotCount": 2,
-        "ClassNum": 17,
-        "costume": false
-    },
-    "107587": {
-        "unidentifiedDisplayName": "Incursion Scroll",
-        "unidentifiedResourceName": "Spell_Of_Time",
-        "unidentifiedDescriptionName": [
-            "ม้วนคัมภีร์แห่งการบุกรุก เปิดประตูสู่โชคลาภและสมบัติล้ำค่าที่รอการค้นพบ!",
-            "^ff0000หากเปิดใช้งานหลังวันที่ 8 กรกฎาคม 2569 หลังปิดปรับปรุงประจำสัปดาห์ จะไม่ได้รับ   Incursion Coin "
-        ],
-        "identifiedDisplayName": "Incursion Scroll",
-        "identifiedResourceName": "Spell_Of_Time",
-        "identifiedDescriptionName": [
-            "ม้วนคัมภีร์แห่งการบุกรุก เปิดประตูสู่โชคลาภและสมบัติล้ำค่าที่รอการค้นพบ!",
-            "^ff0000หากเปิดใช้งานหลังวันที่ 8 กรกฎาคม 2569 หลังปิดปรับปรุงประจำสัปดาห์ จะไม่ได้รับ   Incursion Coin ",
-            "",
-            "น้ำหนัก : 1"
-        ],
-        "slotCount": 0,
-        "ClassNum": 0,
-        "costume": false
-    },
-    "100404": {
-        "unidentifiedDisplayName": "Crimson Rose Modification Cube",
-        "unidentifiedResourceName": "RemodelCube",
-        "unidentifiedDescriptionName": [
-            "ลูกบาศก์ที่ช่วยอัพเกรด Crimson Rose ให้กลายเป็น Awakened Crimson Rose",
-            "ใช้วัตถุดิบเป็น Crimson Rose ตั้งแต่ +9 ขึ้นไป",
-            "และจะได้รับ Awakened Crimson Rose +7 ออกมา",
-            "^ff0000คำเตื่อน! - เมื่ออัพเกรดแล้ว การ์ดและ Random Option ที่ใช้อยู่จะสูญหาย",
-            "<ITEM>ข้อมูลไอเทมใหม่<INFO>800002</INFO></ITEM>",
-            "น้ำหนัก : 1"
-        ],
-        "identifiedDisplayName": "Crimson Rose Modification Cube",
-        "identifiedResourceName": "RemodelCube",
-        "identifiedDescriptionName": [
-            "ลูกบาศก์ที่ช่วยอัพเกรด Crimson Rose ให้กลายเป็น Awakened Crimson Rose",
-            "ใช้วัตถุดิบเป็น Crimson Rose ตั้งแต่ +9 ขึ้นไป",
-            "และจะได้รับ Awakened Crimson Rose +7 ออกมา",
-            "^ff0000คำเตื่อน! - เมื่ออัพเกรดแล้ว การ์ดและ Random Option ที่ใช้อยู่จะสูญหาย",
-            "<ITEM>ข้อมูลไอเทมใหม่<INFO>800002</INFO></ITEM>",
-            "น้ำหนัก : 1"
-        ],
-        "slotCount": 0,
-        "ClassNum": 0,
-        "costume": false
-    },
-    "107591": {
-        "unidentifiedDisplayName": "[NFS] Crimson Rose Modification Cube",
-        "unidentifiedResourceName": "RemodelCube",
-        "unidentifiedDescriptionName": [
-            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
-            "ลูกบาศก์ที่ช่วยอัพเกรด [NFS] Crimson Rose ให้กลายเป็น [NFS] Awakened Crimson Rose",
-            "ใช้วัตถุดิบเป็น [NFS] Crimson Rose ตั้งแต่ +9 ขึ้นไป",
-            "และจะได้รับ [NFS] Awakened Crimson Rose +7 ออกมา",
-            "^ff0000คำเตื่อน! - เมื่ออัพเกรดแล้ว การ์ดและ Random Option ที่ใช้อยู่จะสูญหาย",
-            "<ITEM>ข้อมูลไอเทมใหม่<INFO>800051</INFO></ITEM>",
-            "น้ำหนัก : 1"
-        ],
-        "identifiedDisplayName": "[NFS] Crimson Rose Modification Cube",
-        "identifiedResourceName": "RemodelCube",
-        "identifiedDescriptionName": [
-            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
-            "ลูกบาศก์ที่ช่วยอัพเกรด [NFS] Crimson Rose ให้กลายเป็น [NFS] Awakened Crimson Rose",
-            "ใช้วัตถุดิบเป็น [NFS] Crimson Rose ตั้งแต่ +9 ขึ้นไป",
-            "และจะได้รับ [NFS] Awakened Crimson Rose +7 ออกมา",
-            "^ff0000คำเตื่อน! - เมื่ออัพเกรดแล้ว การ์ดและ Random Option ที่ใช้อยู่จะสูญหาย",
-            "<ITEM>ข้อมูลไอเทมใหม่<INFO>800051</INFO></ITEM>",
-            "น้ำหนัก : 1"
-        ],
-        "slotCount": 0,
-        "ClassNum": 0,
-        "costume": false
-    },
-    "100401": {
-        "unidentifiedDisplayName": "Huuma Shuriken Clearness Modification Cube",
-        "unidentifiedResourceName": "RemodelCube",
-        "unidentifiedDescriptionName": [
-            "ลูกบาศก์ที่ช่วยอัพเกรด Huuma Shuriken Clearness ให้กลายเป็น Awakened Huuma Shuriken Clearness",
-            "ใช้วัตถุดิบเป็น Huuma Shuriken Clearness ตั้งแต่ +9 ขึ้นไป",
-            "และจะได้รับ Awakened Huuma Shuriken Clearness +7 ออกมา",
-            "^ff0000คำเตื่อน! - เมื่ออัพเกรดแล้ว การ์ดและ Random Option ที่ใช้อยู่จะสูญหาย",
-            "<ITEM>ข้อมูลไอเทมใหม่<INFO>650004</INFO></ITEM>",
-            "น้ำหนัก : 1"
-        ],
-        "identifiedDisplayName": "Huuma Shuriken Clearness Modification Cube",
-        "identifiedResourceName": "RemodelCube",
-        "identifiedDescriptionName": [
-            "ลูกบาศก์ที่ช่วยอัพเกรด Huuma Shuriken Clearness ให้กลายเป็น Awakened Huuma Shuriken Clearness",
-            "ใช้วัตถุดิบเป็น Huuma Shuriken Clearness ตั้งแต่ +9 ขึ้นไป",
-            "และจะได้รับ Awakened Huuma Shuriken Clearness +7 ออกมา",
-            "^ff0000คำเตื่อน! - เมื่ออัพเกรดแล้ว การ์ดและ Random Option ที่ใช้อยู่จะสูญหาย",
-            "<ITEM>ข้อมูลไอเทมใหม่<INFO>650004</INFO></ITEM>",
-            "น้ำหนัก : 1"
-        ],
-        "slotCount": 0,
-        "ClassNum": 0,
-        "costume": false
-    },
-    "107592": {
-        "unidentifiedDisplayName": "[NFS] Huuma Shuriken Clearness Modification Cube",
-        "unidentifiedResourceName": "RemodelCube",
-        "unidentifiedDescriptionName": [
-            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
-            "ลูกบาศก์ที่ช่วยอัพเกรด [NFS] Huuma Shuriken Clearness ให้กลายเป็น [NFS] Awakened Huuma Shuriken Clearness",
-            "ใช้วัตถุดิบเป็น [NFS] Huuma Shuriken Clearness ตั้งแต่ +9 ขึ้นไป",
-            "และจะได้รับ [NFS] Awakened Huuma Shuriken Clearness +7 ออกมา",
-            "^ff0000คำเตื่อน! - เมื่ออัพเกรดแล้ว การ์ดและ Random Option ที่ใช้อยู่จะสูญหาย",
-            "<ITEM>ข้อมูลไอเทมใหม่<INFO>650065</INFO></ITEM>",
-            "น้ำหนัก : 1"
-        ],
-        "identifiedDisplayName": "[NFS] Huuma Shuriken Clearness Modification Cube",
-        "identifiedResourceName": "RemodelCube",
-        "identifiedDescriptionName": [
-            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
-            "ลูกบาศก์ที่ช่วยอัพเกรด [NFS] Huuma Shuriken Clearness ให้กลายเป็น [NFS] Awakened Huuma Shuriken Clearness",
-            "ใช้วัตถุดิบเป็น [NFS] Huuma Shuriken Clearness ตั้งแต่ +9 ขึ้นไป",
-            "และจะได้รับ [NFS] Awakened Huuma Shuriken Clearness +7 ออกมา",
-            "^ff0000คำเตื่อน! - เมื่ออัพเกรดแล้ว การ์ดและ Random Option ที่ใช้อยู่จะสูญหาย",
-            "<ITEM>ข้อมูลไอเทมใหม่<INFO>650065</INFO></ITEM>",
-            "น้ำหนัก : 1"
-        ],
-        "slotCount": 0,
-        "ClassNum": 0,
-        "costume": false
-    },
-    "22258": {
-        "unidentifiedDisplayName": "Sandles",
-        "unidentifiedResourceName": "샌들",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "[NFS] Incursion Temporal Boots",
-        "identifiedResourceName": "프레이야의장화",
-        "identifiedDescriptionName": [
-            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
-            "MDEF +15",
-            "เมื่ออัพเกรดตั้งแต่ 10 ขึ้นไป All status +2",
-            "เมื่อ Base STR ตั้งแต่ 80 ขึ้นไป ATK +50",
-            "เพิ่ม Damage ทางกายภาพระยะใกล้ต่อศัตรูทั้งหมด 5%",
-            "เมื่อ Base AGI ตั้งแต่ 80 ขึ้นไป ASPD +1",
-            "เมื่อ Base VIT ตั้งแต่ 80 ขึ้นไป MaxHP +8%",
-            "เมื่อ Base INT ตั้งแต่ 80 ขึ้นไป MATK +60",
-            "เมื่อ Base DEX ตั้งแต่ 80 ขึ้นไป ลดระยะเวลาร่ายแบบคงที่ 0.5 วินาที",
-            "เพิ่ม Damage ทางกายภาพระยะไกลต่อศัตรูทั้งหมด 5%",
-            "เมื่อ Base LUK ตั้งแต่ 80 ขึ้นไป Critical Damage +30%",
-            "เมื่อสวมใส่ร่วมกับ Incursion Temporal  Manteau, MaxHP +15%, MaxSP +5%",
-            "ประเภท : Shoes พลังป้องกัน : 25",
-            "น้ำหนัก : 60",
-            "เลเวลที่ต้องการ : 70",
-            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
-        ],
-        "slotCount": 1,
-        "ClassNum": 0,
-        "costume": false
-    },
-    "22202": {
-        "unidentifiedDisplayName": "Sandles",
-        "unidentifiedResourceName": "샌들",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "Incursion Temporal Boots",
-        "identifiedResourceName": "프레이야의장화",
-        "identifiedDescriptionName": [
-            "MDEF +15",
-            "เมื่ออัพเกรดตั้งแต่ 10 ขึ้นไป All status +2",
-            "เมื่อ Base STR ตั้งแต่ 80 ขึ้นไป ATK +50",
-            "เพิ่ม Damage ทางกายภาพระยะใกล้ต่อศัตรูทั้งหมด 5%",
-            "เมื่อ Base AGI ตั้งแต่ 80 ขึ้นไป ASPD +1",
-            "เมื่อ Base VIT ตั้งแต่ 80 ขึ้นไป MaxHP +8%",
-            "เมื่อ Base INT ตั้งแต่ 80 ขึ้นไป MATK +60",
-            "เมื่อ Base DEX ตั้งแต่ 80 ขึ้นไป ลดระยะเวลาร่ายแบบคงที่ 0.5 วินาที",
-            "เพิ่ม Damage ทางกายภาพระยะไกลต่อศัตรูทั้งหมด 5%",
-            "เมื่อ Base LUK ตั้งแต่ 80 ขึ้นไป Critical Damage +30%",
-            "เมื่อสวมใส่ร่วมกับ Incursion Temporal  Manteau, MaxHP +15%, MaxSP +5%",
-            "ประเภท : Shoes พลังป้องกัน : 25",
-            "น้ำหนัก : 60",
-            "เลเวลที่ต้องการ : 70",
-            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
-        ],
-        "slotCount": 1,
-        "ClassNum": 0,
-        "costume": false
-    },
-    "480076": {
-        "unidentifiedDisplayName": "Hood",
-        "unidentifiedResourceName": "후드",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "Incursion Temporal Manteau",
-        "identifiedResourceName": "Temporal_Manteau",
-        "identifiedDescriptionName": [
-            "สุดยอดผ้าคลุมที่แม้จะผ่านกาลเวลามาเนิ่นนาน แต่กลับไม่มีร่องรอยเลยแม้แต่นิดเดียว",
-            "",
-            "MDEF + 10",
-            "ทุก ๆ การอัพเกรด 2 ขั้น,",
-            "ATK +1%, MATK +1%",
-            "เพิ่ม Damage ทางกายภาพระยะไกลต่อศัตรูทั้งหมด 1% ",
-            "CRI +3, Critical Damage +1%",
-            "",
-            "ทุก ๆ การอัพเกรด 4 ขั้น,",
-            "เพิ่ม Damage ทางกายภาพต่อศัตรูทุกขนาด 3%",
-            "เพิ่ม Damage ทางเวททุกธาตุ 3%",
-            "MaxHP +3%, ลด Delay หลังใช้สกิล 3%",
-            "Critical Damage +3%",
-            "ASPD +3%",
-            "",
-            "เมื่ออัพเกรดถึงขั้น 9, ",
-            "ATK +7%, MATK +7%",
-            "เมื่อสวมใส่ร่วมกับ Incursion Temporal Ring [1] และ Bear's Power,",
-            "ATK +25, เพิ่ม Damage ทางกายภาพระยะใกล้ต่อศัตรูทั้งหมด 5%",
-            "เมื่อสวมใส่ร่วมกับ Incursion Temporal Ring [1] และ Speed Of Light,",
-            "ลด Delay หลังใช้สกิล 4%",
-            "เมื่อสวมใส่ร่วมกับ Incursion Temporal Ring [1] และ Muscle Fool,",
-            "MaxHP +7%",
-            "เมื่อสวมใส่ร่วมกับ Incursion Temporal Ring [1] และ Runaway Magic, MATK +25",
-            "เมื่อสวมใส่ร่วมกับ Incursion Temporal Ring [1] และ Hawkeye,",
-            "เพิ่ม Damage ทางกายภาพระยะไกลต่อศัตรูทั้งหมด 5%",
-            "เมื่อสวมใส่ร่วมกับ  Incursion Temporal Ring [1] และ Lucky Day, Critical Damage +5%",
-            "",
-            "เมื่อสวมใส่ร่วมกับ Incursion Temporal Boots หรือ [NFS] Incursion Temporal Boots,",
-            "MDEF +5",
-            "เมื่อค่าอัพเกรดของ Incursion Temporal Manteau และ Incursion Temporal Boots/[NFS] Incursion Temporal Boots รวมกันตั้งแต่ 22 ขึ้นไป,",
-            "เมื่อ Base STR ตั้งแต่ 80 ขึ้นไป ATK +50, เพิ่ม Damage ทางกายภาพระยะใกล้ต่อศัตรูทั้งหมด 7%",
-            "เมื่อ Base AGI ตั้งแต่ 80 ขึ้นไป ASPD + 1",
-            "เมื่อ Base VIT ตั้งแต่ 80 ขึ้นไป ลด Delay หลังใช้สกิล 5%",
-            "เมื่อ Base INT ตั้งแต่ 80 ขึ้นไป MATK +50",
-            "เมื่อ Base DEX ตั้งแต่ 80 ขึ้นไป เพิ่ม Damage ทางกายภาพระยะไกลต่อศัตรูทั้งหมด 7%",
-            "เมื่อ Base LUK ตั้งแต่ 80 ขึ้นไป Critical Damage +7%",
-            "ประเภท : Garment  พลังป้องกัน : 40",
-            "น้ำหนัก : 10",
-            "เลเวลที่ต้องการ : 70",
-            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
-        ],
-        "slotCount": 1,
-        "ClassNum": 0,
-        "costume": false
-    },
     "20524": {
         "unidentifiedDisplayName": "Hood",
         "unidentifiedResourceName": "후드",
@@ -512,5 +167,65 @@
         "slotCount": 0,
         "ClassNum": 0,
         "costume": true
+    },
+    "107589": {
+        "unidentifiedDisplayName": "Razer Costume Box",
+        "unidentifiedResourceName": "캐시상자_녹색",
+        "unidentifiedDescriptionName": [
+            "กล่อง Costume สุดพิเศษสำหรับโปรโมชั่น ROC X Razer",
+            "",
+            "เมื่อเปิดใช้งานจะได้รับ Costume Shining Angel Wing ที่มีความสามารถพิเศษในช่วงระยะเวลากิจกรรม",
+            "(สามารถนำไปเพิ่ม Enchant ฟรี 1 ครั้งที่ NPC Special Enchant Razer)",
+            "^ff0000ระวัง! Costume ที่เปิดได้รับจากกล่องไม่สามารถแลกเปลี่ยนกับผู้เล่นอื่นได้"
+        ],
+        "identifiedDisplayName": "Razer Costume Box",
+        "identifiedResourceName": "캐시상자_녹색",
+        "identifiedDescriptionName": [
+            "กล่อง Costume สุดพิเศษสำหรับโปรโมชั่น ROC X Razer",
+            "",
+            "เมื่อเปิดใช้งานจะได้รับ Costume Shining Angel Wing ที่มีความสามารถพิเศษในช่วงระยะเวลากิจกรรม",
+            "(สามารถนำไปเพิ่ม Enchant ฟรี 1 ครั้งที่ NPC Special Enchant Razer)",
+            "^ff0000ระวัง! Costume ที่เปิดได้รับจากกล่องไม่สามารถแลกเปลี่ยนกับผู้เล่นอื่นได้",
+            "น้ำหนัก : 0"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "107708": {
+        "unidentifiedDisplayName": "Imperial Costume Scroll",
+        "unidentifiedResourceName": "Red_S_Star_Scroll_TW",
+        "unidentifiedDescriptionName": [
+            "เปิดผนึกความสง่างามแห่งจักรวรรดิเปี่ยมด้วยกลิ่นอายของชนชั้นสูงและอำนาจอันน่าเกรงขาม",
+            "^ff0000หากเปิดใช้งานหลังวันที่ 8 กรกฏาคม 2569 หลังปิดปรับปรุงประจำสัปดาห์ จะไม่ได้รับ Event Stone Coin "
+        ],
+        "identifiedDisplayName": "Imperial Costume Scroll",
+        "identifiedResourceName": "Red_S_Star_Scroll_TW",
+        "identifiedDescriptionName": [
+            "เปิดผนึกความสง่างามแห่งจักรวรรดิเปี่ยมด้วยกลิ่นอายของชนชั้นสูงและอำนาจอันน่าเกรงขาม",
+            "^ff0000หากเปิดใช้งานหลังวันที่ 8 กรกฏาคม 2569 หลังปิดปรับปรุงประจำสัปดาห์ จะไม่ได้รับ Event Stone Coin ",
+            "น้ำหนัก : 1"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "107707": {
+        "unidentifiedDisplayName": "Sixth Sense Scroll",
+        "unidentifiedResourceName": "Mm_Morocc_Adt_Egg",
+        "unidentifiedDescriptionName": [
+            "เปิดสัมผัสแห่งโชคชะตา ลุ้นรับไอเทมหายากระดับแรร์ เปี่ยมด้วยเสน่ห์อันลึกลับ ราวกับพลังแห่งสัมผัสที่หก",
+            "^ff0000หากเปิดใช้งานหลังวันที่ 22 กรกฎาคม 2569 หลังปิดปรับปรุงประจำสัปดาห์จะไม่ได้รับ   Sixth Sense Coin "
+        ],
+        "identifiedDisplayName": "Sixth Sense Scroll",
+        "identifiedResourceName": "Mm_Morocc_Adt_Egg",
+        "identifiedDescriptionName": [
+            "เปิดสัมผัสแห่งโชคชะตา ลุ้นรับไอเทมหายากระดับแรร์ เปี่ยมด้วยเสน่ห์อันลึกลับ ราวกับพลังแห่งสัมผัสที่หก",
+            "^ff0000หากเปิดใช้งานหลังวันที่ 22 กรกฎาคม 2569 หลังปิดปรับปรุงประจำสัปดาห์จะไม่ได้รับ   Sixth Sense Coin ",
+            "น้ำหนัก : 1"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
     }
 }
