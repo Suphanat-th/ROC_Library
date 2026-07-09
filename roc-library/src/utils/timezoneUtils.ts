@@ -5,6 +5,23 @@
 
 // Timezone offset in hours (GMT+7 for Thailand)
 const THAILAND_TIMEZONE_OFFSET = 7;
+const THAILAND_TIMEZONE = "Asia/Bangkok";
+
+const getThaiDateParts = (date: Date) => {
+  const formatter = new Intl.DateTimeFormat("en-CA", {
+    timeZone: THAILAND_TIMEZONE,
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  });
+
+  const parts = formatter.formatToParts(date);
+  const year = Number(parts.find((part) => part.type === "year")?.value ?? 0);
+  const month = Number(parts.find((part) => part.type === "month")?.value ?? 0);
+  const day = Number(parts.find((part) => part.type === "day")?.value ?? 0);
+
+  return { year, month, day };
+};
 
 /**
  * Get current time in GMT+7 (Thailand timezone)
@@ -43,7 +60,7 @@ export const createThaiDate = (
  */
 export const formatThaiTime = (date: Date): string => {
   return date.toLocaleString('th-TH', {
-    timeZone: 'Asia/Bangkok',
+    timeZone: THAILAND_TIMEZONE,
     year: 'numeric',
     month: '2-digit',
     day: '2-digit',
@@ -51,4 +68,28 @@ export const formatThaiTime = (date: Date): string => {
     minute: '2-digit',
     second: '2-digit',
   });
+};
+
+/**
+ * Convert any date to a date-only UTC value based on Thailand calendar day.
+ * Useful for remaining-day calculations that must follow Thai local date.
+ */
+export const toThaiDateOnly = (date: Date): Date => {
+  const { year, month, day } = getThaiDateParts(date);
+  return new Date(Date.UTC(year, month - 1, day));
+};
+
+/**
+ * Check whether today falls within a date range using Thailand calendar day.
+ */
+export const isWithinThaiDateRange = (
+  target: Date,
+  start: Date,
+  end: Date,
+): boolean => {
+  const targetDate = toThaiDateOnly(target).getTime();
+  const startDate = toThaiDateOnly(start).getTime();
+  const endDate = toThaiDateOnly(end).getTime();
+
+  return targetDate >= startDate && targetDate <= endDate;
 };

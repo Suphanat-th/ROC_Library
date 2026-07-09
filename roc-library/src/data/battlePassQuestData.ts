@@ -6,7 +6,7 @@
 // Request Item Interface
 export interface RequestItem {
   name: string; // Name of the item/monster/currency (e.g., "Cornus", "Zeny", "Shard of Gigantes")
-  type: 'zeny' | 'item' | 'monster'; // Type of request
+  type: "zeny" | "item" | "monster"; // Type of request
   amount: number; // Quantity needed
 }
 
@@ -32,38 +32,36 @@ export interface Quest {
 export interface SeasonConfig {
   eventStartDate: Date;
   eventEndDate: Date;
-  dailyNormalReward: number; // Total points for normal daily
-  dailyPremiumReward: number; // Total points for premium daily
-  weeklyReward: number; // Total points for weekly
+  seasonNumber?: number; // Optional season number for display
 }
 
 /**
- * DAILY QUESTS - Season 1 (April 22 - June 23, 2026)
+ * DAILY QUESTS - Season 6 (July 9 - September 8, 2026)
  */
 export const DAILY_QUESTS: Quest[] = [
   {
     type: "daily",
     name: "Monster Hunt",
     reward: 10,
-    dateRange: "22/04 - 24/06",
+    dateRange: "08/07 - 09/09",
     request: [
       {
-        name: "Cornus",
+        name: "Bloody Murderer",
         type: "monster",
-        amount: 10,
+        amount: 20,
       },
     ],
     details: {
-      monsterName: "Cornus",
-      quantity: 10,
-      location: "Cornus dungeon",
+      monsterName: "Bloody Murderer",
+      quantity: 20,
+      location: "",
     },
   },
   {
     type: "daily",
     name: "Send Zeny",
     reward: 30,
-    dateRange: "22/04 - 24/06",
+    dateRange: "08/07 - 09/09",
     request: [
       {
         name: "Zeny",
@@ -82,16 +80,16 @@ export const PREMIUM_DAILY_ROTATION: Quest[] = [
     type: "daily",
     name: "Monster Hunt",
     reward: 20,
-    dateRange: "22/04 - 06/05",
+    dateRange: "08/07 - 22/07",
     request: [
       {
-        name: "Hillsrion",
+        name: "Disguise",
         type: "monster",
         amount: 20,
       },
     ],
     details: {
-      monsterName: "Hillsrion",
+      monsterName: "Disguise",
       quantity: 20,
     },
   },
@@ -99,16 +97,16 @@ export const PREMIUM_DAILY_ROTATION: Quest[] = [
     type: "daily",
     name: "Monster Hunt",
     reward: 20,
-    dateRange: "06/05 - 20/05",
+    dateRange: "22/07 - 05/08",
     request: [
       {
-        name: "Centipede",
+        name: "Gibbet",
         type: "monster",
         amount: 20,
       },
     ],
     details: {
-      monsterName: "Centipede",
+      monsterName: "Gibbet",
       quantity: 20,
     },
   },
@@ -116,33 +114,33 @@ export const PREMIUM_DAILY_ROTATION: Quest[] = [
     type: "daily",
     name: "Monster Hunt",
     reward: 20,
-    dateRange: "20/05 - 03/06",
+    dateRange: "05/08 - 19/08",
     request: [
       {
-        name: "Tatacho",
+        name: "Dullahan",
         type: "monster",
         amount: 20,
       },
     ],
     details: {
-      monsterName: "Tatacho",
+      monsterName: "Dullahan",
       quantity: 20,
     },
   },
   {
     type: "daily",
     name: "Monster Hunt",
-    reward: 10,
-    dateRange: "03/06 - 24/06",
+    reward: 20,
+    dateRange: "19/08 - 09/09",
     request: [
       {
-        name: "Dolomedes",
+        name: "Quve",
         type: "monster",
         amount: 20,
       },
     ],
     details: {
-      monsterName: "Dolomedes",
+      monsterName: "Quve",
       quantity: 20,
     },
   },
@@ -154,68 +152,68 @@ export const PREMIUM_DAILY_ROTATION: Quest[] = [
 export const WEEKLY_QUESTS: Quest[] = [
   {
     type: "weekly",
-    name: "Celine Kimi",
+    name: "Amdarais",
     reward: 20,
-    dateRange: "22/04 - 24/06",
+    dateRange: "08/07 - 09/09",
     request: [
       {
-        name: "Celine Kimi",
+        name: "Amdarais",
         type: "monster",
         amount: 1,
       },
     ],
     details: {
-      monsterName: "Celine Kimi",
+      monsterName: "Amdarais",
       quantity: 1,
-      location: "Horror Toy Factory",
+      location: "Boss ดัน Old Glast Heim",
     },
   },
   {
     type: "weekly",
-    name: "Faceworm Queen",
+    name: "Evil Believer",
     reward: 20,
-    dateRange: "22/04 - 24/06",
+    dateRange: "08/07 - 09/09",
     request: [
       {
-        name: "Faceworm Queen",
+        name: "Evil Believer",
         type: "monster",
         amount: 1,
       },
     ],
     details: {
-      monsterName: "Faceworm Queen",
+      monsterName: "Evil Believer",
       quantity: 1,
-      location: "The Nest of Faceworm",
+      location: "Boss ดัน Raid Devil Secret",
     },
   },
   {
     type: "weekly",
-    name: "Ancient Gigantes",
+    name: "Torturous Redeemer",
     reward: 30,
-    dateRange: "22/04 - 24/06",
+    dateRange: "08/07 - 09/09",
     request: [
       {
-        name: "Ancient Gigantes",
+        name: "Torturous Redeemer",
         type: "monster",
         amount: 1,
       },
     ],
     details: {
-      monsterName: "Ancient Gigantes",
+      monsterName: "Torturous Redeemer",
       quantity: 1,
-      location: "Sarah and Fenrir",
+      location: "Boss ดัน Ghost Palace",
     },
   },
   {
     type: "weekly",
     name: "Send Zeny/Items",
     reward: 30,
-    dateRange: "22/04 - 24/06",
+    dateRange: "08/07 - 09/09",
     request: [
       {
-        name: "Shard of Gigantes",
+        name: " Gray Shard",
         type: "item",
-        amount: 1,
+        amount: 10,
       },
       {
         name: "Zeny",
@@ -227,15 +225,13 @@ export const WEEKLY_QUESTS: Quest[] = [
 ];
 
 /**
- * SEASON 1 CONFIGURATION
- * April 22 - June 24, 2026
+ * SEASON 6 CONFIGURATION
+ * July 9 - September 8, 2026
  */
 export const SEASON_CONFIG: SeasonConfig = {
-  eventStartDate: new Date(2026, 3, 22, 12, 0, 0), // April 22, 2026 12:00
-  eventEndDate: new Date(2026, 5, 24, 23, 59, 59, 999), // June 24, 2026 23:59
-  dailyNormalReward: 40, // 10 (Monster) + 30 (Zeny)
-  dailyPremiumReward: 50, // 20 (Premium Monster) + 30 (Zeny)
-  weeklyReward: 100, // 20 + 20 + 30 + 30
+  eventStartDate: new Date(2026, 6, 8, 14, 0, 0), // April 22, 2026 12:00
+  eventEndDate: new Date(2026, 8, 9, 6, 0, 0, 0), // June 24, 2026 23:59
+  seasonNumber: 6, // Season 5 for display
 };
 
 /**
@@ -246,16 +242,21 @@ export const SEASON_CONFIG: SeasonConfig = {
  * Get daily quest total based on account type
  */
 export const getDailyQuestTotal = (isPremium: boolean): number => {
+  const sendZenyReward = DAILY_QUESTS[1]?.reward ?? 0;
+  const normalMonsterReward = DAILY_QUESTS[0]?.reward ?? 0;
+  const premiumMonsterReward =
+    PREMIUM_DAILY_ROTATION[0]?.reward ?? normalMonsterReward;
+
   return isPremium
-    ? SEASON_CONFIG.dailyPremiumReward
-    : SEASON_CONFIG.dailyNormalReward;
+    ? premiumMonsterReward + sendZenyReward
+    : normalMonsterReward + sendZenyReward;
 };
 
 /**
  * Get weekly quest total
  */
 export const getWeeklyQuestTotal = (): number => {
-  return SEASON_CONFIG.weeklyReward;
+  return WEEKLY_QUESTS.reduce((sum, quest) => sum + quest.reward, 0);
 };
 
 /**
@@ -274,10 +275,10 @@ export const getQuestsByType = (type: "daily" | "weekly"): Quest[] => {
 export const getQuestSummary = () => {
   return {
     daily: {
-      normal: SEASON_CONFIG.dailyNormalReward,
-      premium: SEASON_CONFIG.dailyPremiumReward,
+      normal: getDailyQuestTotal(false),
+      premium: getDailyQuestTotal(true),
     },
-    weekly: SEASON_CONFIG.weeklyReward,
+    weekly: getWeeklyQuestTotal(),
     totalDailyQuests: DAILY_QUESTS.length,
     totalWeeklyQuests: WEEKLY_QUESTS.length,
   };

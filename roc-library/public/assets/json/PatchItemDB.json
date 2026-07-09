@@ -1,231 +1,1754 @@
 {
-    "20524": {
-        "unidentifiedDisplayName": "Hood",
-        "unidentifiedResourceName": "후드",
+    "13441": {
+        "unidentifiedDisplayName": "Sword",
+        "unidentifiedResourceName": "소드",
         "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+            "ไอเท็มปริศนา ต้องใช้ [Magnifier] ในการตรวจสอบไอเท็ม"
         ],
-        "identifiedDisplayName": "Costume Shining Angel Wing",
-        "identifiedResourceName": "C_Shining_Angel_Wing",
+        "identifiedDisplayName": "Thanos Sword",
+        "identifiedResourceName": "타노스의검",
         "identifiedDescriptionName": [
-            "ปีกอันส่องประกายของนางฟ้า เพียงแค่มองก็รู้สึกถึงความปลอดภัยและความสุขสบาย",
+            "ดาบที่มีพลังเวทย์ ทำขึ้นมาจาก Shard of Gray เพื่อใช้เผชิญหน้ากับ Devil Sword Tarthanos",
+            "มีพลังเวทย์และพละกำลังที่แข็งแกร่ง แต่ก็ต้องจ่ายค่าตอบแทนที่สมน้ำสมเนื้อ",
             "",
-            "^ff0000ความสามารถพิเศษในระยะเวลากิจกรรม",
-            "^ff0000(8 กรกฏาคม 2569  -  5 สิงหาคม 2569 05.59 น.)",
-            "^ff0000EXP + 15 %",
-            "^ff0000DROP + 10%",
+            "INT + 6 / VIT + 6 / LUK -6",
+            "เมื่อโจมตีกายภาพ จะมีโอกาสในระดับต่ำ ที่จะดูดซับดาเมจ 5% มาเป็น HP และ SP",
+            "HP ลดลง 100 ทุก 10 วินาที",
+            "HP ลดลง 1000 เมื่อถอดอุปกรณ์",
+            "MATK + 100",
             "",
-            "ประเภท : Garment พลังป้องกัน : 0",
-            "น้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 1",
-            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+            "ประเภท : Sword",
+            "โจมตี : 150",
+            "น้ำหนัก : 70",
+            "เลเวลอาวุธ : 4",
+            "เลเวลที่ต้องการ : 90",
+            "อาชีพ: Swordsman Classes"
         ],
-        "slotCount": 0,
-        "ClassNum": 0,
-        "costume": true
+        "slotCount": 1,
+        "ClassNum": 2
     },
-    "20134": {
-        "unidentifiedDisplayName": "Helm",
-        "unidentifiedResourceName": "헬름",
+    "21009": {
+        "unidentifiedDisplayName": "Two-Handed Sword",
+        "unidentifiedResourceName": "바스타드소드",
         "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+            "ไอเท็มปริศนา ต้องใช้ [Magnifier] ในการตรวจสอบไอเท็ม"
         ],
-        "identifiedDisplayName": "Costume White Abyssal Knight Helm",
-        "identifiedResourceName": "흰색심연의모자",
+        "identifiedDisplayName": "Thanos Great Sword",
+        "identifiedResourceName": "타노스의대검",
         "identifiedDescriptionName": [
-            "หมวกพิธีการสีขาวบริสุทธิ์ที่ถูกสร้างขึ้นโดยเลียนแบบหมวกของ White Abyssal Knight",
-            "แม้จิตวิญญาณจะถูก Himmelmez ทำให้เสื่อมลง แต่ก่อนหน้านั้นมันเคยเปล่งประกายแสงอันบริสุทธิ์เช่นนี้",
-            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 16 ได้",
-            "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Upper น้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 1",
-            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+            "Sword ที่มีพลังเวทย์ ซึ่งทำขึ้นมาจาก Gray Shard เพื่อใช้เผชิญหน้ากับ Magical Sword Tarthanos",
+            "แม้จะเป็น Sword ที่มีพลังเวทย์และพละกำลังที่แข็งแกร่ง",
+            "",
+            "INT + 6 / VIT + 6 / LUK -6",
+            "เมื่อโจมตีทางกายภาพ จะมีโอกาสในระดับต่ำที่จะดูดซับDamage 5% มาเป็นHP และ SP",
+            "HP ลดลง 100 ทุก 10 วินาที",
+            "HP ลดลง 1000 เมื่อถอดอุปกรณ์",
+            "MATK + 120",
+            "",
+            "ประเภท : Two-Handed Sword",
+            "พลังโจมตี : 280",
+            "น้ำหนัก : 130",
+            "เลเวลอาวุธ : 4",
+            "เลเวลที่ต้องการ : 90",
+            "อาชีพที่ใส่ได้ : Swordsman Classes"
         ],
-        "slotCount": 0,
-        "ClassNum": 1269,
-        "costume": true
+        "slotCount": 1,
+        "ClassNum": 3
     },
-    "400899": {
+    "22033": {
+        "unidentifiedDisplayName": "Shoes",
+        "unidentifiedResourceName": "부츠",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา ต้องใช้ [Magnifier] ในการตรวจสอบไอเท็ม"
+        ],
+        "identifiedDisplayName": "Boots Of Gray",
+        "identifiedResourceName": "흙빛의신발",
+        "identifiedDescriptionName": [
+            "รองเท้าที่ทำขึ้นมาจากเหล่า Gray Shard ความทรงจำเก่าก่อนที่ถูกทิ้งของ Sakray ช่วยปกป้องท่านจากพลังศักดิ์สิทธิ์ และจากความหวาดกลัวแห่งความว่างเปล่า",
+            "",
+            "ต้านทานธาตุศักดิ์สิทธิ์ 2%",
+            "ต้านทานธาตุศักดิ์สิทธิ์เพิ่มขึ้น 1 % ต่อการอัปเกรด 3 ขั้น",
+            "",
+            "ประเภท : Shoes พลังป้องกัน : 25",
+            "น้ำหนัก : 40",
+            "เลเวลที่ต้องการ : 90",
+            "อาชีพที่สวมใส่ : Hi-Class ทุกอาชีพ ยกเว้น Novice Classes"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0
+    },
+    "16028": {
+        "unidentifiedDisplayName": "Blunt Weapon",
+        "unidentifiedResourceName": "해머",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา ต้องใช้ [Magnifier] ในการตรวจสอบไอเท็ม"
+        ],
+        "identifiedDisplayName": "Thanos Hammer",
+        "identifiedResourceName": "타노스의망치",
+        "identifiedDescriptionName": [
+            "ค้อนที่มีพลังเวทย์ ทำขึ้นมาจาก Shard of Gray เพื่อใช้เผชิญหน้ากับ Devil Sword Tarthanos",
+            "มีพลังเวทย์และพละกำลังที่แข็งแกร่ง แต่ก็ต้องจ่ายค่าตอบแทนที่สมน้ำสมเนื้อ",
+            "",
+            "INT + 6 / VIT + 6 / LUK -6",
+            "เมื่อโจมตีกายภาพ จะมีโอกาสในระดับต่ำ ที่จะดูดซับดาเมจ 5% มาเป็น HP และ SP",
+            "HP ลดลง 100 ทุก 10 วินาที",
+            "HP ลดลง 1000 เมื่อถอดอุปกรณ์",
+            "MATK + 120",
+            "",
+            "ประเภท : Mace",
+            "โจมตี : 180",
+            "น้ำหนัก : 300",
+            "เลเวลอาวุธ : 4",
+            "เลเวลที่ต้องการ : 90",
+            "อาชีพ: Hi-Swordsman, Hi-Merchant, and Hi-Acolyte Classes"
+        ],
+        "slotCount": 1,
+        "ClassNum": 8
+    },
+    "1988": {
+        "unidentifiedDisplayName": "Whip",
+        "unidentifiedResourceName": "로프",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา ต้องใช้ [Magnifier] ในการตรวจสอบไอเท็ม"
+        ],
+        "identifiedDisplayName": "Thanos Whip",
+        "identifiedResourceName": "타노스의윕소드",
+        "identifiedDescriptionName": [
+            "ดาบแส้ที่มีพลังเวทย์ ทำขึ้นมาจาก Shard of Gray เพื่อใช้เผชิญหน้ากับ Devil Sword Tarthanos",
+            "มีพลังเวทย์และพละกำลังที่แข็งแกร่ง แต่ก็ต้องจ่ายค่าตอบแทนที่สมน้ำสมเนื้อ",
+            "",
+            "INT + 6 / VIT + 6 / LUK -6",
+            "เมื่อโจมตีกายภาพ จะมีโอกาสในระดับต่ำ ที่จะดูดซับดาเมจ 5% มาเป็น HP และ SP",
+            "ดาเมจการโจมตีกายภาพระยะไกล เพิ่มขึ้น 20%",
+            "HP ลดลง 100 ทุก 10 วินาที",
+            "HP ลดลง 1000 เมื่อถอดอุปกรณ์",
+            "MATK + 130",
+            "",
+            "ประเภท : Whip",
+            "โจมตี : 200",
+            "น้ำหนัก : 220",
+            "เลเวลอาวุธ : 4",
+            "เลเวลที่ต้องการ : 90",
+            "อาชีพ: Gypsy Classes"
+        ],
+        "slotCount": 1,
+        "ClassNum": 14
+    },
+    "13093": {
+        "unidentifiedDisplayName": "Dagger",
+        "unidentifiedResourceName": "대거",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา ต้องใช้ [Magnifier] ในการตรวจสอบไอเท็ม"
+        ],
+        "identifiedDisplayName": "Thanos Dagger",
+        "identifiedResourceName": "타노스의단검",
+        "identifiedDescriptionName": [
+            "มีดสั้นที่มีพลังเวทย์ ทำขึ้นมาจาก Shard of Gray เพื่อใช้เผชิญหน้ากับ Devil Sword Tarthanos",
+            "มีพลังเวทย์และพละกำลังที่แข็งแกร่ง แต่ก็ต้องจ่ายค่าตอบแทนที่สมน้ำสมเนื้อ",
+            "",
+            "INT + 6 / VIT + 6 / LUK -6",
+            "เมื่อโจมตีกายภาพ จะมีโอกาสในระดับต่ำ ที่จะดูดซับดาเมจ 5% มาเป็น HP และ SP",
+            "HP ลดลง 100 ทุก 10 วินาที",
+            "HP ลดลง 1000 เมื่อถอดอุปกรณ์",
+            "MATK + 130",
+            "",
+            "ประเภท : Dagger",
+            "โจมตี : 100",
+            "น้ำหนัก : 80",
+            "เลเวลอาวุธ : 4",
+            "เลเวลที่ต้องการ : 90",
+            "อาชีพ:  Swordman/Archer/Merchant/Thief Classes"
+        ],
+        "slotCount": 1,
+        "ClassNum": 1
+    },
+    "1669": {
+        "unidentifiedDisplayName": "Rod",
+        "unidentifiedResourceName": "롯드",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา ต้องใช้ [Magnifier] ในการตรวจสอบไอเท็ม"
+        ],
+        "identifiedDisplayName": "Thanos Staff",
+        "identifiedResourceName": "타노스의지팡이",
+        "identifiedDescriptionName": [
+            "ไม้เท้าที่มีพลังเวทย์ ทำขึ้นมาจาก Shard of Gray เพื่อใช้เผชิญหน้ากับ Devil Sword Tarthanos",
+            "มีพลังเวทย์และพละกำลังที่แข็งแกร่ง แต่ก็ต้องจ่ายค่าตอบแทนที่สมน้ำสมเนื้อ",
+            "",
+            "INT + 6 / VIT + 6 / LUK -6",
+            "ผลการรักษาเพิ่มขึ้น 15 %",
+            "เมื่อโจมตีเวทย์ มีโอกาสที่จะฟื้นฟู HP และ SP",
+            "HP ลดลง 100 ทุก 10 วินาที",
+            "HP ลดลง 1000 เมื่อถอดอุปกรณ์",
+            "MATK + 200",
+            "",
+            "ประเภท : Staff",
+            "โจมตี : 100",
+            "น้ำหนัก : 100",
+            "เลเวลอาวุธ : 4",
+            "เลเวลที่ต้องการ : 90",
+            "อาชีพ: Hi-Mage and Hi-Acolyte Classes"
+        ],
+        "slotCount": 1,
+        "ClassNum": 10
+    },
+    "28000": {
+        "unidentifiedDisplayName": "Katar",
+        "unidentifiedResourceName": "카타르",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา ต้องใช้ [Magnifier] ในการตรวจสอบไอเท็ม"
+        ],
+        "identifiedDisplayName": "Thanos Katar",
+        "identifiedResourceName": "타노스의카타르",
+        "identifiedDescriptionName": [
+            "กาตาร์ที่มีพลังเวทย์ ทำขึ้นมาจาก Shard of Gray เพื่อใช้เผชิญหน้ากับ Devil Sword Tarthanos",
+            "มีพลังเวทย์และพละกำลังที่แข็งแกร่ง แต่ก็ต้องจ่ายค่าตอบแทนที่สมน้ำสมเนื้อ",
+            "",
+            "INT + 6 / VIT + 6 / LUK -6",
+            "เมื่อโจมตีกายภาพ จะมีโอกาสในระดับต่ำ ที่จะดูดซับดาเมจ 5% มาเป็น HP และ SP",
+            "HP ลดลง 100 ทุก 10 วินาที",
+            "HP ลดลง 1000 เมื่อถอดอุปกรณ์",
+            "MATK + 80",
+            "",
+            "ประเภท : Katar",
+            "โจมตี : 220",
+            "น้ำหนัก : 180",
+            "เลเวลอาวุธ : 4",
+            "เลเวลที่ต้องการ : 90",
+            "อาชีพ: Assasin Cross Classes"
+        ],
+        "slotCount": 1,
+        "ClassNum": 16
+    },
+    "2023": {
+        "unidentifiedDisplayName": "Two-Handed Staff",
+        "unidentifiedResourceName": "완드",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา ต้องใช้ [Magnifier] ในการตรวจสอบไอเท็ม"
+        ],
+        "identifiedDisplayName": "Thanos Rod",
+        "identifiedResourceName": "타노스의양손지팡이",
+        "identifiedDescriptionName": [
+            "ไม้เท้าที่มีพลังเวทย์ ทำขึ้นมาจาก Shard of Gray เพื่อใช้เผชิญหน้ากับ Devil Sword Tarthanos",
+            "มีพลังเวทย์และพละกำลังที่แข็งแกร่ง แต่ก็ต้องจ่ายค่าตอบแทนที่สมน้ำสมเนื้อ",
+            "",
+            "INT + 6 / VIT + 6 / LUK -6",
+            "ผลการรักษาเพิ่มขึ้น 18 %",
+            "เมื่อโจมตีเวทย์ มีโอกาสที่จะฟื้นฟู HP และ SP",
+            "HP ลดลง 100 ทุก 10 วินาที",
+            "HP ลดลง 1000 เมื่อถอดอุปกรณ์",
+            "MATK + 250",
+            "",
+            "ประเภท : Two Hand Staff",
+            "โจมตี : 120",
+            "น้ำหนัก : 140",
+            "เลเวลอาวุธ : 4",
+            "เลเวลที่ต้องการ : 90",
+            "อาชีพ: Hi-Mage and Hi-Acolyte Classes"
+        ],
+        "slotCount": 1,
+        "ClassNum": 23
+    },
+    "1496": {
+        "unidentifiedDisplayName": "Two-Handed Spear",
+        "unidentifiedResourceName": "쟈벨린",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา ต้องใช้ [Magnifier] ในการตรวจสอบไอเท็ม"
+        ],
+        "identifiedDisplayName": "Thanos Long Spear",
+        "identifiedResourceName": "타노스의양손창",
+        "identifiedDescriptionName": [
+            "Two Hand Spearที่มีพลังเวทย์ ทำขึ้นมาจาก Shard of Gray เพื่อใช้เผชิญหน้ากับ Devil Sword Tarthanos",
+            "มีพลังเวทย์และพละกำลังที่แข็งแกร่ง แต่ก็ต้องจ่ายค่าตอบแทนที่สมน้ำสมเนื้อ",
+            "",
+            "INT + 6 / VIT + 6 / LUK -6",
+            "เมื่อโจมตีกายภาพ จะมีโอกาสในระดับต่ำ ที่จะดูดซับดาเมจ 5% มาเป็น HP และ SP",
+            "HP ลดลง 100 ทุก 10 วินาที",
+            "HP ลดลง 1000 เมื่อถอดอุปกรณ์",
+            "MATK + 50",
+            "",
+            "ประเภท : Two Hand Spear",
+            "โจมตี : 250",
+            "น้ำหนัก : 375",
+            "เลเวลอาวุธ : 4",
+            "เลเวลที่ต้องการ : 90",
+            "อาชีพ: Swordsman Classes"
+        ],
+        "slotCount": 1,
+        "ClassNum": 5
+    },
+    "5857": {
         "unidentifiedDisplayName": "Hat",
         "unidentifiedResourceName": "햇",
         "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+            "ไอเท็มปริศนา ต้องทำการตรวจสอบโดยใช้ [Magnifier]"
         ],
-        "identifiedDisplayName": "Costume Unrivaled Crest Hat",
-        "identifiedResourceName": "Striking_hat_A",
+        "identifiedDisplayName": "Worldcup Hat of Fight",
+        "identifiedResourceName": "냉철의축구공모자",
         "identifiedDescriptionName": [
-            "หมวกประดับตราประจำตระกูลเก่าแก่สืบทอดกันมาอย่างยาวนาน",
-            "เล่าขานกันว่าเคยเป็นของผู้ใช้คันธนูผู้ยิ่งใหญ่ ซึ่งได้รับการยกย่องว่าไร้ผู้ต่อกร",
-            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 17 ได้",
-            "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Upper น้ำหนัก : 0",
+            "^ff0000ไอเทมไม่สามารถแลกเปลี่ยนได้",
+            "หมวกที่ทำให้คุณรู้สึกร่วมไปกับงานเทศกาล",
+            "ยิงอย่างแรงด้วยพลังอันน่าทึ่ง!!",
+            "VIT+ 2, INT+ 2.",
+            "^ff0000 ลบอันนี้ออก สามารถใช้งานสกิล Flame Launcher Lv.1 ได้  ",
+            "เมื่อใช้สกิล Heal มีโอกาสเล็กน้อยที่จะได้เพิ่มอัตราการเพิ่ม HP 20% เป็นระยะเวลา 5 วินาที",
+            "เมื่อทำการโจมตีกายภาพ มีโอกาส 10% ร่ายสกิล Fire Ball Lv.5 , Meteo Storm Lv.5 ใส่ศัตรู",
+            "เมื่ออัพเกรดขั้นที่ 7 พลังโจมตีเวทธาตุไฟ เพิ่มขึ้น 10%",
+            "เมื่ออัพเกรดขั้นที่ 9 เพิ่มค่าความเสียหายสกิล Fire Ball , Meteo Storm ขึ้น 15%",
+            "^ff0000(ความสามารถในช่วงเวลากิจกรรม)",
+            "เมื่อกำจัดมอนเตอร์จะมีโอกาส 1% ที่จะได้รับไอเทม Soccer Cake",
+            "ไม่ติดสถานะ Stun, Frost, Stone Curse",
+            "ประเภท : Headgear พลังป้องกัน : 2",
+            "ใช้สำหรับ : Upper  น้ำหนัก : 60",
             "เลเวลที่ต้องการ : 1",
-            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+            "อาชีพ : ทุกอาชีพ"
         ],
-        "slotCount": 0,
-        "ClassNum": 2391,
-        "costume": true
+        "slotCount": 1,
+        "ClassNum": 672
     },
-    "410160": {
-        "unidentifiedDisplayName": "Ribbon",
-        "unidentifiedResourceName": "리본",
+    "18820": {
+        "unidentifiedDisplayName": "Helmet",
+        "unidentifiedResourceName": "다크네스헬름",
         "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+            "ไอเท็มปริศนา ต้องใช้ [Magnifier] ในการตรวจสอบไอเท็ม"
         ],
-        "identifiedDisplayName": "Costume Magic Celestial Globe",
-        "identifiedResourceName": "Magic_Celestial_Globe",
+        "identifiedDisplayName": "Gray Helmet",
+        "identifiedResourceName": "흙빛의투구",
         "identifiedDescriptionName": [
-            "วงเวทย์ที่หลอมรวมจากอุกกาบาตนับไม่ถ้วนซึ่งโปรยปรายลงมาจากห้วงอวกาศ",
-            "อาคมที่สถิตอยู่ภายในถูกสร้างขึ้นด้วยหลักการอันอยู่นอกเหนือกฎเกณฑ์ของโลกนี้ ทำให้ไม่อาจหยั่งรู้หรือทำความเข้าใจได้อย่างสมบูรณ์ด้วยเวทมนตร์หรือวิทยาศาสตร์ในยุคปัจจุบัน",
-            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 18 ได้",
-            "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Middle น้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 1",
-            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
-        ],
-        "slotCount": 0,
-        "ClassNum": 2265,
-        "costume": true
-    },
-    "410508": {
-        "unidentifiedDisplayName": "Circlet",
-        "unidentifiedResourceName": "서클릿",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "Costume Celestial Integrity",
-        "identifiedResourceName": "Midgard_Integrity",
-        "identifiedDescriptionName": [
-            "Circlet ที่สร้างขึ้นจากเศษอุกกาบาตซึ่งร่วงหล่นจากท้องฟ้า พลังแห่งปาฏิหาริย์ภายในนั้นมอบความกล้าให้แก่วีรบุรุษผู้สวมใส่",
-            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 20 ได้",
-            "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Middle น้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 1",
-            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
-        ],
-        "slotCount": 0,
-        "ClassNum": 2750,
-        "costume": true
-    },
-    "480630": {
-        "unidentifiedDisplayName": "Hood",
-        "unidentifiedResourceName": "후드",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "Costume Mechanical Fairy Wing",
-        "identifiedResourceName": "C_Mechanical_Fairy_Wing",
-        "identifiedDescriptionName": [
-            "ปีกผีเสื้อประดิษฐ์ที่สร้างขึ้นด้วยกลไกจักรกลอันประณีต",
-            "เฟืองและสปริงขนาดเล็กจะขยับอย่างนุ่มนวลตามจังหวะการกระพือปีก พร้อมเสียงโลหะเบา ๆ แผ่วดังออกมา",
-            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 21 ได้",
-            "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Garment น้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 1",
-            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
-        ],
-        "slotCount": 0,
-        "ClassNum": 284,
-        "costume": true
-    },
-    "480783": {
-        "unidentifiedDisplayName": "Ribbon",
-        "unidentifiedResourceName": "리본",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "Costume Dark Knight Cloak",
-        "identifiedResourceName": "H_NightWatch_Cloak_BK",
-        "identifiedDescriptionName": [
-            "ผ้าคลุมสีดำของอัศวินลึกลับ ผู้ถูกกล่าวขานว่าได้ยอมจำนนต่อความมืดและสูญสิ้นวิญญาณ",
-            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 21 ได้",
-            "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Lower น้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 1",
-            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
-        ],
-        "slotCount": 0,
-        "ClassNum": 2732,
-        "costume": true
-    },
-    "480298": {
-        "unidentifiedDisplayName": "Hood",
-        "unidentifiedResourceName": "후드",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "Costume Magic Wonderland",
-        "identifiedResourceName": "MCircle_Wonderland",
-        "identifiedDescriptionName": [
-            "วงแหวนเวทย์น่ารักน่าเอ็นดู เหมือนจะพาเราจมดิ่งสู่ดินแดนมหัศจรรย์",
+            "หมวกที่ทำขึ้นมาจากเหล่า Gray Shard ความทรงจำเก่าก่อนที่ถูกทิ้งของ Sakray ช่วยปกป้องท่านจากพลังศักดิ์สิทธิ์ และจากความหวาดกลัวแห่งความว่างเปล่า",
             "",
-            "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Garment น้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 1",
-            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+            "ต้านทานธาตุศักดิ์สิทธิ์ 3%",
+            "ต้านทานธาตุศักดิ์สิทธิ์เพิ่มขึ้น 1 % ต่อการอัปเกรด 2 ขั้น",
+            "",
+            "ประเภท : Headgear ป้องกัน : 35",
+            "น้ำหนัก : 45",
+            "เลเวลที่ต้องการ : 90",
+            "อาชีพ: Hi-Class ทุกอาชีพ ยกเว้น Novice Classes"
+        ],
+        "slotCount": 1,
+        "ClassNum": 941
+    },
+    "1836": {
+        "unidentifiedDisplayName": "Knuckle",
+        "unidentifiedResourceName": "바그낙",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา ต้องใช้ [Magnifier] ในการตรวจสอบไอเท็ม"
+        ],
+        "identifiedDisplayName": "Thanos Knuckle",
+        "identifiedResourceName": "타노스의너클",
+        "identifiedDescriptionName": [
+            "สนับมือที่มีพลังเวทย์ ทำขึ้นมาจาก Shard of Gray เพื่อใช้เผชิญหน้ากับ Devil Sword Tarthanos",
+            "มีพลังเวทย์และพละกำลังที่แข็งแกร่ง แต่ก็ต้องจ่ายค่าตอบแทนที่สมน้ำสมเนื้อ",
+            "",
+            "INT + 6 / VIT + 6 / LUK - 6",
+            "เมื่อโจมตีกายภาพ จะมีโอกาสในระดับต่ำ ที่จะดูดซับดาเมจ 5% มาเป็น HP และ SP",
+            "HP ลดลง 100 ทุก 10 วินาที",
+            "HP ลดลง 1000 เมื่อถอดอุปกรณ์",
+            "MATK + 100",
+            "",
+            "ประเภท : Knuckle",
+            "โจมตี : 160",
+            "น้ำหนัก : 60",
+            "เลเวลอาวุธ : 4",
+            "เลเวลที่ต้องการ : 90",
+            "อาชีพ: Champion Classes"
+        ],
+        "slotCount": 1,
+        "ClassNum": 12
+    },
+    "28100": {
+        "unidentifiedDisplayName": "Two-Handed Axe",
+        "unidentifiedResourceName": "배틀액스",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา ต้องใช้ [Magnifier] ในการตรวจสอบไอเท็ม"
+        ],
+        "identifiedDisplayName": "Thanos Axe",
+        "identifiedResourceName": "타노스의도끼",
+        "identifiedDescriptionName": [
+            "ขวานสองมือที่มีพลังเวทย์ ทำขึ้นมาจาก Shard of Gray เพื่อใช้เผชิญหน้ากับ Devil Sword Tarthanos",
+            "มีพลังเวทย์และพละกำลังที่แข็งแกร่ง แต่ก็ต้องจ่ายค่าตอบแทนที่สมน้ำสมเนื้อ",
+            "",
+            "INT + 6 / VIT + 6 / LUK -6",
+            "เมื่อโจมตีกายภาพ จะมีโอกาสในระดับต่ำ ที่จะดูดซับดาเมจ 5% มาเป็น HP และ SP",
+            "HP ลดลง 100 ทุก 10 วินาที",
+            "HP ลดลง 1000 เมื่อถอดอุปกรณ์",
+            "MATK + 80",
+            "ไม่สามารถทำลายได้",
+            "ประเภท : Two Hand Axe",
+            "โจมตี : 300",
+            "น้ำหนัก : 400",
+            "เลเวลอาวุธ : 4",
+            "เลเวลที่ต้องการ : 90",
+            "อาชีพ: Swordsman, Merchant Classes"
+        ],
+        "slotCount": 1,
+        "ClassNum": 7
+    },
+    "18119": {
+        "unidentifiedDisplayName": "Bow",
+        "unidentifiedResourceName": "보우",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา ต้องใช้ [Magnifier] ในการตรวจสอบไอเท็ม"
+        ],
+        "identifiedDisplayName": "Thanos Bow",
+        "identifiedResourceName": "타노스의활",
+        "identifiedDescriptionName": [
+            "ธนูที่มีพลังเวทย์ ทำขึ้นมาจาก Shard of Gray เพื่อใช้เผชิญหน้ากับ Devil Sword Tarthanos",
+            "มีพลังเวทย์และพละกำลังที่แข็งแกร่ง แต่ก็ต้องจ่ายค่าตอบแทนที่สมน้ำสมเนื้อ",
+            "",
+            "INT + 6 / VIT + 6 / LUK -6",
+            "เมื่อโจมตีกายภาพ จะมีโอกาสในระดับต่ำ ที่จะดูดซับดาเมจ 5% มาเป็น HP และ SP",
+            "HP ลดลง 100 ทุก 10 วินาที",
+            "HP ลดลง 1000 เมื่อถอดอุปกรณ์",
+            "MATK + 110",
+            "",
+            "ประเภท : Bow",
+            "โจมตี : 180",
+            "น้ำหนัก : 130",
+            "เลเวลอาวุธ : 4",
+            "เลเวลที่ต้องการ : 90",
+            "อาชีพ: Hi-Archer Classes"
+        ],
+        "slotCount": 1,
+        "ClassNum": 11
+    },
+    "1933": {
+        "unidentifiedDisplayName": "Instrument",
+        "unidentifiedResourceName": "바이올린",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา ต้องใช้ [Magnifier] ในการตรวจสอบไอเท็ม"
+        ],
+        "identifiedDisplayName": "Thanos Violin",
+        "identifiedResourceName": "타노스의바이올린",
+        "identifiedDescriptionName": [
+            "ไวโอลินที่มีพลังเวทย์ ทำขึ้นมาจาก Shard of Gray เพื่อใช้เผชิญหน้ากับ Devil Sword Tarthanos",
+            "มีพลังเวทย์และพละกำลังที่แข็งแกร่ง แต่ก็ต้องจ่ายค่าตอบแทนที่สมน้ำสมเนื้อ",
+            "",
+            "INT + 6 / VIT + 6 / LUK - 6",
+            "เมื่อโจมตีกายภาพ จะมีโอกาสในระดับต่ำ ที่จะดูดซับดาเมจ 5% มาเป็น HP และ SP",
+            "ดาเมจการโจมตีกายภาพระยะไกล เพิ่มขึ้น 20%",
+            "HP ลดลง 100 ทุก 10 วินาที",
+            "HP ลดลง 1000 เมื่อถอดอุปกรณ์",
+            "MATK + 130",
+            "",
+            "ประเภท : Musical Instrument",
+            "โจมตี : 200",
+            "น้ำหนัก : 200",
+            "เลเวลอาวุธ : 4",
+            "เลเวลที่ต้องการ : 90",
+            "อาชีพ: Clown Classes"
+        ],
+        "slotCount": 1,
+        "ClassNum": 13
+    },
+    "1438": {
+        "unidentifiedDisplayName": "One-Handed Spear",
+        "unidentifiedResourceName": "쟈벨린",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา ต้องใช้ [Magnifier] ในการตรวจสอบไอเท็ม"
+        ],
+        "identifiedDisplayName": "Thanos Spear",
+        "identifiedResourceName": "타노스의창",
+        "identifiedDescriptionName": [
+            "ทวนที่มีพลังเวทย์ ทำขึ้นมาจาก Shard of Gray เพื่อใช้เผชิญหน้ากับ Devil Sword Tarthanos",
+            "มีพลังเวทย์และพละกำลังที่แข็งแกร่ง แต่ก็ต้องจ่ายค่าตอบแทนที่สมน้ำสมเนื้อ",
+            "",
+            "INT + 6 / VIT + 6 / LUK -6",
+            "เมื่อโจมตีกายภาพ จะมีโอกาสในระดับต่ำ ที่จะดูดซับดาเมจ 5% มาเป็น HP และ SP",
+            "HP ลดลง 100 ทุก 10 วินาที",
+            "HP ลดลง 1000 เมื่อถอดอุปกรณ์",
+            "MATK + 100",
+            "",
+            "ประเภท : One Hand Spear",
+            "โจมตี : 150",
+            "น้ำหนัก : 300",
+            "เลเวลอาวุธ : 4",
+            "เลเวลที่ต้องการ : 90",
+            "อาชีพ: Swordsman Classes"
+        ],
+        "slotCount": 1,
+        "ClassNum": 4
+    },
+    "2187": {
+        "unidentifiedDisplayName": "Shield",
+        "unidentifiedResourceName": "쉴드",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา ต้องใช้ [Magnifier] ในการตรวจสอบไอเท็ม"
+        ],
+        "identifiedDisplayName": "Shield Of Gray",
+        "identifiedResourceName": "흙빛의방패",
+        "identifiedDescriptionName": [
+            "โล่ที่มีออร่าสีหม่นปกคลุม",
+            "มีความสามารถในการต้านทานพลังศักดิ์สิทธิ์",
+            "",
+            "ต้านทานธาตุศักดิ์สิทธิ์ 30 % / MDEF + 10",
+            "ต้านทานธาตุศักดิ์สิทธิ์เพิ่มขึ้น 1 % ต่อการอัปเกรด 1 ขั้น",
+            "MDEF เพิ่มขึ้น 1 ต่อการอัปเกรด 3 ขั้น",
+            "",
+            "ประเภท : Shield พลังป้องกัน : 75",
+            "น้ำหนัก : 200",
+            "เลเวลที่ต้องการ : 90",
+            "อาชีพที่สวมใส่ : Hi-Class ทุกอาชีพ ยกเว้น Novice Classes"
+        ],
+        "slotCount": 1,
+        "ClassNum": 3
+    },
+    "15090": {
+        "unidentifiedDisplayName": "Armour",
+        "unidentifiedResourceName": "아머",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา ต้องใช้ [Magnifier] ในการตรวจสอบไอเท็ม"
+        ],
+        "identifiedDisplayName": "Armor Of Gray",
+        "identifiedResourceName": "흙빛의갑옷",
+        "identifiedDescriptionName": [
+            "ชุดเกราะที่ทำขึ้นมาจากเหล่า Gray Shard ความทรงจำเก่าก่อนที่ถูกทิ้งของ Sakray ช่วยปกป้องท่านจากพลังศักดิ์สิทธิ์ และจากความหวาดกลัวแห่งความว่างเปล่า",
+            "ต้านทานธาตุศักดิ์สิทธิ์ 10%",
+            "ต้านทานธาตุศักดิ์สิทธิ์เพิ่มขึ้น 2 % ต่อการอัปเกรด 1 ขั้น",
+            "MDEF + 10",
+            "ประเภท : Armor ป้องกัน : 90",
+            "น้ำหนัก : 240",
+            "เลเวลที่ต้องการ : 90",
+            "อาชีพ: Swordsman, Archer, Merchant, and Thief Classes"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0
+    },
+    "15091": {
+        "unidentifiedDisplayName": "Robe",
+        "unidentifiedResourceName": "코튼셔츠",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา ต้องใช้ [Magnifier] ในการตรวจสอบไอเท็ม"
+        ],
+        "identifiedDisplayName": "Gray Robe",
+        "identifiedResourceName": "흙빛의로브",
+        "identifiedDescriptionName": [
+            "ชุดคลุมที่ทำจากเหล่า Gray Shard ความทรงจำเก่าก่อนที่ถูกทิ้งของ Sakray ช่วยปกป้องท่านจากพลังศักดิ์สิทธิ์ และจากความหวาดกลัวแห่งความว่างเปล่า",
+            "",
+            "ต้านทานธาตุศักดิ์สิทธิ์ 10 %",
+            "ต้านทานธาตุศักดิ์สิทธิ์เพิ่มขึ้น 2 % ต่อการอัปเกรด 1 ขั้น",
+            "",
+            "ประเภท : Armor ป้องกัน : 55",
+            "น้ำหนัก : 130",
+            "เลเวลที่ต้องการ : 90",
+            "อาชีพ: Hi-Mage and Hi-Acolyte Classes"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0
+    },
+    "20721": {
+        "unidentifiedDisplayName": "Manteau",
+        "unidentifiedResourceName": "후드",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา ต้องใช้ [Magnifier] ในการตรวจสอบไอเท็ม"
+        ],
+        "identifiedDisplayName": "Cloak Of Gray",
+        "identifiedResourceName": "흙빛의망토",
+        "identifiedDescriptionName": [
+            "ผ้าคลุมที่ทำขึ้นมาจากเหล่า Gray Shard ความทรงจำเก่าก่อนที่ถูกทิ้งของ Sakray ช่วยปกป้องท่านจากพลังศักดิ์สิทธิ์ และจากความหวาดกลัวแห่งความว่างเปล่า",
+            "",
+            "ต้านทานธาตุศักดิ์สิทธิ์ 5 %",
+            "ต้านทานธาตุศักดิ์สิทธิ์เพิ่มขึ้น 1 % ต่อการอัปเกรด 2 ขั้น",
+            "",
+            "เมื่อสวมใส่ Armor Of Gray, Gray Helmet และ Boots Of Gray พร้อมกัน จะทำให้การต้านทานธาตุเป็นกลางเพิ่มขึ้น 15% และเมื่อได้รับความเสียหายทางกายภาพระยะประชิด มีโอกาสเกิด Drain Life เลเวล 3",
+            "",
+            "เมื่อสวมใส่ Gray Robe, Gray Helmet และ Boots Of Gray พร้อมกัน จะทำให้การต้านทานธาตุเป็นกลางเพิ่มขึ้น 15%, MHP และ MSP เพิ่มขึ้น 25% และ MATK เพิ่มขึ้น 10%",
+            "",
+            "ประเภท : Armor",
+            "ป้องกัน : 45",
+            "ตำแหน่ง: Garment ",
+            "น้ำหนัก : 60",
+            "เลเวลที่ต้องการ : 90",
+            "อาชีพ: Hi-Class ทุกอาชีพ ยกเว้น Novice Classes"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0
+    },
+    "1000923": {
+        "unidentifiedDisplayName": "Gemini Coin",
+        "unidentifiedResourceName": "금화",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Gemini Coin",
+        "identifiedResourceName": "금화",
+        "identifiedDescriptionName": [
+            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "เหรียญสีทองแวววาวระยิบระยับ",
+            "ลองเอาไปหยอดที่ [Guarantee Gacha] พิกัดแผนที่กิจกรรมกันเถอะ",
+            "(ไอเท็มดังกล่าวจะถูกลบออกหลังจากปิดปรับปรุงเซิฟเวอร์วันที่ 22 กรกฎาคม 2569)",
+            "น้ำหนัก : 1"
         ],
         "slotCount": 0,
         "ClassNum": 0,
-        "costume": true
+        "costume": false
     },
-    "107589": {
-        "unidentifiedDisplayName": "Razer Costume Box",
-        "unidentifiedResourceName": "캐시상자_녹색",
+    "810": {
+        "unidentifiedDisplayName": "Battle Pass Invitation Card",
+        "unidentifiedResourceName": "영주의통행증",
         "unidentifiedDescriptionName": [
-            "กล่อง Costume สุดพิเศษสำหรับโปรโมชั่น ROC X Razer",
-            "",
-            "เมื่อเปิดใช้งานจะได้รับ Costume Shining Angel Wing ที่มีความสามารถพิเศษในช่วงระยะเวลากิจกรรม",
-            "(สามารถนำไปเพิ่ม Enchant ฟรี 1 ครั้งที่ NPC Special Enchant Razer)",
-            "^ff0000ระวัง! Costume ที่เปิดได้รับจากกล่องไม่สามารถแลกเปลี่ยนกับผู้เล่นอื่นได้"
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "Razer Costume Box",
-        "identifiedResourceName": "캐시상자_녹색",
+        "identifiedDisplayName": "Battle Pass Invitation Card",
+        "identifiedResourceName": "영주의통행증",
         "identifiedDescriptionName": [
-            "กล่อง Costume สุดพิเศษสำหรับโปรโมชั่น ROC X Razer",
+            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "บัตรเชิญเข้าร่วมกิจกรรม Ghost Palace Battle Pass",
+            "เมื่อนำไปคุยกับ [Merde] ที่ prontera พิกัด 147,301 จะสามารถรับ [Normal] Ghost Palace Battle Pass ได้",
+            "^ff0000(ไอเท็มชิ้นนี้จะถูกลบเมื่อสิ้นสุดระยะเวลากิจกรรม)",
             "",
-            "เมื่อเปิดใช้งานจะได้รับ Costume Shining Angel Wing ที่มีความสามารถพิเศษในช่วงระยะเวลากิจกรรม",
-            "(สามารถนำไปเพิ่ม Enchant ฟรี 1 ครั้งที่ NPC Special Enchant Razer)",
-            "^ff0000ระวัง! Costume ที่เปิดได้รับจากกล่องไม่สามารถแลกเปลี่ยนกับผู้เล่นอื่นได้",
             "น้ำหนัก : 0"
         ],
         "slotCount": 0,
         "ClassNum": 0,
         "costume": false
     },
-    "107708": {
-        "unidentifiedDisplayName": "Imperial Costume Scroll",
-        "unidentifiedResourceName": "Red_S_Star_Scroll_TW",
+    "801": {
+        "unidentifiedDisplayName": "[Normal] Ghost Palace Battle Pass",
+        "unidentifiedResourceName": "식물병제조책",
         "unidentifiedDescriptionName": [
-            "เปิดผนึกความสง่างามแห่งจักรวรรดิเปี่ยมด้วยกลิ่นอายของชนชั้นสูงและอำนาจอันน่าเกรงขาม",
-            "^ff0000หากเปิดใช้งานหลังวันที่ 8 กรกฏาคม 2569 หลังปิดปรับปรุงประจำสัปดาห์ จะไม่ได้รับ Event Stone Coin "
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "Imperial Costume Scroll",
-        "identifiedResourceName": "Red_S_Star_Scroll_TW",
+        "identifiedDisplayName": "[Normal] Ghost Palace Battle Pass",
+        "identifiedResourceName": "식물병제조책",
         "identifiedDescriptionName": [
-            "เปิดผนึกความสง่างามแห่งจักรวรรดิเปี่ยมด้วยกลิ่นอายของชนชั้นสูงและอำนาจอันน่าเกรงขาม",
-            "^ff0000หากเปิดใช้งานหลังวันที่ 8 กรกฏาคม 2569 หลังปิดปรับปรุงประจำสัปดาห์ จะไม่ได้รับ Event Stone Coin ",
+            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "สมุดทั่วไปที่สามารถนำไปใช้งานกับกิจกรรม Ghost Palace Battle Pass ได้",
+            "",
+            "^ff0000(ไอเท็มชิ้นนี้จะถูกลบเมื่อสิ้นสุดระยะเวลากิจกรรม)",
+            "น้ำหนัก : 0"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "802": {
+        "unidentifiedDisplayName": "[Premium] Ghost Palace Battle Pass",
+        "unidentifiedResourceName": "화염병제조책",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[Premium] Ghost Palace Battle Pass",
+        "identifiedResourceName": "화염병제조책",
+        "identifiedDescriptionName": [
+            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "สมุดพรีเมียมที่สามารถนำไปใช้งานกับกิจกรรม Ghost Palace Battle Pass ได้",
+            "",
+            "^ff0000(ไอเท็มชิ้นนี้จะถูกลบเมื่อสิ้นสุดระยะเวลากิจกรรม)",
+            "น้ำหนัก : 0"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "1001794": {
+        "unidentifiedDisplayName": "[NFS] Ghost Palace Pass Ticket",
+        "unidentifiedResourceName": "BarMealTicket",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[NFS] Ghost Palace Pass Ticket",
+        "identifiedResourceName": "BarMealTicket",
+        "identifiedDescriptionName": [
+            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "^ff0000ไม่สามารถฝากคลังได้!",
+            "",
+            "คูปองที่นำไปใช้ในการเลือกแลกรับไอเทมจากกิจกรรม Ghost Palace Pass ได้ 1 ครั้ง",
+            "ที่ NPC Sir Issas Noewnoew ^ff0000[Prontera 144 286]",
+            "",
+            "^ff0000**โปรดเลือกโดยความระมัดระวัง หากเลือกผิดทีมงานจะไม่สามารถแก้ไขให้ได้**",
+            "น้ำหนัก : 0"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "12134": {
+        "unidentifiedDisplayName": "[Cash]Battle Pass Invitation",
+        "unidentifiedResourceName": "상인만수편지",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[Cash]Battle Pass Invitation",
+        "identifiedResourceName": "상인만수편지",
+        "identifiedDescriptionName": [
+            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "ซองจดหมายที่บรรจุการ์ดเชิญการเข้าร่วมกิจกรรม [Normal] Battle Pass",
+            "^ff0000แถมฟรี ! Mysterious Medal 500 EA",
+            "^ff0000โปรดระวัง!! ไอเท็มภายในไม่สามารถฝากคลังได้ โปรดตรวจสอบตัวละครให้ดีก่อนเปิดใช้",
+            "น้ำหนัก : 0"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "813": {
+        "unidentifiedDisplayName": "[Event] Special Enchant Temporal & Diabolus Ticket",
+        "unidentifiedResourceName": "Re_Costama_Ticket_4",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[Event] Special Enchant Temporal & Diabolus Ticket",
+        "identifiedResourceName": "Re_Costama_Ticket_4",
+        "identifiedDescriptionName": [
+            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "คูปองที่ได้รับจากกิจกรรม Ghost Palace Battle Pass",
+            "นำไปใช้งานกับ Xiao ในการ Option ช่อง 3 Temporal Boots& Diabolus Boots",
+            "",
+            "(ไอเท็มชิ้นนี้จะถูกลบเมื่อสิ้นสุดระยะเวลากิจกรรม)",
+            "น้ำหนัก : 0"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "814": {
+        "unidentifiedDisplayName": "[Event] Enchant Temporal & Diabolusa Slot4 Ticket",
+        "unidentifiedResourceName": "Re_Costama_Ticket_3",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[Event] Enchant Temporal & Diabolus Slot4 Ticket",
+        "identifiedResourceName": "Re_Costama_Ticket_3",
+        "identifiedDescriptionName": [
+            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "คูปองที่ได้รับจากกิจกรรม Ghost Palace Battle Pass",
+            "นำไปใช้งานกับ Xiao ในการ Option ช่อง 4 Temporal Boots& Diabolus Boots",
+            "",
+            "(ไอเท็มชิ้นนี้จะถูกลบเมื่อสิ้นสุดระยะเวลากิจกรรม)",
+            "น้ำหนัก : 0"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "27184": {
+        "unidentifiedDisplayName": "Knight Sakray Card",
+        "unidentifiedResourceName": "이름없는카드",
+        "unidentifiedDescriptionName": [
+            "ATK + 20 ",
+            "เพิ่ม Damage ทางกายภาพต่อมอนสเตอร์ประเภท Demon, Undead 30%",
+            "ประเภท : Card",
+            "ใช้กับ : Weapon",
+            "น้ำหนัก : 1"
+        ],
+        "identifiedDisplayName": "Knight Sakray Card",
+        "identifiedResourceName": "이름없는카드",
+        "identifiedDescriptionName": [
+            "ATK + 20 ",
+            "เพิ่ม Damage ทางกายภาพต่อมอนสเตอร์ประเภท Demon, Undead 30%",
+            "ประเภท : Card",
+            "ใช้กับ : Weapon",
+            "น้ำหนัก : 1"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false,
+        "EffectID": 1186
+    },
+    "23676": {
+        "unidentifiedDisplayName": "Gray Abrasive (Physical)",
+        "unidentifiedResourceName": "검정숯",
+        "unidentifiedDescriptionName": [
+            "แร่พิเศษที่ Blacksmith Gray ทำขึ้นมาให้บุคคลทั่วไปก็สามารถใช้งานได้",
+            "เหมาะกับอาวุธประเภทโจมตีกายภาพระยะใกล้",
+            "ระดับขั้นอัปเกรดและการ์ดจะคงสภาพไว้ทั้งหมด",
+            "^ffffff_ ",
+            "^000088[ไอเท็มเป้าหมาย] ",
+            "Thanos Sword",
+            "Thanos Great Sword",
+            "Thanos Spear",
+            "Thanos Long Spear",
+            "Thanos Dagger",
+            "Thanos Katar",
+            "Thanos Knuckle",
+            "Thanos Hammer",
+            "Thanos Axe",
+            "Thanos Whip",
+            "Thanos Violin",
+            "^ffffff_ ",
+            "น้ำหนัก : 5"
+        ],
+        "identifiedDisplayName": "Gray Abrasive (Physical)",
+        "identifiedResourceName": "검정숯",
+        "identifiedDescriptionName": [
+            "แร่พิเศษที่ Blacksmith Gray ทำขึ้นมาให้บุคคลทั่วไปก็สามารถใช้งานได้",
+            "เหมาะกับอาวุธประเภทโจมตีกายภาพระยะใกล้",
+            "ระดับขั้นอัปเกรดและการ์ดจะคงสภาพไว้ทั้งหมด",
+            "^ffffff_ ",
+            "^000088[ไอเท็มเป้าหมาย] ",
+            "Thanos Sword",
+            "Thanos Great Sword",
+            "Thanos Spear",
+            "Thanos Long Spear",
+            "Thanos Dagger",
+            "Thanos Katar",
+            "Thanos Knuckle",
+            "Thanos Hammer",
+            "Thanos Axe",
+            "Thanos Whip",
+            "Thanos Violin",
+            "^ffffff_ ",
+            "น้ำหนัก : 5"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "23677": {
+        "unidentifiedDisplayName": "Gray Abrasive (Magical)",
+        "unidentifiedResourceName": "검정숯",
+        "unidentifiedDescriptionName": [
+            "แร่พิเศษที่ Blacksmith Gray ทำขึ้นมาให้บุคคลทั่วไปก็สามารถใช้งานได้",
+            "เหมาะกับอาวุธประเภทโจมตีเวทมนตร์",
+            "ระดับขั้นอัปเกรดและการ์ดจะคงสภาพไว้ทั้งหมด",
+            "^ffffff_ ",
+            "^000088[ไอเท็มเป้าหมาย] ",
+            "Thanos Rod",
+            "Thanos Staff",
+            "Thanos Dagger",
+            "Thanos Sword",
+            "Thanos Violin",
+            "Thanos Whip",
+            "^ffffff_ ",
+            "น้ำหนัก : 5"
+        ],
+        "identifiedDisplayName": "Gray Abrasive (Magical)",
+        "identifiedResourceName": "검정숯",
+        "identifiedDescriptionName": [
+            "แร่พิเศษที่ Blacksmith Gray ทำขึ้นมาให้บุคคลทั่วไปก็สามารถใช้งานได้",
+            "เหมาะกับอาวุธประเภทโจมตีเวทมนตร์",
+            "ระดับขั้นอัปเกรดและการ์ดจะคงสภาพไว้ทั้งหมด",
+            "^ffffff_ ",
+            "^000088[ไอเท็มเป้าหมาย] ",
+            "Thanos Rod",
+            "Thanos Staff",
+            "Thanos Dagger",
+            "Thanos Sword",
+            "Thanos Violin",
+            "Thanos Whip",
+            "^ffffff_ ",
+            "น้ำหนัก : 5"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "23678": {
+        "unidentifiedDisplayName": "Gray Abrasive (Range)",
+        "unidentifiedResourceName": "검정숯",
+        "unidentifiedDescriptionName": [
+            "แร่พิเศษที่ Blacksmith Gray ทำขึ้นมาให้บุคคลทั่วไปก็สามารถใช้งานได้",
+            "เหมาะกับอาวุธประเภทโจมตีระยะไกล",
+            "ระดับขั้นอัปเกรดและการ์ดจะคงสภาพไว้ทั้งหมด",
+            "^ffffff_ ",
+            "^000088[ไอเท็มเป้าหมาย] ",
+            "Thanos Bow",
+            "Thanos Whip",
+            "Thanos Violin",
+            "Thanos Sword",
+            "Thanos Great Sword",
+            "Thanos Spear",
+            "Thanos Long Spear",
+            "Thanos Katar",
+            "Thanos Knuckle",
+            "Thanos Hammer",
+            "Thanos Axe",
+            "^ffffff_ ",
+            "น้ำหนัก : 5"
+        ],
+        "identifiedDisplayName": "Gray Abrasive (Range)",
+        "identifiedResourceName": "검정숯",
+        "identifiedDescriptionName": [
+            "แร่พิเศษที่ Blacksmith Gray ทำขึ้นมาให้บุคคลทั่วไปก็สามารถใช้งานได้",
+            "เหมาะกับอาวุธประเภทโจมตีระยะไกล",
+            "ระดับขั้นอัปเกรดและการ์ดจะคงสภาพไว้ทั้งหมด",
+            "^ffffff_ ",
+            "^000088[ไอเท็มเป้าหมาย] ",
+            "Thanos Bow",
+            "Thanos Whip",
+            "Thanos Violin",
+            "Thanos Sword",
+            "Thanos Great Sword",
+            "Thanos Spear",
+            "Thanos Long Spear",
+            "Thanos Katar",
+            "Thanos Knuckle",
+            "Thanos Hammer",
+            "Thanos Axe",
+            "^ffffff_ ",
+            "น้ำหนัก : 5"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "440018": {
+        "unidentifiedDisplayName": "Helm",
+        "unidentifiedResourceName": "헬름",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Costume Helm of Galaxia",
+        "identifiedResourceName": "C_Helm_Of_Galaxia",
+        "identifiedDescriptionName": [
+            "หมวกที่สะท้อนถึงเกียรติภูมิของนักรบแห่ง Galaxia",
+            "ผ้าพาดสีแดงที่พลิ้วไหวสื่อถึงความกล้าหาญและความองอาจของนักรบผู้กล้า",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Upper-Middle-Lower น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 2587,
+        "costume": true
+    },
+    "480566": {
+        "unidentifiedDisplayName": "Hood",
+        "unidentifiedResourceName": "후드",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Costume Wings of the Immortal Lord",
+        "identifiedResourceName": "C_Immortal_H_Wing",
+        "identifiedDescriptionName": [
+            "ปีกซึ่งเป็นสัญลักษณ์แห่งพลังอันไร้ขีดจำกัดของราชันย์อมตะ",
+            "ว่ากันว่าพลังเวทที่แผ่ออกมาจากปีกอันยิ่งใหญ่นี้ สามารถบัญชากองทัพอมตะนับไม่ถ้วนได้ ทว่า มีเพียงนางเท่านั้นที่สามารถควบคุมพลังดังกล่าวได้อย่างสมบูรณ์",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Garment น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 259,
+        "costume": true
+    },
+    "311389": {
+        "unidentifiedDisplayName": "Expert Magician 1Lv",
+        "unidentifiedResourceName": "용의보주_청",
+        "unidentifiedDescriptionName": [
+            "เพิ่ม Damage ทางเวทมนตร์ทุกธาตุ 2%"
+        ],
+        "identifiedDisplayName": "Expert Magician 1Lv",
+        "identifiedResourceName": "용의보주_청",
+        "identifiedDescriptionName": [
+            "เพิ่ม Damage ทางเวทมนตร์ทุกธาตุ 2%"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "311390": {
+        "unidentifiedDisplayName": "Expert Magician 2Lv",
+        "unidentifiedResourceName": "용의보주_청",
+        "unidentifiedDescriptionName": [
+            "เพิ่ม Damage ทางเวทมนตร์ทุกธาตุ 4%"
+        ],
+        "identifiedDisplayName": "Expert Magician 2Lv",
+        "identifiedResourceName": "용의보주_청",
+        "identifiedDescriptionName": [
+            "เพิ่ม Damage ทางเวทมนตร์ทุกธาตุ 4%"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "311391": {
+        "unidentifiedDisplayName": "Expert Magician 3Lv",
+        "unidentifiedResourceName": "용의보주_청",
+        "unidentifiedDescriptionName": [
+            "เพิ่ม Damage ทางเวทมนตร์ทุกธาตุ 6%"
+        ],
+        "identifiedDisplayName": "Expert Magician 3Lv",
+        "identifiedResourceName": "용의보주_청",
+        "identifiedDescriptionName": [
+            "เพิ่ม Damage ทางเวทมนตร์ทุกธาตุ 6%"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "311392": {
+        "unidentifiedDisplayName": "Expert Magician 4Lv",
+        "unidentifiedResourceName": "용의보주_청",
+        "unidentifiedDescriptionName": [
+            "เพิ่ม Damage ทางเวทมนตร์ทุกธาตุ 8%"
+        ],
+        "identifiedDisplayName": "Expert Magician 4Lv",
+        "identifiedResourceName": "용의보주_청",
+        "identifiedDescriptionName": [
+            "เพิ่ม Damage ทางเวทมนตร์ทุกธาตุ 8%"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "311393": {
+        "unidentifiedDisplayName": "Expert Magician 5Lv",
+        "unidentifiedResourceName": "용의보주_청",
+        "unidentifiedDescriptionName": [
+            "เพิ่ม Damage ทางเวทมนตร์ทุกธาตุ 10%"
+        ],
+        "identifiedDisplayName": "Expert Magician 5Lv",
+        "identifiedResourceName": "용의보주_청",
+        "identifiedDescriptionName": [
+            "เพิ่ม Damage ทางเวทมนตร์ทุกธาตุ 10%"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "312438": {
+        "unidentifiedDisplayName": "Spirit of Knight Lv.1",
+        "unidentifiedResourceName": "차가운달빛",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้"
+        ],
+        "identifiedDisplayName": "Spirit of Knight Lv.1",
+        "identifiedResourceName": "차가운달빛",
+        "identifiedDescriptionName": [
+            "ATK + 10, MATK + 10"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "312439": {
+        "unidentifiedDisplayName": "Spirit of Knight Lv.2",
+        "unidentifiedResourceName": "차가운달빛",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้"
+        ],
+        "identifiedDisplayName": "Spirit of Knight Lv.2",
+        "identifiedResourceName": "차가운달빛",
+        "identifiedDescriptionName": [
+            "ATK + 20, MATK + 20"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "312440": {
+        "unidentifiedDisplayName": "Spirit of Knight Lv.3",
+        "unidentifiedResourceName": "차가운달빛",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้"
+        ],
+        "identifiedDisplayName": "Spirit of Knight Lv.3",
+        "identifiedResourceName": "차가운달빛",
+        "identifiedDescriptionName": [
+            "ATK + 30, MATK + 30"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "312441": {
+        "unidentifiedDisplayName": "Spirit of Knight Lv.4",
+        "unidentifiedResourceName": "차가운달빛",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้"
+        ],
+        "identifiedDisplayName": "Spirit of Knight Lv.4",
+        "identifiedResourceName": "차가운달빛",
+        "identifiedDescriptionName": [
+            "ATK + 50, MATK + 50",
+            "เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อศัตรูทุกเผ่า 5%"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "312442": {
+        "unidentifiedDisplayName": "Spirit of Knight Lv.5",
+        "unidentifiedResourceName": "차가운달빛",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้"
+        ],
+        "identifiedDisplayName": "Spirit of Knight Lv.5",
+        "identifiedResourceName": "차가운달빛",
+        "identifiedDescriptionName": [
+            "ATK + 60, MATK + 60",
+            "เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อศัตรูทุกเผ่า 7%"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "401468": {
+        "unidentifiedDisplayName": "Helm",
+        "unidentifiedResourceName": "헬름",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Gemini Diadem",
+        "identifiedResourceName": "쌍자궁보관",
+        "identifiedDescriptionName": [
+            "MDEF +15",
+            "INT +10, DEX +10",
+            "ATK +50, MATK +50",
+            "",
+            "ลดดีเลย์ 20%",
+            "เพิ่ม Damage ทางกายภาพและเวทมนตร์ต่อมอนสเตอร์ทุกประเภท 10%",
+            "",
+            "เมื่อขั้นอัพเกรดตั้งแต่ 7 ขึ้นไป, ลดระยะเวลาร่ายแบบแปรผันสกิล Arrow Vulcan, Napalm Vulcan 100%",
+            "เมื่อขั้นอัพเกรดตั้งแต่ 8 ขึ้นไป, เมื่อกำจัดมอนสเตอร์ทางกายภาพ/เวทมนตร์ ฟื้้นฟู HP 500, SP 50",
+            "เมื่อขั้นอัพเกรดตั้งแต่ 9 ขึ้นไป, All Status + 10, ทุก ๆ 5 วินาที ฟื้นฟู HP 500, SP 50",
+            "",
+            "เมื่อสวมใส่โดย Clown หรือ Gypsy",
+            "MaxHP + 5000,",
+            "ลด Damage ที่ได้รับจากมอนสเตอร์ประเภท Boss 10%",
+            "ประเภท : Headgear พลังป้องกัน : 12",
+            "ตำแหน่ง : Upper น้ำหนัก : 10",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพที่ใส่ได้ : Archer Classes"
+        ],
+        "slotCount": 1,
+        "ClassNum": 550,
+        "costume": false
+    },
+    "401469": {
+        "unidentifiedDisplayName": "Helm",
+        "unidentifiedResourceName": "헬름",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[NFS] Gemini Diadem",
+        "identifiedResourceName": "쌍자궁보관",
+        "identifiedDescriptionName": [
+            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "",
+            "MDEF +15",
+            "INT +10, DEX +10",
+            "ATK +50, MATK +50",
+            "",
+            "ลดดีเลย์ 20%",
+            "เพิ่ม Damage ทางกายภาพและเวทมนตร์ต่อมอนสเตอร์ทุกประเภท 10%",
+            "",
+            "เมื่อขั้นอัพเกรดตั้งแต่ 7 ขึ้นไป, ลดระยะเวลาร่ายแบบแปรผันสกิล Arrow Vulcan, Napalm Vulcan 100%",
+            "เมื่อขั้นอัพเกรดตั้งแต่ 8 ขึ้นไป, เมื่อกำจัดมอนสเตอร์ทางกายภาพ/เวทมนตร์ ฟื้้นฟู HP 500, SP 50",
+            "เมื่อขั้นอัพเกรดตั้งแต่ 9 ขึ้นไป, All Status + 10, ทุก ๆ 5 วินาที ฟื้นฟู HP 500, SP 50",
+            "",
+            "เมื่อสวมใส่โดย Clown หรือ Gypsy",
+            "MaxHP + 5000,",
+            "ลด Damage ที่ได้รับจากมอนสเตอร์ประเภท Boss 10%",
+            "ประเภท : Headgear พลังป้องกัน : 12",
+            "ตำแหน่ง : Upper น้ำหนัก : 10",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพที่ใส่ได้ : Archer Classes"
+        ],
+        "slotCount": 1,
+        "ClassNum": 550,
+        "costume": false
+    },
+    "491071": {
+        "unidentifiedDisplayName": "Clip",
+        "unidentifiedResourceName": "클립",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Gemini Ring",
+        "identifiedResourceName": "Gemini_Ring_J",
+        "identifiedDescriptionName": [
+            "HIT +50",
+            "MaxSP +100",
+            "",
+            "เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อศัตรูทุกขนาด 5%",
+            "ลดปริมาณ SP ที่ใช้งานของสกิล Arrow Vulcan 10 หน่วย",
+            "เมื่อขั้นอัพเกรดตั้งแต่ 5 ขึ้นไป MaxHP + 10%, MaxSP + 10%",
+            "เมื่อขั้นอัพเกรดตั้งแต่ 7 ขึ้นไป, เพิ่ม Damage สกิล Arrow Vulcan, Napalm Vulcan 25%",
+            "เมื่อขั้นอัพเกรดตั้งแต่ 9 ขึ้นไป, เพิ่ม Damage สกิล Arrow Vulcan, Napalm Vulcan ขึ้นอีก 75%",
+            "",
+            "เมื่อสวมใส่โดย Clown หรือ Gypsy",
+            "เมื่อโจมตีทางกาพมีโอกาส 15% ที่จะร่ายสกิล Arrow Vulcan, Napalm Vulcan Lv.10 อัตโนมัติ",
+            "เมื่อโจมตีทางกาพมีโอกาส 5% ที่จะร่ายสกิล Tarot Card of Fate Lv.5 อัตโนมัติ",
+            "ประเภท : Accessory  พลังป้องกัน : 0",
+            "น้ำหนัก : 10",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพที่ใส่ได้ : Archer Classes"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "491072": {
+        "unidentifiedDisplayName": "Clip",
+        "unidentifiedResourceName": "클립",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[NFS] Gemini Ring",
+        "identifiedResourceName": "Gemini_Ring_J",
+        "identifiedDescriptionName": [
+            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "",
+            "HIT +50",
+            "MaxSP +100",
+            "",
+            "เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อศัตรูทุกขนาด 5%",
+            "ลดปริมาณ SP ที่ใช้งานของสกิล Arrow Vulcan 10 หน่วย",
+            "เมื่อขั้นอัพเกรดตั้งแต่ 5 ขึ้นไป MaxHP + 10%, MaxSP + 10%",
+            "เมื่อขั้นอัพเกรดตั้งแต่ 7 ขึ้นไป, เพิ่ม Damage สกิล Arrow Vulcan, Napalm Vulcan 25%",
+            "เมื่อขั้นอัพเกรดตั้งแต่ 9 ขึ้นไป, เพิ่ม Damage สกิล Arrow Vulcan, Napalm Vulcan ขึ้นอีก 75%",
+            "",
+            "เมื่อสวมใส่โดย Clown หรือ Gypsy",
+            "เมื่อโจมตีทางกาพมีโอกาส 15% ที่จะร่ายสกิล Arrow Vulcan, Napalm Vulcan Lv.10 อัตโนมัติ",
+            "เมื่อโจมตีทางกาพมีโอกาส 5% ที่จะร่ายสกิล Tarot Card of Fate Lv.5 อัตโนมัติ",
+            "ประเภท : Accessory  พลังป้องกัน : 0",
+            "น้ำหนัก : 10",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพที่ใส่ได้ : Archer Classes"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "315391": {
+        "unidentifiedDisplayName": "Gemini Gem",
+        "unidentifiedResourceName": "Gemini_E_Card",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Gemini Gem",
+        "identifiedResourceName": "Gemini_E_Card",
+        "identifiedDescriptionName": [
+            "DEX + 2",
+            "ASPD +1",
+            "เมื่อสวมใส่ร่วมกับ Gemini Diadem หรือ [NFS] Gemini Diadem",
+            "สามารถใช้สกิล Napalm Vulcan Lv.10 ได้",
+            "ทุก ๆ การอัพเกรด Headgear 1 ขั้น เพิ่มความเสียหายทางกายภาพและเวทมนตร์ 3%",
+            "เพิ่ม Damage สกิล Arrow Vulcan 50%",
+            "เพิ่ม Damage สกิล Napalm Vulcan 50%"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "107733": {
+        "unidentifiedDisplayName": "Gemini Scroll",
+        "unidentifiedResourceName": "쌍자궁보관스크롤",
+        "unidentifiedDescriptionName": [
+            "ม้วนคัมภีร์โบราณที่สลักตราแห่งกลุ่มดาวคนคู่เอาไว้ เชื่อกันว่าภายในบรรจุพลังแห่งความสมดุลระหว่างสองจิต",
+            "^ff0000 หากเปิดใช้งานหลังวันที่ 22 กรกฏาคม 2569 หลังปิดปรับปรุงประจำสัปดาห์ จะไม่ได้รับ Gemini Coin"
+        ],
+        "identifiedDisplayName": "Gemini Scroll",
+        "identifiedResourceName": "쌍자궁보관스크롤",
+        "identifiedDescriptionName": [
+            "ม้วนคัมภีร์โบราณที่สลักตราแห่งกลุ่มดาวคนคู่เอาไว้ เชื่อกันว่าภายในบรรจุพลังแห่งความสมดุลระหว่างสองจิต",
+            "^ff0000 หากเปิดใช้งานหลังวันที่ 22 กรกฏาคม 2569 หลังปิดปรับปรุงประจำสัปดาห์ จะไม่ได้รับ Gemini Coin",
             "น้ำหนัก : 1"
         ],
         "slotCount": 0,
         "ClassNum": 0,
         "costume": false
     },
-    "107707": {
-        "unidentifiedDisplayName": "Sixth Sense Scroll",
-        "unidentifiedResourceName": "Mm_Morocc_Adt_Egg",
+    "570104": {
+        "unidentifiedDisplayName": "Violin",
+        "unidentifiedResourceName": "바이올린",
         "unidentifiedDescriptionName": [
-            "เปิดสัมผัสแห่งโชคชะตา ลุ้นรับไอเทมหายากระดับแรร์ เปี่ยมด้วยเสน่ห์อันลึกลับ ราวกับพลังแห่งสัมผัสที่หก",
-            "^ff0000หากเปิดใช้งานหลังวันที่ 22 กรกฎาคม 2569 หลังปิดปรับปรุงประจำสัปดาห์จะไม่ได้รับ   Sixth Sense Coin "
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "Sixth Sense Scroll",
-        "identifiedResourceName": "Mm_Morocc_Adt_Egg",
+        "identifiedDisplayName": "Gemini Violin",
+        "identifiedResourceName": "Gemini_Violin_J",
         "identifiedDescriptionName": [
-            "เปิดสัมผัสแห่งโชคชะตา ลุ้นรับไอเทมหายากระดับแรร์ เปี่ยมด้วยเสน่ห์อันลึกลับ ราวกับพลังแห่งสัมผัสที่หก",
-            "^ff0000หากเปิดใช้งานหลังวันที่ 22 กรกฎาคม 2569 หลังปิดปรับปรุงประจำสัปดาห์จะไม่ได้รับ   Sixth Sense Coin ",
-            "น้ำหนัก : 1"
+            "ATK MATK + 50",
+            "ASPD + 10%",
+            "ทุก ๆ Base Lv.1, ATK, MATK + 1",
+            "เพิ่มระยะโจมตี 6 ช่อง",
+            "เมื่อขั้นอัพเกรดตั้งแต่ 7 ขึ้นไป เพิกเฉยพลังป้องกัน (DEF,MDEF) ของมอนสเตอร์ทุกเผ่า 50%",
+            "เมื่อขั้นอัพเกรดตั้งแต่ 9 ขึ้นไป มีโอกาส 3% ที่จะได้รับ HP 5% ของความเสียหายที่ทำได้",
+            "เมื่อขั้นอัพเกรดตั้งแต่ 11 ขึ้นไป เพิกเฉยพลังป้องกัน (DEF,MDEF) ของมอนสเตอร์ทุกเผ่า 50%",
+            "",
+            "เมื่อสวมใส่โดย Clown",
+            "ASPD + 10%",
+            "ATK + 50% MATK + 30%",
+            "MaxHP + 1000,",
+            "ลด Damage ที่ได้รับจากมอนสเตอร์ประเภท Boss 10%",
+            "ประเภท : Instrument พลังโจมตี : 10",
+            "น้ำหนัก : 30",
+            "เลเวล Weapon : 4",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพที่ใส่ได้ : Clown Class"
         ],
-        "slotCount": 0,
+        "slotCount": 2,
+        "ClassNum": 13,
+        "costume": false
+    },
+    "570105": {
+        "unidentifiedDisplayName": "Violin",
+        "unidentifiedResourceName": "바이올린",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[NFS] Gemini Violin",
+        "identifiedResourceName": "Gemini_Violin_J",
+        "identifiedDescriptionName": [
+            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "",
+            "ATK MATK + 50",
+            "ASPD + 10%",
+            "ทุก ๆ Base Lv.1, ATK, MATK + 1",
+            "เพิ่มระยะโจมตี 6 ช่อง",
+            "เมื่อขั้นอัพเกรดตั้งแต่ 7 ขึ้นไป เพิกเฉยพลังป้องกัน (DEF,MDEF) ของมอนสเตอร์ทุกเผ่า 50%",
+            "เมื่อขั้นอัพเกรดตั้งแต่ 9 ขึ้นไป มีโอกาส 3% ที่จะได้รับ HP 5% ของความเสียหายที่ทำได้",
+            "เมื่อขั้นอัพเกรดตั้งแต่ 11 ขึ้นไป เพิกเฉยพลังป้องกัน (DEF,MDEF) ของมอนสเตอร์ทุกเผ่า 50%",
+            "",
+            "เมื่อสวมใส่โดย Clown",
+            "ASPD + 10%",
+            "ATK + 50% MATK + 30%",
+            "MaxHP + 1000,",
+            "ลด Damage ที่ได้รับจากมอนสเตอร์ประเภท Boss 10%",
+            "ประเภท : Instrument พลังโจมตี : 10",
+            "น้ำหนัก : 30",
+            "เลเวล Weapon : 4",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพที่ใส่ได้ : Clown Class"
+        ],
+        "slotCount": 2,
+        "ClassNum": 13,
+        "costume": false
+    },
+    "580104": {
+        "unidentifiedDisplayName": "Rope",
+        "unidentifiedResourceName": "로프",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Gemini Rope",
+        "identifiedResourceName": "Gemini_Rope_J",
+        "identifiedDescriptionName": [
+            "ATK MATK + 50",
+            "ASPD + 10%",
+            "ทุก ๆ Base Lv.1, ATK, MATK + 1",
+            "เพิ่มระยะโจมตี 6 ช่อง",
+            "เมื่อขั้นอัพเกรดตั้งแต่ 7 ขึ้นไป, เพิกเฉยพลังป้องกัน (DEF,MDEF) ของมอนสเตอร์ทุกเผ่า 50%",
+            "เมื่อขั้นอัพเกรดตั้งแต่ 9 ขึ้นไป, มีโอกาส 3% ที่จะได้รับ HP 5% ของความเสียหายที่ทำได้",
+            "เมื่อขั้นอัพเกรดตั้งแต่ 11 ขึ้นไป, ,เพิกเฉยพลังป้องกัน (DEF,MDEF) ของมอนสเตอร์ทุกเผ่า 50%",
+            "",
+            "เมื่อสวมใส่โดย Gypsy,",
+            "ASPD + 10%",
+            "ATK + 50% MATK + 30%",
+            "MaxHP + 1000,",
+            "ลด Damage ที่ได้รับจากมอนสเตอร์ประเภท Boss 10%",
+            "ประเภท : Whip พลังโจมตี : 10",
+            "น้ำหนัก : 30",
+            "เลเวล Weapon : 4",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพที่ใส่ได้ : Gypsy Class"
+        ],
+        "slotCount": 2,
+        "ClassNum": 14,
+        "costume": false
+    },
+    "580105": {
+        "unidentifiedDisplayName": "Rope",
+        "unidentifiedResourceName": "로프",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[NFS] Gemini Rope",
+        "identifiedResourceName": "Gemini_Rope_J",
+        "identifiedDescriptionName": [
+            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "",
+            "ATK MATK + 50",
+            "ASPD + 10%",
+            "ทุก ๆ Base Lv.1, ATK, MATK + 1",
+            "เพิ่มระยะโจมตี 6 ช่อง",
+            "เมื่อขั้นอัพเกรดตั้งแต่ 7 ขึ้นไป, เพิกเฉยพลังป้องกัน (DEF,MDEF) ของมอนสเตอร์ทุกเผ่า 50%",
+            "เมื่อขั้นอัพเกรดตั้งแต่ 9 ขึ้นไป, มีโอกาส 3% ที่จะได้รับ HP 5% ของความเสียหายที่ทำได้",
+            "เมื่อขั้นอัพเกรดตั้งแต่ 11 ขึ้นไป, ,เพิกเฉยพลังป้องกัน (DEF,MDEF) ของมอนสเตอร์ทุกเผ่า 50%",
+            "",
+            "เมื่อสวมใส่โดย Gypsy,",
+            "ASPD + 10%",
+            "ATK + 50% MATK + 30%",
+            "MaxHP + 1000,",
+            "ลด Damage ที่ได้รับจากมอนสเตอร์ประเภท Boss 10%",
+            "ประเภท : Whip พลังโจมตี : 10",
+            "น้ำหนัก : 30",
+            "เลเวล Weapon : 4",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพที่ใส่ได้ : Gypsy Class"
+        ],
+        "slotCount": 2,
+        "ClassNum": 14,
+        "costume": false
+    },
+    "480880": {
+        "unidentifiedDisplayName": "Hood",
+        "unidentifiedResourceName": "후드",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Capricorn Manteau",
+        "identifiedResourceName": "Capricon_Manteau_J",
+        "identifiedDescriptionName": [
+            "Mdef + 5.",
+            "เมื่ออัพเกรดถึงขั้น 8 MaxHP + 10%, MaxSP + 10%.",
+            "เมื่ออัพเกรดถึงขั้น 9 Atk + 20, Matk + 20.",
+            "เมื่ออัพเกรดถึงขั้น 11 ลดความเสียหายจากธาตุไร้ธาตุ (Neutral) 20%, Perfect Dodge + 10",
+            "เมื่ออัพเกรดถึงขั้น 13 เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อเป้าหมายทุกขนาด 10%",
+            "",
+            "เมื่อสวมใส่คู่กับ Spirit of Knight Lv.5,",
+            "เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อศัตรูทุกเผ่า 4%",
+            "เมื่อโจมตีทางกายภาพและเวทมนตร์มีโอกาส 4% ได้รับพรแห่ง Zodiac (Renovatio Effect Lv.1)",
+            "ประเภท : Garment  พลังป้องกัน : 25",
+            "น้ำหนัก : 30",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพที่ใส่ได้ : Stalker Class"
+        ],
+        "slotCount": 1,
         "ClassNum": 0,
         "costume": false
+    },
+    "480881": {
+        "unidentifiedDisplayName": "Hood",
+        "unidentifiedResourceName": "후드",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Aquarius Manteau",
+        "identifiedResourceName": "Aquarius_Manteau_J",
+        "identifiedDescriptionName": [
+            "Mdef + 5.",
+            "เมื่ออัพเกรดถึงขั้น 8 MaxHP + 10%, MaxSP + 10%.",
+            "เมื่ออัพเกรดถึงขั้น 9 Matk + 20, ลดดีเลย์หลังใช้สกิลลง 5%",
+            "เมื่ออัพเกรดถึงขั้น 11 ลดความเสียหายจากธาตุไร้ธาตุ (Neutral) 20%, ลดดีเลย์หลังใช้สกิลอีก 10%",
+            "เมื่ออัพเกรดถึงขั้น 13 เพิ่ม Damage ทางเวทมนตร์ต่อเป้าหมายทุกขนาด 10%",
+            "",
+            "เมื่อสวมใส่คู่กับ Spirit of Knight Lv.5,",
+            "เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อศัตรูทุกเผ่า 4%",
+            "เมื่อโจมตีทางกายภาพและเวทมนตร์มีโอกาส 4% ได้รับพรแห่ง Zodiac (Renovatio Effect Lv.1)",
+            "ประเภท : Garment  พลังป้องกัน : 25",
+            "น้ำหนัก : 30",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพที่ใส่ได้ : Professor Class"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "480882": {
+        "unidentifiedDisplayName": "Hood",
+        "unidentifiedResourceName": "후드",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Pisces Manteau",
+        "identifiedResourceName": "Pisces_Manteau_J",
+        "identifiedDescriptionName": [
+            "Mdef + 5.",
+            "เมื่ออัพเกรดถึงขั้น 8 MaxHP + 10%, MaxSP + 10%.",
+            "เมื่ออัพเกรดถึงขั้น 9 Matk + 20, ลดดีเลย์หลังใช้สกิลลง 5%",
+            "เมื่ออัพเกรดถึงขั้น 11 ลดความเสียหายจากธาตุไร้ธาตุ (Neutral) 20%, ลดดีเลย์หลังใช้สกิลอีก 10%",
+            "เมื่ออัพเกรดถึงขั้น 13 เพิ่ม Damage ทางเวทมนตร์ต่อเป้าหมายทุกขนาด 10%",
+            "",
+            "เมื่อสวมใส่คู่กับ Spirit of Knight Lv.5,",
+            "เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อศัตรูทุกเผ่า 4%",
+            "เมื่อโจมตีทางกายภาพและเวทมนตร์มีโอกาส 4% ได้รับพรแห่ง Zodiac (Renovatio Effect Lv.1)",
+            "ประเภท : Garment  พลังป้องกัน : 25",
+            "น้ำหนัก : 30",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพที่ใส่ได้ : High Wizard Class"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "480883": {
+        "unidentifiedDisplayName": "Hood",
+        "unidentifiedResourceName": "후드",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Aries Manteau",
+        "identifiedResourceName": "Aries_Manteau_J",
+        "identifiedDescriptionName": [
+            "Mdef + 5.",
+            "เมื่ออัพเกรดถึงขั้น 8 MaxHP + 10%, MaxSP + 10%.",
+            "เมื่ออัพเกรดถึงขั้น 9 Atk + 20",
+            "เมื่ออัพเกรดถึงขั้น 11 ลดความเสียหายจากธาตุไร้ธาตุ (Neutral) 20%, ลดดีเลย์หลังใช้สกิลลง 10%",
+            "เมื่ออัพเกรดถึงขั้น 13 เพิ่ม Damage ทางกายภาพต่อเป้าหมายทุกขนาด 10%",
+            "",
+            "เมื่อสวมใส่คู่กับ Spirit of Knight Lv.5,",
+            "เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อศัตรูทุกเผ่า 4%",
+            "เมื่อโจมตีทางกายภาพและเวทมนตร์มีโอกาส 4% ได้รับพรแห่ง Zodiac (Renovatio Effect Lv.1)",
+            "ประเภท : Garment  พลังป้องกัน : 25",
+            "น้ำหนัก : 30",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพที่ใส่ได้ : Paladin Class"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "480884": {
+        "unidentifiedDisplayName": "Hood",
+        "unidentifiedResourceName": "후드",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Taurus Manteau",
+        "identifiedResourceName": "Taurus_Manteau_J",
+        "identifiedDescriptionName": [
+            "Mdef + 5.",
+            "เมื่ออัพเกรดถึงขั้น 8 MaxHP + 10%, MaxSP + 10%.",
+            "เมื่ออัพเกรดถึงขั้น 9 Atk + 20, ASPD + 25%",
+            "เมื่ออัพเกรดถึงขั้น 11 ลดความเสียหายจากธาตุไร้ธาตุ (Neutral) 20%, ลดดีเลย์หลังใช้สกิลลง 10%",
+            "เมื่ออัพเกรดถึงขั้น 13 เพิ่ม Damage ทางกายภาพต่อเป้าหมายทุกขนาด 10%",
+            "",
+            "เมื่อสวมใส่คู่กับ Spirit of Knight Lv.5,",
+            "เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อศัตรูทุกเผ่า 4%",
+            "เมื่อโจมตีทางกายภาพและเวทมนตร์มีโอกาส 4% ได้รับพรแห่ง Zodiac (Renovatio Effect Lv.1)",
+            "ประเภท : Garment  พลังป้องกัน : 25",
+            "น้ำหนัก : 30",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพที่ใส่ได้ : Creator Class"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "480885": {
+        "unidentifiedDisplayName": "Hood",
+        "unidentifiedResourceName": "후드",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Gemini Manteau",
+        "identifiedResourceName": "Gemini_Manteau_J",
+        "identifiedDescriptionName": [
+            "Mdef + 5.",
+            "เมื่ออัพเกรดถึงขั้น 8 MaxHP + 10%, MaxSP + 10%",
+            "เมื่ออัพเกรดถึงขั้น 9 Atk + 20, Matk + 20",
+            "เมื่ออัพเกรดถึงขั้น 11 ลดความเสียหายจากธาตุไร้ธาตุ (Neutral) 20%, ATK +30% MATK +20%",
+            "เมื่ออัพเกรดถึงขั้น 13 เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อเป้าหมายทุกขนาด 10%",
+            "",
+            "เมื่อสวมใส่คู่กับ Spirit of Knight Lv.5,",
+            "เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อศัตรูทุกเผ่า 4%",
+            "เมื่อโจมตีทางกายภาพและเวทมนตร์มีโอกาส 4% ได้รับพรแห่ง Zodiac (Renovatio Effect Lv.1)",
+            "ประเภท : Garment  พลังป้องกัน : 25",
+            "น้ำหนัก : 30",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพที่ใส่ได้ : Clown Gypsy Class"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "480886": {
+        "unidentifiedDisplayName": "Hood",
+        "unidentifiedResourceName": "후드",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Cancer Manteau",
+        "identifiedResourceName": "Cancer_Manteau",
+        "identifiedDescriptionName": [
+            "Mdef + 5.",
+            "เมื่ออัพเกรดถึงขั้น 8 MaxHP + 10%, MaxSP + 10%",
+            "เมื่ออัพเกรดถึงขั้น 9 Atk + 20",
+            "เมื่ออัพเกรดถึงขั้น 11 ลดความเสียหายจากธาตุไร้ธาตุ (Neutral) 20%, ไม่ติตสถานะ Stun 100%",
+            "เมื่ออัพเกรดถึงขั้น 13 เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อเป้าหมายทุกขนาด 10%",
+            "",
+            "เมื่อสวมใส่คู่กับ Spirit of Knight Lv.5,",
+            "เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อศัตรูทุกเผ่า 4%",
+            "เมื่อโจมตีทางกายภาพและเวทมนตร์มีโอกาส 4% ได้รับพรแห่ง Zodiac (Renovatio Effect Lv.1)",
+            "ประเภท : Garment  พลังป้องกัน : 25",
+            "น้ำหนัก : 30",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพที่ใส่ได้ : Whitesmith Class"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "480887": {
+        "unidentifiedDisplayName": "Hood",
+        "unidentifiedResourceName": "후드",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Leo Manteau",
+        "identifiedResourceName": "Leo_Mantle_J",
+        "identifiedDescriptionName": [
+            "Mdef + 5.",
+            "เมื่ออัพเกรดถึงขั้น 8 MaxHP + 10%, MaxSP + 10%",
+            "เมื่ออัพเกรดถึงขั้น 9 Atk + 20",
+            "เมื่ออัพเกรดถึงขั้น 11 ลดความเสียหายจากธาตุไร้ธาตุ (Neutral) 20%, ไม่ติตสถานะแช่แข็ง 100%",
+            "เมื่ออัพเกรดถึงขั้น 13 เพิ่ม Damage ทางกายภาพต่อเป้าหมายทุกขนาด 10%",
+            "",
+            "เมื่อสวมใส่คู่กับ Spirit of Knight Lv.5,",
+            "เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อศัตรูทุกเผ่า 4%",
+            "เมื่อโจมตีทางกายภาพและเวทมนตร์มีโอกาส 4% ได้รับพรแห่ง Zodiac (Renovatio Effect Lv.1)",
+            "ประเภท : Garment  พลังป้องกัน : 25",
+            "น้ำหนัก : 30",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพที่ใส่ได้ : Champion Class"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "480888": {
+        "unidentifiedDisplayName": "Hood",
+        "unidentifiedResourceName": "후드",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Virgo Manteau",
+        "identifiedResourceName": "Virgo_Manteau_J",
+        "identifiedDescriptionName": [
+            "Mdef + 5.",
+            "เมื่ออัพเกรดถึงขั้น 8 MaxHP + 10%, MaxSP + 10%",
+            "เมื่ออัพเกรดถึงขั้น 9 Matk + 20",
+            "เมื่ออัพเกรดถึงขั้น 11 ลดความเสียหายจากธาตุไร้ธาตุ (Neutral) 20%, ลดดีเลย์หลังใช้สกิลลง 10%.",
+            "เมื่ออัพเกรดถึงขั้น 13 เพิ่ม Damage ทางเวทมนตร์ต่อเป้าหมายทุกขนาด 10%",
+            "",
+            "เมื่อสวมใส่คู่กับ Spirit of Knight Lv.5,",
+            "เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อศัตรูทุกเผ่า 4%",
+            "เมื่อโจมตีทางกายภาพและเวทมนตร์มีโอกาส 4% ได้รับพรแห่ง Zodiac (Renovatio Effect Lv.1)",
+            "ประเภท : Garment  พลังป้องกัน : 25",
+            "น้ำหนัก : 30",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพที่ใส่ได้ : High Priest Class"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "480889": {
+        "unidentifiedDisplayName": "Hood",
+        "unidentifiedResourceName": "후드",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Libra Manteau",
+        "identifiedResourceName": "Libra_Manteau_J",
+        "identifiedDescriptionName": [
+            "Mdef + 5.",
+            "เมื่ออัพเกรดถึงขั้น 8 MaxHP + 10%, MaxSP + 10%",
+            "เมื่ออัพเกรดถึงขั้น 9 Atk + 20",
+            "เมื่ออัพเกรดถึงขั้น 11 ลดความเสียหายจากธาตุไร้ธาตุ (Neutral) 20%, ไม่ติตสถานะ Curse 100%",
+            "เมื่ออัพเกรดถึงขั้น 13 เพิ่ม Damage ทางกายภาพต่อเป้าหมายทุกขนาด 10%",
+            "",
+            "เมื่อสวมใส่คู่กับ Spirit of Knight Lv.5,",
+            "เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อศัตรูทุกเผ่า 4%",
+            "เมื่อโจมตีทางกายภาพและเวทมนตร์มีโอกาส 4% ได้รับพรแห่ง Zodiac (Renovatio Effect Lv.1)",
+            "ประเภท : Garment  พลังป้องกัน : 25",
+            "น้ำหนัก : 30",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพที่ใส่ได้ : Lord Knight Class"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "480890": {
+        "unidentifiedDisplayName": "Hood",
+        "unidentifiedResourceName": "후드",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Scorpio Manteau",
+        "identifiedResourceName": "Scorpio_Manteau_J",
+        "identifiedDescriptionName": [
+            "Mdef + 5.",
+            "เมื่ออัพเกรดถึงขั้น 8 MaxHP + 10%, MaxSP + 10%",
+            "เมื่ออัพเกรดถึงขั้น 9 Atk + 20, Flee + 20.",
+            "เมื่ออัพเกรดถึงขั้น 11 ลดความเสียหายจากธาตุไร้ธาตุ (Neutral) 20%, ลดดีเลย์หลังใช้สกิลลง 10%.",
+            "เมื่ออัพเกรดถึงขั้น 13 เพิ่ม Damage ทางกายภาพต่อเป้าหมายทุกขนาด 10%",
+            "",
+            "เมื่อสวมใส่คู่กับ Spirit of Knight Lv.5,",
+            "เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อศัตรูทุกเผ่า 4%",
+            "เมื่อโจมตีทางกายภาพและเวทมนตร์มีโอกาส 4% ได้รับพรแห่ง Zodiac (Renovatio Effect Lv.1)",
+            "",
+            "ประเภท : Garment  พลังป้องกัน : 25",
+            "น้ำหนัก : 30",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพที่ใส่ได้ : Assassin Cross Class"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "480891": {
+        "unidentifiedDisplayName": "Hood",
+        "unidentifiedResourceName": "후드",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Sagittarius Manteau",
+        "identifiedResourceName": "Sagittarius_Manteau_J",
+        "identifiedDescriptionName": [
+            "Mdef + 5.",
+            "เมื่ออัพเกรดถึงขั้น 8 MaxHP + 10%, MaxSP + 10%",
+            "เมื่ออัพเกรดถึงขั้น 9 Atk + 20, ลดดีเลย์หลังใช้สกิลลง 5%.",
+            "เมื่ออัพเกรดถึงขั้น 11 ลดความเสียหายจากธาตุไร้ธาตุ (Neutral) 20%, ลดดีเลย์หลังใช้สกิลลง 10%.",
+            "เมื่ออัพเกรดถึงขั้น 13 เพิ่ม Damage ทางกายภาพต่อเป้าหมายทุกขนาด 10%",
+            "",
+            "เมื่อสวมใส่คู่กับ Spirit of Knight Lv.5,",
+            "เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อศัตรูทุกเผ่า 4%",
+            "เมื่อโจมตีทางกายภาพและเวทมนตร์มีโอกาส 4% ได้รับพรแห่ง Zodiac (Renovatio Effect Lv.1)",
+            "ประเภท : Garment  พลังป้องกัน : 25",
+            "น้ำหนัก : 30",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพที่ใส่ได้ : Sniper Class"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "480892": {
+        "unidentifiedDisplayName": "Hood",
+        "unidentifiedResourceName": "후드",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Ophiuchus Manteau",
+        "identifiedResourceName": "Imperial_Attack_Manteau",
+        "identifiedDescriptionName": [
+            "Mdef + 5.",
+            "เมื่ออัพเกรดถึงขั้น 8 MaxHP + 10%, MaxSP + 10%",
+            "เมื่ออัพเกรดถึงขั้น 9 Atk + 20, Matk + 20",
+            "เมื่ออัพเกรดถึงขั้น 11 ลดความเสียหายจากธาตุไร้ธาตุ (Neutral) 20%, ลดดีเลย์หลังใช้สกิลลง 10%.",
+            "เมื่ออัพเกรดถึงขั้น 13 เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อเป้าหมายทุกขนาด 10%",
+            "",
+            "เมื่อสวมใส่คู่กับ Spirit of Knight Lv.5,",
+            "เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อศัตรูทุกเผ่า 4%",
+            "เมื่อโจมตีทางกายภาพและเวทมนตร์มีโอกาส 4% ได้รับพรแห่ง Zodiac (Renovatio Effect Lv.1)",
+            "ประเภท : Garment  พลังป้องกัน : 25",
+            "น้ำหนัก : 30",
+            "เลเวลที่ต้องการ : 99",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "420360": {
+        "unidentifiedDisplayName": "Ribbon",
+        "unidentifiedResourceName": "리본",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Costume Bell Cat Hair",
+        "identifiedResourceName": "C_Bell_Cat_Hair",
+        "identifiedDescriptionName": [
+            "วิกผมที่สวมใส่แล้วให้ความรู้สึกราวกับได้เปลี่ยนทรงผมเป็นลุคใหม่",
+            "หูแมวสมจริง ตกแต่งด้วยกระดิ่งสุดน่ารัก ชวนให้หลงรักตั้งแต่แรกเห็น!",
+            "^ff0000(ความสามารถพิเศษถึงวันที่ 30 กันยายน 2569)",
+            "^ff0000ASPD+1",
+            "^ff0000การร่ายแบบแปรผันลดลง 10%",
+            "^ff0000เมื่อล่ามอนสเตอร์ค่าประสบการณ์ที่ได้รับ + 10%",
+            "^ff0000อัตราดรอปไอเทม + 5%",
+            "^ff0000สามารถใช้สกิล Teleport Lv.1 ได้",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Lower น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 2573,
+        "costume": true
     }
 }
