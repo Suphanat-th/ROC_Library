@@ -11,11 +11,11 @@ import { getCurrentThaiTime } from "@/utils/timezoneUtils";
 
 export const MAINTENANCE_WINDOW = {
   // Regular maintenance date and time in GMT+7 (Thailand timezone)
-  startDate: new Date(2026, 6, 8), // April 29, 2026 (Wednesday)
-  endDate: new Date(2026, 6, 8), // April 29, 2026 (same day)
+  startDate: new Date(2026, 6, 30), // April 29, 2026 (Wednesday)
+  endDate: new Date(2026, 6, 30), // April 29, 2026 (same day)
   startHour: 6, // 6:00 AM
   startMinute: 0,
-  endHour: 14, // 2:00 PM
+  endHour: 10, // 2:00 PM
   endMinute: 0, // 2:01 PM
 };
 

@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import { useState, useMemo } from 'react';
-import { EXP_TABLES, ClassType } from '@/data/expTables';
+import { useState, useMemo } from "react";
+import { EXP_TABLES, ClassType } from "@/data/expTables";
 
 interface ExpRange {
   startLevel: number;
@@ -11,20 +11,20 @@ interface ExpRange {
 }
 
 export default function ExpCalculator() {
-  const [selectedClass, setSelectedClass] = useState<ClassType>('hiClass');
+  const [selectedClass, setSelectedClass] = useState<ClassType>("hiClass");
   const [expRange, setExpRange] = useState<ExpRange>({
     startLevel: 1,
     startPercent: 0,
     endLevel: 2,
     endPercent: 0,
   });
-  const [startPercentInput, setStartPercentInput] = useState('0');
-  const [endPercentInput, setEndPercentInput] = useState('0');
-  const [hours, setHours] = useState('0');
-  const [minutes, setMinutes] = useState('0');
-  const [serverMultiplier, setServerMultiplier] = useState('100');
-  const [equipmentExp, setEquipmentExp] = useState('0');
-  const [expBuff, setExpBuff] = useState('0');
+  const [startPercentInput, setStartPercentInput] = useState("0");
+  const [endPercentInput, setEndPercentInput] = useState("0");
+  const [hours, setHours] = useState("0");
+  const [minutes, setMinutes] = useState("0");
+  const [serverMultiplier, setServerMultiplier] = useState("100");
+  const [equipmentExp, setEquipmentExp] = useState("0");
+  const [expBuff, setExpBuff] = useState("0");
 
   const classData = EXP_TABLES[selectedClass];
   const availableLevels = Object.keys(classData.levels)
@@ -70,7 +70,9 @@ export default function ExpCalculator() {
           <h1 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-linear-to-r from-amber-400 via-orange-400 to-red-400 mb-2">
             Exp Calculator
           </h1>
-          <p className="text-slate-300">Calculate experience needed between levels</p>
+          <p className="text-slate-300">
+            Calculate experience needed between levels
+          </p>
         </div>
 
         {/* Main Card */}
@@ -88,7 +90,9 @@ export default function ExpCalculator() {
                     onClick={() => {
                       setSelectedClass(classKey);
                       // Reset levels based on class
-                      const classLevels = Object.keys(EXP_TABLES[classKey].levels).map(Number);
+                      const classLevels = Object.keys(
+                        EXP_TABLES[classKey].levels,
+                      ).map(Number);
                       const minLvl = Math.min(...classLevels);
                       setExpRange({
                         startLevel: minLvl,
@@ -96,13 +100,13 @@ export default function ExpCalculator() {
                         endLevel: minLvl + 1,
                         endPercent: 0,
                       });
-                      setStartPercentInput('0');
-                      setEndPercentInput('0');
+                      setStartPercentInput("0");
+                      setEndPercentInput("0");
                     }}
                     className={`btn btn-sm md:btn-md ${
                       selectedClass === classKey
-                        ? 'btn-warning text-black font-bold'
-                        : 'btn-outline btn-warning'
+                        ? "btn-warning text-black font-bold"
+                        : "btn-outline btn-warning"
                     }`}
                   >
                     {EXP_TABLES[classKey].name}
@@ -264,7 +268,10 @@ export default function ExpCalculator() {
                     setMinutes(e.target.value);
                   }}
                   onBlur={(e) => {
-                    const val = Math.max(0, Math.min(59, parseInt(e.target.value) || 0));
+                    const val = Math.max(
+                      0,
+                      Math.min(59, parseInt(e.target.value) || 0),
+                    );
                     setMinutes(val.toString());
                   }}
                   className="input input-bordered input-info w-full text-slate-800 text-sm"
@@ -348,7 +355,9 @@ export default function ExpCalculator() {
               <span className="text-slate-200 font-semibold">
                 Lv.{expRange.startLevel}
               </span>
-              <span className="text-amber-500/70">{expRange.startPercent}%</span>
+              <span className="text-amber-500/70">
+                {expRange.startPercent}%
+              </span>
               <span className="text-slate-500">→</span>
               <span className="text-slate-200 font-semibold">
                 Lv.{expRange.endLevel}
@@ -362,7 +371,7 @@ export default function ExpCalculator() {
               <div>
                 <p className="text-slate-400 text-sm mb-2">Exp</p>
                 <p className="text-4xl font-bold text-amber-400">
-                  {calculateExpNeeded.toLocaleString('en-US', {
+                  {calculateExpNeeded.toLocaleString("en-US", {
                     maximumFractionDigits: 2,
                   })}
                 </p>
@@ -373,7 +382,9 @@ export default function ExpCalculator() {
                 <div>
                   <p className="text-slate-400 text-sm mb-2">เวลาเล่น</p>
                   <p className="text-4xl font-bold text-blue-400">
-                    {parseInt(hours)}:{String(parseInt(minutes) || 0).padStart(2, '0')} <span className="text-lg">hrs</span>
+                    {parseInt(hours)}:
+                    {String(parseInt(minutes) || 0).padStart(2, "0")}{" "}
+                    <span className="text-lg">hrs</span>
                   </p>
                 </div>
               )}
@@ -413,7 +424,6 @@ export default function ExpCalculator() {
             </div>
           </div>
         </div>
-
       </div>
     </div>
   );

@@ -12,7 +12,7 @@ interface BossFloor {
 }
 
 const floorData1to100: BossFloor[] = [
-  { floor: 5, bosses: [{ name: "Mistress", monsterIds: [1150] }] },
+  { floor: 5, bosses: [{ name: "Mistress", monsterIds: [1059] }] },
   { floor: 10, bosses: [{ name: "Doppelganger", monsterIds: [1671] }] },
   {
     floor: 15,

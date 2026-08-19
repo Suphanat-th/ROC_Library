@@ -15,9 +15,11 @@ function parseDetail(text: string[]): string {
       f =
       "<span class='block w-full overflow-hidden whitespace-nowrap'>___________________________________________________________________________</span>";
     }
-
+console.log(f);
         // แปลงโค้ดสี RO → HTML
     f = f
+      .replace(/\^start_line_thg/g, `<span class="text-[#ff0000] line-through mr-2">`)
+      .replace(/\^end_line_thg/g, `</span>`)
       .replace(/\^ff0000/g, `<span class="text-[#ff0000]">`)
       .replace(/\^b4b4b4/g, `<span class="text-[#b4b4b4]">`)
       .replace(/\^00ff00/g, `<span class="text-[#00ff00]">`)
