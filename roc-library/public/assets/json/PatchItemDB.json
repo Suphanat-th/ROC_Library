@@ -1,499 +1,1271 @@
 {
-    "440043": {
-        "unidentifiedDisplayName": "Costume Golden Baseball Cap",
-        "unidentifiedResourceName": "GGT_Baseball_Cap",
+    "19841": {
+        "unidentifiedDisplayName": "Headgear",
+        "unidentifiedResourceName": "헬름",
         "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+            "ไอเท็มปริศนา ต้องทำการตรวจสอบโดยใช้ [Magnifier]"
         ],
-        "identifiedDisplayName": "Costume Golden Baseball Cap",
-        "identifiedResourceName": "GGT_Baseball_Cap",
+        "identifiedDisplayName": "Costume Dragonhelm Copper",
+        "identifiedResourceName": "용투구_동",
         "identifiedDescriptionName": [
-            "หมวกกีฬาเบสบอลที่ปักตัวอักษรว่า GGT",
-            " ",
-            "[ความสามารถจำกัดเวลาช่วงกิจกรรม]",
-            "เพิ่มปริมาณการฟื้นฟูเมื่อใช้ White Slim Potion และ [NFS] White Slim Potion 100%",
-            "เพิ่มปริมาณการฟื้นฟูเมื่อใช้ Mastela Fruit 200%",
-            "^ff0000(ความสามารถของไอเท็มชิ้นนี้จะถูกลบหลังปิดปรับปรุงเซิร์ฟเวอร์วันที่ 28 มกราคม 2570)",
-            " ",
-            "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Upper น้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 1",
-            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+            "^ff0000ไอเท็มนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "หมวกในตำนาน",
+            "ความสามารถพิเศษจำกัดเวลา",
+            "ค่าประสบการณ์ที่ได้รับเมื่อล่ามอนสเตอร์ +10%",
+            "อัตราดรอปไอเท็ม +5%",
+            "ATK +15",
+            "MATK +15",
+            "CRI +10",
+            "HIT +10",
+            "ลดระยะเวลาร่ายเวทมนตร์ 10%",
+            "ความสามารถพิเศษจะถูกลบออกจากเกมในวันที่ 7 ตุลาคม 2569 หลังปิดปรับปรุงเซิฟเวอร์",
+            "ประเภท : Costume",
+            "ตำแหน่ง : Upper  น้ำหนัก : 0",
+            "Lv ที่ต้องการ : 1",
+            "อาชีพ : ทุกอาชีพ"
         ],
         "slotCount": 0,
-        "ClassNum": 263,
-        "costume": true
+        "ClassNum": 0
     },
-    "410348": {
-        "unidentifiedDisplayName": "Divine Protect Shields",
-        "unidentifiedResourceName": "리본",
+    "1000896": {
+        "unidentifiedDisplayName": "Jellyfish Coin",
+        "unidentifiedResourceName": "금화",
         "unidentifiedDescriptionName": [
             "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "Divine Protect Shields",
-        "identifiedResourceName": "Phalanx",
+        "identifiedDisplayName": "Jellyfish Coin",
+        "identifiedResourceName": "금화",
         "identifiedDescriptionName": [
-            "DEF + 100, MDEF + 20",
-            "สามารถใช้งานสกิล Auto Guard Lv.1 ได้",
-            "ลด Damage ที่ได้รับจาก Player 5%",
-            "",
-            "เมื่อ Base VIT ตั้งแต่ 60 ขึ้นไป,",
-            "ทุก ๆ 10 วินาที, ฟื้นฟู HP 300, SP 30",
-            "ลดระยะเวลาร่ายแบบแปรผัน -10%",
-            "",
-            "เมื่อ Base VIT ตั้งแต่ 90 ขึ้นไป,",
-            "ลดระยะเวลาร่ายแบบคงที่ลง 0.2 วินาที",
-            "ฟื้นฟู HP เพิ่มอีก 700 ทุก ๆ 10 วินาที",
-            "DEF + 100, MDEF + 20",
-            "ประเภท : Headgear พลังป้องกัน : 0",
-            "ตำแหน่ง : Middle น้ำหนัก : 10",
-            "เลเวลที่ต้องการ : 74",
-            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+            "^ff0000ไอเท็มชิ้นนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "^start_LRyujin Coin^end_L Jellyfish Coin",
+            "start_LRyujin Coinเหรียญสีทองแวววาวระยิบระยับ",
+            "ลองเอาไปหยอดที่ [Guarantee Gacha] พิกัดแผนที่กิจกรรมกันเถอะ",
+            "(ไอเท็มดังกล่าวจะถูกลบออกหลังจากปิดปรับปรุงเซิฟเวอร์วันที่ 30 กันยายน 2569)",
+            "น้ำหนัก : 1"
         ],
         "slotCount": 0,
-        "ClassNum": 1949,
+        "ClassNum": 0,
         "costume": false
     },
-    "401520": {
-        "unidentifiedDisplayName": "Headband",
-        "unidentifiedResourceName": "머리띠",
+    "15378": {
+        "unidentifiedDisplayName": "Armor",
+        "unidentifiedResourceName": "우든메일",
         "unidentifiedDescriptionName": [
             "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "RCC WP 2026 Crown",
-        "identifiedResourceName": "성자의왕관",
+        "identifiedDisplayName": "Lava Leather Armor",
+        "identifiedResourceName": "Lava_Leather_Armor",
         "identifiedDescriptionName": [
-            "มงกุฎที่มีออร่าศักดิ์สิทธิ์ปกคลุมอยู่ทั่วทั้งร่างกาย",
-            "ALL state +2",
-            "สามารถใช้สกิล Cure Lv.1 และ Status Recovery Lv.1 ได้",
-            "เพิ่มความทนทานต่อพลังโจมตีทุกธาตุ 5%",
-            "ป้องกันการโจมตีระยะไกล 5%",
-            "เมื่ออัพเกรดตั้งแต่ 6 ขึ้นไป เพิ่มความทนทานต่อพลังโจมตีทุกธาตุอีก 1% ทุกๆ 1 การอัพเกรด",
-            "เมื่ออัพเกรดถึงขั้น 6 ขึ้นไป เพิ่มพลังป้องกันต่อการโจมตีระยะไกลอีก 1% ทุกๆ 1 การอัพเกรด",
-            "เมื่ออัพเกรดขั้น 9 ขึ้นไป Max HP + 1200 Max SP + 120",
-            "",
-            "ประเภท : Headgear พลังป้องกัน : 15",
-            "ตำแหน่ง : Upper น้ำหนัก : 100",
-            "เลเวลที่ต้องการ : 80",
+            "เสื้อเกราะที่ทำจากหนังของสิ่งมีชีวิตที่อาศัยอยู่ใน Lava Dungeon",
+            "ดูเหมือนว่าจะยังหลงเหลือความร้อนอยู่ ",
+            "ATK + 100",
+            "เมื่ออัพเกรดถึงขั้น 7, DEF + 100",
+            "เมื่ออัพเกรดถึงขั้น 9, DEF + 50 เพิ่มเติม",
+            "^ffffff_",
+            "เมื่อสวมใส่ร่วมกับ Lava Leather Manteau และ Lava Leather Boots,",
+            "ATK + 2%",
+            "เมื่อ Lava Leather Armor, Lava Leather Manteau, Lava Leather Boots มีค่าอัพเกรดตั้งแต่ 7 ขึ้นไป, ATK + 3%",
+            "เมื่อค่าอัพเกรดรวมกัน ตั้งแต่ 27 ขึ้นไป,",
+            "ลด Delay หลังใช้สกิล 20%",
+            "^ffffff_",
+            "ประเภท : Armor พลังป้องกัน : 85",
+            "น้ำหนัก : 150",
+            "เลเวลที่ต้องการ : 99",
             "อาชีพที่ใส่ได้ : ทุกอาชีพ"
         ],
         "slotCount": 1,
-        "ClassNum": 1117,
+        "ClassNum": 0,
         "costume": false
     },
-    "420940": {
-        "unidentifiedDisplayName": "Charm Of Leafwind",
-        "unidentifiedResourceName": "리본",
+    "15379": {
+        "unidentifiedDisplayName": "Cloth",
+        "unidentifiedResourceName": "타이즈",
         "unidentifiedDescriptionName": [
             "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "Charm Of Leafwind",
-        "identifiedResourceName": "챰오브러프윈드",
+        "identifiedDisplayName": "Lava Leather Suit",
+        "identifiedResourceName": "Lava_Leather_Suits",
         "identifiedDescriptionName": [
-            "สามารถใช้สกิล [Lightning Loader] Lv.1 ได้",
-            "ทุก ๆ ค่า Base AGI + LUK รวมกัน 15 หน่วย จะได้รับ FLEE +4",
-            "",
-            "เมื่อสวมใส่ร่วมกับ Manteau Of Leafwind",
-            "ลดความเสียหายที่ได้รับจากสกิล [Spread Shot], [Soul Destroyer] และ [Blitz Beat] ลง 40%",
-            "",
-            "ทุก ๆ ระดับการตีบวกของ Manteau Of Leafwind",
-            "เพิ่มความต้านทานต่อการโจมตีทุกธาตุ 1%",
-            "ประเภท : Headgear พลังป้องกัน : 0",
-            "ตำแหน่ง : Lower น้ำหนัก : 20",
-            "เลเวลที่ต้องการ : 1",
+            "ชุดที่ทำจากหนังของสิ่งมีชีวิตที่อาศัยอยู่ใน Lava Dungeon",
+            "ดูเหมือนว่าจะยังหลงเหลือความร้อนอยู่ ",
+            "ATK + 100",
+            "เมื่ออัพเกรดถึงขั้น 7, ATK + 50 เพิ่มเติม",
+            "เมื่ออัพเกรดถึงขั้น 9, เพิ่ม Critical Damage 10%",
+            "^ffffff_",
+            "เมื่อสวมใส่ร่วมกับ Lava Leather Muffler และ Lava Leather Shoes,",
+            "ATK + 2%",
+            "เมื่อ Lava Leather Suits, Lava Leather Muffler, Lava Leather Shoes มีค่าอัพเกรดตั้งแต่ 7 ขึ้นไป, ATK + 3%",
+            "เมื่อค่าอัพเกรดรวมกัน ตั้งแต่ 27 ขึ้นไป,",
+            "เพิ่ม Critical Damage 20%",
+            "^ffffff_",
+            "ประเภท : Armor พลังป้องกัน : 70",
+            "น้ำหนัก : 100",
+            "เลเวลที่ต้องการ : 99",
             "อาชีพที่ใส่ได้ : ทุกอาชีพ"
         ],
         "slotCount": 1,
-        "ClassNum": 1263,
+        "ClassNum": 0,
         "costume": false
     },
-    "107924": {
-        "unidentifiedDisplayName": "RCC Card Album",
-        "unidentifiedResourceName": "낡은카드첩_노랑",
+    "15380": {
+        "unidentifiedDisplayName": "Cloth",
+        "unidentifiedResourceName": "코튼셔츠",
         "unidentifiedDescriptionName": [
-            "อัลบั้มการ์ดพิเศษที่รวบรวมพลังและความทรงจำจากการแข่งขัน RCC ไว้ภายใน",
-            "เมื่อเปิดใช้งาน จะได้รับการ์ดแบบสุ่ม 1 ใบ จากรายการการ์ดที่กำหนด",
-            "โดยมีโอกาสได้รับการ์ดหายากอันทรงพลังที่นักผจญภัยหลายคนตามหา"
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "RCC Card Album",
-        "identifiedResourceName": "낡은카드첩_노랑",
+        "identifiedDisplayName": "Lava Leather Robe",
+        "identifiedResourceName": "Lava_Leather_Robe",
         "identifiedDescriptionName": [
-            "อัลบั้มการ์ดพิเศษที่รวบรวมพลังและความทรงจำจากการแข่งขัน RCC ไว้ภายใน",
-            "เมื่อเปิดใช้งาน จะได้รับการ์ดแบบสุ่ม 1 ใบ จากรายการการ์ดที่กำหนด",
-            "โดยมีโอกาสได้รับการ์ดหายากอันทรงพลังที่นักผจญภัยหลายคนตามหา",
+            "ผ้าคลุมที่ทำจากหนังของสิ่งมีชีวิตที่อาศัยอยู่ใน Lava Dungeon",
+            "ดูเหมือนว่าจะยังหลงเหลือความร้อนอยู่ ",
+            "MATK + 100",
+            "เมื่ออัพเกรดถึงขั้น 7, MATK + 50 เพิ่มเติม",
+            "เมื่ออัพเกรดถึงขั้น 9, MATK + 25 เพิ่มเติม",
+            "^ffffff_",
+            "เมื่อสวมใส่ร่วมกับ Lava Leather Hood และ Lava Leather Sandals,",
+            "MATK + 2%",
+            "เมื่อ Lava Leather Robe, Lava Leather Hood, Lava Leather Sandals มีค่าอัพเกรดตั้งแต่ 7 ขึ้นไป, MATK + 3%",
+            "เมื่อค่าอัพเกรดรวมกัน ตั้งแต่ 27 ขึ้นไป,",
+            "เพิ่ม Damage เวทมนตร์ธาตุ Fire 15%",
+            "^ffffff_",
+            "ประเภท : Armor พลังป้องกัน : 55",
+            "น้ำหนัก : 75",
+            "เลเวลที่ต้องการ : 99",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "20935": {
+        "unidentifiedDisplayName": "Garment",
+        "unidentifiedResourceName": "망토",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Lava Leather Manteau",
+        "identifiedResourceName": "Lava_Leather_Manteau",
+        "identifiedDescriptionName": [
+            "เสื้อคลุมที่ทำจากหนังของสิ่งมีชีวิตที่อาศัยอยู่ใน Lava Dungeon",
+            "ดูเหมือนว่าจะยังหลงเหลือความร้อนอยู่ ",
+            "HIT + 10",
+            "เมื่ออัพเกรดถึงขั้น 7, HIT + 5 เพิ่มเติม",
+            "เมื่ออัพเกรดถึงขั้น 9, HIT + 5 เพิ่มเติม",
+            "เมื่ออัพเกรดถึงขั้น 11, ลด Delay หลังใช้สกิล 3%",
+            "^ffffff_",
+            "เมื่อสวมใส่ร่วมกับ Lava Leather Boots,",
+            "HIT + 5",
+            "^ffffff_",
+            "ประเภท : Garment พลังป้องกัน : 50",
+            "น้ำหนัก : 40",
+            "เลเวลที่ต้องการ : 99",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "20936": {
+        "unidentifiedDisplayName": "Garment",
+        "unidentifiedResourceName": "머플러",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Lava Leather Muffler",
+        "identifiedResourceName": "Lava_Leather_Muffler",
+        "identifiedDescriptionName": [
+            "ผ้าคลุมไหล่ที่ทำจากหนังของสิ่งมีชีวิตที่อาศัยอยู่ใน Lava Dungeon",
+            "ดูเหมือนว่าจะยังหลงเหลือความร้อนอยู่ ",
+            "CRI + 5",
+            "เมื่ออัพเกรดถึงขั้น 7, CRI + 5 เพิ่มเติม",
+            "เมื่ออัพเกรดถึงขั้น 9, เพิ่ม Critical Damage 5%",
+            "เมื่ออัพเกรดถึงขั้น 11, ATK + 3%",
+            "^ffffff_",
+            "เมื่อสวมใส่ร่วมกับ Lava Leather Shoes,",
+            "เพิ่ม Critical Damage 5%",
+            "^ffffff_",
+            "ประเภท : Garment พลังป้องกัน : 35",
+            "น้ำหนัก : 35",
+            "เลเวลที่ต้องการ : 99",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "20937": {
+        "unidentifiedDisplayName": "Garment",
+        "unidentifiedResourceName": "후드",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Lava Leather Hood",
+        "identifiedResourceName": "Lava_Leather_Hode",
+        "identifiedDescriptionName": [
+            "ผ้าคลุมหัวที่ทำจากหนังของสิ่งมีชีวิตที่อาศัยอยู่ใน Lava Dungeon",
+            "ดูเหมือนว่าจะยังหลงเหลือความร้อนอยู่ ",
+            "ลด Variable Cast Time 10%",
+            "เมื่ออัพเกรดถึงขั้น 7, ลด Variable Cast Time 10% เพิ่มเติม",
+            "เมื่ออัพเกรดถึงขั้น 9, ลด Variable Cast Time 10% เพิ่มเติม",
+            "เมื่ออัพเกรดถึงขั้น 11, เพิ่ม Damage เวทมนตร์ธาตุ Fire 5%",
+            "^ffffff_",
+            "เมื่อสวมใส่ร่วมกับ Lava Leather Sandals,",
+            "ลด Variable Cast Time 5%",
+            "^ffffff_",
+            "ประเภท : Garment พลังป้องกัน : 25",
+            "น้ำหนัก : 30",
+            "เลเวลที่ต้องการ : 99",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "22199": {
+        "unidentifiedDisplayName": "Shoes",
+        "unidentifiedResourceName": "부츠",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Lava Leather Boots",
+        "identifiedResourceName": "Lava_Leather_Boots",
+        "identifiedDescriptionName": [
+            "รองเท้าบู๊ทที่ทำจากหนังของสิ่งมีชีวิตที่อาศัยอยู่ใน Lava Dungeon",
+            "ดูเหมือนว่าจะยังหลงเหลือความร้อนอยู่ ",
+            "ATK + 2%",
+            "เมื่ออัพเกรดถึงขั้น 7, ATK + 25",
+            "เมื่ออัพเกรดถึงขั้น 9, ATK + 15 เพิ่มเติม",
+            "^ffffff_",
+            "ประเภท : Shoes พลังป้องกัน : 50",
+            "น้ำหนัก : 60",
+            "เลเวลที่ต้องการ : 99",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "22200": {
+        "unidentifiedDisplayName": "Shoes",
+        "unidentifiedResourceName": "슈즈",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Lava Leather Shoes",
+        "identifiedResourceName": "Lava_Leather_Shoes",
+        "identifiedDescriptionName": [
+            "รองเท้าที่ทำจากหนังของสิ่งมีชีวิตที่อาศัยอยู่ใน Lava Dungeon",
+            "ดูเหมือนว่าจะยังหลงเหลือความร้อนอยู่ ",
+            "CRI + 5",
+            "เมื่ออัพเกรดถึงขั้น 7, เพิ่ม Damage ทางกายภาพแก่ศัตรูทุกขนาด 5%",
+            "เมื่ออัพเกรดถึงขั้น 9, เพิ่ม Critical Damage 5%",
+            "^ffffff_",
+            "ประเภท : Shoes พลังป้องกัน : 40",
+            "น้ำหนัก : 50",
+            "เลเวลที่ต้องการ : 99",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "22201": {
+        "unidentifiedDisplayName": "Shoes",
+        "unidentifiedResourceName": "샌들",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Lava Leather Sandals",
+        "identifiedResourceName": "Lava_Leather_Sandle",
+        "identifiedDescriptionName": [
+            "รองเท้าแตะที่ทำจากหนังของสิ่งมีชีวิตที่อาศัยอยู่ใน Lava Dungeon",
+            "ดูเหมือนว่าจะยังหลงเหลือความร้อนอยู่ ",
+            "เพิ่ม Damage เวทมนตร์ธาตุ Fire 3%",
+            "เมื่ออัพเกรดถึงขั้น 7, MATK + 25",
+            "เมื่ออัพเกรดถึงขั้น 9, MATK + 15 เพิ่มเติม",
+            "^ffffff_",
+            "ประเภท : Shoes พลังป้องกัน : 25",
+            "น้ำหนัก : 50",
+            "เลเวลที่ต้องการ : 99",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "2049": {
+        "unidentifiedDisplayName": "Rod",
+        "unidentifiedResourceName": "롯드",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Blue Flame Cane",
+        "identifiedResourceName": "Staff_Of_Blue_Flame",
+        "identifiedDescriptionName": [
+            "ไม้คทาสองมือที่ผลึกไปด้วยพลังเวทมนตร์แห่งน้ำและไฟ",
+            "ไม่สามารถถูกทำลายได้",
+            "INT + 7, MATK + 300",
+            "ทุก ๆ การอัพเกรด 2 ขั้น, MATK + 1%",
+            "เมื่ออัพเกรดถึงขั้น 7, เพิ่ม Damage เวทมนตร์ธาตุ Fire, Earth, Water, Holy 5%",
+            "เมื่ออัพเกรดถึงขั้น 9, เพิ่ม Damage เวทมนตร์ธาตุ Fire, Earth, Water, Holy 10% เพิ่มเติม",
+            "เมื่ออัพเกรดถึงขั้น 11, ลด Damage ที่ได้รับจากศัตรูทุกขนาด 20%",
+            "เมื่ออัพเกรดถึงขั้น 13, ลด Delay หลังใช้สกิล 15%",
+            "^ffffff_",
+            "ประเภท : Two-Handed Rod พลังโจมตี : 110",
+            "น้ำหนัก : 80",
+            "เลเวลของอาวุธ : 4",
+            "เลเวลที่ต้องการ : 99",
+            "อาชีพที่ใส่ได้ : Mage Cls, Acolyte Cls, Soul Linker Cls"
+        ],
+        "slotCount": 2,
+        "ClassNum": 23,
+        "costume": false
+    },
+    "21039": {
+        "unidentifiedDisplayName": "Two-Handed Sword",
+        "unidentifiedResourceName": "바스타드소드",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Royal Knight's Broadsword",
+        "identifiedResourceName": "T_Sword_Of_Kingdom",
+        "identifiedDescriptionName": [
+            "ดาบใหญ่ที่ใช้โดยอัศวินผู้เลื่องชื่อ",
+            "ทุก ๆ การอัพเกรด 2 ขั้น, ATK + 20",
+            "เมื่ออัพเกรดถึงขั้น 7, เพิ่ม Critical Damage 10%",
+            "เมื่ออัพเกรดถึงขั้น 9, ไม่สามารถถูกทำลายได้",
+            "^ffffff_",
+            "ประเภท : Two-Handed Sword พลังโจมตี : 280",
+            "น้ำหนัก : 400",
+            "เลเวลของอาวุธ : 4",
+            "เลเวลที่ต้องการ : 99",
+            "อาชีพที่ใส่ได้ : Swordman Cls"
+        ],
+        "slotCount": 2,
+        "ClassNum": 3,
+        "costume": false
+    },
+    "26016": {
+        "unidentifiedDisplayName": "Two-Handed Spear",
+        "unidentifiedResourceName": "쟈벨린",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Royal Knight's Lance",
+        "identifiedResourceName": "T_Lance_Of_Kingdom",
+        "identifiedDescriptionName": [
+            "หอกสีขาวที่ใช้โดยอัศวินผู้เลื่องชื่อ",
+            "ทุก ๆ การอัพเกรด 2 ขั้น, เพิ่ม Damage ทางกายภาพระยะไกล 3% ",
+            "เมื่ออัพเกรดถึงขั้น 7, ATK + 5%",
+            "เมื่ออัพเกรดถึงขั้น 9, เพิ่ม Damage ทางกายภาพแก่มอนสเตอร์ทุกเผ่าพันธุ์ 15%",
+            "^ffffff_",
+            "ประเภท : Two-Handed Spear พลังโจมตี : 205",
+            "น้ำหนัก : 100",
+            "เลเวลของอาวุธ : 4",
+            "เลเวลที่ต้องการ : 99",
+            "อาชีพที่ใส่ได้ : Swordman Cls"
+        ],
+        "slotCount": 2,
+        "ClassNum": 5,
+        "costume": false
+    },
+    "27346": {
+        "unidentifiedDisplayName": "Rigid Muspellskoll Card",
+        "unidentifiedResourceName": "이름없는카드",
+        "unidentifiedDescriptionName": [
+            "ลด Damage ทางกายภาพ/เวทมนตร์ที่ได้รับจากศัตรูประเภท Dragon, Demon, Brute 30%",
+            "^ffffff_",
+            "ประเภท : Card",
+            "ใช้กับ : Shield",
+            "น้ำหนัก : 1"
+        ],
+        "identifiedDisplayName": "Rigid Muspellskoll Card",
+        "identifiedResourceName": "이름없는카드",
+        "identifiedDescriptionName": [
+            "ลด Damage ทางกายภาพ/เวทมนตร์ที่ได้รับจากศัตรูประเภท Dragon, Demon, Brute 30%",
+            "^ffffff_",
+            "ประเภท : Card",
+            "ใช้กับ : Shield",
+            "น้ำหนัก : 1"
+        ],
+        "slotCount": 0,
+        "ClassNum": 104,
+        "costume": false
+    },
+    "27347": {
+        "unidentifiedDisplayName": "Rigid Kaho Card",
+        "unidentifiedResourceName": "이름없는카드",
+        "unidentifiedDescriptionName": [
+            "เพิ่ม Damage ทางเวทมนตร์แก่ศัตรูธาตุ Earth 10%",
+            "เมื่อใช้ร่วมกับ Fire Frilldora Card,",
+            "เพิ่ม Damage ทางเวทมนตร์แก่ศัตรูธาตุ Earth 8% เพิ่มเติม",
+            "^ffffff_",
+            "ประเภท : Card",
+            "ใช้กับ : Weapon",
+            "น้ำหนัก : 1"
+        ],
+        "identifiedDisplayName": "Rigid Kaho Card",
+        "identifiedResourceName": "이름없는카드",
+        "identifiedDescriptionName": [
+            "เพิ่ม Damage ทางเวทมนตร์แก่ศัตรูธาตุ Earth 10%",
+            "เมื่อใช้ร่วมกับ Fire Frilldora Card,",
+            "เพิ่ม Damage ทางเวทมนตร์แก่ศัตรูธาตุ Earth 8% เพิ่มเติม",
+            "^ffffff_",
+            "ประเภท : Card",
+            "ใช้กับ : Weapon",
+            "น้ำหนัก : 1"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "27348": {
+        "unidentifiedDisplayName": "Rigid Lava Golem Card",
+        "unidentifiedResourceName": "이름없는카드",
+        "unidentifiedDescriptionName": [
+            "เพิ่ม Damage ทางเวทมนตร์แก่ศัตรูธาตุ Neutral +3%",
+            "เมื่อค่าอัพเกรดตั้งแต่ 7 ขึ้นไป เพิ่ม Damage ทางเวทมนตร์แก่ศัตรูธาตุ Neutral +5%",
+            "เมื่อค่าอัพเกรดตั้งแต่ 9 ขึ้นไป เพิ่ม Damage ทางเวทมนตร์แก่ศัตรูธาตุ Neutral +7%",
+            "^ffffff_",
+            "ประเภท : Card",
+            "ใช้กับ : Weapon",
+            "น้ำหนัก : 1"
+        ],
+        "identifiedDisplayName": "Rigid Lava Golem Card",
+        "identifiedResourceName": "이름없는카드",
+        "identifiedDescriptionName": [
+            "เพิ่ม Damage ทางเวทมนตร์แก่ศัตรูธาตุ Neutral +3%",
+            "เมื่อค่าอัพเกรดตั้งแต่ 7 ขึ้นไป เพิ่ม Damage ทางเวทมนตร์แก่ศัตรูธาตุ Neutral +5%",
+            "เมื่อค่าอัพเกรดตั้งแต่ 9 ขึ้นไป เพิ่ม Damage ทางเวทมนตร์แก่ศัตรูธาตุ Neutral +7%",
+            "^ffffff_",
+            "ประเภท : Card",
+            "ใช้กับ : Weapon",
+            "น้ำหนัก : 1"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "27349": {
+        "unidentifiedDisplayName": "Rigid Explosion Card",
+        "unidentifiedResourceName": "이름없는카드",
+        "unidentifiedDescriptionName": [
+            "ลด Damage ทางกายภาพ/เวทมนตร์ที่ได้รับจากศัตรูธาตุ Fire 15%",
+            "ลด Damage ทางกายภาพ/เวทมนตร์ที่ได้รับจากมอนสเตอร์ประเภท Dragon 15%",
+            "^ffffff_",
+            "ประเภท : Card",
+            "ใช้กับ : Shield",
+            "น้ำหนัก : 1"
+        ],
+        "identifiedDisplayName": "Rigid Explosion Card",
+        "identifiedResourceName": "이름없는카드",
+        "identifiedDescriptionName": [
+            "ลด Damage ทางกายภาพ/เวทมนตร์ที่ได้รับจากศัตรูธาตุ Fire 15%",
+            "ลด Damage ทางกายภาพ/เวทมนตร์ที่ได้รับจากมอนสเตอร์ประเภท Dragon 15%",
+            "^ffffff_",
+            "ประเภท : Card",
+            "ใช้กับ : Shield",
+            "น้ำหนัก : 1"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "27350": {
+        "unidentifiedDisplayName": "Rigid Earth Deleter Card",
+        "unidentifiedResourceName": "이름없는카드",
+        "unidentifiedDescriptionName": [
+            "MSP + 2%",
+            "ทุก ๆ การอัพเกรด 2 ขั้น, MSP + 1%",
+            "ประเภท : Card",
+            "ใช้กับ : Headgear",
+            "น้ำหนัก : 1"
+        ],
+        "identifiedDisplayName": "Rigid Earth Deleter Card",
+        "identifiedResourceName": "이름없는카드",
+        "identifiedDescriptionName": [
+            "MSP + 2%",
+            "ทุก ๆ การอัพเกรด 2 ขั้น, MSP + 1%",
+            "ประเภท : Card",
+            "ใช้กับ : Headgear",
+            "น้ำหนัก : 1"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "27351": {
+        "unidentifiedDisplayName": "Rigid Sky Deleter Card",
+        "unidentifiedResourceName": "이름없는카드",
+        "unidentifiedDescriptionName": [
+            "MHP + 5%",
+            "เมื่อใช้ร่วมกับ Bungisngis Card,",
+            "MHP + 5% เพิ่มเติม",
+            "ประเภท : Card",
+            "ใช้กับ : Headgear",
+            "น้ำหนัก : 1"
+        ],
+        "identifiedDisplayName": "Rigid Sky Deleter Card",
+        "identifiedResourceName": "이름없는카드",
+        "identifiedDescriptionName": [
+            "MHP + 5%",
+            "เมื่อใช้ร่วมกับ Bungisngis Card,",
+            "MHP + 5% เพิ่มเติม",
+            "ประเภท : Card",
+            "ใช้กับ : Headgear",
+            "น้ำหนัก : 1"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "27352": {
+        "unidentifiedDisplayName": "Rigid Nightmare Terror Card",
+        "unidentifiedResourceName": "이름없는카드",
+        "unidentifiedDescriptionName": [
+            "MSP + 5%",
+            "เมื่อใช้ร่วมกับ Nightmare Terror Card, ATK + 10%",
+            "เมื่อใช้ร่วมกับ Nightmare Card, MSP + 10%",
+            "ประเภท : Card",
+            "ใช้กับ : Shoes",
+            "น้ำหนัก : 1"
+        ],
+        "identifiedDisplayName": "Rigid Nightmare Terror Card",
+        "identifiedResourceName": "이름없는카드",
+        "identifiedDescriptionName": [
+            "MSP + 5%",
+            "เมื่อใช้ร่วมกับ Nightmare Terror Card, ATK + 10%",
+            "เมื่อใช้ร่วมกับ Nightmare Card, MSP + 10%",
+            "ประเภท : Card",
+            "ใช้กับ : Shoes",
+            "น้ำหนัก : 1"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "27353": {
+        "unidentifiedDisplayName": "Rigid Blazer Card",
+        "unidentifiedResourceName": "이름없는카드",
+        "unidentifiedDescriptionName": [
+            "ลด Damage ทางกายภาพ/เวทมนตร์ที่ได้รับจากศัตรูธาตุ Neutral 15%",
+            "ลด Damage ทางกายภาพ/เวทมนตร์ที่ได้รับจากมอนสเตอร์ประเภท Demon 15%",
+            "ประเภท : Card",
+            "ใช้กับ : Shield",
+            "น้ำหนัก : 1"
+        ],
+        "identifiedDisplayName": "Rigid Blazer Card",
+        "identifiedResourceName": "이름없는카드",
+        "identifiedDescriptionName": [
+            "ลด Damage ทางกายภาพ/เวทมนตร์ที่ได้รับจากศัตรูธาตุ Neutral 15%",
+            "ลด Damage ทางกายภาพ/เวทมนตร์ที่ได้รับจากมอนสเตอร์ประเภท Demon 15%",
+            "ประเภท : Card",
+            "ใช้กับ : Shield",
+            "น้ำหนัก : 1"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "27354": {
+        "unidentifiedDisplayName": "Corrupted Raydric Card",
+        "unidentifiedResourceName": "이름없는카드",
+        "unidentifiedDescriptionName": [
+            "ATK + 5%",
+            "เมื่อใช้ร่วมกับ Raydric Card,",
+            "ความต้านทานต่อการโจมตีธาตุ Neutral + 10%, ATK + 5%",
+            "ประเภท : Card",
+            "ใช้กับ : Armor",
+            "น้ำหนัก : 1"
+        ],
+        "identifiedDisplayName": "Corrupted Raydric Card",
+        "identifiedResourceName": "이름없는카드",
+        "identifiedDescriptionName": [
+            "ATK + 5%",
+            "เมื่อใช้ร่วมกับ Raydric Card,",
+            "ความต้านทานต่อการโจมตีธาตุ Neutral + 10%, ATK + 5%",
+            "ประเภท : Card",
+            "ใช้กับ : Armor",
+            "น้ำหนัก : 1"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "27355": {
+        "unidentifiedDisplayName": "Corrupted Raydric Archer Card",
+        "unidentifiedResourceName": "이름없는카드",
+        "unidentifiedDescriptionName": [
+            "เพิ่ม Damage ทางกายภาพระยะไกล 10%",
+            "เมื่อใช้ร่วมกับ Enchanted Archer Skeleton Card, เพิ่ม Damage ทางกายภาพระยะไกล 5%",
+            "ประเภท : Card",
+            "ใช้กับ : Weapon",
+            "น้ำหนัก : 1"
+        ],
+        "identifiedDisplayName": "Corrupted Raydric Archer Card",
+        "identifiedResourceName": "이름없는카드",
+        "identifiedDescriptionName": [
+            "เพิ่ม Damage ทางกายภาพระยะไกล 10%",
+            "เมื่อใช้ร่วมกับ Enchanted Archer Skeleton Card, เพิ่ม Damage ทางกายภาพระยะไกล 5%",
+            "ประเภท : Card",
+            "ใช้กับ : Weapon",
+            "น้ำหนัก : 1"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "27356": {
+        "unidentifiedDisplayName": "Frozen Gargoyle Card",
+        "unidentifiedResourceName": "이름없는카드",
+        "unidentifiedDescriptionName": [
+            "DEF + 20",
+            "ลด Damage ทางกายภาพ/เวทมนตร์ที่ได้รับจากศัตรูขนาดกลาง และมอนสเตอร์ขนาดใหญ่ 25% ",
+            "เพิ่ม Damage ทางกายภาพ/เวทมนตร์ที่ได้รับจากศัตรูขนาดเล็ก 5%",
+            "ประเภท : Card",
+            "ใช้กับ : Shield",
+            "น้ำหนัก : 1"
+        ],
+        "identifiedDisplayName": "Frozen Gargoyle Card",
+        "identifiedResourceName": "이름없는카드",
+        "identifiedDescriptionName": [
+            "DEF + 20",
+            "ลด Damage ทางกายภาพ/เวทมนตร์ที่ได้รับจากศัตรูขนาดกลาง และมอนสเตอร์ขนาดใหญ่ 25% ",
+            "เพิ่ม Damage ทางกายภาพ/เวทมนตร์ที่ได้รับจากศัตรูขนาดเล็ก 5%",
+            "ประเภท : Card",
+            "ใช้กับ : Shield",
+            "น้ำหนัก : 1"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "27357": {
+        "unidentifiedDisplayName": "Corrupted Sting Card",
+        "unidentifiedResourceName": "이름없는카드",
+        "unidentifiedDescriptionName": [
+            "DEF + 100",
+            "ทุก ๆ การอัพเกรด 3 ขั้น, DEF + 25",
+            "เมื่อใช้ร่วมกับ Sting Card, DEF + 150, MDEF + 20",
+            "ประเภท : Card",
+            "ใช้กับ : Armor",
+            "น้ำหนัก : 1"
+        ],
+        "identifiedDisplayName": "Corrupted Sting Card",
+        "identifiedResourceName": "이름없는카드",
+        "identifiedDescriptionName": [
+            "DEF + 100",
+            "ทุก ๆ การอัพเกรด 3 ขั้น, DEF + 25",
+            "เมื่อใช้ร่วมกับ Sting Card, DEF + 150, MDEF + 20",
+            "ประเภท : Card",
+            "ใช้กับ : Armor",
+            "น้ำหนัก : 1"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "27358": {
+        "unidentifiedDisplayName": "Prison Breaker Card",
+        "unidentifiedResourceName": "이름없는카드",
+        "unidentifiedDescriptionName": [
+            "เพิ่มความต้านทานต่อการโจมตีธาตุ Poison, Earth, Shadow, Undead 30%",
+            "ลดความต้านทานต่อการโจมตีธาตุ Holy, Ghost, Fire 100%",
+            "ประเภท : Card",
+            "ใช้กับ : Garment",
+            "น้ำหนัก : 1"
+        ],
+        "identifiedDisplayName": "Prison Breaker Card",
+        "identifiedResourceName": "이름없는카드",
+        "identifiedDescriptionName": [
+            "เพิ่มความต้านทานต่อการโจมตีธาตุ Poison, Earth, Shadow, Undead 30%",
+            "ลดความต้านทานต่อการโจมตีธาตุ Holy, Ghost, Fire 100%",
+            "ประเภท : Card",
+            "ใช้กับ : Garment",
+            "น้ำหนัก : 1"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "27359": {
+        "unidentifiedDisplayName": "Ice Ghost Card",
+        "unidentifiedResourceName": "이름없는카드",
+        "unidentifiedDescriptionName": [
+            "เพิ่ม Damage ทางเวทมนตร์แก่ศัตรูธาตุ Water 15%",
+            "เมื่อใช้ร่วมกับ Curupira Card,",
+            "เพิ่ม Damage ทางเวทมนตร์แก่ศัตรูธาตุ Water 8% เพิ่มเติม",
+            "ประเภท : Card",
+            "ใช้กับ : Weapon",
+            "น้ำหนัก : 1"
+        ],
+        "identifiedDisplayName": "Ice Ghost Card",
+        "identifiedResourceName": "이름없는카드",
+        "identifiedDescriptionName": [
+            "เพิ่ม Damage ทางเวทมนตร์แก่ศัตรูธาตุ Water 15%",
+            "เมื่อใช้ร่วมกับ Curupira Card,",
+            "เพิ่ม Damage ทางเวทมนตร์แก่ศัตรูธาตุ Water 8% เพิ่มเติม",
+            "ประเภท : Card",
+            "ใช้กับ : Weapon",
+            "น้ำหนัก : 1"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "27360": {
+        "unidentifiedDisplayName": "Flame Ghost Card",
+        "unidentifiedResourceName": "이름없는카드",
+        "unidentifiedDescriptionName": [
+            "เพิ่ม Damage ทางเวทมนตร์แก่ศัตรูธาตุ Fire 15%",
+            "เมื่อใช้ร่วมกับ Fruit Pom Spider Card,",
+            "เพิ่ม Damage ทางเวทมนตร์แก่ศัตรูธาตุ Fire 8% เพิ่มเติม",
+            "ประเภท : Card",
+            "ใช้กับ : Weapon",
+            "น้ำหนัก : 1"
+        ],
+        "identifiedDisplayName": "Flame Ghost Card",
+        "identifiedResourceName": "이름없는카드",
+        "identifiedDescriptionName": [
+            "เพิ่ม Damage ทางเวทมนตร์แก่ศัตรูธาตุ Fire 15%",
+            "เมื่อใช้ร่วมกับ Fruit Pom Spider Card,",
+            "เพิ่ม Damage ทางเวทมนตร์แก่ศัตรูธาตุ Fire 8% เพิ่มเติม",
+            "ประเภท : Card",
+            "ใช้กับ : Weapon",
+            "น้ำหนัก : 1"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "27361": {
+        "unidentifiedDisplayName": "Corrupted Wanderer Card",
+        "unidentifiedResourceName": "이름없는카드",
+        "unidentifiedDescriptionName": [
+            "เพิ่ม Damage ทางกายภาพแก่ศัตรูขนาดกลาง และมอนสเตอร์ขนาดใหญ่ 30%",
+            "ประเภท : Card",
+            "ใช้กับ : Weapon",
+            "น้ำหนัก : 1"
+        ],
+        "identifiedDisplayName": "Corrupted Wanderer Card",
+        "identifiedResourceName": "이름없는카드",
+        "identifiedDescriptionName": [
+            "เพิ่ม Damage ทางกายภาพแก่ศัตรูขนาดกลาง และมอนสเตอร์ขนาดใหญ่ 30%",
+            "ประเภท : Card",
+            "ใช้กับ : Weapon",
+            "น้ำหนัก : 1"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "27362": {
+        "unidentifiedDisplayName": "Corrupted Queen Spider Card",
+        "unidentifiedResourceName": "이름없는카드",
+        "unidentifiedDescriptionName": [
+            "เพิ่ม Damage ทางเวทมนตร์ธาตุ Water, Earth 100%",
+            "ลดความต้านทานต่อการโจมตีทุกธาตุ 30%",
+            "ประเภท : Card",
+            "ใช้กับ : Garment",
+            "น้ำหนัก : 1"
+        ],
+        "identifiedDisplayName": "Corrupted Queen Spider Card",
+        "identifiedResourceName": "이름없는카드",
+        "identifiedDescriptionName": [
+            "เพิ่ม Damage ทางเวทมนตร์ธาตุ Water, Earth 100%",
+            "ลดความต้านทานต่อการโจมตีทุกธาตุ 30%",
+            "ประเภท : Card",
+            "ใช้กับ : Garment",
+            "น้ำหนัก : 1"
+        ],
+        "slotCount": 0,
+        "ClassNum": 104,
+        "costume": false
+    },
+    "27363": {
+        "unidentifiedDisplayName": "Corrupted Dark Lord Card",
+        "unidentifiedResourceName": "이름없는카드",
+        "unidentifiedDescriptionName": [
+            "ASPD + 1",
+            "เมื่อใช้ร่วมกับ Dark Lord Card, เพิ่ม Damage ทางเวทมนตร์ธาตุ Fire และเพิ่ม Damage ของสกิล Meteor Storm 15%",
+            "ประเภท : Card",
+            "ใช้กับ : Accessory (Right)",
+            "น้ำหนัก : 1"
+        ],
+        "identifiedDisplayName": "Corrupted Dark Lord Card",
+        "identifiedResourceName": "이름없는카드",
+        "identifiedDescriptionName": [
+            "ASPD + 1",
+            "เมื่อใช้ร่วมกับ Dark Lord Card, เพิ่ม Damage ทางเวทมนตร์ธาตุ Fire และเพิ่ม Damage ของสกิล Meteor Storm 15%",
+            "ประเภท : Card",
+            "ใช้กับ : Accessory (Right)",
+            "น้ำหนัก : 1"
+        ],
+        "slotCount": 0,
+        "ClassNum": 104,
+        "costume": false
+    },
+    "23815": {
+        "unidentifiedDisplayName": "Magma Essence",
+        "unidentifiedResourceName": "화염의빛",
+        "unidentifiedDescriptionName": [
+            "สสารลึกลับที่ซ่อนความร้อนอันรุนแรงของ Lava Dungeon เอาไว้",
+            "มอบพลังงานลึกลับให้กับไอเท็มด้านล่างได้",
+            "^ffffff_",
+            "^000088[ไอเท็มดังต่อไปนี้]",
+            "Lava Leather Armor",
+            "Lava Leather Suits",
+            "Lava Leather Robe",
+            "^ff0000สำหรับอุปกรณ์ที่ได้รับ Random Option 2 อย่างเท่านั้น",
+            "^ffffff_",
+            "น้ำหนัก : 5"
+        ],
+        "identifiedDisplayName": "Magma Essence",
+        "identifiedResourceName": "화염의빛",
+        "identifiedDescriptionName": [
+            "สสารลึกลับที่ซ่อนความร้อนอันรุนแรงของ Lava Dungeon เอาไว้",
+            "มอบพลังงานลึกลับให้กับไอเท็มด้านล่างได้",
+            "^ffffff_",
+            "^000088[ไอเท็มดังต่อไปนี้]",
+            "Lava Leather Armor",
+            "Lava Leather Suits",
+            "Lava Leather Robe",
+            "^ff0000สำหรับอุปกรณ์ที่ได้รับ Random Option 2 อย่างเท่านั้น",
+            "^ffffff_",
+            "",
+            "",
             "น้ำหนัก : 5"
         ],
         "slotCount": 0,
         "ClassNum": 0,
         "costume": false
     },
-    "107925": {
-        "unidentifiedDisplayName": "[Event] RCC World Prontera Scroll",
-        "unidentifiedResourceName": "E_RCC_WP_Scroll_ROC",
-        "unidentifiedDescriptionName": [
-            "Scroll พิเศษที่มอบให้แก่ผู้เข้าร่วมการแข่งขัน RCC World Prontera เพื่อเป็นสัญลักษณ์แห่งเกียรติยศและความสำเร็จ",
-            "ภายในบรรจุของรางวัลล้ำค่ามากมาย รวมถึงไอเทมหายากและของสะสมสุดพิเศษที่หาได้เฉพาะจากกิจกรรมนี้เท่านั้น",
-            "^ff0000หากเปิดใช้งานหลังวันที่ 30 กันยายน 2569 หลังปิดปรับปรุงประจำสัปดาห์ จะไม่ได้รับ [Event] RCC Coin "
-        ],
-        "identifiedDisplayName": "[Event] RCC World Prontera Scroll",
-        "identifiedResourceName": "E_RCC_WP_Scroll_ROC",
-        "identifiedDescriptionName": [
-            "^ff0000ไอเท็มชิ้นนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
-            "Scroll พิเศษที่มอบให้แก่ผู้เข้าร่วมการแข่งขัน RCC World Prontera เพื่อเป็นสัญลักษณ์แห่งเกียรติยศและความสำเร็จ",
-            "ภายในบรรจุของรางวัลล้ำค่ามากมาย รวมถึงไอเทมหายากและของสะสมสุดพิเศษที่หาได้เฉพาะจากกิจกรรมนี้เท่านั้น",
-            "^ff0000หากเปิดใช้งานหลังวันที่ 30 กันยายน 2569 หลังปิดปรับปรุงประจำสัปดาห์ จะไม่ได้รับ [Event] RCC Coin ",
-            "น้ำหนัก : 1"
-        ],
-        "slotCount": 0,
-        "ClassNum": 0,
-        "costume": false
-    },
-    "640012": {
-        "unidentifiedDisplayName": "Staff",
+    "26138": {
+        "unidentifiedDisplayName": "Rod",
         "unidentifiedResourceName": "롯드",
         "unidentifiedDescriptionName": [
             "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "Awakened Blue Crystal Staff [2]",
-        "identifiedResourceName": "Up_Blue_Crystal_Staff",
+        "identifiedDisplayName": "Hellfire Staff",
+        "identifiedResourceName": "Wand_Of_Flame",
         "identifiedDescriptionName": [
-            "ไม้คทาที่เปี่ยมไปด้วยพลังแห่งเยือกแข็ง ถูกใช้โดยจอมเวทย์ในอดีตกาล",
-            "MATK + 235, MATK + 5%",
-            "ทุก ๆ การอัพเกรด 2 ขั้น MATK + 20",
-            "ทุก ๆ การอัพเกรด 3 ขั้น เพิ่ม Damage สกิล Gravitational Field 30%",
-            "เมื่ออัพเกรดถึงขั้น 7, ลดระยะเวลาร่ายแบบแปรผัน 10%, เพิ่ม Damage ทางเวทมนตร์ต่อศัตรูทุกธาตุ 15%",
-            "เมื่ออัพเกรดถึงขั้น 9, ลด Cooldown สกิล Gravitational Field 0.5 วินาที, ลด Delay หลังใช้สกิล 5%, เพิ่ม Damage สกิล Napalm Vulcan 30%",
-            "เมื่ออัพเกรดถึงขั้น 11, เพิ่ม Damage ทางเวทมนตร์ต่อศัตรูทุกขนาด 15%, เพิ่ม Damage สกิล Storm Gust 50%",
-            "เมื่ออัพเกรดถึงขั้น 12, ไม่สนต่อพลังป้องกันทางเวทย์ของศัตรูทุกประเภท 50% เพิ่ม Damage ทางเวทมนตร์ต่อศัตรูประเภทบอส 15%",
-            "",
-            "ประเภท: Two-Handed Staff พลังโจมตี: 100",
-            "น้ำหนัก: 80",
-            "เลเวลอาวุธ: 4",
-            "เลเวลที่ต้องการ: 98",
-            "อาชีพที่ใส่ได้: High Wizard"
-        ],
-        "slotCount": 2,
-        "ClassNum": 23,
-        "costume": false
-    },
-    "107951": {
-        "unidentifiedDisplayName": "Dark Satan Scroll",
-        "unidentifiedResourceName": "Randgris_Egg",
-        "unidentifiedDescriptionName": [
-            "ม้วนคัมภีร์ต้องคำสาปที่ถูกกล่าวขานว่าสืบทอดพลังจากจอมปีศาจแห่งความมืด",
-            "ผู้ที่เปิดผนึกจะปลดปล่อยพลังแห่งความมืดจะมอบสิ่งใดให้แก่เจ้า ไม่มีผู้ใดล่วงรู้ได้..."
-        ],
-        "identifiedDisplayName": "Dark Satan Scroll",
-        "identifiedResourceName": "Randgris_Egg",
-        "identifiedDescriptionName": [
-            "ม้วนคัมภีร์ต้องคำสาปที่ถูกกล่าวขานว่าสืบทอดพลังจากจอมปีศาจแห่งความมืด",
-            "ผู้ที่เปิดผนึกจะปลดปล่อยพลังแห่งความมืดจะมอบสิ่งใดให้แก่เจ้า ไม่มีผู้ใดล่วงรู้ได้...",
-            "^ff0000หากเปิดใช้งานหลังวันที่ 2 กันยายน 2569 หลังปิดปรับปรุงประจำสัปดาห์จะไม่ได้รับ Dark Satan Coin ",
-            "น้ำหนัก : 1"
-        ],
-        "slotCount": 0,
-        "ClassNum": 0,
-        "costume": false
-    },
-    "107952": {
-        "unidentifiedDisplayName": "[NFS] Freedom Stick Modification Cube",
-        "unidentifiedResourceName": "RemodelCube",
-        "unidentifiedDescriptionName": [
-            "ลูกบาศก์ที่ช่วยอัพเกรด [NFS] Freedom Stick ให้กลายเป็น [NFS] Awakened Freedom Stick",
-            "คำเตือน! - เมื่ออัพเกรดแล้ว การ์ดและ Random Option ที่ใช้อยู่จะสูญหาย"
-        ],
-        "identifiedDisplayName": "[NFS] Freedom Stick Modification Cube",
-        "identifiedResourceName": "RemodelCube",
-        "identifiedDescriptionName": [
-            "^ff0000ไอเท็มนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
-            "ลูกบาศก์ที่ช่วยอัพเกรด [NFS] Freedom Stick ให้กลายเป็น [NFS] Awakened Freedom Stick",
-            "ใช้วัตถุดิบเป็น [NFS] Freedom Stick ตั้งแต่ +9 ขึ้นไป",
-            "และจะได้รับ [NFS] Awakened Freedom Stick +7 ออกมา",
-            "คำเตือน! - เมื่ออัพเกรดแล้ว การ์ดและ Random Option ที่ใช้อยู่จะสูญหาย",
-            "<ITEM>ข้อมูลไอเทมใหม่<INFO>550231</INFO></ITEM>",
-            "น้ำหนัก : 1"
-        ],
-        "slotCount": 0,
-        "ClassNum": 0,
-        "costume": false
-    },
-    "107953": {
-        "unidentifiedDisplayName": "[NFS] Chilling Cane Modification Cube",
-        "unidentifiedResourceName": "RemodelCube",
-        "unidentifiedDescriptionName": [
-            "ลูกบาศก์ที่ช่วยอัพเกรด [NFS] Chilling Cane ให้กลายเป็น [NFS] Awakened Chilling Cane",
-            "คำเตือน! - เมื่ออัพเกรดแล้ว การ์ดและ Random Option ที่ใช้อยู่จะสูญหาย"
-        ],
-        "identifiedDisplayName": "[NFS] Chilling Cane Modification Cube",
-        "identifiedResourceName": "RemodelCube",
-        "identifiedDescriptionName": [
-            "^ff0000ไอเท็มนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
-            "ลูกบาศก์ที่ช่วยอัพเกรด [NFS] Chilling Cane ให้กลายเป็น [NFS] Awakened Chilling Cane",
-            "ใช้วัตถุดิบเป็น [NFS] Chilling Cane ตั้งแต่ +9 ขึ้นไป",
-            "และจะได้รับ [NFS] Awakened Chilling Cane +7 ออกมา",
-            "คำเตือน! - เมื่ออัพเกรดแล้ว การ์ดและ Random Option ที่ใช้อยู่จะสูญหาย",
-            "<ITEM>ข้อมูลไอเทมใหม่<INFO>550232</INFO></ITEM>",
-            "น้ำหนัก : 1"
-        ],
-        "slotCount": 0,
-        "ClassNum": 0,
-        "costume": false
-    },
-    "107954": {
-        "unidentifiedDisplayName": "[NFS] Blue Crystal Staff Modification Cube",
-        "unidentifiedResourceName": "RemodelCube",
-        "unidentifiedDescriptionName": [
-            "ลูกบาศก์ที่ช่วยอัพเกรด [NFS] Blue Crystal Staff ให้กลายเป็น [NFS] Awakened Blue Crystal Staff",
-            "คำเตือน! - เมื่ออัพเกรดแล้ว การ์ดและ Random Option ที่ใช้อยู่จะสูญหาย"
-        ],
-        "identifiedDisplayName": "[NFS] Blue Crystal Staff Modification Cube",
-        "identifiedResourceName": "RemodelCube",
-        "identifiedDescriptionName": [
-            "^ff0000ไอเท็มนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
-            "ลูกบาศก์ที่ช่วยอัพเกรด [NFS] Blue Crystal Staff ให้กลายเป็น [NFS] Awakened Blue Crystal Staff",
-            "ใช้วัตถุดิบเป็น [NFS] Blue Crystal Staff ตั้งแต่ +9 ขึ้นไป",
-            "และจะได้รับ [NFS] Awakened Blue Crystal Staff +7 ออกมา",
-            "คำเตือน! - เมื่ออัพเกรดแล้ว การ์ดและ Random Option ที่ใช้อยู่จะสูญหาย",
-            "<ITEM>ข้อมูลไอเทมใหม่<INFO>550233</INFO></ITEM>",
-            "น้ำหนัก : 1"
-        ],
-        "slotCount": 0,
-        "ClassNum": 0,
-        "costume": false
-    },
-    "550013": {
-        "unidentifiedDisplayName": "Staff",
-        "unidentifiedResourceName": "롯드",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "Awakened Chilling Cane [2]",
-        "identifiedResourceName": "Up_Freezing_Rod",
-        "identifiedDescriptionName": [
-            "ไม้คทาสีน้ำเงินที่เล่ากันว่าผู้กล้าในอดีตเคยใช้",
-            "พลังเวทย์ที่ซ่อนอยู่",
-            "",
-            "MATK + 195, MATK + 5%",
-            "ทุก ๆ การอัพเกรด 2 ขั้น MATK+ 20",
-            "ทุก ๆ การอัพเกรด 3 ขั้น เพิ่ม Damage สกิล Heavens Drive 30%",
-            "เมื่ออัพเกรดถึงขั้น 7 เพิ่ม Damage ทางเวทมนตร์ต่อศัตรูทุกธาตุ 15%, เพิ่ม Damage สกิล Heavens Drive 15%",
-            "เมื่ออัพเกรดถึงขั้น 9, เพิ่ม Damage สกิล Heavens Driver ขึ้นอีก 30%, ลดระยะเวลาร่ายแบบแปรผัน 15%",
-            "เมื่ออัพเกรดถึงขั้น 11 เพิ่ม Damage ทางเวทมนตร์ธาตุ  Earth,Fire 15%, ลด Cooldown สกิล Heavens Drive 0.5 วินาที",
-            "เมื่ออัพเกรดถึงขั้น 12 ไม่สนต่อพลังป้องกันทางเวทย์ของศัตรูทุกประเภท 50% เพิ่ม Damage ทางเวทมนตร์ต่อศัตรูประเภทบอส 15%",
-            "",
-            "ประเภท: One-Handed Staff พลังโจมตี: 40",
-            "น้ำหนัก: 50",
-            "เลเวลอาวุธ: 4",
-            "เลเวลที่ต้องการ: 98",
-            "อาชีพที่ใส่ได้: Professor"
-        ],
-        "slotCount": 2,
-        "ClassNum": 69,
-        "costume": false
-    },
-    "550081": {
-        "unidentifiedDisplayName": "Staff",
-        "unidentifiedResourceName": "롯드",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "Awakened Freedom Stick [2]",
-        "identifiedResourceName": "Up_Freedom_Stick",
-        "identifiedDescriptionName": [
-            "คทาเวทย์ที่ไม่ผูกมัดกับวิถีใดใด วีรบุรษผู้หนึ่งเคยใช้ในอดีต",
-            "MATK + 210.",
-            "ทุก ๆ การอัพเกรด 2 ขั้น MATK + 20",
-            "ทุก ๆ การอัพเกรด 3 ขั้น เพิ่ม Damage สกิล Heavens Drive 30%",
-            "เมื่ออัพเกรดถึงขั้น 7 เพิ่ม Damage ทางเวทมนตร์ต่อศัตรูทุกธาตุ 15%, สามารถใช้สกิล Heavens Drive Lv.10 ได้",
-            "เมื่ออัพเกรดถึงขั้น 9 เพิ่ม Damage สกิล Heavens Drive 20%, ลด Variable Cast Time 15%",
-            "เมื่ออัพเกรดถึงขั้น 11 เพิ่ม Damage ทางเวทมนตร์ธาตุ Earth, Neutral 15%, ลดระยะเวลาร่ายแบบแปรผันลงอีก 5%",
-            "เมื่ออัพเกรดถึงขั้น 12 เพิ่ม Damage ทางเวทมนตร์ต่อศัตรูประเภทบอส 15%",
-            "",
-            "ประเภท : One-Handed Staff พลังโจมตี : 70",
-            "น้ำหนัก : 100",
-            "เลเวลอาวุธ : 4",
-            "เลเวลที่ต้องการ : 100",
-            "อาชีพที่ใส่ได้ : Super Novice"
-        ],
-        "slotCount": 2,
-        "ClassNum": 69,
-        "costume": false
-    },
-    "550231": {
-        "unidentifiedDisplayName": "Staff",
-        "unidentifiedResourceName": "롯드",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "[NFS] Awakened Freedom Stick",
-        "identifiedResourceName": "Up_Freedom_Stick",
-        "identifiedDescriptionName": [
-            "^ff0000ไอเท็มนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
-            "คทาเวทที่ไม่ผูกมัดกับวิถีใดใด วีรบุรษผู้หนึ่งเคยใช้ในอดีต",
-            "MATK + 210",
-            "ทุก ๆ การอัพเกรด 2 ขั้น MATK + 20",
-            "ทุก ๆ การอัพเกรด 3 ขั้น เพิ่ม Damage สกิล Heavens Drive 30%",
-            "เมื่ออัพเกรดถึงขั้น 7 เพิ่ม Damage ทางเวทมนตร์ต่อศัตรูทุกธาตุ 15%, สามารถใช้สกิล Heavens Drive Lv.10 ได้",
-            "เมื่ออัพเกรดถึงขั้น 9 เพิ่ม Damage สกิล Heavens Drive 20%, ลด Variable Cast Time 15%",
-            "เมื่ออัพเกรดถึงขั้น 11 เพิ่ม Damage ทางเวทมนตร์ธาตุ Earth, Neutral 15%, ลดระยะเวลาร่ายแบบแปรผันลงอีก 5%",
-            "เมื่ออัพเกรดถึงขั้น 12 เพิ่ม Damage ทางเวทมนตร์ต่อศัตรูประเภทบอส 15%",
-            "",
-            "ประเภท : One-Handed Staff พลังโจมตี : 70",
-            "น้ำหนัก : 100",
-            "เลเวลอาวุธ : 4",
-            "เลเวลที่ต้องการ : 100",
-            "อาชีพที่ใส่ได้ : Novice"
-        ],
-        "slotCount": 2,
-        "ClassNum": 69,
-        "costume": false
-    },
-    "550232": {
-        "unidentifiedDisplayName": "Staff",
-        "unidentifiedResourceName": "롯드",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "[NFS] Awakened Chilling Cane",
-        "identifiedResourceName": "Up_Freezing_Rod",
-        "identifiedDescriptionName": [
-            "^ff0000ไอเท็มนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
-            "ไม้คทาสีน้ำเงินที่เล่ากันว่าผู้กล้าในอดีตเคยใช้พลังเวทย์ที่ซ่อนอยู่",
-            "",
-            "MATK + 195, MATK + 5%.",
-            "ทุก ๆ การอัพเกรด 2 ขั้น MATK+ 20.",
-            "ทุก ๆ การอัพเกรด 3 ขั้น เพิ่ม Damage สกิล Heavens Drive 30%",
-            "เมื่ออัพเกรดถึงขั้น 7 เพิ่ม Damage ทางเวทมนตร์ต่อศัตรูทุกธาตุ 15%, เพิ่ม Damage สกิล Heavens Drive 15%",
-            "เมื่ออัพเกรดถึงขั้น 9, เพิ่ม Damage สกิล Heavens Driver ขึ้นอีก 30%, ลดระยะเวลาร่ายแบบแปรผัน 15%",
-            "เมื่ออัพเกรดถึงขั้น 11 เพิ่ม Damage ทางเวทมนตร์ธาตุ  Earth,Fire 15%, ลด Cooldown สกิล Heavens Drive 0.5 วินาที",
-            "เมื่ออัพเกรดถึงขั้น 12 ไม่สนต่อพลังป้องกันทางเวทย์ของศัตรูทุกประเภท 50% เพิ่ม Damage ทางเวทมนตร์ต่อศัตรูประเภทบอส 15%",
-            "",
-            "ประเภท : One-Handed Staff พลังโจมตี : 40",
-            "น้ำหนัก : 50",
-            "เลเวลอาวุธ : 4",
-            "เลเวลที่ต้องการ : 98",
-            "อาชีพที่ใส่ได้ : Professor"
-        ],
-        "slotCount": 2,
-        "ClassNum": 69,
-        "costume": false
-    },
-    "550233": {
-        "unidentifiedDisplayName": "Staff",
-        "unidentifiedResourceName": "롯드",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "[NFS] Awakened Blue Crystal Staff",
-        "identifiedResourceName": "Up_Blue_Crystal_Staff",
-        "identifiedDescriptionName": [
-            "^ff0000ไอเท็มนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
-            "ไม้คทาที่เปี่ยมไปด้วยพลังแห่งเยือกแข็ง ถูกใช้โดยจอมเวทย์ในอดีตกาล",
-            "MATK + 235, MATK + 5%.",
-            "ทุก ๆ การอัพเกรด 2 ขั้น MATK + 20.",
-            "ทุก ๆ การอัพเกรด 3 ขั้น เพิ่ม Damage สกิล Gravitational Field 30%",
-            "เมื่ออัพเกรดถึงขั้น 7, ลดระยะเวลาร่ายแบบแปรผัน 10%, เพิ่ม Damage ทางเวทมนตร์ต่อศัตรูทุกธาตุ 15%",
-            "เมื่ออัพเกรดถึงขั้น 9, ลด Cooldown สกิล Gravitational Field 0.5 วินาที, ลด Delay หลังใช้สกิล 5%, เพิ่ม Damage สกิล Napalm Vulcan 30%",
-            "เมื่ออัพเกรดถึงขั้น 11, เพิ่ม Damage ทางเวทมนตร์ต่อศัตรูทุกขนาด 15%, เพิ่ม Damage สกิล Storm Gust 50%",
-            "เมื่ออัพเกรดถึงขั้น 12, ไม่สนต่อพลังป้องกันทางเวทย์ของศัตรูทุกประเภท 50% เพิ่ม Damage ทางเวทมนตร์ต่อศัตรูประเภทบอส 15%",
-            "",
-            "ประเภท : Two-Handed Staff พลังโจมตี : 100",
+            "ไม้คทาที่เคยใช้โดย Flame Ghost",
+            "มีพลังเวทย์ธาตุไฟแฝงอยู่ภายใน อาจจะปะทุออกมาได้ จงระวังเวลาใช้ให้ดี",
+            "ไม่สามารถถูกทำลายได้",
+            "INT + 5, MATK + 180",
+            "ทุก ๆ การอัพเกรด 2 ขั้น, MATK + 15",
+            "เมื่ออัพเกรดถึงขั้น 7, เพิ่ม Damage ทางเวทมนตร์ธาตุ Fire, Earth 5%",
+            "เมื่ออัพเกรดถึงขั้น 9, เพิ่ม Damage ทางเวทมนตร์ธาตุ Fire, Earth 10% เพิ่มเติม",
+            "^ffffff_",
+            "ประเภท : One-Handed Rod พลังโจมตี : 110",
             "น้ำหนัก : 80",
-            "เลเวลอาวุธ : 4",
-            "เลเวลที่ต้องการ : 98",
-            "อาชีพที่ใส่ได้ : High Wizard"
+            "เลเวลของอาวุธ : 4",
+            "เลเวลที่ต้องการ : 99",
+            "อาชีพที่ใส่ได้ : Mage Cls, Acolyte Cls, Soul Linker Cls"
         ],
         "slotCount": 2,
-        "ClassNum": 69,
+        "ClassNum": 10,
         "costume": false
     },
-    "550234": {
-        "unidentifiedDisplayName": "Staff",
+    "26139": {
+        "unidentifiedDisplayName": "Rod",
         "unidentifiedResourceName": "롯드",
         "unidentifiedDescriptionName": [
             "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "[NFS] Blue Crystal Staff",
-        "identifiedResourceName": "미라쥬스태프",
+        "identifiedDisplayName": "Icicle Staff",
+        "identifiedResourceName": "Wand_Of_Ice",
         "identifiedDescriptionName": [
-            "^ff0000ไอเท็มนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
-            "ไม้คทาที่เปี่ยมไปด้วยพลังแห่งเยือกแข็ง ถูกใช้โดยจอมเวทย์ในอดีตกาล",
-            "ดูกลมกลืนเข้ากับ Ancient Hero Boots",
-            "ไม่สามารถทำลายได้",
-            "MATK + 200",
-            "ทุก ๆ การอัพเกรด 2 ขั้น MATK +10",
-            "ทุก ๆ การอัพเกรด 3 ขั้น เพิ่ม Damage ทางเวทมนตร์ธาตุ Water 10%",
-            "เมื่ออัพเกรดถึงขั้น 9 เพิ่ม Damage สกิล Storm Gust 20%",
-            "เมื่ออัพเกรดถึงขั้น 11 ไม่สนต่อพลังป้องกันทางเวทย์และทางกายภาพของศัตรูทั่วไป 50%",
-            "เมื่อสวมใส่ร่วมกับ Ancient Hero Boots เมื่อโจมตีทางเวทมนตร์ มีโอกาสที่ INT +20, MATK +15% เป็นเวลา 7 วินาที",
-            "",
-            "ประเภท : Two-Handed Staff พลังโจมตี : 100",
+            "ไม้คทาที่เคยใช้โดย Ice Ghost",
+            "มีพลังเวทย์ธาตุน้ำแฝงอยู่ภายใน อาจจะระเบิดออกมาได้ จงระวังเวลาใช้ให้ดี",
+            "ไม่สามารถถูกทำลายได้",
+            "INT + 5, MATK + 180",
+            "ทุก ๆ การอัพเกรด 2 ขั้น, MATK + 15",
+            "เมื่ออัพเกรดถึงขั้น 7, เพิ่ม Damage ทางเวทมนตร์ธาตุ Water, Holy 5%",
+            "เมื่ออัพเกรดถึงขั้น 9, เพิ่ม Damage ทางเวทมนตร์ธาตุ Water, Holy 10% เพิ่มเติม",
+            "^ffffff_",
+            "ประเภท : One-Handed Rod พลังโจมตี : 110",
             "น้ำหนัก : 80",
-            "เลเวลอาวุธ : 4",
-            "เลเวลที่ต้องการ : 70",
-            "อาชีพที่ใส่ได้ : High Wizard"
+            "เลเวลของอาวุธ : 4",
+            "เลเวลที่ต้องการ : 99",
+            "อาชีพที่ใส่ได้ : Mage Cls, Acolyte Cls, Soul Linker Cls"
         ],
         "slotCount": 2,
-        "ClassNum": 69,
+        "ClassNum": 10,
         "costume": false
     },
-    "100379": {
-        "unidentifiedDisplayName": "Chilling Cane Modification Cube",
-        "unidentifiedResourceName": "RemodelCube",
+    "28619": {
+        "unidentifiedDisplayName": "Book",
+        "unidentifiedResourceName": "북",
         "unidentifiedDescriptionName": [
-            "ลูกบาศก์ที่ช่วยอัพเกรด Chilling Cane ให้กลายเป็น Awakened Chilling Cane",
-            "คำเตือน! - เมื่ออัพเกรดแล้ว การ์ดและ Random Option ที่ใช้อยู่จะสูญหาย"
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "Chilling Cane Modification Cube",
-        "identifiedResourceName": "RemodelCube",
+        "identifiedDisplayName": "Prisoner's Diary",
+        "identifiedResourceName": "Prisoner_Dairy",
         "identifiedDescriptionName": [
-            "ลูกบาศก์ที่ช่วยอัพเกรด Chilling Cane ให้กลายเป็น Awakened Chilling Cane",
-            "ใช้วัตถุดิบเป็น Chilling Cane ตั้งแต่ +9 ขึ้นไป",
-            "และจะได้รับ Awakened Chilling Cane +7 ออกมา",
-            "คำเตือน! - เมื่ออัพเกรดแล้ว การ์ดและ Random Option ที่ใช้อยู่จะสูญหาย",
-            "<ITEM>ข้อมูลไอเทมใหม่<INFO>550013</INFO></ITEM>",
+            "ไดอารี่ที่เขียนโดยนักโทษที่ถูกคุมขังอย่างไม่เป็นธรรม มีร่องรอยการเขียนแบบลับ ๆ เพื่อให้ลับตาผู้คุม ",
+            "MHP + 5%, MSP + 5%",
+            "ทุก ๆ การอัพเกรด 2 ขั้น, ATK + 20",
+            "เมื่ออัพเกรดถึงขั้น 7, เพิ่ม Damage ทางกายภาพ/เวทมนตร์แก่มอนสเตอร์ประเภท Undead, Demon 10%",
+            "เมื่ออัพเกรดถึงขั้น 9, เพิ่ม Damage ทางกายภาพ/เวทมนตร์แก่มอนสเตอร์ประเภท Undead, Demon 15% เพิ่มเติม",
+            "เมื่ออัพเกรดถึงขั้น 11, เพิ่ม Damage ทางกายภาพ/เวทมนตร์แก่ศัตรูธาตุ Undead, Shadow 15%",
+            "^ffffff_",
+            "ประเภท : Book พลังโจมตี : 210",
+            "น้ำหนัก : 80",
+            "เลเวลของอาวุธ : 4",
+            "เลเวลที่ต้องการ : 99",
+            "อาชีพที่ใส่ได้ : Sage Cls, Priest Cls,  Star Gladiator Cls"
+        ],
+        "slotCount": 2,
+        "ClassNum": 15,
+        "costume": false
+    },
+    "490239": {
+        "unidentifiedDisplayName": "Record of Merchant",
+        "unidentifiedResourceName": "연구원기록표",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Record of Merchant",
+        "identifiedResourceName": "연구원기록표",
+        "identifiedDescriptionName": [
+            "บันทึกการสำรวจของกลุ่มพ่อค้าที่เข้าไปสำรวจยังพื้นที่ Tomb of Honor",
+            "เป็นรายการบันทึกที่ดูเหมือนว่าเนื้อหาจะขาดหายไปบางส่วน",
+            "",
+            "ATK + 15 , MATK+15 , ลด Delay หลังใช้สกิล 10% , ASPD + 10%",
+            "ทุกๆการอัพเกรด 2 ขั้น เพิ่ม Damage ทางกายภาพระยะใกล้และระยะไกล 1%",
+            "เมื่ออัพเกรดถึงขั้น 5 HIT+50 , MaxHP + 5%, MaxSP + 5%",
+            "เมื่ออัพเกรดถึงขึ้น 7 เพิ่ม Damage ที่ทำต่อมอนสเตอร์บอส 5%",
+            "เมื่ออัพเกรดถึงขึ้น 9 เพิ่ม Damage ที่ทำต่อมอนสเตอร์ขนาดเล็ก,กลาง, ใหญ่ 10%",
+            "",
+            "เมื่อสวมใส่โดย Awakened Creator,",
+            "All Status+5 , MaxHP +10 % , ลดระยะเวลาร่ายแบบแปรผัน 10%",
+            "",
+            "เมื่อสวมใส่โดย Awakened Whitesmith,",
+            "HIT+20, ASPD + 1 , เพิ่ม Damage ทางกายภาพที่ทำต่อมอนสเตอร์ทุกขนาด 5%",
+            "",
+            "เมื่อสวมใส่ร่วมกับ Ancient Gold Deco [1],",
+            "Perfect Hit + 8%",
+            "เพิ่ม Damage ทางกายภาพต่อมอนสเตอร์ทุกเผ่า +8%",
+            "",
+            "ประเภท : Accessory(Right) พลังป้องกัน : 0",
+            "น้ำหนัก : 10",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพที่ใส่ได้ : Awakened Merchant Cls"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "490400": {
+        "unidentifiedDisplayName": "Record of Archer",
+        "unidentifiedResourceName": "연구원기록표",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Record of Archer",
+        "identifiedResourceName": "연구원기록표",
+        "identifiedDescriptionName": [
+            "บันทึกการสำรวจของกลุ่มนักธนูที่เข้าไปสำรวจยังพื้นที่ Tomb of Honor เป็นรายการบันทึกที่ดูเหมือนว่าเนื้อหาจะขาดหายไปบางส่วน",
+            "",
+            "ATK + 15 , MATK+15 , ASPD + 1",
+            "ทุกๆการอัพเกรด 2 ขั้น เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อมอนสเตอร์ประเภททั่วไป 1%",
+            "เมื่ออัพเกรดถึงขั้น 5 ลดระยะเวลาร่ายแบบแปรผัน 5% , MaxHP + 5%, MaxSP + 5%",
+            "เมื่ออัพเกรดถึงขึ้น 7 เพิ่ม Damage กายภาพ/เวทมนต์ที่ทำต่อมอนสเตอร์บอส 5%",
+            "เมื่ออัพเกรดถึงขึ้น 9 เพิ่ม Damage กายภาพ/เวทมนต์ที่ทำต่อมอนสเตอร์ขนาดกลาง, ใหญ่ 10%",
+            "",
+            "เมื่อสวมใส่โดย Awakened Sniper,",
+            "Critical Damage 10%, เพิ่มพลังโจมตีระยะไกล 5%, APSD +1",
+            "",
+            "เมื่อสวมใส่โดย Awakened Gypsy,",
+            "เมื่อโจมตีทางกายภาพมีโอกาส 15% ที่จะใช้งานสกิล Heaven’s Drive Lv.10 โดยอัตโนมัติ, MATK+ 5%, ASPD +1",
+            "",
+            "เมื่อสวมใส่โดย Awakened Clown,",
+            "เมื่อโจมตีทางกายภาพมีโอกาส 15% ที่จะใช้งานสกิล Shield Chain Lv.10 โดยอัตโนมัติ, ASPD +1, เพิ่มพลังโจมตีระยะไกล 5%",
+            "",
+            "เมื่อสวมใส่ร่วมกับ Ancient Gold Deco [1],",
+            "ลดระยะเวลาร่ายแบบคงที่ 0.3 วินาที",
+            "เพิ่ม Damage ทางกายภาพต่อมอนสเตอร์ทุกเผ่า +8%",
+            "",
+            "ประเภท : Accessory(Right) พลังป้องกัน : 0",
+            "น้ำหนัก : 10",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพที่ใส่ได้ : Awakened Archer Class"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "490240": {
+        "unidentifiedDisplayName": "[NFS]Record of Merchant",
+        "unidentifiedResourceName": "연구원기록표",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[NFS]Record of Merchant",
+        "identifiedResourceName": "연구원기록표",
+        "identifiedDescriptionName": [
+            "^ff0000 ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "บันทึกการสำรวจของกลุ่มพ่อค้าที่เข้าไปสำรวจยังพื้นที่ Tomb of Honor",
+            "เป็นรายการบันทึกที่ดูเหมือนว่าเนื้อหาจะขาดหายไปบางส่วน",
+            "",
+            "ATK + 15 , MATK+15 , ลด Delay หลังใช้สกิล 10% , ASPD + 10%",
+            "ทุกๆการอัพเกรด 2 ขั้น เพิ่ม Damage ทางกายภาพระยะใกล้และระยะไกล 1%",
+            "เมื่ออัพเกรดถึงขั้น 5 HIT+50 , MaxHP + 5%, MaxSP + 5%",
+            "เมื่ออัพเกรดถึงขึ้น 7 เพิ่ม Damage ที่ทำต่อมอนสเตอร์บอส 5%",
+            "เมื่ออัพเกรดถึงขึ้น 9 เพิ่ม Damage ที่ทำต่อมอนสเตอร์ขนาดเล็ก,กลาง, ใหญ่ 10%",
+            "",
+            "เมื่อสวมใส่โดย Awakened Creator,",
+            "All Status+5 , MaxHP +10 % , ลดระยะเวลาร่ายแบบแปรผัน 10%",
+            "",
+            "เมื่อสวมใส่โดย Awakened Whitesmith,",
+            "HIT+20, ASPD + 1 , เพิ่ม Damage ทางกายภาพที่ทำต่อมอนสเตอร์ทุกขนาด 5%",
+            "",
+            "เมื่อสวมใส่ร่วมกับ Ancient Gold Deco [1],",
+            "Perfect Hit + 8%",
+            "เพิ่ม Damage ทางกายภาพต่อมอนสเตอร์ทุกเผ่า +8%",
+            "",
+            "ประเภท : Accessory(Right) พลังป้องกัน : 0",
+            "น้ำหนัก : 10",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพที่ใส่ได้ : Awakened Merchant Cls"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "490401": {
+        "unidentifiedDisplayName": "[NFS]Record of Archer",
+        "unidentifiedResourceName": "연구원기록표",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[NFS]Record of Archer",
+        "identifiedResourceName": "연구원기록표",
+        "identifiedDescriptionName": [
+            "^ff0000 ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "บันทึกการสำรวจของกลุ่มนักธนูที่เข้าไปสำรวจยังพื้นที่ Tomb of Honor เป็นรายการบันทึกที่ดูเหมือนว่าเนื้อหาจะขาดหายไปบางส่วน",
+            "",
+            "ATK + 15 , MATK+15 , ASPD + 1",
+            "ทุกๆการอัพเกรด 2 ขั้น เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อมอนสเตอร์ประเภททั่วไป 1%",
+            "เมื่ออัพเกรดถึงขั้น 5 ลดระยะเวลาร่ายแบบแปรผัน 5% , MaxHP + 5%, MaxSP + 5%",
+            "เมื่ออัพเกรดถึงขึ้น 7 เพิ่ม Damage กายภาพ/เวทมนต์ที่ทำต่อมอนสเตอร์บอส 5%",
+            "เมื่ออัพเกรดถึงขึ้น 9 เพิ่ม Damage กายภาพ/เวทมนต์ที่ทำต่อมอนสเตอร์ขนาดกลาง, ใหญ่ 10%",
+            "",
+            "เมื่อสวมใส่โดย Awakened Sniper,",
+            "Critical Damage 10%, เพิ่มพลังโจมตีระยะไกล 5%, APSD +1",
+            "",
+            "เมื่อสวมใส่โดย Awakened Gypsy,",
+            "เมื่อโจมตีทางกายภาพมีโอกาส 15% ที่จะใช้งานสกิล Heaven’s Drive Lv.10 โดยอัตโนมัติ, MATK+ 5%, ASPD +1",
+            "",
+            "เมื่อสวมใส่โดย Awakened Clown,",
+            "เมื่อโจมตีทางกายภาพมีโอกาส 15% ที่จะใช้งานสกิล Shield Chain Lv.10 โดยอัตโนมัติ, ASPD +1, เพิ่มพลังโจมตีระยะไกล 5%",
+            "",
+            "เมื่อสวมใส่ร่วมกับ Ancient Gold Deco [1],",
+            "ลดระยะเวลาร่ายแบบคงที่ 0.3 วินาที",
+            "เพิ่ม Damage ทางกายภาพต่อมอนสเตอร์ทุกเผ่า +8%",
+            "",
+            "ประเภท : Accessory(Right) พลังป้องกัน : 0",
+            "น้ำหนัก : 10",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพที่ใส่ได้ : Awakened Archer Class"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "108058": {
+        "unidentifiedDisplayName": "Record of Jellyfish Scroll",
+        "unidentifiedResourceName": "Betelgeuse_Soul",
+        "unidentifiedDescriptionName": [
+            "ม้วนบันทึกลึกลับที่เก็บเรื่องราวของเหล่าแมงกะพรุนแห่งท้องทะเลเอาไว้ เมื่อเปิดใช้งาน จะสุ่มรับไอเทมหายากในโลก Ragnarok ที่ซ่อนอยู่ภายใน"
+        ],
+        "identifiedDisplayName": "Record of Jellyfish Scroll",
+        "identifiedResourceName": "Betelgeuse_Soul",
+        "identifiedDescriptionName": [
+            "ม้วนบันทึกลึกลับที่เก็บเรื่องราวของเหล่าแมงกะพรุนแห่งท้องทะเลเอาไว้ เมื่อเปิดใช้งาน จะสุ่มรับไอเทมหายากในโลก Ragnarok ที่ซ่อนอยู่ภายใน",
+            "^ff0000หากเปิดใช้งานหลังวันที่ 30 กันยายน 2569 หลังปิดปรับปรุงประจำสัปดาห์จะไม่ได้รับ Jellyfish Coin ",
             "น้ำหนัก : 1"
         ],
         "slotCount": 0,
         "ClassNum": 0,
         "costume": false
     },
-    "100396": {
-        "unidentifiedDisplayName": "Blue Crystal Staff Modification Cube",
-        "unidentifiedResourceName": "RemodelCube",
+    "20992": {
+        "unidentifiedDisplayName": "Hood",
+        "unidentifiedResourceName": "후드",
         "unidentifiedDescriptionName": [
-            "ลูกบาศก์ที่ช่วยอัพเกรด Blue Crystal Staff ให้กลายเป็น Awakened Blue Crystal Staff",
-            "คำเตือน! - เมื่ออัพเกรดแล้ว การ์ดและ Random Option ที่ใช้อยู่จะสูญหาย"
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "Blue Crystal Staff Modification Cube",
-        "identifiedResourceName": "RemodelCube",
+        "identifiedDisplayName": "Costume New Year Fairy of Eden",
+        "identifiedResourceName": "Fairy_Of_Eden",
         "identifiedDescriptionName": [
-            "ลูกบาศก์ที่ช่วยอัพเกรด Blue Crystal Staff ให้กลายเป็น Awakened Blue Crystal Staff",
-            "ใช้วัตถุดิบเป็น Blue Crystal Staff ตั้งแต่ +9 ขึ้นไป",
-            "และจะได้รับ Awakened Blue Crystal Staff +7 ออกมา",
-            "คำเตือน! - เมื่ออัพเกรดแล้ว การ์ดและ Random Option ที่ใช้อยู่จะสูญหาย",
-            "<ITEM>ข้อมูลไอเทมใหม่<INFO>640012</INFO></ITEM>",
+            "ปีกที่ได้รับแรงบันดาลใจมาจากนางฟ้าที่บินไปมาในสวนเอเดน",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Garment น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 95,
+        "costume": true
+    },
+    "401284": {
+        "unidentifiedDisplayName": "Cap",
+        "unidentifiedResourceName": "캡",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Costume Wind Rune Helm",
+        "identifiedResourceName": "Viva_Adul_Hat_WM",
+        "identifiedDescriptionName": [
+            "Rune Helm แห่งพฤกษาเขียวขจี เมื่อสวมใส่แล้วจะรู้สึกเหมือนมีสายลมเย็นพัดผ่าน",
+            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 21 ได้",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Upper น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 2208,
+        "costume": true
+    },
+    "401303": {
+        "unidentifiedDisplayName": "Cap",
+        "unidentifiedResourceName": "캡",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Costume Ruck Keeper",
+        "identifiedResourceName": "C_Ruck_Keeper",
+        "identifiedDescriptionName": [
+            "หมวกนำโชคที่ประดับด้วย Clover และต้นอ่อน",
+            "ว่ากันว่าพลังแห่งธรรมชาติที่สถิตอยู่ภายใน จะนำพาโชคลาภเล็ก ๆ มาสู่ผู้สวมใส่",
+            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 20 ได้",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Upper น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 2822,
+        "costume": true
+    },
+    "410329": {
+        "unidentifiedDisplayName": "Ribbon",
+        "unidentifiedResourceName": "리본",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Costume Green Aura Dragon",
+        "identifiedResourceName": "C_Dragon_Green_Aura",
+        "identifiedDescriptionName": [
+            "แสงออร่าของเทพมังกรสีหยก พลังงานที่เข้มข้นสื่อถึงความอุดมสมบูรณ์และการเติบโต",
+            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 20 ได้",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Middle น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": true
+    },
+    "420429": {
+        "unidentifiedDisplayName": "Ribbon",
+        "unidentifiedResourceName": "리본",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Costume Guide's Letter",
+        "identifiedResourceName": "C_Guide_Of_Dead_Text",
+        "identifiedDescriptionName": [
+            "สายอักขระลึกลับที่เคยห่อหุ้มผู้นำทางแห่งยมโลก",
+            "ว่ากันว่าเป็นสัญลักษณ์ของตราชั่งแห่งความยุติธรรม",
+            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 18 ได้",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Lower น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": true
+    },
+    "420774": {
+        "unidentifiedDisplayName": "Ribbon",
+        "unidentifiedResourceName": "리본",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Costume Poporing Soap Pipe",
+        "identifiedResourceName": "Poporing_Soap_Pipe",
+        "identifiedDescriptionName": [
+            "ไปป์ที่เหล่า Meister รุ่นใหม่ชื่นชอบ",
+            "แม้จะเป็นไปป์แฟนซีที่มี Poring ลอยออกมา แต่กลับได้รับความนิยมในหมู่ Meister เพราะช่วยเสริมลุคที่สุขุมและน่าเกรงขาม",
+            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 19 ได้",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Lower น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 2753,
+        "costume": true
+    },
+    "480344": {
+        "unidentifiedDisplayName": "Hood",
+        "unidentifiedResourceName": "후드",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Costume Half Dragon Princess Scythe",
+        "identifiedResourceName": "C_HDP_Scythe",
+        "identifiedDescriptionName": [
+            "เคียวยักษ์ที่เป็นอาวุธประจำตัวของเจ้าหญิงผู้มีเชื้อสายมังกรองค์หนึ่งจากยุคโบราณ",
+            "รูปร่างสวยงามอ่อนหวาน ในขณะเดียวกันก็ดูมีอำนาจลึกลับที่ทำให้ผู้พบเห็นต้องก้มหัวให้อย่างนอบน้อม",
+            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 21 ได้",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Garment น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 189,
+        "costume": true
+    },
+    "108059": {
+        "unidentifiedDisplayName": "Dragonwind Costume Scroll",
+        "unidentifiedResourceName": "그린스크롤",
+        "unidentifiedDescriptionName": [
+            "คัมภีร์ลึกลับที่บรรจุพลังแห่งมังกรวายุ เมื่อคลี่ออก สายลมแห่งโชคชะตาจะนำพาคอสตูมล้ำค่ามาสู่ผู้ครอบครอง",
+            "^ff0000หากเปิดใช้งานหลังวันที่ 16 กันยายน 2569 หลังปิดปรับปรุงประจำสัปดาห์ จะไม่ได้รับ Event Stone Coin "
+        ],
+        "identifiedDisplayName": "Dragonwind Costume Scroll",
+        "identifiedResourceName": "그린스크롤",
+        "identifiedDescriptionName": [
+            "คัมภีร์ลึกลับที่บรรจุพลังแห่งมังกรวายุ เมื่อคลี่ออก สายลมแห่งโชคชะตาจะนำพาคอสตูมล้ำค่ามาสู่ผู้ครอบครอง",
+            "^ff0000หากเปิดใช้งานหลังวันที่ 16 กันยายน 2569 หลังปิดปรับปรุงประจำสัปดาห์ จะไม่ได้รับ Event Stone Coin ",
             "น้ำหนัก : 1"
         ],
         "slotCount": 0,
         "ClassNum": 0,
         "costume": false
     },
-    "101482": {
-        "unidentifiedDisplayName": "Freedom Stick Modification Cube",
-        "unidentifiedResourceName": "RemodelCube",
+    "107973": {
+        "unidentifiedDisplayName": "Fire Shadow Smelting Hammer",
+        "unidentifiedResourceName": "Barmund_Hammer",
         "unidentifiedDescriptionName": [
-            "ลูกบาศก์ที่ช่วยอัพเกรด Freedom Stick ให้กลายเป็น Awakened Freedom Stick",
-            "คำเตือน! - เมื่ออัพเกรดแล้ว การ์ดและ Random Option ที่ใช้อยู่จะสูญหาย"
+            "ค้อนที่จะช่วยอัพเกรด Shadow ขั้น 5-11 แบบสุ่ม",
+            "โดยมีโอกาสอัพเกรดเป็นขั้นอัพเกรด 6 มากที่สุด พร้อม Random Option พิเศษ 2 แถว",
+            "ระวัง! : หากใช้กับ Shadow ที่อัพเกรดแล้ว อาจทำให้ขั้นอัพเกรดลดลงได้"
         ],
-        "identifiedDisplayName": "Freedom Stick Modification Cube",
-        "identifiedResourceName": "RemodelCube",
+        "identifiedDisplayName": "Fire Shadow Smelting Hammer",
+        "identifiedResourceName": "Barmund_Hammer",
         "identifiedDescriptionName": [
-            "ลูกบาศก์ที่ช่วยอัพเกรด Freedom Stick ให้กลายเป็น Awakened Freedom Stick",
-            "ใช้วัตถุดิบเป็น Freedom Stick ตั้งแต่ +9 ขึ้นไป",
-            "และจะได้รับ Awakened Freedom Stick +7 ออกมา",
-            "คำเตือน! - เมื่ออัพเกรดแล้ว การ์ดและ Random Option ที่ใช้อยู่จะสูญหาย",
-            "<ITEM>ข้อมูลไอเทมใหม่<INFO>550081</INFO></ITEM>",
+            "ค้อนที่จะช่วยอัพเกรด Shadow ขั้น 5-11 แบบสุ่ม",
+            "โดยมีโอกาสอัพเกรดเป็นขั้นอัพเกรด 6 มากที่สุด พร้อม Random Option พิเศษ 2 แถว",
+            "ระวัง! : หากใช้กับ Shadow ที่อัพเกรดแล้ว อาจทำให้ขั้นอัพเกรดลดลงได้",
             "น้ำหนัก : 1"
         ],
         "slotCount": 0,

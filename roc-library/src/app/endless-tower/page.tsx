@@ -13,25 +13,25 @@ interface BossFloor {
 
 const floorData1to100: BossFloor[] = [
   { floor: 5, bosses: [{ name: "Mistress", monsterIds: [1059] }] },
-  { floor: 10, bosses: [{ name: "Doppelganger", monsterIds: [1671] }] },
+  { floor: 10, bosses: [{ name: "Doppelganger", monsterIds: [1046] }] },
   {
     floor: 15,
     bosses: [
-      { name: "Eddga", monsterIds: [1023] },
-      { name: "Detardeurus", monsterIds: [1869] },
+      { name: "Eddga", monsterIds: [1115] },
+      { name: "Orc Lord", monsterIds: [1190] },
     ],
   },
   { floor: 20, bosses: [{ name: "Orc Hero", monsterIds: [1087] }] },
   { floor: 25, bosses: [{ name: "Lord of the Dead", monsterIds: [1373] }] },
-  { floor: 30, bosses: [{ name: "Dracula", monsterIds: [1399] }] },
-  { floor: 35, bosses: [{ name: "Turtle General", monsterIds: [1259] }] },
-  { floor: 40, bosses: [{ name: "Osiris", monsterIds: [1038] }] },
-  { floor: 45, bosses: [{ name: "Gopinich", monsterIds: [1184] }] },
+  { floor: 30, bosses: [{ name: "Dracula", monsterIds: [1389] }] },
+  { floor: 35, bosses: [{ name: "Turtle General", monsterIds: [2105] }] },
+  { floor: 40, bosses: [{ name: "Lady Tanee", monsterIds: [1688] }] },
+  { floor: 45, bosses: [{ name: "Drake", monsterIds: [1112] }] },
   {
     floor: 50,
     bosses: [
       { name: "White Lady", monsterIds: [1630] },
-      { name: "Evil Snake Lord", monsterIds: [1708] },
+      { name: "Evil Snake Lord", monsterIds: [2104] },
     ],
   },
   {
@@ -41,8 +41,11 @@ const floorData1to100: BossFloor[] = [
       { name: "Garm", monsterIds: [1252] },
     ],
   },
-  { floor: 60, bosses: [{ name: "Vesper", monsterIds: [1734] }] },
-  { floor: 65, bosses: [{ name: "Valkyrie Randgris", monsterIds: [1765] }] },
+  {
+    floor: 60,
+    bosses: [{ name: "Tao Gunka", monsterIds: [1583] }],
+  },
+  { floor: 65, bosses: [{ name: "Valkyrie Randgris", monsterIds: [1751] }] },
   {
     floor: 70,
     bosses: [
@@ -50,12 +53,12 @@ const floorData1to100: BossFloor[] = [
       { name: "Baphomet", monsterIds: [1039] },
     ],
   },
-  { floor: 75, bosses: [{ name: "Ktullanux", monsterIds: [1719] }] },
+  { floor: 75, bosses: [{ name: "Nightmare Amon Ra", monsterIds: [2362] }] },
   { floor: 80, bosses: [{ name: "Gloom Under Night", monsterIds: [1768] }] },
-  { floor: 85, bosses: [{ name: "Ifrit", monsterIds: [1832] }] },
+  { floor: 85, bosses: [{ name: "Thanatos Phantom", monsterIds: [1708] }] },
   { floor: 90, bosses: [{ name: "Golden Thief Bug", monsterIds: [1086] }] },
   { floor: 95, bosses: [{ name: "Fallen Bishop", monsterIds: [1874] }] },
-  { floor: 100, bosses: [{ name: "Entweihen Crothen", monsterIds: [1870] }] },
+  { floor: 100, bosses: [{ name: "Entweihen Crothen", monsterIds: [1957] }] },
 ];
 
 const floorData101to200: BossFloor[] = [
@@ -102,14 +105,14 @@ const floorData101to200: BossFloor[] = [
   },
   { floor: 190, bosses: [{ name: "Doppelganger", monsterIds: [1671] }] },
   { floor: 195, bosses: [{ name: "Fallen Bishop", monsterIds: [1874] }] },
-  { floor: 200, bosses: [{ name: "Naght Sieger", monsterIds: [1980] }] },
+  { floor: 200, bosses: [{ name: "Naght Sieger", monsterIds: [1956] }] },
 ];
 
 const specialMVPs = [
-  { name: "Naght Sieger", monsterId: 1980 },
-  { name: "Wounded Morroc", monsterId: 1988 },
+  { name: "Naght Sieger", monsterId: 1956 },
+  { name: "Wounded Morocc", monsterId: 1917 },
   { name: "Beelzebub", monsterId: 1874 },
-  { name: "Kathryne Keyron", monsterId: 1305 },
+  { name: "Kathryne Keyron", monsterId: 1639 },
 ];
 
 function MonsterImage({
@@ -131,8 +134,8 @@ function MonsterImage({
     <Image
       src={`/assets/images/monsterDb/${monsterId}.gif`}
       alt={name}
-      width={40}
-      height={40}
+      width={150}
+      height={150}
       className="object-contain"
       onError={() => setImgError(true)}
       unoptimized
@@ -140,13 +143,7 @@ function MonsterImage({
   );
 }
 
-function FloorRow({
-  data,
-  enhanced,
-}: {
-  data: BossFloor;
-  enhanced?: boolean;
-}) {
+function FloorRow({ data, enhanced }: { data: BossFloor; enhanced?: boolean }) {
   const isLast = data.floor === 100 || data.floor === 200;
   return (
     <div
@@ -155,8 +152,8 @@ function FloorRow({
           isLast
             ? "border-yellow-400 bg-yellow-400/10 shadow-md shadow-yellow-400/20"
             : enhanced
-            ? "border-red-700/40 bg-red-950/30"
-            : "border-base-content/10 bg-base-100/5 hover:bg-base-content/5"
+              ? "border-red-700/40 bg-red-950/30"
+              : "border-base-content/10 bg-base-100/5 hover:bg-base-content/5"
         }`}
     >
       {/* Floor Badge */}
@@ -166,8 +163,8 @@ function FloorRow({
             isLast
               ? "bg-yellow-400 text-black"
               : enhanced
-              ? "bg-red-700 text-white"
-              : "bg-primary text-primary-content"
+                ? "bg-red-700 text-white"
+                : "bg-primary text-primary-content"
           }`}
       >
         ชั้น {data.floor}
@@ -176,17 +173,23 @@ function FloorRow({
       {/* Monsters */}
       <div className="flex flex-wrap items-center gap-3 flex-1">
         {data.bosses.map((boss) => (
-          <div key={boss.name} className="flex items-center gap-2">
+          <div
+            key={boss.name}
+            className="flex items-center gap-2 border-2 rounded-lg p-2 border-base-content/20 bg-base-100/10"
+          >
+            <div>{boss.name}</div>
             {boss.monsterIds.map((id) => (
               <MonsterImage key={id} monsterId={id} name={boss.name} />
             ))}
             <span
-              className={`text-sm font-semibold ${
-                isLast ? "text-yellow-400" : enhanced ? "text-red-300" : "text-base-content"
+              className={`text-sm font-semibold text-white ${
+                isLast
+                  ? "text-yellow-400"
+                  : enhanced
+                    ? "text-red-300"
+                    : "text-base-content"
               }`}
-            >
-              {boss.name}
-            </span>
+            ></span>
           </div>
         ))}
       </div>
@@ -241,8 +244,12 @@ export default function EndlessTowerPage() {
             Ragnarok Online Classic
           </p>
           <div className="mt-6 flex gap-2">
-            <span className="badge badge-error badge-outline text-xs">Instance Dungeon</span>
-            <span className="badge badge-warning badge-outline text-xs">Max Floor 200</span>
+            <span className="badge badge-error badge-outline text-xs">
+              Instance Dungeon
+            </span>
+            <span className="badge badge-warning badge-outline text-xs">
+              Max Floor 200
+            </span>
           </div>
         </div>
       </div>
@@ -267,12 +274,13 @@ export default function EndlessTowerPage() {
                 key={mvp.name}
                 className="flex flex-col items-center gap-2 p-3 rounded-xl border border-yellow-500/20 bg-yellow-500/5 hover:bg-yellow-500/10 transition-colors"
               >
-                {mvp.monsterId && (
-                  <MonsterImage monsterId={mvp.monsterId} name={mvp.name} />
-                )}
+                {" "}
                 <span className="text-xs font-semibold text-yellow-300 text-center leading-tight">
                   {mvp.name}
                 </span>
+                {mvp.monsterId && (
+                  <MonsterImage monsterId={mvp.monsterId} name={mvp.name} />
+                )}
               </div>
             ))}
           </div>
@@ -331,7 +339,7 @@ export default function EndlessTowerPage() {
                   data={row}
                   enhanced={activeTab === "101-200"}
                 />
-              )
+              ),
             )}
           </div>
         </div>
