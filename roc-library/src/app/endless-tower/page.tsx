@@ -2,6 +2,16 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import MonstersDb from "@/services/mosters/mostersDb";
+import type { ElementMonster, Monster } from "@/types/monster";
+
+const monsterDbMap: Record<number, Monster> = MonstersDb().reduce(
+  (acc, monster) => {
+    acc[monster.id] = monster;
+    return acc;
+  },
+  {} as Record<number, Monster>,
+);
 
 interface BossFloor {
   floor: number;
@@ -61,6 +71,8 @@ const floorData1to100: BossFloor[] = [
   { floor: 100, bosses: [{ name: "Entweihen Crothen", monsterIds: [1957] }] },
 ];
 
+// Floor 101-200 dataset kept for when the enhanced-tier tab switch is re-enabled
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const floorData101to200: BossFloor[] = [
   { floor: 105, bosses: [{ name: "Mistress", monsterIds: [1150] }] },
   { floor: 110, bosses: [{ name: "Golden Thief Bug", monsterIds: [1086] }] },
@@ -118,14 +130,19 @@ const specialMVPs = [
 function MonsterImage({
   monsterId,
   name,
+  size = 56,
 }: {
   monsterId: number;
   name: string;
+  size?: number;
 }) {
   const [imgError, setImgError] = useState(false);
   if (imgError) {
     return (
-      <div className="w-10 h-10 rounded-full bg-base-200 flex items-center justify-center text-xs text-base-content/40 border border-base-300">
+      <div
+        style={{ width: size, height: size }}
+        className="rounded-full bg-base-200 flex items-center justify-center text-xs text-base-content/40 border border-base-300"
+      >
         ?
       </div>
     );
@@ -134,8 +151,9 @@ function MonsterImage({
     <Image
       src={`/assets/images/monsterDb/${monsterId}.gif`}
       alt={name}
-      width={150}
-      height={150}
+      width={size}
+      height={size}
+      style={{ width: size, height: size }}
       className="object-contain"
       onError={() => setImgError(true)}
       unoptimized
@@ -143,11 +161,137 @@ function MonsterImage({
   );
 }
 
+const ELEMENT_COLOR: Record<string, string> = {
+  fire: "text-red-500",
+  water: "text-blue-400",
+  wind: "text-yellow-400",
+  earth: "text-orange-500",
+  holy: "text-yellow-100",
+  shadow: "text-purple-400",
+  ghost: "text-cyan-300",
+  undead: "text-emerald-500",
+  neutral: "text-gray-400",
+  poison: "text-purple-300",
+};
+
+// Sort from highest damage taken (weakness) to lowest (resistance), dropping the neutral 100% entries
+function getElementList(element?: ElementMonster) {
+  if (!element) return [] as [string, number][];
+  return (Object.entries(element) as [string, number][])
+    .filter(([, val]) => val !== 100)
+    .sort((a, b) => b[1] - a[1]);
+}
+
+function getElementBorderClass(val: number) {
+  if (val > 100) return "border-green-500/50";
+  if (val === 100) return "border-gray-700/50";
+  if (val < 0) return "border-red-500/50";
+  return "border-gray-200/50";
+}
+
+function getElementBgClass(val: number) {
+  if (val > 100) return "bg-green-950/40";
+  if (val === 100) return "bg-gray-800/40";
+  if (val < 0) return "bg-red-950/40";
+  return "bg-gray-200/10";
+}
+
+function ElementBadge({ el, val }: { el: string; val: number }) {
+  const isWeak = val > 100;
+  return (
+    <div
+      className={`flex flex-col items-center rounded-lg px-3 py-2 min-w-16 border ${getElementBorderClass(val)} ${getElementBgClass(val)}`}
+      title={`Takes ${val}% damage from ${el}`}
+    >
+      <span
+        className={`text-xs font-black uppercase ${ELEMENT_COLOR[el] ?? "text-gray-400"}`}
+      >
+        {el}
+      </span>
+      <span
+        className={`text-base font-black ${isWeak ? "text-red-400" : "text-green-400"}`}
+      >
+        {val}%
+      </span>
+    </div>
+  );
+}
+
+function MonsterCard({
+  monsterId,
+  fallbackName,
+  danger,
+}: {
+  monsterId: number;
+  fallbackName: string;
+  danger?: boolean;
+}) {
+  const monster = monsterDbMap[monsterId];
+  const name = monster?.name ?? fallbackName;
+  const elements = getElementList(monster?.element);
+
+  return (
+    <div
+      className={`shrink-0 w-lg rounded-2xl border p-4 grid grid-cols-2 gap-4 transition-all
+        ${
+          danger
+            ? "border-red-700/40 bg-red-950/20 hover:border-red-500/60"
+            : "border-white/10 bg-black/20 hover:border-primary/50"
+        }`}
+    >
+      {/* Col 1: Image, Name, Details */}
+      <div className="flex flex-col items-center text-center gap-3">
+        <div className="w-36 h-36 shrink-0 rounded-xl bg-black/30 flex items-center justify-center border border-white/10">
+          <MonsterImage monsterId={monsterId} name={name} size={132} />
+        </div>
+        <p className="text-lg font-bold text-white leading-tight">{name}</p>
+        {monster ? (
+          <div className="w-full text-sm text-white/60 space-y-1">
+            <p>Lv. {monster.lv}</p>
+            <p>{monster.race}</p>
+            <p className="text-red-400 font-black text-base">
+              HP {monster.hp.toLocaleString()}
+            </p>
+            <div className="flex items-center justify-center gap-3 pt-1 text-xs">
+              <span className="text-green-400 font-bold">
+                HIT {monster.hit}
+              </span>
+              <span className="text-sky-400 font-bold">
+                DEF {monster.def}
+              </span>
+              <span className="text-indigo-400 font-bold">
+                MDEF {monster.mdef}
+              </span>
+            </div>
+          </div>
+        ) : (
+          <p className="text-sm text-white/30">ID {monsterId}</p>
+        )}
+      </div>
+
+      {/* Col 2: Element Table */}
+      <div className="border-l border-white/10 pl-4 flex flex-col justify-center">
+        {elements.length > 0 ? (
+          <div className="grid grid-cols-2 gap-2">
+            {elements.map(([el, val]) => (
+              <ElementBadge key={el} el={el} val={val} />
+            ))}
+          </div>
+        ) : (
+          <p className="text-xs text-white/30 italic">
+            No element data
+          </p>
+        )}
+      </div>
+    </div>
+  );
+}
+
 function FloorRow({ data, enhanced }: { data: BossFloor; enhanced?: boolean }) {
   const isLast = data.floor === 100 || data.floor === 200;
   return (
     <div
-      className={`flex items-center gap-3 px-4 py-3 rounded-lg border transition-all
+      className={`flex items-stretch gap-3 px-4 py-3 rounded-lg border transition-all
         ${
           isLast
             ? "border-yellow-400 bg-yellow-400/10 shadow-md shadow-yellow-400/20"
@@ -158,7 +302,7 @@ function FloorRow({ data, enhanced }: { data: BossFloor; enhanced?: boolean }) {
     >
       {/* Floor Badge */}
       <div
-        className={`min-w-14 text-center font-bold text-sm rounded-md py-1 px-2
+        className={`shrink-0 self-center min-w-14 text-center font-bold text-sm rounded-md py-1 px-2
           ${
             isLast
               ? "bg-yellow-400 text-black"
@@ -170,36 +314,24 @@ function FloorRow({ data, enhanced }: { data: BossFloor; enhanced?: boolean }) {
         ชั้น {data.floor}
       </div>
 
-      {/* Monsters */}
-      <div className="flex flex-wrap items-center gap-3 flex-1">
-        {data.bosses.map((boss) => (
-          <div
-            key={boss.name}
-            className="flex items-center gap-2 border-2 rounded-lg p-2 border-base-content/20 bg-base-100/10"
-          >
-            <div>{boss.name}</div>
-            {boss.monsterIds.map((id) => (
-              <MonsterImage key={id} monsterId={id} name={boss.name} />
-            ))}
-            <span
-              className={`text-sm font-semibold text-white ${
-                isLast
-                  ? "text-yellow-400"
-                  : enhanced
-                    ? "text-red-300"
-                    : "text-base-content"
-              }`}
-            ></span>
-          </div>
-        ))}
+      {/* Monsters — single row, scrollable */}
+      <div className="flex items-center gap-3 flex-1 overflow-x-auto pb-1">
+        {data.bosses.flatMap((boss) =>
+          boss.monsterIds.map((id) => (
+            <MonsterCard
+              key={id}
+              monsterId={id}
+              fallbackName={boss.name}
+              danger={enhanced}
+            />
+          )),
+        )}
       </div>
     </div>
   );
 }
 
 export default function EndlessTowerPage() {
-  const [activeTab, setActiveTab] = useState<"1-100" | "101-200">("1-100");
-
   return (
     <div
       className="min-h-screen w-full"
@@ -254,7 +386,7 @@ export default function EndlessTowerPage() {
         </div>
       </div>
 
-      <div className="max-w-4xl mx-auto px-4 pb-16 space-y-8">
+      <div className="max-w-6xl mx-auto px-4 pb-16 space-y-8">
         {/* Special Floor Section */}
         <div
           className="rounded-2xl border border-yellow-500/40 overflow-hidden shadow-xl shadow-yellow-500/10"
@@ -268,26 +400,22 @@ export default function EndlessTowerPage() {
               ชั้นพิเศษที่จะสุ่ม MVP เหล่านี้
             </p>
           </div>
-          <div className="p-4 grid grid-cols-2 sm:grid-cols-4 gap-3">
-            {specialMVPs.map((mvp) => (
-              <div
-                key={mvp.name}
-                className="flex flex-col items-center gap-2 p-3 rounded-xl border border-yellow-500/20 bg-yellow-500/5 hover:bg-yellow-500/10 transition-colors"
-              >
-                {" "}
-                <span className="text-xs font-semibold text-yellow-300 text-center leading-tight">
-                  {mvp.name}
-                </span>
-                {mvp.monsterId && (
-                  <MonsterImage monsterId={mvp.monsterId} name={mvp.name} />
-                )}
-              </div>
-            ))}
+          <div className="p-4 flex items-center gap-3 overflow-x-auto">
+            {specialMVPs.map(
+              (mvp) =>
+                mvp.monsterId && (
+                  <MonsterCard
+                    key={mvp.name}
+                    monsterId={mvp.monsterId}
+                    fallbackName={mvp.name}
+                  />
+                ),
+            )}
           </div>
         </div>
 
-        {/* Tab Switch */}
-        <div className="flex rounded-xl overflow-hidden border border-white/10">
+        {/* Tab Switch — 101-200 disabled for now, only showing floor 1-100 */}
+        {/* <div className="flex rounded-xl overflow-hidden border border-white/10">
           <button
             onClick={() => setActiveTab("1-100")}
             className={`flex-1 py-3 text-sm font-bold tracking-widest uppercase transition-all ${
@@ -308,7 +436,7 @@ export default function EndlessTowerPage() {
           >
             ชั้น 101 – 200 🔥
           </button>
-        </div>
+        </div> */}
 
         {/* Floor List */}
         <div
@@ -317,30 +445,13 @@ export default function EndlessTowerPage() {
         >
           <div className="px-6 py-4 border-b border-white/10">
             <h2 className="text-base font-bold text-white tracking-widest uppercase">
-              {activeTab === "1-100" ? (
-                "👑 List BOSS MVP — ชั้น 1–100"
-              ) : (
-                <span className="text-red-400">
-                  🔥 BOSS Enhanced — ชั้น 101–200
-                </span>
-              )}
+              👑 List BOSS MVP — ชั้น 1–100
             </h2>
-            {activeTab === "101-200" && (
-              <p className="text-xs text-red-300/70 mt-1">
-                ตั้งแต่ชั้น 101 ขึ้นไป BOSS จะมีความสามารถเพิ่มขึ้น
-              </p>
-            )}
           </div>
           <div className="p-4 space-y-2">
-            {(activeTab === "1-100" ? floorData1to100 : floorData101to200).map(
-              (row) => (
-                <FloorRow
-                  key={row.floor}
-                  data={row}
-                  enhanced={activeTab === "101-200"}
-                />
-              ),
-            )}
+            {floorData1to100.map((row) => (
+              <FloorRow key={row.floor} data={row} enhanced={false} />
+            ))}
           </div>
         </div>
 

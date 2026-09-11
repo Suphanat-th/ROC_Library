@@ -23,7 +23,7 @@ const fileTree: FileTreeItem[] = [
     id: "home",
     name: "Home",
     type: "file",
-    icon: "🏠",
+    icon: "https://api.iconify.design/fluent-color/home-16.svg?color=%23c4b5fd",
     href: "/",
   },
   {
@@ -48,17 +48,24 @@ const fileTree: FileTreeItem[] = [
       // },
       {
         id: "lab",
-        name: "- Central Laboratory",
+        name: "Central Laboratory",
         type: "file",
-        icon: "",
+        icon: "https://api.iconify.design/picon/lab.svg?color=%23f4fb00",
         href: "/central-lab",
       },
       {
         id: "monster",
-        name: "- Monster x3",
+        name: "Monster x3",
         type: "file",
-        icon: "",
+        icon: "https://api.iconify.design/openmoji/ogre.svg?color=%23f4fb00",
         href: "/monsterx3",
+      },
+      {
+        id: "endlesstower",
+        name: "Endless Tower",
+        type: "file",
+        icon: "https://api.iconify.design/fluent-emoji-flat/tokyo-tower.svg?color=%23f4fb00",
+        href: "/endless-tower",
       },
     ],
   },
@@ -77,16 +84,16 @@ const fileTree: FileTreeItem[] = [
     children: [
       {
         id: "facewormnest",
-        name: "- Faceworm Nest Guide",
+        name: "Faceworm Nest Guide",
         type: "file",
-        icon: "",
+        icon: "https://api.iconify.design/hugeicons/worm.svg?color=%23f4fb00",
         href: "/facewormnest-guide",
       },
       {
         id: "toyfactory",
-        name: "- Toy Factory Guide",
+        name: "Toy Factory Guide",
         type: "file",
-        icon: "",
+        icon: "https://api.iconify.design/flowbite/teddy-bear-solid.svg?color=%23f4fb00",
         href: "/toyfactory-guide",
       },
       // {
@@ -103,7 +110,7 @@ const fileTree: FileTreeItem[] = [
     id: "calcbp",
     name: "Battle Pass Calculator",
     type: "file",
-    icon: "⚔️",
+    icon: "https://api.iconify.design/emojione/ticket.svg?color=%23f4fb00",
     href: "/calc-bp",
   },
   // {
@@ -196,11 +203,22 @@ function FileTreeNode({
             style={{ paddingLeft: `${8 + paddingLeft}px` }}
             className="w-full flex items-center py-2.5 px-3 rounded-lg hover:bg-blue-500/20 active:bg-blue-600/30 transition-all text-white text-sm font-medium gap-2 group"
           >
-            <span className="text-base w-5 text-center shrink-0 transition-transform duration-200 text-blue-300 group-hover:text-blue-200">
-              {expanded ? "📂" : "📁"}
+            <span
+              aria-hidden="true"
+              className="w-5 h-5 shrink-0 bg-center bg-no-repeat bg-contain transition-transform duration-200 group-hover:brightness-125"
+              style={{
+                backgroundImage: `url(https://api.iconify.design/mdi/folder${expanded ? "-open" : ""}.svg?color=%2393c5fd)`,
+              }}
+            >
             </span>
             <span className="text-sm shrink-0 text-yellow-300">
-              {item.icon}
+              {item.icon && (
+                <span
+                  aria-hidden="true"
+                  className="block w-5 h-5 bg-center bg-no-repeat bg-contain"
+                  style={{ backgroundImage: `url(${item.icon})` }}
+                />
+              )}
             </span>
             <span className="truncate text-blue-100 group-hover:text-white">
               {item.name}
@@ -230,7 +248,15 @@ function FileTreeNode({
           style={{ paddingLeft: `${8 + paddingLeft}px` }}
           className="flex items-center py-2.5 px-3 rounded-lg hover:bg-green-500/20 active:bg-green-600/30 transition-all text-white text-sm w-full gap-2 group"
         >
-          <span className="text-sm shrink-0 text-purple-300">{item.icon}</span>
+          <span className="w-5 h-5 shrink-0 text-purple-300">
+            {item.icon && (
+              <span
+                aria-hidden="true"
+                className="block w-5 h-5 bg-center bg-no-repeat bg-contain"
+                style={{ backgroundImage: `url(${item.icon})` }}
+              />
+            )}
+          </span>
           <span className="truncate text-gray-100 group-hover:text-white font-medium">
             {item.name}
           </span>
