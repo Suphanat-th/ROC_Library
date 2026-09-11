@@ -5699,7 +5699,7 @@ export default function MonstersDb(): Monster[] {
         holy: 150,
         shadow: 0,
         ghost: 80,
-        undead: จ,
+        undead: 0,
       },
     },
   ];
