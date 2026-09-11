@@ -67,7 +67,7 @@ const floorData1to100: BossFloor[] = [
   { floor: 80, bosses: [{ name: "Gloom Under Night", monsterIds: [1768] }] },
   { floor: 85, bosses: [{ name: "Thanatos Phantom", monsterIds: [1708] }] },
   { floor: 90, bosses: [{ name: "Golden Thief Bug", monsterIds: [1086] }] },
-  { floor: 95, bosses: [{ name: "Fallen Bishop", monsterIds: [1874] }] },
+  { floor: 95, bosses: [{ name: "Fallen Bishop", monsterIds: [1871] }] },
   { floor: 100, bosses: [{ name: "Entweihen Crothen", monsterIds: [1957] }] },
 ];
 
