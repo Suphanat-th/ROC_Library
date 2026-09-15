@@ -74,18 +74,14 @@ export default function CalcBPComponent() {
   const [levelCalcPoints, setLevelCalcPoints] = useState<number>(0);
   
   // Daily Quests - track completion by quest name (auto-checked on initial load)
-  const [completedDailyQuests, setCompletedDailyQuests] = useState<Record<string, boolean>>({
-    'Monster Hunt': true,
-    'Send Zeny': true,
-  });
+  const [completedDailyQuests, setCompletedDailyQuests] = useState<
+    Record<string, boolean>
+  >(() => Object.fromEntries(DAILY_QUESTS.map((quest) => [quest.name, true])));
   
   // Weekly Quests - track completion by quest name (auto-checked on initial load)
-  const [completedWeeklyQuests, setCompletedWeeklyQuests] = useState<Record<string, boolean>>({
-    'Celine Kimi': true,
-    'Faceworm Queen': true,
-    'Ancient Gigantes': true,
-    'Send Zeny/Items': true,
-  });
+  const [completedWeeklyQuests, setCompletedWeeklyQuests] = useState<
+    Record<string, boolean>
+  >(() => Object.fromEntries(WEEKLY_QUESTS.map((quest) => [quest.name, true])));
   
   const [isPremiumOpened, setIsPremiumOpened] = useState<boolean>(false);
   const [isLastDayDailyDone, setIsLastDayDailyDone] = useState<boolean>(false);
@@ -106,31 +102,10 @@ export default function CalcBPComponent() {
   // Get the active premium daily quest for today
   const activePremiumDailyQuest = getActivePremiumDailyQuest();
 
-  // Helper function to get all daily quests (premium or normal)
-  const getAllDailyQuests = () => {
-    if (isPremiumOpened && activePremiumDailyQuest) {
-      return [activePremiumDailyQuest, DAILY_QUESTS[1]]; // Premium + Send Zeny
-    }
-    return DAILY_QUESTS;
-  };
-
-  // Handler for Last Day Daily with auto-check children
+  // Section state follows the individual QuestTicket selections.
   const handleLastDayDailyChange = (checked: boolean) => {
     setIsLastDayDailyDone(checked);
-    if (checked) {
-      // Auto-check all children when parent is checked
-      const allDailyQuests = getAllDailyQuests();
-      const newState: Record<string, boolean> = {};
-      allDailyQuests.forEach(quest => {
-        newState[quest.name] = true;
-      });
-      // Also explicitly ensure Send Zeny is checked if Premium
-      if (isPremiumOpened) {
-        newState['Send Zeny'] = true;
-      }
-      setIsLastDayDailyQuests(newState);
-    } else {
-      // Uncheck all children when parent is unchecked
+    if (!checked) {
       setIsLastDayDailyQuests({});
     }
   };
@@ -138,13 +113,7 @@ export default function CalcBPComponent() {
   // Handler for Last Day Weekly with auto-check children
   const handleLastDayWeeklyChange = (checked: boolean) => {
     setIsLastDayWeeklyDone(checked);
-    if (checked) {
-      const newState: Record<string, boolean> = {};
-      WEEKLY_QUESTS.forEach(quest => {
-        newState[quest.name] = true;
-      });
-      setIsLastDayWeeklyQuests(newState);
-    } else {
+    if (!checked) {
       setIsLastDayWeeklyQuests({});
     }
   };
@@ -152,14 +121,7 @@ export default function CalcBPComponent() {
   // Handler for Daily Completed with auto-check children
   const handleDailyCompletedChange = (checked: boolean) => {
     setIsDailyCompleted(checked);
-    if (checked) {
-      const allDailyQuests = getAllDailyQuests();
-      const newState: Record<string, boolean> = {};
-      allDailyQuests.forEach(quest => {
-        newState[quest.name] = true;
-      });
-      setCompletedDailyQuestsList(newState);
-    } else {
+    if (!checked) {
       setCompletedDailyQuestsList({});
     }
   };
@@ -167,13 +129,7 @@ export default function CalcBPComponent() {
   // Handler for Weekly Completed with auto-check children
   const handleWeeklyCompletedChange = (checked: boolean) => {
     setIsWeeklyCompleted(checked);
-    if (checked) {
-      const newState: Record<string, boolean> = {};
-      WEEKLY_QUESTS.forEach(quest => {
-        newState[quest.name] = true;
-      });
-      setCompletedWeeklyQuestsList(newState);
-    } else {
+    if (!checked) {
       setCompletedWeeklyQuestsList({});
     }
   };
@@ -196,11 +152,29 @@ export default function CalcBPComponent() {
   const dailyNormalTotal = normalMonsterReward + sendZenyReward;
   const dailyPremiumTotal = premiumMonsterReward + sendZenyReward;
   const weeklyTotal = WEEKLY_QUESTS.reduce((sum, quest) => sum + quest.reward, 0);
-  
-  // Fixed Zeny costs for quests
-  const dailyZenyCostAmount = 1000000; // 1M Zeny per day
-  const weeklyZenyCostAmount = 2000000; // 2M Zeny per week
 
+  const dailyZenyCostAmount = DAILY_QUESTS.reduce(
+    (total, quest) =>
+      total +
+      (quest.request ?? []).reduce(
+        (questTotal, request) =>
+          questTotal + (request.type === "zeny" ? request.amount : 0),
+        0,
+      ),
+    0,
+  );
+  const weeklyZenyCostAmount = WEEKLY_QUESTS.reduce(
+    (total, quest) =>
+      total +
+      (quest.request ?? []).reduce(
+        (questTotal, request) =>
+          questTotal + (request.type === "zeny" ? request.amount : 0),
+        0,
+      ),
+    0,
+  );
+  const weeklyZenyCost = dailyZenyCostAmount * 7 + weeklyZenyCostAmount;
+  
   // Calculate daily points for current account type
   const currentDailyPoints = isPremiumOpened
     ? dailyPremiumTotal
@@ -280,9 +254,6 @@ export default function CalcBPComponent() {
       daysRemaining * dailyPremiumTotal +
       weeksRemaining * weeklyTotal;
 
-    // Weekly cost
-    const weeklyZenyCost = dailyZenyCostAmount * 7 + weeklyZenyCostAmount;
-
     return {
       dailyNormalPoints: dailyNormalTotal,
       dailyPremiumPoints: dailyPremiumTotal,
@@ -308,7 +279,7 @@ export default function CalcBPComponent() {
     dailyPremiumTotal,
     weeklyTotal,
     dailyZenyCostAmount,
-    weeklyZenyCostAmount,
+    weeklyZenyCost,
   ]);
 
   const formatNumber = (num: number | string) => {
@@ -574,9 +545,9 @@ export default function CalcBPComponent() {
 
   return (
     <div className="mx-auto w-full max-w-7xl space-y-7 p-1 sm:p-2 lg:space-y-8">
-      <div className="collapse collapse-arrow border border-slate-200/80 bg-white/75 shadow-lg backdrop-blur-sm">
+      <div className="collapse collapse-arrow border border-blue-900/80 bg-slate-950/90 text-white shadow-lg backdrop-blur-sm">
         <input type="checkbox" defaultChecked />
-        <div className="collapse-title px-5 py-4 text-lg font-black tracking-tight text-slate-800 sm:text-xl">
+        <div className="collapse-title px-5 py-4 text-lg font-black tracking-tight text-white sm:text-xl">
           1. รายละเอียด Battle Pass (BP)
         </div>
         <div className="collapse-content space-y-6 px-2 pb-4 sm:px-3">
@@ -621,9 +592,9 @@ export default function CalcBPComponent() {
         </div>
       </div>
 
-      <div className="collapse collapse-arrow border border-slate-200/80 bg-white/75 shadow-lg backdrop-blur-sm">
+      <div className="collapse collapse-arrow border border-blue-900/80 bg-slate-950/90 text-white shadow-lg backdrop-blur-sm">
         <input type="checkbox" defaultChecked={false} />
-        <div className="collapse-title px-5 py-4 text-lg font-black tracking-tight text-slate-800 sm:text-xl">
+        <div className="collapse-title px-5 py-4 text-lg font-black tracking-tight text-white sm:text-xl">
           2. Daily , Weekly , Summary
         </div>
         <div className="collapse-content space-y-6 px-2 pb-4 sm:px-3">
@@ -646,9 +617,9 @@ export default function CalcBPComponent() {
         </div>
       </div>
 
-      <div className="collapse collapse-arrow border border-slate-200/80 bg-white/75 shadow-lg backdrop-blur-sm">
+      <div className="collapse collapse-arrow border border-blue-900/80 bg-slate-950/90 text-white shadow-lg backdrop-blur-sm">
         <input type="checkbox" defaultChecked={false} />
-        <div className="collapse-title px-5 py-4 text-lg font-black tracking-tight text-slate-800 sm:text-xl">
+        <div className="collapse-title px-5 py-4 text-lg font-black tracking-tight text-white sm:text-xl">
           3. Level Calc
         </div>
         <div className="collapse-content px-2 pb-4 sm:px-3">

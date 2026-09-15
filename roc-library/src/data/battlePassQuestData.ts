@@ -229,8 +229,8 @@ export const WEEKLY_QUESTS: Quest[] = [
  * July 9 - September 8, 2026
  */
 export const SEASON_CONFIG: SeasonConfig = {
-  eventStartDate: new Date(2026, 6, 8, 14, 0, 0), // April 22, 2026 12:00
-  eventEndDate: new Date(2026, 8, 9, 6, 0, 0, 0), // June 24, 2026 23:59
+  eventStartDate: new Date(2026, 8, 13, 14, 0, 0), // April 22, 2026 12:00
+  eventEndDate: new Date(2026, 8, 14, 6, 0, 0, 0), // June 24, 2026 23:59
   seasonNumber: 6, // Season 5 for display
 };
 

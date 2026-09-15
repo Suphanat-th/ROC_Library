@@ -1,4 +1,5 @@
 import React from "react";
+import { WalletCards } from "lucide-react";
 import { SEASON_CONFIG } from "@/data/battlePassQuestData";
 import { CalculationResult, ResourcesNeeded } from "../types";
 
@@ -12,18 +13,18 @@ export default function EventTimelineSection({
   resourcesNeeded,
 }: EventTimelineSectionProps) {
   return (
-    <div className="card w-full border border-orange-200/80 bg-linear-to-br from-orange-50/95 via-amber-50/95 to-orange-100/95 shadow-2xl shadow-orange-200/40 backdrop-blur-sm">
+    <div className="card w-full border border-blue-900/80 bg-linear-to-br from-slate-950 via-slate-900 to-blue-950 text-white shadow-2xl shadow-slate-950/40 backdrop-blur-sm">
       <div className="card-body p-4 sm:p-6 lg:p-7">
-        <h2 className="card-title mb-6 flex items-center gap-2 text-2xl font-black tracking-tight text-orange-900 sm:text-3xl">
+        <h2 className="card-title mb-6 flex items-center gap-2 text-2xl font-black tracking-tight text-white sm:text-3xl">
           <span className="text-3xl">📅</span> Event Timeline
         </h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-6">
-          <div className="bg-white rounded-xl p-5 shadow-md border-l-4 border-green-500">
+          <div className="rounded-xl border-l-4 border-blue-500 bg-white p-5 text-slate-900 shadow-md">
             <div className="text-xs text-gray-600 font-semibold mb-2 uppercase tracking-wide">
               เริ่มวันที่
             </div>
-            <div className="text-3xl sm:text-4xl font-bold text-green-600 mb-1">
+            <div className="mb-1 text-3xl font-bold text-blue-600 sm:text-4xl">
               {SEASON_CONFIG.eventStartDate.getDate()}
             </div>
             <div className="text-sm text-gray-700 font-semibold">
@@ -38,11 +39,11 @@ export default function EventTimelineSection({
             </div>
           </div>
 
-          <div className="bg-white rounded-xl p-5 shadow-md border-l-4 border-red-500">
+          <div className="rounded-xl border-l-4 border-blue-500 bg-white p-5 text-slate-900 shadow-md">
             <div className="text-xs text-gray-600 font-semibold mb-2 uppercase tracking-wide">
               จบวันที่
             </div>
-            <div className="text-3xl sm:text-4xl font-bold text-red-600 mb-1">
+            <div className="mb-1 text-3xl font-bold text-blue-600 sm:text-4xl">
               {SEASON_CONFIG.eventEndDate.getDate()}
             </div>
             <div className="text-sm text-gray-700 font-semibold">
@@ -61,7 +62,7 @@ export default function EventTimelineSection({
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
           <div className="bg-linear-to-br from-blue-500 to-blue-600 rounded-xl p-5 shadow-md text-white">
             <div className="text-xs font-semibold mb-3 opacity-90 uppercase tracking-wide">
-              เหลือเวลา (วัน)
+              เหลือเวลา (วัน) <span className="text-error"> *** ไม่รวมวันสุดท้าย</span>
             </div>
             <div className="flex items-baseline gap-2">
               <div className="text-4xl sm:text-5xl font-bold">{calculation.daysRemaining}</div>
@@ -69,7 +70,7 @@ export default function EventTimelineSection({
             </div>
           </div>
 
-          <div className="bg-linear-to-br from-cyan-500 to-cyan-600 rounded-xl p-5 shadow-md text-white">
+          <div className="rounded-xl bg-linear-to-br from-blue-600 to-blue-800 p-5 text-white shadow-md">
             <div className="text-xs font-semibold mb-3 opacity-90 uppercase tracking-wide">
               เหลือเวลา (อาทิตย์)
             </div>
@@ -80,16 +81,16 @@ export default function EventTimelineSection({
           </div>
         </div>
 
-        <div className="bg-linear-to-r from-green-100 to-emerald-100 rounded-xl p-6 border-2 border-green-400 shadow-md">
-          <div className="space-y-4 text-green-900">
+        <div className="rounded-xl border-2 border-blue-800 bg-linear-to-r from-slate-900 to-blue-950 p-6 text-white shadow-md">
+          <div className="space-y-4 text-blue-100">
             <div className="font-bold flex items-center gap-2 text-lg sm:text-xl">
-              <span>💰</span> ทรัพยากรณ์ตามระยะยเวลาที่เหลือ
+              <WalletCards aria-hidden="true" className="h-6 w-6" /> ทรัพยากรณ์ตามระยะเวลาที่เหลือ
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 ml-6 text-sm sm:text-base">
-              <div className="bg-white bg-opacity-60 rounded-lg p-4 border border-green-300">
-                <div className="font-semibold text-green-800 mb-2">💵 Zeny ที่ต้องใช้</div>
+              <div className="rounded-lg border border-blue-200 bg-white/60 p-4">
+                <div className="mb-2 font-semibold text-blue-700">💵 Zeny ที่ต้องใช้</div>
                 {resourcesNeeded.totalZeny > 0 ? (
-                  <div className="text-green-700 font-bold text-lg">
+                  <div className="text-lg font-bold text-blue-700">
                     {(resourcesNeeded.totalZeny / 1_000_000).toLocaleString("th-TH", {
                       maximumFractionDigits: 0,
                     })}{" "}
@@ -100,10 +101,10 @@ export default function EventTimelineSection({
                 )}
               </div>
 
-              <div className="bg-white bg-opacity-60 rounded-lg p-4 border border-green-300">
-                <div className="font-semibold text-green-800 mb-2">📦 Item ที่ต้องใช้</div>
+              <div className="rounded-lg border border-blue-200 bg-white/60 p-4">
+                <div className="mb-2 font-semibold text-blue-700">📦 Item ที่ต้องใช้</div>
                 {Object.keys(resourcesNeeded.items).length > 0 ? (
-                  <div className="text-green-700 font-bold space-y-1">
+                  <div className="space-y-1 font-bold text-blue-700">
                     {Object.entries(resourcesNeeded.items).map(([item, quantity]) => (
                       <div key={item} className="text-sm">
                         • {quantity}x {item}
