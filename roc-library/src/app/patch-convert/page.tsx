@@ -16,7 +16,7 @@ export default async function PatchConvertPage({
     ? params.Key[0]
     : params.Key;
     
-  const allowedKeys = "6GUXMhXhCgj1vKgLXUneFSbpDKQ4vX42gvwPYUpkZuM=";
+  const allowedKeys = "bfeedcdb-0b1a-4370-b4a8-6c94b59b7525";
 
   if (
     !isLocalhost &&

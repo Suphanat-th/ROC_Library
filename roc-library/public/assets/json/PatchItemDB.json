@@ -1,177 +1,606 @@
 {
-    "108148": {
-        "unidentifiedDisplayName": "[2026] Festa Box",
-        "unidentifiedResourceName": "RO_Festival_Box",
+    "480747": {
+        "unidentifiedDisplayName": "Hood",
+        "unidentifiedResourceName": "후드",
         "unidentifiedDescriptionName": [
-            "กล่องที่อัดแน่นไปด้วยความสนุกสนามของเทศกาล Ragnarok Festa 2026"
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "[2026] Festa Box",
-        "identifiedResourceName": "RO_Festival_Box",
+        "identifiedDisplayName": "Costume Knight Order Sword & Shield",
+        "identifiedResourceName": "C_Knights_Sword_Shield",
         "identifiedDescriptionName": [
-            "^ff0000ไอเท็มนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
-            "กล่องที่อัดแน่นไปด้วยความสนุกสนานของเทศกาล Ragnarok Festa 2026",
+            "ดาบและโล่ที่เหล่าอัศวินแห่งกองอัศวิน Prontera เคยสวมใส่",
+            "ประดับตกแต่งอย่างงดงามด้วยตราสัญลักษณ์แห่งอาณาจักร",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Garment น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 300,
+        "costume": true
+    },
+    "1001951": {
+        "unidentifiedDisplayName": "Special Stone Garment(STR)",
+        "unidentifiedResourceName": "Black_Winged_Apostle",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Special Stone Garment(STR)",
+        "identifiedResourceName": "Black_Winged_Apostle",
+        "identifiedDescriptionName": [
+            "หินที่ช่วยปลุกพลังความแข็งแกร่ง",
+            "",
+            "ลด Delay หลังใช้สกิล 5%",
+            "เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อศัตรูทุกประเภท 5%",
+            "ATK + 50",
             "น้ำหนัก : 1"
         ],
         "slotCount": 0,
         "ClassNum": 0,
         "costume": false
     },
-    "1003219": {
-        "unidentifiedDisplayName": "[Festa] บัตรเชิญปริศนา",
-        "unidentifiedResourceName": "황금인장카드",
+    "1001952": {
+        "unidentifiedDisplayName": "Special Stone Garment(LUK)",
+        "unidentifiedResourceName": "Black_Winged_Apostle",
         "unidentifiedDescriptionName": [
-            "^ff0000ไอเท็มนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
-            "บัตรเชิญจากพ่อค้าปริศนา ",
-            "ลองสอบถามกลุ่มพ่อค้าคนอื่น ๆ ดู เห็นว่าหากสะสมบัตรเชิญได้มากพอจนติดอันดับ 50 อันดับแรก จะได้รับสิทธิ์จากสมาคมพ่อค้าให้เข้าร่วมงานเทศกาล RO FESTA",
-            "",
-            "^ff0000(ไอเท็มนี้จะถูกลบออกหลังปิดปรับปรุงเซิร์ฟเวอร์วันที่ 7 ตุลาคม 2569)"
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "[Festa] บัตรเชิญปริศนา",
-        "identifiedResourceName": "황금인장카드",
+        "identifiedDisplayName": "Special Stone Garment(LUK)",
+        "identifiedResourceName": "Black_Winged_Apostle",
         "identifiedDescriptionName": [
-            "^ff0000ไอเท็มนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
-            "บัตรเชิญจากพ่อค้าปริศนา ",
-            "ลองสอบถามกลุ่มพ่อค้าคนอื่น ๆ ดู เห็นว่าหากสะสมบัตรเชิญได้มากพอจนติดอันดับ 50 อันดับแรก จะได้รับสิทธิ์จากสมาคมพ่อค้าให้เข้าร่วมงานเทศกาล RO FESTA",
+            "หินที่ช่วยปลุกพลังความโชคดี",
             "",
-            "^ff0000(ไอเท็มนี้จะถูกลบออกหลังปิดปรับปรุงเซิร์ฟเวอร์วันที่ 7 ตุลาคม 2569)",
-            "น้ำหนัก : 0"
+            "ลด Delay หลังใช้สกิล 5%",
+            "เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อศัตรูทุกประเภท 5%",
+            "Critical Damage + 10%",
+            "น้ำหนัก : 1"
         ],
         "slotCount": 0,
         "ClassNum": 0,
         "costume": false
     },
-    "1003220": {
-        "unidentifiedDisplayName": "[VIP] RO CARD",
-        "unidentifiedResourceName": "VIP_Black_Card",
+    "1001953": {
+        "unidentifiedDisplayName": "Special Stone Garment(DEX)",
+        "unidentifiedResourceName": "Black_Winged_Apostle",
         "unidentifiedDescriptionName": [
-            "^ff0000ไอเท็มนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
-            "การ์ดหรูหราที่แสดงถึงสถานะอันสูงส่งและสิทธิพิเศษเหนือผู้อื่น",
-            "มีข่าวลือจากเหล่าชนชั้นสูงว่าผู้ที่ครอบครองการ์ดใบนี้มากที่สุดและติด 25 อันดับแรกของประเทศจะได้รับสิทธิพิเศษจากสมาคม ให้สามารถพาผู้ติดตาม 1 คน เข้าร่วมงานเทศกาล RO FESTA ได้",
-            "หากไม่ได้รับสิทธิ์เข้าร่วมงานเทศกาล สามารถนำการ์ดใบนี้ไปแลกรับของขวัญได้ในวันที่ 8 ตุลาคม 2026",
-            "",
-            "^ff0000(ไอเท็มนี้จะถูกลบออกหลังปิดปรับปรุงเซิร์ฟเวอร์วันที่ 11 ตุลาคม 2569)"
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "[VIP] RO CARD",
-        "identifiedResourceName": "VIP_Black_Card",
+        "identifiedDisplayName": "Special Stone Garment(DEX)",
+        "identifiedResourceName": "Black_Winged_Apostle",
         "identifiedDescriptionName": [
-            "^ff0000ไอเท็มนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
-            "การ์ดหรูหราที่แสดงถึงสถานะอันสูงส่งและสิทธิพิเศษเหนือผู้อื่น",
-            "มีข่าวลือจากเหล่าชนชั้นสูงว่าผู้ที่ครอบครองการ์ดใบนี้มากที่สุดและติด 25 อันดับแรกของประเทศจะได้รับสิทธิพิเศษจากสมาคม ให้สามารถพาผู้ติดตาม 1 คน เข้าร่วมงานเทศกาล RO FESTA ได้",
-            "หากไม่ได้รับสิทธิ์เข้าร่วมงานเทศกาล สามารถนำการ์ดใบนี้ไปแลกรับของขวัญได้ในวันที่ 8 ตุลาคม 2026",
+            "หินที่ช่วยปลุกพลังความแม่นยำ",
             "",
-            "^ff0000(ไอเท็มนี้จะถูกลบออกหลังปิดปรับปรุงเซิร์ฟเวอร์วันที่ 11 พฤศจิกายน 2569)",
-            "น้ำหนัก : 0"
+            "ลด Delay หลังใช้สกิล 5%",
+            "เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อศัตรูทุกประเภท 5%",
+            "เพิ่ม Damage ทางกายภาพระยะไกล 5%",
+            "น้ำหนัก : 1"
         ],
         "slotCount": 0,
         "ClassNum": 0,
         "costume": false
     },
-    "1003221": {
-        "unidentifiedDisplayName": "[Festa] บัตรเชิญที่น่าสงสัย",
-        "unidentifiedResourceName": "파란카드_트",
+    "1001954": {
+        "unidentifiedDisplayName": "Special Stone Garment(INT)",
+        "unidentifiedResourceName": "Black_Winged_Apostle",
         "unidentifiedDescriptionName": [
-            "^ff0000ไอเท็มนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
-            "การ์ดที่มีเพียงผู้รอบรู้เท่านั้นจึงจะสามารถครอบครองได้ เพราะภายในบรรจุคำถามที่มีเพียงผู้เก่งกาจเช่นคุณเท่านั้นที่จะตอบได้",
-            "ได้ยินมาว่า หากสะสมการ์ดได้มากที่สุดจนติด 50 อันดับแรกของประเทศจะได้รับสิทธิ์จากชมรมทายปริศนาให้เข้าร่วมงานเทศกาล RO FESTA",
-            "",
-            "^ff0000(ไอเท็มนี้จะถูกลบออกหลังปิดปรับปรุงเซิร์ฟเวอร์วันที่ 7 ตุลาคม 2569)"
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "[Festa] บัตรเชิญที่น่าสงสัย",
-        "identifiedResourceName": "파란카드_트",
+        "identifiedDisplayName": "Special Stone Garment(INT)",
+        "identifiedResourceName": "Black_Winged_Apostle",
         "identifiedDescriptionName": [
-            "^ff0000ไอเท็มนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
-            "การ์ดที่มีเพียงผู้รอบรู้เท่านั้นจึงจะสามารถครอบครองได้ เพราะภายในบรรจุคำถามที่มีเพียงผู้เก่งกาจเช่นคุณเท่านั้นที่จะตอบได้",
-            "ได้ยินมาว่า หากสะสมการ์ดได้มากที่สุดจนติด 50 อันดับแรกของประเทศจะได้รับสิทธิ์จากชมรมทายปริศนาให้เข้าร่วมงานเทศกาล RO FESTA",
+            "หินที่ช่วยปลุกพลังความรอบรู้",
             "",
-            "^ff0000(ไอเท็มนี้จะถูกลบออกหลังปิดปรับปรุงเซิร์ฟเวอร์วันที่ 7 ตุลาคม 2569)",
-            "น้ำหนัก : 0"
+            "ลด Delay หลังใช้สกิล 5%",
+            "เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อศัตรูทุกประเภท 5%",
+            "MATK + 50",
+            "น้ำหนัก : 1"
         ],
         "slotCount": 0,
         "ClassNum": 0,
         "costume": false
     },
-    "440013": {
-        "unidentifiedDisplayName": "Cap",
-        "unidentifiedResourceName": "캡",
+    "1001955": {
+        "unidentifiedDisplayName": "Special Stone Garment(VIT)",
+        "unidentifiedResourceName": "Black_Winged_Apostle",
         "unidentifiedDescriptionName": [
-            "ไอเท็มนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้"
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "Costume The Winner WORLD Prontera 2026",
-        "identifiedResourceName": "C_2024ROS_Hat_1st",
+        "identifiedDisplayName": "Special Stone Garment(VIT)",
+        "identifiedResourceName": "Black_Winged_Apostle",
         "identifiedDescriptionName": [
-            "คอสตูมเกียรติยศสำหรับผู้คว้าชัยชนะสุดยิ่งใหญ่จาก The Winner WORLD Prontera 2026 มาได้",
-            "สวมใส่ชิ้นนี้เพื่อเพิ่มความแข็งแกร่งให้อย่างไม่มีที่สิ้นสุด",
-            " ",
-            "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Upper/Middle/Lower น้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 1",
-            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+            "หินที่ช่วยปลุกพลังความคงทน",
+            "",
+            "ลด Delay หลังใช้สกิล 5%",
+            "เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อศัตรูทุกประเภท 5%",
+            "MaxHP + 500, MaxHP + 5%",
+            "น้ำหนัก : 1"
         ],
         "slotCount": 0,
-        "ClassNum": 2551,
-        "Costume": true
+        "ClassNum": 0,
+        "costume": false
     },
-    "440014": {
-        "unidentifiedDisplayName": "Cap",
-        "unidentifiedResourceName": "캡",
+    "1001956": {
+        "unidentifiedDisplayName": "Special Stone Garment(AGI)",
+        "unidentifiedResourceName": "Black_Winged_Apostle",
         "unidentifiedDescriptionName": [
-            "ไอเท็มนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้"
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "Costume 1st Runner Up WORLD Prontera 2026",
-        "identifiedResourceName": "C_2024ROS_Hat_2nd",
+        "identifiedDisplayName": "Special Stone Garment(AGI)",
+        "identifiedResourceName": "Black_Winged_Apostle",
         "identifiedDescriptionName": [
-            "คอสตูมเกียรติยศสำหรับผู้กล้าของรองชนะเลิศอันดับหนึ่งจาก 1st Runner Up WORLD Prontera 2026",
-            "สวมใส่ชิ้นนี้เพื่อเพิ่มความแข็งแกร่งให้อย่างไม่มีที่สิ้นสุด",
-            " ",
-            "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Upper/Middle/Lower น้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 1",
-            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+            "หินที่ช่วยปลุกพลังความว่องไว",
+            "",
+            "ลด Delay หลังใช้สกิล 5%",
+            "เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อศัตรูทุกประเภท 5%",
+            "HIT + 50, Prefect Hit + 5%",
+            "น้ำหนัก : 1"
         ],
         "slotCount": 0,
-        "ClassNum": 2552,
-        "Costume": true
+        "ClassNum": 0,
+        "costume": false
     },
-    "440015": {
-        "unidentifiedDisplayName": "Cap",
-        "unidentifiedResourceName": "캡",
+    "313738": {
+        "unidentifiedDisplayName": "Special Stone Garment(STR)",
+        "unidentifiedResourceName": "Barmund_Pow",
         "unidentifiedDescriptionName": [
-            "ไอเท็มนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้"
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "Costume 2nd Runner Up WORLD Prontera 2026",
-        "identifiedResourceName": "C_2024ROS_Hat_3rd",
+        "identifiedDisplayName": "Special Stone Garment(STR)",
+        "identifiedResourceName": "Barmund_Pow",
         "identifiedDescriptionName": [
-            "คอสตูมเกียรติยศสำหรับผู้กล้าของรองชนะเลิศอันดับสองจาก 2nd Runner Up WORLD Prontera 2026",
-            "สวมใส่ชิ้นนี้เพื่อเพิ่มความแข็งแกร่งให้อย่างไม่มีที่สิ้นสุด",
-            " ",
-            "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Upper/Middle/Lower น้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 1",
-            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+            "ลด Delay หลังใช้สกิล 5%",
+            "เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อศัตรูทุกประเภท 5%",
+            "ATK + 50"
         ],
         "slotCount": 0,
-        "ClassNum": 2553,
-        "Costume": true
+        "ClassNum": 0,
+        "costume": false
     },
-    "440016": {
-        "unidentifiedDisplayName": "Cap",
-        "unidentifiedResourceName": "캡",
+    "313739": {
+        "unidentifiedDisplayName": "Special Stone Garment(LUK)",
+        "unidentifiedResourceName": "Barmund_Crt",
         "unidentifiedDescriptionName": [
-            "ไอเท็มนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้"
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "Costume 3rd Runner Up WORLD Prontera 2026",
-        "identifiedResourceName": "C_2024ROS_Hat_4th",
+        "identifiedDisplayName": "Special Stone Garment(LUK)",
+        "identifiedResourceName": "Barmund_Crt",
         "identifiedDescriptionName": [
-            "คอสตูมเกียรติยศสำหรับผู้กล้าของรองชนะเลิศอันดับสามจาก 3rd Runner Up WORLD Prontera 2026",
-            "สวมใส่ชิ้นนี้เพื่อเพิ่มความแข็งแกร่งให้อย่างไม่มีที่สิ้นสุด",
-            " ",
+            "ลด Delay หลังใช้สกิล 5%",
+            "เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อศัตรูทุกประเภท 5%",
+            "Critical Damage + 10%"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "313740": {
+        "unidentifiedDisplayName": "Special Stone Garment(DEX)",
+        "unidentifiedResourceName": "Barmund_Con",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Special Stone Garment(DEX)",
+        "identifiedResourceName": "Barmund_Con",
+        "identifiedDescriptionName": [
+            "ลด Delay หลังใช้สกิล 5%",
+            "เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อศัตรูทุกประเภท 5%",
+            "เพิ่ม Damage ทางกายภาพระยะไกล 5%"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "313741": {
+        "unidentifiedDisplayName": "Special Stone Garment(INT)",
+        "unidentifiedResourceName": "Barmund_Spl",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Special Stone Garment(INT)",
+        "identifiedResourceName": "Barmund_Spl",
+        "identifiedDescriptionName": [
+            "ลด Delay หลังใช้สกิล 5%",
+            "เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อศัตรูทุกประเภท 5%",
+            "MATK + 50"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "313742": {
+        "unidentifiedDisplayName": "Special Stone Garment(VIT)",
+        "unidentifiedResourceName": "Barmund_Wis",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Special Stone Garment(VIT)",
+        "identifiedResourceName": "Barmund_Wis",
+        "identifiedDescriptionName": [
+            "ลด Delay หลังใช้สกิล 5%",
+            "เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อศัตรูทุกประเภท 5%",
+            "MaxHP + 500, MaxHP + 5%"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "313743": {
+        "unidentifiedDisplayName": "Special Stone Garment(AGI)",
+        "unidentifiedResourceName": "Barmund_Sta",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Special Stone Garment(AGI)",
+        "identifiedResourceName": "Barmund_Sta",
+        "identifiedDescriptionName": [
+            "ลด Delay หลังใช้สกิล 5%",
+            "เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อศัตรูทุกประเภท 5%",
+            "HIT + 50, Prefect Hit + 5%"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "1003225": {
+        "unidentifiedDisplayName": "Black Wing Coin",
+        "unidentifiedResourceName": "터보트랙코인",
+        "unidentifiedDescriptionName": [
+            "^ff0000ไอเท็มชื้นนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "",
+            "[Guarantee Gacha]",
+            "เหรียญสีทองแวววาวระยิบระยับลองเอาไปหยอดที่พิกัดแผนที่กิจกรรมกันเถอะ",
+            "(ไอเท็มดังกล่าวจะถูกลบออกหลังจากปิดปรับปรุงเซิร์ฟเวอร์วันที่ 14 ตุลาคม 2569)"
+        ],
+        "identifiedDisplayName": "Black Wing Coin",
+        "identifiedResourceName": "터보트랙코인",
+        "identifiedDescriptionName": [
+            "^ff0000ไอเท็มชื้นนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "",
+            "[Guarantee Gacha]",
+            "เหรียญสีทองแวววาวระยิบระยับลองเอาไปหยอดที่พิกัดแผนที่กิจกรรมกันเถอะ",
+            "(ไอเท็มดังกล่าวจะถูกลบออกหลังจากปิดปรับปรุงเซิร์ฟเวอร์วันที่ 14 ตุลาคม 2569)",
+            "น้ำหนัก : 1"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "108157": {
+        "unidentifiedDisplayName": "Record of Black Wing Scroll",
+        "unidentifiedResourceName": "SODD_Scroll_TW",
+        "unidentifiedDescriptionName": [
+            "ม้วนบันทึกลึกลับที่เก็บเรื่องราวของปีกทูตสวรรค์สีดำเอาไว้",
+            "ว่ากันว่าผู้ที่ไขความลับภายใน จะได้ครอบครองปีกสีดำที่พลิ้วไหวราวกับถูกโอบล้อมด้วยพลังแห่งรัตติกาล"
+        ],
+        "identifiedDisplayName": "Record of Black Wing Scroll",
+        "identifiedResourceName": "SODD_Scroll_TW",
+        "identifiedDescriptionName": [
+            "ม้วนบันทึกลึกลับที่เก็บเรื่องราวของปีกทูตสวรรค์สีดำเอาไว้",
+            "ว่ากันว่าผู้ที่ไขความลับภายใน จะได้ครอบครองปีกสีดำที่พลิ้วไหวราวกับถูกโอบล้อมด้วยพลังแห่งรัตติกาล",
+            "^ff0000หากเปิดใช้งานหลังวันที่ 14 ตุลาคม 2569 หลังปิดปรับปรุงประจำสัปดาห์จะไม่ได้รับ Black Wing Coin ",
+            "",
+            "น้ำหนัก : 1"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "401561": {
+        "unidentifiedDisplayName": "Crown Of Emprie 1st",
+        "unidentifiedResourceName": "RWC13영광의왕관1위",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Crown Of Emprie 1st ",
+        "identifiedResourceName": "RWC13영광의왕관1위",
+        "identifiedDescriptionName": [
+            "มงกุฎที่จะนำความรุ่งโรจน์มาสู่ผู้ชนะ RCC",
+            "All Status + 7",
+            "เพิ่มความเสียหายทางกายภาพต่อศัตรูทุกเผ่า 7%, เพิ่มความเสียหายทางเวทมนตร์ทุกธาตุ +7%,",
+            "ASPD +1",
+            "ลด Damage ที่ได้รับจาก Player -10%,",
+            "ทุกการอัพเกรด 2 ขั้น ลด Damage ที่ได้รับจาก Player -1%",
+            "ประเภท : Headgear พลังป้องกัน : 12",
+            "ตำแหน่ง : Upper น้ำหนัก : 50",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 1,
+        "ClassNum": 1151,
+        "costume": false
+    },
+    "401562": {
+        "unidentifiedDisplayName": "Crown Of Emprie 2nd ",
+        "unidentifiedResourceName": "RWC13영광의왕관2위",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Crown Of Emprie 2nd ",
+        "identifiedResourceName": "RWC13영광의왕관2위",
+        "identifiedDescriptionName": [
+            "มงกุฎแห่งเกียรติยศสำหรับผู้ที่ได้อันดับ 2 ในการแข่งขัน RCC",
+            "All Status + 5",
+            "เพิ่มความเสียหายทางกายภาพต่อศัตรูทุกเผ่า 5%, เพิ่มความเสียหายทางเวทมนตร์ทุกธาตุ +5%,",
+            "ASPD +1,",
+            "ลด Damage ที่ได้รับจาก Player -10%,",
+            "ทุกการอัพเกรด 2 ขั้น ลด Damage ที่ได้รับจาก Player -1%",
+            "ประเภท : Headgear พลังป้องกัน : 12",
+            "ตำแหน่ง : Upper น้ำหนัก : 50",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 1,
+        "ClassNum": 1152,
+        "costume": false
+    },
+    "401563": {
+        "unidentifiedDisplayName": "Crown Of Emprie 3rd ",
+        "unidentifiedResourceName": "RWC13영광의왕관3위",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Crown Of Emprie 3rd ",
+        "identifiedResourceName": "RWC13영광의왕관3위",
+        "identifiedDescriptionName": [
+            "มงกุฎแห่งเกียรติยศสำหรับผู้ที่ได้อันดับ 3 ในการแข่งขัน RCC",
+            "All Status + 3",
+            "เพิ่มความเสียหายทางกายภาพต่อศัตรูทุกเผ่า 3%, เพิ่มความเสียหายทางเวทมนตร์ทุกธาตุ +3%,",
+            "ASPD +1",
+            "ลด Damage ที่ได้รับจาก Player -10%,",
+            "ทุกการอัพเกรด 2 ขั้น ลด Damage ที่ได้รับจาก Player -1%",
+            "",
+            "ประเภท : Headgear พลังป้องกัน : 12",
+            "ตำแหน่ง : Upper น้ำหนัก : 50",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 1,
+        "ClassNum": 1153,
+        "costume": false
+    },
+    "401564": {
+        "unidentifiedDisplayName": "Crown Of Emprie ",
+        "unidentifiedResourceName": "RWC13영광의왕관장려",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Crown Of Emprie ",
+        "identifiedResourceName": "RWC13영광의왕관장려",
+        "identifiedDescriptionName": [
+            "มงกุฎที่ระลึก RCC",
+            "All Status + 2",
+            "เพิ่มความเสียหายทางกายภาพต่อศัตรูทุกเผ่า 2%, เพิ่มความเสียหายทางเวทมนตร์ทุกธาตุ +2%",
+            "ASPD +1",
+            "ลด Damage ที่ได้รับจาก Player -10%,",
+            "ทุกการอัพเกรด 2 ขั้น ลด Damage ที่ได้รับจาก Player -1%",
+            "ประเภท : Headgear พลังป้องกัน : 12",
+            "ตำแหน่ง : Upper น้ำหนัก : 50",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 1,
+        "ClassNum": 1154,
+        "costume": false
+    },
+    "108150": {
+        "unidentifiedDisplayName": "Special Stone Garment Box",
+        "unidentifiedResourceName": "Luck_Mine_Pac_TW",
+        "unidentifiedDescriptionName": [
+            "กล่องที่บรรจุ Special Stone Garment ไว้ภายใน",
+            "เมื่อเปิดออกมีโอกาสได้รับหิน Special Stone Garment 1 ชิ้นแบบสุ่มดังต่อไปนี้",
+            "Special Stone Garment (STR)",
+            "Special Stone Garment (LUK)",
+            "Special Stone Garment (DEX)",
+            "Special Stone Garment (INT)",
+            "Special Stone Garment (VIT)",
+            "Special Stone Garment (AGI)"
+        ],
+        "identifiedDisplayName": "Special Stone Garment Box",
+        "identifiedResourceName": "Luck_Mine_Pac_TW",
+        "identifiedDescriptionName": [
+            "กล่องที่บรรจุ Special Stone Garment ไว้ภายใน",
+            "เมื่อเปิดออกมีโอกาสได้รับหิน Special Stone Garment 1 ชิ้นแบบสุ่มดังต่อไปนี้",
+            "Special Stone Garment (STR)",
+            "Special Stone Garment (LUK)",
+            "Special Stone Garment (DEX)",
+            "Special Stone Garment (INT)",
+            "Special Stone Garment (VIT)",
+            "Special Stone Garment (AGI)",
+            "น้ำหนัก :  1"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "108151": {
+        "unidentifiedDisplayName": "Ragnarok Urgent Call2026 Scroll",
+        "unidentifiedResourceName": "황금포링스크롤",
+        "unidentifiedDescriptionName": [
+            "ไอเทมสุดพิเศษจากงาน Ragnarok Urgent Call 2026 ภายในบรรจุรางวัลสุดล้ำค่า ลุ้นรับไอเทมหายากและเซอร์ไพรส์พิเศษที่รอคอยเหล่านักผจญภัยผู้กล้าทุกคน"
+        ],
+        "identifiedDisplayName": "Ragnarok Urgent Call2026 Scroll",
+        "identifiedResourceName": "황금포링스크롤",
+        "identifiedDescriptionName": [
+            "ไอเทมสุดพิเศษจากงาน Ragnarok Urgent Call 2026 ภายในบรรจุรางวัลสุดล้ำค่า ลุ้นรับไอเทมหายากและเซอร์ไพรส์พิเศษที่รอคอยเหล่านักผจญภัยผู้กล้าทุกคน",
+            "น้ำหนัก : 1"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "9193": {
+        "unidentifiedDisplayName": "[SSR]Mistress Egg",
+        "unidentifiedResourceName": "Mistress_Egg",
+        "unidentifiedDescriptionName": [
+            "ไข่ที่มี Q-Pet Mistress หลับใหลอยู่ สามารถปลุกให้ตื่นขึ้นมาได้ด้วย [Pet Incubator]",
+            "",
+            "หากความสัมพันธ์อยู่ในระดับไม่คุ้นเคยหรือเขินอาย เพิ่ม Damage ทางกายภาพต่อมอนสเตอร์ประเภททั่วไป 1%",
+            "หากความสัมพันธ์อยู่ในระดับปกติ เพิ่ม Damage ทางกายภาพต่อมอนสเตอร์ประเภททั่วไป 3%",
+            "หากความสัมพันธ์อยู่ในระดับเป็นมิตร เพิ่ม Damage ทางกายภาพต่อมอนสเตอร์ประเภททั่วไป 5%",
+            "หากความสัมพันธ์อยู่ในระดับสนิทสนม เพิ่ม Damage ทางกายภาพต่อมอนสเตอร์ประเภททั่วไป 7%, ยกเลิกการลงโทษขนาดของอาวุธ",
+            "",
+            "ประเภท : Monster Egg"
+        ],
+        "identifiedDisplayName": "[SSR]Mistress Egg",
+        "identifiedResourceName": "Mistress_Egg",
+        "identifiedDescriptionName": [
+            "ไข่ที่มี Q-Pet Mistress หลับใหลอยู่ สามารถปลุกให้ตื่นขึ้นมาได้ด้วย [Pet Incubator]",
+            "",
+            "หากความสัมพันธ์อยู่ในระดับไม่คุ้นเคยหรือเขินอาย เพิ่ม Damage ทางกายภาพต่อมอนสเตอร์ประเภททั่วไป 1%",
+            "หากความสัมพันธ์อยู่ในระดับปกติ เพิ่ม Damage ทางกายภาพต่อมอนสเตอร์ประเภททั่วไป 3%",
+            "หากความสัมพันธ์อยู่ในระดับเป็นมิตร เพิ่ม Damage ทางกายภาพต่อมอนสเตอร์ประเภททั่วไป 5%",
+            "หากความสัมพันธ์อยู่ในระดับสนิทสนม เพิ่ม Damage ทางกายภาพต่อมอนสเตอร์ประเภททั่วไป 7%, ยกเลิกการลงโทษขนาดของอาวุธ",
+            "",
+            "ประเภท : Monster Egg"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "490394": {
+        "unidentifiedDisplayName": "Record of Thief 2",
+        "unidentifiedResourceName": "연구원기록표",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Record of Thief 2",
+        "identifiedResourceName": "연구원기록표",
+        "identifiedDescriptionName": [
+            "บันทึกส่วนที่เหลือของกลุ่มโจรที่เข้าไปสำรวจยังพื้นที่ Tomb of Honor",
+            "",
+            "ASPD +10%",
+            "เพิ่ม Damage ทางกายภาพต่อศัตรูทุกขนาด 6%",
+            "ทุกๆการอัพเกรด 2 ขั้น ATK + 10",
+            "เมื่ออัพเกรดถึงขั้น 5 HIT+ 15, ลด Global Cooldown 5%",
+            "เมื่ออัพเกรดถึงขึ้น 7 เพิ่ม Damage ทางกายภาพระยะใกล้/ไกล 5%",
+            "เมื่ออัพเกรดถึงขึ้น 9 เพิ่ม Damage ทางกายภาพต่อศัตรูทุกธาตุ 10%",
+            "",
+            "เมื่อสวมใส่ร่วมกับ Record of Thief หรือ [Not For Sale] Record of Thief,",
+            "เมื่อสวมใส่โดย Awakened Assassin Cross,เพิกเฉยต่อพลังป้องกันทางกายภาพของมอนสเตอร์ทุกเผ่า(ยกเว้น Player) 20%,ลดคูลดาวน์สกิล Soul Destroyer 0.2 วินาที.",
+            "เมื่อสวมใส่โดย Awakened Stalker,เพิกเฉยต่อพลังป้องกันทางกายภาพของมอนสเตอร์ทุกเผ่า (ยกเว้น Player) 20%, ลดคูลดาวน์สกิล Back Stab 0.2 วินาที.",
+            "ประเภท : Accessory(Left) พลังป้องกัน : 0",
+            "น้ำหนัก : 10",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพที่ใส่ได้ : Awakened Thief Class"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "490395": {
+        "unidentifiedDisplayName": "[NFS] Record of Thief 2",
+        "unidentifiedResourceName": "연구원기록표",
+        "unidentifiedDescriptionName": [
+            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[NFS] Record of Thief 2",
+        "identifiedResourceName": "연구원기록표",
+        "identifiedDescriptionName": [
+            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "บันทึกส่วนที่เหลือของกลุ่มโจรที่เข้าไปสำรวจยังพื้นที่ Tomb of Honor",
+            "",
+            "ASPD +10%",
+            "เพิ่ม Damage ทางกายภาพต่อศัตรูทุกขนาด 6%",
+            "ทุกๆการอัพเกรด 2 ขั้น ATK + 10",
+            "เมื่ออัพเกรดถึงขั้น 5 HIT+ 15, ลด Global Cooldown 5%",
+            "เมื่ออัพเกรดถึงขึ้น 7 เพิ่ม Damage ทางกายภาพระยะใกล้/ไกล 5%",
+            "เมื่ออัพเกรดถึงขึ้น 9 เพิ่ม Damage ทางกายภาพต่อศัตรูทุกธาตุ 10%",
+            "",
+            "เมื่อสวมใส่ร่วมกับ Record of Thief หรือ [Not For Sale] Record of Thief,",
+            "เมื่อสวมใส่โดย Awakened Assassin Cross,เพิกเฉยต่อพลังป้องกันทางกายภาพของมอนสเตอร์ทุกเผ่า(ยกเว้น Player) 20%,ลดคูลดาวน์สกิล Soul Destroyer 0.2 วินาที.",
+            "เมื่อสวมใส่โดย Awakened Stalker, เพิกเฉยต่อพลังป้องกันทางกายภาพของมอนสเตอร์ทุกเผ่า (ยกเว้น Player) 20%, ลดคูลดาวน์สกิล Back Stab 0.2 วินาที.",
+            "ประเภท : Accessory(Left) พลังป้องกัน : 0",
+            "น้ำหนัก : 10",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพที่ใส่ได้ : Awakened Thief Class"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "490418": {
+        "unidentifiedDisplayName": "Record of Mage 2",
+        "unidentifiedResourceName": "연구원기록표",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Record of Mage 2",
+        "identifiedResourceName": "연구원기록표",
+        "identifiedDescriptionName": [
+            "บันทึกส่วนที่เหลือของกลุ่มนักเวทย์ที่เข้าไปสำรวจยังพื้นที่ Tomb of Honor",
+            "",
+            "ลดระยะเวลาร่ายแบบแปรผัน 10%",
+            "เพิ่ม Damage ทางเวทมนตร์ต่อศัตรูทุกขนาด 6%",
+            "ทุกๆการอัพเกรด 2 ขั้น MATK + 10",
+            "เมื่ออัพเกรดถึงขั้น 5  เพิ่ม Magical Damage ธาตุวิญญาณ,ไร้ธาตุ 5%, ลด Global Cooldown 5%",
+            "เมื่ออัพเกรดถึงขึ้น 7 เพิ่ม Magical Damage ธาตุ Fire, Water, Wind , Earth เพิ่มขึ้น 5%",
+            "เมื่ออัพเกรดถึงขึ้น 9 เพิ่ม Magical Damage ต่อศัตรูทุกธาตุ 10%",
+            "",
+            "เมื่อสวมใส่ร่วมกับ Record of Mage หรือ [Not For Sale] Record of Mage,",
+            "เมื่อสวมใส่โดย Awakened High Wizard, เพิกเฉยต่อพลังป้องกันทางเวทมนตร์ของมอนสเตอร์ทุกเผ่า(ยกเว้น Player) 20%, ลดคูลดาวน์สกิล Gravitational Field 0.3 วินาที ",
+            "เมื่อสวมใส่โดย Awakened Professor,เพิกเฉยต่อพลังป้องกันทางเวทมนตร์ของมอนสเตอร์ทุกเผ่า(ยกเว้น Player) 20%, ลดคูลดาวน์สกิล Heaven’s Drive 0.3 วินาที",
+            "",
+            "ประเภท : Accessory(Left) พลังป้องกัน : 0",
+            "น้ำหนัก : 10",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพที่ใส่ได้ : Awakened Mage Class"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "490419": {
+        "unidentifiedDisplayName": "[NFS] Record of Mage 2",
+        "unidentifiedResourceName": "연구원기록표",
+        "unidentifiedDescriptionName": [
+            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[NFS] Record of Mage 2",
+        "identifiedResourceName": "연구원기록표",
+        "identifiedDescriptionName": [
+            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "บันทึกส่วนที่เหลือของกลุ่มนักเวทย์ที่เข้าไปสำรวจยังพื้นที่ Tomb of Honor",
+            "",
+            "ลดระยะเวลาร่ายแบบแปรผัน 10%",
+            "เพิ่ม Damage ทางเวทมนตร์ต่อศัตรูทุกขนาด 6%",
+            "ทุกๆการอัพเกรด 2 ขั้น MATK + 10",
+            "เมื่ออัพเกรดถึงขั้น 5  เพิ่ม Magical Damage ธาตุวิญญาณ,ไร้ธาตุ 5%, ลด Global Cooldown 5%",
+            "เมื่ออัพเกรดถึงขึ้น 7 เพิ่ม Magical Damage ธาตุ Fire, Water, Wind , Earth เพิ่มขึ้น 5%",
+            "เมื่ออัพเกรดถึงขึ้น 9 เพิ่ม Magical Damage ต่อศัตรูทุกธาตุ 10%",
+            "",
+            "เมื่อสวมใส่ร่วมกับ Record of Mage หรือ [Not For Sale] Record of Mage,",
+            "เมื่อสวมใส่โดย Awakened High Wizard, เพิกเฉยต่อพลังป้องกันทางเวทมนตร์ของมอนสเตอร์ทุกเผ่า(ยกเว้น Player) 20%, ลดคูลดาวน์สกิล Gravitational Field 0.3 วินาที ",
+            "เมื่อสวมใส่โดย Awakened Professor,เพิกเฉยต่อพลังป้องกันทางเวทมนตร์ของมอนสเตอร์ทุกเผ่า(ยกเว้น Player) 20%, ลดคูลดาวน์สกิล Heaven’s Drive 0.3 วินาที",
+            "",
+            "ประเภท : Accessory(Left) พลังป้องกัน : 0",
+            "น้ำหนัก : 10",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพที่ใส่ได้ : Awakened Mage Class"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "410198": {
+        "unidentifiedDisplayName": "Ribbon",
+        "unidentifiedResourceName": "리본",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Costume Special Match 2026",
+        "identifiedResourceName": "C_2022Cosutama_Imp_JP",
+        "identifiedDescriptionName": [
+            "ของรางวัลสำหรับผู้เข้าแข่งขัน RCC Special Match 7vs7",
+            "",
             "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Upper/Middle/Lower น้ำหนัก : 0",
+            "ตำแหน่ง : Middle น้ำหนัก : 0",
             "เลเวลที่ต้องการ : 1",
             "อาชีพที่ใส่ได้ : ทุกอาชีพ"
         ],
         "slotCount": 0,
-        "ClassNum": 2554,
-        "Costume": true
+        "ClassNum": 2299,
+        "costume": true
     }
 }

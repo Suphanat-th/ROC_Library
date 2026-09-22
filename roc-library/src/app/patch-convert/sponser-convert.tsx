@@ -2,14 +2,12 @@
 
 import React from "react";
 
-
 export default function SponserConvert() {
-  
   return (
     <div className="w-full">
-<img
+      <img
         className="w-full"
-        src={`/assets/images/PatchTemplate/FooterP2W.png`}
+        src={`/assets/images/PatchTemplate/wantad.png`}
         alt="item image"
         width={150}
         height={300}
