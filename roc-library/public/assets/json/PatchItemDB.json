@@ -1,23 +1,1321 @@
 {
-    "480335": {
+    "15100": {
+        "unidentifiedDisplayName": "Armor",
+        "unidentifiedResourceName": "초보자용흉갑",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Frozen Breastplate",
+        "identifiedResourceName": "얼어붙은흉갑",
+        "identifiedDescriptionName": [
+            "เกราะหน้าอกเยือกแข็ง ที่ปล่อยพลังไอเย็น",
+            "เกราะได้รับมอบธาตุ Water อย่างถาวร",
+            "ประเภท : Armor ป้องกัน : 20",
+            "น้ำหน้ก : 150",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพ : Awakened Class ทุกอาชีพ ยกเว้น Novice Classes"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0
+    },
+    "15101": {
+        "unidentifiedDisplayName": "Armor",
+        "unidentifiedResourceName": "초보자용흉갑",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Hardened Breastplate",
+        "identifiedResourceName": "굳어진흉갑",
+        "identifiedDescriptionName": [
+            "เกราะอกอันแข็งแรง มีกำลังอันไม่สามารถสั่นคลอนได้",
+            "เกราะได้รับมอบธาตุ Earth อย่างถาวร",
+            "ประเภท : Armor ป้องกัน : 20",
+            "น้ำหน้ก : 150",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพ : Awakened Class ทุกอาชีพ ยกเว้น Novice Classes"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0
+    },
+    "1989": {
+        "unidentifiedDisplayName": "Whip",
+        "unidentifiedResourceName": "로프",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Rhythmic Gymnastics Ribbon",
+        "identifiedResourceName": "리듬체조리본",
+        "identifiedDescriptionName": [
+            "หนึ่งในเครื่องมือที่ใช้ในยิมนาสติกลีลา เพื่อแสดงออกถึงความยืดหยุ่นของร่างกาย",
+            "MATK +120",
+            "ความเร็วโจมตีเพิ่มขึ้น (ดีเลย์เพิ่มขึ้น 20% หลังโจมตี)",
+            "ประเภท: Whip",
+            "โจมตี: 150",
+            "น้ำหน้ก : 30",
+            "เลเวลของอาวุธ : 3",
+            "เลเวลที่ต้องการ: 100",
+            "ติดตั้ง: Awakened Gypsy Class"
+        ],
+        "slotCount": 2,
+        "ClassNum": 14
+    },
+    "2989": {
+        "unidentifiedDisplayName": "Accessory",
+        "unidentifiedResourceName": "링",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Floral Bracelet Of Igu",
+        "identifiedResourceName": "아이구의꽃장식팔찌",
+        "identifiedDescriptionName": [
+            "IGU's flower bracelet",
+            "เวลาร่ายแปรผันของสกิลทั้งหมดลดลง 25%",
+            "ประเภท : Accessory",
+            "ป้องกัน : 0",
+            "น้ำหน้ก : 10",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพ : Awakened Gypsy Class"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0
+    },
+    "2990": {
+        "unidentifiedDisplayName": "Accessory",
+        "unidentifiedResourceName": "링",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Pendant of Harmony",
+        "identifiedResourceName": "펜던트오브하모니",
+        "identifiedDescriptionName": [
+            "Soul of Pendant",
+            "MATK + 6%",
+            "ฟื้นฟู HP และ SP ตามธรรมชาติอย่างละ +50%",
+            "ต้านทานธาตุ Holy +5%",
+            "Auto Spell Renovatio เลเวล 1 จะเปิดใช้งานเมื่อทำการโจมตีกายภาพ",
+            "Sanctuary เลเวล 3 จะเปิดใช้งานเมื่อโดนโจมตีกายภาพ",
+            "STR – 5",
+            "เมื่อใส่คู่กับ Pendant of Chaos: All Stats +5 และ",
+            "สามารถใช้งานสกิล Blast Mine เลเวล 5 ได้",
+            "ประเภท : Accessory ป้องกัน : 0",
+            "น้ำหน้ก : 10",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพ: Awakened Class ทุกอาชีพ ยกเว้น Novice Classes"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0
+    },
+    "2991": {
+        "unidentifiedDisplayName": "Accessory",
+        "unidentifiedResourceName": "링",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Pendant of Chaos",
+        "identifiedResourceName": "펜던트오브카오스",
+        "identifiedDescriptionName": [
+            "Pendant of Chaos",
+            "เพิ่ม Damage ทางกายภาพต่อศัตรูทุกประเภท 6%",
+            "ความต้านทานธาตุ Shadow +5%",
+            "เพิ่มความต้านทานต่อสถานะ Confuse",
+            "เพิ่มโอกาสทำให้เป้าหมายเกิดสถานะสับสน เมื่อโจมตีทางกายภาพ",
+            "เมื่อโดนโจมตีทางกายภาพ จะเพิ่มโอกาสทำให้ศัตรูในรัศมี 11x11 AoE เกิดสถานะสับสน",
+            "INT -5",
+            "ประเภท : Accessory ป้องกัน : 0",
+            "น้ำหน้ก : 10",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพ : Awakened Class ทุกอาชีพ ยกเว้น Novice Classes"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0
+    },
+    "2992": {
+        "unidentifiedDisplayName": "Accessory",
+        "unidentifiedResourceName": "링",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Pendant of Maelstrom",
+        "identifiedResourceName": "펜던트오브마엘슈트롬",
+        "identifiedDescriptionName": [
+            "Pendant of Maelstrom",
+            "เพิ่ม Damage ทางกายภาพต่อศัตรูทุกประเภท 6% MATK +6%",
+            "All Stats +1",
+            "สามารถใช้งานสกิล Blast Mine เลเวล 5 ได้",
+            "ประเภท : Accessory ป้องกัน : 0",
+            "น้ำหน้ก : 10",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพ : Awakened Class ทุกอาชีพ ยกเว้น Novice Classes"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0
+    },
+    "1934": {
+        "unidentifiedDisplayName": "Musical Instrument",
+        "unidentifiedResourceName": "기타",
+        "unidentifiedDescriptionName": [
+            "ไอเทมปริศนา สามารถประเมินได้โดยใช้ [Magnifier]"
+        ],
+        "identifiedDisplayName": "Contrabass",
+        "identifiedResourceName": "콘트라베이스",
+        "identifiedDescriptionName": [
+            "ดับเบิลเบส เป็นเครื่องดนตรีประเภทไวโอลินขนาดใหญ่ มีขนาดใหญ่และทรงพลังพอที่จะใช้เป็นอาวุธได้",
+            "MATK +120",
+            "ลดเวลาคูลดาวน์ของ สกิล  Idun's Apple 2 วินาที",
+            "ประเภท: Instrument",
+            "โจมตี: 180",
+            "น้ำหน้ก : 25",
+            "เลเวลของอาวุธ : 3",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพ: Awakened Clown Class"
+        ],
+        "slotCount": 2,
+        "ClassNum": 13
+    },
+    "1990": {
+        "unidentifiedDisplayName": "Whip",
+        "unidentifiedResourceName": "로프",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Floral Mic Of Igu",
+        "identifiedResourceName": "아이구의꽃장식마이크",
+        "identifiedDescriptionName": [
+            "แส้ไมโครโฟนของ Igu ดูไม่น่าจะมีอะไรแต่เป็นแส้พลังสูงมาก",
+            "ลดการใช้ SP ลง 20 เมื่อใช้ Moonlight Serenade",
+            "เมื่อสวม Aigu's Floral Bracelet ด้วย จะมีผลเมื่อใช้สกิล Arrow Vulcanดังนี้: ดาเมจ +200%",
+            "ประเภท: Whip โจมตี: 160",
+            "น้ำหน้ก : 100",
+            "เลเวลของอาวุธ : 4",
+            "เลเวลที่ต้องการ: 100",
+            "ติดตั้ง: Awakened Gypsy Class"
+        ],
+        "slotCount": 2,
+        "ClassNum": 14
+    },
+    "18123": {
+        "unidentifiedDisplayName": "Bow",
+        "unidentifiedResourceName": "보우",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา สามารถประเมินได้โดยใช้ [Magnifier]"
+        ],
+        "identifiedDisplayName": "Bow of Storms",
+        "identifiedResourceName": "폭풍의활",
+        "identifiedDescriptionName": [
+            "คันธนูมีสัญลักษณ์รูปพายุ",
+            "พลังโจมตีกายภาพระยะไกล +30%",
+            "ลดระยะเวลาการร่ายสกิล Focused Arrow Strike 50%",
+            "เมื่อใช้สกิล Focused Arrow Strike จะใช้ SP เพิ่มขึ้น 10",
+            "ประเภท: Bow  โจมตี: 160",
+            "น้ำหน้ก : 150",
+            "เลเวลของอาวุธ : 4",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพ: Awakened Archer Classes"
+        ],
+        "slotCount": 1,
+        "ClassNum": 11
+    },
+    "18122": {
+        "unidentifiedDisplayName": "Bow",
+        "unidentifiedResourceName": "보우",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา สามารถประเมินได้โดยใช้ [Magnifier]"
+        ],
+        "identifiedDisplayName": "Gigantic Bow",
+        "identifiedResourceName": "거궁",
+        "identifiedDescriptionName": [
+            "Giant Bow มีขนาดใหญ่และหนักมากจึงทำให้มีความแม่นยำต่ำ แต่พลังโจมตีก็รุนแรงเกินคาด",
+            "พลังดาเมจจากการโจมตีกายภาพระยะไกล +40%",
+            "ความเร็วโจมตีลดลง 15%",
+            "Hit -50",
+            "ประเภท: Bow  โจมตี: 195",
+            "น้ำหน้ก : 300",
+            "เลเวลของอาวุธ : 4",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพ: Awakened Archer Classes"
+        ],
+        "slotCount": 1,
+        "ClassNum": 11
+    },
+    "2988": {
+        "unidentifiedDisplayName": "Accessory",
+        "unidentifiedResourceName": "링",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Winged Ring Of Newoz",
+        "identifiedResourceName": "뉴오즈의날개반지",
+        "identifiedDescriptionName": [
+            "New Oz's wing ring",
+            "เวลาร่ายแปรผัน ลดลง 25%",
+            "ประเภท : Accessory",
+            "ป้องกัน : 0",
+            "น้ำหน้ก : 10",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพ : Awakened Clown Class"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0
+    },
+    "27107": {
+        "unidentifiedDisplayName": "Playing Pere Card",
+        "unidentifiedResourceName": "이름없는카드",
+        "unidentifiedDescriptionName": [
+            "เพิ่มพลังโจมตีทางกายภาพที่สร้างต่อศัตรูธาตุ Neutral ขึ้น 20%",
+            "เมื่อสวมใส่กับ Singing Pere Card, เพิ่ม Damage ของ Arrow Vulcan 50%",
+            "ประเภท : Card",
+            "ตำแหน่งติดตั้ง : Accessory(Right)",
+            "น้ำหนัก : 1"
+        ],
+        "identifiedDisplayName": "Playing Pere Card",
+        "identifiedResourceName": "이름없는카드",
+        "identifiedDescriptionName": [
+            "เพิ่มพลังโจมตีทางกายภาพที่สร้างต่อศัตรูธาตุ Neutral ขึ้น 20%",
+            "เมื่อสวมใส่กับ Singing Pere Card, เพิ่ม Damage ของ Arrow Vulcan 50%",
+            "ประเภท : Card",
+            "ตำแหน่งติดตั้ง : Accessory(Right)",
+            "น้ำหนัก : 1"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "EffectID": 1186
+    },
+    "27108": {
+        "unidentifiedDisplayName": "Singing Pere Card",
+        "unidentifiedResourceName": "이름없는카드",
+        "unidentifiedDescriptionName": [
+            "เพิ่มพลังโจมตีทางเวทย์ที่สร้างต่อศัตรูธาตุ Neutral ขึ้น 20%",
+            "เมื่อสวมใส่กับ Playing Pere Card, เพิ่ม Damage ของ Arrow Vulcan 50%",
+            "ประเภท : Card",
+            "ตำแหน่งติดตั้ง : Accessory(Left)",
+            "น้ำหนัก : 1"
+        ],
+        "identifiedDisplayName": "Singing Pere Card",
+        "identifiedResourceName": "이름없는카드",
+        "identifiedDescriptionName": [
+            "เพิ่มพลังโจมตีทางเวทย์ที่สร้างต่อศัตรูธาตุ Neutral ขึ้น 20%",
+            "เมื่อสวมใส่กับ Playing Pere Card, เพิ่ม Damage ของ Arrow Vulcan 50%",
+            "ประเภท : Card",
+            "ตำแหน่งติดตั้ง : Accessory(Left)",
+            "น้ำหนัก : 1"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "EffectID": 1186
+    },
+    "1935": {
+        "unidentifiedDisplayName": "Musical Instrument",
+        "unidentifiedResourceName": "기타",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Ukulele Of Newoz",
+        "identifiedResourceName": "뉴오즈의우크렐레",
+        "identifiedDescriptionName": [
+            "Ukulele ที่ใช้โดย Newoz มันมีสีที่เข้ากันได้ดีกับชุดของเขา",
+            "สามารถใช้งานสกิล Impositio Manus Lv.5",
+            "เพิ่มพลังโจมตีของ Arrow Vulcan 200% เมื่อติดตั้ง Winged Ring Of Newoz",
+            "Arrow Vulcan ต้องเสียค่า SP 50",
+            "ประเภท: Instrument",
+            "โจมตี: 160",
+            "น้ำหน้ก : 200",
+            "เลเวลของอาวุธ : 4",
+            "เลเวลที่ต้องการ: 100",
+            "อาชีพ:  Awakened Clown Class"
+        ],
+        "slotCount": 2,
+        "ClassNum": 13
+    },
+    "1000923": {
+        "unidentifiedDisplayName": "Libra Coin",
+        "unidentifiedResourceName": "금화",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Libra Coin",
+        "identifiedResourceName": "금화",
+        "identifiedDescriptionName": [
+            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "เหรียญสีทองแวววาวระยิบระยับ",
+            "ลองเอาไปหยอดที่ [Guarantee Gacha] พิกัดแผนที่กิจกรรมกันเถอะ",
+            "(ไอเท็มดังกล่าวจะถูกลบออกหลังจากปิดปรับปรุงเซิฟเวอร์วันที่ 21 ตุลาคม 2569)",
+            "น้ำหนัก : 1"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "810": {
+        "unidentifiedDisplayName": "Battle Pass Invitation Card",
+        "unidentifiedResourceName": "영주의통행증",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Battle Pass Invitation Card",
+        "identifiedResourceName": "영주의통행증",
+        "identifiedDescriptionName": [
+            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "บัตรเชิญเข้าร่วมกิจกรรม Shadow Dream Battle Pass",
+            "เมื่อนำไปคุยกับ [Merde] ที่ prontera พิกัด 147,301 จะสามารถรับ [Normal] Shadow Dream Battle Pass ได้",
+            "^ff0000(ไอเท็มชิ้นนี้จะถูกลบเมื่อสิ้นสุดระยะเวลากิจกรรม)",
+            "",
+            "น้ำหนัก : 0"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "801": {
+        "unidentifiedDisplayName": "[Normal] Shadow Dream Battle Pass",
+        "unidentifiedResourceName": "식물병제조책",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[Normal] Shadow Dream Battle Pass",
+        "identifiedResourceName": "식물병제조책",
+        "identifiedDescriptionName": [
+            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "สมุดทั่วไปที่สามารถนำไปใช้งานกับกิจกรรม Shadow Dream Battle Pass ได้",
+            "",
+            "^ff0000(ไอเท็มชิ้นนี้จะถูกลบเมื่อสิ้นสุดระยะเวลากิจกรรม)",
+            "น้ำหนัก : 0"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "802": {
+        "unidentifiedDisplayName": "[Premium] Shadow Dream Battle Pass",
+        "unidentifiedResourceName": "화염병제조책",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[Premium] Shadow Dream Battle Pass",
+        "identifiedResourceName": "화염병제조책",
+        "identifiedDescriptionName": [
+            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "สมุดพรีเมียมที่สามารถนำไปใช้งานกับกิจกรรม Shadow Dream Battle Pass ได้",
+            "",
+            "^ff0000(ไอเท็มชิ้นนี้จะถูกลบเมื่อสิ้นสุดระยะเวลากิจกรรม)",
+            "น้ำหนัก : 0"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "1001794": {
+        "unidentifiedDisplayName": "[NFS] Shadow Dream Pass Ticket",
+        "unidentifiedResourceName": "BarMealTicket",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[NFS] Shadow Dream Pass Ticket",
+        "identifiedResourceName": "BarMealTicket",
+        "identifiedDescriptionName": [
+            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "^ff0000ไม่สามารถฝากคลังได้!",
+            "",
+            "คูปองที่นำไปใช้ในการเลือกแลกรับไอเทมจากกิจกรรม Shadow Dream Pass ได้ 1 ครั้ง",
+            "ที่ NPC Sir Issas Noewnoew ^ff0000[Prontera 144 286]",
+            "",
+            "^ff0000**โปรดเลือกโดยความระมัดระวัง หากเลือกผิดทีมงานจะไม่สามารถแก้ไขให้ได้**",
+            "น้ำหนัก : 0"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "813": {
+        "unidentifiedDisplayName": "[Event] Special Enchant Temporal & Diabolus Ticket",
+        "unidentifiedResourceName": "Re_Costama_Ticket_4",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[Event] Special Enchant Temporal & Diabolus Ticket",
+        "identifiedResourceName": "Re_Costama_Ticket_4",
+        "identifiedDescriptionName": [
+            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "คูปองที่ได้รับจากกิจกรรม Shadow Dream Battle Pass",
+            "นำไปใช้งานกับ Xiao ในการ Option ช่อง 3 Temporal Boots& Diabolus Boots",
+            "",
+            "(ไอเท็มชิ้นนี้จะถูกลบเมื่อสิ้นสุดระยะเวลากิจกรรม)",
+            "น้ำหนัก : 0"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "814": {
+        "unidentifiedDisplayName": "[Event] Enchant Temporal & Diabolusa Slot4 Ticket",
+        "unidentifiedResourceName": "Re_Costama_Ticket_3",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[Event] Enchant Temporal & Diabolus Slot4 Ticket",
+        "identifiedResourceName": "Re_Costama_Ticket_3",
+        "identifiedDescriptionName": [
+            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "คูปองที่ได้รับจากกิจกรรม Shadow Dream Battle Pass",
+            "นำไปใช้งานกับ Xiao ในการ Option ช่อง 4 Temporal Boots& Diabolus Boots",
+            "",
+            "(ไอเท็มชิ้นนี้จะถูกลบเมื่อสิ้นสุดระยะเวลากิจกรรม)",
+            "น้ำหนัก : 0"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "31123": {
+        "unidentifiedDisplayName": "Hat",
+        "unidentifiedResourceName": "햇",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Costume Ghostring Tall Hat",
+        "identifiedResourceName": "고스트링톨햇",
+        "identifiedDescriptionName": [
+            "หมวกทรงสูงที่ได้รับการออกแบบโดยมีแรงบันดาลจาก Ghostring ",
+            "เมื่อสวมแล้วจะรู้สึกเหมือนถูกดูดวิญญาณจนไม่มีกระจิตกระใจทำอะไรเลย แต่ก็แค่เพ้อเจ้อไปเองละนะ..",
+            "",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Upper น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 1551,
+        "costume": true
+    },
+    "480608": {
         "unidentifiedDisplayName": "Hood",
         "unidentifiedResourceName": "후드",
         "unidentifiedDescriptionName": [
             "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "Costume Poring Surfboard",
-        "identifiedResourceName": "C_Surf_Board_Poring",
+        "identifiedDisplayName": "Costume Beelzebub's Wings",
+        "identifiedResourceName": "C_S_Beelzebub_Wing",
         "identifiedDescriptionName": [
-            "^ff0000ไม่สามารถแลกเปลี่ยนได้",
-            "กระดานโต้คลื่นที่มีลาย Poring วาดอยู่",
-            "ออกไปสนุกกับคลื่นทะเลพร้อมกับ Poring กันเถอะ!",
+            "ปีกของราชาปีศาจที่เมื่อสวมใส่จะรู้สึกได้ถึงพลังงานที่เอ่อล้นอยู่ภายใน",
+            "",
             "ประเภท : Costume พลังป้องกัน : 0",
             "ตำแหน่ง : Garment น้ำหนัก : 0",
             "เลเวลที่ต้องการ : 1",
             "อาชีพที่ใส่ได้ : ทุกอาชีพ"
         ],
         "slotCount": 0,
-        "ClassNum": 186,
+        "ClassNum": 271,
         "costume": true
+    },
+    "24677": {
+        "unidentifiedDisplayName": "Shadow Earring",
+        "unidentifiedResourceName": "이어링쉐도우",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "True Gemstone Shadow Earring",
+        "identifiedResourceName": "이어링쉐도우3",
+        "identifiedDescriptionName": [
+            "ต่างหูศักดิ์สิทธิ์ที่ว่ากันว่าจะช่วยปกปักษ์รักษาผู้สวมใส่ และจะช่วยดึงความสามารถที่หลับใหลของผู้สวมใส่ออกมา",
+            "MATK + 3%.",
+            "ทุก ๆ การอัพเกรด 2 ขั้น, เพิ่ม Damage ทางเวทมนตร์ทุกธาตุ 1%",
+            "เมื่ออัพเกรดถึงขั้น 10, ลดระยะเวลาร่ายแบบแปรผัน 3%",
+            "เมื่อสวมใส่ร่วมกับ True Gemstone Shadow Pendant, MATK + 2%,",
+            "เมื่อค่าอัพเกรดรวมกันตั้งแต่ 18 ขึ้นไป, จะไม่สูญเสีย Gemstone เมื่อใช้สกิล แต่เพิ่มปริมาณการใช้ SP 40%,",
+            "เมื่อค่าอัพเกรดรวมกันตั้งแต่ 20 ขึ้นไป, เพิ่ม Damage ทางเวทมนตร์ต่อศัตรูทุกขนาด 12%",
+            "ประเภท : Shadow Equipment",
+            "ตำแหน่ง : Earring น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": true
+    },
+    "24678": {
+        "unidentifiedDisplayName": "Shadow Pendant",
+        "unidentifiedResourceName": "펜던트쉐도우",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "True Gemstone Shadow Pendant",
+        "identifiedResourceName": "펜던트쉐도우3",
+        "identifiedDescriptionName": [
+            "สร้อยคอศักดิ์สิทธิ์ที่ว่ากันว่าจะช่วยปกปักษ์รักษาผู้สวมใส่ และจะช่วยดึงความสามารถที่หลับใหลของผู้สวมใส่ออกมา",
+            "MATK + 3%.",
+            "ทุก ๆ การอัพเกรด 2 ขั้น, เพิ่ม Damage ทางเวทมนตร์ทุกธาตุ 1%",
+            "เมื่ออัพเกรดถึงขั้น 10, ลดระยะเวลาร่ายแบบแปรผัน 3%",
+            "ประเภท : Shadow Equipment",
+            "ตำแหน่ง : Pendant น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": true
+    },
+    "20745": {
+        "unidentifiedDisplayName": "Garment",
+        "unidentifiedResourceName": "망토",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Manteau of Mystic Frozen",
+        "identifiedResourceName": "망토오브미스틱포로즌",
+        "identifiedDescriptionName": [
+            "เสื้อคลุมที่เต็มไปด้วยพลังของวิญญานแห่งน้ำแข็งปกป้องผู้สวมใส่ด้วยน้ำรายล้อมรอบตัว",
+            "ลดความเสียหายที่ได้รับจากการโจมตีธาตุ Water -10%",
+            "เพิ่มความเสียหายที่ได้รับจากการโจมตีธาตุ Wind +10%",
+            "เมื่อได้รับการโจมตีทางกายภาพระยะใกล้และระยะไกล มีโอกาสที่จะติดสถานะ Freezing",
+            "เมื่ออัพเกรดตั้งแต่ ขั้น 6 ขึ้นไป เพิ่มโอกาสทำให้ศัตรูติดสถานะ Freezing ทุกการอัพเกรด 1 ขั้น",
+            "เมื่ออัพเกรดตั้งแต่ขั้น 10 ขึ้นไปเพิ่มโอกาสในการทำให้ศัตรูติดสถานะ Freezing",
+            "ไม่สามารถทำลายได้",
+            " ",
+            "^0000ffสามารถ Enchant ได้ที่  Npc Dark Ruhir ที Itemmall",
+            "ประเภท : Garment พลังป้องกัน : 10",
+            "น้ำหนัก : 30",
+            "เลเวลที่ต้องการ : 70",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0
+    },
+    "480523": {
+        "unidentifiedDisplayName": "Hood",
+        "unidentifiedResourceName": "후드",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Costume Libra Wings",
+        "identifiedResourceName": "C_Libra_Wing",
+        "identifiedDescriptionName": [
+            "ชุดแฟชั่นที่ได้รับแรงบันดาลใจจากตราชั่งลึกลับที่ประดับด้วยปีก",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Garment น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 256,
+        "costume": true
+    },
+    "470471": {
+        "unidentifiedDisplayName": "Shoes",
+        "unidentifiedResourceName": "샌들",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Capricorn Shoes",
+        "identifiedResourceName": "Capricon_Shoes_J",
+        "identifiedDescriptionName": [
+            "All State + 2",
+            "Mdef + 5.",
+            "Atk + 30, Matk + 30.",
+            "ASPD + 10%.",
+            "",
+            "ทุก ๆ การอัพเกรด 3 ขั้น MHP + 2%, MSP + 2%,",
+            "เมื่ออัพเกรดถึงขั้น 9, DEF + 50, MDEF + 25, Flee+30, HIT+30.",
+            "เมื่ออัพเกรดถึงขั้น 10, Atk + 50, Matk + 50,",
+            "เมื่ออัพเกรดถึงขั้น 11, เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อเป้าหมายทุกขนาด 10%",
+            "เมื่ออัพเกรดถึงขั้น 13, ลดระยะเวลาร่ายแบบแปรผัน 10%, ลดระยะเวลาร่ายแบบคงที่ 0.3 วินาที, ลด Delay หลังใช้สกิล 15%",
+            "",
+            "เมื่อสวมใส่คู่กับ Capricorn Manteau [1],",
+            "ลดดีเลย์หลังใช้สกิลลง 5%,",
+            "เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อเป้าหมายทุกประเภท 10%",
+            "",
+            "ประเภท : Shoes  พลังป้องกัน : 30",
+            "น้ำหนัก : 20",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพที่ใส่ได้ : Stalker Class"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "470472": {
+        "unidentifiedDisplayName": "Shoes",
+        "unidentifiedResourceName": "샌들",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Aquarius Shoes",
+        "identifiedResourceName": "Aquarius_Shoes_J",
+        "identifiedDescriptionName": [
+            "All State + 2",
+            "Mdef + 5.",
+            "Atk + 30, Matk + 30.",
+            "ASPD + 10%.",
+            "",
+            "ทุก ๆ การอัพเกรด 3 ขั้น MHP + 2%, MSP + 2%,",
+            "เมื่ออัพเกรดถึงขั้น 9, DEF + 50, MDEF + 25, Flee+30, HIT+30",
+            "เมื่ออัพเกรดถึงขั้น 10, Atk + 50, Matk + 50,",
+            "เมื่ออัพเกรดถึงขั้น 11, เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อเป้าหมายทุกขนาด 10%",
+            "เมื่ออัพเกรดถึงขั้น 13, ลดระยะเวลาร่ายแบบแปรผัน 10%, ลดระยะเวลาร่ายแบบคงที่ 0.3 วินาที, ลด Delay หลังใช้สกิล 15%",
+            "",
+            "เมื่อสวมใส่คู่กับ Aquarius Manteau [1],",
+            "ลดดีเลย์หลังใช้สกิลลง 5%,",
+            "เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อเป้าหมายทุกประเภท 10%",
+            "",
+            "ประเภท : Shoes  พลังป้องกัน : 30",
+            "น้ำหนัก : 20",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพที่ใส่ได้ : Professor Class"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "470473": {
+        "unidentifiedDisplayName": "Shoes",
+        "unidentifiedResourceName": "샌들",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Pisces Shoes",
+        "identifiedResourceName": "Pisces_Shoes_J",
+        "identifiedDescriptionName": [
+            "All State + 2",
+            "Mdef + 5.",
+            "Atk + 30, Matk + 30.",
+            "ASPD + 10%.",
+            "",
+            "ทุก ๆ การอัพเกรด 3 ขั้น MHP + 2%, MSP + 2%,",
+            "เมื่ออัพเกรดถึงขั้น 9, DEF + 50, MDEF + 25, Flee+30, HIT+30",
+            "เมื่ออัพเกรดถึงขั้น 10, Atk + 50, Matk + 50,",
+            "เมื่ออัพเกรดถึงขั้น 11, เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อเป้าหมายทุกขนาด 10%",
+            "เมื่ออัพเกรดถึงขั้น 13, ลดระยะเวลาร่ายแบบแปรผัน 10%, ลดระยะเวลาร่ายแบบคงที่ 0.3 วินาที, ลด Delay หลังใช้สกิล 15%",
+            "",
+            "เมื่อสวมใส่คู่กับ Pisces Manteau [1],",
+            "ลดดีเลย์หลังใช้สกิลลง 5%,",
+            "เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อเป้าหมายทุกประเภท 10%",
+            "",
+            "ประเภท : Shoes  พลังป้องกัน : 30",
+            "น้ำหนัก : 20",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพที่ใส่ได้ : Hi Wizard Class"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "470474": {
+        "unidentifiedDisplayName": "Shoes",
+        "unidentifiedResourceName": "샌들",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Aries Shoes",
+        "identifiedResourceName": "Aries_Shoes_J",
+        "identifiedDescriptionName": [
+            "All State + 2",
+            "Mdef + 5.",
+            "Atk + 30, Matk + 30.",
+            "ASPD + 10%.",
+            "",
+            "ทุก ๆ การอัพเกรด 3 ขั้น MHP + 2%, MSP + 2%,",
+            "เมื่ออัพเกรดถึงขั้น 9, DEF + 50, MDEF + 25, Flee+30, HIT+30",
+            "เมื่ออัพเกรดถึงขั้น 10, Atk + 50, Matk + 50,",
+            "เมื่ออัพเกรดถึงขั้น 11, เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อเป้าหมายทุกขนาด 10%",
+            "เมื่ออัพเกรดถึงขั้น 13, ลดระยะเวลาร่ายแบบแปรผัน 10%, ลดระยะเวลาร่ายแบบคงที่ 0.3 วินาที, ลด Delay หลังใช้สกิล 15%",
+            "",
+            "เมื่อสวมใส่คู่กับ Aries Manteau [1],",
+            "ลดดีเลย์หลังใช้สกิลลง 5%,",
+            "เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อเป้าหมายทุกประเภท 10%",
+            "ประเภท : Shoes  พลังป้องกัน : 30",
+            "น้ำหนัก : 20",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพที่ใส่ได้ : Paladin Class"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "470475": {
+        "unidentifiedDisplayName": "Shoes",
+        "unidentifiedResourceName": "부츠",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Taurus Shoes",
+        "identifiedResourceName": "Taurus_Shoes_J",
+        "identifiedDescriptionName": [
+            "All State + 2",
+            "Mdef + 5.",
+            "Atk + 30, Matk + 30.",
+            "ASPD + 10%.",
+            "",
+            "ทุก ๆ การอัพเกรด 3 ขั้น MHP + 2%, MSP + 2%,",
+            "เมื่ออัพเกรดถึงขั้น 9, DEF + 50, MDEF + 25, Flee+30, HIT+30",
+            "เมื่ออัพเกรดถึงขั้น 10, Atk + 50, Matk + 50,",
+            "เมื่ออัพเกรดถึงขั้น 11, เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อเป้าหมายทุกขนาด 10%",
+            "เมื่ออัพเกรดถึงขั้น 13, ลดระยะเวลาร่ายแบบแปรผัน 10%, ลดระยะเวลาร่ายแบบคงที่ 0.3 วินาที, ลด Delay หลังใช้สกิล 15%",
+            "",
+            "เมื่อสวมใส่คู่กับ Taurus Manteau [1],",
+            "ลดดีเลย์หลังใช้สกิลลง 5%,",
+            "เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อเป้าหมายทุกประเภท 10%",
+            "",
+            "ประเภท : Shoes  พลังป้องกัน : 30",
+            "น้ำหนัก : 20",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพที่ใส่ได้ : Creator Class"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "470476": {
+        "unidentifiedDisplayName": "Shoes",
+        "unidentifiedResourceName": "부츠",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Gemini Shoes",
+        "identifiedResourceName": "Gemini_Shoes_J",
+        "identifiedDescriptionName": [
+            "All State + 2",
+            "Mdef + 5.",
+            "Atk + 30, Matk + 30.",
+            "ASPD + 10%.",
+            "",
+            "ทุก ๆ การอัพเกรด 3 ขั้น MHP + 2%, MSP + 2%,",
+            "เมื่ออัพเกรดถึงขั้น 9, DEF + 50, MDEF + 25, Flee+30, HIT+30",
+            "เมื่ออัพเกรดถึงขั้น 10, Atk + 50, Matk + 50,",
+            "เมื่ออัพเกรดถึงขั้น 11, เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อเป้าหมายทุกขนาด 10%",
+            "เมื่ออัพเกรดถึงขั้น 13, ลดระยะเวลาร่ายแบบแปรผัน 10%, ลดระยะเวลาร่ายแบบคงที่ 0.3 วินาที, ลด Delay หลังใช้สกิล 15%",
+            "",
+            "เมื่อสวมใส่คู่กับ Gemini Manteau [1],",
+            "ลดดีเลย์หลังใช้สกิลลง 5%,",
+            "เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อเป้าหมายทุกประเภท 10%",
+            "",
+            "ประเภท : Shoes  พลังป้องกัน : 30",
+            "น้ำหนัก : 20",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพที่ใส่ได้ : Clown Gypsy Class"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "470477": {
+        "unidentifiedDisplayName": "Shoes",
+        "unidentifiedResourceName": "샌들",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Cancer Shoes",
+        "identifiedResourceName": "Cancer_Shoes",
+        "identifiedDescriptionName": [
+            "All State + 2",
+            "Mdef + 5.",
+            "Atk + 30, Matk + 30.",
+            "ASPD + 10%.",
+            "",
+            "ทุก ๆ การอัพเกรด 3 ขั้น MHP + 2%, MSP + 2%,",
+            "เมื่ออัพเกรดถึงขั้น 9, DEF + 50, MDEF + 25, Flee+30, HIT+30",
+            "เมื่ออัพเกรดถึงขั้น 10, Atk + 50, Matk + 50,",
+            "เมื่ออัพเกรดถึงขั้น 11, เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อเป้าหมายทุกขนาด 10%",
+            "เมื่ออัพเกรดถึงขั้น 13, ลดระยะเวลาร่ายแบบแปรผัน 10%, ลดระยะเวลาร่ายแบบคงที่ 0.3 วินาที, ลด Delay หลังใช้สกิล 15%",
+            "",
+            "เมื่อสวมใส่คู่กับ Cancer Manteau [1],",
+            "ลดดีเลย์หลังใช้สกิลลง 5%,",
+            "เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อเป้าหมายทุกประเภท 10%",
+            "",
+            "ประเภท : Shoes  พลังป้องกัน : 30",
+            "น้ำหนัก : 20",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพที่ใส่ได้ : Whitesmith Class"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "470478": {
+        "unidentifiedDisplayName": "Shoes",
+        "unidentifiedResourceName": "부츠",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Leo Shoes",
+        "identifiedResourceName": "Leo_Shoes_J",
+        "identifiedDescriptionName": [
+            "All State + 2",
+            "Mdef + 5.",
+            "Atk + 30, Matk + 30.",
+            "ASPD + 10%.",
+            "",
+            "ทุก ๆ การอัพเกรด 3 ขั้น MHP + 2%, MSP + 2%,",
+            "เมื่ออัพเกรดถึงขั้น 9, DEF + 50, MDEF + 25, Flee+30, HIT+30",
+            "เมื่ออัพเกรดถึงขั้น 10, Atk + 50, Matk + 50,",
+            "เมื่ออัพเกรดถึงขั้น 11, เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อเป้าหมายทุกขนาด 10%",
+            "เมื่ออัพเกรดถึงขั้น 13, ลดระยะเวลาร่ายแบบแปรผัน 10%, ลดระยะเวลาร่ายแบบคงที่ 0.3 วินาที, ลด Delay หลังใช้สกิล 15%",
+            "",
+            "เมื่อสวมใส่คู่กับ Leo Manteau [1],",
+            "ลดดีเลย์หลังใช้สกิลลง 5%,",
+            "เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อเป้าหมายทุกประเภท 10%",
+            "",
+            "ประเภท : Shoes  พลังป้องกัน : 30",
+            "น้ำหนัก : 20",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพที่ใส่ได้ : Champion Class"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "470479": {
+        "unidentifiedDisplayName": "Shoes",
+        "unidentifiedResourceName": "샌들",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Virgo Shoes",
+        "identifiedResourceName": "Virgo_Shoes_J",
+        "identifiedDescriptionName": [
+            "All State + 2",
+            "Mdef + 5.",
+            "Atk + 30, Matk + 30.",
+            "ASPD + 10%.",
+            "",
+            "ทุก ๆ การอัพเกรด 3 ขั้น MHP + 2%, MSP + 2%,",
+            "เมื่ออัพเกรดถึงขั้น 9, DEF + 50, MDEF + 25, Flee+30, HIT+30",
+            "เมื่ออัพเกรดถึงขั้น 10, Atk + 50, Matk + 50,",
+            "เมื่ออัพเกรดถึงขั้น 11, เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อเป้าหมายทุกขนาด 10%",
+            "เมื่ออัพเกรดถึงขั้น 13, ลดระยะเวลาร่ายแบบแปรผัน 10%, ลดระยะเวลาร่ายแบบคงที่ 0.3 วินาที, ลด Delay หลังใช้สกิล 15%",
+            "",
+            "เมื่อสวมใส่คู่กับ Virgo Manteau [1],",
+            "ลดดีเลย์หลังใช้สกิลลง 5%,",
+            "เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อเป้าหมายทุกประเภท 10%",
+            "",
+            "ประเภท : Shoes  พลังป้องกัน : 30",
+            "น้ำหนัก : 20",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพที่ใส่ได้ : High Priest Class"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "470480": {
+        "unidentifiedDisplayName": "Shoes",
+        "unidentifiedResourceName": "부츠",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Libra Shoes",
+        "identifiedResourceName": "Libra_Shoes_J",
+        "identifiedDescriptionName": [
+            "All State + 2",
+            "Mdef + 5.",
+            "Atk + 30, Matk + 30.",
+            "ASPD + 10%.",
+            "",
+            "ทุก ๆ การอัพเกรด 3 ขั้น MHP + 2%, MSP + 2%,",
+            "เมื่ออัพเกรดถึงขั้น 9, DEF + 50, MDEF + 25, Flee+30, HIT+30",
+            "เมื่ออัพเกรดถึงขั้น 10, Atk + 50, Matk + 50,",
+            "เมื่ออัพเกรดถึงขั้น 11, เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อเป้าหมายทุกขนาด 10%",
+            "เมื่ออัพเกรดถึงขั้น 13, ลดระยะเวลาร่ายแบบแปรผัน 10%, ลดระยะเวลาร่ายแบบคงที่ 0.3 วินาที, ลด Delay หลังใช้สกิล 15%",
+            "",
+            "เมื่อสวมใส่คู่กับ Libra Manteau [1],",
+            "ลดดีเลย์หลังใช้สกิลลง 5%,",
+            "เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อเป้าหมายทุกประเภท 10%",
+            "",
+            "ประเภท : Shoes  พลังป้องกัน : 30",
+            "น้ำหนัก : 20",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพที่ใส่ได้ : Lord Knight Class"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "470481": {
+        "unidentifiedDisplayName": "Shoes",
+        "unidentifiedResourceName": "부츠",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Scorpio Shoes",
+        "identifiedResourceName": "Scorpio_Shoes_J",
+        "identifiedDescriptionName": [
+            "All State + 2",
+            "Mdef + 5.",
+            "Atk + 30, Matk + 30.",
+            "ASPD + 10%.",
+            "",
+            "ทุก ๆ การอัพเกรด 3 ขั้น MHP + 2%, MSP + 2%,",
+            "เมื่ออัพเกรดถึงขั้น 9, DEF + 50, MDEF + 25, Flee+30, HIT+30",
+            "เมื่ออัพเกรดถึงขั้น 10, Atk + 50, Matk + 50,",
+            "เมื่ออัพเกรดถึงขั้น 11, เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อเป้าหมายทุกขนาด 10%",
+            "เมื่ออัพเกรดถึงขั้น 13, ลดระยะเวลาร่ายแบบแปรผัน 10%, ลดระยะเวลาร่ายแบบคงที่ 0.3 วินาที, ลด Delay หลังใช้สกิล 15%",
+            "",
+            "เมื่อสวมใส่คู่กับ Scorpio Manteau [1],",
+            "ลดดีเลย์หลังใช้สกิลลง 5%,",
+            "เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อเป้าหมายทุกประเภท 10%",
+            "",
+            "ประเภท : Shoes  พลังป้องกัน : 30",
+            "น้ำหนัก : 20",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพที่ใส่ได้ : Assassin Cross Class"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "470482": {
+        "unidentifiedDisplayName": "Shoes",
+        "unidentifiedResourceName": "샌들",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Sagittarius Shoes",
+        "identifiedResourceName": "Sagittarius_Shoes_J",
+        "identifiedDescriptionName": [
+            "All State + 2",
+            "Mdef + 5.",
+            "Atk + 30, Matk + 30.",
+            "ASPD + 10%.",
+            "",
+            "ทุก ๆ การอัพเกรด 3 ขั้น MHP + 2%, MSP + 2%,",
+            "เมื่ออัพเกรดถึงขั้น 9, DEF + 50, MDEF + 25, Flee+30, HIT+30",
+            "เมื่ออัพเกรดถึงขั้น 10, Atk + 50, Matk + 50,",
+            "เมื่ออัพเกรดถึงขั้น 11, เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อเป้าหมายทุกขนาด 10%",
+            "เมื่ออัพเกรดถึงขั้น 13, ลดระยะเวลาร่ายแบบแปรผัน 10%, ลดระยะเวลาร่ายแบบคงที่ 0.3 วินาที, ลด Delay หลังใช้สกิล 15%",
+            "",
+            "เมื่อสวมใส่คู่กับ Sagittarius Manteau [1],",
+            "ลดดีเลย์หลังใช้สกิลลง 5%,",
+            "เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อเป้าหมายทุกประเภท 10%",
+            "ประเภท : Shoes  พลังป้องกัน : 30",
+            "น้ำหนัก : 20",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพที่ใส่ได้ : Sniper Class"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "470483": {
+        "unidentifiedDisplayName": "Shoes",
+        "unidentifiedResourceName": "슈즈",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Ophiuchus Shoes",
+        "identifiedResourceName": "Noblesse_Attack_Boots",
+        "identifiedDescriptionName": [
+            "All State + 2",
+            "Mdef + 5.",
+            "Atk + 30, Matk + 30.",
+            "ASPD + 10%.",
+            "",
+            "ทุก ๆ การอัพเกรด 3 ขั้น MHP + 2%, MSP + 2%,",
+            "เมื่ออัพเกรดถึงขั้น 9, DEF + 50, MDEF + 25, Flee+30, HIT+30",
+            "เมื่ออัพเกรดถึงขั้น 10, Atk + 50, Matk + 50,",
+            "เมื่ออัพเกรดถึงขั้น 11, เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อเป้าหมายทุกขนาด 10%",
+            "เมื่ออัพเกรดถึงขั้น 13, ลดระยะเวลาร่ายแบบแปรผัน 10%, ลดระยะเวลาร่ายแบบคงที่ 0.3 วินาที, ลด Delay หลังใช้สกิล 15%",
+            "",
+            "เมื่อสวมใส่คู่กับ Ophiuchus Manteau [1],",
+            "ลดดีเลย์หลังใช้สกิลลง 5%,",
+            "เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อเป้าหมายทุกประเภท 10%",
+            "ประเภท : Shoes  พลังป้องกัน : 30",
+            "น้ำหนัก : 20",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "1003307": {
+        "unidentifiedDisplayName": "Enchant Stone (Battle Pass)",
+        "unidentifiedResourceName": "룬마력의정수",
+        "unidentifiedDescriptionName": [
+            "^ff0000ไอเท็มนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "ส่วนประกอบสำคัญในการ Enchant ไอเทมประจำ BattlePass SS7 : The Shadowed Dream",
+            "",
+            "^ff0000(ไอเท็มชิ้นนี้จะถูกลบเมื่อสิ้นสุดระยะเวลากิจกรรม)"
+        ],
+        "identifiedDisplayName": "Enchant Stone (Battle Pass)",
+        "identifiedResourceName": "룬마력의정수",
+        "identifiedDescriptionName": [
+            "^ff0000ไอเท็มนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "ส่วนประกอบสำคัญในการ Enchant ไอเทมประจำ BattlePass SS7 : The Shadowed Dream",
+            "",
+            "^ff0000(ไอเท็มชิ้นนี้จะถูกลบเมื่อสิ้นสุดระยะเวลากิจกรรม)",
+            "",
+            "น้ำหนัก : 0"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "401608": {
+        "unidentifiedDisplayName": "Helm",
+        "unidentifiedResourceName": "헬름",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Libra Diadem",
+        "identifiedResourceName": "천칭궁보관",
+        "identifiedDescriptionName": [
+            "มงกุฎงดงาม ซึ่งเป็นสัญลักษณ์ที่ 7 ของจักรราศี Libra ด้านหน้าประดับด้วย Opal หินประจำราศีเกิด",
+            "MaxHP + 15%",
+            "STR + 10, ATK + 50",
+            "เพิ่ม Damage ทางกายภาพต่อมอนสเตอร์ทุกประเภท 10%",
+            "",
+            "เมื่อขั้นอัพเกรดตั้งแต่ 7 ขึ้นไป เพิ่ม Damage สกิล Bowling Bash 30%",
+            "เมื่อขั้นอัพเกรดตั้งแต่ 8 ขึ้นไป เมื่อกำจัดมอนสเตอร์ ฟื้้นฟู HP 500, SP 20",
+            "เมื่อขั้นอัพเกรดตั้งแต่ 9 ขึ้นไป ลด Damage สะท้อนกลับที่ได้รับ 30%",
+            "",
+            "เมื่อสวมใส่โดย Lord Knight ขึ้นไป",
+            "ลด Damage สะท้อนกลับที่ได้รับ 30%,",
+            "ลด Damage ที่ได้รับจากมอนสเตอร์ประเภท Boss 10%",
+            "",
+            "ประเภท :  Headgear พลังป้องกัน : 12",
+            "ตำแหน่ง : Upper น้ำหนัก : 80",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพที่ใส่ได้ : Swordman Classes"
+        ],
+        "slotCount": 1,
+        "ClassNum": 594,
+        "costume": false
+    },
+    "401609": {
+        "unidentifiedDisplayName": "Helm",
+        "unidentifiedResourceName": "헬름",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[NFS] Libra Diadem",
+        "identifiedResourceName": "천칭궁보관",
+        "identifiedDescriptionName": [
+            "^ff0000ไอเท็มนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "",
+            "มงกุฎงดงาม ซึ่งเป็นสัญลักษณ์ที่ 7 ของจักรราศี Libra ด้านหน้าประดับด้วย Opal หินประจำราศีเกิด",
+            "MaxHP + 15%",
+            "STR + 10, ATK + 50",
+            "เพิ่ม Damage ทางกายภาพต่อมอนสเตอร์ทุกประเภท 10%",
+            "",
+            "เมื่อขั้นอัพเกรดตั้งแต่ 7 ขึ้นไป เพิ่ม Damage สกิล Bowling Bash 30%",
+            "เมื่อขั้นอัพเกรดตั้งแต่ 8 ขึ้นไป เมื่อกำจัดมอนสเตอร์ ฟื้้นฟู HP 500, SP 20",
+            "เมื่อขั้นอัพเกรดตั้งแต่ 9 ขึ้นไป ลด Damage สะท้อนกลับที่ได้รับ 30%",
+            "",
+            "เมื่อสวมใส่โดย Lord Knight ขึ้นไป",
+            "ลด Damage สะท้อนกลับที่ได้รับ 30%,",
+            "ลด Damage ที่ได้รับจากมอนสเตอร์ประเภท Boss 10%",
+            "",
+            "ประเภท :  Headgear พลังป้องกัน : 12",
+            "ตำแหน่ง : Upper น้ำหนัก : 80",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพที่ใส่ได้ : Swordman Classes"
+        ],
+        "slotCount": 1,
+        "ClassNum": 594,
+        "costume": false
+    },
+    "480967": {
+        "unidentifiedDisplayName": "Manteau",
+        "unidentifiedResourceName": "망토",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[NFS] Manteau of Mystic Frozen",
+        "identifiedResourceName": "망토오브미스틱포로즌",
+        "identifiedDescriptionName": [
+            "^ff0000ไอเท็มนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "",
+            "เสื้อคลุมที่เต็มไปด้วยพลังของวิญญานแห่งน้ำแข็งปกป้องผู้สวมใส่ด้วยน้ำรายล้อมรอบตัว",
+            "",
+            "ลดความเสียหายที่ได้รับจากการโจมตีธาตุ Water -10%",
+            "ลดความเสียหายที่ได้รับจากการโจมตีธาตุ Wind +10%",
+            "",
+            "เมื่อได้รับการโจมตีทางกายภาพระยะใกล้และระยะไกล มีโอกาสที่จะติดสถานะ Freezing",
+            "เมื่ออัพเกรดตั้งแต่ขั้น 6 ขึ้นไป เพิ่มโอกาสทำให้ศัตรูติดสถานะ Freezing ทุกการอัพเกรด 1 ขั้น",
+            "เมื่ออัพเกรดตั้งแต่ขั้น 10 ขึ้นไปเพิ่มโอกาสในการทำให้ศัตรูติดสถานะ Freezing",
+            "^0000ffสามารถ Enchant ได้ที่  Npc Dark Ruhir ที Itemmall",
+            "",
+            "ประเภท : Garment  พลังป้องกัน : 10",
+            "น้ำหนัก : 30",
+            "เลเวลที่ต้องการ : 70",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "491104": {
+        "unidentifiedDisplayName": "Ring",
+        "unidentifiedResourceName": "링",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Libra Ring",
+        "identifiedResourceName": "Libra_Ring_J",
+        "identifiedDescriptionName": [
+            "แหวนที่สลักลวดลายตราชั่งไว้รอบวง หัวแหวนประดับ Libra Gem เม็ดเล็ก",
+            "เป็นเครื่องหมายแห่งคำมั่นที่จะรักษาสมดุลและความยุติธรรม",
+            "",
+            "ลดระยะเวลาร่ายเวทแปรผัน 5%",
+            "MaxHP + 500.",
+            "เพิ่ม Damage ทางกายภาพต่อศัตรูทุกขนาด 5%",
+            "",
+            "เมื่อขั้นอัพเกรดตั้งแต่ 5 ขึ้นไป MaxHP + 10%, ASPD + 5%",
+            "เมื่อขั้นอัพเกรดตั้งแต่ 7 ขึ้นไปเพิ่ม Damage สกิล Bowling Bash 30%",
+            "เมื่อขั้นอัพเกรดตั้งแต่ 9 ขึ้นไป เพิ่ม Damage สกิล Bowling Bash 50%",
+            "",
+            "เมื่อสวมใส่โดย Lord Knight ขึ้นไป,",
+            "เพิ่ม Damage ทางกายภาพระยะใกล้ + 15%, ทำให้เกิดสภาวะเหมือนใช้ Skill Endure ตลอดเวลา",
+            "",
+            "ประเภท : Accessory  พลังป้องกัน : 0",
+            "น้ำหนัก : 10",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพที่ใส่ได้ : Swordman Classes"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "491105": {
+        "unidentifiedDisplayName": "Ring",
+        "unidentifiedResourceName": "링",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[NFS] Libra Ring",
+        "identifiedResourceName": "Libra_Ring_J",
+        "identifiedDescriptionName": [
+            "^ff0000ไอเท็มนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "",
+            "แหวนที่สลักลวดลายตราชั่งไว้รอบวง หัวแหวนประดับ Libra Gem เม็ดเล็ก",
+            "เป็นเครื่องหมายแห่งคำมั่นที่จะรักษาสมดุลและความยุติธรรม",
+            "",
+            "ลดระยะเวลาร่ายเวทแปรผัน 5%",
+            "MaxHP + 500.",
+            "เพิ่ม Damage ทางกายภาพต่อศัตรูทุกขนาด 5%",
+            "",
+            "เมื่อขั้นอัพเกรดตั้งแต่ 5 ขึ้นไป MaxHP + 10%, ASPD + 5%",
+            "เมื่อขั้นอัพเกรดตั้งแต่ 7 ขึ้นไปเพิ่ม Damage สกิล Bowling Bash 30%",
+            "เมื่อขั้นอัพเกรดตั้งแต่ 9 ขึ้นไป เพิ่ม Damage สกิล Bowling Bash 50%",
+            "",
+            "เมื่อสวมใส่โดย Lord Knight ขึ้นไป,",
+            "เพิ่ม Damage ทางกายภาพระยะใกล้ + 15%, ทำให้เกิดสภาวะเหมือนใช้ Skill Endure ตลอดเวลา",
+            "",
+            "ประเภท : Accessory  พลังป้องกัน : 0",
+            "น้ำหนัก : 10",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพที่ใส่ได้ : Swordman Classes"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "600089": {
+        "unidentifiedDisplayName": "Two-Handed Sword",
+        "unidentifiedResourceName": "바스타드소드",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Krasnaya of Libra",
+        "identifiedResourceName": "Libra_Krasnaya_J",
+        "identifiedDescriptionName": [
+            "ดาบที่ดูแข็งแกร่งรูปร่างเหมือน Claymore ถูกตีขึ้นด้วยแร่ Opal หินประจำราศีเกิด Libra",
+            "",
+            "ถ้าผู้สวมใส่มีค่า STR พื้นฐาน 110 หรือมากกว่าจะเพิ่ม ATK +110",
+            "เพิ่มพลังป้องกัน 10 หน่วยตามระดับการอัพเกรด",
+            "",
+            "เมื่ออัพเกรดตั้งแต่ 7 ขึ้นไป เพิกเฉยพลังป้องกัน (DEF) ของมอนสเตอร์ทุกเผ่า 50%",
+            "เมื่ออัพเกรดตั้งแต่ 9 ขึ้นไป, มีโอกาส 3% ที่จะได้รับ HP 5% ของความเสียหายที่ทำได้",
+            "เมื่อขั้นอัพเกรดตั้งแต่ 11 ขึ้นไป, ,เพิกเฉยพลังป้องกัน (DEF) ของมอนสเตอร์ทุกเผ่า 50%",
+            "",
+            "เมื่อสวมใส่โดย Lord Knight ขึ้นไป",
+            "เสีย SP ในการใช้สกิล 2 เท่า, Perfect Dodge+20,",
+            "ทุก Base Lv.1 เพิ่ม Damage สกิล Bowling Bash 1%, ลด Damage ที่ได้รับจากมอนสเตอร์ประเภท Boss 10%",
+            "ประเภท : Two-Handed Sword พลังโจมตี : 250",
+            "น้ำหนัก : 580",
+            "เลเวล Weapon : 4",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพที่ใส่ได้ : Swordman Classes"
+        ],
+        "slotCount": 2,
+        "ClassNum": 49,
+        "costume": false
+    },
+    "600090": {
+        "unidentifiedDisplayName": "양손검",
+        "unidentifiedResourceName": "바스타드소드",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[NFS] Krasnaya of Libra",
+        "identifiedResourceName": "Libra_Krasnaya_J",
+        "identifiedDescriptionName": [
+            "^ff0000ไอเท็มนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "",
+            "ดาบที่ดูแข็งแกร่งรูปร่างเหมือน Claymore ถูกตีขึ้นด้วยแร่ Opal หินประจำราศีเกิด Libra",
+            "",
+            "ถ้าผู้สวมใส่มีค่า STR พื้นฐาน 110 หรือมากกว่าจะเพิ่ม ATK +110",
+            "เพิ่มพลังป้องกัน 10 หน่วยตามระดับการอัพเกรด",
+            "",
+            "เมื่ออัพเกรดตั้งแต่ 7 ขึ้นไป เพิกเฉยพลังป้องกัน (DEF) ของมอนสเตอร์ทุกเผ่า 50%",
+            "เมื่ออัพเกรดตั้งแต่ 9 ขึ้นไป, มีโอกาส 3% ที่จะได้รับ HP 5% ของความเสียหายที่ทำได้",
+            "เมื่อขั้นอัพเกรดตั้งแต่ 11 ขึ้นไป, ,เพิกเฉยพลังป้องกัน (DEF) ของมอนสเตอร์ทุกเผ่า 50%",
+            "",
+            "เมื่อสวมใส่โดย Lord Knight ขึ้นไป",
+            "เสีย SP ในการใช้สกิล 2 เท่า, Perfect Dodge+20,",
+            "ทุก Base Lv.1 เพิ่ม Damage สกิล Bowling Bash 1%, ลด Damage ที่ได้รับจากมอนสเตอร์ประเภท Boss 10%",
+            "ประเภท : Two-Handed Sword พลังโจมตี : 250",
+            "น้ำหนัก : 580",
+            "เลเวล Weapon : 4",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพที่ใส่ได้ : Swordman Classes"
+        ],
+        "slotCount": 2,
+        "ClassNum": 49,
+        "costume": false
+    },
+    "315764": {
+        "unidentifiedDisplayName": "Libra Gem",
+        "unidentifiedResourceName": "Libra_Card_JP",
+        "unidentifiedDescriptionName": [
+            "อัญมณี Opal ที่เจียระไนเป็นรูปตราชั่ง เชื่อกันว่าเจ้าของจะมองเห็นคุณค่าของทุกสิ่งได้อย่างเที่ยงตรง",
+            "STR + 2.",
+            "ลดระยะเวลาร่ายเวทแปรผัน 5%",
+            "",
+            "เมื่อสวมใส่ร่วมกับ Libra Diadem [1] หรือ [NFS] Libra Diadem [1],",
+            "ทุก ๆ การอัพเกรด Headgear 1 ขั้น, ลดระยะเวลาร่ายเวทแปรผัน 5%,",
+            "เพิ่ม Damage สกิล Bowling Bash 10% ทุก 1 อัพเกรด,",
+            "ลด Damage ที่ได้รับจาก Player 20%"
+        ],
+        "identifiedDisplayName": "Libra Gem",
+        "identifiedResourceName": "Libra_Card_JP",
+        "identifiedDescriptionName": [
+            "อัญมณี Opal ที่เจียระไนเป็นรูปตราชั่ง เชื่อกันว่าเจ้าของจะมองเห็นคุณค่าของทุกสิ่งได้อย่างเที่ยงตรง",
+            "STR + 2.",
+            "ลดระยะเวลาร่ายเวทแปรผัน 5%",
+            "",
+            "เมื่อสวมใส่ร่วมกับ Libra Diadem [1] หรือ [NFS] Libra Diadem [1],",
+            "ทุก ๆ การอัพเกรด Headgear 1 ขั้น, ลดระยะเวลาร่ายเวทแปรผัน 5%,",
+            "เพิ่ม Damage สกิล Bowling Bash 10% ทุก 1 อัพเกรด,",
+            "ลด Damage ที่ได้รับจาก Player 20%"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "108285": {
+        "unidentifiedDisplayName": "Libra Scroll",
+        "unidentifiedResourceName": "천칭자리스크롤",
+        "unidentifiedDescriptionName": [
+            "คัมภีร์ลึกลับที่บันทึกพลังของกลุ่มดาว Libra ผู้พิทักษ์แห่งความสมบูรณ์แบบ ว่ากันว่าผู้ที่สามารถครอบครองมันได้ จะได้รับพรจากดวงดาวและเข้าใกล้โชคชะตาที่ถูกซ่อนเอาไว้"
+        ],
+        "identifiedDisplayName": "Libra Scroll",
+        "identifiedResourceName": "천칭자리스크롤",
+        "identifiedDescriptionName": [
+            "คัมภีร์ลึกลับที่บันทึกพลังของกลุ่มดาว Libra ผู้พิทักษ์แห่งความสมบูรณ์แบบ ว่ากันว่าผู้ที่สามารถครอบครองมันได้ จะได้รับพรจากดวงดาวและเข้าใกล้โชคชะตาที่ถูกซ่อนเอาไว้",
+            "^ff0000หากเปิดใช้งานหลังวันที่ 21 ตุลาคม 2569 หลังปิดปรับปรุงประจำสัปดาห์จะไม่ได้รับ Libra Coin ",
+            "",
+            "น้ำหนัก : 1"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
     }
 }
