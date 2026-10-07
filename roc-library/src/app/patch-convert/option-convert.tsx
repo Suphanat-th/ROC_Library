@@ -8,13 +8,13 @@ function parseOption(text: string[]): string {
   let isOption = false;
 
   for (const f of text) {
-    if (f.includes("ประเภท :")) {
+    if (f.includes("ประเภท :") || f.includes("ประเภท:")) {
       isOption = true;
     }
     if (!isOption) continue;
 
     let typeEquiment = "พลังป้องกัน";
-    if (f.includes("ประเภท :")) {
+    if (f.includes("ประเภท :") || f.includes("ประเภท:")) {
       let splitType: string[] = [];
       if (f.includes("พลังป้องกัน :")) {
         splitType = f.split("พลังป้องกัน");
