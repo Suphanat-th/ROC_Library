@@ -9,7 +9,6 @@ interface QuestTicketProps {
     React.SetStateAction<Record<string, boolean>>
   >;
   formatRequest: (request: RequestItem[] | undefined) => string;
-  imageByQuestName: Record<string, string>;
   onActiveSumChange?: (sum: number) => void;
 }
 
@@ -18,7 +17,6 @@ export default function QuestTicket({
   activeQuests,
   setActiveQuests,
   formatRequest,
-  imageByQuestName,
   onActiveSumChange,
 }: QuestTicketProps) {
   const toggleQuest = (questName: string, isActive: boolean) => {
@@ -46,7 +44,7 @@ export default function QuestTicket({
     <div className="space-y-2">
       {quests.map((quest) => {
         const isActive = activeQuests[quest.name] || false;
-        const imageSource = imageByQuestName[quest.name];
+        const imageSource = quest.image;
 
         return (
           <div

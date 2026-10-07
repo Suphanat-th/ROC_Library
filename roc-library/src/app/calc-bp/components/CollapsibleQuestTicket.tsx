@@ -10,7 +10,6 @@ interface CollapsibleQuestTicketProps {
     React.SetStateAction<Record<string, boolean>>
   >;
   formatRequest: (request: RequestItem[] | undefined) => string;
-  imageByQuestName: Record<string, string>;
   onActiveSumChange?: (sum: number) => void;
 }
 
@@ -20,7 +19,6 @@ export default function CollapsibleQuestTicket({
   activeQuests,
   setActiveQuests,
   formatRequest,
-  imageByQuestName,
   onActiveSumChange,
 }: CollapsibleQuestTicketProps) {
   return (
@@ -34,7 +32,6 @@ export default function CollapsibleQuestTicket({
           activeQuests={activeQuests}
           setActiveQuests={setActiveQuests}
           formatRequest={formatRequest}
-          imageByQuestName={imageByQuestName}
           onActiveSumChange={onActiveSumChange}
         />
       </div>

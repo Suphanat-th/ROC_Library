@@ -12,10 +12,11 @@ export interface RequestItem {
 
 // Quest Interface Definition
 export interface Quest {
-  type: "daily" | "weekly";
+  type: "daily" | "weekly" | "season";
   name: string;
   reward: number; // Points earned for completing
   dateRange: string; // When available (e.g., "22/04 - 23/06")
+  image?: string; // Public path of the image shown on the quest ticket
   request?: RequestItem[]; // Items/resources needed with structured data
   details?: {
     monsterName?: string;
@@ -36,32 +37,34 @@ export interface SeasonConfig {
 }
 
 /**
- * DAILY QUESTS - Season 6 (July 9 - September 8, 2026)
+ * DAILY QUESTS - Season 6 (October 7, 2026 - January 13, 2027)
  */
 export const DAILY_QUESTS: Quest[] = [
   {
     type: "daily",
     name: "Monster Hunt",
     reward: 10,
-    dateRange: "08/07 - 09/09",
+    dateRange: "07/10 - 13/01",
+    image: "/assets/images/monsterDb/1278.gif",
     request: [
       {
-        name: "Bloody Murderer",
+        name: "Stalactic Golem",
         type: "monster",
-        amount: 20,
+        amount: 10,
       },
     ],
     details: {
-      monsterName: "Bloody Murderer",
-      quantity: 20,
+      monsterName: "Stalactic Golem",
+      quantity: 10,
       location: "",
     },
   },
   {
     type: "daily",
     name: "Send Zeny",
-    reward: 30,
-    dateRange: "08/07 - 09/09",
+    reward: 20,
+    dateRange: "07/10 - 13/01",
+    image: "/assets/images/horrortoyfactory/treasure.gif",
     request: [
       {
         name: "Zeny",
@@ -80,68 +83,72 @@ export const PREMIUM_DAILY_ROTATION: Quest[] = [
     type: "daily",
     name: "Monster Hunt",
     reward: 20,
-    dateRange: "08/07 - 22/07",
+    dateRange: "07/10 - 21/10",
+    image: "/assets/images/monsterDb/3020.gif",
     request: [
       {
-        name: "Disguise",
+        name: "Fire Condor",
         type: "monster",
-        amount: 20,
+        amount: 10,
       },
     ],
     details: {
-      monsterName: "Disguise",
-      quantity: 20,
+      monsterName: "Fire Condor",
+      quantity: 10,
     },
   },
   {
     type: "daily",
     name: "Monster Hunt",
     reward: 20,
-    dateRange: "22/07 - 05/08",
+    dateRange: "21/10 - 25/11",
+    image: "/assets/images/monsterDb/3022.gif",
     request: [
       {
-        name: "Gibbet",
+        name: "Fire Frilldora",
         type: "monster",
-        amount: 20,
+        amount: 10,
       },
     ],
     details: {
-      monsterName: "Gibbet",
-      quantity: 20,
+      monsterName: "Fire Frilldora",
+      quantity: 10,
     },
   },
   {
     type: "daily",
     name: "Monster Hunt",
     reward: 20,
-    dateRange: "05/08 - 19/08",
+    dateRange: "25/11 - 09/12",
+    image: "/assets/images/monsterDb/3023.gif",
     request: [
       {
-        name: "Dullahan",
+        name: "Fire Golem",
         type: "monster",
-        amount: 20,
+        amount: 10,
       },
     ],
     details: {
-      monsterName: "Dullahan",
-      quantity: 20,
+      monsterName: "Fire Golem",
+      quantity: 10,
     },
   },
   {
     type: "daily",
     name: "Monster Hunt",
     reward: 20,
-    dateRange: "19/08 - 09/09",
+    dateRange: "09/12 - 13/01",
+    image: "/assets/images/monsterDb/3021.gif",
     request: [
       {
-        name: "Quve",
+        name: "Fire Sandman",
         type: "monster",
-        amount: 20,
+        amount: 10,
       },
     ],
     details: {
-      monsterName: "Quve",
-      quantity: 20,
+      monsterName: "Fire Sandman",
+      quantity: 10,
     },
   },
 ];
@@ -152,45 +159,10 @@ export const PREMIUM_DAILY_ROTATION: Quest[] = [
 export const WEEKLY_QUESTS: Quest[] = [
   {
     type: "weekly",
-    name: "Amdarais",
-    reward: 20,
-    dateRange: "08/07 - 09/09",
-    request: [
-      {
-        name: "Amdarais",
-        type: "monster",
-        amount: 1,
-      },
-    ],
-    details: {
-      monsterName: "Amdarais",
-      quantity: 1,
-      location: "Boss ดัน Old Glast Heim",
-    },
-  },
-  {
-    type: "weekly",
-    name: "Evil Believer",
-    reward: 20,
-    dateRange: "08/07 - 09/09",
-    request: [
-      {
-        name: "Evil Believer",
-        type: "monster",
-        amount: 1,
-      },
-    ],
-    details: {
-      monsterName: "Evil Believer",
-      quantity: 1,
-      location: "Boss ดัน Raid Devil Secret",
-    },
-  },
-  {
-    type: "weekly",
     name: "Torturous Redeemer",
-    reward: 30,
-    dateRange: "08/07 - 09/09",
+    reward: 15,
+    dateRange: "07/10 - 13/01",
+    image: "/assets/images/monsterDb/2959.gif",
     request: [
       {
         name: "Torturous Redeemer",
@@ -206,14 +178,51 @@ export const WEEKLY_QUESTS: Quest[] = [
   },
   {
     type: "weekly",
-    name: "Send Zeny/Items",
-    reward: 30,
-    dateRange: "08/07 - 09/09",
+    name: "Infinite Tao Gunka",
+    reward: 15,
+    dateRange: "07/10 - 13/01",
+    image: "/assets/images/monsterDb/1583.gif",
     request: [
       {
-        name: " Gray Shard",
+        name: "Infinite Tao Gunka",
+        type: "monster",
+        amount: 1,
+      },
+    ],
+    details: {
+      monsterName: "Infinite Tao Gunka",
+      quantity: 1,
+    },
+  },
+  {
+    type: "weekly",
+    name: "Awakened Ferre",
+    reward: 20,
+    dateRange: "07/10 - 13/01",
+    image: "/assets/images/monsterDb/3073.gif",
+    request: [
+      {
+        name: "Awakened Ferre",
+        type: "monster",
+        amount: 1,
+      },
+    ],
+    details: {
+      monsterName: "Awakened Ferre",
+      quantity: 1,
+    },
+  },
+  {
+    type: "weekly",
+    name: "Send Zeny/Items",
+    reward: 20,
+    dateRange: "07/10 - 13/01",
+    image: "/assets/images/horrortoyfactory/treasure.gif",
+    request: [
+      {
+        name: "Tooth of Jitterbug",
         type: "item",
-        amount: 10,
+        amount: 1,
       },
       {
         name: "Zeny",
@@ -225,13 +234,46 @@ export const WEEKLY_QUESTS: Quest[] = [
 ];
 
 /**
+ * SEASON QUESTS - Premium only, one-time each
+ */
+export const SEASON_QUESTS: Quest[] = [
+  {
+    type: "season",
+    name: "Ferre (Dancer)",
+    reward: 100,
+    dateRange: "07/10 - 13/01",
+    image: "/assets/images/monsterDb/3072.gif",
+    request: [{ name: "Ferre (Dancer)", type: "monster", amount: 850 }],
+    details: { monsterName: "Ferre (Dancer)", quantity: 850 },
+  },
+  {
+    type: "season",
+    name: "Ferre (Hammer)",
+    reward: 100,
+    dateRange: "07/10 - 13/01",
+    image: "/assets/images/monsterDb/3071.gif",
+    request: [{ name: "Ferre (Hammer)", type: "monster", amount: 350 }],
+    details: { monsterName: "Ferre (Hammer)", quantity: 350 },
+  },
+  {
+    type: "season",
+    name: "Ferre (Guitar)",
+    reward: 100,
+    dateRange: "07/10 - 13/01",
+    image: "/assets/images/monsterDb/3070.gif",
+    request: [{ name: "Ferre (Guitar)", type: "monster", amount: 950 }],
+    details: { monsterName: "Ferre (Guitar)", quantity: 950 },
+  },
+];
+
+/**
  * SEASON 6 CONFIGURATION
- * July 9 - September 8, 2026
+ * October 7, 2026 - January 13, 2027
  */
 export const SEASON_CONFIG: SeasonConfig = {
-  eventStartDate: new Date(2026, 8, 13, 14, 0, 0), // April 22, 2026 12:00
-  eventEndDate: new Date(2026, 8, 14, 6, 0, 0, 0), // June 24, 2026 23:59
-  seasonNumber: 6, // Season 5 for display
+  eventStartDate: new Date(2026, 9, 7, 14, 0, 0), // 7 Oct 2026 14:00
+  eventEndDate: new Date(2027, 0, 13, 6, 0, 0, 0), // 13 Jan 2027 06:00
+  seasonNumber: 6,
 };
 
 /**
@@ -262,9 +304,14 @@ export const getWeeklyQuestTotal = (): number => {
 /**
  * Get all quests of a specific type
  */
-export const getQuestsByType = (type: "daily" | "weekly"): Quest[] => {
+export const getQuestsByType = (
+  type: "daily" | "weekly" | "season",
+): Quest[] => {
   if (type === "daily") {
     return DAILY_QUESTS;
+  }
+  if (type === "season") {
+    return SEASON_QUESTS;
   }
   return WEEKLY_QUESTS;
 };
@@ -292,6 +339,7 @@ export const getQuestByName = (name: string): Quest | undefined => {
     ...DAILY_QUESTS,
     ...PREMIUM_DAILY_ROTATION,
     ...WEEKLY_QUESTS,
+    ...SEASON_QUESTS,
   ];
   return allQuests.find((quest) => quest.name === name);
 };

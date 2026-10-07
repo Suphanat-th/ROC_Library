@@ -1,26 +1,15 @@
 import React from "react";
-import { CalendarDays, CalendarRange } from "lucide-react";
+import { CalendarDays, CalendarRange, Trophy } from "lucide-react";
 import {
   DAILY_QUESTS,
   WEEKLY_QUESTS,
+  SEASON_QUESTS,
   Quest,
   RequestItem,
 } from "@/data/battlePassQuestData";
 import { CalculationResult, LevelData } from "../types";
 import QuestTicket from "./QuestTicket";
 import CollapsibleQuestTicket from "./CollapsibleQuestTicket";
-
-const dailyQuestImages: Record<string, string> = {
-  "Monster Hunt": "/assets/images/Events/monsterx3.png",
-  "Send Zeny": "/assets/images/horrortoyfactory/treasure.gif",
-};
-
-const weeklyQuestImages: Record<string, string> = {
-  Amdarais: "/assets/images/monsterDb/1087.gif",
-  "Evil Believer": "/assets/images/monsterDb/1190.gif",
-  "Torturous Redeemer": "/assets/images/monsterDb/1115.gif",
-  "Send Zeny/Items": "/assets/images/horrortoyfactory/treasure.gif",
-};
 
 interface CurrentStatusSectionProps {
   totalPoints: number;
@@ -66,6 +55,14 @@ interface CurrentStatusSectionProps {
   projectedLevelData: LevelData;
   calculation: CalculationResult;
   formatRequest: (request: RequestItem[] | undefined) => string;
+  seasonQuests: Record<string, boolean>;
+  setSeasonQuests: React.Dispatch<
+    React.SetStateAction<Record<string, boolean>>
+  >;
+  completedSeasonQuestsList: Record<string, boolean>;
+  setCompletedSeasonQuestsList: React.Dispatch<
+    React.SetStateAction<Record<string, boolean>>
+  >;
 }
 
 export default function CurrentStatusSection({
@@ -100,6 +97,10 @@ export default function CurrentStatusSection({
   projectedLevelData,
   calculation,
   formatRequest,
+  seasonQuests,
+  setSeasonQuests,
+  completedSeasonQuestsList,
+  setCompletedSeasonQuestsList,
 }: CurrentStatusSectionProps) {
   return (
     <div className="card w-full border border-blue-900/80 bg-linear-to-br from-slate-950 via-slate-900 to-blue-950 text-white shadow-2xl shadow-slate-950/40 backdrop-blur-sm">
@@ -163,10 +164,13 @@ export default function CurrentStatusSection({
               {(() => {
                 let originalDailyPoints = 0;
                 if (completedDailyQuests["Monster Hunt"]) {
-                  originalDailyPoints += isPremiumOpened ? 20 : 10;
+                  originalDailyPoints +=
+                    isPremiumOpened && activePremiumDailyQuest
+                      ? activePremiumDailyQuest.reward
+                      : DAILY_QUESTS[0].reward;
                 }
                 if (completedDailyQuests["Send Zeny"]) {
-                  originalDailyPoints += 30;
+                  originalDailyPoints += DAILY_QUESTS[1].reward;
                 }
 
                 let lastDayDailyPoints = 0;
@@ -243,7 +247,21 @@ export default function CurrentStatusSection({
                 const daysForDailyCalc = Math.max(0, calculation.daysRemaining);
                 const weeksForCalc = calculation.weeksRemaining;
 
+                let seasonPoints = 0;
+                let completedSeasonPoints = 0;
+                SEASON_QUESTS.forEach((quest) => {
+                  if (!isPremiumOpened) return;
+                  if (seasonQuests[quest.name]) {
+                    seasonPoints += quest.reward;
+                  }
+                  if (completedSeasonQuestsList[quest.name]) {
+                    completedSeasonPoints += quest.reward;
+                  }
+                });
+
                 let totalAdditional = 0;
+
+                totalAdditional += seasonPoints - completedSeasonPoints;
 
                 if (originalDailyPoints > 0) {
                   totalAdditional += daysForDailyCalc * originalDailyPoints;
@@ -290,6 +308,16 @@ export default function CurrentStatusSection({
                     {isWeeklyCompleted && completionWeeklyPoints > 0 && (
                       <div className="font-semibold text-blue-300">
                         • Quest Completion Weekly: - {completionWeeklyPoints}
+                      </div>
+                    )}
+
+                    {seasonPoints > 0 && (
+                      <div>• Season Quest: + {seasonPoints}</div>
+                    )}
+
+                    {completedSeasonPoints > 0 && (
+                      <div className="font-semibold text-blue-300">
+                        • Quest Completion Season: - {completedSeasonPoints}
                       </div>
                     )}
 
@@ -413,7 +441,6 @@ export default function CurrentStatusSection({
                       activeQuests={completedDailyQuests}
                       setActiveQuests={setCompletedDailyQuests}
                       formatRequest={formatRequest}
-                      imageByQuestName={dailyQuestImages}
                     />
                   )}
                 </div>
@@ -430,9 +457,25 @@ export default function CurrentStatusSection({
                     activeQuests={completedWeeklyQuests}
                     setActiveQuests={setCompletedWeeklyQuests}
                     formatRequest={formatRequest}
-                    imageByQuestName={weeklyQuestImages}
                   />
                 </div>
+                {isPremiumOpened && (
+                  <div className="rounded-xl border border-blue-200 p-4">
+                    <div className="text-lg font-bold text-white mb-3 flex items-center gap-2">
+                      <Trophy
+                        aria-hidden="true"
+                        className="h-10 w-10 text-blue-300"
+                      />{" "}
+                      เควส Season (Premium เท่านั้น • ครั้งเดียว)
+                    </div>
+                    <QuestTicket
+                      quests={SEASON_QUESTS}
+                      activeQuests={seasonQuests}
+                      setActiveQuests={setSeasonQuests}
+                      formatRequest={formatRequest}
+                    />
+                  </div>
+                )}
               </div>
 
               <input
@@ -481,7 +524,6 @@ export default function CurrentStatusSection({
                               activeQuests={completedDailyQuestsList}
                               setActiveQuests={setCompletedDailyQuestsList}
                               formatRequest={formatRequest}
-                              imageByQuestName={dailyQuestImages}
                               onActiveSumChange={(sum) =>
                                 handleDailyCompletedChange(sum > 0)
                               }
@@ -600,7 +642,6 @@ export default function CurrentStatusSection({
                               activeQuests={completedWeeklyQuestsList}
                               setActiveQuests={setCompletedWeeklyQuestsList}
                               formatRequest={formatRequest}
-                              imageByQuestName={weeklyQuestImages}
                               onActiveSumChange={(sum) =>
                                 handleWeeklyCompletedChange(sum > 0)
                               }
@@ -642,6 +683,18 @@ export default function CurrentStatusSection({
                           </>
                         )}
                       </div>
+
+                      {isPremiumOpened && (
+                        <div className="form-control">
+                          <CollapsibleQuestTicket
+                            title="เลือก Season Quest ที่ทำสำเร็จแล้ว"
+                            quests={SEASON_QUESTS}
+                            activeQuests={completedSeasonQuestsList}
+                            setActiveQuests={setCompletedSeasonQuestsList}
+                            formatRequest={formatRequest}
+                          />
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -695,7 +748,6 @@ export default function CurrentStatusSection({
                               activeQuests={isLastDayDailyQuests}
                               setActiveQuests={setIsLastDayDailyQuests}
                               formatRequest={formatRequest}
-                              imageByQuestName={dailyQuestImages}
                               onActiveSumChange={(sum) =>
                                 handleLastDayDailyChange(sum > 0)
                               }
@@ -819,7 +871,6 @@ export default function CurrentStatusSection({
                               activeQuests={isLastDayWeeklyQuests}
                               setActiveQuests={setIsLastDayWeeklyQuests}
                               formatRequest={formatRequest}
-                              imageByQuestName={weeklyQuestImages}
                               onActiveSumChange={(sum) =>
                                 handleLastDayWeeklyChange(sum > 0)
                               }

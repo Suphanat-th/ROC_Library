@@ -5,6 +5,7 @@ import {
   DAILY_QUESTS,
   PREMIUM_DAILY_ROTATION,
   WEEKLY_QUESTS,
+  SEASON_QUESTS,
   RequestItem,
   SEASON_CONFIG,
 } from "@/data/battlePassQuestData";
@@ -56,13 +57,16 @@ const getActivePremiumDailyQuest = (today: Date = new Date()): typeof PREMIUM_DA
     const [startDay, startMonth] = startStr.split('/').map(Number);
     const [endDay, endMonth] = endStr.split('/').map(Number);
 
-    // Create comparable dates (same year)
-    const startDate = new Date(currentYear, startMonth - 1, startDay);
-    const endDate = new Date(currentYear, endMonth - 1, endDay);
+    // Ranges may cross a year boundary (e.g. 09/12 - 13/01), so try both start years
     const checkDate = new Date(currentYear, currentMonth - 1, currentDay);
+    for (const startYear of [currentYear, currentYear - 1]) {
+      const startDate = new Date(startYear, startMonth - 1, startDay);
+      const endYear = endMonth < startMonth ? startYear + 1 : startYear;
+      const endDate = new Date(endYear, endMonth - 1, endDay);
 
-    if (checkDate >= startDate && checkDate <= endDate) {
-      return quest;
+      if (checkDate >= startDate && checkDate <= endDate) {
+        return quest;
+      }
     }
   }
 
@@ -96,6 +100,12 @@ export default function CalcBPComponent() {
   // Quest Completion Status - for calculating reduced remaining days/weeks
   const [completedDailyQuestsList, setCompletedDailyQuestsList] = useState<Record<string, boolean>>({});
   const [completedWeeklyQuestsList, setCompletedWeeklyQuestsList] = useState<Record<string, boolean>>({});
+
+  // Season quests are one-time: selected = still to do, completed = already counted in current points
+  const [seasonQuests, setSeasonQuests] = useState<Record<string, boolean>>(() =>
+    Object.fromEntries(SEASON_QUESTS.map((quest) => [quest.name, true])),
+  );
+  const [completedSeasonQuestsList, setCompletedSeasonQuestsList] = useState<Record<string, boolean>>({});
   
   const [targetLevel, setTargetLevel] = useState<number>(0);
 
@@ -395,7 +405,16 @@ export default function CalcBPComponent() {
       completionDailyPointsDeduct -
       completionWeeklyPointsDeduct +
       lastDayDailyPoints +
-      lastDayWeeklyPoints;
+      lastDayWeeklyPoints +
+      SEASON_QUESTS.reduce(
+        (sum, quest) =>
+          isPremiumOpened
+            ? sum +
+              (seasonQuests[quest.name] ? quest.reward : 0) -
+              (completedSeasonQuestsList[quest.name] ? quest.reward : 0)
+            : sum,
+        0,
+      );
 
     const projectedTotalPoints = Math.max(0, totalPoints + additionalPoints);
     return calculateLevelFromExp(projectedTotalPoints, isPremiumOpened);
@@ -513,6 +532,23 @@ export default function CalcBPComponent() {
       }
     });
 
+    // Season quests - one-time cost, Premium only
+    SEASON_QUESTS.forEach((quest) => {
+      if (
+        isPremiumOpened &&
+        seasonQuests[quest.name] &&
+        !completedSeasonQuestsList[quest.name]
+      ) {
+        (quest.request ?? []).forEach((req: RequestItem) => {
+          if (req.type === 'zeny') {
+            totalZeny += req.amount;
+          } else if (req.type === 'item') {
+            items[req.name] = (items[req.name] || 0) + req.amount;
+          }
+        });
+      }
+    });
+
     return { totalZeny, items };
   };
 
@@ -585,6 +621,10 @@ export default function CalcBPComponent() {
             handleWeeklyCompletedChange={handleWeeklyCompletedChange}
             completedWeeklyQuestsList={completedWeeklyQuestsList}
             setCompletedWeeklyQuestsList={setCompletedWeeklyQuestsList}
+            seasonQuests={seasonQuests}
+            setSeasonQuests={setSeasonQuests}
+            completedSeasonQuestsList={completedSeasonQuestsList}
+            setCompletedSeasonQuestsList={setCompletedSeasonQuestsList}
             projectedLevelData={projectedLevelData}
             calculation={calculation}
             formatRequest={formatRequest}
