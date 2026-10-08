@@ -20,10 +20,10 @@ export const RESEARCH_TYPES: ResearchType[] = [
     minutes: 10,
     img: "/assets/images/bp/basic_re.png",
     rewards: [
-      { medals: 5, chance: 40 },
+      { medals: 5, chance: 35 },
       { medals: 10, chance: 30 },
       { medals: 15, chance: 20 },
-      { medals: 20, chance: 10 },
+      { medals: 20, chance: 15 },
     ],
   },
   {
@@ -32,10 +32,10 @@ export const RESEARCH_TYPES: ResearchType[] = [
     minutes: 5,
     img: "/assets/images/bp/advance_re.png",
     rewards: [
-      { medals: 10, chance: 40 },
+      { medals: 10, chance: 35 },
       { medals: 20, chance: 30 },
       { medals: 30, chance: 20 },
-      { medals: 40, chance: 10 },
+      { medals: 40, chance: 15 },
     ],
   },
 ];

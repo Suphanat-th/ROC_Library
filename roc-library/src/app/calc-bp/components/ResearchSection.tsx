@@ -197,6 +197,9 @@ export default function ResearchSection({
                     placeholder="0"
                     className="input input-bordered input-lg w-full border-blue-300 bg-white text-center text-3xl font-bold text-blue-600 focus:input-primary"
                   />
+                  <span className="text-sm font-bold text-blue-700">
+                    {formatMinutes((counts[type.key] ?? 0) * type.minutes)}
+                  </span>
                 </div>
               </div>
             ))}
