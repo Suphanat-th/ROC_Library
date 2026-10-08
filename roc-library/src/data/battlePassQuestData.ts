@@ -64,7 +64,7 @@ export const DAILY_QUESTS: Quest[] = [
     name: "Send Zeny",
     reward: 20,
     dateRange: "07/10 - 13/01",
-    image: "/assets/images/horrortoyfactory/treasure.gif",
+    image: "/assets/images/bp/Money.png",
     request: [
       {
         name: "Zeny",
@@ -217,7 +217,7 @@ export const WEEKLY_QUESTS: Quest[] = [
     name: "Send Zeny/Items",
     reward: 20,
     dateRange: "07/10 - 13/01",
-    image: "/assets/images/horrortoyfactory/treasure.gif",
+    image: "/assets/images/bp/Money2.png",
     request: [
       {
         name: "Tooth of Jitterbug",
@@ -273,7 +273,7 @@ export const SEASON_QUESTS: Quest[] = [
 export const SEASON_CONFIG: SeasonConfig = {
   eventStartDate: new Date(2026, 9, 7, 14, 0, 0), // 7 Oct 2026 14:00
   eventEndDate: new Date(2027, 0, 13, 6, 0, 0, 0), // 13 Jan 2027 06:00
-  seasonNumber: 6,
+  seasonNumber: 7,
 };
 
 /**
