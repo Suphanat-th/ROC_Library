@@ -15,6 +15,7 @@ import DailyQuestSection from "./components/DailyQuestSection";
 import WeeklyQuestSection from "./components/WeeklyQuestSection";
 import SummarySection from "./components/SummarySection";
 import LevelCalcSection from "./components/LevelCalcSection";
+import ResearchSection from "./components/ResearchSection";
 import { CalculationResult, LevelData } from "./types";
 import { toThaiDateOnly } from "@/utils/timezoneUtils";
 
@@ -678,6 +679,16 @@ export default function CalcBPComponent() {
             weeklyTotal={weeklyTotal}
             formatNumber={formatNumber}
           />
+        </div>
+      </div>
+
+      <div className="collapse collapse-arrow border border-blue-900/80 bg-slate-950/90 text-white shadow-lg backdrop-blur-sm">
+        <input type="checkbox" defaultChecked={false} />
+        <div className="collapse-title px-5 py-4 text-lg font-black tracking-tight text-white sm:text-xl">
+          4. Research Diagnose 
+        </div>
+        <div className="collapse-content px-2 pb-4 sm:px-3">
+          <ResearchSection formatNumber={formatNumber} />
         </div>
       </div>
     </div>
