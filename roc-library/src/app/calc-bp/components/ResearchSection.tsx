@@ -159,7 +159,7 @@ export default function ResearchSection({
             <span className="text-2xl">📚</span> Researching
           </h2>
           <p className="mb-6 text-xs text-slate-400">
-            หนังสือ 1 เล่ม = 1 ครั้ง ทำได้ทีละครั้ง • ผลตอบแทนเป็น{" "}
+            สมุด 1 เล่ม = 1 ครั้ง ทำได้ทีละครั้ง • ผลตอบแทนเป็น{" "}
             {RESEARCH_MEDAL_NAME}
           </p>
 
@@ -183,7 +183,7 @@ export default function ResearchSection({
                   </span>
                 </div>
                 <div className="flex flex-col items-center gap-2">
-                  <span className="text-xs text-gray-500">จำนวนหนังสือ</span>
+                  <span className="text-xs text-gray-500">จำนวนสมุดวิจัย</span>
                   <input
                     type="text"
                     inputMode="numeric"
