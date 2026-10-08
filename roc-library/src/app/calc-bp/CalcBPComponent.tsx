@@ -696,7 +696,7 @@ export default function CalcBPComponent() {
       <div className="collapse collapse-arrow border border-blue-900/80 bg-slate-950/90 text-white shadow-lg backdrop-blur-sm">
         <input type="checkbox" defaultChecked={false} />
         <div className="collapse-title px-5 py-4 text-lg font-black tracking-tight text-white sm:text-xl">
-          5. Enchant Stone Exchange
+          5. Enchant Stone Exchange (Baphomet Only)
         </div>
         <div className="collapse-content px-2 pb-4 sm:px-3">
           <EnchantStoneSection formatNumber={formatNumber} />
