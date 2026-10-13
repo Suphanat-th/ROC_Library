@@ -1,49 +1,66 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
-
-:root{
---bg: #ffffff;
---fg: #e6e6e6;
---accent: #ffcc00;
+@plugin "daisyui/theme" {
+  name: "roc-light";
+  default: true;
+  color-scheme: light;
+  --color-base-100: #ffffff;
+  --color-base-200: #f2f8fd;
+  --color-base-300: #d9eaf7;
+  --color-base-content: #0f2a3f;
+  --color-primary: #0284c7;
+  --color-primary-content: #ffffff;
+  --color-secondary: #38bdf8;
+  --color-secondary-content: #082f49;
+  --color-accent: #f59e0b;
+  --color-accent-content: #3b2300;
+  --color-neutral: #1e3a52;
+  --color-neutral-content: #eaf4fb;
+  --color-info: #0ea5e9;
+  --color-success: #16a34a;
+  --color-warning: #f59e0b;
+  --color-error: #dc2626;
+  --radius-box: 0.75rem;
+  --radius-field: 0.5rem;
 }
 
-
-*{box-sizing:border-box}
-html,body,#root{height:100%}
-body{
-margin:0;
-background:var(--bg);
-color:var(--fg);
--webkit-font-smoothing:antialiased; /* �Դ smoothing �����ѡ�� pixel look */
--moz-osx-font-smoothing:grayscale;
-font-family: 'Press Start 2P', 'VT323', monospace;
+@plugin "daisyui/theme" {
+  name: "roc-dark";
+  color-scheme: dark;
+  --color-base-100: #0f1b2a;
+  --color-base-200: #0a1420;
+  --color-base-300: #1d3047;
+  --color-base-content: #dbe9f5;
+  --color-primary: #38bdf8;
+  --color-primary-content: #062235;
+  --color-secondary: #7dd3fc;
+  --color-secondary-content: #062235;
+  --color-accent: #fbbf24;
+  --color-accent-content: #2a1a00;
+  --color-neutral: #1d3047;
+  --color-neutral-content: #dbe9f5;
+  --color-info: #38bdf8;
+  --color-success: #4ade80;
+  --color-warning: #fbbf24;
+  --color-error: #f87171;
+  --radius-box: 0.75rem;
+  --radius-field: 0.5rem;
 }
 
+@custom-variant dark (&:where([data-theme=roc-dark], [data-theme=roc-dark] *));
 
-/* B: ��鹷�� container */
-.app-root{
-padding:2rem;
-font-size:14px; /* ��Ѻ�����ͧ��� */
+html,
+body {
+  height: 100%;
 }
 
-
-/* ��������ѡ�ô� "��" ���㹺ҧ��������� */
-*{
-text-rendering: optimizeLegibility;
+body {
+  margin: 0;
+  background: var(--color-base-200);
+  color: var(--color-base-content);
 }
 
-
-/* C: ������ҧ���� 8-bit */
-.btn-8bit{
-display:inline-block;
-padding:0.6rem 1rem;
-border:3px solid var(--accent);
-background: linear-gradient(180deg, rgba(255,204,0,0.16), rgba(255,204,0,0.06));
-font-family: inherit;
-text-transform:uppercase;
-letter-spacing:1px;
-}
 /* Speed up drawer closing animation */
 .drawer-toggle:checked ~ .drawer-side .drawer-overlay,
 .drawer-toggle:checked ~ .drawer-side > div {
@@ -52,4 +69,35 @@ letter-spacing:1px;
 
 .drawer-side .drawer-overlay {
   transition: all 0.2s ease-in-out;
+}
+
+/* Navigation feedback: thin progress bar under the navbar */
+@keyframes nav-progress {
+  0% { transform: scaleX(0); }
+  40% { transform: scaleX(0.6); }
+  100% { transform: scaleX(0.92); }
+}
+
+.nav-progress {
+  transform-origin: left;
+  animation: nav-progress 8s cubic-bezier(0.1, 0.7, 0.2, 1) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-progress {
+    animation: none;
+    transform: scaleX(0.6);
+  }
+}
+
+/* MUAD showcase: gentle float on large screens only, and never with reduced motion */
+@keyframes roc-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@media (min-width: 1024px) and (prefers-reduced-motion: no-preference) {
+  .roc-float {
+    animation: roc-float 4s ease-in-out infinite;
+  }
 }

@@ -21,7 +21,7 @@ export default function DungeonMapContainer({
   showControls = true,
 }: DungeonMapContainerProps) {
   return (
-    <div className="w-full min-h-screen flex flex-col bg-gray-100 p-4">
+    <div className="w-full min-h-screen flex flex-col bg-base-200 p-4">
       {/* Header */}
       <DungeonMapHeader
         title={mapName}
@@ -47,7 +47,7 @@ export default function DungeonMapContainer({
       />
 
       {/* Map Container */}
-      <div className="flex-1 rounded-lg overflow-hidden shadow-lg bg-gray-200 min-h-96">
+      <div className="flex-1 rounded-lg overflow-hidden shadow-lg bg-base-300 min-h-96">
         {children}
       </div>
     </div>

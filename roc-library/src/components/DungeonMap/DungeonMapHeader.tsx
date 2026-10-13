@@ -11,7 +11,7 @@ export default function DungeonMapHeader({
   logoPath,
 }: DungeonMapHeaderProps) {
   return (
-    <div className="card bg-white shadow-lg mb-4 border border-gray-200">
+    <div className="card bg-base-100 shadow-lg mb-4 border border-base-300">
       <div
         className={`card-body ${logoPath ? "flex flex-col items-center text-center" : ""}`}
       >
@@ -27,9 +27,9 @@ export default function DungeonMapHeader({
           </div>
         )}
 
-        <h1 className="card-title text-3xl font-bold text-gray-900">{title}</h1>
+        <h1 className="card-title text-3xl font-bold text-base-content">{title}</h1>
 
-        {subtitle && <p className="text-gray-600 text-base mt-2">{subtitle}</p>}
+        {subtitle && <p className="text-base-content/70 text-base mt-2">{subtitle}</p>}
 
         {credits && (
           <p className="text-gray-500 text-sm mt-3 italic">*{credits}</p>
@@ -40,7 +40,7 @@ export default function DungeonMapHeader({
             {description && (
               <div className="card shadow-lg bg-base-100">
                 <div className="card-body">
-                  <div className="text-sm text-gray-800">{description}</div>
+                  <div className="text-sm text-base-content">{description}</div>
                 </div>
               </div>
             )}
@@ -54,7 +54,7 @@ export default function DungeonMapHeader({
                       Note {index + 1}
                     </div>
                     <div
-                      className="stat-value text-sm text-gray-800"
+                      className="stat-value text-sm text-base-content"
                       dangerouslySetInnerHTML={{ __html: note }}
                     />
                   </div>

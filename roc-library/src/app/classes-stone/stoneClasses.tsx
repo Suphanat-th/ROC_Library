@@ -31,7 +31,7 @@ export default function JobStoneCard({
             return (
               <div
                 key={f.name}
-                className={`col-span-4 text-black ${isGarment ? "row-span-3" : ""}`}
+                className={`col-span-4 text-base-content ${isGarment ? "row-span-3" : ""}`}
               >
                 <div className="card bg-base-100 shadow-lg border border-base-300 h-full">
                   <div className="card-body space-y-4">

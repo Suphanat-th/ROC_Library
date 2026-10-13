@@ -22,10 +22,10 @@ const Loader: React.FC<LoaderProps> = ({
       {/* Spinner */}
       <div className={`${sizeClasses[size]} relative`}>
         <div
-          className="w-full h-full rounded-full border-4 border-blue-500 border-t-blue-700 border-r-blue-700 animate-spin"
+          className="w-full h-full rounded-full border-4 border-primary/30 border-t-primary border-r-primary animate-spin"
         />
         <div
-          className="absolute inset-0 rounded-full border-4 border-blue-400 border-b-blue-600 border-l-blue-600"
+          className="absolute inset-0 rounded-full border-4 border-transparent border-b-primary/60 border-l-primary/60"
           style={{
             animation: 'spin 2s linear infinite reverse',
           }}
@@ -34,7 +34,7 @@ const Loader: React.FC<LoaderProps> = ({
 
       {/* Message */}
       {message && (
-        <p className="text-blue-600 font-semibold text-sm animate-pulse">
+        <p className="text-primary font-semibold text-sm animate-pulse">
           {message}
         </p>
       )}
@@ -43,8 +43,8 @@ const Loader: React.FC<LoaderProps> = ({
 
   if (fullScreen) {
     return (
-      <div className="fixed inset-0 flex items-center justify-center bg-black/50 backdrop-blur-sm z-50">
-        <div className="bg-white/30 backdrop-blur-md shadow-xl shadow-purple-500/30 border border-white/40 rounded-2xl p-8">
+      <div className="fixed inset-0 flex items-center justify-center bg-base-content/30 backdrop-blur-sm z-50">
+        <div className="bg-base-100/90 backdrop-blur-md shadow-xl border border-primary/30 rounded-box p-8">
           {loaderContent}
         </div>
       </div>

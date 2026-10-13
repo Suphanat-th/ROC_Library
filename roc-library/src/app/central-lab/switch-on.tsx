@@ -7,7 +7,7 @@ export default function SwitchOnPage({ bit }: SwitchOnPageProps) {
   return (
 <div className="relative rounded-xl flex justify-center items-center overflow-hidden">
   {isOn && (
-    <div className="absolute w-40 h-40 rounded-full bg-yellow-400 opacity-90 blur-3xl animate-pulse transform-gpu"></div>
+    <div className="absolute w-40 h-40 rounded-full bg-yellow-400 opacity-90 blur-3xl animate-pulse motion-reduce:animate-none transform-gpu"></div>
   )}
 </div>
 

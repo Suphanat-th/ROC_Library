@@ -105,7 +105,7 @@ export default function ExpCalculator() {
                     }}
                     className={`btn btn-sm md:btn-md ${
                       selectedClass === classKey
-                        ? "btn-warning text-black font-bold"
+                        ? "btn-warning text-base-content font-bold"
                         : "btn-outline btn-warning"
                     }`}
                   >
@@ -133,7 +133,7 @@ export default function ExpCalculator() {
                       endLevel: Math.max(newStartLevel, prev.endLevel),
                     }));
                   }}
-                  className="select select-bordered select-warning w-full text-slate-800"
+                  className="select select-bordered select-warning w-full text-base-content"
                 >
                   {availableLevels.map((lvl) => (
                     <option key={lvl} value={lvl}>
@@ -164,7 +164,7 @@ export default function ExpCalculator() {
                       startPercent: clamped,
                     }));
                   }}
-                  className="input input-bordered input-warning w-full text-slate-800"
+                  className="input input-bordered input-warning w-full text-base-content"
                   placeholder="0-99.99"
                 />
               </div>
@@ -192,7 +192,7 @@ export default function ExpCalculator() {
                       endLevel: Math.max(prev.startLevel, newEndLevel),
                     }));
                   }}
-                  className="select select-bordered select-warning w-full text-slate-800"
+                  className="select select-bordered select-warning w-full text-base-content"
                 >
                   {availableLevels
                     .filter((lvl) => lvl >= expRange.startLevel)
@@ -225,7 +225,7 @@ export default function ExpCalculator() {
                       endPercent: clamped,
                     }));
                   }}
-                  className="input input-bordered input-warning w-full text-slate-800"
+                  className="input input-bordered input-warning w-full text-base-content"
                   placeholder="0-99.99"
                 />
               </div>
@@ -250,7 +250,7 @@ export default function ExpCalculator() {
                     const val = Math.max(0, parseInt(e.target.value) || 0);
                     setHours(val.toString());
                   }}
-                  className="input input-bordered input-info w-full text-slate-800 text-sm"
+                  className="input input-bordered input-info w-full text-base-content text-sm"
                   placeholder="0"
                 />
               </div>
@@ -274,7 +274,7 @@ export default function ExpCalculator() {
                     );
                     setMinutes(val.toString());
                   }}
-                  className="input input-bordered input-info w-full text-slate-800 text-sm"
+                  className="input input-bordered input-info w-full text-base-content text-sm"
                   placeholder="0"
                 />
               </div>
@@ -295,7 +295,7 @@ export default function ExpCalculator() {
                     const val = Math.max(0, parseFloat(e.target.value) || 100);
                     setServerMultiplier(val.toString());
                   }}
-                  className="input input-bordered input-info w-full text-slate-800 text-sm"
+                  className="input input-bordered input-info w-full text-base-content text-sm"
                   placeholder="100"
                 />
               </div>
@@ -316,7 +316,7 @@ export default function ExpCalculator() {
                     const val = Math.max(0, parseFloat(e.target.value) || 0);
                     setEquipmentExp(val.toString());
                   }}
-                  className="input input-bordered input-info w-full text-slate-800 text-sm"
+                  className="input input-bordered input-info w-full text-base-content text-sm"
                   placeholder="0"
                 />
               </div>
@@ -337,7 +337,7 @@ export default function ExpCalculator() {
                     const val = Math.max(0, parseFloat(e.target.value) || 0);
                     setExpBuff(val.toString());
                   }}
-                  className="input input-bordered input-info w-full text-slate-800 text-sm"
+                  className="input input-bordered input-info w-full text-base-content text-sm"
                   placeholder="0"
                 />
               </div>

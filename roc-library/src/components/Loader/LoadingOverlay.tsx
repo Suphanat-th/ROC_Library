@@ -9,8 +9,8 @@ export default function LoadingOverlay() {
   if (!isLoading) return null;
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-black/40 backdrop-blur-sm z-50">
-      <div className="bg-blue-600/30 backdrop-blur-md shadow-xl shadow-blue-600/30 border border-blue-400/40 rounded-2xl p-8">
+    <div className="fixed inset-0 flex items-center justify-center bg-base-content/30 backdrop-blur-sm z-50">
+      <div className="bg-base-100/90 backdrop-blur-md shadow-xl border border-primary/30 rounded-box p-8">
         <Loader size="lg" message="กำลังโหลด..." />
       </div>
     </div>

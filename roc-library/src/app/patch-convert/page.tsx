@@ -25,12 +25,12 @@ export default async function PatchConvertPage({
     return (
       <main className="flex min-h-[50vh] items-center justify-center p-6 text-center">
         <div>
-          <h1 className="text-2xl font-bold text-red-600">Access denied</h1>
-          <p className="mt-2 text-gray-600">
+          <h1 className="text-2xl font-bold text-error">Access denied</h1>
+          <p className="mt-2 text-base-content/70">
             เปิดหน้านี้ด้วย parameter ที่ถูกต้อง
             <br/>
             ติดตามข้อมูลเพิ่มเติมได้ที่
-            <a href="https://www.facebook.com/profile.php?id=61579020425764" target="_blank" className="text-blue-600 underline m-2">
+            <a href="https://www.facebook.com/profile.php?id=61579020425764" target="_blank" className="text-primary underline m-2">
               FB: หมากัดหมวด
             </a>
             ประจำวันพุธ เวลา 06:00 เป็นต้นไป

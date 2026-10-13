@@ -49,9 +49,9 @@ export default function QuestTicket({
         return (
           <div
             key={`${quest.name}-${quest.dateRange}`}
-            className={`form-control overflow-hidden rounded-xl border-2 shadow-sm transition-all duration-200 ${isActive ? "border-blue-500 bg-linear-to-r from-blue-50 to-white shadow-lg shadow-blue-900/30 ring-2 ring-blue-300" : " bg-slate-100 hover:border-blue-300 hover:bg-white hover:shadow-md"}`}
+            className={`form-control overflow-hidden rounded-xl border-2 shadow-sm transition-all duration-200 ${isActive ? "border-primary bg-linear-to-r from-primary/10 to-base-100 shadow-lg shadow-primary/20 ring-2 ring-primary/30" : " bg-base-200 hover:border-primary/40 hover:bg-base-100 hover:shadow-md"}`}
           >
-            <label className={`relative flex cursor-pointer items-center gap-3 p-3 pt-7 text-slate-900 ${isActive ? "" : "opacity-70 hover:opacity-100"}`}>
+            <label className={`relative flex cursor-pointer items-center gap-3 p-3 pt-7 text-base-content ${isActive ? "" : "opacity-70 hover:opacity-100"}`}>
               <input
                 type="checkbox"
                 checked={isActive}
@@ -61,7 +61,7 @@ export default function QuestTicket({
                 className="sr-only"
               />
               {imageSource ? (
-                <span className={`relative h-30 w-30 shrink-0 overflow-hidden rounded-lg border-2 bg-blue-50 transition-all duration-200 ${isActive ? "border-blue-500 shadow-md shadow-blue-300" : "border-slate-300 grayscale"}`}>
+                <span className={`relative h-30 w-30 shrink-0 overflow-hidden rounded-lg border-2 bg-primary/10 transition-all duration-200 ${isActive ? "border-primary shadow-md shadow-primary/30" : "border-base-300 grayscale"}`}>
                   <Image
                     src={imageSource}
                     alt={quest.name}
@@ -71,7 +71,7 @@ export default function QuestTicket({
                   />
                 </span>
               ) : (
-                <span className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-lg border-2 text-lg font-black transition-all duration-200 ${isActive ? "border-blue-500 bg-blue-100 text-blue-700" : "border-slate-300 bg-slate-200 text-slate-500"}`}>
+                <span className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-lg border-2 text-lg font-black transition-all duration-200 ${isActive ? "border-primary bg-primary/15 text-primary" : "border-base-300 bg-base-300 text-base-content/60"}`}>
                   {quest.name.charAt(0)}
                 </span>
               )}
@@ -80,10 +80,10 @@ export default function QuestTicket({
                 <br />
                 {quest.reward} แต้ม
               </span>
-              <span className={`absolute right-3 top-2 rounded-full px-3 py-1 text-[10px] font-black tracking-wider text-white transition-colors ${isActive ? "bg-blue-700 shadow-md shadow-blue-300" : "bg-slate-500"}`}>
+              <span className={`absolute right-3 top-2 rounded-full px-3 py-1 text-[10px] font-black tracking-wider transition-colors ${isActive ? "bg-primary text-primary-content shadow-md shadow-primary/30" : "bg-base-300 text-base-content/70"}`}>
                 {isActive ? "ON" : "OFF"}
               </span>
-              <span className={`absolute bottom-3 right-3 text-[10px] font-black uppercase tracking-wider ${isActive ? "text-blue-700" : "text-slate-500"}`}>
+              <span className={`absolute bottom-3 right-3 text-[10px] font-black uppercase tracking-wider ${isActive ? "text-primary" : "text-base-content/60"}`}>
                 
               </span>
             </label>

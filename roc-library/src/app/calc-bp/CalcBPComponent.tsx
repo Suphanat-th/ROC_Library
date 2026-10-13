@@ -583,9 +583,9 @@ export default function CalcBPComponent() {
 
   return (
     <div className="mx-auto w-full max-w-7xl space-y-7 p-1 sm:p-2 lg:space-y-8">
-      <div className="collapse collapse-arrow border border-blue-900/80 bg-slate-950/90 text-white shadow-lg backdrop-blur-sm">
+      <div className="collapse collapse-arrow border border-base-300 bg-base-100 text-base-content shadow-lg">
         <input type="checkbox" defaultChecked />
-        <div className="collapse-title px-5 py-4 text-lg font-black tracking-tight text-white sm:text-xl">
+        <div className="collapse-title px-5 py-4 text-lg font-black tracking-tight text-base-content sm:text-xl">
           1. รายละเอียด Battle Pass (BP)
         </div>
         <div className="collapse-content space-y-6 px-2 pb-4 sm:px-3">
@@ -634,9 +634,9 @@ export default function CalcBPComponent() {
         </div>
       </div>
 
-      <div className="collapse collapse-arrow border border-blue-900/80 bg-slate-950/90 text-white shadow-lg backdrop-blur-sm">
+      <div className="collapse collapse-arrow border border-base-300 bg-base-100 text-base-content shadow-lg">
         <input type="checkbox" defaultChecked={false} />
-        <div className="collapse-title px-5 py-4 text-lg font-black tracking-tight text-white sm:text-xl">
+        <div className="collapse-title px-5 py-4 text-lg font-black tracking-tight text-base-content sm:text-xl">
           2. Daily , Weekly , Summary
         </div>
         <div className="collapse-content space-y-6 px-2 pb-4 sm:px-3">
@@ -659,9 +659,9 @@ export default function CalcBPComponent() {
         </div>
       </div>
 
-      <div className="collapse collapse-arrow border border-blue-900/80 bg-slate-950/90 text-white shadow-lg backdrop-blur-sm">
+      <div className="collapse collapse-arrow border border-base-300 bg-base-100 text-base-content shadow-lg">
         <input type="checkbox" defaultChecked={false} />
-        <div className="collapse-title px-5 py-4 text-lg font-black tracking-tight text-white sm:text-xl">
+        <div className="collapse-title px-5 py-4 text-lg font-black tracking-tight text-base-content sm:text-xl">
           3. Level Calc
         </div>
         <div className="collapse-content px-2 pb-4 sm:px-3">
@@ -683,9 +683,9 @@ export default function CalcBPComponent() {
         </div>
       </div>
 
-      <div className="collapse collapse-arrow border border-blue-900/80 bg-slate-950/90 text-white shadow-lg backdrop-blur-sm">
+      <div className="collapse collapse-arrow border border-base-300 bg-base-100 text-base-content shadow-lg">
         <input type="checkbox" defaultChecked={false} />
-        <div className="collapse-title px-5 py-4 text-lg font-black tracking-tight text-white sm:text-xl">
+        <div className="collapse-title px-5 py-4 text-lg font-black tracking-tight text-base-content sm:text-xl">
           4. Research Diagnose 
         </div>
         <div className="collapse-content px-2 pb-4 sm:px-3">
@@ -693,9 +693,9 @@ export default function CalcBPComponent() {
         </div>
       </div>
 
-      <div className="collapse collapse-arrow border border-blue-900/80 bg-slate-950/90 text-white shadow-lg backdrop-blur-sm">
+      <div className="collapse collapse-arrow border border-base-300 bg-base-100 text-base-content shadow-lg">
         <input type="checkbox" defaultChecked={false} />
-        <div className="collapse-title px-5 py-4 text-lg font-black tracking-tight text-white sm:text-xl">
+        <div className="collapse-title px-5 py-4 text-lg font-black tracking-tight text-base-content sm:text-xl">
           5. Enchant Stone Exchange (Baphomet Only)
         </div>
         <div className="collapse-content px-2 pb-4 sm:px-3">

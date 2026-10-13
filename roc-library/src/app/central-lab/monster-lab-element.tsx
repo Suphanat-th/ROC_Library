@@ -49,7 +49,7 @@ export const ElementBadges: React.FC<ElementProps> = ({ element }) => {
 
             {/* Label + Value */}
             <span className="font-semibold">
-              <span className="text-black">
+              <span className="text-base-content">
                 {key.charAt(0).toUpperCase() + key.slice(1)}:
               </span>
               <span className={`ml-1 ${textColor}`}>{value}%</span>

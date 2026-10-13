@@ -21,8 +21,8 @@ const STAGES: StageInfo[] = [
   {
     id: "miniboss",
     label: "Mini Boss",
-    color: "text-purple-500",
-    bgColor: "bg-purple-100",
+    color: "text-secondary",
+    bgColor: "bg-secondary/10",
     badge: "badge-warning",
     icon: "👑",
   },
@@ -111,18 +111,18 @@ function MonsterCard({ monster: m }: MonsterCardProps) {
         {/* Info */}
         <div className="space-y-0.5 sm:space-y-1 text-[11px] sm:text-xs md:text-sm bg-base-200 p-1.5 sm:p-3 rounded">
           <div className="flex justify-between items-center gap-1">
-            <span className="text-black font-semibold">เผ่า:</span>
-            <span className="font-semibold text-black truncate">{m.race}</span>
+            <span className="text-base-content font-semibold">เผ่า:</span>
+            <span className="font-semibold text-base-content truncate">{m.race}</span>
           </div>
           <div className="flex justify-between items-center gap-1">
-            <span className="text-black font-semibold">ธาตุ:</span>
-            <span className="font-semibold text-black truncate">
+            <span className="text-base-content font-semibold">ธาตุ:</span>
+            <span className="font-semibold text-base-content truncate">
               {m.property}
             </span>
           </div>
           <div className="flex justify-between items-center gap-1">
-            <span className="text-black font-semibold">ขนาด:</span>
-            <span className="font-semibold text-black truncate">{m.scale}</span>
+            <span className="text-base-content font-semibold">ขนาด:</span>
+            <span className="font-semibold text-base-content truncate">{m.scale}</span>
           </div>
         </div>
 
@@ -289,7 +289,7 @@ export default function MonsterTablePage() {
                 }`}
               >
                 <span className="text-lg sm:text-xl">{stage.icon}</span>
-                <span className="hidden sm:inline text-xs sm:text-base text-black">
+                <span className="hidden sm:inline text-xs sm:text-base text-base-content">
                   {stage.label}
                 </span>
               </button>
@@ -339,7 +339,7 @@ export default function MonsterTablePage() {
               placeholder={`ค้นหามอนสเตอร์ ${currentStageInfo.label}`}
               value={currentData.search}
               onChange={(e) => currentData.setSearch(e.target.value)}
-              className="join-item input input-sm sm:input-md input-bordered flex-1 bg-base-100 placeholder:text-black text-black"
+              className="join-item input input-sm sm:input-md input-bordered flex-1 bg-base-100 placeholder:text-base-content text-base-content"
             />
             <button
               onClick={() => currentData.setSearch("")}
@@ -401,7 +401,7 @@ export default function MonsterTablePage() {
         ) : (
           <div className="text-center py-8 sm:py-12">
             <div className="text-5xl sm:text-6xl mb-3 sm:mb-4">🔍</div>
-            <p className="text-gray-500 text-base sm:text-lg">
+            <p className="text-base-content/60 text-base sm:text-lg">
               ไม่พบมอนสเตอร์ที่ค้นหา
             </p>
             <button
