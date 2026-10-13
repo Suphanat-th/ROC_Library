@@ -3,20 +3,19 @@
  * ROC Classic Server (Baphomet/Moonlight)
  *
  * Timezone: Asia/Bangkok (GMT+7)
- * Regular: Every Wednesday: 6:00 AM - 2:01 PM
+ * Regular: Every Wednesday 06:00 - 14:00
  * Special: Add custom dates for events, closures, etc.
  */
 
-import { getCurrentThaiTime } from "@/utils/timezoneUtils";
+const THAILAND_OFFSET_MS = 7 * 60 * 60 * 1000;
 
 export const MAINTENANCE_WINDOW = {
-  // Regular maintenance date and time in GMT+7 (Thailand timezone)
-  startDate: new Date(2026, 6, 30), // April 29, 2026 (Wednesday)
-  endDate: new Date(2026, 6, 30), // April 29, 2026 (same day)
-  startHour: 6, // 6:00 AM
+  // Weekly maintenance, in Thailand time (GMT+7)
+  weekday: 3, // 0 = Sunday ... 3 = Wednesday
+  startHour: 6,
   startMinute: 0,
-  endHour: 10, // 2:00 PM
-  endMinute: 0, // 2:01 PM
+  endHour: 13,
+  endMinute: 0,
 };
 
 export interface SpecialSchedule {
@@ -32,8 +31,9 @@ export interface SpecialSchedule {
 
 /**
  * Special schedule for server (events, closures, etc.)
- * Add entries here with specific dates and times
- * Example: New Year event, Server migration, etc.
+ * Add entries here with specific dates and times.
+ * startDate / endDate are calendar days (month is 0-indexed); the hours apply
+ * to every day in the range, in Thailand time.
  */
 export const SPECIAL_SCHEDULES: SpecialSchedule[] = [
   // Example format:
@@ -43,68 +43,91 @@ export const SPECIAL_SCHEDULES: SpecialSchedule[] = [
   //   startHour: 6,
   //   startMinute: 0,
   //   endHour: 14,
-  //   endMinute: 1,
+  //   endMinute: 0,
   //   reason: 'Server Migration',
   //   type: 'maintenance',
   // },
 ];
 
-/**
- * Check if server is currently in maintenance window
- * Checks both regular maintenance and special schedules
- * Automatically handles GMT+7 timezone
- */
-export function isServerInMaintenance(): boolean {
-  const current = getCurrentThaiTime();
-  const currentDate = new Date(
-    current.getUTCFullYear(),
-    current.getUTCMonth(),
-    current.getUTCDate(),
-  );
-  const hours = current.getUTCHours();
-  const minutes = current.getUTCMinutes();
-  const currentTotalMinutes = hours * 60 + minutes;
+export interface MaintenanceSlot {
+  start: Date;
+  end: Date;
+  reason: string;
+}
 
-  // Check special schedules first
+export interface MaintenanceState {
+  inMaintenance: boolean;
+  /** The window the server is in right now, if any. */
+  current: MaintenanceSlot | null;
+  /** The next window that has not started yet, if any. */
+  next: MaintenanceSlot | null;
+}
+
+// Thailand wall-clock time -> real instant.
+const thaiWallTime = (y: number, m: number, d: number, h: number, min: number) =>
+  new Date(Date.UTC(y, m, d, h, min) - THAILAND_OFFSET_MS);
+
+function buildSlots(now: Date): MaintenanceSlot[] {
+  const thai = new Date(now.getTime() + THAILAND_OFFSET_MS);
+  const y = thai.getUTCFullYear();
+  const m = thai.getUTCMonth();
+  const d = thai.getUTCDate();
+  const slots: MaintenanceSlot[] = [];
+
+  // Today and the next two weeks cover the current and the next regular window.
+  for (let i = 0; i <= 14; i++) {
+    const day = new Date(Date.UTC(y, m, d + i));
+    if (day.getUTCDay() !== MAINTENANCE_WINDOW.weekday) continue;
+    const dy = day.getUTCFullYear();
+    const dm = day.getUTCMonth();
+    const dd = day.getUTCDate();
+    slots.push({
+      start: thaiWallTime(dy, dm, dd, MAINTENANCE_WINDOW.startHour, MAINTENANCE_WINDOW.startMinute),
+      end: thaiWallTime(dy, dm, dd, MAINTENANCE_WINDOW.endHour, MAINTENANCE_WINDOW.endMinute),
+      reason: "Weekly maintenance",
+    });
+  }
+
   for (const schedule of SPECIAL_SCHEDULES) {
-    const startDate = new Date(schedule.startDate);
-    startDate.setHours(0, 0, 0, 0);
-    const endDate = new Date(schedule.endDate);
-    endDate.setHours(23, 59, 59, 999);
-
-    if (currentDate >= startDate && currentDate <= endDate) {
-      const startTotalMinutes = schedule.startHour * 60 + schedule.startMinute;
-      const endTotalMinutes = schedule.endHour * 60 + schedule.endMinute;
-
-      if (
-        currentTotalMinutes >= startTotalMinutes &&
-        currentTotalMinutes <= endTotalMinutes
-      ) {
-        return schedule.type === "maintenance" || schedule.type === "closure";
-      }
+    if (schedule.type === "event") continue;
+    const first = Date.UTC(
+      schedule.startDate.getFullYear(),
+      schedule.startDate.getMonth(),
+      schedule.startDate.getDate(),
+    );
+    const last = Date.UTC(
+      schedule.endDate.getFullYear(),
+      schedule.endDate.getMonth(),
+      schedule.endDate.getDate(),
+    );
+    for (let t = first; t <= last; t += 24 * 60 * 60 * 1000) {
+      const day = new Date(t);
+      const dy = day.getUTCFullYear();
+      const dm = day.getUTCMonth();
+      const dd = day.getUTCDate();
+      slots.push({
+        start: thaiWallTime(dy, dm, dd, schedule.startHour, schedule.startMinute),
+        end: thaiWallTime(dy, dm, dd, schedule.endHour, schedule.endMinute),
+        reason: schedule.reason,
+      });
     }
   }
 
-  // Check regular maintenance
-  const maintenanceStartDate = new Date(MAINTENANCE_WINDOW.startDate);
-  maintenanceStartDate.setHours(0, 0, 0, 0);
-  const maintenanceEndDate = new Date(MAINTENANCE_WINDOW.endDate);
-  maintenanceEndDate.setHours(23, 59, 59, 999);
+  return slots.sort((a, b) => a.start.getTime() - b.start.getTime());
+}
 
-  if (
-    currentDate >= maintenanceStartDate &&
-    currentDate <= maintenanceEndDate
-  ) {
-    const startTotalMinutes =
-      MAINTENANCE_WINDOW.startHour * 60 + MAINTENANCE_WINDOW.startMinute;
-    const endTotalMinutes =
-      MAINTENANCE_WINDOW.endHour * 60 + MAINTENANCE_WINDOW.endMinute;
+/**
+ * Where the server is relative to its maintenance windows at `now`.
+ * Checks both the regular weekly window and special schedules.
+ */
+export function getMaintenanceState(now: Date = new Date()): MaintenanceState {
+  const slots = buildSlots(now);
+  const current =
+    slots.find((s) => s.start <= now && now < s.end) ?? null;
+  const next = slots.find((s) => s.start > now) ?? null;
+  return { inMaintenance: current !== null, current, next };
+}
 
-    return (
-      currentTotalMinutes >= startTotalMinutes &&
-      currentTotalMinutes <= endTotalMinutes
-    );
-  }
-
-  return false;
+export function isServerInMaintenance(): boolean {
+  return getMaintenanceState().inMaintenance;
 }

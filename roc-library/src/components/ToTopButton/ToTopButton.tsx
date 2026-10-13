@@ -26,7 +26,7 @@ export default function ToTopButton() {
     <button
       type="button"
       onClick={scrollToTop}
-      className="btn btn-primary btn-circle fixed bottom-6 right-6 z-40 shadow-lg"
+      className="btn btn-primary btn-circle fixed bottom-6 right-6 z-30 shadow-lg"
       title="Scroll to top"
       aria-label="Scroll to top"
     >

@@ -113,6 +113,13 @@ const fileTree: FileTreeItem[] = [
     icon: "https://api.iconify.design/emojione/ticket.svg?color=%23f4fb00",
     href: "/calc-bp",
   },
+  {
+    id: "donate",
+    name: "Donate",
+    type: "file",
+    icon: "https://api.iconify.design/fluent-emoji-flat/red-heart.svg",
+    href: "/donate",
+  },
   // {
   //   id: "vct-calc",
   //   name: "VCT Calculator",

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { Heart } from "lucide-react";
 import { useLoading } from "@/context/LoadingContext";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import logo from "../../../public/assets/images/web/Logo.png";
@@ -45,6 +46,15 @@ export default function NavBarPage() {
 
       <div className="flex items-center gap-1 sm:gap-3">
         <span className="hidden sm:inline text-sm text-base-content/60">by Bozm</span>
+        <Link
+          href="/donate"
+          onClick={(e) => startNavigation("/donate", e)}
+          aria-label="สนับสนุนผู้พัฒนา"
+          className="btn btn-ghost btn-sm gap-1.5 text-primary"
+        >
+          <Heart aria-hidden="true" className="h-4 w-4" />
+          <span className="hidden sm:inline">สนับสนุน</span>
+        </Link>
         <ThemeToggle />
       </div>
     </nav>

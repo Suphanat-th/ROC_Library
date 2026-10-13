@@ -71,6 +71,11 @@ body {
   transition: all 0.2s ease-in-out;
 }
 
+/* Sidebar sits above page content (sticky bars z-30) but under the Navbar (z-40) so the Menu toggle still works */
+.drawer-side {
+  z-index: 35;
+}
+
 /* Navigation feedback: thin progress bar under the navbar */
 @keyframes nav-progress {
   0% { transform: scaleX(0); }
