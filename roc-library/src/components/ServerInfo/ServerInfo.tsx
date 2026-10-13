@@ -3,28 +3,26 @@ import StatusServerPage from "./Status";
 
 export default function ServerInfo() {
   return (
-    <div className="flex justify-center w-full mt-6">
-      <div
-        className="
-          bg-white/30
-          backdrop-blur-md
-          shadow-xl
-          shadow-purple-500/30
-          border border-white/40
-          rounded-2xl 
-          p-8
-          w-[420px]
-          grid grid-cols-2 gap-5
-        "
+    <div className="flex w-full justify-center">
+      <section
+        aria-labelledby="server-info-heading"
+        className="w-full max-w-xl rounded-box border border-base-300 bg-base-100 p-4 shadow-sm sm:p-6"
       >
-        <span className="text-xl text-pink-600 underline font-semibold col-span-2 text-center">
-          Server Info (Baphomet,Moonlight)
-        </span>
+        <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
+          <h2
+            id="server-info-heading"
+            className="text-lg font-semibold text-base-content"
+          >
+            Server Info{" "}
+            <span className="font-normal text-base-content/60">
+              (Baphomet, Moonlight)
+            </span>
+          </h2>
+          <StatusServerPage />
+        </div>
 
-        {/* Your components */}
         <ExpServerPage />
-        <StatusServerPage />
-      </div>
+      </section>
     </div>
   );
 }

@@ -1,36 +1,42 @@
+// RO colour codes are written for the game's dark tooltip. The card is light,
+// so each one maps to a darker shade of the same hue that stays readable.
+const RO_COLOR_CLASS: Record<string, string> = {
+  ff0000: "text-[#c80000]",
+  b4b4b4: "text-[#6b6b6b]",
+  "00ff00": "text-[#0b7a0b]",
+  ffff00: "text-[#8a6d00]",
+  "32CD32": "text-[#1b7f1b]",
+  "4D4DFF": "text-[#3333cc]",
+  "000088": "text-[#000088]",
+  CC3D3D: "text-[#b02f2f]",
+  "ffffff_": "text-base-content",
+};
+
 function parseDetail(text: string[]): string {
   if (!text) return "";
   const textDesc: string[] = [];
-  const redColor = "^ff0000";
-  const grayColor = "^b4b4b4";
-  for (let f of text) {
-    const str = f.split(redColor);
-    const gray = f.split(grayColor);
-    f =
-    str.length > 1 ? `<span class="text-[#ff0000]">${str[1]}</span>` : str[0];
-    f =
-    gray.length > 1 ? `<span class="text-[#b4b4b4]">${gray[1]}</span>` : gray[0];
-    
-    if (f === "" || f === "_") {
-      f =
-      "<span class='block w-full overflow-hidden whitespace-nowrap'>___________________________________________________________________________</span>";
-    }
-console.log(f);
-        // แปลงโค้ดสี RO → HTML
-    f = f
-      .replace(/\^start_L/g, `<span class="text-[#ff0000] line-through mr-2">`)
-      .replace(/\^end_L/g, `</span>`)
-      .replace(/\^ff0000/g, `<span class="text-[#ff0000]">`)
-      .replace(/\^b4b4b4/g, `<span class="text-[#b4b4b4]">`)
-      .replace(/\^00ff00/g, `<span class="text-[#00ff00]">`)
-      .replace(/\^ffff00/g, `<span class="text-[#ffff00]">`)
-      .replace(/\^32CD32/g, `<span class="text-[#32CD32]">`)
-      .replace(/\^4D4DFF/g, `<span class="text-[#4D4DFF]">`)
-      .replace(/\^000088/g, `<span class="text-[#000088]">`)
-      .replace(/\^CC3D3D/g, `<span class="text-[#CC3D3D]">`)
-      .replace(/\^ffffff_/g, `<span class="text-[#ffffff]">`);
 
-    // ถ้ามี span เปิด → ปิดตอนท้ายบรรทัด
+  for (let f of text) {
+    // A grey segment keeps only the text after its marker.
+    const gray = f.split("^b4b4b4");
+    if (gray.length > 1) {
+      f = `<span class="${RO_COLOR_CLASS.b4b4b4}">${gray[1]}</span>`;
+    }
+
+    if (f === "" || f === "_") {
+      textDesc.push('<hr class="my-2 border-base-300" />');
+      continue;
+    }
+
+    // RO colour codes -> HTML
+    f = f
+      .replace(/\^start_L/g, `<span class="${RO_COLOR_CLASS.ff0000} line-through mr-2">`)
+      .replace(/\^end_L/g, `</span>`);
+    for (const [code, cls] of Object.entries(RO_COLOR_CLASS)) {
+      f = f.replace(new RegExp(`\\^${code}`, "g"), `<span class="${cls}">`);
+    }
+
+    // Close any span opened by a colour code at the end of the line.
     if (f.includes("<span")) {
       f += "</span>";
     }
@@ -49,19 +55,17 @@ export default function DetailConvertPage({
   identifiedDescription: string[];
 }) {
   return (
-    <div className="col-span-6 sm:col-span-4 bg-white/95 p-6 rounded-2xl shadow-md text-gray-800 space-y-4 border border-gray-100 text-left">
-      <div className=" rounded-2xl  ">
-        <h2 className="text-orange-500 font-extrabold text-xl mb-3 border-b border-orange-200 pb-1">
-          รายละเอียด
-        </h2>
+    <section className="rounded-2xl border border-base-300 bg-base-100 p-4 text-left text-base-content shadow-md @lg:p-6">
+      <h3 className="mb-3 border-b border-orange-200 pb-1 text-xl font-extrabold text-orange-700">
+        รายละเอียด
+      </h3>
 
-        <div
-          className="text-sm text-gray-800 leading-7 text-left space-y-2 wrap-break-word"
-          dangerouslySetInnerHTML={{
-            __html: parseDetail(identifiedDescription),
-          }}
-        />
-      </div>
-    </div>
+      <div
+        className="wrap-break-word text-sm leading-7 text-base-content"
+        dangerouslySetInnerHTML={{
+          __html: parseDetail(identifiedDescription),
+        }}
+      />
+    </section>
   );
 }

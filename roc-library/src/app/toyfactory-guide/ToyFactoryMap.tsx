@@ -169,8 +169,8 @@ export default function ToyFactoryMap({
       const popupContent = `
         <div class="text-sm p-2 w-50">
           <h3 class="font-bold text-base mb-2">${miniBoss.name}</h3>
-          <p class="text-gray-700 text-xs mb-2"><strong>Lv:</strong> ${miniBoss.level}</p>
-          <p class="text-gray-600 text-xs">${miniBoss.description}</p>
+          <p class="text-base-content/80 text-xs mb-2"><strong>Lv:</strong> ${miniBoss.level}</p>
+          <p class="text-base-content/70 text-xs">${miniBoss.description}</p>
         </div>
       `;
       const icon = L.icon({
@@ -206,8 +206,8 @@ export default function ToyFactoryMap({
       const popupContent = `
         <div class="text-sm p-2">
           <h3 class="font-bold text-base mb-2">${boss.name}</h3>
-          <p class="text-gray-700 text-xs mb-2"><strong>Lv:</strong> ${boss.level}</p>
-          <p class="text-gray-600 text-xs">${boss.description}</p>
+          <p class="text-base-content/80 text-xs mb-2"><strong>Lv:</strong> ${boss.level}</p>
+          <p class="text-base-content/70 text-xs">${boss.description}</p>
         </div>
       `;
       const icon = L.icon({

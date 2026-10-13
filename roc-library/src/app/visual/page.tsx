@@ -185,9 +185,9 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className={`min-h-screen ${isDarkMode ? 'bg-[#09090b] text-zinc-100' : 'bg-zinc-50 text-zinc-900'} font-sans`}>
+    <div className={`min-h-screen ${isDarkMode ? 'bg-[#09090b] text-zinc-100' : 'bg-base-200 text-base-content'} font-sans`}>
       {/* Header */}
-      <header className={`sticky top-0 z-50 border-b ${isDarkMode ? 'bg-[#09090b]/90 border-zinc-800' : 'bg-white/90 border-zinc-200'} backdrop-blur-xl`}>
+      <header className={`sticky top-0 z-50 border-b ${isDarkMode ? 'bg-[#09090b]/90 border-zinc-800' : 'bg-white/90 border-base-300'} backdrop-blur-xl`}>
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
           <div className="flex items-center gap-4">
             <div className="w-10 h-10 bg-red-600 rounded-xl flex items-center justify-center shadow-lg shadow-red-600/20">
@@ -205,7 +205,7 @@ const App: React.FC = () => {
                <input 
                 type="text" 
                 placeholder="ค้นหา..." 
-                className={`pl-10 pr-4 py-2 rounded-xl text-sm w-48 transition-all outline-none border ${isDarkMode ? 'bg-zinc-900 border-zinc-800 focus:border-red-500' : 'bg-zinc-100 border-zinc-200 focus:border-red-500'}`}
+                className={`pl-10 pr-4 py-2 rounded-xl text-sm w-48 transition-all outline-none border ${isDarkMode ? 'bg-zinc-900 border-zinc-800 focus:border-red-500' : 'bg-base-200 border-base-300 focus:border-red-500'}`}
                 value={searchTerm}
                 onChange={e => setSearchTerm(e.target.value)}
                />
@@ -224,10 +224,10 @@ const App: React.FC = () => {
       <main className="max-w-7xl mx-auto px-6 py-10">
         <div className="grid grid-cols-1 gap-12">
           {sprites.filter(s => s.fileName.toLowerCase().includes(searchTerm.toLowerCase())).map(spr => (
-            <div key={spr.id} className={`flex flex-col lg:flex-row rounded-[40px] border overflow-hidden transition-all ${isDarkMode ? 'bg-[#121214] border-zinc-800 shadow-2xl' : 'bg-white border-zinc-200 shadow-xl'}`}>
+            <div key={spr.id} className={`flex flex-col lg:flex-row rounded-[40px] border overflow-hidden transition-all ${isDarkMode ? 'bg-[#121214] border-zinc-800 shadow-2xl' : 'bg-base-100 border-base-300 shadow-xl'}`}>
               
               {/* Animation Viewport */}
-              <div className={`relative flex-1 min-h-[500px] flex items-center justify-center border-b lg:border-b-0 lg:border-r ${isDarkMode ? 'bg-[#0c0c0e] border-zinc-800' : 'bg-zinc-50 border-zinc-200'}`}>
+              <div className={`relative flex-1 min-h-[500px] flex items-center justify-center border-b lg:border-b-0 lg:border-r ${isDarkMode ? 'bg-[#0c0c0e] border-zinc-800' : 'bg-base-200 border-base-300'}`}>
                 <div className="absolute inset-0 opacity-[0.1] pointer-events-none" 
                      style={{ backgroundImage: `linear-gradient(${isDarkMode ? '#1e1e21' : '#e4e4e7'} 1px, transparent 1px), linear-gradient(90deg, ${isDarkMode ? '#1e1e21' : '#e4e4e7'} 1px, transparent 1px)`, backgroundSize: '32px 32px' }}>
                 </div>
@@ -281,7 +281,7 @@ const App: React.FC = () => {
                     <label className="text-[10px] font-black uppercase tracking-[0.2em] opacity-40 mb-4 block">Action Sequence</label>
                     <div className="relative">
                       <select 
-                        className={`w-full appearance-none pl-5 pr-12 py-4 rounded-2xl text-xs font-black outline-none border transition-all ${isDarkMode ? 'bg-zinc-900 border-zinc-800 focus:border-red-500' : 'bg-zinc-100 border-zinc-200 focus:border-red-500'}`}
+                        className={`w-full appearance-none pl-5 pr-12 py-4 rounded-2xl text-xs font-black outline-none border transition-all ${isDarkMode ? 'bg-zinc-900 border-zinc-800 focus:border-red-500' : 'bg-base-200 border-base-300 focus:border-red-500'}`}
                         value={spr.currentActionIdx}
                         onChange={e => setSprites(prev => prev.map(s => s.id === spr.id ? { ...s, currentActionIdx: parseInt(e.target.value), currentFrameIdx: 0 } : s))}
                       >
@@ -321,7 +321,7 @@ const App: React.FC = () => {
           ))}
 
           {sprites.length === 0 && (
-             <div className={`py-40 rounded-[60px] border-4 border-dashed flex flex-col items-center justify-center transition-all ${isDarkMode ? 'border-zinc-900 bg-zinc-900/10' : 'border-zinc-100 bg-zinc-50'}`}>
+             <div className={`py-40 rounded-[60px] border-4 border-dashed flex flex-col items-center justify-center transition-all ${isDarkMode ? 'border-zinc-900 bg-zinc-900/10' : 'border-base-300 bg-base-200'}`}>
                 <div className="w-24 h-24 bg-red-600/10 rounded-[32px] flex items-center justify-center mb-8 border border-red-600/20">
                   <ImageIcon size={40} className="text-red-500" />
                 </div>
@@ -337,7 +337,7 @@ const App: React.FC = () => {
       {/* Modal */}
       {isModalOpen && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-6 bg-black/90 backdrop-blur-sm animate-in fade-in duration-300">
-           <div className={`w-full max-w-xl rounded-[48px] overflow-hidden border ${isDarkMode ? 'bg-[#09090b] border-zinc-800' : 'bg-white border-zinc-100'}`}>
+           <div className={`w-full max-w-xl rounded-[48px] overflow-hidden border ${isDarkMode ? 'bg-[#09090b] border-zinc-800' : 'bg-base-100 border-base-300'}`}>
               <div className="p-12 text-center">
                  <div 
                    onClick={() => fileInputRef.current?.click()}
@@ -345,12 +345,12 @@ const App: React.FC = () => {
                  >
                    <input type="file" ref={fileInputRef} className="hidden" multiple accept=".spr" onChange={onFileChange} />
                    <div className="w-20 h-20 bg-zinc-900 rounded-[28px] flex items-center justify-center mb-8 group-hover:bg-red-600 transition-colors">
-                     <FileUp size={28} className="text-zinc-600 group-hover:text-white" />
+                     <FileUp size={28} className="text-base-content/70 group-hover:text-white" />
                    </div>
                    <p className="text-3xl font-black italic uppercase tracking-tighter mb-2">Import SPR</p>
                    <p className="text-[10px] text-zinc-500 uppercase font-black tracking-[0.4em]">Ready for decoding assets</p>
                  </div>
-                 <button onClick={() => setIsModalOpen(false)} className="mt-12 text-zinc-600 font-black uppercase text-[10px] tracking-widest hover:text-red-500 transition-colors">Cancel</button>
+                 <button onClick={() => setIsModalOpen(false)} className="mt-12 text-base-content/70 font-black uppercase text-[10px] tracking-widest hover:text-red-500 transition-colors">Cancel</button>
               </div>
            </div>
         </div>

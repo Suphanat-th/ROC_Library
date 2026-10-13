@@ -305,7 +305,7 @@ function FloorRow({ data, enhanced }: { data: BossFloor; enhanced?: boolean }) {
         className={`shrink-0 self-center min-w-14 text-center font-bold text-sm rounded-md py-1 px-2
           ${
             isLast
-              ? "bg-yellow-400 text-black"
+              ? "bg-yellow-400 text-base-content"
               : enhanced
                 ? "bg-red-700 text-white"
                 : "bg-primary text-primary-content"

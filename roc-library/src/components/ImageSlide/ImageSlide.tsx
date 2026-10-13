@@ -25,7 +25,7 @@ export default function ImageSlider() {
       pagination={{ clickable: true }}
       autoplay={{ delay: 5000 }}
       loop
-      className="w-full"
+      className="w-full rounded-box overflow-hidden border border-base-300"
     >
       {slides.map((slide, i) => (
         <SwiperSlide key={i} className="w-full cursor-pointer">

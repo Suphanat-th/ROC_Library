@@ -103,16 +103,16 @@ export default function CurrentStatusSection({
   setCompletedSeasonQuestsList,
 }: CurrentStatusSectionProps) {
   return (
-    <div className="card w-full border border-blue-900/80 bg-linear-to-br from-slate-950 via-slate-900 to-blue-950 text-white shadow-2xl shadow-slate-950/40 backdrop-blur-sm">
+    <div className="card w-full border border-base-300 bg-base-100 text-base-content shadow-md">
       <div className="card-body p-4 sm:p-6 lg:p-7">
-        <h2 className="card-title mb-6 flex items-center gap-2 text-xl font-black tracking-tight text-white sm:text-2xl">
+        <h2 className="card-title mb-6 flex items-center gap-2 text-xl font-black tracking-tight text-base-content sm:text-2xl">
           <span className="text-2xl">📊</span> Status ปัจจุบัน
         </h2>
 
         <div className="mb-6">
           <div className="form-control">
             <label className="label">
-              <span className="label-text font-bold text-slate-200 text-sm sm:text-base">
+              <span className="label-text font-bold text-base-content/80 text-sm sm:text-base">
                 แต้มปัจจุบัน (รวม)
               </span>
             </label>
@@ -124,22 +124,22 @@ export default function CurrentStatusSection({
                 setTotalPoints(value ? parseInt(value, 10) : 0);
               }}
               placeholder="0"
-              className="input input-bordered input-lg w-full border-blue-300 bg-white text-2xl text-center font-bold text-blue-700 focus:input-primary sm:text-3xl"
+              className="input input-bordered input-lg w-full border-primary/40 bg-base-100 text-2xl text-center font-bold text-primary focus:input-primary sm:text-3xl"
             />
             <label className="label">
-              <span className="label-text-alt text-slate-400 text-xs">
+              <span className="label-text-alt text-base-content/60 text-xs">
                 กรอกแต้มรวมปัจจุบัน
               </span>
             </label>
-            <div className="mt-3 rounded-lg border border-blue-800 bg-blue-950 p-4">
+            <div className="mt-3 rounded-lg border border-base-300 bg-base-200 p-4">
               <div className="text-center">
-                <div className="mb-1 text-xs font-semibold text-blue-200">
+                <div className="mb-1 text-xs font-semibold text-primary">
                   Level ปัจจุบัน
                 </div>
-                <div className="text-3xl font-bold text-white sm:text-4xl">
+                <div className="text-3xl font-bold text-base-content sm:text-4xl">
                   {currentLevel}
                 </div>
-                <div className="mt-1 text-xs text-blue-200">
+                <div className="mt-1 text-xs text-primary">
                   {currentPoints}/{maxExpForLevel} แต้ม
                 </div>
               </div>
@@ -148,16 +148,16 @@ export default function CurrentStatusSection({
         </div>
 
         {/* Summary Scroll BP */}
-        <div className="mt-6 rounded-xl border-t border-blue-800 bg-linear-to-r from-slate-900 to-blue-950 p-4 pt-6">
+        <div className="mt-6 rounded-xl border-t border-base-300 bg-base-200 p-4 pt-6">
           <div className="text-center">
-            <div className="mb-3 text-sm font-bold text-blue-100">
+            <div className="mb-3 text-sm font-bold text-base-content/80">
               จนถึงวันสุดท้าย จะได้ Level ถ้าทำ Daily, Weekly ครบ
             </div>
-            <div className="text-4xl font-bold text-white sm:text-5xl">
+            <div className="text-4xl font-bold text-base-content sm:text-5xl">
               Level {projectedLevelData.level}
             </div>
 
-            <div className="mt-2 space-y-1 rounded bg-white/10 p-3 text-xs text-blue-100">
+            <div className="mt-2 space-y-1 rounded bg-base-100 p-3 text-xs text-base-content/80">
               <div className="font-bold mb-2">📊 การคำนวน:</div>
               <div>• แต้มปัจจุบัน: {totalPoints}</div>
 
@@ -292,7 +292,7 @@ export default function CurrentStatusSection({
                     )}
 
                     {isDailyCompleted && completionDailyPoints > 0 && (
-                      <div className="font-semibold text-blue-300">
+                      <div className="font-semibold text-primary">
                         • Quest Completion Daily: - {completionDailyPoints}
                       </div>
                     )}
@@ -306,7 +306,7 @@ export default function CurrentStatusSection({
                     )}
 
                     {isWeeklyCompleted && completionWeeklyPoints > 0 && (
-                      <div className="font-semibold text-blue-300">
+                      <div className="font-semibold text-primary">
                         • Quest Completion Weekly: - {completionWeeklyPoints}
                       </div>
                     )}
@@ -316,24 +316,24 @@ export default function CurrentStatusSection({
                     )}
 
                     {completedSeasonPoints > 0 && (
-                      <div className="font-semibold text-blue-300">
+                      <div className="font-semibold text-primary">
                         • Quest Completion Season: - {completedSeasonPoints}
                       </div>
                     )}
 
                     {isLastDayDailyDone && lastDayDailyPoints > 0 && (
-                      <div className="font-semibold text-blue-300">
+                      <div className="font-semibold text-primary">
                         • Last Day Daily: + {lastDayDailyPoints}
                       </div>
                     )}
 
                     {isLastDayWeeklyDone && lastDayWeeklyPoints > 0 && (
-                      <div className="font-semibold text-blue-300">
+                      <div className="font-semibold text-primary">
                         • Last Day Weekly: + {lastDayWeeklyPoints}
                       </div>
                     )}
 
-                    <div className="mt-2 border-t border-blue-800 pt-2 font-bold text-white">
+                    <div className="mt-2 border-t border-base-300 pt-2 font-bold text-base-content">
                       รวม: {totalPoints} + {totalAdditional} ={" "}
                       {totalPoints + totalAdditional} แต้ม
                     </div>
@@ -342,7 +342,7 @@ export default function CurrentStatusSection({
               })()}
 
               {isPremiumOpened && (
-                <div className="mt-2 font-bold text-blue-300">Premium Pass</div>
+                <div className="mt-2 font-bold text-primary">Premium Pass</div>
               )}
             </div>
           </div>
@@ -350,12 +350,12 @@ export default function CurrentStatusSection({
 
         {/* filter Battle Pass */}
 
-        <div className="mb-6 border-b border-blue-900 pb-6">
+        <div className="mb-6 border-b border-base-300 pb-6">
           <div className="space-y-4">
             <div className="rounded-2xl p-4 shadow-sm">
               <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                 <label
-                  className={`group relative flex min-h-28 cursor-pointer overflow-hidden rounded-2xl border-2 bg-slate-100 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md ${!isPremiumOpened ? "scale-[1.02] border-4 border-slate-700 bg-white shadow-xl ring-4 ring-slate-300" : "border-slate-300 opacity-75"}`}
+                  className={`group relative flex min-h-28 cursor-pointer overflow-hidden rounded-2xl border-2 bg-base-200 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md ${!isPremiumOpened ? "scale-[1.02] border-4 border-primary bg-base-100 shadow-xl ring-4 ring-base-300" : "border-base-300 opacity-75"}`}
                 >
                   <input
                     type="radio"
@@ -364,25 +364,25 @@ export default function CurrentStatusSection({
                     onChange={() => setIsPremiumOpened(false)}
                     className="sr-only"
                   />
-                  <span className="flex w-14 shrink-0 items-center justify-center border-r-2 border-dashed border-slate-300 bg-slate-200 text-2xl text-slate-700">
+                  <span className="flex w-14 shrink-0 items-center justify-center border-r-2 border-dashed border-base-300 bg-base-300 text-2xl text-base-content/80">
                     N
                   </span>
                   <span className="flex flex-1 flex-col justify-center px-4 py-3">
-                    <span className="text-[15px] font-bold uppercase tracking-[0.18em] text-slate-800 ">
+                    <span className="text-[15px] font-bold uppercase tracking-[0.18em] text-base-content ">
                       Normal Battle Pass
                     </span>
-                    <span className="mt-1 text-xs text-slate-500">
+                    <span className="mt-1 text-xs text-base-content/60">
                       รับแต้ม Daily แบบปกติ
                     </span>
                     <span className="text-error">Level สูงสุดที่ 100</span>
                   </span>
                   <span
-                    className={`absolute right-3 top-3 h-3 w-3 rounded-full ring-2 ring-white ${!isPremiumOpened ? "bg-slate-700" : "bg-slate-300"}`}
+                    className={`absolute right-3 top-3 h-3 w-3 rounded-full ring-2 ring-base-100 ${!isPremiumOpened ? "bg-primary" : "bg-base-300"}`}
                   />
                 </label>
 
                 <label
-                  className={`group relative flex min-h-28 cursor-pointer overflow-hidden rounded-2xl border-2 bg-yellow-50 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md ${isPremiumOpened ? "scale-[1.02] border-4 border-yellow-600 bg-yellow-100 shadow-xl ring-4 ring-yellow-300" : "border-yellow-300 opacity-75"}`}
+                  className={`group relative flex min-h-28 cursor-pointer overflow-hidden rounded-2xl border-2 bg-accent/10 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md ${isPremiumOpened ? "scale-[1.02] border-4 border-accent bg-accent/20 shadow-xl ring-4 ring-accent/30" : "border-accent/40 opacity-75"}`}
                 >
                   <input
                     type="radio"
@@ -391,19 +391,19 @@ export default function CurrentStatusSection({
                     onChange={() => setIsPremiumOpened(true)}
                     className="sr-only"
                   />
-                  <span className="flex w-14 shrink-0 items-center justify-center border-r-2 border-dashed border-yellow-300 bg-yellow-100 text-2xl font-black text-yellow-700">
+                  <span className="flex w-14 shrink-0 items-center justify-center border-r-2 border-dashed border-accent/40 bg-accent/20 text-2xl font-black text-base-content">
                     P
                   </span>
                   <span className="flex flex-1 flex-col justify-center px-4 py-3">
-                    <span className="text-[15px] font-bold uppercase tracking-[0.18em] text-yellow-700/70">
+                    <span className="text-[15px] font-bold uppercase tracking-[0.18em] text-base-content/70">
                       Premium Pass
                     </span>
-                    <span className="mt-1 text-xs text-slate-500">
+                    <span className="mt-1 text-xs text-base-content/60">
                       ได้เพิ่ม +10 แต้ม/วัน
                     </span>
                   </span>
                   <span
-                    className={`absolute right-3 top-3 h-3 w-3 rounded-full ring-2 ring-white ${isPremiumOpened ? "bg-yellow-600" : "bg-yellow-200"}`}
+                    className={`absolute right-3 top-3 h-3 w-3 rounded-full ring-2 ring-base-100 ${isPremiumOpened ? "bg-accent" : "bg-accent/40"}`}
                   />
                 </label>
               </div>
@@ -414,21 +414,21 @@ export default function CurrentStatusSection({
               <input
                 type="radio"
                 name="quest-tabs"
-                className="tab min-w-32 shrink-0 flex-1 whitespace-nowrap text-blue-200 checked:bg-blue-700 checked:text-white checked:shadow-lg checked:border checked:border-b-2 checked:border-blue-200 rounded-2xl"
+                className="tab min-w-32 shrink-0 flex-1 whitespace-nowrap text-primary checked:bg-primary checked:text-primary-content checked:shadow-lg checked:border checked:border-b-2 checked:border-primary/20 rounded-2xl"
                 aria-label="Quest"
                 defaultChecked
               />
               <div className="tab-content rounded-box p-4">
-                <div className="rounded-xl border border-blue-200  p-4">
-                  <div className="text-lg font-bold text-white mb-3 flex items-center gap-2">
+                <div className="rounded-xl border border-primary/20  p-4">
+                  <div className="text-lg font-bold text-base-content mb-3 flex items-center gap-2">
                     <CalendarDays
                       aria-hidden="true"
-                      className="h-10 w-10 text-blue-300"
+                      className="h-10 w-10 text-primary"
                     />{" "}
                     เควสประจำวัน
                   </div>
                   {isPremiumOpened && !activePremiumDailyQuest ? (
-                    <div className="text-sm text-gray-500">
+                    <div className="text-sm text-base-content/60">
                       No active premium quest
                     </div>
                   ) : (
@@ -444,11 +444,11 @@ export default function CurrentStatusSection({
                     />
                   )}
                 </div>
-                <div className="rounded-xl border border-blue-200 p-4">
-                  <div className="text-lg font-bold text-white mb-3 flex items-center gap-2">
+                <div className="rounded-xl border border-primary/20 p-4">
+                  <div className="text-lg font-bold text-base-content mb-3 flex items-center gap-2">
                     <CalendarRange
                       aria-hidden="true"
-                      className="h-10 w-10 text-blue-300"
+                      className="h-10 w-10 text-primary"
                     />{" "}
                     เควสประจำสัปดาห์
                   </div>
@@ -460,11 +460,11 @@ export default function CurrentStatusSection({
                   />
                 </div>
                 {isPremiumOpened && (
-                  <div className="rounded-xl border border-blue-200 p-4">
-                    <div className="text-lg font-bold text-white mb-3 flex items-center gap-2">
+                  <div className="rounded-xl border border-primary/20 p-4">
+                    <div className="text-lg font-bold text-base-content mb-3 flex items-center gap-2">
                       <Trophy
                         aria-hidden="true"
-                        className="h-10 w-10 text-blue-300"
+                        className="h-10 w-10 text-primary"
                       />{" "}
                       เควส Season (Premium เท่านั้น • ครั้งเดียว)
                     </div>
@@ -481,22 +481,22 @@ export default function CurrentStatusSection({
               <input
                 type="radio"
                 name="quest-tabs"
-                className="tab min-w-32 shrink-0 flex-1 whitespace-nowrap text-blue-200 checked:bg-blue-700 checked:text-white checked:shadow-lg checked:border checked:border-b-2 checked:border-blue-200 rounded-2xl"
+                className="tab min-w-32 shrink-0 flex-1 whitespace-nowrap text-primary checked:bg-primary checked:text-primary-content checked:shadow-lg checked:border checked:border-b-2 checked:border-primary/20 rounded-2xl"
                 aria-label="Complete Quest"
               />
-              <div className="tab-content rounded-box border-blue-200 bg-slate-900/60 p-4">
-                <div className="rounded-2xl border border-dashed border-blue-400/70 bg-slate-950/70 p-3">
+              <div className="tab-content rounded-box border-primary/20 bg-base-200 p-4">
+                <div className="rounded-2xl border border-dashed border-primary/40 bg-base-200 p-3">
                   <div className="mb-3 flex items-center gap-3 px-2">
-                    <span className="h-px flex-1 bg-blue-800" />
-                    <span className="text-lg font-black uppercase tracking-[0.18em] text-blue-200 text-center">
+                    <span className="h-px flex-1 bg-primary" />
+                    <span className="text-lg font-black uppercase tracking-[0.18em] text-primary text-center">
                       Completion Section <br />
                       <span className="text-sm text-error">
                         (ถ้าหากแต้มที่กรอกมาทำเควสสำเร็จแล้ว)
                       </span>
                     </span>
-                    <span className="h-px flex-1 bg-blue-800" />
+                    <span className="h-px flex-1 bg-primary" />
                   </div>
-                  <div className="rounded-xl border border-blue-800 bg-blue-950 p-4">
+                  <div className="rounded-xl border border-base-300 bg-base-200 p-4">
                     <div className="space-y-3">
                       <div className="form-control">
                         <label className="hidden label cursor-pointer gap-3">
@@ -508,7 +508,7 @@ export default function CurrentStatusSection({
                             }
                             className="checkbox checkbox-primary"
                           />
-                          <span className="label-text text-white font-medium">
+                          <span className="label-text text-base-content font-medium">
                             Daily completed
                           </span>
                         </label>
@@ -529,8 +529,8 @@ export default function CurrentStatusSection({
                               }
                             />
                             {false && activePremiumDailyQuest && (
-                              <div className="ml-8 mt-2 space-y-1 rounded border border-blue-200 bg-white p-2 text-xs text-gray-600">
-                                <div className="mb-2 font-semibold text-blue-900">
+                              <div className="ml-8 mt-2 space-y-1 rounded border border-primary/20 bg-base-100 p-2 text-xs text-base-content/70">
+                                <div className="mb-2 font-semibold text-primary">
                                   เลือก quest ที่ทำไปแล้ว:
                                 </div>
                                 {isPremiumOpened ? (
@@ -630,7 +630,7 @@ export default function CurrentStatusSection({
                             }
                             className="checkbox checkbox-primary"
                           />
-                          <span className="label-text text-white font-medium">
+                          <span className="label-text text-base-content font-medium">
                             Weekly completed
                           </span>
                         </label>
@@ -647,8 +647,8 @@ export default function CurrentStatusSection({
                               }
                             />
                             {false && activePremiumDailyQuest && (
-                              <div className="ml-8 mt-2 space-y-1 rounded border border-blue-200 bg-white p-2 text-xs text-gray-600">
-                                <div className="mb-2 font-semibold text-blue-900">
+                              <div className="ml-8 mt-2 space-y-1 rounded border border-primary/20 bg-base-100 p-2 text-xs text-base-content/70">
+                                <div className="mb-2 font-semibold text-primary">
                                   เลือก quest ที่ทำไปแล้ว:
                                 </div>
                                 {WEEKLY_QUESTS.map((quest) => (
@@ -703,14 +703,14 @@ export default function CurrentStatusSection({
               <input
                 type="radio"
                 name="quest-tabs"
-                className="tab min-w-32 shrink-0 flex-1 whitespace-nowrap text-blue-200 checked:bg-blue-700 checked:text-white checked:shadow-lg checked:border checked:border-b-2 checked:border-blue-200 rounded-2xl"
+                className="tab min-w-32 shrink-0 flex-1 whitespace-nowrap text-primary checked:bg-primary checked:text-primary-content checked:shadow-lg checked:border checked:border-b-2 checked:border-primary/20 rounded-2xl"
                 aria-label="Bonus (วันสุดท้าย)"
               />
-              <div className="tab-content rounded-box border-blue-200 bg-slate-900/60 p-4">
-                <div className="rounded-2xl border border-dashed border-blue-400/70 bg-slate-950/70 p-3">
+              <div className="tab-content rounded-box border-primary/20 bg-base-200 p-4">
+                <div className="rounded-2xl border border-dashed border-primary/40 bg-base-200 p-3">
                   <div className="mb-3 flex items-center gap-3 px-2">
-                    <span className="h-px flex-1 bg-blue-800" />
-                    <span className="text-lg font-black uppercase tracking-[0.18em] text-blue-200 text-center">
+                    <span className="h-px flex-1 bg-primary" />
+                    <span className="text-lg font-black uppercase tracking-[0.18em] text-primary text-center">
                       Bonus Section
                       <br />
                       <span className="text-sm text-error">
@@ -718,9 +718,9 @@ export default function CurrentStatusSection({
                         (กรณีทำวันสุดท้าย ตี 4 )
                       </span>
                     </span>
-                    <span className="h-px flex-1 bg-blue-800" />
+                    <span className="h-px flex-1 bg-primary" />
                   </div>
-                  <div className="rounded-xl border border-blue-800 bg-blue-950 p-4">
+                  <div className="rounded-xl border border-base-300 bg-base-200 p-4">
                     <div className="space-y-3">
                       <div className="form-control">
                         <label className="hidden label cursor-pointer gap-3">
@@ -732,7 +732,7 @@ export default function CurrentStatusSection({
                             }
                             className="checkbox checkbox-primary"
                           />
-                          <span className="label-text text-white font-medium">
+                          <span className="label-text text-base-content font-medium">
                             ทำ Daily ในวันสุดท้าย
                           </span>
                         </label>
@@ -753,8 +753,8 @@ export default function CurrentStatusSection({
                               }
                             />
                             {false && activePremiumDailyQuest && (
-                              <div className="ml-8 mt-2 space-y-1 rounded border border-blue-200 bg-white p-2 text-xs text-gray-600">
-                                <div className="mb-2 font-semibold text-blue-900">
+                              <div className="ml-8 mt-2 space-y-1 rounded border border-primary/20 bg-base-100 p-2 text-xs text-base-content/70">
+                                <div className="mb-2 font-semibold text-primary">
                                   เลือก quest ที่จะทำ:
                                 </div>
                                 {isPremiumOpened ? (
@@ -859,7 +859,7 @@ export default function CurrentStatusSection({
                             }
                             className="checkbox checkbox-primary"
                           />
-                          <span className="label-text text-white font-medium">
+                          <span className="label-text text-base-content font-medium">
                             ทำ Weekly ในวันสุดท้าย
                           </span>
                         </label>
@@ -876,7 +876,7 @@ export default function CurrentStatusSection({
                               }
                             />
                             {false && activePremiumDailyQuest && (
-                              <div className="ml-8 mt-2 space-y-1 rounded border border-blue-200 bg-white p-2 text-xs text-gray-600">
+                              <div className="ml-8 mt-2 space-y-1 rounded border border-primary/20 bg-base-100 p-2 text-xs text-base-content/70">
                                 {WEEKLY_QUESTS.map((quest) => (
                                   <div
                                     key={quest.name}

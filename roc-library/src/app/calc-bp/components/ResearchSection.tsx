@@ -11,12 +11,16 @@ interface ResearchSectionProps {
   formatNumber: (num: number | string) => string;
 }
 
+// Theme-aware: resolves through the active DaisyUI theme (roc-light / roc-dark)
 const COLORS = {
-  accent: "#2e8bff", // Electric Blue
-  min: "#bfe3ff", // Silver / Ice Blue
-  max: "#34d399", // Emerald
-  random: "#fbbf24", // Gold
+  accent: "var(--color-primary)",
+  min: "var(--color-info)",
+  max: "var(--color-success)",
+  random: "var(--color-warning)",
 };
+
+const tint = (color: string, percent: number) =>
+  `color-mix(in oklab, ${color} ${percent}%, transparent)`;
 
 interface ResultCardProps {
   label: string;
@@ -45,15 +49,14 @@ function ResultCard({
   onRandom,
   percent,
 }: ResultCardProps) {
-  const valueClass = `font-black text-white ${large ? "text-5xl sm:text-6xl" : "text-4xl sm:text-5xl"}`;
-  const valueStyle = { textShadow: `0 0 10px ${color}, 0 0 22px ${color}88` };
+  const valueClass = `font-black text-base-content ${large ? "text-5xl sm:text-6xl" : "text-4xl sm:text-5xl"}`;
 
   return (
     <div
       className={`rounded-xl p-5 text-center ${className}`}
       style={{
         border: `1px solid ${color}`,
-        boxShadow: `0 0 10px ${color}66, inset 0 0 14px ${color}22`,
+        backgroundColor: tint(color, 8),
       }}
     >
       {image ? (
@@ -65,22 +68,22 @@ function ResultCard({
               width={300}
               height={300}
               className={`mb-2 `}
-              style={{ filter: `drop-shadow(0 0 8px ${color})` }}
+              style={{ filter: `drop-shadow(0 0 6px ${tint(color, 60)})` }}
             />
-            <div className="text-sm font-bold tracking-wide" style={{ color }}>
+            <div className="text-sm font-bold tracking-wide text-base-content/80">
               {label}
             </div>
           </div>
           <div className="flex flex-col items-center gap-3">
-            <div className={valueClass} style={valueStyle}>
+            <div className={valueClass}>
               {value}
             </div>
             {onRandom && (
               <button
                 type="button"
                 onClick={onRandom}
-                className="btn btn-sm border bg-transparent font-bold hover:bg-white/10"
-                style={{ borderColor: color, color }}
+                className="btn btn-sm btn-outline font-bold"
+                style={{ borderColor: color }}
               >
                 Random
               </button>
@@ -89,10 +92,10 @@ function ResultCard({
         </div>
       ) : (
         <>
-          <div className="text-sm font-bold tracking-wide" style={{ color }}>
+          <div className="text-sm font-bold tracking-wide text-base-content/80">
             {label}
           </div>
-          <div className={`mt-1 ${valueClass}`} style={valueStyle}>
+          <div className={`mt-1 ${valueClass}`}>
             {value}
           </div>
         </>
@@ -108,7 +111,7 @@ function ResultCard({
             aria-label={`${label} position`}
             className={`range pointer-events-none w-full ${getRangeClass(percent)}`}
           />
-          <div className="mt-1 text-xs font-bold" style={{ color }}>
+          <div className="mt-1 text-xs font-bold text-base-content/80">
             {Math.round(percent)}%
           </div>
         </div>
@@ -146,19 +149,19 @@ export default function ResearchSection({
   return (
     <>
       <div className="flex items-center gap-4">
-        <div className="h-px flex-1 bg-linear-to-r from-blue-200/20 via-blue-400/70 to-blue-200/20"></div>
-        <span className="rounded-full border border-blue-300/60 bg-blue-950/60 px-3 py-1 text-xs font-bold uppercase tracking-widest text-blue-200">
+        <div className="h-px flex-1 bg-base-300"></div>
+        <span className="rounded-full border border-primary/30 bg-base-200 px-3 py-1 text-xs font-bold uppercase tracking-widest text-primary">
           Research Calculator
         </span>
-        <div className="h-px flex-1 bg-linear-to-l from-blue-200/20 via-blue-400/70 to-blue-200/20"></div>
+        <div className="h-px flex-1 bg-base-300"></div>
       </div>
 
-      <div className="card w-full border border-blue-900/80 bg-linear-to-br from-slate-950 via-slate-900 to-blue-950 text-white shadow-2xl shadow-slate-950/40 backdrop-blur-sm">
+      <div className="card w-full border border-base-300 bg-base-100 text-base-content shadow-md">
         <div className="card-body p-4 sm:p-6 lg:p-7">
-          <h2 className="card-title mb-2 flex items-center gap-2 text-xl font-black tracking-tight text-white sm:text-2xl">
+          <h2 className="card-title mb-2 flex items-center gap-2 text-xl font-black tracking-tight text-base-content sm:text-2xl">
             <span className="text-2xl">📚</span> Researching
           </h2>
-          <p className="mb-6 text-xs text-slate-400">
+          <p className="mb-6 text-xs text-base-content/60">
             สมุด 1 เล่ม = 1 ครั้ง ทำได้ทีละครั้ง • ผลตอบแทนเป็น{" "}
             {RESEARCH_MEDAL_NAME}
           </p>
@@ -167,7 +170,7 @@ export default function ResearchSection({
             {RESEARCH_TYPES.map((type) => (
               <div
                 key={type.key}
-                className="grid grid-cols-2 items-center gap-4 rounded-xl border-l-4 border-blue-500 bg-white p-6 text-slate-900 shadow-md"
+                className="grid grid-cols-2 items-center gap-4 rounded-xl border-l-4 border-primary bg-base-100 p-6 text-base-content shadow-md"
               >
                 <div className="flex flex-col items-center text-center">
                   <Image
@@ -177,13 +180,13 @@ export default function ResearchSection({
                     height={120}
                     className="mb-2 h-30 w-30"
                   />
-                  <span className="font-bold text-gray-700">{type.name}</span>
-                  <span className="text-xs text-gray-500">
+                  <span className="font-bold text-base-content/80">{type.name}</span>
+                  <span className="text-xs text-base-content/60">
                     {type.minutes} นาที/ครั้ง
                   </span>
                 </div>
                 <div className="flex flex-col items-center gap-2">
-                  <span className="text-xs text-gray-500">จำนวนสมุดวิจัย</span>
+                  <span className="text-xs text-base-content/60">จำนวนสมุดวิจัย</span>
                   <input
                     type="text"
                     inputMode="numeric"
@@ -195,9 +198,9 @@ export default function ResearchSection({
                       }))
                     }
                     placeholder="0"
-                    className="input input-bordered input-lg w-full border-blue-300 bg-white text-center text-3xl font-bold text-blue-600 focus:input-primary"
+                    className="input input-bordered input-lg w-full border-primary/40 bg-base-100 text-center text-3xl font-bold text-primary focus:input-primary"
                   />
-                  <span className="text-sm font-bold text-blue-700">
+                  <span className="text-sm font-bold text-primary">
                     {formatMinutes((counts[type.key] ?? 0) * type.minutes)}
                   </span>
                 </div>
@@ -206,14 +209,11 @@ export default function ResearchSection({
           </div>
 
           <div
-            className="rounded-xl bg-linear-to-r from-slate-900 to-blue-950 p-4"
-            style={{
-              border: `1px solid ${COLORS.accent}`,
-              boxShadow: `0 0 12px ${COLORS.accent}55`,
-            }}
+            className="rounded-xl bg-base-200 p-4"
+            style={{ border: `1px solid ${COLORS.accent}` }}
           >
             {result.totalBooks === 0 ? (
-              <div className="text-center text-sm text-blue-200">
+              <div className="text-center text-sm text-primary">
                 กรอกจำนวนหนังสือเพื่อคำนวณ
               </div>
             ) : (

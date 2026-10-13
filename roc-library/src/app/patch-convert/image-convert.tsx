@@ -1,10 +1,11 @@
 export default function ImageConvertPage({ patchKey }: { patchKey: string }) {
   return (
-    <div className="flex justify-center items-center  backdrop-blur-sm p-4 rounded-2xl image-item mb-3">
+    <div className="image-item flex items-center justify-center p-2">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
-        className="rounded-xl  hover:scale-105 transition-transform duration-300"
+        className="rounded-xl"
         src={`/assets/images/PatchImage/${patchKey}.bmp`}
-        alt="item image"
+        alt={`ภาพไอเทมรหัส ${patchKey}`}
         width={150}
         height={300}
         onError={(e) => {

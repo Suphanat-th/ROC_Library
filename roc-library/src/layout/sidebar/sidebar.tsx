@@ -2,12 +2,12 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { useLoading } from "@/context/LoadingContext";
 import teteGuild from "../../../public/assets/images/GuildImage/vanCleef.png";
 import dogGuild from "../../../public/assets/images/GuildImage/dog.jpg";
 import rocFunGuild from "../../../public/assets/images/GuildImage/rocfun.png";
-import logo from "../../../public/assets/images/web/Logo.png";
 
 interface FileTreeItem {
   id: string;
@@ -174,21 +174,19 @@ function FileTreeNode({
   level?: number;
   toggleDrawer: () => void;
 }) {
-  const [expanded, setExpanded] = useState(false);
-  const { setIsLoading } = useLoading();
+  const { pendingHref, startNavigation } = useLoading();
+  const pathname = usePathname();
+  // Open the folder that holds the current Tool so the active link is visible.
+  const [expanded, setExpanded] = useState(
+    () => item.children?.some((child) => child.href === pathname) ?? false,
+  );
   const isFolder = item.type === "folder";
+  const isActive = !isFolder && item.href === pathname;
+  const isPending = !isFolder && item.href === pendingHref;
 
-  const closeSidebarOnMobile = () => {
-    if (window.innerWidth < 1024) {
-      toggleDrawer();
-    }
-  };
-
-  const handleLinkClick = () => {
-    setIsLoading(true);
-    closeSidebarOnMobile();
-    // setTimeout ให้ loader แสดง ออกแบบให้ดูดีขึ้น
-    setTimeout(() => setIsLoading(false), 500);
+  const handleLinkClick = (event: React.MouseEvent) => {
+    startNavigation(item.href || "#", event);
+    toggleDrawer();
   };
 
   const paddingLeft = level * 12;
@@ -201,7 +199,7 @@ function FileTreeNode({
             onClick={() => setExpanded(!expanded)}
             title={item.name}
             style={{ paddingLeft: `${8 + paddingLeft}px` }}
-            className="w-full flex items-center py-2.5 px-3 rounded-lg hover:bg-blue-500/20 active:bg-blue-600/30 transition-all text-white text-sm font-medium gap-2 group"
+            className="w-full flex items-center py-2.5 px-3 rounded-lg hover:bg-primary/10 transition-colors text-sm font-medium gap-2 group"
           >
             <span
               aria-hidden="true"
@@ -211,7 +209,7 @@ function FileTreeNode({
               }}
             >
             </span>
-            <span className="text-sm shrink-0 text-yellow-300">
+            <span className="text-sm shrink-0">
               {item.icon && (
                 <span
                   aria-hidden="true"
@@ -220,15 +218,15 @@ function FileTreeNode({
                 />
               )}
             </span>
-            <span className="truncate text-blue-100 group-hover:text-white">
+            <span className="truncate text-base-content/80 group-hover:text-base-content">
               {item.name}
             </span>
-            <span className="ml-auto text-xs text-blue-300 group-hover:text-blue-200 transition-transform duration-200">
+            <span className="ml-auto text-xs text-base-content/50 group-hover:text-primary">
               {expanded ? "−" : "+"}
             </span>
           </button>
           {expanded && (
-            <div className="border-l-2 border-blue-600/30 ml-6">
+            <div className="border-l-2 border-primary/20 ml-6">
               {item.children?.map((child) => (
                 <FileTreeNode
                   key={child.id}
@@ -245,10 +243,15 @@ function FileTreeNode({
           href={item.href || "#"}
           onClick={handleLinkClick}
           title={item.name}
+          aria-current={isActive ? "page" : undefined}
           style={{ paddingLeft: `${8 + paddingLeft}px` }}
-          className="flex items-center py-2.5 px-3 rounded-lg hover:bg-green-500/20 active:bg-green-600/30 transition-all text-white text-sm w-full gap-2 group"
+          className={`flex items-center py-2.5 px-3 rounded-lg transition-colors text-sm w-full gap-2 group ${
+            isActive || isPending
+              ? "bg-primary/15 text-primary font-semibold"
+              : "hover:bg-primary/10"
+          }`}
         >
-          <span className="w-5 h-5 shrink-0 text-purple-300">
+          <span className="w-5 h-5 shrink-0">
             {item.icon && (
               <span
                 aria-hidden="true"
@@ -257,9 +260,12 @@ function FileTreeNode({
               />
             )}
           </span>
-          <span className="truncate text-gray-100 group-hover:text-white font-medium">
+          <span className={`truncate font-medium ${isActive || isPending ? "" : "text-base-content/85 group-hover:text-base-content"}`}>
             {item.name}
           </span>
+          {isPending && (
+            <span className="loading loading-spinner loading-xs ml-auto shrink-0" aria-hidden="true" />
+          )}
         </Link>
       )}
     </div>
@@ -269,19 +275,8 @@ function FileTreeNode({
 export default function SidebarPage() {
   return (
     <>
-      {/* Sidebar Header */}
-      <div className="border-b-2 border-blue-700 bg-blue-700 flex items-center justify-center h-17.5 shrink-0">
-        <Link href="/" className="hover:opacity-80 transition-opacity">
-          <Image
-            src={logo}
-            alt="ROC Library Logo"
-            width={50}
-            height={50}
-            className="object-contain drop-shadow-lg"
-            priority
-          />
-        </Link>
-      </div>
+      {/* Spacer: the Navbar (z-40) stays above the Sidebar so the Menu toggle can close it */}
+      <div aria-hidden="true" className="h-16 shrink-0" />
 
       {/* Sidebar Navigation - File Tree */}
       <nav className="p-4 flex-1 overflow-y-auto">
@@ -302,11 +297,11 @@ export default function SidebarPage() {
       </nav>
 
       {/* Sidebar Footer */}
-      <div className="p-4 border-t-2 border-blue-700 bg-blue-700 mt-auto shrink-0">
-        <p className="text-[10px] text-white mb-3">
+      <div className="p-4 border-t border-base-300 bg-base-200 mt-auto shrink-0">
+        <p className="text-[10px] text-base-content/60 mb-3">
           © 2025 ROC Library. All rights reserved.
         </p>
-        <p className="text-[10px] font-semibold text-white mb-2">Supporter</p>
+        <p className="text-[10px] font-semibold text-base-content/80 mb-2">Supporter</p>
         <div className="flex justify-center gap-2">
           {[
             {
@@ -326,7 +321,7 @@ export default function SidebarPage() {
               <Image
                 src={g.img}
                 alt={g.label}
-                className="w-6.25 h-6.25 rounded border-2 border-white hover:scale-110 transition-transform cursor-pointer"
+                className="w-6.25 h-6.25 rounded border-2 border-base-100 hover:scale-110 transition-transform cursor-pointer"
               />
               <span className="absolute bottom-full mb-1 left-1/2 -translate-x-1/2 px-2 py-1 text-8px text-white bg-gray-800 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-10">
                 {g.label}
