@@ -4,8 +4,8 @@ import dogGuild from "../../../public/assets/images/GuildImage/dog.jpg";
 import rocFunGuild from "../../../public/assets/images/GuildImage/rocfun.png";
 export default function FooterPage() {
   return (
-    <footer className="fixed bottom-0 left-0 w-full px-2 py-2 bg-white z-50 text-xs h-[50px] shadow-lg border-t-4 border-[#639ef7]">
-      <div className="flex flex-col md:flex-row  justify-around  items-center text-gray-700">
+    <footer className="fixed bottom-0 left-0 w-full px-2 py-2 bg-base-100 z-50 text-xs h-[50px] shadow-lg border-t-4 border-[#639ef7]">
+      <div className="flex flex-col md:flex-row  justify-around  items-center text-base-content/80">
         <span className="text-[8px] xl:text-[15px] lg:text-[15px] md:text-[15px] sm:text-[10px]">
           @2025 ROC Library. All rights reserved.
         </span>

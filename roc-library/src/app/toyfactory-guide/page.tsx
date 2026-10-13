@@ -9,10 +9,10 @@ import { toyFactoryMergedMapData } from "@/services/mapData/toyFactoryData";
 const ToyFactoryMap = dynamic(() => import("./ToyFactoryMap"), {
   ssr: false,
   loading: () => (
-    <div className="w-full h-full flex items-center justify-center bg-gray-100">
+    <div className="w-full h-full flex items-center justify-center bg-base-200">
       <div className="text-center">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
-        <p className="text-gray-600">Loading map...</p>
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
+        <p className="text-base-content/70">Loading map...</p>
       </div>
     </div>
   ),
@@ -175,7 +175,7 @@ export default function ToyFactoryGuidePage() {
         "พอลงมาถึงปลายเส้นสีแดงแล้ว ให้คุยกับ  <span class='underline'>Employee Box</span> ที่อยู่ฝั่งซ้ายนอกกำแพง (Employee Box ตัวแรกใน Map 1) แล้วก็เดินตามเส้นสีเขียว <kbd class='kbd bg-green-500'>- -</kbd>",
         "หลังจากคุยแล้ว เวลาในการแปลร่างจะลดลง จากนั้นให้คุยกับ <span class='underline'>Worker</span> แล้วเลือกข้อ 2 จากนั้นก็ตาม Guide Line สีเขียวไปเรื่อยๆ และคุยกับ Worker ทุกตัวที่เจอ",
         "3. หลังจากเข้า Warp ให้เดินกลับและเดินตามเส้นสีน้ำเงิน <kbd class='kbd bg-blue-700'>- -</kbd> เพื่อไปยัง Map3 เพื่อทำการ แก้มัดเชือก <span class='underline'>Captured Santa</span>",
-        "พอ Warp ซ้ายเปิด ให้ทำการเดินตามเส้นสีขาว <kbd class='kbd bg-white'>- -</kbd> เพื่อไปกำจัด <span class='underline'>Antonio</span> จากนั้นให้กลับมาห้องเดิน ตามเส้นสีขาวอีกครั้งเพื่อไปกำจัด <span class='underline'>Celine</span>",
+        "พอ Warp ซ้ายเปิด ให้ทำการเดินตามเส้นสีขาว <kbd class='kbd bg-base-100'>- -</kbd> เพื่อไปกำจัด <span class='underline'>Antonio</span> จากนั้นให้กลับมาห้องเดิน ตามเส้นสีขาวอีกครั้งเพื่อไปกำจัด <span class='underline'>Celine</span>",
         "4.หลังจากกำจัด <span class='underline'>Celine</span> แล้ว ให้เดินตามเส้นสีเหลือง <kbd class='kbd bg-yellow-500'>- -</kbd> เพื่อไปยังห้องสมบัติ",
       ]}
       filters={filters}

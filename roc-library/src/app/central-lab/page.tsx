@@ -3,18 +3,20 @@ import { useMemo, useState, useRef, useEffect } from "react";
 import EventModal from "./cenlab-modal";
 import MonsterTablePage from "./monster-lab";
 import SwitchOnPage from "./switch-on";
+import { Pause, Play, RotateCcw, Timer } from "lucide-react";
 
 interface CalendarEvent {
   event_date: string;
   event_title: string;
   event_theme: string;
   event_binary: string;
+  event_code: string;
 }
 
 type TabType = "daily" | "calendar" | "monster";
 
-const HEADER_OFFSET = 70;
-const SCROLL_OFFSET = 80;
+// Navbar (4rem) + sticky tab bar + breathing room; mirrored by scroll-mt-28 on sections.
+const SECTION_LINE_OFFSET = 112;
 const DAYS_OF_WEEK = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 const MONTH_NAMES = [
   "January", "February", "March", "April", "May", "June",
@@ -36,9 +38,10 @@ export default function CentralLabPage() {
       const accessCode = code.toString();
       return {
         event_date: new Date(year, month, DateNow).toISOString(),
-        event_title: `${spaced}<div class="text-lg text-gray-700">${accessCode}</div>`,
-        event_theme: "bg-pink-500",
+        event_title: `${spaced}<div class="text-lg text-base-content/80">${accessCode}</div>`,
+        event_theme: "bg-accent text-accent-content",
         event_binary: spaced,
+        event_code: accessCode,
       };
     })()
   );
@@ -76,9 +79,10 @@ export default function CentralLabPage() {
       const accessCode = code.toString();
       return {
         event_date: new Date(year, month, day).toISOString(),
-        event_title: `${spaced}<div class="text-lg text-gray-700">${accessCode}</div>`,
-        event_theme: "bg-pink-500",
+        event_title: `${spaced}<div class="text-lg text-base-content/80">${accessCode}</div>`,
+        event_theme: "bg-accent text-accent-content",
         event_binary: spaced,
+        event_code: accessCode,
       };
     });
   }, [noOfDays, year, month]);
@@ -104,12 +108,14 @@ export default function CentralLabPage() {
 
   const handleScrollTo = (tab: TabType) => {
     setActiveTab(tab);
-    const ref = getRefByTab(tab);
-    if (ref.current) {
-      const yOffset = -HEADER_OFFSET;
-      const y = ref.current.getBoundingClientRect().top + window.pageYOffset + yOffset;
-      window.scrollTo({ top: y, behavior: "smooth" });
-    }
+    const reduceMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+    // Sections carry scroll-mt-28 so they stop below the navbar and tab bar.
+    getRefByTab(tab).current?.scrollIntoView({
+      behavior: reduceMotion ? "auto" : "smooth",
+      block: "start",
+    });
   };
 
   useEffect(() => {
@@ -120,33 +126,36 @@ export default function CentralLabPage() {
     ];
 
     const onScroll = () => {
-      const scrollPos = window.scrollY + SCROLL_OFFSET;
+      const line = SECTION_LINE_OFFSET + 1;
+      let current: TabType = "daily";
       tabRefs.forEach(({ ref, tab }) => {
-        if (ref.current) {
-          const top = ref.current.offsetTop;
-          const bottom = top + ref.current.offsetHeight;
-          if (scrollPos >= top && scrollPos < bottom) {
-            setActiveTab(tab);
-          }
+        if (ref.current && ref.current.getBoundingClientRect().top <= line) {
+          current = tab;
         }
       });
+      // The last section can be too short to reach the line; treat the bottom as it.
+      const doc = document.documentElement;
+      if (window.scrollY + window.innerHeight >= doc.scrollHeight - 2) {
+        current = "monster";
+      }
+      setActiveTab(current);
     };
 
-    window.addEventListener("scroll", onScroll);
+    window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
   return (
-    <div className="antialiased sans-serif pt-16">
+    <div className="antialiased sans-serif">
       {/* Navigation Tabs */}
       <TabNavigation activeTab={activeTab} onTabClick={handleScrollTo} />
 
       {/* Daily Code Section */}
-      <section ref={dailyRef} className="mb-8 sm:mb-12 container mx-auto px-2 sm:px-4 pt-8 sm:pt-10">
+      <section ref={dailyRef} className="scroll-mt-28 mb-8 sm:mb-12 container mx-auto px-2 sm:px-4 pt-8 sm:pt-10">
         <DailySection selectedEvent={selectedEventNow} />
       </section>
 
       {/* Calendar Section */}
-      <section ref={calendarRef} className="mb-8 sm:mb-12 container mx-auto px-2 sm:px-4 py-2 md:py-8">
+      <section ref={calendarRef} className="scroll-mt-28 mb-8 sm:mb-12 container mx-auto px-2 sm:px-4 py-2 md:py-8">
         <CalendarSection
           month={month}
           year={year}
@@ -161,7 +170,7 @@ export default function CentralLabPage() {
       </section>
 
       {/* Monster Section */}
-      <section ref={monsterRef} className="mb-12 container mx-auto px-2 sm:px-4">
+      <section ref={monsterRef} className="scroll-mt-28 mb-12 container mx-auto px-2 sm:px-4">
         <MonsterTablePage />
       </section>
 
@@ -182,21 +191,28 @@ interface TabNavigationProps {
 
 function TabNavigation({ activeTab, onTabClick }: TabNavigationProps) {
   return (
-    <div className="fixed top-17.5 left-0 w-full bg-gray-400 border-b shadow-lg z-50">
-      <div className="flex justify-around">
+    <nav
+      aria-label="Central Lab sections"
+      className="sticky top-16 z-30 border-b border-base-300 bg-base-100 shadow-sm"
+    >
+      <div className="mx-auto flex max-w-3xl justify-around">
         {TABS.map((tab) => (
           <button
             key={tab}
+            type="button"
             onClick={() => onTabClick(tab)}
-            className={`flex flex-col items-center py-2 px-4 transition-colors font-bold cursor-pointer capitalize ${
-              activeTab === tab ? "text-blue-500" : "text-gray-500 hover:text-blue-500"
+            aria-current={activeTab === tab ? "true" : undefined}
+            className={`flex min-h-11 flex-1 cursor-pointer items-center justify-center border-b-2 px-4 py-2 font-semibold capitalize transition-colors ${
+              activeTab === tab
+                ? "border-primary text-primary"
+                : "border-transparent text-base-content/70 hover:text-primary"
             }`}
           >
             {tab}
           </button>
         ))}
       </div>
-    </div>
+    </nav>
   );
 }
 
@@ -317,7 +333,7 @@ function DailySection({ selectedEvent }: DailySectionProps) {
           </h3>
           
           {/* Switch Image */}
-          <div className="grid grid-cols-9 grid-rows-3 gap-2 rounded-md overflow-hidden mb-4 mx-auto relative w-[350px] h-[200px] lg:w-[900px] lg:h-[500px] md:w-[750px] md:h-[400px] sm:w-[650px] sm:h-[350px]">
+          <div className="grid grid-cols-9 grid-rows-3 gap-2 rounded-md overflow-hidden mb-4 mx-auto relative w-full max-w-4xl aspect-[9/5]">
             <div
               className="absolute inset-0 bg-center bg-cover"
               style={{
@@ -339,43 +355,55 @@ function DailySection({ selectedEvent }: DailySectionProps) {
       <div className="divider my-4"></div>
 
       {/* Timer Section */}
-      <div className="card bg-linear-to-br from-blue-50 to-indigo-50 shadow-lg border border-indigo-300">
+      <div className="card bg-base-100 shadow-lg border border-base-300">
         <div className="card-body">
-          <h2 className="card-title text-lg sm:text-2xl text-indigo-600 mb-4 justify-center">
-            ⏱️ Stage Timers
+          <h2 className="card-title text-lg sm:text-2xl text-primary mb-4 justify-center">
+            <Timer aria-hidden="true" className="h-6 w-6" /> Stage Timers
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {times.map((time) => (
               <div
                 key={time.id}
-                className="stat bg-white rounded-lg shadow-md border border-indigo-200 hover:shadow-lg transition-shadow p-4"
+                className="stat bg-base-200 rounded-lg border border-base-300 p-4"
               >
-                <div className="stat-title text-center text-indigo-600 font-bold mb-2">
+                <div className="stat-title text-center text-base-content font-bold mb-2">
                   {time.label}
                 </div>
-                <div className="stat-value text-center text-3xl sm:text-4xl text-error font-mono mb-4">
+                <div
+                  className={`stat-value mb-4 text-center font-mono text-3xl sm:text-4xl ${
+                    time.minutes === 0 && time.seconds === 0
+                      ? "text-error"
+                      : "text-base-content"
+                  }`}
+                  role="timer"
+                  aria-label={time.label}
+                >
                   {String(time.minutes).padStart(2, "0")}:{String(time.seconds).padStart(2, "0")}
                 </div>
                 <div className="stat-desc text-center text-xs mb-4">
-                  {runningTimers[time.id - 1] ? "⏱️ Running" : "⏸️ Paused"}
+                  {runningTimers[time.id - 1] ? "Running" : "Paused"}
                 </div>
                 {/* Control Buttons */}
                 <div className="flex gap-2 justify-center">
                   <button
                     onClick={() => toggleTimer(time.id)}
-                    className={`btn btn-sm ${
+                    className={`btn btn-sm gap-1 ${
                       runningTimers[time.id - 1]
                         ? "btn-warning"
-                        : "btn-success"
+                        : "btn-primary"
                     }`}
                   >
-                    {runningTimers[time.id - 1] ? "⏸ Pause" : "▶ Start"}
+                    {runningTimers[time.id - 1] ? (
+                      <><Pause aria-hidden="true" className="h-4 w-4" /> Pause</>
+                    ) : (
+                      <><Play aria-hidden="true" className="h-4 w-4" /> Start</>
+                    )}
                   </button>
                   <button
                     onClick={() => resetTimer(time.id)}
-                    className="btn btn-sm btn-outline btn-error"
+                    className="btn btn-sm btn-outline gap-1"
                   >
-                    🔄 Reset
+                    <RotateCcw aria-hidden="true" className="h-4 w-4" /> Reset
                   </button>
                 </div>
               </div>
@@ -411,15 +439,15 @@ function CalendarSection({
   onSelectEvent,
 }: CalendarSectionProps) {
   return (
-    <div className="rounded-xl overflow-hidden bg-white shadow-xl border border-gray-200">
+    <div className="rounded-xl overflow-hidden bg-base-100 shadow-xl border border-base-300">
       {/* Header */}
-      <div className="bg-linear-to-r from-rose-500 to-rose-600 py-3 sm:py-6 px-4 sm:px-8">
+      <div className="bg-primary text-primary-content py-3 sm:py-6 px-4 sm:px-8">
         <div className="flex items-center justify-between">
           <div>
-            <span className="text-white text-2xl sm:text-4xl font-bold">
+            <span className="text-2xl sm:text-4xl font-bold">
               {monthNames[month]}
             </span>
-            <span className="ml-2 sm:ml-3 text-sm sm:text-lg text-rose-100 font-normal">{year}</span>
+            <span className="ml-2 sm:ml-3 text-sm sm:text-lg opacity-80 font-normal">{year}</span>
           </div>
         </div>
       </div>
@@ -445,7 +473,7 @@ function CalendarHeader({ days }: { days: string[] }) {
   return (
     <>
       {days.map((day) => (
-        <div key={day} className="px-1 sm:px-2 py-2 sm:py-3 text-[10px] sm:text-sm font-bold text-center text-white bg-linear-to-b from-gray-700 to-gray-600 uppercase tracking-widest rounded-t-md">
+        <div key={day} className="px-1 sm:px-2 py-2 sm:py-3 text-[10px] sm:text-sm font-bold text-center bg-neutral text-neutral-content uppercase tracking-widest rounded-t-md">
           {day}
         </div>
       ))}
@@ -473,7 +501,7 @@ function CalendarGrid({
       {blankDays.map((b) => (
         <div
           key={`b${b}`}
-          className="bg-gray-50"
+          className="bg-base-200"
         />
       ))}
 
@@ -506,13 +534,13 @@ function CalendarDay({
   return (
     <div
       className={`min-h-20 sm:min-h-24 md:min-h-32 p-1 sm:p-2 md:p-3 rounded-lg border transition-all ${
-        isTodayFlag ? "bg-blue-50 border-blue-300 shadow-md" : "bg-white border-gray-200 hover:border-gray-300 hover:shadow-sm"
+        isTodayFlag ? "bg-primary/10 border-primary/40" : "bg-base-100 border-base-300"
       }`}
     >
       {/* Date Number */}
       <div
         className={`inline-flex w-6 h-6 sm:w-8 sm:h-8 items-center justify-center rounded-full text-xs sm:text-sm font-bold mb-1 sm:mb-2 ${
-          isTodayFlag ? "bg-blue-500 text-white shadow-lg" : "bg-linear-to-br from-purple-600 to-purple-700 text-white"
+          isTodayFlag ? "bg-primary text-primary-content" : "bg-base-200 text-base-content"
         }`}
       >
         {date}
@@ -521,12 +549,18 @@ function CalendarDay({
       {/* Events */}
       <div className="space-y-0.5 sm:space-y-1">
         {events.map((event, idx) => (
-          <div
+          <button
             key={idx}
+            type="button"
             onClick={() => onSelectEvent(event)}
-            className={`overflow-hidden text-[10px] sm:text-xs p-0.5 sm:p-1.5 rounded cursor-pointer truncate text-white ${event.event_theme} shadow-md hover:shadow-lg active:shadow-sm transition-all duration-200 transform hover:scale-105 active:scale-95 line-clamp-1 sm:line-clamp-2`}
-            dangerouslySetInnerHTML={{ __html: event.event_title }}
-          />
+            aria-label={`รหัส ${event.event_binary} วันที่ ${date}`}
+            className={`block w-full cursor-pointer overflow-hidden rounded p-0.5 text-left text-[10px] sm:p-1.5 sm:text-xs ${event.event_theme} transition-transform hover:scale-[1.03] active:scale-95`}
+          >
+            <span className="block truncate">{event.event_binary}</span>
+            <span className="block truncate text-sm font-semibold sm:text-base">
+              {event.event_code}
+            </span>
+          </button>
         ))}
       </div>
     </div>

@@ -22,8 +22,8 @@ export default function CollapsibleQuestTicket({
   onActiveSumChange,
 }: CollapsibleQuestTicketProps) {
   return (
-    <div className="rounded-xl border border-blue-300 bg-blue-50 shadow-sm">
-      <div className="px-4 py-3 text-sm font-black text-blue-900">
+    <div className="rounded-xl border border-primary/40 bg-primary/10 shadow-sm">
+      <div className="px-4 py-3 text-sm font-black text-primary">
         {title}
       </div>
       <div className="px-3 pb-3">

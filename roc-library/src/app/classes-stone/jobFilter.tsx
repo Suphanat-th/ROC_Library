@@ -34,7 +34,7 @@ export function JobSelect({ options, value, onChange }: Props) {
       {/* Dropdown list */}
       <ul
         tabIndex={0}
-        className="dropdown-content menu mt-2 w-full rounded-box bg-base-100 shadow text-black"
+        className="dropdown-content menu mt-2 w-full rounded-box bg-base-100 shadow text-base-content"
       >
         {options.map((opt) => (
           <li key={opt.value}>

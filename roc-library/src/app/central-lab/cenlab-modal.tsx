@@ -1,4 +1,5 @@
 "use client";
+import { useEffect } from "react";
 import SwitchOnPage from "./switch-on";
 
 interface CalendarEvent {
@@ -14,13 +15,25 @@ interface EventModalProps {
 }
 
 const EventModal: React.FC<EventModalProps> = ({ event, onClose }) => {
-  console.log(event);
+  useEffect(() => {
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [onClose]);
+
   if (!event) return null;
 
   return (
-    <div className="fixed inset-0 bg-gray-900/90 flex justify-center items-center z-50 overflow-x-auto ">
-      <div className="bg-white rounded-lg shadow-lg p-6 w-full min-h-[600px]">
-        <h1 className="font-bold text-3xl text-center text-gray-600 mb-4">
+    <div
+      role="dialog"
+      aria-modal="true"
+      aria-label="Central Lab daily code"
+      className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto bg-neutral/80"
+    >
+      <div className="bg-base-100 rounded-lg shadow-lg p-4 sm:p-6 w-full max-h-full overflow-y-auto">
+        <h1 className="font-bold text-3xl text-center text-base-content/70 mb-4">
           {new Date(event.event_date).toLocaleDateString(undefined, {
             weekday: "long",
             year: "numeric",
@@ -29,10 +42,10 @@ const EventModal: React.FC<EventModalProps> = ({ event, onClose }) => {
           })}
         </h1>
         <div
-          className="font-semibold mb-2 text-black text-3xl text-center mt-10"
+          className="font-semibold mb-2 text-base-content text-3xl text-center mt-10"
           dangerouslySetInnerHTML={{ __html: event.event_title }}
         ></div>
-        <div className="grid grid-cols-9 grid-rows-3 gap-2 rounded-md overflow-hidden mb-4 mx-auto relative w-[350px] h-[200px] lg:w-[900px] lg:h-[500px] md:w-[750px] md:h-[400px] sm:w-[650px] sm:h-[350px]">
+        <div className="grid grid-cols-9 grid-rows-3 gap-2 rounded-md overflow-hidden mb-4 mx-auto relative w-full max-w-4xl aspect-[9/5]">
           {/* พื้นหลัง */}
           <div
             className="absolute inset-0 bg-center bg-cover"
@@ -53,7 +66,7 @@ const EventModal: React.FC<EventModalProps> = ({ event, onClose }) => {
         <div className="text-right ">
           <button
             onClick={onClose}
-            className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+            className="btn btn-primary"
           >
             Close
           </button>

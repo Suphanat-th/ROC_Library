@@ -65,7 +65,7 @@ export default function VIPSearch() {
 
       {/* Results Summary */}
       <div className="mb-4 flex justify-between items-center">
-        <div className="text-sm text-gray-600">
+        <div className="text-sm text-base-content/70">
           {loading ? (
             <span>กำลังโหลด...</span>
           ) : (
@@ -100,7 +100,7 @@ export default function VIPSearch() {
       {results && results.data.length > 0 ? (
         <div>
           <div className="overflow-x-auto">
-            <table className="table table-zebra bg-white">
+            <table className="table table-zebra bg-base-100">
               <thead>
                 <tr className="bg-blue-600 text-white">
                   <th className="font-bold">รหัส</th>
@@ -112,8 +112,8 @@ export default function VIPSearch() {
               </thead>
               <tbody>
                 {results.data.map((vip) => (
-                  <tr key={vip.id} className="hover:bg-blue-50">
-                    <td className="font-semibold text-blue-600">{vip.code}</td>
+                  <tr key={vip.id} className="hover:bg-primary/10">
+                    <td className="font-semibold text-primary">{vip.code}</td>
                     <td className="font-medium">{vip.fullName}</td>
                     <td className="text-sm">{vip.facebookName}</td>
                     <td>

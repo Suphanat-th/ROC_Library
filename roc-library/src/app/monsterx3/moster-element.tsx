@@ -181,7 +181,7 @@ export default function MonsterEcomDatabase() {
         <div className="flex flex-wrap gap-8 justify-center">
           {!isEventActive ? (
             <div className="flex flex-col items-center justify-center py-24 text-center gap-4">
-              <p className="text-4xl font-black text-gray-600 uppercase tracking-widest">
+              <p className="text-4xl font-black text-base-content/70 uppercase tracking-widest">
                 Event Ended
               </p>
               <p className="text-gray-500 text-sm">
@@ -310,7 +310,7 @@ export default function MonsterEcomDatabase() {
                           </div>
                         ))
                     ) : (
-                      <span className="text-xs text-gray-600 italic">
+                      <span className="text-xs text-base-content/70 italic">
                         No element data available
                       </span>
                     )}

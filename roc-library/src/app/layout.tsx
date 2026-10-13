@@ -4,7 +4,8 @@ import localFont from "next/font/local";
 import NavBarPage from "@/layout/navbar/navbar";
 import SidebarPage from "@/layout/sidebar/sidebar";
 import { LoadingProvider } from "@/context/LoadingContext";
-import { LoadingOverlay } from "@/components/Loader";
+import { LoadingOverlay, NavigationContent, NavigationProgress } from "@/components/Loader";
+import { themeInitScript } from "@/components/ThemeToggle";
 import { ToTopButton } from "@/components/ToTopButton";
 
 const mali = localFont({
@@ -30,11 +31,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" data-theme="light">
+    <html lang="th" data-theme="roc-light" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+      </head>
       <body
         className={`${mali.className} antialiased m-0 p-0 h-screen`}
       >
         <LoadingProvider>
+          <NavigationProgress />
           <LoadingOverlay />
           <ToTopButton />
           <div className="drawer h-screen">
@@ -50,7 +55,9 @@ export default function RootLayout({
               <NavBarPage />
 
               {/* Page Content */}
-              <div className="flex-1 overflow-auto bg-gray-50 pt-17.5">{children}</div>
+              <div className="flex-1 bg-base-200 pt-16">
+                <NavigationContent>{children}</NavigationContent>
+              </div>
             </div>
 
             {/* Sidebar */}
@@ -60,7 +67,7 @@ export default function RootLayout({
                 aria-label="close sidebar"
                 className="drawer-overlay"
               ></label>
-              <div className="bg-blue-600 min-h-full w-64 text-white flex flex-col">
+              <div className="bg-base-100 border-r border-base-300 min-h-full w-64 text-base-content flex flex-col">
                 <SidebarPage />
               </div>
             </div>

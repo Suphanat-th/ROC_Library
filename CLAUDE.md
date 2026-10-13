@@ -17,7 +17,7 @@ There is no test framework and no separate typecheck script; `npm run build` is 
 ## Stack notes
 - React is **18** (`react@^18.2.0`) despite AGENTS.md saying 19.
 - React Compiler is enabled (`reactCompiler: true` in `next.config.ts`) — avoid manual `useMemo`/`useCallback` unless needed.
-- Tailwind v4 + DaisyUI 5 (theme `light`, set on `<html data-theme>`). Font: local Mali via `next/font/local`.
+- Tailwind v4 + DaisyUI 5. Custom themes `roc-light` (default) / `roc-dark` defined in `src/app/globals.css`; toggled by `ThemeToggle` and saved in `localStorage` (`roc-theme`). Use theme tokens (`bg-base-*`, `text-base-content`, `text-primary`) rather than raw `gray-*`/`blue-*` for surfaces and text so dark mode works. Font: local Mali via `next/font/local`.
 - Path alias `@/*` → `src/*`.
 - Other libs: leaflet/react-leaflet (dungeon maps), swiper, framer-motion, html-to-image (image export), lucide-react.
 

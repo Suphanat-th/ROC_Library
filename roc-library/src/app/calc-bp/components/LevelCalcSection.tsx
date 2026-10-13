@@ -35,25 +35,25 @@ export default function LevelCalcSection({
   return (
     <>
       <div className="flex items-center gap-4">
-        <div className="h-px flex-1 bg-linear-to-r from-blue-200/20 via-blue-400/70 to-blue-200/20"></div>
-        <span className="rounded-full border border-blue-300/60 bg-blue-950/60 px-3 py-1 text-xs font-bold uppercase tracking-widest text-blue-200">Level Calculator</span>
-        <div className="h-px flex-1 bg-linear-to-l from-blue-200/20 via-blue-400/70 to-blue-200/20"></div>
+        <div className="h-px flex-1 bg-base-300"></div>
+        <span className="rounded-full border border-primary/30 bg-base-200 px-3 py-1 text-xs font-bold uppercase tracking-widest text-primary">Level Calculator</span>
+        <div className="h-px flex-1 bg-base-300"></div>
       </div>
 
-      <div className="card w-full border border-blue-900/80 bg-linear-to-br from-slate-950 via-slate-900 to-blue-950 text-white shadow-2xl shadow-slate-950/40 backdrop-blur-sm">
+      <div className="card w-full border border-base-300 bg-base-100 text-base-content shadow-md">
         <div className="card-body p-4 sm:p-6 lg:p-7">
-          <h2 className="card-title mb-6 flex items-center gap-2 text-xl font-black tracking-tight text-white sm:text-2xl">
+          <h2 className="card-title mb-6 flex items-center gap-2 text-xl font-black tracking-tight text-base-content sm:text-2xl">
             <span className="text-2xl">🎯</span> Level Calculator
           </h2>
 
           <div className="grid grid-cols-1 gap-6 mb-6 sm:grid-cols-3">
-            <div className="rounded-xl border-l-4 border-blue-500 bg-white p-6 text-slate-900 shadow-md">
+            <div className="rounded-xl border-l-4 border-primary bg-base-100 p-6 text-base-content shadow-md">
               <label className="label justify-center mb-3">
-                <span className="label-text font-bold text-gray-700">แต้มปัจจุบัน (รวม)</span>
+                <span className="label-text font-bold text-base-content/80">แต้มปัจจุบัน (รวม)</span>
               </label>
               <div>
                 <label className="label justify-center mt-3">
-                  <span className="label-text-alt text-gray-500 text-xs">กรอกแต้มปัจจุบัน</span>
+                  <span className="label-text-alt text-base-content/60 text-xs">กรอกแต้มปัจจุบัน</span>
                 </label>
               </div>
               <input
@@ -64,34 +64,34 @@ export default function LevelCalcSection({
                   setTotalPoints(value ? parseInt(value, 10) : 0);
                 }}
                 placeholder="0"
-                className="input input-bordered input-lg w-full border-blue-300 bg-white text-3xl text-center font-bold text-blue-600 focus:input-primary sm:text-4xl"
+                className="input input-bordered input-lg w-full border-primary/40 bg-base-100 text-3xl text-center font-bold text-primary focus:input-primary sm:text-4xl"
               />
             </div>
 
-            <div className="rounded-xl border-l-4 border-blue-500 bg-white p-6 text-slate-900 shadow-md">
+            <div className="rounded-xl border-l-4 border-primary bg-base-100 p-6 text-base-content shadow-md">
               <label className="label justify-center mb-3">
-                <span className="label-text font-bold text-gray-700">Level ปัจจุบัน</span>
+                <span className="label-text font-bold text-base-content/80">Level ปัจจุบัน</span>
               </label>
               <div>
                 <label className="label justify-center mt-3">
-                  <span className="label-text-alt text-gray-500 text-xs">คำนวณจากแต้มปัจจุบันอัตโนมัติ</span>
+                  <span className="label-text-alt text-base-content/60 text-xs">คำนวณจากแต้มปัจจุบันอัตโนมัติ</span>
                 </label>
               </div>
               <input
                 type="text"
                 value={currentLevel}
                 readOnly
-                className="input input-bordered input-lg w-full cursor-default border-blue-300 bg-blue-50 text-center text-3xl font-bold text-blue-700 sm:text-4xl"
+                className="input input-bordered input-lg w-full cursor-default border-primary/40 bg-primary/10 text-center text-3xl font-bold text-primary sm:text-4xl"
               />
             </div>
 
-            <div className="rounded-xl border-l-4 border-blue-500 bg-white p-6 text-slate-900 shadow-md">
+            <div className="rounded-xl border-l-4 border-primary bg-base-100 p-6 text-base-content shadow-md">
               <label className="label justify-center mb-3">
-                <span className="label-text font-bold text-gray-700">Level ที่อยากได้</span>
+                <span className="label-text font-bold text-base-content/80">Level ที่อยากได้</span>
               </label>
               <div>
                 <label className="label justify-center mt-3">
-                  <span className="label-text-alt text-gray-500 text-xs">กรอก Level ที่ต้องการ</span>
+                  <span className="label-text-alt text-base-content/60 text-xs">กรอก Level ที่ต้องการ</span>
                 </label>
               </div>
               <input
@@ -99,14 +99,14 @@ export default function LevelCalcSection({
                 value={targetLevel}
                 onChange={(e) => setTargetLevel(Math.max(0, parseInt(e.target.value, 10) || 0))}
                 placeholder="0"
-                className="input input-bordered input-lg w-full bg-white focus:input-primary border-blue-300 text-3xl sm:text-4xl font-bold text-center text-blue-600"
+                className="input input-bordered input-lg w-full bg-base-100 focus:input-primary border-primary/40 text-3xl sm:text-4xl font-bold text-center text-primary"
               />
             </div>
           </div>
 
           <div className="mb-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
             <label
-              className={`group relative flex min-h-28 cursor-pointer overflow-hidden rounded-2xl border-2 bg-slate-100 shadow-sm transition-colors duration-200 hover:shadow-lg ${!isPremiumOpened ? "border-4 border-slate-700 bg-white shadow-xl ring-4 ring-slate-300" : "border-slate-300 opacity-70 hover:opacity-100"}`}
+              className={`group relative flex min-h-28 cursor-pointer overflow-hidden rounded-2xl border-2 bg-base-200 shadow-sm transition-colors duration-200 hover:shadow-lg ${!isPremiumOpened ? "border-4 border-primary bg-base-100 shadow-xl ring-4 ring-base-300" : "border-base-300 opacity-70 hover:opacity-100"}`}
             >
               <input
                 type="radio"
@@ -116,27 +116,27 @@ export default function LevelCalcSection({
                 className="pointer-events-none absolute h-px w-px opacity-0"
                 tabIndex={-1}
               />
-              <span className="flex w-14 shrink-0 items-center justify-center border-r-2 border-dashed border-slate-300 bg-slate-200 text-2xl text-slate-700">
+              <span className="flex w-14 shrink-0 items-center justify-center border-r-2 border-dashed border-base-300 bg-base-300 text-2xl text-base-content/80">
                 N
               </span>
               <span className="flex flex-1 flex-col justify-center px-4 py-3">
-                <span className="text-[15px] font-bold uppercase tracking-[0.18em] text-slate-800">
+                <span className="text-[15px] font-bold uppercase tracking-[0.18em] text-base-content">
                   Normal Battle Pass
                 </span>
-                <span className="mt-1 text-xs text-slate-500">
+                <span className="mt-1 text-xs text-base-content/60">
                   รับแต้ม Daily แบบปกติ
                 </span>
-                <span className="mt-1 text-xs font-semibold text-red-500">
+                <span className="mt-1 text-xs font-semibold text-error">
                   Level สูงสุดที่ 100
                 </span>
               </span>
               <span
-                className={`absolute right-3 top-3 h-3 w-3 rounded-full ring-2 ring-white ${!isPremiumOpened ? "bg-slate-700" : "bg-slate-300"}`}
+                className={`absolute right-3 top-3 h-3 w-3 rounded-full ring-2 ring-base-100 ${!isPremiumOpened ? "bg-primary" : "bg-base-300"}`}
               />
             </label>
 
             <label
-              className={`group relative flex min-h-28 cursor-pointer overflow-hidden rounded-2xl border-2 bg-yellow-50 shadow-sm transition-colors duration-200 hover:shadow-lg ${isPremiumOpened ? "border-4 border-yellow-600 bg-yellow-100 shadow-xl ring-4 ring-yellow-300" : "border-yellow-300 opacity-70 hover:opacity-100"}`}
+              className={`group relative flex min-h-28 cursor-pointer overflow-hidden rounded-2xl border-2 bg-accent/10 shadow-sm transition-colors duration-200 hover:shadow-lg ${isPremiumOpened ? "border-4 border-accent bg-accent/20 shadow-xl ring-4 ring-accent/30" : "border-accent/40 opacity-70 hover:opacity-100"}`}
             >
               <input
                 type="radio"
@@ -146,19 +146,19 @@ export default function LevelCalcSection({
                 className="pointer-events-none absolute h-px w-px opacity-0"
                 tabIndex={-1}
               />
-              <span className="flex w-14 shrink-0 items-center justify-center border-r-2 border-dashed border-yellow-300 bg-yellow-100 text-2xl font-black text-yellow-700">
+              <span className="flex w-14 shrink-0 items-center justify-center border-r-2 border-dashed border-accent/40 bg-accent/20 text-2xl font-black text-base-content">
                 P
               </span>
               <span className="flex flex-1 flex-col justify-center px-4 py-3">
-                <span className="text-[15px] font-bold uppercase tracking-[0.18em] text-yellow-700/80">
+                <span className="text-[15px] font-bold uppercase tracking-[0.18em] text-base-content/80">
                   Premium Pass
                 </span>
-                <span className="mt-1 text-xs text-slate-500">
+                <span className="mt-1 text-xs text-base-content/60">
                   ได้เพิ่ม +10 แต้ม/วัน
                 </span>
               </span>
               <span
-                className={`absolute right-3 top-3 h-3 w-3 rounded-full ring-2 ring-white ${isPremiumOpened ? "bg-yellow-600" : "bg-yellow-200"}`}
+                className={`absolute right-3 top-3 h-3 w-3 rounded-full ring-2 ring-base-100 ${isPremiumOpened ? "bg-accent" : "bg-accent/40"}`}
               />
             </label>
           </div>
@@ -166,66 +166,66 @@ export default function LevelCalcSection({
           {targetLevel > 0 && (
             <>
               {targetLevel > currentLevel && (
-                <div className="rounded-xl border-2 border-blue-300 bg-linear-to-r from-blue-50 to-slate-100 p-4 text-center shadow-md">
-                  <div className="text-sm font-bold text-blue-900">
-                    🌿 ใช้มะละกอเพิ่มเติม <span className="text-3xl text-blue-600">{(targetLevel - currentLevel) * 3}</span> เม็ด หรือ Silvervine Box <span className="text-3xl text-blue-600">{Math.ceil(((targetLevel - currentLevel) * 3) / 10)}</span> กล่อง
+                <div className="rounded-xl border-2 border-primary/40 bg-linear-to-r from-primary/10 to-base-200 p-4 text-center shadow-md">
+                  <div className="text-sm font-bold text-primary">
+                    🌿 ใช้มะละกอเพิ่มเติม <span className="text-3xl text-primary">{(targetLevel - currentLevel) * 3}</span> เม็ด หรือ Silvervine Box <span className="text-3xl text-primary">{Math.ceil(((targetLevel - currentLevel) * 3) / 10)}</span> กล่อง
                   </div>
                 </div>
               )}
 
               {targetLevel <= currentLevel && targetLevel > 0 && (
-                <div className="rounded-xl border-2 border-blue-300 bg-linear-to-r from-blue-50 to-slate-100 p-4 text-center shadow-md">
-                  <div className="text-sm font-bold text-blue-700">✅ คุณมี Level {currentLevel} ครบแล้ว ไม่ต้องใช้มะละกอเพิ่มเติม</div>
+                <div className="rounded-xl border-2 border-primary/40 bg-linear-to-r from-primary/10 to-base-200 p-4 text-center shadow-md">
+                  <div className="text-sm font-bold text-primary">✅ คุณมี Level {currentLevel} ครบแล้ว ไม่ต้องใช้มะละกอเพิ่มเติม</div>
                 </div>
               )}
             </>
           )}
 
           {targetLevel > 0 && (
-            <div className="space-y-4 rounded-xl border-2 border-blue-300 bg-linear-to-r from-blue-100 to-slate-100 p-6">
+            <div className="space-y-4 rounded-xl border-2 border-primary/40 bg-linear-to-r from-primary/15 to-base-200 p-6">
               {daysNeededData.isAlreadyReached ? (
-                <div className="rounded-lg border-l-4 border-blue-500 bg-white p-4 text-center shadow-md">
-                  <div className="text-xl font-bold text-blue-600">✅ คุณมี Level {currentLevel} ครบแล้ว!</div>
+                <div className="rounded-lg border-l-4 border-primary bg-base-100 p-4 text-center shadow-md">
+                  <div className="text-xl font-bold text-primary">✅ คุณมี Level {currentLevel} ครบแล้ว!</div>
                 </div>
               ) : (
                 <>
-                  <div className="rounded-lg border-l-4 border-blue-500 bg-white p-4 text-slate-900 shadow-md">
+                  <div className="rounded-lg border-l-4 border-primary bg-base-100 p-4 text-base-content shadow-md">
                     <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
                       <div>
-                        <div className="text-xs text-gray-600 font-semibold mb-2">ต้องใช้เวลา (วัน)</div>
-                        <div className="text-3xl font-bold text-blue-600">{daysNeededData.daysNeeded}</div>
-                        <div className="text-xs text-gray-500">วัน</div>
+                        <div className="text-xs text-base-content/70 font-semibold mb-2">ต้องใช้เวลา (วัน)</div>
+                        <div className="text-3xl font-bold text-primary">{daysNeededData.daysNeeded}</div>
+                        <div className="text-xs text-base-content/60">วัน</div>
                       </div>
                       <div>
-                        <div className="text-xs text-gray-600 font-semibold mb-2">ต้องใช้เวลา (สัปดาห์)</div>
-                        <div className="text-3xl font-bold text-blue-600">{daysNeededData.weeksNeeded}</div>
-                        <div className="text-xs text-gray-500">สัปดาห์</div>
+                        <div className="text-xs text-base-content/70 font-semibold mb-2">ต้องใช้เวลา (สัปดาห์)</div>
+                        <div className="text-3xl font-bold text-primary">{daysNeededData.weeksNeeded}</div>
+                        <div className="text-xs text-base-content/60">สัปดาห์</div>
                       </div>
                       <div>
-                        <div className="text-xs text-gray-600 font-semibold mb-2">แต้มที่ต้องเพิ่ม</div>
-                        <div className="text-3xl font-bold text-blue-600">{formatNumber(daysNeededData.pointsNeeded.toString())}</div>
-                        <div className="text-xs text-gray-500">Point</div>
+                        <div className="text-xs text-base-content/70 font-semibold mb-2">แต้มที่ต้องเพิ่ม</div>
+                        <div className="text-3xl font-bold text-primary">{formatNumber(daysNeededData.pointsNeeded.toString())}</div>
+                        <div className="text-xs text-base-content/60">Point</div>
                       </div>
                       <div>
-                        <div className="text-xs text-gray-600 font-semibold mb-2">Point/วัน</div>
-                        <div className="text-3xl font-bold text-blue-600">{currentDailyPoints}</div>
-                        <div className="text-xs text-gray-500">P/วัน</div>
+                        <div className="text-xs text-base-content/70 font-semibold mb-2">Point/วัน</div>
+                        <div className="text-3xl font-bold text-primary">{currentDailyPoints}</div>
+                        <div className="text-xs text-base-content/60">P/วัน</div>
                       </div>
                     </div>
                   </div>
 
-                  <div className="rounded-lg border-l-4 border-blue-500 bg-white p-4 text-slate-900 shadow-md">
+                  <div className="rounded-lg border-l-4 border-primary bg-base-100 p-4 text-base-content shadow-md">
                     {(() => {
                       const sumDaily = daysNeededData.daysNeeded * currentDailyPoints;
                       return (
                         <div className="flex justify-between items-center mb-3">
-                          <div className="text-xs font-bold text-blue-700">📋 Quest ที่ต้องทำ ({daysNeededData.daysNeeded} วัน):</div>
-                          <div className="text-sm font-bold text-blue-600">{formatNumber(sumDaily.toString())} P</div>
+                          <div className="text-xs font-bold text-primary">📋 Quest ที่ต้องทำ ({daysNeededData.daysNeeded} วัน):</div>
+                          <div className="text-sm font-bold text-primary">{formatNumber(sumDaily.toString())} P</div>
                         </div>
                       );
                     })()}
                     <div className="space-y-2 text-sm">
-                      <div className="flex justify-between items-center p-2 bg-blue-600 rounded text-white font-bold">
+                      <div className="flex justify-between items-center p-2 bg-primary rounded text-primary-content font-bold">
                         <span>📅 Daily Quest</span>
                         <span>
                           {isPremiumOpened ? dailyPremiumTotal : dailyNormalTotal} P × {daysNeededData.daysNeeded} = {(isPremiumOpened ? dailyPremiumTotal : dailyNormalTotal) * daysNeededData.daysNeeded}
@@ -233,7 +233,7 @@ export default function LevelCalcSection({
                       </div>
 
                       {daysNeededData.weeksNeeded > 0 && (
-                        <div className="flex items-center justify-between rounded bg-blue-700 p-2 font-bold text-white">
+                        <div className="flex items-center justify-between rounded bg-primary p-2 font-bold text-primary-content">
                           <span>📊 Weekly Quest</span>
                           <span>
                             {weeklyTotal} P × {daysNeededData.weeksNeeded} = {weeklyTotal * daysNeededData.weeksNeeded}
@@ -243,14 +243,14 @@ export default function LevelCalcSection({
                     </div>
                   </div>
 
-                  <div className="rounded-lg border-l-4 border-blue-500 bg-linear-to-r from-blue-100 to-slate-100 p-4 shadow-md">
+                  <div className="rounded-lg border-l-4 border-primary bg-linear-to-r from-primary/15 to-base-200 p-4 shadow-md">
                     <div className="flex justify-between items-center mb-2">
-                      <span className="font-bold text-blue-900">💸 เสียเงิน Zeny ทั้งสิ้น:</span>
-                      <span className="text-3xl font-bold text-blue-700">
+                      <span className="font-bold text-primary">💸 เสียเงิน Zeny ทั้งสิ้น:</span>
+                      <span className="text-3xl font-bold text-primary">
                         {formatNumber((1000000 * daysNeededData.daysNeeded + 2000000 * daysNeededData.weeksNeeded).toString())} Zeny
                       </span>
                     </div>
-                    <div className="text-xs text-blue-700">
+                    <div className="text-xs text-primary">
                       <div>
                         Daily Zeny: 1,000,000 × {daysNeededData.daysNeeded} = {formatNumber((1000000 * daysNeededData.daysNeeded).toString())} Zeny
                       </div>
@@ -260,23 +260,23 @@ export default function LevelCalcSection({
                     </div>
                   </div>
 
-                  <div className="bg-white rounded-lg p-4 shadow-md border-l-4 border-accent">
+                  <div className="bg-base-100 rounded-lg p-4 shadow-md border-l-4 border-accent">
                     <label className="label cursor-pointer">
-                      <span className="label-text font-bold text-gray-700">
+                      <span className="label-text font-bold text-base-content/80">
                         {isPremiumOpened ? "💛 Premium Account (เปิดอยู่)" : "⚪ Normal Account"}
                       </span>
-                      <div className="badge badge-lg" style={{ backgroundColor: isPremiumOpened ? "#FFD700" : "#D1D5DB" }}>
+                      <div className={`badge badge-lg border-0 ${isPremiumOpened ? "bg-accent text-accent-content" : "bg-base-300 text-base-content"}`}>
                         {isPremiumOpened ? "+10 P/วัน" : "Normal"}
                       </div>
                     </label>
                   </div>
 
-                  <div className="rounded-lg border-l-4 border-blue-500 bg-white p-4 text-center shadow-md">
-                    <div className="space-y-1 text-sm font-bold text-blue-700">
+                  <div className="rounded-lg border-l-4 border-primary bg-base-100 p-4 text-center shadow-md">
+                    <div className="space-y-1 text-sm font-bold text-primary">
                       <div>
                         ต้องการ Level {targetLevel} จากปัจจุบัน Level {currentLevel}
                       </div>
-                      <div className="text-blue-600 mt-2 text-base">
+                      <div className="text-primary mt-2 text-base">
                         ✓ ต้องทำ {daysNeededData.daysNeeded} วัน ({daysNeededData.weeksNeeded} สัปดาห์) เสีย {formatNumber((1000000 * daysNeededData.daysNeeded + 2000000 * daysNeededData.weeksNeeded).toString())} Zeny
                       </div>
                     </div>
@@ -287,8 +287,8 @@ export default function LevelCalcSection({
           )}
 
           {targetLevel === 0 && (
-            <div className="bg-gray-100 rounded-xl p-4 text-center border border-gray-300">
-              <div className="text-sm text-gray-600">กรอกระดับที่ต้องการเพื่อดูผลการคำนวน</div>
+            <div className="bg-base-200 rounded-xl p-4 text-center border border-base-300">
+              <div className="text-sm text-base-content/70">กรอกระดับที่ต้องการเพื่อดูผลการคำนวน</div>
             </div>
           )}
         </div>

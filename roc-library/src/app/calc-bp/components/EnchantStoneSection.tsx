@@ -35,7 +35,7 @@ function ItemRow({ image, name, value, onChange }: ItemRowProps) {
           height={120}
           className="mb-2 h-24 w-24 object-contain drop-shadow-md"
         />
-        <span className="font-bold text-gray-700">{name}</span>
+        <span className="font-bold text-base-content/80">{name}</span>
       </div>
       <input
         type="text"
@@ -43,7 +43,7 @@ function ItemRow({ image, name, value, onChange }: ItemRowProps) {
         value={value}
         onChange={(e) => onChange(parseNumber(e.target.value))}
         placeholder="0"
-        className="input input-bordered input-lg w-full border-blue-300 bg-white text-center text-3xl font-bold text-blue-600 focus:input-primary"
+        className="input input-bordered input-lg w-full border-primary/40 bg-base-100 text-center text-3xl font-bold text-primary focus:input-primary"
       />
     </div>
   );
@@ -65,26 +65,26 @@ export default function EnchantStoneSection({
   return (
     <>
       <div className="flex items-center gap-4">
-        <div className="h-px flex-1 bg-linear-to-r from-blue-200/20 via-blue-400/70 to-blue-200/20"></div>
-        <span className="rounded-full border border-blue-300/60 bg-blue-950/60 px-3 py-1 text-xs font-bold uppercase tracking-widest text-blue-200">
+        <div className="h-px flex-1 bg-base-300"></div>
+        <span className="rounded-full border border-primary/30 bg-base-200 px-3 py-1 text-xs font-bold uppercase tracking-widest text-primary">
           Enchant Stone Calculator
         </span>
-        <div className="h-px flex-1 bg-linear-to-l from-blue-200/20 via-blue-400/70 to-blue-200/20"></div>
+        <div className="h-px flex-1 bg-base-300"></div>
       </div>
 
-      <div className="card w-full border border-blue-900/80 bg-linear-to-br from-slate-950 via-slate-900 to-blue-950 text-white shadow-2xl shadow-slate-950/40 backdrop-blur-sm">
+      <div className="card w-full border border-base-300 bg-base-100 text-base-content shadow-md">
         <div className="card-body p-4 sm:p-6 lg:p-7">
-          <h2 className="card-title mb-2 flex items-center gap-2 text-xl font-black tracking-tight text-white sm:text-2xl">
+          <h2 className="card-title mb-2 flex items-center gap-2 text-xl font-black tracking-tight text-base-content sm:text-2xl">
             <span className="text-2xl">💎</span> Enchant Stone Exchange
           </h2>
-          <p className="mb-6 text-xs text-slate-400">
+          <p className="mb-6 text-xs text-base-content/60">
             1 Enchant Stone = {ENCHANT_STONE_COST} Elunium หรือ Oridecon
             (ผสมกันได้)
           </p>
 
           <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
-            <div className="space-y-5 rounded-xl border-l-4 border-blue-500 bg-white p-6 text-slate-900 shadow-md">
-              <div className="text-center font-bold text-gray-700">
+            <div className="space-y-5 rounded-xl border-l-4 border-primary bg-base-100 p-6 text-base-content shadow-md">
+              <div className="text-center font-bold text-base-content/80">
                 อยากได้ Enchant Stone
               </div>
               <ItemRow
@@ -93,13 +93,13 @@ export default function EnchantStoneSection({
                 value={wantedStones}
                 onChange={setWantedStones}
               />
-              <div className="rounded-lg bg-blue-50 p-4 text-center">
-                <div className="text-xs text-gray-500">
+              <div className="rounded-lg bg-primary/10 p-4 text-center">
+                <div className="text-xs text-base-content/60">
                   ต้องใช้ Elunium หรือ Oridecon รวมกัน
                 </div>
                 <div className="mt-1 flex items-center justify-center gap-3">
                   <Image src={IMAGES.elunium} alt="Elunium" width={48} height={48} className="h-10 w-10 object-contain" />
-                  <span className="text-4xl font-black text-blue-700">
+                  <span className="text-4xl font-black text-primary">
                     {formatNumber(needMaterials)}
                   </span>
                   <Image src={IMAGES.oridecon} alt="Oridecon" width={48} height={48} className="h-10 w-10 object-contain" />
@@ -107,8 +107,8 @@ export default function EnchantStoneSection({
               </div>
             </div>
 
-            <div className="space-y-5 rounded-xl border-l-4 border-blue-500 bg-white p-6 text-slate-900 shadow-md">
-              <div className="text-center font-bold text-gray-700">
+            <div className="space-y-5 rounded-xl border-l-4 border-primary bg-base-100 p-6 text-base-content shadow-md">
+              <div className="text-center font-bold text-base-content/80">
                 มีวัตถุดิบอยู่แล้ว
               </div>
               <ItemRow
@@ -123,7 +123,7 @@ export default function EnchantStoneSection({
                 value={ownedOridecon}
                 onChange={setOwnedOridecon}
               />
-              <div className="grid grid-cols-2 items-center gap-4 rounded-lg bg-blue-50 p-4 text-center">
+              <div className="grid grid-cols-2 items-center gap-4 rounded-lg bg-primary/10 p-4 text-center">
                 <div className="flex flex-col items-center">
                   <Image
                     src={IMAGES.stone}
@@ -132,13 +132,13 @@ export default function EnchantStoneSection({
                     height={120}
                     className="mb-1 h-20 w-20 object-contain drop-shadow-md"
                   />
-                  <span className="text-xs text-gray-500">แลก Enchant Stone ได้</span>
+                  <span className="text-xs text-base-content/60">แลก Enchant Stone ได้</span>
                 </div>
                 <div>
-                  <div className="text-5xl font-black text-blue-700">
+                  <div className="text-5xl font-black text-primary">
                     {formatNumber(craftableStones)}
                   </div>
-                  <div className="mt-1 text-xs text-gray-500">
+                  <div className="mt-1 text-xs text-base-content/60">
                     เหลือ {formatNumber(leftoverMaterials)} (ยังไม่พอแลกอีกก้อน)
                   </div>
                 </div>
