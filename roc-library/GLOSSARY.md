@@ -80,6 +80,10 @@ _Avoid_: Supporter, sponsor
 A guild whose logo is shown at the bottom of the Sidebar for backing the site. It is a different thing from a Donor.
 _Avoid_: Donor, sponsor
 
+**Visit tracking**:
+Google Analytics 4 counting visits and page views on every Tool. It runs only on the live production site, never during development or on preview deployments, and it asks the player for no consent and records no custom events.
+_Avoid_: Analytics (alone), GA, stats
+
 **Theme mode**:
 The visual mode the player has chosen: light or dark. Light is the default until the player picks one.
 _Avoid_: Color scheme, skin
