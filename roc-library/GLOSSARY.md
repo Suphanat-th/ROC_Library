@@ -84,6 +84,70 @@ _Avoid_: Donor, sponsor
 Google Analytics 4 counting visits and page views on every Tool. It runs only on the live production site, never during development or on preview deployments, and it asks the player for no consent and records no custom events.
 _Avoid_: Analytics (alone), GA, stats
 
+**ATK calculator**:
+The Tool where a player enters their Status, weapon and bonuses to see the Min, Max and Average damage of one normal attack. It leaves out skill-specific rules, and the target's DEF is a field that starts at 0 and is not yet applied. The entered values stay in the player's own browser, with a reset button.
+_Avoid_: Damage calculator, DPS tool
+
+**Status ATK**:
+The attack power that comes from the character's Base Level, STR, DEX and LUK, worked out differently for a melee attack and a ranged attack. The game window shows half of what is really counted, so it is counted twice. It receives only the Level 3 multipliers and the skill's % damage.
+_Avoid_: Base ATK, stat damage
+
+**Weapon ATK**:
+The attack power that comes from the equipped weapon: its Base Weapon ATK, a bonus from STR (or DEX for ranged weapons), a random Variance, and the bonus from Refine. The game window shows only the Base Weapon ATK and the Refine bonus, so the real value is higher. It receives the Level 1, 2 and 3 multipliers and the size penalty of the weapon.
+_Avoid_: Equip ATK, gear damage
+
+**Equip ATK**:
+Attack power that comes from anything other than the weapon itself: other equipment, consumables, ammunition such as arrows and bullets, buffs from items and skills, and special weapon properties such as "every x refine". It behaves like Weapon ATK except it carries no size penalty.
+_Avoid_: Flat ATK, gear ATK
+
+**Mastery ATK**:
+Attack power from job Mastery skills, some skill buffs such as Camouflage, and Blacksmith Star Crumbs. It ignores element and receives only the Level 3 multipliers and the skill's % damage.
+_Avoid_: Skill ATK
+
+**ATK multiplier**:
+A % bonus that raises attack power under a stated condition, in three Levels. Level 1 is the %ATK group. Level 2 is the race, size, element and monster type group. Level 3 is the %melee / %ranged and %Critical damage / %Hit physical damage group, also called Final multipliers. A skill's % damage is not an ATK multiplier.
+_Avoid_: Damage bonus, buff %
+
+**Final ATK**:
+The attack power after the Weapon ATK, Equip ATK, Status ATK, Mastery ATK and all three Levels of ATK multiplier are combined. It is what skill formulas, %reduction and DEF work on afterwards.
+_Avoid_: Total ATK, damage
+
+**Map viewer**:
+The shared view that shows one game map's terrain in 3D, which the player can rotate, tilt and zoom with mouse or fingers. Each map gets its own page that opens the same Map viewer. It can colour the ground by height or light, and can overlay which cells are walkable. It shows no objects such as trees or buildings yet.
+_Avoid_: Map page, 3D map
+
+**GND**:
+The map's ground file, holding the terrain's shape, light and the names of its ground pictures. It names the pictures but does not contain them.
+_Avoid_: Ground map, terrain file
+
+**GAT**:
+The map's walkability file, saying for each cell whether a character can stand on it. Its cells are half the size of a GND cell.
+_Avoid_: Collision map, walk map
+
+**Scroll**:
+A random item draw for one in-game event, such as Festa 2026, with a fixed list of Prizes. Each Row of a Roll draws one Prize from it.
+_Avoid_: Gacha, case, box
+
+**Prize**:
+One in-game item that a Scroll can give, with its name, picture, quantity per draw, Tier and drop rate in %. The rates of a Scroll's Prizes add up to 100%.
+_Avoid_: Reward, loot, drop
+
+**Tier**:
+The rarity grade of a Prize, from rarest to commonest: SSR, SR, A, B, C, E. Each Tier has its own colour.
+_Avoid_: Rank, grade, rarity
+
+**Roll**:
+One press of the draw button, which spins every Row together for the chosen spin time (3, 5 or 7 seconds) and gives one Prize per Row.
+_Avoid_: Spin (alone), pull, open
+
+**Row**:
+One strip of a Roll that slides and stops on one Prize. A Roll has 1 to 20 Rows, each drawn independently of the others.
+_Avoid_: Reel, lane, line
+
+**Roll history**:
+The list of Prizes drawn since the player opened the page, rarest first (lowest drop rate on top, newest first among equal rates). It is cleared when the player leaves or reloads the page.
+_Avoid_: Log, record
+
 **Theme mode**:
 The visual mode the player has chosen: light or dark. Light is the default until the player picks one.
 _Avoid_: Color scheme, skin

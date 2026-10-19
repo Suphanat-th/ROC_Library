@@ -96,6 +96,13 @@ const fileTree: FileTreeItem[] = [
         icon: "https://api.iconify.design/flowbite/teddy-bear-solid.svg?color=%23f4fb00",
         href: "/toyfactory-guide",
       },
+      {
+        id: "jittlebug",
+        name: "Jittlebug",
+        type: "file",
+        icon: "https://api.iconify.design/fluent-emoji-flat/world-map.svg",
+        href: "/jittlebug",
+      },
       // {
       //   id: "endlesstower",
       //   name: "- Endless Tower",
@@ -113,6 +120,20 @@ const fileTree: FileTreeItem[] = [
     icon: "https://api.iconify.design/emojione/ticket.svg?color=%23f4fb00",
     href: "/calc-bp",
   },
+  {
+    id: "randomscroll",
+    name: "Random Scroll",
+    type: "file",
+    icon: "https://api.iconify.design/fluent-emoji-flat/scroll.svg",
+    href: "/random-scroll",
+  },
+  // {
+  //   id: "atkcalc",
+  //   name: "ATK Calculator",
+  //   type: "file",
+  //   icon: "https://api.iconify.design/fluent-emoji-flat/crossed-swords.svg",
+  //   href: "/atk-calc",
+  // },
   {
     id: "donate",
     name: "Donate",
