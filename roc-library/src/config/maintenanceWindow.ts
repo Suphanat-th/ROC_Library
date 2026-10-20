@@ -14,7 +14,7 @@ export const MAINTENANCE_WINDOW = {
   weekday: 3, // 0 = Sunday ... 3 = Wednesday
   startHour: 6,
   startMinute: 0,
-  endHour: 13,
+  endHour: 12,
   endMinute: 0,
 };
 
