@@ -137,16 +137,20 @@ The rarity grade of a Prize, from rarest to commonest: SSR, SR, A, B, C, E. Each
 _Avoid_: Rank, grade, rarity
 
 **Roll**:
-One press of the draw button, which spins every Row together for the chosen spin time (3, 5 or 7 seconds) and gives one Prize per Row.
+One press of the draw button, which spins every Row together at the chosen speed (Fast, 3 seconds, or Normal, 5 seconds) and gives one Prize per Row.
 _Avoid_: Spin (alone), pull, open
 
 **Row**:
-One strip of a Roll that slides and stops on one Prize. A Roll has 1 to 20 Rows, each drawn independently of the others.
+One strip of a Roll that slides and stops on one Prize. A Roll has 1, 5, 10, 20, 50, 100, 500 or 1000 Rows, each drawn independently of the others. At most 10 Rows are shown at once; a bigger Roll runs on its own in rounds of 10 until every Row is drawn.
 _Avoid_: Reel, lane, line
 
 **Roll history**:
-The list of Prizes drawn since the player opened the page, rarest first (lowest drop rate on top, newest first among equal rates). It is cleared when the player leaves or reloads the page.
+The Prizes drawn since the player opened the page, grouped into one line per Prize with how many times it came up, rarest first (lowest drop rate on top). It is cleared when the player leaves or reloads the page.
 _Avoid_: Log, record
+
+**Announcement**:
+The congratulation card shown when a Prize flagged for it is drawn, naming the Prize and its running Row number since the page opened (for example Row 8,253, counted across every Roll). It floats at the top-right under the Navbar, newest on top, and stays until the player closes it.
+_Avoid_: Popup, banner, notification
 
 **Theme mode**:
 The visual mode the player has chosen: light or dark. Light is the default until the player picks one.

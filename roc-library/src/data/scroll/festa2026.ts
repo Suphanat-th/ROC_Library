@@ -4,7 +4,7 @@ import type { Prize } from "@/types/scroll";
 const IMG = "/assets/images/scroll/festa2026";
 
 export const FESTA_2026_PRIZES: Prize[] = [
-  { id: "wings-thanatos", name: "Costume Wings of Arrogant Thanatos", image: `${IMG}/WingsofArrogantThanatos.png`, quantity: 1, tier: "SSR", rate: 0.03 },
+  { id: "wings-thanatos", name: "Costume Wings of Arrogant Thanatos", image: `${IMG}/WingsofArrogantThanatos.png`, quantity: 1, tier: "SSR", rate: 0.03, announce: true },
   { id: "card-album-1", name: "Sealed Card Album", image: `${IMG}/sealed.png`, quantity: 1, tier: "SSR", rate: 0.1 },
   { id: "card-album-2", name: "Sealed Card Album II", image: `${IMG}/sealed.png`, quantity: 1, tier: "SSR", rate: 0.1 },
   { id: "blue-spirit", name: "Blue Spirit Effect (Middle)", image: `${IMG}/blueeffect.png`, quantity: 1, tier: "SR", rate: 0.6 },

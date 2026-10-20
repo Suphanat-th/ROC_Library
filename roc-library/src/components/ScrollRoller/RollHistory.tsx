@@ -1,5 +1,5 @@
 import Image from "next/image";
-import type { RollHistoryEntry } from "@/types/scroll";
+import type { Prize, RollHistoryEntry } from "@/types/scroll";
 import { TIER_ORDER, TIER_STYLE } from "./tierStyles";
 
 interface Props {
@@ -8,10 +8,16 @@ interface Props {
 }
 
 export default function RollHistory({ entries, onClear }: Props) {
-  // Rarest first (lowest rate); equal rates keep newest first because `entries` is already newest first.
-  const sorted = [...entries].sort((a, b) => a.prize.rate - b.prize.rate);
+  const groups = new Map<string, { prize: Prize; count: number }>();
+  for (const { prize } of entries) {
+    const group = groups.get(prize.id);
+    if (group) group.count += 1;
+    else groups.set(prize.id, { prize, count: 1 });
+  }
+  // Rarest first (lowest drop rate on top).
+  const sorted = [...groups.values()].sort((a, b) => a.prize.rate - b.prize.rate);
 
-  const counts = TIER_ORDER.map((tier) => ({
+  const tierCounts = TIER_ORDER.map((tier) => ({
     tier,
     count: entries.filter((e) => e.prize.tier === tier).length,
   }));
@@ -26,34 +32,57 @@ export default function RollHistory({ entries, onClear }: Props) {
       </div>
 
       <div className="mb-3 flex flex-wrap gap-2">
-        {counts.map(({ tier, count }) => (
-          <span key={tier} className={`badge ${TIER_STYLE[tier].badge} ${count === 0 ? "badge-outline opacity-50" : ""}`}>
+        {tierCounts.map(({ tier, count }) => (
+          <span
+            key={tier}
+            className={`badge badge-lg gap-1 border-0 font-bold ${
+              count === 0 ? "bg-base-200 text-base-content/40" : TIER_STYLE[tier].solid
+            }`}
+          >
             {tier} × {count}
           </span>
         ))}
       </div>
 
-      {entries.length === 0 ? (
-        <p className="py-6 text-center text-sm text-base-content/60">ยังไม่มีประวัติ — ประวัติจะหายเมื่อออกจากหน้านี้</p>
+      {sorted.length === 0 ? (
+        <p className="py-6 text-center text-sm text-base-content/60">
+          ยังไม่มีประวัติ — ประวัติจะหายเมื่อออกจากหน้านี้
+        </p>
       ) : (
-        <ul className="max-h-96 space-y-1 overflow-y-auto">
-          {sorted.map((e) => (
-            <li
-              key={e.key}
-              className={`flex items-center gap-2 rounded-lg px-2 py-1 text-sm ${TIER_STYLE[e.prize.tier].bg}`}
-            >
-              <span className="w-10 shrink-0 text-xs text-base-content/60">#{e.roll}</span>
-              <Image src={e.prize.image} alt="" width={28} height={28} unoptimized className="shrink-0" />
-              <span className="min-w-0 flex-1 truncate">
-                {e.prize.name} × {e.prize.quantity}
-              </span>
-              <span className="shrink-0 text-xs tabular-nums text-base-content/60">{e.prize.rate.toFixed(2)}%</span>
-              <span className={`shrink-0 font-bold ${TIER_STYLE[e.prize.tier].text}`}>{e.prize.tier}</span>
-              <span className="hidden shrink-0 text-xs text-base-content/60 sm:inline">
-                {e.at.toLocaleTimeString("th-TH")}
-              </span>
-            </li>
-          ))}
+        <ul className="grid grid-cols-1 gap-2 overflow-y-auto pr-1 md:grid-cols-2">
+          {sorted.map(({ prize, count }) => {
+            const style = TIER_STYLE[prize.tier];
+            const rare = prize.tier === "SSR" || prize.tier === "SR";
+            return (
+              <li
+                key={prize.id}
+                className={`grid grid-cols-[auto_1fr_auto] grid-rows-2 items-center gap-x-3 rounded-lg px-2 py-1.5 ${rare ? style.bgStrong : style.bg}`}
+              >
+                <Image
+                  src={prize.image}
+                  alt=""
+                  width={48}
+                  height={48}
+                  unoptimized
+                  className="row-span-2 shrink-0 self-center"
+                />
+                <span className={`min-w-0 truncate text-sm ${rare ? "font-bold" : ""}`}>{prize.name}</span>
+                <div className="row-span-2 self-center text-right">
+                  <div className={`text-2xl font-bold tabular-nums leading-none ${rare ? style.text : ""}`}>
+                    × {count.toLocaleString()}
+                  </div>
+                  {prize.quantity > 1 && (
+                    <div className="mt-1 text-xs text-base-content/60">
+                      {(count * prize.quantity).toLocaleString()} ชิ้น
+                    </div>
+                  )}
+                </div>
+                <span className="text-xs tabular-nums text-base-content/60">
+                  <span className={`font-bold ${style.text}`}>{prize.tier}</span> · {prize.rate.toFixed(2)}%
+                </span>
+              </li>
+            );
+          })}
         </ul>
       )}
     </div>
