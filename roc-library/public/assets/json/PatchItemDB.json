@@ -1,367 +1,41 @@
 {
-    "31784": {
-        "unidentifiedDisplayName": "Cap",
-        "unidentifiedResourceName": "캡",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "Costume Experimental Goat Cap",
-        "identifiedResourceName": "Exa_Goat_Cap",
-        "identifiedDescriptionName": [
-            "^ff0000ไอเท็มนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
-            "",
-            "ค่าประสบการณ์จากการกำจัดมอนสเตอร์ +10%, อัตราการดรอปไอเทม +10%",
-            "เมื่อโจมตีทางกายภาพหรือเวทย์มนต์ มีโอกาส 5% ที่จะได้รับบัพความเร็วการเคลื่อนที่สูงสุด เป็นเวลา 300 วินาที",
-            "",
-            "^ff0000(ความสามารถจะถูกลบออกวันที่ 2 มิถุนายน 2570 หลังปิดปรับปรุงเซิร์ฟเวอร์)",
-            "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Upper น้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 1",
-            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
-        ],
-        "slotCount": 0,
-        "ClassNum": 1768,
-        "costume": true
-    },
-    "1003308": {
-        "unidentifiedDisplayName": "Ancient Guarantee Enchant Ticket",
-        "unidentifiedResourceName": "Symposium_Card_YL",
-        "unidentifiedDescriptionName": [
-            "^ff0000ไม่สามารถตั้งร้านขายได้",
-            "",
-            "Ticket ใช้สำหรับ Enchant Optiion Ancient Gold Deco [1]",
-            "สามารถเลือกระดับออปชั่นพิเศษระดับ Level 5 ได้ 1 ครั้ง"
-        ],
-        "identifiedDisplayName": "Ancient Guarantee Enchant Ticket",
-        "identifiedResourceName": "Symposium_Card_YL",
-        "identifiedDescriptionName": [
-            "^ff0000ไม่สามารถตั้งร้านขายได้",
-            "",
-            "Ticket ใช้สำหรับ Enchant Optiion Ancient Gold Deco [1]",
-            "สามารถเลือกระดับออปชั่นพิเศษระดับ Level 5 ได้ 1 ครั้ง",
-            "น้ำหนัก : 0"
-        ],
-        "slotCount": 0,
-        "ClassNum": 0,
-        "costume": false
-    },
-    "420595": {
+    "19459": {
         "unidentifiedDisplayName": "Ribbon",
         "unidentifiedResourceName": "리본",
         "unidentifiedDescriptionName": [
             "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "Costume Medjed Cloth",
-        "identifiedResourceName": "C_Medjed_Cloth",
+        "identifiedDisplayName": "Costume Lunatic on Shoulder",
+        "identifiedResourceName": "C_Luna_On_Shoulder",
         "identifiedDescriptionName": [
-            "ผ้าลึกลับที่สิ่งมีชีวิตปริศนา Medjed ใช้คลุมศีรษะ",
-            "แต่ความจริงแล้ว… ก็เป็นเพียงผ้าธรรมดาที่มองผ่านได้ไม่ค่อยชัดเท่านั้น",
-            " ",
-            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 19 ได้",
+            "Lunatic ตัวน้อยที่ขึ้นมาเกาะอยู่บนไหล่ พร้อมสีหน้าที่ดูมีความสุข",
             "ประเภท : Costume พลังป้องกัน : 0",
             "ตำแหน่ง : Lower น้ำหนัก : 0",
             "เลเวลที่ต้องการ : 1",
             "อาชีพที่ใส่ได้ : ทุกอาชีพ"
         ],
         "slotCount": 0,
-        "ClassNum": 2745,
+        "ClassNum": 1881,
         "costume": true
     },
-    "20543": {
+    "480772": {
         "unidentifiedDisplayName": "Hood",
         "unidentifiedResourceName": "후드",
         "unidentifiedDescriptionName": [
             "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "Costume Halloween Pumpkin Bag",
-        "identifiedResourceName": "Halloween_Poring_Bag",
+        "identifiedDisplayName": "Costume Angel's Gift",
+        "identifiedResourceName": "C_Angel_Gift",
         "identifiedDescriptionName": [
-            "กระเป๋ารูป Viking Pumpkin Poring ผลงานออกแบบสุดพิเศษสำหรับเทศกาลฮาโลวีน ใช้เป็นทั้งของตกแต่งและของสะสมสุดน่ารัก",
-            " ",
-            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 20 ได้",
-            "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Garmentน้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 1",
-            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
-        ],
-        "slotCount": 0,
-        "ClassNum": 44,
-        "costume": true
-    },
-    "480494": {
-        "unidentifiedDisplayName": "Ribbon",
-        "unidentifiedResourceName": "리본",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "Costume Halloween Candy Pouch",
-        "identifiedResourceName": "C_Halloween_Candypouch",
-        "identifiedDescriptionName": [
-            "ถุงขนมเต็มไปด้วยลูกกวาดรสหวาน",
-            "ของหวานชิ้นโปรดของผีบางตัว... ระวังเหมือนมีใครกำลังตามมาจากด้านหลัง",
-            " ",
-            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 18 ได้",
+            "เครื่องประดับที่ออกแบบโดยได้แรงบันดาลใจจากปีกของนางฟ้า",
+            "ประดับด้วยโคลเวอร์และกระดิ่ง ราวกับพกพาโชคเล็ก ๆ ติดตัวไปด้วย",
             "ประเภท : Costume พลังป้องกัน : 0",
             "ตำแหน่ง : Garment น้ำหนัก : 0",
             "เลเวลที่ต้องการ : 1",
             "อาชีพที่ใส่ได้ : ทุกอาชีพ"
         ],
         "slotCount": 0,
-        "ClassNum": 2579,
+        "ClassNum": 302,
         "costume": true
-    },
-    "420593": {
-        "unidentifiedDisplayName": "Ribbon",
-        "unidentifiedResourceName": "리본",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "Costume Halloween Candy Hair",
-        "identifiedResourceName": "C_Halloween_Candy_Hair",
-        "identifiedDescriptionName": [
-            "วิกผมสำหรับคอสตูมที่เมื่อสวมใส่แล้ว จะให้ความรู้สึกราวกับได้เปลี่ยนเป็นทรงผมที่แตกต่างไปจากเดิม",
-            "ลูกกวาดและเครื่องประดับรูปฟักทองที่สั่นไหวทุกครั้งที่เดิน",
-            "ช่วยเติมสีสันและสร้างความรู้สึกสนุกสนานให้กับผู้ที่พบเห็น",
-            " ",
-            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 20 ได้",
-            "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Upper น้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 1",
-            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
-        ],
-        "slotCount": 0,
-        "ClassNum": 2743,
-        "costume": true
-    },
-    "480648": {
-        "unidentifiedDisplayName": "Hood",
-        "unidentifiedResourceName": "후드",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "Costume Crimson Niflheim Bloom",
-        "identifiedResourceName": "C_Nifl_Bloom_RD",
-        "identifiedDescriptionName": [
-            "ไม้กวาดที่ผู้ก้าวเดินบนเส้นทางแห่งเวทมนตร์ต้องเคยใฝ่ฝันถึงสักครั้ง",
-            "หากนำไปแต่งคู่กับสัตว์รับใช้ในสไตล์เมจิคัล จะให้ความรู้สึกราวกับได้กลายเป็นจอมเวทตัวจริง",
-            " ",
-            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 21 ได้",
-            "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Garment น้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 1",
-            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
-        ],
-        "slotCount": 0,
-        "ClassNum": 288,
-        "costume": true
-    },
-    "420597": {
-        "unidentifiedDisplayName": "Ribbon",
-        "unidentifiedResourceName": "리본",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "Costume Halloween Pumpkin",
-        "identifiedResourceName": "C_Halloween_Pumpkin",
-        "identifiedDescriptionName": [
-            "ฟักทองฮาโลวีนยักษ์ที่จะปรากฏขึ้นมาเมื่อกำลังนั่งพักอยู่",
-            "รอบ ๆ ฟักทองที่สวมหมวกแม่มด มีวิสเปอร์และค้างคาวคอยเฝ้าปกป้องอยู่",
-            "",
-            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 21 ได้",
-            "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Lower น้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 1",
-            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
-        ],
-        "slotCount": 0,
-        "ClassNum": 2747,
-        "costume": true
-    },
-    "480664": {
-        "unidentifiedDisplayName": "Hood",
-        "unidentifiedResourceName": "후드",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "Costume Cursed Serpent",
-        "identifiedResourceName": "C_Cursed_Serpent",
-        "identifiedDescriptionName": [
-            "ผ้าคลุมมหางูอันชั่วร้ายที่ถูกสร้างขึ้นเพื่อใช้เป็นสัญลักษณ์แห่งความหวาดกลัว",
-            "ตำนานว่ากันว่าเหล่ามหาปุโรหิตชั้นสูงสุดของลัทธิโยร์มุนกันด์ได้ทำพิธีต้องห้าม โดยใช้ Rgan ผู้เป็นเผ่าพันธุ์เดียวกันเป็นเครื่องสังเวยเพื่อสร้างเครื่องแต่งกายชิ้นนี้ขึ้นมาด้วยเป้าหมายในการโค่นล้มกองกำลังอาสาแห่งเกออร์ก",
-            "",
-            "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Garment น้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 1",
-            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
-        ],
-        "slotCount": 0,
-        "ClassNum": 291,
-        "costume": true
-    },
-    "108300": {
-        "unidentifiedDisplayName": "Halloween Costume Scroll",
-        "unidentifiedResourceName": "Spirit_Scroll_TW",
-        "unidentifiedDescriptionName": [
-            "คัมภีร์ลึกลับที่บรรจุพลังอันน่าขนลุกเอาไว้ เมื่อคลี่ออก อาจลุ้นรับคอสตูมสุดสยองขวัญที่ซ่อนอยู่ภายใน"
-        ],
-        "identifiedDisplayName": "Halloween Costume Scroll",
-        "identifiedResourceName": "Spirit_Scroll_TW",
-        "identifiedDescriptionName": [
-            "คัมภีร์ลึกลับที่บรรจุพลังอันน่าขนลุกเอาไว้ เมื่อคลี่ออก อาจลุ้นรับคอสตูมสุดสยองขวัญที่ซ่อนอยู่ภายใน",
-            "^ff0000หากเปิดใช้งานหลังวันที่ 28 กันยายน 2569 หลังปิดปรับปรุงประจำสัปดาห์ จะไม่ได้รับ Event Stone Coin ",
-            "น้ำหนัก : 1"
-        ],
-        "slotCount": 0,
-        "ClassNum": 0,
-        "costume": false
-    },
-    "490376": {
-        "unidentifiedDisplayName": "Record of Swordsman 2",
-        "unidentifiedResourceName": "Record_Mage2_TW",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "Record of Swordsman 2",
-        "identifiedResourceName": "Record_Mage2_TW",
-        "identifiedDescriptionName": [
-            "บันทึกส่วนที่เหลือของกลุ่มอัศวินที่เข้าไปสำรวจยังพื้นที่ Tomb of Honor",
-            "",
-            "HIT +50",
-            "เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อศัตรูทุกขนาด 6%",
-            "ทุก ๆ การอัพเกรด 2 ขั้น ATK + 10",
-            "เมื่ออัพเกรดถึงขั้น 5 HIT+ 15, ลด Global Cooldown 5%",
-            "เมื่ออัพเกรดถึงขึ้น 7 เพิ่ม Damage ทางกายภาพระยะใกล้/ไกล 5%",
-            "เมื่ออัพเกรดถึงขึ้น 9 เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อศัตรูทุกธาตุ 10%",
-            "",
-            "เมื่อสวมใส่ร่วมกับ Record of Swordsman หรือ [Not For Sale] Record of Swordsman,",
-            "เมื่อสวมใส่โดย Awakened Lord Knight เพิกเฉยต่อพลังป้องกันทางกายภาพของมอนสเตอร์ทุกเผ่า(ยกเว้น Player) 20%,ลดคูลดาวน์สกิล Brandish Spear 0.2 วินาที",
-            "เมื่อสวมใส่โดย Awakened Paladin, เพิกเฉยต่อพลังป้องกันทางกายภาพของมอนสเตอร์ทุกเผ่า (ยกเว้น Player) 20%,",
-            "ลดระยะเวลาร่ายแปรผันสกิล Shield Chain 35% , Grand Cross 35%",
-            "",
-            "ประเภท : Accessory(Left) พลังป้องกัน : 0",
-            "น้ำหนัก : 10",
-            "เลเวลที่ต้องการ : 100",
-            "อาชีพที่ใส่ได้ : Awakened Swordsman Class"
-        ],
-        "slotCount": 1,
-        "ClassNum": 0,
-        "costume": false
-    },
-    "490377": {
-        "unidentifiedDisplayName": "[NFS] Record of Swordsman 2",
-        "unidentifiedResourceName": "Record_Mage2_TW",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "[NFS] Record of Swordsman 2",
-        "identifiedResourceName": "Record_Mage2_TW",
-        "identifiedDescriptionName": [
-            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
-            "บันทึกส่วนที่เหลือของกลุ่มอัศวินที่เข้าไปสำรวจยังพื้นที่ Tomb of Honor",
-            "",
-            "HIT +50",
-            "เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อศัตรูทุกขนาด 6%",
-            "ทุก ๆ การอัพเกรด 2 ขั้น ATK + 10",
-            "เมื่ออัพเกรดถึงขั้น 5 HIT+ 15, ลด Global Cooldown 5%",
-            "เมื่ออัพเกรดถึงขึ้น 7 เพิ่ม Damage ทางกายภาพระยะใกล้/ไกล 5%",
-            "เมื่ออัพเกรดถึงขึ้น 9 เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อศัตรูทุกธาตุ 10%",
-            "",
-            "เมื่อสวมใส่ร่วมกับ Record of Swordsman หรือ [Not For Sale] Record of Swordsman,",
-            "เมื่อสวมใส่โดย Awakened Lord Knight เพิกเฉยต่อพลังป้องกันทางกายภาพของมอนสเตอร์ทุกเผ่า(ยกเว้น Player) 20%,ลดคูลดาวน์สกิล Brandish Spear 0.2 วินาที",
-            "เมื่อสวมใส่โดย Awakened Paladin, เพิกเฉยต่อพลังป้องกันทางกายภาพของมอนสเตอร์ทุกเผ่า (ยกเว้น Player) 20%,",
-            "ลดระยะเวลาร่ายแปรผันสกิล Shield Chain 35% , Grand Cross 35%",
-            "",
-            "ประเภท : Accessory(Left) พลังป้องกัน : 0",
-            "น้ำหนัก : 10",
-            "เลเวลที่ต้องการ : 100",
-            "อาชีพที่ใส่ได้ : Awakened Swordsman Class"
-        ],
-        "slotCount": 1,
-        "ClassNum": 0,
-        "costume": false
-    },
-    "490436": {
-        "unidentifiedDisplayName": "Record of Acolyte 2",
-        "unidentifiedResourceName": "Record_Mage2_TW",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "Record of Acolyte 2",
-        "identifiedResourceName": "Record_Mage2_TW",
-        "identifiedDescriptionName": [
-            "บันทึกส่วนที่เหลือของกลุ่มนักบวชที่เข้าไปสำรวจยังพื้นที่ Tomb of Honor",
-            "",
-            "SP + 120",
-            "เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อศัตรูทุกขนาด 6%",
-            "ทุก ๆ การอัพเกรด 2 ขั้น ATK, MATK + 10",
-            "เมื่ออัพเกรดถึงขั้น 5 ลดระยะเวลาร่ายแปรผัน 15%, ลด Global Cooldown 5%",
-            "เมื่ออัพเกรดถึงขึ้น 7 เพิ่ม Damage ทางกายภาพระยะใกล้ 5%, MATK +5%",
-            "เมื่ออัพเกรดถึงขึ้น 9 เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อศัตรูทุกธาตุ 10%",
-            "",
-            "เมื่อสวมใส่ร่วมกับ Record of Acolyte หรือ [Not For Sale] Record of Acolyte,",
-            "เมื่อสวมใส่โดย Awakened High Priest,เพิกเฉยต่อพลังป้องกันทางกายภาพของมอนสเตอร์ทุกเผ่า(ยกเว้น Player) 20%,ลดคูลดาวน์สกิล Magnus Exorcismus 2 วินาที",
-            "เมื่อสวมใส่โดย Awakened Champion, เพิกเฉยต่อพลังป้องกันทางกายภาพของมอนสเตอร์ทุกเผ่า (ยกเว้น Player) 20%,",
-            "เมื่อใช้งานสกิล Asura Strike จะร่ายสกิล Zen อัตโนมัติ",
-            "",
-            "ประเภท : Accessory(Left) พลังป้องกัน : 0",
-            "น้ำหนัก : 10",
-            "เลเวลที่ต้องการ : 100",
-            "อาชีพที่ใส่ได้ : Awakened Acolyte Class"
-        ],
-        "slotCount": 1,
-        "ClassNum": 0,
-        "costume": false
-    },
-    "490437": {
-        "unidentifiedDisplayName": "[NFS] Record of Acolyte 2",
-        "unidentifiedResourceName": "Record_Mage2_TW",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "[NFS] Record of Acolyte 2",
-        "identifiedResourceName": "Record_Mage2_TW",
-        "identifiedDescriptionName": [
-            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
-            "บันทึกส่วนที่เหลือของกลุ่มนักบวชที่เข้าไปสำรวจยังพื้นที่ Tomb of Honor",
-            "",
-            "SP + 120",
-            "เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อศัตรูทุกขนาด 6%",
-            "ทุก ๆ การอัพเกรด 2 ขั้น ATK, MATK + 10",
-            "เมื่ออัพเกรดถึงขั้น 5 ลดระยะเวลาร่ายแปรผัน 15%, ลด Global Cooldown 5%",
-            "เมื่ออัพเกรดถึงขึ้น 7 เพิ่ม Damage ทางกายภาพระยะใกล้ 5%, MATK +5%",
-            "เมื่ออัพเกรดถึงขึ้น 9 เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อศัตรูทุกธาตุ 10%",
-            "",
-            "เมื่อสวมใส่ร่วมกับ Record of Acolyte หรือ [Not For Sale] Record of Acolyte,",
-            "เมื่อสวมใส่โดย Awakened High Priest,เพิกเฉยต่อพลังป้องกันทางกายภาพของมอนสเตอร์ทุกเผ่า(ยกเว้น Player) 20%,ลดคูลดาวน์สกิล Magnus Exorcismus 2 วินาที",
-            "เมื่อสวมใส่โดย Awakened Champion, เพิกเฉยต่อพลังป้องกันทางกายภาพของมอนสเตอร์ทุกเผ่า (ยกเว้น Player) 20%,",
-            "เมื่อใช้งานสกิล Asura Strike จะร่ายสกิล Zen อัตโนมัติ",
-            "",
-            "ประเภท : Accessory(Left) พลังป้องกัน : 0",
-            "น้ำหนัก : 10",
-            "เลเวลที่ต้องการ : 100",
-            "อาชีพที่ใส่ได้ : Awakened Acolyte Class"
-        ],
-        "slotCount": 1,
-        "ClassNum": 0,
-        "costume": false
-    },
-    "108297": {
-        "unidentifiedDisplayName": "Spirit Cat Record Scroll",
-        "unidentifiedResourceName": "Betelgeuse_Soul",
-        "unidentifiedDescriptionName": [
-            "คัมภีร์จากเงามืดสู่พลังแห่งวิญญาณ Spirit Cat คือสัญลักษณ์ของนักล่าที่ไร้เสียง เคลื่อนไหวรวดเร็ว และจู่โจมโดยไม่มีใครทันตั้งตัว",
-            "^ff0000หากเปิดใช้งานหลังวันที่ 28 ตุลาคม 2569 หลังปิดปรับปรุงประจำสัปดาห์ จะไม่ได้รับ Spirit Cat Record Coin"
-        ],
-        "identifiedDisplayName": "Spirit Cat Record Scroll",
-        "identifiedResourceName": "Betelgeuse_Soul",
-        "identifiedDescriptionName": [
-            "คัมภีร์จากเงามืดสู่พลังแห่งวิญญาณ Spirit Cat คือสัญลักษณ์ของนักล่าที่ไร้เสียง เคลื่อนไหวรวดเร็ว และจู่โจมโดยไม่มีใครทันตั้งตัว",
-            "^ff0000หากเปิดใช้งานหลังวันที่ 28 ตุลาคม 2569 หลังปิดปรับปรุงประจำสัปดาห์ จะไม่ได้รับ Spirit Cat Record Coin",
-            "",
-            "น้ำหนัก : 1"
-        ],
-        "slotCount": 0,
-        "ClassNum": 0,
-        "costume": false
     }
 }
