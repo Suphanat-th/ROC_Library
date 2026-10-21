@@ -132,6 +132,18 @@ _Avoid_: Gacha, case, box
 One in-game item that a Scroll can give, with its name, picture, quantity per draw, Tier and drop rate in %. The rates of a Scroll's Prizes add up to 100%.
 _Avoid_: Reward, loot, drop
 
+**Anniversary reward**:
+One in-game item given for the 5th Anniversary event. Each server (Baphomet, Moonlight) has its own set, shown on its own tab of the 5th Anniversary page, grouped by Reward type. Its name, picture and Item card come from that server's reward data. Thai: ของรางวัลฉลองครบรอบ.
+_Avoid_: Prize (that is a Scroll's), loot, drop, Item Reward
+
+**Reward type**:
+The kind of equipment an Anniversary reward is: Header Gear (headgear and helms) or Accessory (everything else). It is read from the item's own "ประเภท" line, and a type with no rewards is hidden.
+_Avoid_: Category, slot
+
+**Reward search**:
+The search box each Reward type has beside its title. It filters that type's Anniversary rewards while the player types, by part of the item name and ignoring upper/lower case, and shows how many matched out of the total. It is cleared when the player switches server.
+_Avoid_: Filter, global search
+
 **Tier**:
 The rarity grade of a Prize, from rarest to commonest: SSR, SR, A, B, C, E. Each Tier has its own colour.
 _Avoid_: Rank, grade, rarity

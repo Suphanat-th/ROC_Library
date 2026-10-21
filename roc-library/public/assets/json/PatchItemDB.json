@@ -1,41 +1,83 @@
 {
-    "19459": {
+    "20019": {
+        "unidentifiedDisplayName": "Cap",
+        "unidentifiedResourceName": "캡",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา ต้องใช้ [Magnifier] ในการตรวจสอบไอเท็ม"
+        ],
+        "identifiedDisplayName": "Costume Beret of Artist",
+        "identifiedResourceName": "예술가의베레모",
+        "identifiedDescriptionName": [
+            "สร้างโดยสมาชิกชุมชน Fier หมวกนี้มีไว้สำหรับศิลปินที่มีส่วนร่วมในชุมชน",
+            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 7 ได้.",
+            "ประเภท : Costumeพลังป้องกัน : 0",
+            "ตำแหน่ง : Upperน้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 1209,
+        "costume": true
+    },
+    "20258": {
+        "unidentifiedDisplayName": "Hairband",
+        "unidentifiedResourceName": "머리띠",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "Costume Blue Headdress",
+        "identifiedResourceName": "블루헤드드레스",
+        "identifiedDescriptionName": [
+            "ผ้าโพกศีรษะสำหรับเครื่องแต่งกายสีสดใส สิ่งจำเป็นสำหรับสาวโสด",
+            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box 8 ได้",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Upper น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 1321,
+        "costume": true
+    },
+    "31047": {
+        "unidentifiedDisplayName": "Helm",
+        "unidentifiedResourceName": "발그레",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ  "
+        ],
+        "identifiedDisplayName": "Costume First Love Cheeks",
+        "identifiedResourceName": "첫사랑발그레",
+        "identifiedDescriptionName": [
+            "ความสดใส ความร่าเริง รวมไปถึงความเขินอาย!",
+            "ไม่ว่าใครก็ต้องเคยแก้มแดงระเรื่อด้วยความรู้สึกแบบนี้สักครั้งแหละ  ",
+            "^b4b4b4สามารถแลกเปลี่ยนเป็น Costume Enchant Stone 11 ได้",
+            "ประเภท : Costume พลังป้องกัน : 0",
+            "ตำแหน่ง : Middle น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 0,
+        "ClassNum": 1494,
+        "costume": true
+    },
+    "420599": {
         "unidentifiedDisplayName": "Ribbon",
         "unidentifiedResourceName": "리본",
         "unidentifiedDescriptionName": [
             "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
         ],
-        "identifiedDisplayName": "Costume Lunatic on Shoulder",
-        "identifiedResourceName": "C_Luna_On_Shoulder",
+        "identifiedDisplayName": "Costume Cons of Poison",
+        "identifiedResourceName": "Cons_Of_Poison",
         "identifiedDescriptionName": [
-            "Lunatic ตัวน้อยที่ขึ้นมาเกาะอยู่บนไหล่ พร้อมสีหน้าที่ดูมีความสุข",
+            "คอสตูมที่เต็มไปด้วยพิษสุดแสนอันตราย ผู้สวมใส่ควรใช้ด้วยความระมัดระวังอยู่เสมอ",
+            "สามารถแลกเปลี่ยนเป็น Costume Enchant Stone Box16 ได้",
             "ประเภท : Costume พลังป้องกัน : 0",
             "ตำแหน่ง : Lower น้ำหนัก : 0",
             "เลเวลที่ต้องการ : 1",
             "อาชีพที่ใส่ได้ : ทุกอาชีพ"
         ],
         "slotCount": 0,
-        "ClassNum": 1881,
-        "costume": true
-    },
-    "480772": {
-        "unidentifiedDisplayName": "Hood",
-        "unidentifiedResourceName": "후드",
-        "unidentifiedDescriptionName": [
-            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
-        ],
-        "identifiedDisplayName": "Costume Angel's Gift",
-        "identifiedResourceName": "C_Angel_Gift",
-        "identifiedDescriptionName": [
-            "เครื่องประดับที่ออกแบบโดยได้แรงบันดาลใจจากปีกของนางฟ้า",
-            "ประดับด้วยโคลเวอร์และกระดิ่ง ราวกับพกพาโชคเล็ก ๆ ติดตัวไปด้วย",
-            "ประเภท : Costume พลังป้องกัน : 0",
-            "ตำแหน่ง : Garment น้ำหนัก : 0",
-            "เลเวลที่ต้องการ : 1",
-            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
-        ],
-        "slotCount": 0,
-        "ClassNum": 302,
+        "ClassNum": 0,
         "costume": true
     }
 }

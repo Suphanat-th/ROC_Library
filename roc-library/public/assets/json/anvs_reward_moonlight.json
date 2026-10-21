@@ -1,0 +1,364 @@
+{
+    "430007": {
+        "unidentifiedDisplayName": "Cap",
+        "unidentifiedResourceName": "캡",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[NFS] Wanderer's Sakkat",
+        "identifiedResourceName": "배회하는자의삿갓",
+        "identifiedDescriptionName": [
+            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "หมวกสานสีเข้มที่เมื่อสวมใส่แล้วน่าจะปิดตาจนมองอะไรไม่เห็น ",
+            "ทุก ๆ การอัพเกรด 2 ขั้น  AGI + 1, LUK + 1",
+            "เมื่ออัพเกรดถึงขั้น 7 ขึ้นไป เพิ่ม ASPD 5%",
+            "เมื่ออัพเกรดถึงขั้น 9 ขึ้นไป CRI + 5, เพิ่ม ASPD 5%",
+            "ประเภท : Helm พลังป้องกัน : 2",
+            "ตำแหน่ง : Upper Middle น้ำหนัก : 50",
+            "เลเวลที่ต้องการ : 60",
+            "อาชีพที่ใส่ได้ : ทุกอาชัพ"
+        ],
+        "slotCount": 1,
+        "ClassNum": 558,
+        "costume": false
+    },
+    "400288": {
+        "unidentifiedDisplayName": "Cap",
+        "unidentifiedResourceName": "캡",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[NFS] Zaha Doll Hat",
+        "identifiedResourceName": "자하인형모자",
+        "identifiedDescriptionName": [
+            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "ตุ๊กตาที่สร้างเลียนแบบเทพธิดาผู้แสนงดงาม White Lady",
+            "INT + 3, MDEF + 9.",
+            "เพิ่มพลังโจมตีทางเวทย์ต่อศัตรูเผ่า Undead  10%",
+            "เมื่อได้รับพลังโจมตีทางเวทย์หรือทำการโจมตีทางเวทย์ มีโอกาสเปลี่ยนผู้สวมใส่ให้เป็น White Lady",
+            "ในช่วงเวลาสั้น ๆ และสูญเสีย SP ทีละ 10 ต่อวินาที และจะมีการเพิ่มเวลาในการเปลี่ยนร่างมากขึ้นและเพิ่ม MATK 30 หน่วยต่อการอัพเกรด",
+            "ประเภท : Headgear พลังป้องกัน : 0",
+            "ตำแหน่ง : Upper น้ำหนัก : 0",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพยกเว้น Novice"
+        ],
+        "slotCount": 1,
+        "ClassNum": 461,
+        "costume": false
+    },
+    "400417": {
+        "unidentifiedDisplayName": "Hairband",
+        "unidentifiedResourceName": "머리띠",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[NFS] Deep Blue Angel Hairband",
+        "identifiedResourceName": "딥블루천사의머리띠",
+        "identifiedDescriptionName": [
+            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "มันเป็นหมวกรูปปีกอันสวยงามที่ทำขึ้นโดยรวบรวมขนนกเทวดามาติดกับที่คาดผม",
+            "AGI + 1 , LUK + 1",
+            "MDEF + 3",
+            "ลดดาเมจต่อศัตรูประเภท Demon 3%",
+            "เมื่ออัพเกรดถึงขั้น 7 , เพิ่มพลังป้องกันการโจมตีกายภาพและเวทมนตร์จากมอนสเตอร์ Demi Human และ Player10 %",
+            "ประเภท : Helm พลังป้องกัน : 4",
+            "ตำแหน่ง : Upper น้ำหนัก : 10",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่สวมใส่ได้ : ทุกอาชีพ ยกเว้น Novice"
+        ],
+        "slotCount": 1,
+        "ClassNum": 915,
+        "costume": false
+    },
+    "400441": {
+        "unidentifiedDisplayName": "Headband",
+        "unidentifiedResourceName": "머리띠",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[NFS] Fox Ears Bell Ribbon",
+        "identifiedResourceName": "여우귀방울리본",
+        "identifiedDescriptionName": [
+            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "หมวกหูจิ้งจอกสุดน่ารัก",
+            "AGI + 2",
+            "เพิ่มความเร็วในการโจมตี 10%",
+            "เมื่อทำการโจมตีทางกายภาพ, มีโอกาสที่จะกลายร่างเป็น Moonlight Flower เป็นระยะเวลา 5 วินาที",
+            "ในขณะกลายร่าง CRI+100, พลังโจมตีทางกายภาพระยะไกลเพิ่มขึ้น 5%",
+            "ทุก ๆ การอัพเกรด 1 ขั้น โอกาสในการกลายร่างเป็น Moonlight Flower จะเพิ่มขึ้นเล็กน้อย",
+            "เมื่ออัพเกรดตั้งแต่ขั้น 6ขึ้นไป, เมื่อกลายร่างเป็น Moonlight Flower จะเพิ่มหลังโจมตีทางกายภาพระยะไกล 1% ทุกๆ การอัพเกรด",
+            "",
+            "ประเภท : Headgear พลังป้องกัน : 4",
+            "ตำแหน่ง : Upper น้ำหนัก : 40",
+            "เลเวลที่ต้องการ : 50",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 1,
+        "ClassNum": 1070,
+        "costume": false
+    },
+    "400654": {
+        "unidentifiedDisplayName": "Piece of Egg Shell",
+        "unidentifiedResourceName": "달걀껍질조각",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[NFS] Faceworm Egg Shell",
+        "identifiedResourceName": "페이스웜알껍질",
+        "identifiedDescriptionName": [
+            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "",
+            "เปลือกไข่ของสิ่งมีชีวิตขนาดยักษ์ ถูกแปรรูปทั้งหมดเพื่อให้สามารถสวมบนหัวได้อย่างสบาย",
+            "",
+            "HIT + 20",
+            "เพิ่ม Damage ที่ทำต่อมอนสเตอร์ Faceworm Nest 5%,",
+            "ลด Damage ที่ได้รับจากมอนสเตอร์ Faceworm Nest 5%",
+            "",
+            "เมื่ออัพเกรดถึงขั้น 5, เพิ่ม Damage ทางกายภาพและเวทมนตร์ที่ทำต่อมอนสเตอร์ Faceworm Nest ขึ้นอีก 10%,",
+            "ลด Damage ที่ได้รับจากมอนสเตอร์ Faceworm Nest ลงอีก 10%",
+            "",
+            "เมื่ออัพเกรดถึงขั้น 7, เพิ่ม Damage ทางกายภาพและเวทมนตร์ที่ทำต่อมอนสเตอร์ Faceworm Nest ขึ้นอีก 15%,",
+            "ลด Damage ที่ได้รับจากมอนสเตอร์ Faceworm Nest ลงอีก 15%",
+            "",
+            "เมื่ออัพเกรดถึงขั้น 9, เพิ่ม Damage ทางกายภาพและเวทมนตร์ที่ทำต่อมอนสเตอร์ Faceworm Nest ขึ้นอีก 20%,",
+            "ลด Damage ที่ได้รับจากมอนสเตอร์ Faceworm Nest ลงอีก 20%",
+            "ประเภท : Headgear พลังป้องกัน : 2",
+            "ตำแหน่ง : Upper น้ำหนัก : 50",
+            "เลเวลที่ต้องการ : 30",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพ"
+        ],
+        "slotCount": 1,
+        "ClassNum": 1356,
+        "costume": false
+    },
+    "490209": {
+        "unidentifiedDisplayName": "Accessory",
+        "unidentifiedResourceName": "리본",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[NFS]Angel Egg",
+        "identifiedResourceName": "천사의알",
+        "identifiedDescriptionName": [
+            "^ff0000ไอเท็มชิ้นนี้ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "เครื่องประดับที่ทำจากเปลือกไข่ สลักเป็นรูปนางฟ้าอย่างประณีตสวยงาม",
+            "All State + 1, เพิ่ม Damage ทางกายภาพที่ทำต่อศัตรูทุกประเภท 5%, MATK + 5%.",
+            "เมื่อสวมใส่ร่วมกับ Deep Blue Angel Hairband หรือ Pink Angel Hairband",
+            "All State + 1 เพิ่มเติม, MHP + 5%, MSP + 5%,",
+            "เมื่อถูกโจมตีทางกายภาพ มีโอกาสใช้งาน Lord of Vermilion Lv.5,",
+            "เพิ่ม Damage ต่อศัตรูทุกเผ่า 5%,",
+            "ลด Variable Cast Time 10%",
+            "ประเภท : Accessory  พลังป้องกัน : 1",
+            "น้ำหนัก : 10",
+            "เลเวลที่ต้องการ : 1",
+            "อาชีพที่ใส่ได้ : ทุกอาชีพยกเว้น Novice"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "490231": {
+        "unidentifiedDisplayName": "[NFS] Record of Thief",
+        "unidentifiedResourceName": "연구원기록표",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[NFS] Record of Thief",
+        "identifiedResourceName": "연구원기록표",
+        "identifiedDescriptionName": [
+            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "บันทึกการสำรวจของกลุ่มโจรที่เข้าไปสำรวจยังพื้นที่ Tomb of Honor เป็นรายการบันทึกที่ดูเหมือนว่าเนื้อหาจะขาดหายไปบางส่วน",
+            "",
+            "ATK + 15 , MATK+15 , ASPD + 1",
+            "ทุกๆการอัพเกรด 2 ขั้น เพิ่ม Damage ทางกายภาพต่อศัตรูทุกเผ่ายกเว้น BOSS 1%",
+            "เมื่ออัพเกรดถึงขั้น 5 ลดระยะเวลาร่ายแบบแปรผัน 5% , MaxHP + 5%, MaxSP + 5%",
+            "เมื่ออัพเกรดถึงขึ้น 7 เพิ่ม Damage ที่ทำต่อมอนสเตอร์บอส 5%",
+            "เมื่ออัพเกรดถึงขึ้น 9 เพิ่ม Damage ที่ทำต่อมอนสเตอร์ขนาดเล็ก, กลาง, ใหญ่ 10%",
+            "",
+            "เมื่อสวมใส่โดย Awakened Assassin Cross, เพิ่ม Critical Damage 10%,Perfect Dodge + 10,Flee + 20",
+            "เมื่อสวมใส่โดย Awakened Stalker, ASPD+1, HIT+20, เพิ่ม Damage ทางกายภาพที่ทำต่อมอนสเตอร์ทุกขนาด 5%",
+            "",
+            "เมื่อสวมใส่ร่วมกับ Ancient Gold Deco [1],",
+            "Critical Damage 8%, เพิ่ม Damage ทางกายภาพต่อมอนสเตอร์ทุกเผ่า +8%",
+            "ประเภท : Accessory(Right) พลังป้องกัน : 0",
+            "น้ำหนัก : 10",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพที่ใส่ได้ : Awakened Thief Class"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "490289": {
+        "unidentifiedDisplayName": "[NFS] Record of Mage",
+        "unidentifiedResourceName": "연구원기록표",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[NFS] Record of Mage",
+        "identifiedResourceName": "연구원기록표",
+        "identifiedDescriptionName": [
+            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "บันทึกการสำรวจของนักเวทที่เข้าไปสำรวจยังพื้นที่ Tomb of Honor เป็นรายการบันทึกที่ดูเหมือนว่าเนื้อหาจะขาดหายไปบางส่วน",
+            "",
+            "ATK + 15 , MATK+15 , ป้องกันการขัดร่ายเมื่อถูกโจมตี",
+            "ทุกๆการอัพเกรด 2 ขั้น เพิ่ม Damage ทางเวทมนตร์ทุกธาตุ 1%",
+            "เมื่ออัพเกรดถึงขั้น 5 ลดระยะเวลาร่ายแบบแปรผัน 5% , MaxHP + 5%, MaxSP + 5%",
+            "เมื่ออัพเกรดถึงขึ้น 7 เพิ่ม Damage เวทมนต์ที่ทำต่อมอนสเตอร์บอส 5%",
+            "เมื่ออัพเกรดถึงขึ้น 9 เพิ่ม Damage เวทมนต์ที่ทำต่อมอนสเตอร์ขนาดเล็ก, กลาง, ใหญ่ 10%",
+            "",
+            "เมื่อสวมใส่โดย Awakened High Wizard, เพิ่ม Damage ทางเวทย์ธาตุ Fire, Water, Wind เพิ่มขึ้น 10% , ลดระยะเวลาร่ายแบบแปรผัน 5%",
+            "เมื่อสวมใส่โดย Awakened Professor,เพิ่ม Damage ทางเวทย์ธาตุ Fire, Water, Wind เพิ่มขึ้น 10% , ลด Delay หลังใช้สกิล 5%",
+            "",
+            "เมื่อสวมใส่ร่วมกับ Ancient Gold Deco [1],",
+            "ลดระยะเวลาร่ายแบบคงที่ 0.3 วินาที, เพิ่ม Damage ทางเวทมนตร์ทุกธาตุ 8%",
+            "ประเภท : Accessory(Right) พลังป้องกัน : 0",
+            "น้ำหนัก : 10",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพที่ใส่ได้ : Awakened Mage Class"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "490222": {
+        "unidentifiedDisplayName": "[NFS] Record of Swordman",
+        "unidentifiedResourceName": "연구원기록표",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[NFS] Record of Swordman",
+        "identifiedResourceName": "연구원기록표",
+        "identifiedDescriptionName": [
+            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "บันทึกการสำรวจของกลุ่มอัศวินที่เข้าไปสำรวจยังพื้นที่ Tomb of Honor เป็นรายการบันทึกที่ดูเหมือนว่าเนื้อหาจะขาดหายไปบางส่วน",
+            "",
+            "ATK + 15 , MATK+15 , DEF+50 MDEF+10",
+            "ทุกๆการอัพเกรด 2 ขั้น เพิ่ม Damage ทางกายภาพระยะใกล้และระยะไกล 1%",
+            "เมื่ออัพเกรดถึงขั้น 5 HIT+50 , MaxHP + 5%, MaxSP + 5%",
+            "เมื่ออัพเกรดถึงขั้น 7 เพิ่ม Damage ที่ทำต่อมอนสเตอร์บอส 5%",
+            "เมื่ออัพเกรดถึงขั้น 9 เพิ่ม Damage ที่ทำต่อมอนสเตอร์ขนาดเล็ก,กลาง, ใหญ่ 10%",
+            "",
+            "เมื่อสวมใส่โดย Awakened Lord Knight, ATK +15, DEF+50 , ลดระยะเวลาร่ายแบบแปรผัน 10%",
+            "เมื่อสวมใส่โดย Awakened Paladin, All Status+5, Mdef + 10, MaxHP +10 %, ",
+            "",
+            "เมื่อสวมใส่ร่วมกับ Ancient Gold Deco [1], Perfect Hit + 8%, เพิ่ม Damage ทางกายภาพต่อมอนสเตอร์ทุกเผ่า +8%",
+            "ประเภท : Accessory(Right)  พลังป้องกัน : 0",
+            "น้ำหนัก : 10",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพที่ใส่ได้ : Awakened Swordsman Class"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "490335": {
+        "unidentifiedDisplayName": "[NFS] Record of Acolyte",
+        "unidentifiedResourceName": "연구원기록표",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[NFS] Record of Acolyte",
+        "identifiedResourceName": "연구원기록표",
+        "identifiedDescriptionName": [
+            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "บันทึกการสำรวจของนักบวชที่เข้าไปสำรวจยังพื้นที่ Tomb of Honor เป็นรายการบันทึกที่ดูเหมือนว่าเนื้อหาจะขาดหายไปบางส่วน",
+            "",
+            "ATK + 15 , MATK+15 , สามารถใช้งานสกิล Auto Guard Lv.5 ได้",
+            "ทุกๆการอัพเกรด 2 ขั้น เพิ่ม Damage ทางกายภาพต่อศัตรูทุกเผ่าและเพิ่มผลของการฟื้นฟู 1%",
+            "เมื่ออัพเกรดถึงขั้น 5 ลดระยะเวลาร่ายแบบแปรผัน 5% , MaxHP + 5%, MaxSP + 5%",
+            "เมื่ออัพเกรดถึงขั้น 7 เพิ่ม Damage กายภาพ/เวทมนต์ที่ทำต่อมอนสเตอร์บอส 5%",
+            "เมื่ออัพเกรดถึงขั้น 9 เพิ่ม Damage กายภาพ/เวทมนต์ที่ทำต่อมอนสเตอร์ขนาดกลาง, ใหญ่ 10%",
+            "",
+            "เมื่อสวมใส่โดย Awakened High Priest, MDEF + 15, SP Recovery 100%, ลดความเสียหายที่ได้รับจากศัตรูทุกขนาด 5%",
+            "เมื่อสวมใส่โดย Awakened Champion, MaxHP + 500, MaxSP + 100, เพิ่ม Damage กายภาพที่ทำต่อมอนสเตอร์ขนาดกลางและขนาดใหญ่ 5%",
+            "",
+            "เมื่อสวมใส่ร่วมกับ Ancient Gold Deco [1], ลดระยะเวลาร่ายแบบคงที่ 0.5 วินาที, เพิ่ม Damage กายภาพและเวทมนต์มอนสเตอร์ประเภท Demon , Undead , Shadow 8%",
+            "ประเภท : Accessory (Right) พลังป้องกัน : 0",
+            "น้ำหนัก : 10",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพที่ใส่ได้ : Awakened Acolyte Class"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "490240": {
+        "unidentifiedDisplayName": "[NFS]Record of Merchant",
+        "unidentifiedResourceName": "연구원기록표",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[NFS]Record of Merchant",
+        "identifiedResourceName": "연구원기록표",
+        "identifiedDescriptionName": [
+            "^ff0000 ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "บันทึกการสำรวจของกลุ่มพ่อค้าที่เข้าไปสำรวจยังพื้นที่ Tomb of Honor",
+            "เป็นรายการบันทึกที่ดูเหมือนว่าเนื้อหาจะขาดหายไปบางส่วน",
+            "",
+            "ATK + 15 , MATK+15 , ลด Delay หลังใช้สกิล 10% , ASPD + 10%",
+            "ทุกๆการอัพเกรด 2 ขั้น เพิ่ม Damage ทางกายภาพระยะใกล้และระยะไกล 1%",
+            "เมื่ออัพเกรดถึงขั้น 5 HIT+50 , MaxHP + 5%, MaxSP + 5%",
+            "เมื่ออัพเกรดถึงขึ้น 7 เพิ่ม Damage ที่ทำต่อมอนสเตอร์บอส 5%",
+            "เมื่ออัพเกรดถึงขึ้น 9 เพิ่ม Damage ที่ทำต่อมอนสเตอร์ขนาดเล็ก,กลาง, ใหญ่ 10%",
+            "",
+            "เมื่อสวมใส่โดย Awakened Creator,",
+            "All Status+5 , MaxHP +10 % , ลดระยะเวลาร่ายแบบแปรผัน 10%",
+            "",
+            "เมื่อสวมใส่โดย Awakened Whitesmith,",
+            "HIT+20, ASPD + 1 , เพิ่ม Damage ทางกายภาพที่ทำต่อมอนสเตอร์ทุกขนาด 5%",
+            "",
+            "เมื่อสวมใส่ร่วมกับ Ancient Gold Deco [1],",
+            "Perfect Hit + 8%",
+            "เพิ่ม Damage ทางกายภาพต่อมอนสเตอร์ทุกเผ่า +8%",
+            "",
+            "ประเภท : Accessory(Right) พลังป้องกัน : 0",
+            "น้ำหนัก : 10",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพที่ใส่ได้ : Awakened Merchant Cls"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "490401": {
+        "unidentifiedDisplayName": "[NFS]Record of Archer",
+        "unidentifiedResourceName": "연구원기록표",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา จำเป็นต้องใช้ [Magnifier] ในการตรวจสอบ"
+        ],
+        "identifiedDisplayName": "[NFS]Record of Archer",
+        "identifiedResourceName": "연구원기록표",
+        "identifiedDescriptionName": [
+            "^ff0000 ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "บันทึกการสำรวจของกลุ่มนักธนูที่เข้าไปสำรวจยังพื้นที่ Tomb of Honor เป็นรายการบันทึกที่ดูเหมือนว่าเนื้อหาจะขาดหายไปบางส่วน",
+            "",
+            "ATK + 15 , MATK+15 , ASPD + 1",
+            "ทุกๆการอัพเกรด 2 ขั้น เพิ่ม Damage ทางกายภาพ/เวทมนตร์ต่อมอนสเตอร์ประเภททั่วไป 1%",
+            "เมื่ออัพเกรดถึงขั้น 5 ลดระยะเวลาร่ายแบบแปรผัน 5% , MaxHP + 5%, MaxSP + 5%",
+            "เมื่ออัพเกรดถึงขึ้น 7 เพิ่ม Damage กายภาพ/เวทมนต์ที่ทำต่อมอนสเตอร์บอส 5%",
+            "เมื่ออัพเกรดถึงขึ้น 9 เพิ่ม Damage กายภาพ/เวทมนต์ที่ทำต่อมอนสเตอร์ขนาดกลาง, ใหญ่ 10%",
+            "",
+            "เมื่อสวมใส่โดย Awakened Sniper,",
+            "Critical Damage 10%, เพิ่มพลังโจมตีระยะไกล 5%, APSD +1",
+            "",
+            "เมื่อสวมใส่โดย Awakened Gypsy,",
+            "เมื่อโจมตีทางกายภาพมีโอกาส 15% ที่จะใช้งานสกิล Heaven’s Drive Lv.10 โดยอัตโนมัติ, MATK+ 5%, ASPD +1",
+            "",
+            "เมื่อสวมใส่โดย Awakened Clown,",
+            "เมื่อโจมตีทางกายภาพมีโอกาส 15% ที่จะใช้งานสกิล Shield Chain Lv.10 โดยอัตโนมัติ, ASPD +1, เพิ่มพลังโจมตีระยะไกล 5%",
+            "",
+            "เมื่อสวมใส่ร่วมกับ Ancient Gold Deco [1],",
+            "ลดระยะเวลาร่ายแบบคงที่ 0.3 วินาที",
+            "เพิ่ม Damage ทางกายภาพต่อมอนสเตอร์ทุกเผ่า +8%",
+            "",
+            "ประเภท : Accessory(Right) พลังป้องกัน : 0",
+            "น้ำหนัก : 10",
+            "เลเวลที่ต้องการ : 100",
+            "อาชีพที่ใส่ได้ : Awakened Archer Class"
+        ],
+        "slotCount": 1,
+        "ClassNum": 0,
+        "costume": false
+    }
+}

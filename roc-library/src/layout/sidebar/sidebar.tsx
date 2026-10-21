@@ -34,6 +34,13 @@ const fileTree: FileTreeItem[] = [
     href: "/muad",
   },
   {
+    id: "5thAnvs",
+    name: "5th Anniversary",
+    type: "file",
+    icon: "https://api.iconify.design/flowbite/gift-box-solid.svg?color=%23f4fb00",
+    href: "/5thAnvs",
+  },
+  {
     id: "features",
     name: "Features",
     type: "folder",

@@ -106,3 +106,55 @@ body {
     animation: roc-float 4s ease-in-out infinite;
   }
 }
+
+/* 5th Anniversary page: poster palette taken from the Item card gradient, kept the same in light and dark */
+.anvs {
+  --anv-orange: #fd6c01;
+  --anv-cream: #f0d29c;
+  --anv-ink: #3a1400;
+}
+
+/* Poster dots: static confetti on the hero, no motion */
+.anvs-dots {
+  background-image: radial-gradient(rgb(255 255 255 / 0.35) 2px, transparent 2.5px);
+  background-size: 28px 28px;
+}
+
+/* Hero: bright poster in light mode; deep brown with cream text in dark mode so the text keeps its contrast */
+.anvs-hero {
+  --anv-hero-fg: var(--anv-ink);
+  --anv-hero-solid: var(--anv-cream);
+  background-image: linear-gradient(135deg, var(--anv-orange), var(--anv-cream));
+  color: var(--anv-hero-fg);
+}
+
+[data-theme=roc-dark] .anvs-hero {
+  --anv-hero-fg: var(--anv-cream);
+  --anv-hero-solid: #2b1000;
+  background-image: linear-gradient(135deg, #2b1000, #8a3a00);
+}
+
+[data-theme=roc-dark] .anvs-dots {
+  background-image: radial-gradient(rgb(253 108 1 / 0.35) 2px, transparent 2.5px);
+}
+
+/* Giant "5" on the hero: strong enough to read as the anniversary mark, still behind the text */
+.anvs-five {
+  color: rgb(58 20 0 / 0.3);
+}
+
+[data-theme=roc-dark] .anvs-five {
+  color: rgb(253 108 1 / 0.5);
+}
+
+/* Switching server: the new rewards ease in instead of jumping */
+@keyframes anvs-fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .anvs-fade {
+    animation: anvs-fade-in 0.3s ease-out;
+  }
+}

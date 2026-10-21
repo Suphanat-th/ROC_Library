@@ -1,0 +1,67 @@
+import { useEffect, useState } from "react";
+import { PatchItemsDto } from "@/types/patch";
+import type {
+  AnniversaryRewardType,
+  AnniversaryServer,
+} from "@/types/anniversary";
+
+export const ANNIVERSARY_SERVERS: {
+  id: AnniversaryServer;
+  name: string;
+  /** folder name under /assets/images/anvs */
+  imageDir: string;
+}[] = [
+  { id: "baphomet", name: "Baphomet", imageDir: "baphomet" },
+  { id: "moonlight", name: "Moonlight", imageDir: "moonlight" },
+];
+
+export const REWARD_TYPES: { id: AnniversaryRewardType; name: string }[] = [
+  { id: "headGear", name: "Header Gear" },
+  { id: "accessory", name: "Accessory" },
+];
+
+/** Reads the "ประเภท : X" line of the item description: Headgear/Helm are Header Gear, anything else is Accessory. */
+export function rewardTypeOf(item: PatchItemsDto): AnniversaryRewardType {
+  const text = item.identifiedDescriptionName.join(" ");
+  const kind = /ประเภท : (\S+)/.exec(text)?.[1] ?? "";
+  return kind === "Headgear" || kind === "Helm" ? "headGear" : "accessory";
+}
+
+type RewardItems = Record<string, PatchItemsDto>;
+
+/**
+ * Loads the rewards of every server once, so switching server is instant
+ * (no loading state) and warms the browser cache with the pictures.
+ */
+export function useAnniversaryRewards(server: AnniversaryServer) {
+  const [all, setAll] = useState<Partial<Record<AnniversaryServer, RewardItems>>>({});
+  const [errors, setErrors] = useState<Partial<Record<AnniversaryServer, string>>>({});
+
+  useEffect(() => {
+    let cancelled = false;
+    for (const { id, imageDir } of ANNIVERSARY_SERVERS) {
+      fetch(`/assets/json/anvs_reward_${id}.json`)
+        .then((res) => {
+          if (!res.ok) throw new Error("Failed to load JSON");
+          return res.json();
+        })
+        .then((items: RewardItems) => {
+          if (cancelled) return;
+          setAll((prev) => ({ ...prev, [id]: items }));
+          for (const itemId of Object.keys(items)) {
+            new Image().src = `/assets/images/anvs/${imageDir}/${itemId}.bmp`;
+          }
+        })
+        .catch((err) => {
+          if (!cancelled) setErrors((prev) => ({ ...prev, [id]: err.message }));
+        });
+    }
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  const items = all[server];
+  const error = errors[server] ?? null;
+  return { items: items ?? {}, loading: !items && !error, error };
+}
