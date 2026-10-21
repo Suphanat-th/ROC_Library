@@ -140,6 +140,10 @@ _Avoid_: Prize (that is a Scroll's), loot, drop, Item Reward
 The kind of equipment an Anniversary reward is: Header Gear (headgear and helms) or Accessory (everything else). It is read from the item's own "ประเภท" line, and a type with no rewards is hidden.
 _Avoid_: Category, slot
 
+**Exchange notes**:
+The three things a player must know before exchanging for an Anniversary reward: it costs one [NFS] Gacha Ticket and 1,000,000 Zeny per exchange, and it is done at the NPC Dr.Time in Invaded Prontera (prt_q 139 182). They are the same for both servers and shown on the 5th Anniversary page above the server choice.
+_Avoid_: Requirements, instructions
+
 **Reward search**:
 The search box each Reward type has beside its title. It filters that type's Anniversary rewards while the player types, by part of the item name and ignoring upper/lower case, and shows how many matched out of the total. It is cleared when the player switches server.
 _Avoid_: Filter, global search

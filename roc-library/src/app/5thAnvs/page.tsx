@@ -10,6 +10,7 @@ import {
 } from "@/services/anniversary/anniversaryService";
 import type { AnniversaryServer } from "@/types/anniversary";
 import ItemCard from "../patch-convert/ItemCard";
+import ExchangeNotes from "./components/ExchangeNotes";
 import RewardSection from "./components/RewardSection";
 
 export default function FifthAnniversaryPage() {
@@ -45,6 +46,8 @@ export default function FifthAnniversaryPage() {
           <p className="text-lg font-semibold">ของรางวัลฉลองครบรอบ 5 ปี</p>
         </div>
       </header>
+
+      <ExchangeNotes />
 
       <div className="space-y-2">
         <p className="text-center text-sm font-bold text-base-content/70">
