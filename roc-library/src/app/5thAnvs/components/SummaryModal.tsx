@@ -42,51 +42,53 @@ export default function SummaryModal({
       onClick={onClose}
     >
       <div
-        className="anvs modal-box max-w-3xl space-y-4"
+        className="anvs modal-box flex h-[90vh] max-h-[90vh] w-[95vw] max-w-none flex-col gap-4 sm:w-[80vw]"
         onClick={(e) => e.stopPropagation()}
       >
-        <h2 id="summary-title" className="text-xl font-extrabold">
+        <h2 id="summary-title" className="shrink-0 text-xl font-extrabold">
           สรุปการแลก
         </h2>
 
-        {groups.length === 0 && (
-          <p className="rounded-box bg-base-200 p-4 text-center text-base-content/70">
-            ยังไม่ได้เลือกรางวัล
-          </p>
-        )}
+        <div className="min-h-0 flex-1 space-y-4 overflow-y-auto pr-1">
+          {groups.length === 0 && (
+            <p className="rounded-box bg-base-200 p-4 text-center text-base-content/70">
+              ยังไม่ได้เลือกรางวัล
+            </p>
+          )}
 
-        {groups.map(({ type, rows: groupRows, pieces }) => (
-          <section key={type.id} aria-label={type.name} className="space-y-2">
-            <h3 className="flex items-baseline justify-between border-b-2 border-(--anv-orange) pb-1 font-bold">
-              <span>{type.name}</span>
-              <span className="text-sm">รวม {fmt(pieces)} ชิ้น</span>
-            </h3>
-            <ul className="grid grid-cols-2 gap-3 md:grid-cols-3">
-              {groupRows.map(([id, qty]) => (
-                <li
-                  key={id}
-                  title={items[id].identifiedDisplayName}
-                  className="relative flex aspect-square items-center justify-center rounded-2xl bg-linear-to-br from-(--anv-orange) to-(--anv-cream) p-4 shadow"
-                >
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={imageSrc(id)}
-                    alt={items[id].identifiedDisplayName}
-                    className="h-28 w-28 object-contain drop-shadow-md"
-                    onError={(e) => {
-                      e.currentTarget.src = "/assets/images/GuildImage/dog.jpg";
-                    }}
-                  />
-                  <span className="absolute right-2 top-2 min-w-10 rounded-full bg-(--anv-ink) px-2 py-1 text-center text-sm font-black text-(--anv-cream)">
-                    ×{qty}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </section>
-        ))}
+          {groups.map(({ type, rows: groupRows, pieces }) => (
+            <section key={type.id} aria-label={type.name} className="space-y-2">
+              <h3 className="flex items-baseline justify-between border-b-2 border-(--anv-orange) pb-1 font-bold">
+                <span>{type.name}</span>
+                <span className="text-sm">รวม {fmt(pieces)} ชิ้น</span>
+              </h3>
+              <ul className="grid grid-cols-3 gap-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8">
+                {groupRows.map(([id, qty]) => (
+                  <li
+                    key={id}
+                    title={items[id].identifiedDisplayName}
+                    className="relative flex aspect-square items-center justify-center rounded-2xl bg-linear-to-br from-(--anv-orange) to-(--anv-cream) p-3 shadow"
+                  >
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={imageSrc(id)}
+                      alt={items[id].identifiedDisplayName}
+                      className="h-full w-full object-contain drop-shadow-md"
+                      onError={(e) => {
+                        e.currentTarget.src = "/assets/images/GuildImage/dog.jpg";
+                      }}
+                    />
+                    <span className="absolute right-1 top-1 min-w-8 rounded-full bg-(--anv-ink) px-1.5 py-0.5 text-center text-xs sm:text-sm font-black text-(--anv-cream)">
+                      ×{qty}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          ))}
+        </div>
 
-        <dl className="space-y-1 rounded-box bg-base-200 p-4">
+        <dl className="shrink-0 space-y-1 rounded-box bg-base-200 p-4">
           <div className="flex justify-between">
             <dt>รวมทั้งหมด</dt>
             <dd className="font-bold">{fmt(total)} ชิ้น</dd>
@@ -101,7 +103,7 @@ export default function SummaryModal({
           </div>
         </dl>
 
-        <div className="modal-action">
+        <div className="modal-action mt-0 shrink-0">
           {groups.length > 0 && (
             <button type="button" className="btn btn-ghost" onClick={onClear}>
               ล้างทั้งหมด
