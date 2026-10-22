@@ -27,6 +27,13 @@ export function rewardTypeOf(item: PatchItemsDto): AnniversaryRewardType {
   return kind === "Headgear" || kind === "Helm" ? "headGear" : "accessory";
 }
 
+/** Item name with its slot count, e.g. "[NFS] Heaven Cage [1]"; no suffix when it has no slot. */
+export function rewardLabel(item: PatchItemsDto): string {
+  return item.slotCount > 0
+    ? `${item.identifiedDisplayName} [${item.slotCount}]`
+    : item.identifiedDisplayName;
+}
+
 type RewardItems = Record<string, PatchItemsDto>;
 
 /**

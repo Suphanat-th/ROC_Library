@@ -116,6 +116,14 @@ _Avoid_: Total ATK, damage
 The shared view that shows one game map's terrain in 3D, which the player can rotate, tilt and zoom with mouse or fingers. Each map gets its own page that opens the same Map viewer. It can colour the ground by height or light, and can overlay which cells are walkable. It shows no objects such as trees or buildings yet.
 _Avoid_: Map page, 3D map
 
+**Hint map**:
+A Map viewer page that also carries a dungeon's guide under the map: how to enter, the route, the monsters and the rewards. Jittlebug is the first. Positions of doors, boss rooms and NPCs are not shown until they are recorded.
+_Avoid_: Dungeon page, guide page
+
+**Warp**:
+A way to move the player to another place, either in the same map or to another map: a portal the player walks onto, or an NPC the player talks to. It is recorded with where it stands, where it leads, and the NPC's name when it is an NPC.
+_Avoid_: Portal, teleport
+
 **GND**:
 The map's ground file, holding the terrain's shape, light and the names of its ground pictures. It names the pictures but does not contain them.
 _Avoid_: Ground map, terrain file

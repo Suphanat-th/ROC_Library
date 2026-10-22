@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { Search, X } from "lucide-react";
 import type { PatchItemsDto } from "@/types/patch";
+import { rewardLabel } from "@/services/anniversary/anniversaryService";
 
 interface RewardSectionProps {
   /** two-digit position on the poster, e.g. "01" */
@@ -89,7 +90,7 @@ export default function RewardSection({
                   />
                 </span>
                 <span className="text-sm font-bold leading-snug">
-                  {item.identifiedDisplayName}
+                  {rewardLabel(item)}
                 </span>
               </button>
             </li>

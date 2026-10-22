@@ -20,6 +20,9 @@ const MODES: { value: ColorMode; label: string }[] = [
   { value: "texture", label: "พื้นผิวจริง" },
 ];
 
+/** Ground pictures shared by every map; each map names its own under this folder. */
+const TEXTURE_BASE = "/assets/sprite_data/texture";
+
 async function fetchBuffer(url: string): Promise<ArrayBuffer> {
   const response = await fetch(url);
   if (!response.ok) throw new Error(`โหลดไฟล์ไม่สำเร็จ (${response.status})`);
@@ -50,7 +53,7 @@ export default function MapViewer({ folder, name, title }: MapViewerProps) {
           fetchBuffer(`${base}/${name}.gat`),
         ]);
         if (cancelled) return;
-        const scene = createMapScene(container, parseGnd(gndBuffer), parseGat(gatBuffer), `${base}/texture`);
+        const scene = createMapScene(container, parseGnd(gndBuffer), parseGat(gatBuffer), TEXTURE_BASE);
         sceneRef.current = scene;
         scene.setShowWalkable(true);
         scene.setShowEdges(true);
@@ -58,7 +61,13 @@ export default function MapViewer({ folder, name, title }: MapViewerProps) {
         observer.observe(container);
         setStatus("ready");
         scene.texturesLoaded.then((count) => {
-          if (!cancelled) setTextureCount(count);
+          if (cancelled) return;
+          setTextureCount(count);
+          // Show the real ground pictures as soon as there are some.
+          if (count > 0) {
+            setMode("texture");
+            scene.setMode("texture");
+          }
         });
       } catch (e) {
         if (cancelled) return;
