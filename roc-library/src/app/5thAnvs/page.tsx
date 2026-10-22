@@ -12,15 +12,34 @@ import type { AnniversaryServer } from "@/types/anniversary";
 import ItemCard from "../patch-convert/ItemCard";
 import ExchangeNotes from "./components/ExchangeNotes";
 import RewardSection from "./components/RewardSection";
+import SelectionSummary from "./components/SelectionSummary";
+import SummaryModal from "./components/SummaryModal";
 
 export default function FifthAnniversaryPage() {
   const [server, setServer] = useState<AnniversaryServer>("baphomet");
   const [openId, setOpenId] = useState<string | null>(null);
+  const [summaryOpen, setSummaryOpen] = useState(false);
+  const [picked, setPicked] = useState<ReadonlyMap<string, number>>(new Map());
   const { items, loading, error } = useAnniversaryRewards(server);
   const imageDir = ANNIVERSARY_SERVERS.find((s) => s.id === server)!.imageDir;
   const imageSrc = (id: string) => `/assets/images/anvs/${imageDir}/${id}.bmp`;
   const entries = Object.entries(items);
   const openItem = openId ? items[openId] : undefined;
+
+  const switchServer = (next: AnniversaryServer) => {
+    setServer(next);
+    setPicked(new Map());
+    setSummaryOpen(false);
+  };
+  const pick = (id: string, delta: 1 | -1) =>
+    setPicked((prev) => {
+      const next = new Map(prev);
+      const count = (prev.get(id) ?? 0) + delta;
+      if (count > 0) next.set(id, count);
+      else next.delete(id);
+      return next;
+    });
+  const pickedTotal = [...picked.values()].reduce((sum, n) => sum + n, 0);
 
   const groups = REWARD_TYPES.map((type) => ({
     type,
@@ -66,7 +85,7 @@ export default function FifthAnniversaryPage() {
                 type="button"
                 role="tab"
                 aria-selected={selected}
-                onClick={() => setServer(s.id)}
+                onClick={() => switchServer(s.id)}
                 className={`flex cursor-pointer items-center justify-center gap-2 rounded-full px-4 py-2.5 text-lg font-bold transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--anv-orange) ${
                   selected
                     ? "bg-(--anv-orange) text-(--anv-ink)"
@@ -102,10 +121,29 @@ export default function FifthAnniversaryPage() {
               title={type.name}
               rewards={rewards}
               imageSrc={imageSrc}
-              onSelect={setOpenId}
+              picked={picked}
+              onPick={pick}
+              onOpen={setOpenId}
             />
           ))}
         </div>
+      )}
+
+      <SelectionSummary
+        kinds={picked.size}
+        count={pickedTotal}
+        onOpen={() => setSummaryOpen(true)}
+        onClear={() => setPicked(new Map())}
+      />
+
+      {summaryOpen && (
+        <SummaryModal
+          items={items}
+          picked={picked}
+          imageSrc={imageSrc}
+          onClear={() => setPicked(new Map())}
+          onClose={() => setSummaryOpen(false)}
+        />
       )}
 
       {openId && openItem && (

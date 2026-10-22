@@ -152,6 +152,14 @@ _Avoid_: Category, slot
 The three things a player must know before exchanging for an Anniversary reward: it costs one [NFS] Gacha Ticket and 1,000,000 Zeny per exchange, and it is done at the NPC Dr.Time in Invaded Prontera (prt_q 139 182). They are the same for both servers and shown on the 5th Anniversary page above the server choice.
 _Avoid_: Requirements, instructions
 
+**Exchange cost**:
+What one exchange of an Anniversary reward costs: one [NFS] Gacha Ticket and 1,000,000 Zeny, the same for every reward. The player chooses which reward to exchange for; it is not random.
+_Avoid_: Price, gacha rate
+
+**Picked reward**:
+An Anniversary reward the player has added on the 5th Anniversary page to see what the whole set would cost. A reward can be picked more than once, each pick being one more exchange. A bar at the bottom of the screen shows the running total, and a Summary opens a window listing each picked reward with its count and the total Exchange cost. Picks are cleared when the player switches server, and nothing is bought or saved.
+_Avoid_: Cart, selection, order
+
 **Reward search**:
 The search box each Reward type has beside its title. It filters that type's Anniversary rewards while the player types, by part of the item name and ignoring upper/lower case, and shows how many matched out of the total. It is cleared when the player switches server.
 _Avoid_: Filter, global search

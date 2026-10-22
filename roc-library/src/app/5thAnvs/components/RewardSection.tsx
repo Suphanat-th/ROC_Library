@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Search, X } from "lucide-react";
 import type { PatchItemsDto } from "@/types/patch";
 import { rewardLabel } from "@/services/anniversary/anniversaryService";
+import QuantityStepper from "./QuantityStepper";
 
 interface RewardSectionProps {
   /** two-digit position on the poster, e.g. "01" */
@@ -11,7 +12,12 @@ interface RewardSectionProps {
   /** every reward of this Reward type: [item id, item] */
   rewards: [string, PatchItemsDto][];
   imageSrc: (id: string) => string;
-  onSelect: (id: string) => void;
+  /** how many times the player has picked each reward (absent = not picked) */
+  picked: ReadonlyMap<string, number>;
+  /** add (+1) or remove (-1) one pick of a reward */
+  onPick: (id: string, delta: 1 | -1) => void;
+  /** open the Item card of a reward */
+  onOpen: (id: string) => void;
 }
 
 /** One Reward type: its poster band, its own Reward search and the matching reward cards. */
@@ -20,7 +26,9 @@ export default function RewardSection({
   title,
   rewards,
   imageSrc,
-  onSelect,
+  picked,
+  onPick,
+  onOpen,
 }: RewardSectionProps) {
   const [query, setQuery] = useState("");
   const needle = query.trim().toLowerCase();
@@ -73,26 +81,38 @@ export default function RewardSection({
         <ul className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
           {shown.map(([id, item]) => (
             <li key={id}>
-              <button
-                type="button"
-                onClick={() => onSelect(id)}
-                className="group flex h-full w-full cursor-pointer flex-col items-center rounded-2xl border-2 border-transparent bg-base-100 text-center shadow transition-all hover:border-(--anv-orange) hover:shadow-lg focus-visible:border-(--anv-orange) focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--anv-orange) motion-safe:hover:-translate-y-1 gap-3 p-4"
+              <div
+                className={`flex h-full flex-col gap-3 rounded-2xl border-2 bg-base-100 p-4 shadow transition-all hover:shadow-lg ${
+                  picked.has(id) ? "border-(--anv-orange)" : "border-transparent"
+                }`}
               >
-                <span className="flex h-24 w-24 items-center justify-center rounded-xl bg-linear-to-br from-(--anv-orange) to-(--anv-cream)">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={imageSrc(id)}
-                    alt=""
-                    className="h-16 w-16 object-contain drop-shadow"
-                    onError={(e) => {
-                      e.currentTarget.src = "/assets/images/GuildImage/dog.jpg";
-                    }}
-                  />
-                </span>
-                <span className="text-sm font-bold leading-snug">
-                  {rewardLabel(item)}
-                </span>
-              </button>
+                <button
+                  type="button"
+                  onClick={() => onOpen(id)}
+                  aria-label={`ดูรายละเอียด ${item.identifiedDisplayName}`}
+                  className="flex flex-1 cursor-pointer flex-col items-center gap-3 rounded-xl text-center focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--anv-orange)"
+                >
+                  <span className="flex h-24 w-24 items-center justify-center rounded-xl bg-linear-to-br from-(--anv-orange) to-(--anv-cream)">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={imageSrc(id)}
+                      alt=""
+                      className="h-16 w-16 object-contain drop-shadow"
+                      onError={(e) => {
+                        e.currentTarget.src = "/assets/images/GuildImage/dog.jpg";
+                      }}
+                    />
+                  </span>
+                  <span className="text-sm font-bold leading-snug">
+                    {rewardLabel(item)}
+                  </span>
+                </button>
+                <QuantityStepper
+                  name={item.identifiedDisplayName}
+                  quantity={picked.get(id) ?? 0}
+                  onChange={(d) => onPick(id, d)}
+                />
+              </div>
             </li>
           ))}
         </ul>

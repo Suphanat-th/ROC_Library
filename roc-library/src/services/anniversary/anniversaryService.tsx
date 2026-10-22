@@ -15,6 +15,9 @@ export const ANNIVERSARY_SERVERS: {
   { id: "moonlight", name: "Moonlight", imageDir: "moonlight" },
 ];
 
+/** What one exchange costs, the same for every Anniversary reward. */
+export const EXCHANGE_COST = { gachaTickets: 1, zeny: 1_000_000 };
+
 export const REWARD_TYPES: { id: AnniversaryRewardType; name: string }[] = [
   { id: "headGear", name: "Header Gear" },
   { id: "accessory", name: "Accessory" },
