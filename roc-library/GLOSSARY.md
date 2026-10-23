@@ -113,7 +113,7 @@ The attack power after the Weapon ATK, Equip ATK, Status ATK, Mastery ATK and al
 _Avoid_: Total ATK, damage
 
 **Map viewer**:
-The shared view that shows one game map's terrain in 3D, which the player can rotate, tilt and zoom with mouse or fingers. Each map gets its own page that opens the same Map viewer. It can colour the ground by height or light, and can overlay which cells are walkable. It shows no objects such as trees or buildings yet.
+The shared view that shows one game map's terrain in 3D, which the player can rotate, tilt and zoom with mouse or fingers. Each map gets its own page that opens the same Map viewer. It can colour the ground by height or light, and can overlay which cells are walkable. It shows the ground and the still objects placed on it, such as buildings, walls and trees, in the real-surface mode; the black map shows the ground only. It is lit the way the map's file says (colour and direction of the light), so a night map looks dark; a switch brings back an even bright light. Water, effects, sounds and animation are not shown.
 _Avoid_: Map page, 3D map
 
 **Hint map**:
@@ -139,6 +139,50 @@ _Avoid_: Gacha, case, box
 **Prize**:
 One in-game item that a Scroll can give, with its name, picture, quantity per draw, Tier and drop rate in %. The rates of a Scroll's Prizes add up to 100%.
 _Avoid_: Reward, loot, drop
+
+**5th Anniversary page**:
+The Tool that presents the 5th Anniversary event on a main page of three numbered sections (the Chapter map, the Recurring quests, and a way into the Rewards page) plus a separate Rewards page with a link back. It follows the project's orange-and-cream poster look in both Theme modes, and animates only when the player has not asked for reduced motion.
+_Avoid_: Landing page, event page
+
+**Hero**:
+The poster-style top block of the 5th Anniversary page: the event title, links to each section, and the Floating art.
+_Avoid_: Banner, header (alone)
+
+**Floating art**:
+The decorative pictures (balloon, gift, ticket, coin, star, streamer, party hat, clouds) composed in one picture beside the Hero's title, floating and shifting as the page scrolls. They are the site's own drawings and carry no information. The same drawings also mark the cost and place in the Exchange notes and the Quest cards.
+_Avoid_: Stickers, sprites
+
+**Rewards page**:
+The separate page of the 5th Anniversary Tool, at its own address, where the player exchanges for Anniversary rewards: server choice, Exchange notes, the rewards by Reward type, Picked rewards and their summary. The main page reaches it through a big Rewards card, and the page links back to the main page at its top and its bottom.
+_Avoid_: Shop page, store
+
+**Chapter map**:
+The start of the 5th Anniversary page: one drawn continent split into six regions that share their borders, one per town, in two rows: I II III over IV V VI. Each region has its own colour and emblem (or a "?" while its Chapter is hidden). Pointing at a region (or tapping or focusing it) lifts it and opens its Chapter; clicking it opens the Chapter quest in a window. The Hero and the older Event info sections are kept aside to return later. It is different from the Map viewer, which shows a game map in 3D.
+_Avoid_: World map, Map viewer
+
+**Location window**:
+The window a player gets by pressing a map coordinate such as prt_q 156 188: the game map in 3D with a pin and a pulsing ring on that spot, the camera flown over it. It shows no walkable overlay. If the map's files are not on the site yet, it says so and gives the coordinate in words.
+_Avoid_: Map popup, minimap
+
+**Chapter quest**:
+The quest of one Chapter, as the game words it: what kind of quest it is (kill, collect, answer questions, find boxes), its Quest tasks, and where it ends. Chapter VI lists the six coordinates of its boxes. The game's own title of a Chapter quest can differ from the story title shown on the map.
+_Avoid_: Mission, chapter task
+
+**Quest task**:
+One thing a quest asks the player to do: kill a monster, collect an item, answer questions, or find a place, with how many and, for items, which monster drops it.
+_Avoid_: Objective, step
+
+**Recurring quests**:
+The Daily and Weekly quests of the event side by side, and the World quest on its own row below, all under the Chapter map. Daily quests must be reported again after one day. The World quest is two linked quests, Dragon Cataclysm (a personal hunt of Hydrolancer, one per four days) and the World Event (the turn-ins of the whole server add up, and a target met rewards every player).
+_Avoid_: Side quests
+
+**Chapter**:
+One of the six story parts of the 5th Anniversary event, one per town, numbered I to VI. Each has an English name, a Thai name, a short passage and a closing line. A Chapter whose picture is not revealed yet shows a "?" box.
+_Avoid_: Stage, episode, Quest
+
+**Event info section**:
+A titled block of the 5th Anniversary page that explains one part of the event. The Chapters of the six towns (Izlude, Payon, Alberta, Geffen, Morroc, Prontera) are stops along a zigzag path, one card each; the Daily, Weekly and World Quests are three big coloured cards. They show "collecting data" until the content is entered.
+_Avoid_: Panel, tab
 
 **Anniversary reward**:
 One in-game item given for the 5th Anniversary event. Each server (Baphomet, Moonlight) has its own set, shown on its own tab of the 5th Anniversary page, grouped by Reward type. Its name, picture and Item card come from that server's reward data. Thai: ของรางวัลฉลองครบรอบ.

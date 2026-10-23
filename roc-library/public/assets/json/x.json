@@ -1,0 +1,104 @@
+{
+    "25254": {
+        "unidentifiedDisplayName": "Firewood",
+        "unidentifiedResourceName": "튼튼한나무가지",
+        "unidentifiedDescriptionName": [
+            "ไอเทมนี้ไม่สามารถแลกเปลี่ยนกับไอดีอื่นได้",
+            "กิ่งต้นไม้แห้ง ถ้าหากจุดไฟจะเผาไหม้ได้ดี",
+            "จะถูกลบออกเมื่อสิ้นสุดระยะเวลากิจกรรม (7 กรกฏาคม 2565)",
+            "น้ำหนัก : 0"
+        ],
+        "identifiedDisplayName": "Firewood",
+        "identifiedResourceName": "튼튼한나무가지",
+        "identifiedDescriptionName": [
+            "^ff0000ไอเทมนี้ไม่สามารถแลกเปลี่ยนกับไอดีอื่นได้",
+            "กิ่งต้นไม้แห้ง ถ้าหากจุดไฟจะเผาไหม้ได้ดี",
+            "จะถูกลบออกเมื่อสิ้นสุดระยะเวลากิจกรรม (7 กรกฏาคม 2565)",
+            "น้ำหนัก : 0"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0
+    },
+    "6553": {
+        "unidentifiedDisplayName": "Leaf Made Wood",
+        "unidentifiedResourceName": "아놀리안피부",
+        "unidentifiedDescriptionName": [
+            "^ff0000ไม่สามารถแลกเปลี่ยนได้",
+            "ชิ้นส่วนขนาดใหญ่ของสะพานที่ประกอบไปด้วยใบไม้จำนวนมากเข้าด้วยกัน ใช้เวลาในการทำนานมาก",
+            "น้ำหนัก : 0"
+        ],
+        "identifiedDisplayName": "Leaf Made Wood",
+        "identifiedResourceName": "아놀리안피부",
+        "identifiedDescriptionName": [
+            "^ff0000ไม่สามารถแลกเปลี่ยนได้",
+            "ชิ้นส่วนขนาดใหญ่ของสะพานที่ประกอบไปด้วยใบไม้จำนวนมากเข้าด้วยกัน ใช้เวลาในการทำนานมาก",
+            "น้ำหนัก : 0"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0
+    },
+    "6466": {
+        "unidentifiedDisplayName": "Clean Water",
+        "unidentifiedResourceName": "마법의호리병",
+        "unidentifiedDescriptionName": [
+            "^ff0000ไม่สามารถแลกเปลี่ยนได้",
+            "น้ำสะอาดที่เหมาะแก่การนำมาใช้",
+            "(ไอเทมดังกล่าวจะถูกลบทิ้งเมื่อสิ้นสุดระยะเวลากิจกรรม )",
+            "น้ำหนัก : 0"
+        ],
+        "identifiedDisplayName": "Clean Water",
+        "identifiedResourceName": "마법의호리병",
+        "identifiedDescriptionName": [
+            "^ff0000ไม่สามารถแลกเปลี่ยนได้",
+            "น้ำสะอาดที่เหมาะแก่การนำมาใช้",
+            "(ไอเทมดังกล่าวจะถูกลบทิ้งเมื่อสิ้นสุดระยะเวลากิจกรรม )",
+            "น้ำหนัก : 0"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0
+    },
+    "105675": {
+        "unidentifiedDisplayName": "Shadow Stone",
+        "unidentifiedResourceName": "Poison_Stone_4th",
+        "unidentifiedDescriptionName": [
+            "^ff0000ไอเท็มนี้ไม่สามารถแลกเปลี่ยนและไม่สามารถฝากคลังได้!",
+            "หินที่เต็มไปด้วยพลังของความของมืด",
+            "",
+            "^ff0000(ไอเทมนี้จะถูกลบออกหลังจบกิจกรรม)"
+        ],
+        "identifiedDisplayName": "Shadow Stone",
+        "identifiedResourceName": "Poison_Stone_4th",
+        "identifiedDescriptionName": [
+            "^ff0000ไอเท็มนี้ไม่สามารถแลกเปลี่ยนและไม่สามารถฝากคลังได้!",
+            "หินที่เต็มไปด้วยพลังของความของมืด",
+            "",
+            "^ff0000(ไอเทมนี้จะถูกลบออกหลังจบกิจกรรม)",
+            "น้ำหนัก : 0"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
+    "105676": {
+        "unidentifiedDisplayName": "Flame Stone",
+        "unidentifiedResourceName": "Flame_Stone_4th",
+        "unidentifiedDescriptionName": [
+            "^ff0000ไอเท็มนี้ไม่สามารถแลกเปลี่ยนและไม่สามารถฝากคลังได้!",
+            "หินที่เต็มไปด้วยพลังของเปลวเพลิง",
+            "",
+            "^ff0000(ไอเทมนี้จะถูกลบออกหลังจบกิจกรรม)"
+        ],
+        "identifiedDisplayName": "Flame Stone",
+        "identifiedResourceName": "Flame_Stone_4th",
+        "identifiedDescriptionName": [
+            "^ff0000ไอเท็มนี้ไม่สามารถแลกเปลี่ยนและไม่สามารถฝากคลังได้!",
+            "หินที่เต็มไปด้วยพลังของเปลวเพลิง",
+            "",
+            "^ff0000(ไอเทมนี้จะถูกลบออกหลังจบกิจกรรม)",
+            "น้ำหนัก : 0"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    }
+}

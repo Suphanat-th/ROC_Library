@@ -9,6 +9,8 @@ interface SelectionSummaryProps {
   onClear: () => void;
 }
 
+const ART = "/assets/images/anvs/landing";
+
 /** Bar pinned to the bottom of the screen: the running total, and the way into the full summary. */
 export default function SelectionSummary({ kinds, count, onOpen, onClear }: SelectionSummaryProps) {
   if (count === 0) return null;
@@ -24,10 +26,14 @@ export default function SelectionSummary({ kinds, count, onOpen, onClear }: Sele
         เลือก {kinds} รายการ ({count} ชิ้น)
       </p>
       <p className="flex flex-wrap items-center gap-2">
-        <span className="rounded-full bg-info px-4 py-1.5 text-lg font-black text-info-content">
+        <span className="flex items-center gap-2 rounded-full bg-info py-1 pl-2 pr-4 text-lg font-black text-info-content">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={`${ART}/ticket.svg`} alt="" aria-hidden className="h-7 w-7" />
           Ticket ×{tickets.toLocaleString("en-US")}
         </span>
-        <span className="rounded-full bg-warning px-4 py-1.5 text-lg font-black text-warning-content">
+        <span className="flex items-center gap-2 rounded-full bg-warning py-1 pl-2 pr-4 text-lg font-black text-warning-content">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={`${ART}/coin.svg`} alt="" aria-hidden className="h-7 w-7" />
           {zeny.toLocaleString("en-US")} Zeny
         </span>
       </p>

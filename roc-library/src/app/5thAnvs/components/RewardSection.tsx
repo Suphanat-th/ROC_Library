@@ -47,7 +47,7 @@ export default function RewardSection({
         >
           {index}
         </span>
-        <h2 className="text-xl font-extrabold">{title}</h2>
+        <h3 className="text-xl font-extrabold">{title}</h3>
         <span className="rounded-full bg-(--anv-orange) px-3 py-0.5 text-sm font-bold text-(--anv-ink)">
           {needle ? `${shown.length} / ${rewards.length}` : rewards.length}
         </span>

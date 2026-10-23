@@ -25,10 +25,14 @@ const LIGHTMAP_BYTES = 256;
 const SURFACE_BYTES = 40;
 const CELL_BYTES = 28;
 
+// File names inside the game's files are Korean (CP949), e.g. the ground pictures in "필드바닥";
+// read as latin1 they turn into garbage and the pictures are never found.
+const nameDecoder = new TextDecoder("euc-kr");
+
 function readName(bytes: Uint8Array): string {
   let end = bytes.indexOf(0);
   if (end < 0) end = bytes.length;
-  return new TextDecoder("latin1").decode(bytes.subarray(0, end));
+  return nameDecoder.decode(bytes.subarray(0, end));
 }
 
 export function parseGnd(buffer: ArrayBuffer): GndData {

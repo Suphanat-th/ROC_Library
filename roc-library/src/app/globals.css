@@ -158,3 +158,157 @@ body {
     animation: anvs-fade-in 0.3s ease-out;
   }
 }
+
+/* Hero: sunburst behind the pictures, and the big "5" of the title */
+.anvs-rays {
+  position: absolute;
+  top: 50%;
+  right: -34rem;
+  width: 90rem;
+  height: 90rem;
+  margin-top: -45rem;
+  border-radius: 9999px;
+  background: repeating-conic-gradient(rgb(255 255 255 / 0.25) 0 8deg, transparent 8deg 16deg);
+  mask-image: radial-gradient(circle, #000 0, transparent 62%);
+  pointer-events: none;
+}
+
+[data-theme=roc-dark] .anvs-rays {
+  background: repeating-conic-gradient(rgb(253 108 1 / 0.22) 0 8deg, transparent 8deg 16deg);
+}
+
+@keyframes anvs-spin {
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .anvs-rays {
+    animation: anvs-spin 120s linear infinite;
+  }
+}
+
+.anvs-glyph {
+  color: var(--anv-cream);
+  -webkit-text-stroke: 3px var(--anv-ink);
+  paint-order: stroke fill;
+  text-shadow: 6px 6px 0 var(--anv-ink);
+}
+
+[data-theme=roc-dark] .anvs-glyph {
+  color: var(--anv-orange);
+  -webkit-text-stroke-color: #2b1000;
+  text-shadow: 6px 6px 0 #2b1000;
+}
+
+/* Chapter map: deep-blue sea, lands that lift when pointed at */
+.anvs-sea {
+  background: radial-gradient(circle at 50% 40%, #3b6f93, #1f4560);
+}
+
+[data-theme=roc-dark] .anvs-sea {
+  background: radial-gradient(circle at 50% 40%, #1a3550, #0b1824);
+}
+
+.anvs-land {
+  cursor: pointer;
+  outline: none;
+}
+
+.anvs-land .top,
+.anvs-land .shadow {
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.anvs-land:hover .top,
+.anvs-land:focus-visible .top,
+.anvs-land[data-active="true"] .top {
+  transform: translateY(-16px);
+}
+
+.anvs-land:hover .shadow,
+.anvs-land:focus-visible .shadow,
+.anvs-land[data-active="true"] .shadow {
+  opacity: 0.4;
+  transform: translateY(14px) scale(1.05);
+}
+
+.anvs-land:hover .rim,
+.anvs-land:focus-visible .rim,
+.anvs-land[data-active="true"] .rim {
+  stroke: #fff;
+}
+
+@keyframes anvs-pop {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes anvs-card-pop {
+  from { opacity: 0; transform: translateY(8px) scale(0.96); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes anvs-drift {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(28px); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .anvs-pop {
+    animation: anvs-pop 0.5s ease-out backwards;
+  }
+
+  .anvs-card-pop {
+    animation: anvs-card-pop 0.2s ease-out;
+  }
+
+  .anvs-drift {
+    animation: anvs-drift 12s ease-in-out infinite;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .anvs-land .top,
+  .anvs-land .shadow {
+    transition: none;
+  }
+}
+
+/* Props around the page title bob gently */
+@keyframes anvs-bob {
+  0%, 100% { transform: translateY(0) rotate(-3deg); }
+  50% { transform: translateY(-10px) rotate(3deg); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .anvs-bob {
+    animation: anvs-bob 4.5s ease-in-out infinite;
+  }
+}
+
+/* From lg up a popup covers the hovered region's own label, so the label steps aside */
+@media (min-width: 1024px) {
+  .anvs-land[data-active="true"] .label {
+    opacity: 0;
+  }
+}
+
+/* A region's colour as text: darker on the light card, lighter on the dark card */
+.anvs-tone {
+  color: color-mix(in srgb, var(--region) 55%, black);
+}
+
+[data-theme=roc-dark] .anvs-tone {
+  color: color-mix(in srgb, var(--region) 60%, white);
+}
+
+/* An orange link that stays readable on the light and the dark card */
+.anvs-link {
+  color: color-mix(in srgb, #fd6c01 60%, black);
+}
+
+[data-theme=roc-dark] .anvs-link {
+  color: color-mix(in srgb, #fd6c01 65%, white);
+}
