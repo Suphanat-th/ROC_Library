@@ -20,7 +20,7 @@ export default function ChapterPopup({
       style={{ borderColor: color }}
     >
       <h3
-        className="anvs-tone text-sm font-black uppercase tracking-widest"
+        className="anvs-tone text-base font-black tracking-wide"
         style={{ "--region": color } as React.CSSProperties}
       >
         {entry.numeral} · {entry.title}

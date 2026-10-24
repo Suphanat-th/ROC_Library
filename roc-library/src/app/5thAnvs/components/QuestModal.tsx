@@ -96,7 +96,7 @@ export default function QuestModal({
             {entry.numeral}
           </span>
           <div className="min-w-0 flex-1 space-y-1">
-            <p className="text-sm font-black uppercase tracking-widest text-(--anv-orange)">
+            <p className="text-base font-black tracking-wide text-(--anv-orange)">
               {quest.town} · {quest.kind}
             </p>
             <h2 id="quest-title" className="text-lg font-black leading-snug">

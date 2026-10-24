@@ -219,11 +219,11 @@ function RegionShape({
           {active && (
             // the name turns into a cream tag with the region's own colour, darkened, so it stands out
             <rect
-              x={cx - (town.length * 21 + 40) / 2}
-              y={cy + 38}
-              width={town.length * 21 + 40}
-              height={42}
-              rx={21}
+              x={cx - (town.length * 19 + 44) / 2}
+              y={cy + 36}
+              width={town.length * 19 + 44}
+              height={46}
+              rx={23}
               fill="#fff6e5"
               stroke="var(--anv-ink)"
               strokeWidth={5}
@@ -233,17 +233,32 @@ function RegionShape({
             x={cx}
             y={cy + 70}
             textAnchor="middle"
-            fontSize={28}
+            fontSize={36}
             fontWeight={900}
-            letterSpacing={3}
+            letterSpacing={1}
             fill={active ? `color-mix(in srgb, ${color} 55%, black)` : "#fff"}
             stroke={active ? "none" : "var(--anv-ink)"}
             strokeWidth={7}
             paintOrder="stroke"
           >
-            {town.toUpperCase()}
+            {town}
           </text>
         </g>
+        {/* On a phone the full name will not fit, so only its first three letters show: "Izl", "Pay"... */}
+        <text
+          className="sm:hidden"
+          x={cx}
+          y={cy + 62}
+          textAnchor="middle"
+          fontSize={46}
+          fontWeight={900}
+          fill="#fff"
+          stroke="var(--anv-ink)"
+          strokeWidth={10}
+          paintOrder="stroke"
+        >
+          {town.slice(0, 3)}
+        </text>
         </g>
       </g>
     </g>

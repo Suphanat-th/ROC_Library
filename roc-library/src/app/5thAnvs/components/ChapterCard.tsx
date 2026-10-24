@@ -24,7 +24,7 @@ export default function ChapterCard({
         />
       </span>
       <div className="min-w-0 space-y-1.5">
-        <h3 className="text-sm font-black uppercase tracking-widest text-(--anv-orange)">
+        <h3 className="text-base font-black tracking-wide text-(--anv-orange)">
           {entry.title}
         </h3>
         {entry.subtitle && (
