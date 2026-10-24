@@ -17,8 +17,10 @@ interface MapViewerProps {
    * viewer fills the height it is given.
    */
   embedded?: boolean;
-  /** A cell of the map (the x and y the game shows) to pin and fly the camera to. */
-  marker?: { x: number; y: number };
+  /** Cells of the map (the x and y the game shows) to pin. Keep the array the same between renders. */
+  markers?: { x: number; y: number }[];
+  /** Which pin the camera flies to; left out, the camera takes them all in. */
+  focusIndex?: number;
   /** Shown instead of the error text when the map's files cannot be loaded. */
   errorContent?: ReactNode;
 }
@@ -46,12 +48,13 @@ export default function MapViewer({
   name,
   title,
   embedded = false,
-  marker,
+  markers,
+  focusIndex,
   errorContent,
 }: MapViewerProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const sceneRef = useRef<MapScene | null>(null);
-  const markerRef = useRef(marker);
+  const markersRef = useRef({ markers, focusIndex });
   const [status, setStatus] = useState<Status>("loading");
   const [error, setError] = useState("");
   const [mode, setMode] = useState<ColorMode>("map");
@@ -64,9 +67,9 @@ export default function MapViewer({
   const [objectCount, setObjectCount] = useState<number | null>(null);
 
   useEffect(() => {
-    markerRef.current = marker;
-    sceneRef.current?.setMarker(marker ?? null);
-  }, [marker]);
+    markersRef.current = { markers, focusIndex };
+    sceneRef.current?.setMarkers(markers ?? [], focusIndex);
+  }, [markers, focusIndex]);
 
   useEffect(() => {
     const container = containerRef.current;
@@ -94,7 +97,7 @@ export default function MapViewer({
         sceneRef.current = scene;
         scene.setShowWalkable(!embedded);
         scene.setShowEdges(true);
-        if (markerRef.current) scene.setMarker(markerRef.current);
+        if (markersRef.current.markers) scene.setMarkers(markersRef.current.markers, markersRef.current.focusIndex);
         observer = new ResizeObserver(() => scene.resize());
         observer.observe(container);
         setHasMapLight(scene.hasMapLight);

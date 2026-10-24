@@ -11,8 +11,11 @@ export interface MapScene {
   setMode: (mode: ColorMode) => void;
   setShowWalkable: (show: boolean) => void;
   setShowEdges: (show: boolean) => void;
-  /** Pins a cell of the GAT grid (the x and y the game shows) and flies the camera to it; null removes the pin. */
-  setMarker: (cell: { x: number; y: number } | null) => void;
+  /**
+   * Pins cells of the GAT grid (the x and y the game shows). With several, each pin carries its
+   * number. The camera flies to the cell at `focus`, or fits them all when `focus` is left out.
+   */
+  setMarkers: (cells: { x: number; y: number }[], focus?: number) => void;
   resize: () => void;
   /** Resolves with how many ground pictures were found next to the map files. */
   texturesLoaded: Promise<number>;
@@ -309,87 +312,154 @@ export function createMapScene(
     return count;
   });
 
-  // Location marker: a pin over one GAT cell with a pulsing ring around its foot.
-  let marker: THREE.Group | null = null;
-  let ring: THREE.Mesh | null = null;
-  let pin: THREE.Group | null = null;
+  // Location markers: a pin over each GAT cell with a pulsing ring around its foot. When there
+  // are several, every pin carries its number.
+  let markers: THREE.Group | null = null;
+  const rings: THREE.Mesh[] = [];
+  const pins: THREE.Group[] = [];
   let frame = 0;
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const markerScale = Math.max(1, mapWidth / 600);
 
-  const clearMarker = () => {
+  const clearMarkers = () => {
     cancelAnimationFrame(frame);
-    if (!marker) return;
-    scene.remove(marker);
-    marker.traverse((object) => {
+    if (!markers) return;
+    scene.remove(markers);
+    markers.traverse((object) => {
       if (object instanceof THREE.Mesh) {
         object.geometry.dispose();
         (object.material as THREE.Material).dispose();
+      } else if (object instanceof THREE.Sprite) {
+        object.material.map?.dispose();
+        object.material.dispose();
       }
     });
-    marker = null;
-    ring = null;
-    pin = null;
+    markers = null;
+    rings.length = 0;
+    pins.length = 0;
   };
 
   const tick = (time: number) => {
-    if (disposed || !ring || !pin) return;
+    if (disposed || !rings.length) return;
     const t = (time % 1600) / 1600;
-    ring.scale.setScalar(1 + t * 1.6);
-    (ring.material as THREE.MeshBasicMaterial).opacity = 0.9 * (1 - t);
-    pin.position.y = Math.sin(time / 300) * 1.5 * markerScale;
+    for (const ring of rings) {
+      ring.scale.setScalar(1 + t * 1.6);
+      (ring.material as THREE.MeshBasicMaterial).opacity = 0.9 * (1 - t);
+    }
+    pins.forEach((pin, i) => {
+      pin.position.y = Math.sin(time / 300 + i) * 1.5 * markerScale;
+    });
     render();
     frame = requestAnimationFrame(tick);
   };
 
-  const setMarker = (cell: { x: number; y: number } | null) => {
-    clearMarker();
-    if (!cell || cell.x < 0 || cell.y < 0 || cell.x >= gat.width || cell.y >= gat.height) {
-      render();
-      return;
+  /** A round orange badge with a number, drawn once on a small canvas. */
+  const numberBadge = (n: number, scale: number) => {
+    const canvas = document.createElement("canvas");
+    canvas.width = 128;
+    canvas.height = 128;
+    const ctx = canvas.getContext("2d");
+    if (ctx) {
+      ctx.fillStyle = "#fd6c01";
+      ctx.strokeStyle = "#ffffff";
+      ctx.lineWidth = 10;
+      ctx.beginPath();
+      ctx.arc(64, 64, 54, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.stroke();
+      ctx.fillStyle = "#ffffff";
+      ctx.font = "900 72px sans-serif";
+      ctx.textAlign = "center";
+      ctx.textBaseline = "middle";
+      ctx.fillText(String(n), 64, 70);
     }
+    const sprite = new THREE.Sprite(
+      new THREE.SpriteMaterial({ map: new THREE.CanvasTexture(canvas), depthTest: false, transparent: true }),
+    );
+    sprite.scale.set(16 * scale, 16 * scale, 1);
+    sprite.position.y = 24 * scale;
+    sprite.renderOrder = 6;
+    return sprite;
+  };
+
+  /** Where a cell is in the scene, or null when the cell is off the map. */
+  const cellPoint = (cell: { x: number; y: number }): THREE.Vector3 | null => {
+    if (cell.x < 0 || cell.y < 0 || cell.x >= gat.width || cell.y >= gat.height) return null;
     const size = gnd.zoom / 2;
     const i = cell.x + cell.y * gat.width;
     const ground = -(gat.cellHeights[i * 4] + gat.cellHeights[i * 4 + 1] + gat.cellHeights[i * 4 + 2] + gat.cellHeights[i * 4 + 3]) / 4;
-    const x = (cell.x + 0.5) * size;
-    const z = -(cell.y + 0.5) * size;
+    return new THREE.Vector3((cell.x + 0.5) * size, ground, -(cell.y + 0.5) * size);
+  };
 
-    const s = markerScale;
+  const setMarkers = (cells: { x: number; y: number }[], focus?: number) => {
+    clearMarkers();
+    const points = cells.map(cellPoint);
+    const placed = points.flatMap((point, index) => (point ? [{ point, index }] : []));
+    if (!placed.length) {
+      render();
+      return;
+    }
+
+    // with many pins the camera stands further back, so they are drawn bigger to stay readable
+    const s = markerScale * (cells.length > 1 ? 1.8 : 1);
     const orange = 0xfd6c01;
-    const solid = new THREE.MeshBasicMaterial({ color: orange, depthTest: false });
-    marker = new THREE.Group();
-    marker.position.set(x, ground, z);
+    markers = new THREE.Group();
+    scene.add(markers);
+    for (const { point, index } of placed) {
+      const solid = new THREE.MeshBasicMaterial({ color: orange, depthTest: false });
+      const marker = new THREE.Group();
+      marker.position.copy(point);
 
-    ring = new THREE.Mesh(
-      new THREE.RingGeometry(5 * s, 7 * s, 48).rotateX(-Math.PI / 2),
-      new THREE.MeshBasicMaterial({ color: orange, transparent: true, opacity: 0.9, side: THREE.DoubleSide, depthTest: false }),
-    );
-    ring.position.y = 0.6;
-    ring.renderOrder = 3;
+      const ring = new THREE.Mesh(
+        new THREE.RingGeometry(5 * s, 7 * s, 48).rotateX(-Math.PI / 2),
+        new THREE.MeshBasicMaterial({ color: orange, transparent: true, opacity: 0.9, side: THREE.DoubleSide, depthTest: false }),
+      );
+      ring.position.y = 0.6;
+      ring.renderOrder = 3;
 
-    pin = new THREE.Group();
-    const cone = new THREE.Mesh(new THREE.ConeGeometry(3 * s, 9 * s, 24).rotateX(Math.PI), solid);
-    cone.position.y = 4.5 * s;
-    const ball = new THREE.Mesh(new THREE.SphereGeometry(4.2 * s, 24, 16), solid);
-    ball.position.y = 11 * s;
-    const dot = new THREE.Mesh(new THREE.SphereGeometry(1.6 * s, 16, 12), new THREE.MeshBasicMaterial({ color: 0xffffff, depthTest: false }));
-    dot.position.y = 11 * s;
-    dot.position.z = 3 * s;
-    for (const part of [cone, ball, dot]) part.renderOrder = 4;
-    pin.add(cone, ball, dot);
+      const pin = new THREE.Group();
+      const cone = new THREE.Mesh(new THREE.ConeGeometry(3 * s, 9 * s, 24).rotateX(Math.PI), solid);
+      cone.position.y = 4.5 * s;
+      const ball = new THREE.Mesh(new THREE.SphereGeometry(4.2 * s, 24, 16), solid);
+      ball.position.y = 11 * s;
+      const dot = new THREE.Mesh(new THREE.SphereGeometry(1.6 * s, 16, 12), new THREE.MeshBasicMaterial({ color: 0xffffff, depthTest: false }));
+      dot.position.y = 11 * s;
+      dot.position.z = 3 * s;
+      for (const part of [cone, ball, dot]) part.renderOrder = 4;
+      pin.add(cone, ball, dot);
+      if (cells.length > 1) pin.add(numberBadge(index + 1, s));
 
-    marker.add(ring, pin);
-    scene.add(marker);
+      marker.add(ring, pin);
+      markers.add(marker);
+      rings.push(ring);
+      pins.push(pin);
+    }
 
-    // Fly the camera over the spot, high enough to see the neighbourhood around it.
-    const distance = Math.max(120, mapWidth * 0.2);
-    controls.target.set(x, ground, z);
-    camera.position.set(x, ground + distance, z + distance * 0.45);
+    // Fly the camera to the pin in focus, or high enough to take them all in.
+    const focused = focus !== undefined ? points[focus] : null;
+    let target: THREE.Vector3;
+    let distance: number;
+    if (focused) {
+      target = focused;
+      distance = Math.max(120, mapWidth * 0.2);
+    } else if (placed.length === 1) {
+      target = placed[0].point;
+      distance = Math.max(120, mapWidth * 0.2);
+    } else {
+      const box = new THREE.Box3().setFromPoints(placed.map((p) => p.point));
+      target = box.getCenter(new THREE.Vector3());
+      const size = box.getSize(new THREE.Vector3());
+      distance = Math.max(160, Math.max(size.x, size.z) * 1.3);
+    }
+    controls.target.copy(target);
+    camera.position.set(target.x, target.y + distance, target.z + distance * 0.45);
     controls.update();
 
     if (reduceMotion) {
-      ring.scale.setScalar(1.6);
-      (ring.material as THREE.MeshBasicMaterial).opacity = 0.7;
+      for (const ring of rings) {
+        ring.scale.setScalar(1.6);
+        (ring.material as THREE.MeshBasicMaterial).opacity = 0.7;
+      }
       render();
     } else {
       frame = requestAnimationFrame(tick);
@@ -417,7 +487,7 @@ export function createMapScene(
       render();
     },
     setShowEdges: setEdges,
-    setMarker,
+    setMarkers,
     resize,
     texturesLoaded,
     objectsLoaded: mapObjects ? mapObjects.ready : Promise.resolve(0),
@@ -426,7 +496,7 @@ export function createMapScene(
     dispose: () => {
       mapObjects?.dispose();
       disposed = true;
-      clearMarker();
+      clearMarkers();
       controls.dispose();
       edges?.children.forEach((line) => (line as THREE.LineSegments).geometry.dispose());
       edgeMaterial.dispose();

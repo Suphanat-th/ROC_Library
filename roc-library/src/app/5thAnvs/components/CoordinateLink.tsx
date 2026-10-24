@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import { MapPin } from "lucide-react";
 import { coordinateText, splitCoordinates, type MapCoordinate } from "@/utils/mapCoordinate";
 import MapLocationModal from "./MapLocationModal";
@@ -27,7 +27,7 @@ export default function CoordinateLink({
         <MapPin aria-hidden className="h-3.5 w-3.5 shrink-0" />
         {coordinateText(coordinate)}
       </button>
-      {open && <MapLocationModal coordinate={coordinate} onClose={() => setOpen(false)} />}
+      {open && <MapLocationModal coordinates={[coordinate]} onClose={() => setOpen(false)} />}
     </>
   );
 }
@@ -43,6 +43,28 @@ export function CoordinateText({ text }: { text: string }) {
           <CoordinateLink key={i} coordinate={piece} />
         ),
       )}
+    </>
+  );
+}
+
+/** A button that opens the map with every one of several coordinates pinned and numbered. */
+export function CoordinateGroupLink({
+  coordinates,
+  className,
+  children,
+}: {
+  coordinates: MapCoordinate[];
+  className?: string;
+  children: ReactNode;
+}) {
+  const [open, setOpen] = useState(false);
+  if (coordinates.length === 0) return null;
+  return (
+    <>
+      <button type="button" className={className} onClick={() => setOpen(true)}>
+        {children}
+      </button>
+      {open && <MapLocationModal coordinates={coordinates} onClose={() => setOpen(false)} />}
     </>
   );
 }

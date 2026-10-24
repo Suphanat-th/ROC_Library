@@ -1,9 +1,9 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import { Check, Copy, X } from "lucide-react";
+import { Check, Copy, MapPin, X } from "lucide-react";
 import type { AnniversaryInfoEntry, ChapterQuest } from "@/types/anniversary";
-import { splitCoordinates } from "@/utils/mapCoordinate";
-import CoordinateLink from "./CoordinateLink";
+import { splitCoordinates, type MapCoordinate } from "@/utils/mapCoordinate";
+import CoordinateLink, { CoordinateGroupLink } from "./CoordinateLink";
 import QuestTaskRow from "./QuestTaskRow";
 
 /** A map coordinate: press it to see the map with a pin on the spot, or press the small button to copy it. */
@@ -124,7 +124,18 @@ export default function QuestModal({
 
         {quest.coordinates && (
           <div className="space-y-2">
-            <p className="text-sm font-bold">พิกัดกล่อง (กดเพื่อดูบนแมพ)</p>
+            <div className="flex flex-wrap items-center justify-between gap-2">
+              <p className="text-sm font-bold">พิกัดกล่อง (กดเพื่อดูบนแมพ)</p>
+              <CoordinateGroupLink
+                coordinates={quest.coordinates.flatMap((value) =>
+                  splitCoordinates(value).filter((piece): piece is MapCoordinate => typeof piece !== "string"),
+                )}
+                className="btn btn-sm gap-2 border-0 bg-(--anv-orange) text-(--anv-ink)"
+              >
+                <MapPin aria-hidden className="h-4 w-4" />
+                ดูทุกจุด ({quest.coordinates.length})
+              </CoordinateGroupLink>
+            </div>
             <ul className="flex flex-wrap gap-2">
               {quest.coordinates.map((c) => (
                 <CoordinateChip key={c} value={c} />

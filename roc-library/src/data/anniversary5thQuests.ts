@@ -118,29 +118,91 @@ export const RECURRING_QUESTS: RecurringQuestGroup[] = [
     note: "กิจกรรมทั้งเซิร์ฟเวอร์ · 28 ต.ค. 2026 – 13 ม.ค. 2027 · ต้องผ่าน Chapter V - Break your limits (Morroc) ก่อนรับภารกิจ",
     quests: [
       {
-        title: "Dragon Cataclysm",
+        title: "1 · Dragon Cataclysm (Special Quest)",
         tasks: [
           { kind: "find", label: "รับภารกิจจาก NPC Dragon Seal Stone", via: "Invaded Prontera · prt_q 156 188" },
-          { kind: "kill", label: "Hydrolancer [Event]", via: "ปรากฏทุกวันศุกร์ เสาร์ และอาทิตย์", monsterId: 1720 },
+          {
+            kind: "kill",
+            label: "Hydrolancer [Event]",
+            count: 50,
+            unit: "ตัว",
+            via: "แผนที่ Prontera Field · เวลาที่ปรากฏ:",
+            badges: ["ทุกศุกร์", "ทุกเสาร์", "ทุกอาทิตย์", "30 ต.ค. – 10 ม.ค."],
+            monsterId: 1720,
+          },
+          {
+            kind: "reward",
+            label: "Black Soul",
+            count: 100,
+            unit: "ชิ้น",
+            itemImageId: 6914,
+            via: "ใช้แลกรางวัลพิเศษของกิจกรรมครบรอบ 5 ปี (ถูกลบเมื่อจบกิจกรรม)",
+          },
+          {
+            kind: "reward",
+            label: "Jam Pancake",
+            count: 50,
+            unit: "ชิ้น",
+            itemImageId: 592,
+            via: "รักษาสถานะผิดปกติทั้งหมด เพิ่ม HP และ SP (ใช้ได้ช่วงกิจกรรม ถูกลบเมื่อจบกิจกรรม)",
+          },
         ],
         notes: [
-          "รับได้สูงสุด 1 ภารกิจต่อ 4 วัน (รีเซ็ต 04:00)",
+          "หลังทำเควสสำเร็จ จะมี Cooldown 4 วัน (รีเซ็ต 04:00)",
+          "รับได้สูงสุด 1 เควสต่อ 4 วัน",
         ],
       },
       {
-        title: "World Event",
+        title: "2 · World Event (Special Quest)",
         tasks: [
           {
             kind: "collect",
-            label: "ส่ง Hydrolancer [Event] ที่ได้จาก Dragon Cataclysm",
+            label: "ส่งภารกิจ Dragon Cataclysm ที่ทำสำเร็จ",
             via: "ที่ Dragon Seal Stone · prt_q 156 188 · ส่ง 1 ครั้งนับเป็น 1",
             monsterId: 1720,
           },
         ],
+        milestones: [
+          {
+            name: "การจุติใหม่",
+            nameEn: "Reincarnation",
+            target: 555,
+            reward: { kind: "reward", label: "Buffer User", via: "Awake of Novice · Buffer User (ดูด้านล่าง)" },
+          },
+          {
+            name: "บททดสอบแห่งพลัง",
+            nameEn: "Trial of Strength",
+            target: 5555,
+            reward: { kind: "reward", label: "World Fruit", count: 20, unit: "ชิ้น/วัน", itemImageId: 6435 },
+          },
+          {
+            name: "จุดสิ้นสุดของจุดเริ่มต้น",
+            nameEn: "The End of Beginning",
+            target: 55555,
+            reward: { kind: "reward", label: "Echo Stone", count: 5, unit: "ชิ้น/วัน", itemImageId: 1002441 },
+          },
+        ],
+        panels: [
+          {
+            title: "Awake of Novice · Buffer User",
+            chips: [
+              "EXP +50%",
+              "JOB +50",
+              "ALL STATUS +10",
+              "INSURANCE 100%",
+              "Criatura Cookie",
+              "Recovery MHP 5%",
+              "Recovery MSP 5%",
+            ],
+            facts: [
+              { label: "Zeny ที่ใช้แลก", value: "10,000" },
+              { label: "รับได้สูงสุด", value: "1 ครั้ง ต่อวัน" },
+            ],
+          },
+        ],
         notes: [
-          "ความคืบหน้าเป็นของทั้งเซิร์ฟเวอร์ ไม่ใช่รายบุคคล",
-          "เมื่อยอดรวมถึงเป้าหมาย ผู้เล่นทุกคนในเซิร์ฟเวอร์ได้รับรางวัลพิเศษ",
-          "เป้าหมายและรางวัลอยู่ในภาพประกาศ ยังไม่มีข้อมูล",
+          "ความก้าวหน้าเป็นของทั้งเซิร์ฟเวอร์ ไม่ใช่รายบุคคล",
+          "เมื่อจำนวนเควส Dragon Cataclysm ทั้งเซิร์ฟเวอร์ครบเป้าหมาย ผู้เล่นทุกคนในเซิร์ฟเวอร์ได้รับรางวัลพิเศษ",
         ],
       },
     ],

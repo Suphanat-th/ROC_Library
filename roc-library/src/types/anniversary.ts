@@ -35,7 +35,7 @@ export interface AnniversaryInfoSection {
   entries: AnniversaryInfoEntry[];
 }
 
-export type QuestTaskKind = "kill" | "collect" | "quiz" | "find";
+export type QuestTaskKind = "kill" | "collect" | "quiz" | "find" | "reward";
 
 /** One thing a quest asks the player to do. */
 export interface QuestTask {
@@ -51,6 +51,28 @@ export interface QuestTask {
   monsterId?: number;
   /** the item's id: its picture is public/assets/images/anvs/items/<itemImageId>.bmp */
   itemImageId?: string | number;
+  /** small extra lines under the task, e.g. what an item can and cannot do */
+  details?: string[];
+  /** remarks that must not be missed, shown as bold pills, e.g. the days a monster appears */
+  badges?: string[];
+}
+
+/** One step of the server-wide goal of the World Event. */
+export interface WorldMilestone {
+  /** the mission's name, e.g. "การจุติใหม่" */
+  name: string;
+  nameEn: string;
+  /** how many Dragon Cataclysm quests the whole server must hand in */
+  target: number;
+  /** what every player gets when the target is reached */
+  reward: QuestTask;
+}
+
+/** A small box of facts, e.g. the buffs a reward gives and what they cost. */
+export interface InfoPanel {
+  title: string;
+  chips?: string[];
+  facts?: { label: string; value: string }[];
 }
 
 /** The quest of one Chapter, shown in the panel under the map. */
@@ -73,6 +95,8 @@ export interface ChapterQuest {
 export interface RecurringQuest {
   title: string;
   tasks: QuestTask[];
+  milestones?: WorldMilestone[];
+  panels?: InfoPanel[];
   /** conditions and remarks of the quest */
   notes?: string[];
 }

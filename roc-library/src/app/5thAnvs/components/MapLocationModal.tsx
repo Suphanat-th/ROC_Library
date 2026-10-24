@@ -17,22 +17,28 @@ const MapViewer = dynamic(() => import("@/components/MapViewer/MapViewer"), {
 });
 
 /**
- * The map a coordinate points to, in a window, with a pin on the spot. Esc, the × button or
- * a click outside closes it (only this window, even when it was opened from another one).
+ * The map the coordinates point to, in a window, with a pin on each spot. With several spots
+ * (all on one map) every pin carries its number and a row of buttons flies to one of them or
+ * takes them all in. Esc, the × button or a click outside closes it (only this window, even
+ * when it was opened from another one).
  */
 export default function MapLocationModal({
-  coordinate,
+  coordinates,
   onClose,
 }: {
-  coordinate: MapCoordinate;
+  coordinates: MapCoordinate[];
   onClose: () => void;
 }) {
-  const map = MAPS[coordinate.map];
+  const first = coordinates[0];
+  const map = MAPS[first.map];
+  const many = coordinates.length > 1;
   const closeRef = useRef<HTMLButtonElement>(null);
   const onCloseRef = useRef(onClose);
   const [copied, setCopied] = useState(false);
-  // one object for the whole life of the window, so the viewer pins the spot once
-  const [marker] = useState(() => ({ x: coordinate.x, y: coordinate.y }));
+  /** the pin the camera is on; undefined while it takes them all in */
+  const [focus, setFocus] = useState<number | undefined>(many ? undefined : 0);
+  // one array for the whole life of the window, so the viewer pins the spots once
+  const [markers] = useState(() => coordinates.map((c) => ({ x: c.x, y: c.y })));
 
   useEffect(() => {
     onCloseRef.current = onClose;
@@ -54,13 +60,14 @@ export default function MapLocationModal({
     };
   }, []);
 
+  const shown = focus === undefined ? coordinates : [coordinates[focus]];
   const copy = async () => {
     try {
-      await navigator.clipboard.writeText(coordinateText(coordinate));
+      await navigator.clipboard.writeText(shown.map(coordinateText).join("\n"));
       setCopied(true);
       setTimeout(() => setCopied(false), 1500);
     } catch {
-      // the clipboard can be blocked; the coordinate is still there to read
+      // the clipboard can be blocked; the coordinates are still there to read
     }
   };
 
@@ -78,11 +85,12 @@ export default function MapLocationModal({
         <div className="flex items-center gap-3">
           <MapPin aria-hidden className="h-6 w-6 shrink-0 text-(--anv-orange)" />
           <h2 id="map-location-title" className="min-w-0 flex-1 text-lg font-black leading-snug">
-            {map?.name ?? coordinate.map} · {coordinate.map} {coordinate.x}, {coordinate.y}
+            {map?.name ?? first.map} ·{" "}
+            {many ? `${first.map} ทั้ง ${coordinates.length} จุด` : `${first.map} ${first.x}, ${first.y}`}
           </h2>
           <button type="button" className="btn btn-sm gap-2" onClick={copy}>
             {copied ? <Check aria-hidden className="h-4 w-4" /> : <Copy aria-hidden className="h-4 w-4" />}
-            {copied ? "คัดลอกแล้ว" : "คัดลอกพิกัด"}
+            {copied ? "คัดลอกแล้ว" : many && focus === undefined ? "คัดลอกทุกจุด" : "คัดลอกพิกัด"}
           </button>
           <button
             ref={closeRef}
@@ -95,25 +103,53 @@ export default function MapLocationModal({
           </button>
         </div>
 
+        {many && (
+          <div role="group" aria-label="เลือกจุด" className="flex flex-wrap gap-2">
+            <button
+              type="button"
+              aria-pressed={focus === undefined}
+              onClick={() => setFocus(undefined)}
+              className={`btn btn-sm ${focus === undefined ? "border-0 bg-(--anv-orange) text-(--anv-ink)" : "btn-outline"}`}
+            >
+              ดูทุกจุด
+            </button>
+            {coordinates.map((c, i) => (
+              <button
+                key={`${c.x}-${c.y}`}
+                type="button"
+                aria-pressed={focus === i}
+                onClick={() => setFocus(i)}
+                className={`btn btn-sm font-mono ${focus === i ? "border-0 bg-(--anv-orange) text-(--anv-ink)" : "btn-outline"}`}
+              >
+                {i + 1} · {c.x}, {c.y}
+              </button>
+            ))}
+          </div>
+        )}
+
         <div className="min-h-0 flex-1">
           {map ? (
             <MapViewer
               embedded
               folder={map.folder}
-              name={coordinate.map}
+              name={first.map}
               title={map.name}
-              marker={marker}
+              markers={markers}
+              focusIndex={focus}
               errorContent={
                 <div className="space-y-2">
-                  <p className="text-lg font-black">ยังไม่มีแมพ {coordinate.map} ในเว็บ</p>
-                  <p className="text-base-content/70">
-                    {map.name} · ตำแหน่ง X {coordinate.x}, Y {coordinate.y}
-                  </p>
+                  <p className="text-lg font-black">ยังไม่มีแมพ {first.map} ในเว็บ</p>
+                  <p className="text-base-content/70">{map.name}</p>
+                  {coordinates.map((c, i) => (
+                    <p key={`${c.x}-${c.y}`} className="font-mono text-base-content/70">
+                      {many ? `${i + 1} · ` : ""}X {c.x}, Y {c.y}
+                    </p>
+                  ))}
                 </div>
               }
             />
           ) : (
-            <p className="p-6 text-center text-base-content/70">ไม่รู้จักแมพ {coordinate.map}</p>
+            <p className="p-6 text-center text-base-content/70">ไม่รู้จักแมพ {first.map}</p>
           )}
         </div>
       </div>

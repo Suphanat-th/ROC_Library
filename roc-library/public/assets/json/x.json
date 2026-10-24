@@ -100,5 +100,83 @@
         "slotCount": 0,
         "ClassNum": 0,
         "costume": false
+    },
+    "592": {
+        "unidentifiedDisplayName": "Jam Pancake",
+        "unidentifiedResourceName": "딸기잼팬케이크",
+        "unidentifiedDescriptionName": [
+            "เค้กแยมสตรอเบอรี่ มันจะดูน่ากินกว่านี้ถ้าสตรอเบอรี่สุขงอม",
+            "^000088รักษาสถานะผิดปกติทั้งหมด, ^000088เพิ่ม HP และ SP",
+            "^ffffff_",
+            "น้ำหนัก : 15"
+        ],
+        "identifiedDisplayName": "Jam Pancake",
+        "identifiedResourceName": "딸기잼팬케이크",
+        "identifiedDescriptionName": [
+            "เค้กแยมสตรอเบอรี่ มันจะดูน่ากินกว่านี้ถ้าสตรอเบอรี่สุขงอม",
+            "^000088รักษาสถานะผิดปกติทั้งหมด, ^000088เพิ่ม HP และ SP",
+            "น้ำหนัก : 15"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0
+    },
+    "6914": {
+        "unidentifiedDisplayName": "Black Soul",
+        "unidentifiedResourceName": "망자의한기",
+        "unidentifiedDescriptionName": [
+            "ไอเท็มปริศนา ต้องทำการตรวจสอบโดยใช้ [Magnifier]"
+        ],
+        "identifiedDisplayName": "Black Soul",
+        "identifiedResourceName": "망자의한기",
+        "identifiedDescriptionName": [
+            "^ff0000ไอเทมไม่สามารถแลกเปลี่ยนได้",
+            "วิญญาณร้ายที่ถูกจับระหว่างหนีออกจาก Niflheim ที่เดียวที่จะกลับไปได้คือ Niflheim และมันจะกลับไป Niflheim หลังหมดระยะเวลากิจกรรม",
+            "(ไอเทมจะถูกลบเมื่อหมดระยะเวลากิจกรรม)",
+            "น้ำหนัก : 0"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0
+    },
+    "6435": {
+        "unidentifiedDisplayName": "World Fruit",
+        "unidentifiedResourceName": "신선한열매",
+        "unidentifiedDescriptionName": [
+            "ผลไม้สดๆ จากต้น Yggdrasil กลิ่นก็หอมสดชื่น!",
+            "^ff0000(ไอเท็มชิ้นนี้จะถูกลบเมื่อสิ้นสุดระยะเวลากิจกรรม)",
+            "น้ำหนัก : 0.5"
+        ],
+        "identifiedDisplayName": "World Fruit",
+        "identifiedResourceName": "신선한열매",
+        "identifiedDescriptionName": [
+            "ผลไม้สดๆ จากต้น Yggdrasil กลิ่นก็หอมสดชื่น!",
+            "^ff0000(ไอเท็มชิ้นนี้จะถูกลบเมื่อสิ้นสุดระยะเวลากิจกรรม)",
+            "น้ำหนัก : 0.5"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0
+    },
+    "1002441": {
+        "unidentifiedDisplayName": "Echo Stone",
+        "unidentifiedResourceName": "보라색광석원석",
+        "unidentifiedDescriptionName": [
+            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "แร่ประกายม่วง",
+            "ดูเหมือนว่าจะมีพลังเวทมนตร์แผ่ออกมา",
+            "",
+            "^ff0000(ไอเท็มชิ้นนี้จะถูกลบหลังสิ้นสุดระยะเวลากิจกรรม)"
+        ],
+        "identifiedDisplayName": "Echo Stone",
+        "identifiedResourceName": "보라색광석원석",
+        "identifiedDescriptionName": [
+            "^ff0000ไม่สามารถแลกเปลี่ยนกับผู้เล่นคนอื่นได้",
+            "แร่ประกายม่วง",
+            "ดูเหมือนว่าจะมีพลังเวทมนตร์แผ่ออกมา",
+            "",
+            "^ff0000(ไอเท็มชิ้นนี้จะถูกลบหลังสิ้นสุดระยะเวลากิจกรรม)",
+            "น้ำหนัก : 0"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
     }
 }

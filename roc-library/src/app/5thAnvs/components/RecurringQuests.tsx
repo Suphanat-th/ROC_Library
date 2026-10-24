@@ -1,7 +1,9 @@
 import { RECURRING_QUESTS } from "@/data/anniversary5thQuests";
 import type { RecurringQuestGroup } from "@/types/anniversary";
+import { RewardBox } from "./QuestParts";
 import QuestTaskRow from "./QuestTaskRow";
 import SectionHeading from "./SectionHeading";
+import WorldQuest from "./WorldQuest";
 
 const ART = "/assets/images/anvs/landing";
 
@@ -12,7 +14,7 @@ const GROUP_STYLES = {
   world: { band: "bg-success text-success-content", art: "globe.svg" },
 } as const;
 
-function GroupCard({ group, wide = false }: { group: RecurringQuestGroup; wide?: boolean }) {
+function GroupCard({ group }: { group: RecurringQuestGroup }) {
   const style = GROUP_STYLES[group.id];
   return (
     <div className="overflow-hidden rounded-3xl bg-base-100 shadow-lg">
@@ -22,29 +24,39 @@ function GroupCard({ group, wide = false }: { group: RecurringQuestGroup; wide?:
         <img src={`${ART}/${style.art}`} alt="" aria-hidden className="h-14 w-14 -rotate-12 drop-shadow" />
       </div>
       <div className="space-y-3 p-5">
-        {group.note && <p className="rounded-xl bg-warning/20 px-3 py-2 text-sm">{group.note}</p>}
-        {group.quests.length === 0 ? (
-          <p className="text-sm text-base-content/70">กำลังรวบรวมข้อมูล</p>
+        {group.id === "world" ? (
+          <WorldQuest group={group} />
         ) : (
-          <div className={wide ? "grid gap-5 md:grid-cols-2" : "space-y-3"}>
-            {group.quests.map((quest) => (
-              <div key={quest.title} className="space-y-1.5">
-                <p className="text-xs font-black uppercase tracking-widest text-(--anv-orange)">
-                  {quest.title}
-                </p>
-                <ul className="space-y-2">
-                  {quest.tasks.map((task) => (
-                    <QuestTaskRow key={task.label} task={task} largeMonster={group.id === "world"} />
+          <>
+            {group.note && <p className="rounded-xl bg-warning/20 px-3 py-2 text-sm">{group.note}</p>}
+            {group.quests.length === 0 ? (
+              <p className="text-sm text-base-content/70">กำลังรวบรวมข้อมูล</p>
+            ) : (
+              group.quests.map((quest) => (
+                <div key={quest.title} className="space-y-2">
+                  <p className="text-xs font-black uppercase tracking-widest text-(--anv-orange)">{quest.title}</p>
+                  <ul className="space-y-2">
+                    {quest.tasks
+                      .filter((task) => task.kind !== "reward")
+                      .map((task) => (
+                        <QuestTaskRow key={task.label} task={task} />
+                      ))}
+                  </ul>
+                  {quest.tasks.some((task) => task.kind === "reward") && (
+                    <RewardBox
+                      title="รางวัลที่ได้รับเมื่อทำเควสสำเร็จ"
+                      tasks={quest.tasks.filter((task) => task.kind === "reward")}
+                    />
+                  )}
+                  {quest.notes?.map((note) => (
+                    <p key={note} className="rounded-xl bg-warning/20 px-3 py-2 text-sm">
+                      {note}
+                    </p>
                   ))}
-                </ul>
-                {quest.notes?.map((note) => (
-                  <p key={note} className="rounded-xl bg-warning/20 px-3 py-2 text-sm">
-                    {note}
-                  </p>
-                ))}
-              </div>
-            ))}
-          </div>
+                </div>
+              ))
+            )}
+          </>
         )}
       </div>
     </div>
@@ -66,7 +78,7 @@ export default function RecurringQuests({ index }: { index: string }) {
           <GroupCard key={group.id} group={group} />
         ))}
       </div>
-      {world && <GroupCard group={world} wide />}
+      {world && <GroupCard group={world} />}
     </section>
   );
 }

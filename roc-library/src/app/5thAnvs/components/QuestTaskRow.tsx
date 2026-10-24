@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState, type ReactNode } from "react";
-import { CircleHelp, MapPin, Package, Swords } from "lucide-react";
+import { CircleHelp, Gift, MapPin, Package, Swords } from "lucide-react";
 import type { QuestTask, QuestTaskKind } from "@/types/anniversary";
 import { CoordinateText } from "./CoordinateLink";
 
@@ -9,6 +9,7 @@ const KINDS: Record<QuestTaskKind, { Icon: typeof Swords; label: string }> = {
   collect: { Icon: Package, label: "รวบรวม" },
   quiz: { Icon: CircleHelp, label: "ตอบคำถาม" },
   find: { Icon: MapPin, label: "ตามหา" },
+  reward: { Icon: Gift, label: "รางวัล" },
 };
 
 /**
@@ -145,7 +146,8 @@ export default function QuestTaskRow({
   largeMonster?: boolean;
 }) {
   const { Icon, label } = KINDS[task.kind];
-  const collect = task.kind === "collect";
+  const itemFirst = task.kind === "collect" || task.kind === "reward";
+  // a collected item and a reward both show the item first
   const kindIcon = (className: string) => (
     <span
       className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-(--anv-orange) text-(--anv-ink) ${className}`}
@@ -165,7 +167,7 @@ export default function QuestTaskRow({
 
   return (
     <li className="flex items-center gap-3 rounded-2xl bg-base-200 p-3">
-      {collect ? (
+      {itemFirst ? (
         task.itemImageId !== undefined ? (
           <CutoutPicture
             src={`/assets/images/anvs/items/${task.itemImageId}.bmp`}
@@ -194,8 +196,25 @@ export default function QuestTaskRow({
             <CoordinateText text={task.via} />
           </p>
         )}
+        {task.badges && (
+          <div className="flex flex-wrap gap-1.5 pt-1">
+            {task.badges.map((badge) => (
+              <span
+                key={badge}
+                className="rounded-full bg-(--anv-orange) px-3 py-0.5 text-sm font-black text-(--anv-ink)"
+              >
+                {badge}
+              </span>
+            ))}
+          </div>
+        )}
+        {task.details?.map((line) => (
+          <p key={line} className="text-xs text-base-content/60">
+            {line}
+          </p>
+        ))}
       </div>
-      {collect ? monster("ml-auto", null) : kindIcon("ml-auto")}
+      {itemFirst ? monster("ml-auto", null) : kindIcon("ml-auto")}
     </li>
   );
 }

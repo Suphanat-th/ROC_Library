@@ -161,7 +161,7 @@ The start of the 5th Anniversary page: one drawn continent split into six region
 _Avoid_: World map, Map viewer
 
 **Location window**:
-The window a player gets by pressing a map coordinate such as prt_q 156 188: the game map in 3D with a pin and a pulsing ring on that spot, the camera flown over it. It shows no walkable overlay. If the map's files are not on the site yet, it says so and gives the coordinate in words.
+The window a player gets by pressing a map coordinate such as prt_q 156 188: the game map in 3D with a pin and a pulsing ring on that spot, the camera flown over it. A Chapter's box coordinates can also be opened all at once: every pin is numbered, and buttons fly to one of them or take them all in. It shows no walkable overlay. If the map's files are not on the site yet, it says so and gives the coordinate in words.
 _Avoid_: Map popup, minimap
 
 **Chapter quest**:
@@ -173,7 +173,7 @@ One thing a quest asks the player to do: kill a monster, collect an item, answer
 _Avoid_: Objective, step
 
 **Recurring quests**:
-The Daily and Weekly quests of the event side by side, and the World quest on its own row below, all under the Chapter map. Daily quests must be reported again after one day. The World quest is two linked quests, Dragon Cataclysm (a personal hunt of Hydrolancer, one per four days) and the World Event (the turn-ins of the whole server add up, and a target met rewards every player).
+The Daily and Weekly quests of the event side by side, and the World quest on its own row below, all under the Chapter map. Daily quests must be reported again after one day. The World quest is two linked quests. Dragon Cataclysm is a personal hunt of 50 Hydrolancer, once every four days, that pays Black Soul and Jam Pancake. The World Event adds up every Dragon Cataclysm quest handed in by the whole server; at 555, 5,555 and 55,555 every player gets a reward (the Buffer User, then World Fruit and Echo Stone every day).
 _Avoid_: Side quests
 
 **Chapter**:
