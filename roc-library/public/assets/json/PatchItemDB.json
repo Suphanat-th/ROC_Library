@@ -60,6 +60,25 @@
         "ClassNum": 1494,
         "costume": true
     },
+    "108297": {
+        "unidentifiedDisplayName": "Spirit Cat Record Scroll",
+        "unidentifiedResourceName": "Betelgeuse_Soul",
+        "unidentifiedDescriptionName": [
+            "คัมภีร์จากเงามืดสู่พลังแห่งวิญญาณ Spirit Cat คือสัญลักษณ์ของนักล่าที่ไร้เสียง เคลื่อนไหวรวดเร็ว และจู่โจมโดยไม่มีใครทันตั้งตัว",
+            "^ff0000หากเปิดใช้งานหลังวันที่ 28 ตุลาคม 2569 หลังปิดปรับปรุงประจำสัปดาห์ จะไม่ได้รับ Spirit Cat Record Coin"
+        ],
+        "identifiedDisplayName": "Spirit Cat Record Scroll",
+        "identifiedResourceName": "Betelgeuse_Soul",
+        "identifiedDescriptionName": [
+            "คัมภีร์จากเงามืดสู่พลังแห่งวิญญาณ Spirit Cat คือสัญลักษณ์ของนักล่าที่ไร้เสียง เคลื่อนไหวรวดเร็ว และจู่โจมโดยไม่มีใครทันตั้งตัว",
+            "^ff0000หากเปิดใช้งานหลังวันที่ 28 ตุลาคม 2569 หลังปิดปรับปรุงประจำสัปดาห์ จะไม่ได้รับ Spirit Cat Record Coin",
+            "",
+            "น้ำหนัก : 1"
+        ],
+        "slotCount": 0,
+        "ClassNum": 0,
+        "costume": false
+    },
     "420599": {
         "unidentifiedDisplayName": "Ribbon",
         "unidentifiedResourceName": "리본",
