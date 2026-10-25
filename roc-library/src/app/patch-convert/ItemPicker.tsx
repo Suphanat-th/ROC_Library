@@ -1,5 +1,6 @@
 "use client";
-import { Search, X } from "lucide-react";
+import { useState } from "react";
+import { ChevronDown, Search, X } from "lucide-react";
 import { PatchItemsDto } from "@/types/patch";
 
 const FALLBACK_IMAGE = "/assets/images/GuildImage/dog.jpg";
@@ -31,6 +32,125 @@ function Thumbnail({ patchKey }: { patchKey: string }) {
       }}
       className="h-14 w-10 shrink-0 rounded-md bg-base-100 object-contain"
     />
+  );
+}
+
+function ItemRow({
+  patchKey,
+  item,
+  selected,
+  onSelect,
+}: {
+  patchKey: string;
+  item: PatchItemsDto;
+  selected: boolean;
+  onSelect: (key: string) => void;
+}) {
+  return (
+    <button
+      type="button"
+      onClick={() => onSelect(patchKey)}
+      aria-current={selected ? "true" : undefined}
+      className={`flex min-h-16 w-full items-center gap-3 rounded-box border p-2 text-left transition-colors ${
+        selected
+          ? "border-primary bg-primary/10"
+          : "border-transparent hover:border-base-300 hover:bg-base-100"
+      }`}
+    >
+      <Thumbnail patchKey={patchKey} />
+      <span className="min-w-0">
+        <span className="line-clamp-2 text-sm font-semibold text-base-content">
+          {item.identifiedDisplayName}
+        </span>
+        <span className="mt-0.5 block text-xs text-base-content/60">
+          รหัส {patchKey}
+          {item.costume && " · Costume"}
+        </span>
+      </span>
+    </button>
+  );
+}
+
+/**
+ * The phone-width picker. A native dropdown cannot show pictures, so this is a button
+ * that opens a list of the same rows as the wide list.
+ */
+function MobileSelect({
+  entries,
+  selectedKey,
+  onSelect,
+}: {
+  entries: Entry[];
+  selectedKey: string | undefined;
+  onSelect: (key: string) => void;
+}) {
+  const [open, setOpen] = useState(false);
+  const current = entries.find(([key]) => key === selectedKey);
+
+  const choose = (key: string) => {
+    onSelect(key);
+    setOpen(false);
+  };
+
+  return (
+    <div
+      className="relative lg:hidden"
+      onKeyDown={(e) => {
+        if (e.key === "Escape") setOpen(false);
+      }}
+    >
+      <button
+        type="button"
+        onClick={() => setOpen((v) => !v)}
+        aria-haspopup="listbox"
+        aria-expanded={open}
+        aria-label="เลือกไอเทม"
+        className="flex min-h-16 w-full items-center gap-3 rounded-box border border-base-300 bg-base-100 p-2 text-left"
+      >
+        {current ? (
+          <>
+            <Thumbnail patchKey={current[0]} />
+            <span className="line-clamp-2 min-w-0 grow text-sm font-semibold">
+              {current[1].identifiedDisplayName}
+            </span>
+          </>
+        ) : (
+          <span className="grow text-sm text-base-content/60">เลือกไอเทม</span>
+        )}
+        <ChevronDown
+          aria-hidden="true"
+          className={`h-5 w-5 shrink-0 transition-transform ${
+            open ? "rotate-180" : ""
+          }`}
+        />
+      </button>
+
+      {open && (
+        <>
+          {/* A tap anywhere outside the list closes it. */}
+          <div
+            aria-hidden="true"
+            className="fixed inset-0 z-10"
+            onClick={() => setOpen(false)}
+          />
+          <ul
+            aria-label="รายการไอเทม"
+            className="absolute inset-x-0 z-20 mt-1 max-h-[60dvh] space-y-1 overflow-y-auto rounded-box border border-base-300 bg-base-100 p-1.5 shadow-lg"
+          >
+            {entries.map(([key, item]) => (
+              <li key={key}>
+                <ItemRow
+                  patchKey={key}
+                  item={item}
+                  selected={key === selectedKey}
+                  onSelect={choose}
+                />
+              </li>
+            ))}
+          </ul>
+        </>
+      )}
+    </div>
   );
 }
 
@@ -88,19 +208,12 @@ export default function ItemPicker({
         </p>
       ) : (
         <>
-          {/* Narrow screens: one dropdown. */}
-          <select
-            aria-label="เลือกไอเทม"
-            value={selectedKey}
-            onChange={(e) => onSelect(e.target.value)}
-            className="select select-bordered min-h-11 w-full lg:hidden"
-          >
-            {entries.map(([key, item]) => (
-              <option key={key} value={key}>
-                {item.identifiedDisplayName}
-              </option>
-            ))}
-          </select>
+          {/* Narrow screens: a dropdown whose rows carry the item's picture. */}
+          <MobileSelect
+            entries={entries}
+            selectedKey={selectedKey}
+            onSelect={onSelect}
+          />
 
           {/* Wide screens: a list that scrolls on its own. */}
           <nav
@@ -108,34 +221,16 @@ export default function ItemPicker({
             className="hidden max-h-[calc(100dvh-14rem)] overflow-y-auto lg:block"
           >
             <ul className="space-y-1.5 pr-1">
-              {entries.map(([key, item]) => {
-                const selected = key === selectedKey;
-                return (
-                  <li key={key}>
-                    <button
-                      type="button"
-                      onClick={() => onSelect(key)}
-                      aria-current={selected ? "true" : undefined}
-                      className={`flex min-h-16 w-full items-center gap-3 rounded-box border p-2 text-left transition-colors ${
-                        selected
-                          ? "border-primary bg-primary/10"
-                          : "border-transparent hover:border-base-300 hover:bg-base-100"
-                      }`}
-                    >
-                      <Thumbnail patchKey={key} />
-                      <span className="min-w-0">
-                        <span className="line-clamp-2 text-sm font-semibold text-base-content">
-                          {item.identifiedDisplayName}
-                        </span>
-                        <span className="mt-0.5 block text-xs text-base-content/60">
-                          รหัส {key}
-                          {item.costume && " · Costume"}
-                        </span>
-                      </span>
-                    </button>
-                  </li>
-                );
-              })}
+              {entries.map(([key, item]) => (
+                <li key={key}>
+                  <ItemRow
+                    patchKey={key}
+                    item={item}
+                    selected={key === selectedKey}
+                    onSelect={onSelect}
+                  />
+                </li>
+              ))}
             </ul>
           </nav>
         </>

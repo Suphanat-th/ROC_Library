@@ -3,10 +3,10 @@ import { useEffect, useRef, useState } from "react";
 import {
   ChevronLeft,
   ChevronRight,
-  Eye,
   Loader2,
   Pause,
   Play,
+  Shirt,
   X,
 } from "lucide-react";
 import {
@@ -237,10 +237,11 @@ export function CostumePreviewButton({ onOpen }: { onOpen: () => void }) {
       type="button"
       onClick={onOpen}
       aria-haspopup="dialog"
-      className="btn btn-outline min-h-11 flex-1 gap-2 sm:flex-none"
+      title="ดูไอเทมนี้สวมบนตัวละคร"
+      className="btn min-h-11 flex-1 gap-2 border-accent/60 bg-accent/15 text-base-content shadow-none hover:border-accent hover:bg-accent/30 sm:flex-none"
     >
-      <Eye aria-hidden="true" className="h-4 w-4" />
-      Preview
+      <Shirt aria-hidden="true" className="h-5 w-5" />
+      สวมใส่
     </button>
   );
 }

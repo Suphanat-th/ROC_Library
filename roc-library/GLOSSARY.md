@@ -29,7 +29,7 @@ One item's tooltip (name, picture, options, description) laid out as a card that
 _Avoid_: Tooltip, item sheet
 
 **Costume preview**:
-A window on the Patch Convert page, opened by a button beside the name of a costume item, that shows the item worn on one standard character (a Novice with one hairstyle), male or female. The player can turn the character through 8 directions and pick one of five Poses; the character and the item then move exactly as their sprite files animate. The button appears only for items that have sprite files. It is on screen only and never appears in the downloaded Item card picture.
+A window on the Patch Convert page, opened by the "สวมใส่" button (a shirt icon) beside the name of a costume item, that shows the item worn on one standard character (a Novice with one hairstyle), male or female. The player can turn the character through 8 directions, pick one of the two Poses, and pause or resume the motion; the item plays its own effect exactly as its sprite file animates. The button appears only for items that have sprite files. It is on screen only and never appears in the downloaded Item card picture.
 _Avoid_: Try-on, 3D preview, fitting room, panel
 
 **Pose**:

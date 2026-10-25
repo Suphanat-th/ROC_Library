@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import { Download, Loader2 } from "lucide-react";
+import { Check, Download, Loader2 } from "lucide-react";
 import { PageSkeleton } from "@/components/Loader";
 
 import { useItemDb } from "@/services/patchData/itemsService";
@@ -18,7 +18,7 @@ import {
 /** Every exported PNG is laid out at this width, whatever device pressed the button. */
 const EXPORT_WIDTH = 1024;
 
-type ExportStatus = "idle" | "busy" | "error";
+type ExportStatus = "idle" | "busy" | "done" | "error";
 
 const waitForImages = (root: HTMLElement) =>
   Promise.all(
@@ -32,17 +32,22 @@ const waitForImages = (root: HTMLElement) =>
     ),
   );
 
+/** iPhone, iPad, and iPadOS, which reports itself as a Mac with a touch screen. */
+const isIOS = () =>
+  /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+  (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+
 /**
- * Touch devices get the share sheet (it has "Save Image"); everything else, and any
- * share that is refused, falls back to a normal file download.
+ * iOS gets the share sheet (it has "Save Image"). Android's share sheet only lists apps
+ * and has no way to save to the gallery, so Android and desktop download the file directly.
+ * A share that iOS refuses also falls back to the download.
  */
 async function deliverImage(file: File, title: string) {
-  const canShare =
-    window.matchMedia("(pointer: coarse)").matches &&
+  if (
+    isIOS() &&
     typeof navigator.canShare === "function" &&
-    navigator.canShare({ files: [file] });
-
-  if (canShare) {
+    navigator.canShare({ files: [file] })
+  ) {
     try {
       await navigator.share({ files: [file], title });
       return;
@@ -56,8 +61,14 @@ async function deliverImage(file: File, title: string) {
   const link = document.createElement("a");
   link.download = file.name;
   link.href = url;
+  link.rel = "noopener";
+  link.style.display = "none";
+  // Android Chrome ignores a click on a link that is not in the page.
+  document.body.appendChild(link);
   link.click();
-  setTimeout(() => URL.revokeObjectURL(url), 10_000);
+  link.remove();
+  // Android hands the blob to its download manager later, so keep it for a while.
+  setTimeout(() => URL.revokeObjectURL(url), 60_000);
 }
 
 function ExportableItem({
@@ -95,7 +106,7 @@ function ExportableItem({
         });
 
         await deliverImage(file, item.identifiedDisplayName);
-        if (!cancelled) setStatus("idle");
+        if (!cancelled) setStatus("done");
       } catch {
         if (!cancelled) setStatus("error");
       } finally {
@@ -108,6 +119,13 @@ function ExportableItem({
       cancelled = true;
     };
   }, [exporting, patchKey, item.identifiedDisplayName]);
+
+  // The confirmation fades back to the normal button after a moment.
+  useEffect(() => {
+    if (status !== "done") return;
+    const timer = setTimeout(() => setStatus("idle"), 3000);
+    return () => clearTimeout(timer);
+  }, [status]);
 
   const startExport = () => {
     setStatus("busy");
@@ -139,19 +157,33 @@ function ExportableItem({
               type="button"
               onClick={startExport}
               disabled={status === "busy"}
-              className="btn btn-primary min-h-11 flex-1 gap-2 sm:flex-none"
+              title="บันทึกการ์ดไอเทมเป็นรูป PNG"
+              className={`btn min-h-11 flex-1 gap-2 sm:flex-none ${
+                status === "done" ? "btn-success" : "btn-primary"
+              }`}
             >
               {status === "busy" ? (
-                <Loader2 aria-hidden="true" className="h-4 w-4 animate-spin" />
+                <Loader2 aria-hidden="true" className="h-5 w-5 animate-spin" />
+              ) : status === "done" ? (
+                <Check aria-hidden="true" className="h-5 w-5" />
               ) : (
-                <Download aria-hidden="true" className="h-4 w-4" />
+                <Download aria-hidden="true" className="h-5 w-5" />
               )}
-              {status === "busy" ? "กำลังสร้างภาพ..." : "Download Image"}
+              {status === "busy"
+                ? "กำลังสร้างภาพ..."
+                : status === "done"
+                  ? "บันทึกแล้ว"
+                  : "ดาวน์โหลดรูป"}
             </button>
           </div>
+          {/* Announces progress to screen readers without adding visible text. */}
+          <span role="status" className="sr-only">
+            {status === "busy" && "กำลังสร้างภาพ"}
+            {status === "done" && "บันทึกรูปแล้ว"}
+          </span>
           {status === "error" && (
             <span role="alert" className="text-sm text-error">
-              สร้างภาพไม่สำเร็จ ลองอีกครั้ง
+              สร้างภาพไม่สำเร็จ ลองกดดาวน์โหลดอีกครั้ง
             </span>
           )}
         </div>
@@ -234,7 +266,7 @@ export default function PatchConvertClient() {
             Patch Convert
           </h1>
           <p className="mt-1 text-sm text-base-content/70">
-            เลือกไอเทมจากแพตช์ แล้วกด Download Image เพื่อบันทึกการ์ดเป็น PNG
+            เลือกไอเทมจากแพตช์ แล้วกดดาวน์โหลดรูป เพื่อบันทึกการ์ดเป็น PNG
             สำหรับโพสต์
           </p>
         </header>
