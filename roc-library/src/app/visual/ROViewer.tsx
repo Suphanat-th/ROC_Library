@@ -66,7 +66,7 @@ export default function ROViewer() {
       frameIndexRef.current = 0
     }
 
-    setTimeout(renderFrame, action.delay * 100)
+    setTimeout(renderFrame, action.delay)
   }
 
   const loadSPR = async (file: File) => {

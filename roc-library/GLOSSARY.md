@@ -28,6 +28,14 @@ _Avoid_: Hamburger, burger, drawer button
 One item's tooltip (name, picture, options, description) laid out as a card that the player can download as a PNG to share. It always uses the light look, whichever Theme mode the player has chosen, so the downloaded picture is the same every time.
 _Avoid_: Tooltip, item sheet
 
+**Costume preview**:
+A window on the Patch Convert page, opened by a button beside the name of a costume item, that shows the item worn on one standard character (a Novice with one hairstyle), male or female. The player can turn the character through 8 directions and pick one of five Poses; the character and the item then move exactly as their sprite files animate. The button appears only for items that have sprite files. It is on screen only and never appears in the downloaded Item card picture.
+_Avoid_: Try-on, 3D preview, fitting room, panel
+
+**Pose**:
+One of the two motions the Costume preview offers: Idle or Sit. Both are held still (their frames only turn the head). An item with one effect of its own, such as Cons of Poison, keeps playing that effect whatever the direction or Pose.
+_Avoid_: Action, animation, stance
+
 **MUAD**:
 The page that shows the equipment set of the character หมากัดหมวด, as a normal set or as a costume/shadow set, with an Item card for each piece.
 _Avoid_: Showcase page, gear page

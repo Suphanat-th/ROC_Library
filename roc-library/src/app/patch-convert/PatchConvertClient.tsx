@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import { Download, Loader2, Search, X } from "lucide-react";
+import { Download, Loader2 } from "lucide-react";
 import { PageSkeleton } from "@/components/Loader";
 
 import { useItemDb } from "@/services/patchData/itemsService";
@@ -8,6 +8,12 @@ import { PatchItemsDto } from "@/types/patch";
 import * as htmlToImage from "html-to-image";
 import ImageConvertPage from "./image-convert";
 import ItemCard from "./ItemCard";
+import ItemPicker from "./ItemPicker";
+import {
+  CostumePreviewButton,
+  CostumePreviewModal,
+  useCostumeSprite,
+} from "./CostumePreview";
 
 /** Every exported PNG is laid out at this width, whatever device pressed the button. */
 const EXPORT_WIDTH = 1024;
@@ -63,6 +69,8 @@ function ExportableItem({
 }) {
   const [status, setStatus] = useState<ExportStatus>("idle");
   const [exporting, setExporting] = useState(false);
+  const [previewOpen, setPreviewOpen] = useState(false);
+  const canPreview = useCostumeSprite(patchKey, item.costume);
   const exportRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -107,39 +115,65 @@ function ExportableItem({
   };
 
   return (
-    <section className="mx-auto w-full max-w-5xl">
-      <div className="mb-3 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-        <p className="min-w-0 truncate text-sm text-base-content/70">
-          {item.identifiedDisplayName}
-        </p>
-        <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-3">
+    <section aria-labelledby={`item-title-${patchKey}`} className="min-w-0">
+      <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+        <div className="min-w-0">
+          <p className="text-xs text-base-content/60">
+            รหัส {patchKey}
+            {item.costume && " · Costume"}
+          </p>
+          <h2
+            id={`item-title-${patchKey}`}
+            className="text-xl font-bold text-base-content sm:text-2xl"
+          >
+            {item.identifiedDisplayName}
+          </h2>
+        </div>
+
+        <div className="flex flex-col gap-2 sm:items-end">
+          <div className="flex flex-wrap gap-2">
+            {canPreview && (
+              <CostumePreviewButton onOpen={() => setPreviewOpen(true)} />
+            )}
+            <button
+              type="button"
+              onClick={startExport}
+              disabled={status === "busy"}
+              className="btn btn-primary min-h-11 flex-1 gap-2 sm:flex-none"
+            >
+              {status === "busy" ? (
+                <Loader2 aria-hidden="true" className="h-4 w-4 animate-spin" />
+              ) : (
+                <Download aria-hidden="true" className="h-4 w-4" />
+              )}
+              {status === "busy" ? "กำลังสร้างภาพ..." : "Download Image"}
+            </button>
+          </div>
           {status === "error" && (
             <span role="alert" className="text-sm text-error">
               สร้างภาพไม่สำเร็จ ลองอีกครั้ง
             </span>
           )}
-          <button
-            type="button"
-            onClick={startExport}
-            disabled={status === "busy"}
-            className="btn btn-primary min-h-11 w-full gap-2 sm:w-auto"
-          >
-            {status === "busy" ? (
-              <Loader2 aria-hidden="true" className="h-4 w-4 animate-spin" />
-            ) : (
-              <Download aria-hidden="true" className="h-4 w-4" />
-            )}
-            {status === "busy" ? "กำลังสร้างภาพ..." : "Download Image"}
-          </button>
         </div>
       </div>
 
-      <ItemCard
-        id={`item${patchKey}`}
-        item={item}
-        image={<ImageConvertPage patchKey={patchKey} />}
-        showSponsor
-      />
+      {/* The board the card sits on: a quiet dot grid so the card is the only loud thing. */}
+      <div className="rounded-box border border-base-300 bg-base-200 bg-[radial-gradient(color-mix(in_oklab,var(--color-base-content)_14%,transparent)_1px,transparent_1px)] bg-size-[18px_18px] p-3 sm:p-6">
+        <ItemCard
+          id={`item${patchKey}`}
+          item={item}
+          image={<ImageConvertPage patchKey={patchKey} />}
+          showSponsor
+        />
+      </div>
+
+      {canPreview && previewOpen && (
+        <CostumePreviewModal
+          patchKey={patchKey}
+          name={item.identifiedDisplayName}
+          onClose={() => setPreviewOpen(false)}
+        />
+      )}
 
       {/* Off-screen copy at a fixed width: only mounted while an export runs. */}
       {exporting && (
@@ -169,6 +203,7 @@ function ExportableItem({
 export default function PatchConvertClient() {
   const { items, loading, error } = useItemDb();
   const [query, setQuery] = useState("");
+  const [selected, setSelected] = useState<string>();
 
   const entries = Object.entries(items || {});
   const needle = query.trim().toLowerCase();
@@ -177,6 +212,8 @@ export default function PatchConvertClient() {
         item.identifiedDisplayName.toLowerCase().includes(needle),
       )
     : entries;
+  // A search can hide the chosen item; fall back to the first match.
+  const current = visible.find(([key]) => key === selected) ?? visible[0];
 
   if (loading) return <PageSkeleton cards={3} />;
   if (error) {
@@ -191,59 +228,42 @@ export default function PatchConvertClient() {
 
   return (
     <main className="px-4 py-6 sm:px-6">
-      <header className="mx-auto mb-6 max-w-5xl">
-        <h1 className="text-2xl font-bold text-base-content sm:text-3xl">
-          Patch Convert
-        </h1>
-        <p className="mt-1 text-sm text-base-content/70">
-          แปลงข้อมูลไอเทมจากแพตช์เป็นการ์ดภาพสำหรับโพสต์ กด Download Image
-          เพื่อบันทึกเป็น PNG
-        </p>
+      <div className="mx-auto max-w-7xl">
+        <header className="mb-6 max-w-2xl">
+          <h1 className="text-2xl font-bold text-base-content sm:text-3xl">
+            Patch Convert
+          </h1>
+          <p className="mt-1 text-sm text-base-content/70">
+            เลือกไอเทมจากแพตช์ แล้วกด Download Image เพื่อบันทึกการ์ดเป็น PNG
+            สำหรับโพสต์
+          </p>
+        </header>
 
-        <div className="mt-4 flex items-center gap-2">
-          <label className="input input-bordered flex min-h-11 w-full items-center gap-2 sm:max-w-sm">
-            <Search aria-hidden="true" className="h-4 w-4 shrink-0 opacity-60" />
-            <input
-              type="search"
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-              placeholder="ค้นหาชื่อไอเทม"
-              aria-label="ค้นหาชื่อไอเทม"
-              className="grow"
+        <div className="grid gap-6 lg:grid-cols-[18rem_minmax(0,1fr)] lg:items-start">
+          <ItemPicker
+            entries={visible}
+            total={entries.length}
+            selectedKey={current?.[0]}
+            onSelect={setSelected}
+            query={query}
+            onQueryChange={setQuery}
+          />
+
+          {current ? (
+            <ExportableItem
+              key={current[0]}
+              patchKey={current[0]}
+              item={current[1]}
             />
-          </label>
-          {query && (
-            <button
-              type="button"
-              onClick={() => setQuery("")}
-              className="btn btn-ghost min-h-11 gap-1"
-            >
-              <X aria-hidden="true" className="h-4 w-4" />
-              ล้าง
-            </button>
+          ) : (
+            <p className="rounded-box border border-dashed border-base-300 p-10 text-center text-base-content/70">
+              {entries.length === 0
+                ? "ยังไม่มีข้อมูลไอเทมในแพตช์นี้"
+                : "ไม่พบไอเทมที่ตรงกับคำค้นหา"}
+            </p>
           )}
         </div>
-
-        <p role="status" className="mt-2 text-xs text-base-content/60">
-          {needle
-            ? `พบ ${visible.length} จาก ${entries.length} ไอเทม`
-            : `${entries.length} ไอเทม`}
-        </p>
-      </header>
-
-      {visible.length === 0 ? (
-        <p className="mx-auto max-w-5xl rounded-box border border-base-300 bg-base-100 p-6 text-center text-base-content/70">
-          {entries.length === 0
-            ? "ยังไม่มีข้อมูลไอเทมในแพตช์นี้"
-            : "ไม่พบไอเทมที่ตรงกับคำค้นหา"}
-        </p>
-      ) : (
-        <div className="space-y-10">
-          {visible.map(([key, item]) => (
-            <ExportableItem key={key} patchKey={key} item={item} />
-          ))}
-        </div>
-      )}
+      </div>
     </main>
   );
 }
