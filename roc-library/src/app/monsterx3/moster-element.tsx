@@ -1,33 +1,48 @@
 "use client";
 
 import React, { useState } from "react";
+import { ChevronDown, Search, X } from "lucide-react";
 import MonstersDb from "@/services/mosters/mostersDb";
 import { Monster } from "@/types/monster";
 import type { MonsterX3Event } from "@/types/monsterx3";
 
 const monsters: Monster[] = MonstersDb();
 
+type SortKey = "exp" | "job" | "lv" | "hp";
+
+const SORT_OPTIONS: { value: SortKey; label: string }[] = [
+  { value: "exp", label: "EXP" },
+  { value: "job", label: "JOB" },
+  { value: "lv", label: "เลเวล" },
+  { value: "hp", label: "HP" },
+];
+
+const DAY = 24 * 60 * 60 * 1000;
+
 /** Dates are shown in Thailand time whatever the visitor's clock says. */
 const formatDate = (date: Date) =>
-  date.toLocaleDateString("en-GB", {
+  date.toLocaleDateString("th-TH", {
     timeZone: "Asia/Bangkok",
-    day: "2-digit",
+    day: "numeric",
     month: "long",
     year: "numeric",
   });
 
 export default function MonsterEcomDatabase({ event }: { event: MonsterX3Event }) {
-  const DateFrom = new Date(event.from);
-  const DateTo = new Date(event.to);
+  const from = new Date(event.from);
+  const to = new Date(event.to);
   const now = new Date();
-  const isEventActive = now >= DateFrom && now <= DateTo;
+  const status =
+    now < from ? "upcoming" : now > to ? "ended" : ("active" as const);
+  const daysLeft = Math.max(1, Math.ceil((to.getTime() - now.getTime()) / DAY));
+
   const [search, setSearch] = useState("");
   const [selectedRace, setSelectedRace] = useState("All");
   const [selectedGroup, setSelectedGroup] = useState("All");
-  const [sortBy, setSortBy] = useState("exp");
-  const [sortType, setSortType] = useState("desc");
+  const [sortBy, setSortBy] = useState<SortKey>("exp");
+  const [descending, setDescending] = useState(true);
 
-  // รายชื่อ ID และ EXP/JOB ปกติของงาน อยู่ใน src/data/monsterx3/*.json
+  // รายชื่อ ID, พื้นที่ และ EXP/JOB ปกติของงาน อยู่ใน src/data/monsterx3/*.json
   const monsterx3Ids = event.monsters.map((m) => m.id);
   const rates = new Map(event.monsters.map((m) => [m.id, m]));
   const exp3 = (m: Monster) =>
@@ -37,340 +52,419 @@ export default function MonsterEcomDatabase({ event }: { event: MonsterX3Event }
   // id ที่อยู่ในงานแต่ยังไม่มีในฐานข้อมูลมอนสเตอร์ จะไม่ถูกแสดง
   const missingIds = monsterx3Ids.filter((id) => !monsters.some((m) => m.id === id));
 
-  const filteredMonsters = !isEventActive
-    ? []
-    : monsters
-        .filter((m) => monsterx3Ids.includes(m.id))
-        .filter((m) => m.name.toLowerCase().includes(search.toLowerCase()))
-        .filter((m) => selectedRace === "All" || m.race === selectedRace)
-        .filter(
-          (m) =>
-            selectedGroup === "All" || rates.get(m.id)?.group === selectedGroup,
-        )
-        .sort((a, b) => {
-          // asc = 1 (a-b), desc = -1 (b-a) หรือสลับตามความถนัด
-          // ในที่นี้ถ้าเลือก desc ให้เอาค่ามากไว้บน (b-a)
-          const modifier = sortType === "desc" ? 1 : -1;
-          let result = 0;
+  const eventMonsters = monsters.filter((m) => monsterx3Ids.includes(m.id));
+  const maxExp = Math.max(1, ...eventMonsters.map(exp3));
+  const maxJob = Math.max(1, ...eventMonsters.map(job3));
 
-          if (sortBy === "hp") result = b.hp - a.hp;
-          else if (sortBy === "lv") result = b.lv - a.lv;
-          else if (sortBy === "exp") result = exp3(b) - exp3(a);
-          else if (sortBy === "job") result = job3(b) - job3(a);
-
-          // สำคัญ: ต้องนำผลต่างมาคูณกับ modifier เพื่อสลับทิศทาง
-          return result * modifier;
-        });
-
-  const races = [
-    "All",
-    ...new Set(
-      monsters.filter((m) => monsterx3Ids.includes(m.id)).map((m) => m.race),
-    ),
-  ];
+  const races = ["All", ...new Set(eventMonsters.map((m) => m.race))];
   // พื้นที่ตามประกาศของงาน เรียงตามลำดับที่ปรากฏในไฟล์
-  const groups = ["All", ...new Set(event.monsters.map((m) => m.group))];
+  const groups = [...new Set(event.monsters.map((m) => m.group))];
+  const groupCount = (group: string) =>
+    event.monsters.filter((m) => m.group === group).length;
+
+  const sortValue = (m: Monster) =>
+    sortBy === "hp" ? m.hp : sortBy === "lv" ? m.lv : sortBy === "job" ? job3(m) : exp3(m);
+
+  const visible =
+    status !== "active"
+      ? []
+      : eventMonsters
+          .filter((m) => m.name.toLowerCase().includes(search.trim().toLowerCase()))
+          .filter((m) => selectedRace === "All" || m.race === selectedRace)
+          .filter(
+            (m) =>
+              selectedGroup === "All" || rates.get(m.id)?.group === selectedGroup,
+          )
+          .sort((a, b) => (descending ? 1 : -1) * (sortValue(b) - sortValue(a)));
+
+  const filtering =
+    search.trim() !== "" || selectedRace !== "All" || selectedGroup !== "All";
+  const reset = () => {
+    setSearch("");
+    setSelectedRace("All");
+    setSelectedGroup("All");
+  };
 
   return (
-    <div className="flex min-h-screen bg-gray-950 text-gray-100 font-sans">
-      {/* --- SIDEBAR --- */}
-      <aside className="w-64 bg-gray-900 border-r border-gray-800 p-6 fixed top-0 left-0 h-screen overflow-y-auto hidden md:block">
-        <h2 className="text-xl font-bold mb-6 text-cyan-400 tracking-tight">
-          Filters
-        </h2>
-        <div className="space-y-8">
-          <div>
-            <label className="text-xs font-semibold text-gray-500 uppercase tracking-widest">
-              Search
-            </label>
-            <input
-              type="text"
-              placeholder="Monster Name..."
-              className="w-full mt-2 bg-gray-800 border border-gray-700 rounded-lg p-2.5 text-sm focus:ring-1 focus:ring-cyan-500 outline-none transition-all"
-              onChange={(e) => setSearch(e.target.value)}
-            />
-          </div>
-          <div>
-            <label className="text-xs font-semibold text-gray-500 uppercase tracking-widest">
-              Race
-            </label>
-            <div className="mt-3 flex flex-col gap-2">
-              {races.map((race) => (
-                <button
-                  key={race}
-                  onClick={() => setSelectedRace(race)}
-                  className={`text-left px-3 py-2 rounded-md text-sm transition-colors ${
-                    selectedRace === race
-                      ? "bg-cyan-600 text-white shadow-lg shadow-cyan-900/20"
-                      : "text-gray-400 hover:bg-gray-800"
-                  }`}
-                >
-                  {race}
-                </button>
-              ))}
-            </div>
-          </div>
-          <div>
-            <label className="text-xs font-semibold text-gray-500 uppercase tracking-widest">
-              พื้นที่
-            </label>
-            <div className="mt-3 flex flex-col gap-2">
-              {groups.map((group) => (
-                <button
-                  key={group}
-                  onClick={() => setSelectedGroup(group)}
-                  className={`text-left px-3 py-2 rounded-md text-sm transition-colors ${
-                    selectedGroup === group
-                      ? "bg-cyan-600 text-white shadow-lg shadow-cyan-900/20"
-                      : "text-gray-400 hover:bg-gray-800"
-                  }`}
-                >
-                  {group}
-                </button>
-              ))}
-            </div>
-          </div>
-        </div>
-      </aside>
-
-      {/* --- MAIN CONTENT --- */}
-      <main className="flex-1 p-4 md:p-8 md:ml-64">
-        <div className="flex flex-col sm:flex-row justify-between items-center mb-8 gap-4 bg-gray-900/50 p-5 rounded-2xl border border-gray-800 backdrop-blur-sm">
-          <div className="text-sm text-gray-400">
-            Results:{" "}
-            <span className="text-cyan-400 font-bold">
-              {filteredMonsters.length}
-            </span>{" "}
-            Monsters
-          </div>
-          <div className="flex items-center gap-3">
-            {event.title} · เริ่มต้นวันที่ {formatDate(DateFrom)} -{" "}
-            {formatDate(DateTo)}
-          </div>
-          <div className="flex items-center gap-3">
-            <span className="text-xs text-gray-500 uppercase font-bold">
-              ค้นหาด้วย
-            </span>
-            <select
-              className="bg-gray-800 border border-gray-700 rounded-lg px-3 py-1.5 text-sm outline-none focus:border-cyan-500 text-gray-200"
-              onChange={(e) => setSortBy(e.target.value)}
+    <main className="px-4 py-6 sm:px-6">
+      <div className="mx-auto max-w-7xl space-y-5">
+        {/* Event header: what it is, whether it is on, and until when */}
+        <header className="relative overflow-hidden rounded-box border border-base-300 bg-base-100 p-5 sm:p-6">
+          <span
+            aria-hidden="true"
+            className="pointer-events-none absolute -right-2 -top-6 select-none text-[9rem] font-black leading-none text-accent/15 sm:text-[12rem]"
+          >
+            ×{event.multiplier}
+          </span>
+          <div className="relative">
+            <span
+              className={`badge ${
+                status === "active"
+                  ? "badge-success"
+                  : status === "upcoming"
+                    ? "badge-info"
+                    : "badge-neutral"
+              }`}
             >
-              <option value="exp">EXP</option>
-              <option value="job">JOB</option>
-              <option value="lv">Base Level</option>
-              <option value="hp">Max HP</option>
-            </select>
-            <span className="text-xs text-gray-500 uppercase font-bold">
-              เรียงลำดับ
+              {status === "active"
+                ? "กำลังจัดงาน"
+                : status === "upcoming"
+                  ? "ยังไม่เริ่ม"
+                  : "สิ้นสุดแล้ว"}
             </span>
-            <select
-              className="bg-gray-800 border border-gray-700 rounded-lg px-3 py-1.5 text-sm outline-none focus:border-cyan-500 text-gray-200"
-              onChange={(e) => setSortType(e.target.value)}
-            >
-              <option value="desc">มากไปน้อย</option>
-              <option value="asc">น้อยไปมาก</option>
-            </select>
+            <h1 className="mt-2 text-2xl font-bold text-base-content sm:text-3xl">
+              {event.title}
+            </h1>
+            <p className="mt-1 text-sm text-base-content/70 sm:text-base">
+              EXP และ JOB x{event.multiplier} ให้มอนสเตอร์ที่กำหนด
+              {" "}
+              {formatDate(from)} – {formatDate(to)}
+              {status === "active" && (
+                <span suppressHydrationWarning>
+                  {" "}
+                  · เหลืออีก {daysLeft} วัน
+                </span>
+              )}
+            </p>
           </div>
-        </div>
+        </header>
 
         {missingIds.length > 0 && (
-          <p
-            role="alert"
-            className="mb-6 rounded-xl border border-yellow-600/50 bg-yellow-900/20 p-4 text-sm text-yellow-300"
-          >
-            ยังไม่มีข้อมูลสถานะในฐานข้อมูลมอนสเตอร์สำหรับ id:{" "}
-            {missingIds.join(", ")}
-          </p>
+          <div role="alert" className="alert alert-warning text-sm">
+            ยังไม่มีข้อมูลสถานะในฐานข้อมูลมอนสเตอร์สำหรับ id: {missingIds.join(", ")}
+          </div>
         )}
 
-        <div className="flex flex-wrap gap-8 justify-center">
-          {!isEventActive ? (
-            <div className="flex flex-col items-center justify-center py-24 text-center gap-4">
-              <p className="text-4xl font-black text-base-content/70 uppercase tracking-widest">
-                Event Ended
-              </p>
-              <p className="text-gray-500 text-sm">
-                Monster x3 EXP/JOB ได้สิ้นสุดลงแล้ว เมื่อวันที่{" "}
-                {formatDate(DateTo)}
-              </p>
-            </div>
-          ) : (
-            filteredMonsters.map((m) => (
+        {status !== "active" ? (
+          <p className="rounded-box border border-dashed border-base-300 bg-base-100 p-10 text-center text-base-content/70">
+            {status === "upcoming"
+              ? `งานนี้จะเริ่มวันที่ ${formatDate(from)} กลับมาดูรายชื่อมอนสเตอร์ได้ในวันนั้น`
+              : `Monster x${event.multiplier} EXP/JOB สิ้นสุดลงแล้วเมื่อวันที่ ${formatDate(to)}`}
+          </p>
+        ) : (
+          <>
+            {/* Filters: area first because it is how the event is announced */}
+            <section
+              aria-label="ตัวกรองและการเรียงลำดับ"
+              className="space-y-3 rounded-box border border-base-300 bg-base-100 p-4"
+            >
               <div
-                key={m.id}
-                className="group relative bg-gray-800 rounded-[2rem] p-8 w-full max-w-[500px] border border-gray-700 hover:border-cyan-500/50 shadow-2xl hover:shadow-cyan-900/10 transition-all duration-500"
+                role="group"
+                aria-label="พื้นที่"
+                className="-mx-1 flex gap-2 overflow-x-auto px-1 pb-1"
               >
-                {/* Header */}
-                <div className="flex justify-between items-center mb-6">
-                  <h2 className="text-3xl font-black text-white group-hover:text-cyan-300 transition-colors uppercase tracking-tight">
-                    {m.name}
-                  </h2>
-                  <span className="text-sm font-mono bg-gray-700/50 px-3 py-1 rounded-full text-gray-400 border border-gray-600">
-                    #{m.id}
-                  </span>
-                </div>
-
-                <div className="grid grid-cols-5 gap-6">
-                  {/* Left: Avatar & HP */}
-                  <div className="col-span-2 flex flex-col items-center">
-                    <div className="relative w-full aspect-square bg-gray-900 rounded-3xl flex items-center justify-center p-4 mb-4 border border-gray-700/50 shadow-inner group-hover:scale-105 transition-transform duration-500">
-                      <img
-                        src={m.image}
-                        alt={m.name}
-                        className="max-h-full max-w-full object-contain drop-shadow-[0_0_20px_rgba(34,211,238,0.2)]"
-                      />
-                    </div>
-                  </div>
-
-                  {/* Right: Detailed Stats */}
-                  <div className="col-span-3 space-y-2 py-2">
-                    <StatRow
-                      label="Level"
-                      value={m.lv}
-                      color="text-yellow-400"
-                    />
-                    <StatRow label="Race" value={m.race} />
-                    <StatRow label="Property" value={m.property} isElement />
-                    <StatRow label="Size" value={m.scale} />
-                    <div className="h-px bg-gradient-to-r from-transparent via-gray-700 to-transparent my-4"></div>
-                    <div className="grid grid-cols-3 gap-x-4 gap-y-2">
-                      <StatRow label="DEF" value={m.def} />
-                      <StatRow label="MDEF" value={m.mdef} />
-                      <StatRow
-                        label="HIT"
-                        value={m.hit}
-                        color="text-green-400"
-                      />
-                    </div>
-                  </div>
-                </div>
-                {/* BIG HP SECTION */}
-                <div className="mt-8 pt-6 border-t border-gray-700/50 grid grid-cols-2">
-                  <div className="col-span-2">
-                    <p className="text-3xl font-black text-gray-500 uppercase tracking-[0.2em] mb-1">
-                      Health Points
-                    </p>
-                    <p className="text-2xl font-black text-red-500 drop-shadow-[0_2px_4px_rgba(239,68,68,0.3)] tabular-nums">
-                      {Number(m.hp).toLocaleString()}
-                    </p>
-                  </div>
-
-                  <div className="col-span-1">
-                    <p className="text-3xl font-black text-gray-500">EXP</p>
-                    <p className="text-2xl font-black text-purple-400 drop-shadow-[0_2px_4px_rgba(239,68,68,0.3)] tabular-nums">
-                      {exp3(m).toLocaleString()}
-                    </p>
-                  </div>
-                  <div className="col-span-1">
-                    <p className="text-3xl font-black text-gray-500">Job</p>
-                    <p className="text-2xl font-black text-blue-500 drop-shadow-[0_2px_4px_rgba(239,68,68,0.3)] tabular-nums">
-                      {job3(m).toLocaleString()}
-                    </p>
-                  </div>
-                </div>
-                {/* DYNAMIC ELEMENT SECTION */}
-                <div className="mt-8 pt-6 border-t border-gray-700/50">
-                  <p className="text-xs font-black text-gray-500 uppercase tracking-widest mb-4 flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-blue-500"></span>
-                    Element Resistances & Weaknesses
-                  </p>
-                  <div className="flex flex-wrap gap-3">
-                    {m.element ? (
-                      Object.entries(m.element)
-                        // ลบ .filter อันเดิมออก หรือเปลี่ยนเงื่อนไขตามต้องการ
-                        .sort(
-                          ([_, a], [__, b]) => (b as number) - (a as number),
-                        )
-                        .map(([el, val]) => (
-                          <div
-                            key={el}
-                            className={`flex flex-col items-center bg-gray-900/80 border rounded-xl px-3 py-2 min-w-[70px] transition-all hover:bg-gray-800 ${
-                              (val as number) > 100
-                                ? "border-green-500/50"
-                                : (val as number) < 100
-                                  ? "border-red-500/50"
-                                  : "border-gray-700/50"
-                            }`}
-                          >
-                            <span
-                              className={`text-[10px] font-black uppercase mb-1 ${getElementColor(el)}`}
-                            >
-                              {el}
-                            </span>
-                            <span
-                              className={`text-lg font-black ${
-                                (val as number) > 100
-                                  ? "text-green-400"
-                                  : (val as number) < 100
-                                    ? "text-red-400"
-                                    : "text-white"
-                              }`}
-                            >
-                              {val}%
-                            </span>
-                          </div>
-                        ))
-                    ) : (
-                      <span className="text-xs text-base-content/70 italic">
-                        No element data available
+                {["All", ...groups].map((group) => {
+                  const selected = selectedGroup === group;
+                  return (
+                    <button
+                      key={group}
+                      type="button"
+                      aria-pressed={selected}
+                      onClick={() => setSelectedGroup(group)}
+                      className={`btn btn-sm min-h-11 shrink-0 whitespace-nowrap ${
+                        selected ? "btn-primary" : "btn-ghost border-base-300"
+                      }`}
+                    >
+                      {group === "All" ? "ทั้งหมด" : group}
+                      <span className="opacity-70">
+                        {group === "All" ? event.monsters.length : groupCount(group)}
                       </span>
-                    )}
-                  </div>
+                    </button>
+                  );
+                })}
+              </div>
+
+              <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-[minmax(0,1fr)_12rem_auto]">
+                <label className="input input-bordered flex min-h-11 w-full items-center gap-2">
+                  <Search aria-hidden="true" className="h-4 w-4 shrink-0 opacity-60" />
+                  <input
+                    type="search"
+                    value={search}
+                    onChange={(e) => setSearch(e.target.value)}
+                    placeholder="ค้นหาชื่อมอนสเตอร์"
+                    aria-label="ค้นหาชื่อมอนสเตอร์"
+                    className="grow"
+                  />
+                </label>
+
+                <select
+                  aria-label="เผ่า"
+                  value={selectedRace}
+                  onChange={(e) => setSelectedRace(e.target.value)}
+                  className="select select-bordered min-h-11 w-full"
+                >
+                  {races.map((race) => (
+                    <option key={race} value={race}>
+                      {race === "All" ? "ทุกเผ่า" : race}
+                    </option>
+                  ))}
+                </select>
+
+                <div className="flex items-center gap-2 sm:col-span-2 lg:col-span-1">
+                  <select
+                    aria-label="เรียงตาม"
+                    value={sortBy}
+                    onChange={(e) => setSortBy(e.target.value as SortKey)}
+                    className="select select-bordered min-h-11 grow"
+                  >
+                    {SORT_OPTIONS.map((o) => (
+                      <option key={o.value} value={o.value}>
+                        เรียงตาม {o.label}
+                      </option>
+                    ))}
+                  </select>
+                  <button
+                    type="button"
+                    onClick={() => setDescending((d) => !d)}
+                    className="btn btn-outline min-h-11 shrink-0"
+                  >
+                    {descending ? "มาก → น้อย" : "น้อย → มาก"}
+                  </button>
                 </div>
               </div>
-            ))
-          )}
+
+              <p role="status" className="text-xs text-base-content/60">
+                แสดง {visible.length} จาก {eventMonsters.length} ตัว
+                {filtering && (
+                  <button
+                    type="button"
+                    onClick={reset}
+                    className="link link-primary ml-3 inline-flex items-center gap-1"
+                  >
+                    <X aria-hidden="true" className="h-3 w-3" />
+                    ล้างตัวกรอง
+                  </button>
+                )}
+              </p>
+            </section>
+
+            {visible.length === 0 ? (
+              <p className="rounded-box border border-dashed border-base-300 bg-base-100 p-10 text-center text-base-content/70">
+                ไม่พบมอนสเตอร์ที่ตรงกับตัวกรอง
+              </p>
+            ) : (
+              <ul className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+                {visible.map((m, index) => (
+                  <li key={m.id}>
+                    <MonsterCard
+                      monster={m}
+                      rank={sortBy === "exp" || sortBy === "job" ? index + 1 : undefined}
+                      multiplier={event.multiplier}
+                      exp={exp3(m)}
+                      job={job3(m)}
+                      baseExp={rates.get(m.id)?.exp ?? 0}
+                      baseJob={rates.get(m.id)?.job ?? 0}
+                      expShare={exp3(m) / maxExp}
+                      jobShare={job3(m) / maxJob}
+                      group={rates.get(m.id)?.group}
+                    />
+                  </li>
+                ))}
+              </ul>
+            )}
+          </>
+        )}
+      </div>
+    </main>
+  );
+}
+
+// --- Card ---
+
+interface MonsterCardProps {
+  monster: Monster;
+  rank?: number;
+  multiplier: number;
+  exp: number;
+  job: number;
+  baseExp: number;
+  baseJob: number;
+  /** 0–1: how this monster's value compares with the best of the event. */
+  expShare: number;
+  jobShare: number;
+  group?: string;
+}
+
+function MonsterCard({
+  monster: m,
+  rank,
+  multiplier,
+  exp,
+  job,
+  baseExp,
+  baseJob,
+  expShare,
+  jobShare,
+  group,
+}: MonsterCardProps) {
+  const [open, setOpen] = useState(false);
+  const detailsId = `monster-${m.id}-details`;
+
+  // Elements that are not 100%: above it the monster takes more damage, below it less,
+  // and at 0% it takes none at all, which gets a group of its own.
+  const elements = Object.entries(m.element ?? {});
+  const weak = elements.filter(([, v]) => v > 100);
+  const resist = elements.filter(([, v]) => v < 100 && v !== 0);
+  const immune = elements.filter(([, v]) => v === 0);
+
+  return (
+    <article className="flex h-full flex-col rounded-box border border-base-300 bg-base-100 p-4 transition-shadow hover:shadow-md">
+      <div className="flex gap-3">
+        <div className="grid h-28 w-28 shrink-0 place-items-center rounded-field bg-base-200 p-2 sm:h-32 sm:w-32">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={m.image}
+            alt=""
+            loading="lazy"
+            onError={(e) => {
+              e.currentTarget.style.visibility = "hidden";
+            }}
+            className="max-h-full max-w-full object-contain"
+          />
         </div>
-      </main>
+        <div className="min-w-0 grow">
+          <div className="flex items-start justify-between gap-2">
+            <h2 className="truncate text-lg font-bold text-base-content">{m.name}</h2>
+            {rank !== undefined && (
+              <span className="text-xs font-semibold tabular-nums text-base-content/50">
+                #{rank}
+              </span>
+            )}
+          </div>
+          <p className="text-sm text-base-content/70">
+            Lv {m.lv} · {m.race}
+          </p>
+          <p className="text-xs text-base-content/60">
+            {m.property} · {m.scale}
+            {group && ` · ${group}`}
+          </p>
+        </div>
+      </div>
+
+      <dl className="mt-4 grid grid-cols-2 gap-4">
+        <Reward
+          label={`EXP ×${multiplier}`}
+          value={exp}
+          base={baseExp}
+          share={expShare}
+          badge="badge-primary"
+          bar="bg-primary"
+        />
+        <Reward
+          label={`JOB ×${multiplier}`}
+          value={job}
+          base={baseJob}
+          share={jobShare}
+          badge="badge-accent"
+          bar="bg-accent"
+        />
+      </dl>
+
+      <button
+        type="button"
+        onClick={() => setOpen((v) => !v)}
+        aria-expanded={open}
+        aria-controls={detailsId}
+        className="btn btn-ghost btn-sm mt-3 min-h-11 justify-between border-base-300"
+      >
+        {open ? "ซ่อนรายละเอียด" : "รายละเอียดสถานะ"}
+        <ChevronDown
+          aria-hidden="true"
+          className={`h-4 w-4 transition-transform ${open ? "rotate-180" : ""}`}
+        />
+      </button>
+
+      {open && (
+        <div id={detailsId} className="mt-3 space-y-3 border-t border-base-300 pt-3">
+          <dl className="grid grid-cols-4 gap-2 text-center">
+            <Stat label="HP" value={m.hp.toLocaleString()} />
+            <Stat label="DEF" value={m.def} />
+            <Stat label="MDEF" value={m.mdef} />
+            <Stat label="HIT" value={m.hit} />
+          </dl>
+          <ElementList title="โดนธาตุแรงขึ้น" tone="text-success" items={weak} />
+          <ElementList title="ต้านทาน" tone="text-error" items={resist} />
+          <ElementList title="ไม่มีเพิ่ม,ลด (0%)" tone="text-base-content" items={immune} />
+        </div>
+      )}
+    </article>
+  );
+}
+
+function Reward({
+  label,
+  value,
+  base,
+  share,
+  badge,
+  bar,
+}: {
+  label: string;
+  value: number;
+  base: number;
+  share: number;
+  badge: string;
+  bar: string;
+}) {
+  return (
+    <div className="min-w-0">
+      <dt>
+        <span className={`badge badge-sm font-bold ${badge}`}>{label}</span>
+      </dt>
+      <dd className="mt-1 text-2xl font-extrabold tabular-nums text-base-content">
+        {value.toLocaleString()}
+      </dd>
+      <dd className="text-xs text-base-content/60 tabular-nums">
+        ปกติ {base.toLocaleString()}
+      </dd>
+      {/* The bar compares with the best of the event; the numbers above carry the information. */}
+      <div aria-hidden="true" className="mt-2 h-1.5 overflow-hidden rounded-full bg-base-200">
+        <div
+          className={`h-full rounded-full ${bar}`}
+          style={{ width: `${Math.max(4, Math.round(share * 100))}%` }}
+        />
+      </div>
     </div>
   );
 }
 
-// --- Helper Functions & Interfaces ---
-
-function getElementColor(element: string) {
-  const colors: Record<string, string> = {
-    fire: "text-red-500",
-    water: "text-blue-500",
-    wind: "text-yellow-400",
-    earth: "text-orange-600",
-    holy: "text-yellow-100",
-    shadow: "text-purple-900",
-    ghost: "text-cyan-300",
-    undead: "text-emerald-500",
-    neutral: "text-gray-400",
-    poison: "text-purple-400",
-  };
-  return colors[element.toLowerCase()] || "text-gray-400";
-}
-
-interface StatRowProps {
-  label: string;
-  value: string | number | undefined | null;
-  color?: string;
-  isElement?: boolean;
-}
-
-function StatRow({
-  label,
-  value,
-  color = "text-white",
-  isElement = false,
-}: StatRowProps) {
+function Stat({ label, value }: { label: string; value: string | number }) {
   return (
-    <div className="flex justify-between items-center py-1">
-      <span className="text-gray-500 text-[11px] font-bold uppercase tracking-wider">
-        {label}
-      </span>
-      <span
-        className={`${color} font-black text-sm ${
-          isElement
-            ? "bg-cyan-900/30 px-2 py-0.5 rounded-md border border-cyan-700/50 text-cyan-300 text-xs"
-            : ""
-        }`}
-      >
-        {value}
-      </span>
+    <div className="rounded-field bg-base-200 px-2 py-1.5">
+      <dt className="text-[11px] font-semibold text-base-content/60">{label}</dt>
+      <dd className="text-sm font-bold tabular-nums">{value}</dd>
+    </div>
+  );
+}
+
+function ElementList({
+  title,
+  tone,
+  items,
+}: {
+  title: string;
+  tone: string;
+  items: [string, number][];
+}) {
+  if (items.length === 0) return null;
+  const sorted = [...items].sort((a, b) =>
+    tone === "text-success" ? b[1] - a[1] : a[1] - b[1],
+  );
+
+  return (
+    <div>
+      <p className="mb-1.5 text-xs font-semibold text-base-content/60">{title}</p>
+      <ul className="flex flex-wrap gap-1.5">
+        {sorted.map(([element, value]) => (
+          <li
+            key={element}
+            className="rounded-field border border-base-300 px-2 py-1 text-xs"
+          >
+            <span className="capitalize text-base-content/80">{element}</span>{" "}
+            <span className={`font-bold tabular-nums ${tone}`}>{value}%</span>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
