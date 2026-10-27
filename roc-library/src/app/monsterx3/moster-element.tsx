@@ -19,6 +19,32 @@ const SORT_OPTIONS: { value: SortKey; label: string }[] = [
 
 const DAY = 24 * 60 * 60 * 1000;
 
+/** The colour of each element's dot, as players picture them. Full class names so Tailwind sees them. */
+const ELEMENT_DOT: Record<string, string> = {
+  neutral: "bg-gray-400",
+  water: "bg-blue-500",
+  earth: "bg-amber-700",
+  fire: "bg-red-500",
+  wind: "bg-green-500",
+  poison: "bg-purple-500",
+  holy: "bg-yellow-400",
+  shadow: "bg-slate-700",
+  ghost: "bg-slate-200",
+  undead: "bg-emerald-700",
+};
+
+/** A small coloured dot that says which element at a glance; the name always sits beside it. */
+function ElementDot({ element }: { element: string }) {
+  return (
+    <span
+      aria-hidden="true"
+      className={`inline-block h-3 w-3 shrink-0 rounded-full ring-1 ring-base-content/30 ${
+        ELEMENT_DOT[element.toLowerCase()] ?? "bg-gray-400"
+      }`}
+    />
+  );
+}
+
 /** Dates are shown in Thailand time whatever the visitor's clock says. */
 const formatDate = (date: Date) =>
   date.toLocaleDateString("th-TH", {
@@ -243,7 +269,7 @@ export default function MonsterEcomDatabase({ event }: { event: MonsterX3Event }
                 ไม่พบมอนสเตอร์ที่ตรงกับตัวกรอง
               </p>
             ) : (
-              <ul className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+              <ul className="grid items-start gap-4 sm:grid-cols-2 xl:grid-cols-3">
                 {visible.map((m, index) => (
                   <li key={m.id}>
                     <MonsterCard
@@ -308,37 +334,39 @@ function MonsterCard({
   const immune = elements.filter(([, v]) => v === 0);
 
   return (
-    <article className="flex h-full flex-col rounded-box border border-base-300 bg-base-100 p-4 transition-shadow hover:shadow-md">
-      <div className="flex gap-3">
-        <div className="grid h-28 w-28 shrink-0 place-items-center rounded-field bg-base-200 p-2 sm:h-32 sm:w-32">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={m.image}
-            alt=""
-            loading="lazy"
-            onError={(e) => {
-              e.currentTarget.style.visibility = "hidden";
-            }}
-            className="max-h-full max-w-full object-contain"
-          />
-        </div>
-        <div className="min-w-0 grow">
-          <div className="flex items-start justify-between gap-2">
-            <h2 className="truncate text-lg font-bold text-base-content">{m.name}</h2>
-            {rank !== undefined && (
-              <span className="text-xs font-semibold tabular-nums text-base-content/50">
-                #{rank}
-              </span>
-            )}
-          </div>
-          <p className="text-sm text-base-content/70">
-            Lv {m.lv} · {m.race}
-          </p>
-          <p className="text-xs text-base-content/60">
-            {m.property} · {m.scale}
-            {group && ` · ${group}`}
-          </p>
-        </div>
+    <article className="flex flex-col rounded-box border border-base-300 bg-base-100 p-4 transition-shadow hover:shadow-md">
+      {/* The picture gets the full width of the card. A fixed-height flex box makes a tall
+          sprite shrink to fit instead of spilling over the numbers below. */}
+      <div className="relative flex h-44 items-center justify-center overflow-hidden rounded-field bg-base-200 p-3 sm:h-52">
+        {rank !== undefined && (
+          <span className="absolute left-3 top-2 text-xs font-bold tabular-nums text-base-content/50">
+            #{rank}
+          </span>
+        )}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={m.image}
+          alt=""
+          loading="lazy"
+          onError={(e) => {
+            e.currentTarget.style.visibility = "hidden";
+          }}
+          className="max-h-full max-w-full object-contain"
+        />
+      </div>
+
+      <div className="mt-3">
+        <h2 className="truncate text-xl font-bold text-base-content">{m.name}</h2>
+        <p className="text-sm text-base-content/70">
+          Lv {m.lv} · {m.race} · {m.scale}
+        </p>
+        <p className="mt-0.5 flex flex-wrap items-center gap-x-3 gap-y-0.5 text-xs text-base-content/60">
+          <span className="inline-flex items-center gap-1.5">
+            <ElementDot element={m.property.split(" ")[0]} />
+            {m.property}
+          </span>
+          {group && <span>{group}</span>}
+        </p>
       </div>
 
       <dl className="mt-4 grid grid-cols-2 gap-4">
@@ -384,7 +412,7 @@ function MonsterCard({
           </dl>
           <ElementList title="โดนธาตุแรงขึ้น" tone="text-success" items={weak} />
           <ElementList title="ต้านทาน" tone="text-error" items={resist} />
-          <ElementList title="ไม่มีเพิ่ม,ลด (0%)" tone="text-base-content" items={immune} />
+          <ElementList title="ไม่โดน (0%)" tone="text-base-content" items={immune} />
         </div>
       )}
     </article>
@@ -460,8 +488,11 @@ function ElementList({
             key={element}
             className="rounded-field border border-base-300 px-2 py-1 text-xs"
           >
-            <span className="capitalize text-base-content/80">{element}</span>{" "}
-            <span className={`font-bold tabular-nums ${tone}`}>{value}%</span>
+            <span className="inline-flex items-center gap-1.5">
+              <ElementDot element={element} />
+              <span className="capitalize text-base-content/80">{element}</span>
+              <span className={`font-bold tabular-nums ${tone}`}>{value}%</span>
+            </span>
           </li>
         ))}
       </ul>
