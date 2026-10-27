@@ -1,6 +1,26 @@
 import ScrollRoller from "@/components/ScrollRoller";
-import { FESTA_2026_PRIZES } from "@/data/scroll/festa2026";
+import ScrollPicker from "@/components/ScrollRoller/ScrollPicker";
+import { loadScrolls } from "@/data/scroll";
 
-export default function RandomScrollPage() {
-  return <ScrollRoller title="Ragnarok Festa 2026 Scroll" prizes={FESTA_2026_PRIZES} />;
+type RandomScrollPageProps = {
+  searchParams: Promise<{ scroll?: string | string[] }>;
+};
+
+export default async function RandomScrollPage({
+  searchParams,
+}: RandomScrollPageProps) {
+  const [scrolls, params] = await Promise.all([loadScrolls(), searchParams]);
+  const requested = Array.isArray(params.scroll)
+    ? params.scroll[0]
+    : params.scroll;
+  // An unknown id falls back to the first Scroll.
+  const current = scrolls.find((s) => s.id === requested) ?? scrolls[0];
+
+  return (
+    <>
+      <ScrollPicker scrolls={scrolls} currentId={current.id} />
+      {/* The key remounts the roller, so a new Scroll starts with a clean history. */}
+      <ScrollRoller key={current.id} title={current.title} prizes={current.prizes} />
+    </>
+  );
 }

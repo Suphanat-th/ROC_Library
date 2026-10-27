@@ -1,7 +1,7 @@
 import type { Tier } from "@/types/scroll";
 
 // Single place that maps a Tier to theme tokens (full class names so Tailwind can see them).
-export const TIER_ORDER: Tier[] = ["SSR", "SR", "A", "B", "C", "E"];
+export const TIER_ORDER: Tier[] = ["SSR", "SR", "R", "A", "B", "C", "E"];
 
 interface TierStyle {
   border: string;
@@ -34,6 +34,16 @@ export const TIER_STYLE: Record<Tier, TierStyle> = {
     badge: "badge-warning",
     solid: "bg-warning text-warning-content shadow-[0_0_12px] shadow-warning",
     glow: "shadow-warning/40",
+  },
+  // The theme has no purple token, and every other token is taken by a Tier, so R borrows violet.
+  R: {
+    border: "border-violet-500",
+    text: "text-violet-600 dark:text-violet-400",
+    bg: "bg-violet-500/15",
+    bgStrong: "bg-violet-500/25",
+    badge: "border-violet-500 bg-violet-500 text-white",
+    solid: "bg-violet-600 text-white shadow-[0_0_12px] shadow-violet-500",
+    glow: "shadow-violet-500/40",
   },
   A: {
     border: "border-primary",

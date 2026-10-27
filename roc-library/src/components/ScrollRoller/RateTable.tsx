@@ -1,6 +1,6 @@
-import Image from "next/image";
 import type { Prize } from "@/types/scroll";
 import { totalRate } from "@/utils/scrollRoll";
+import PrizeImage from "./PrizeImage";
 import { TIER_ORDER, TIER_STYLE } from "./tierStyles";
 
 export default function RateTable({ prizes }: { prizes: Prize[] }) {
@@ -23,7 +23,7 @@ export default function RateTable({ prizes }: { prizes: Prize[] }) {
             <tr key={p.id}>
               <td>
                 <div className="flex items-center gap-2">
-                  <Image src={p.image} alt="" width={28} height={28} unoptimized className="shrink-0" />
+                  <PrizeImage src={p.image} size={28} />
                   <span>{p.name}</span>
                 </div>
               </td>
@@ -40,10 +40,15 @@ export default function RateTable({ prizes }: { prizes: Prize[] }) {
             <th colSpan={3} className="text-right">
               รวม
             </th>
-            <th className={`text-right tabular-nums ${total === 100 ? "" : "text-error"}`}>
-              {total.toFixed(2)}%
-            </th>
+            <th className="text-right tabular-nums">{total.toFixed(2)}%</th>
           </tr>
+          {total !== 100 && (
+            <tr>
+              <td colSpan={4} className="text-right text-xs font-normal text-base-content/60">
+                อัตรารวมไม่ครบ 100% ตามที่เกมประกาศ ระบบสุ่มตามสัดส่วนของอัตราที่แสดง
+              </td>
+            </tr>
+          )}
         </tfoot>
       </table>
     </div>

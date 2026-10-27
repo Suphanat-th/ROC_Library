@@ -1,4 +1,16 @@
-export type Tier = "SSR" | "SR" | "A" | "B" | "C" | "E";
+export type Tier = "SSR" | "SR" | "R" | "A" | "B" | "C" | "E";
+
+/** One Scroll the player can pick on the Random Scroll page. */
+export interface ScrollDef {
+  /** Used in the page address (?scroll=<id>), so keep it short and lowercase. */
+  id: string;
+  title: string;
+  /** Picture shown on the Scroll's card in the picker. */
+  cover: string;
+  /** Where the Prize list and rates were copied from. */
+  source?: string;
+  prizes: Prize[];
+}
 
 export interface Prize {
   id: string;
@@ -6,7 +18,7 @@ export interface Prize {
   image: string;
   quantity: number;
   tier: Tier;
-  /** Drop rate in percent. Every Prize of a Scroll adds up to 100. */
+  /** Drop rate in percent, as the game publishes it. A draw is weighted by these even when they do not total 100. */
   rate: number;
   /** When true, drawing this Prize shows a congratulation Announcement. */
   announce?: boolean;

@@ -1,5 +1,5 @@
-import Image from "next/image";
 import type { Prize, RollHistoryEntry } from "@/types/scroll";
+import PrizeImage from "./PrizeImage";
 import { TIER_ORDER, TIER_STYLE } from "./tierStyles";
 
 interface Props {
@@ -58,13 +58,10 @@ export default function RollHistory({ entries, onClear }: Props) {
                 key={prize.id}
                 className={`grid grid-cols-[auto_1fr_auto] grid-rows-2 items-center gap-x-3 rounded-lg px-2 py-1.5 ${rare ? style.bgStrong : style.bg}`}
               >
-                <Image
+                <PrizeImage
                   src={prize.image}
-                  alt=""
-                  width={48}
-                  height={48}
-                  unoptimized
-                  className="row-span-2 shrink-0 self-center"
+                  size={48}
+                  className="row-span-2 self-center"
                 />
                 <span className={`min-w-0 truncate text-sm ${rare ? "font-bold" : ""}`}>{prize.name}</span>
                 <div className="row-span-2 self-center text-right">

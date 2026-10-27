@@ -12,6 +12,10 @@ _Avoid_: Feature, module, app
 The frame shared by every Tool: the Navbar, the Sidebar, and the content area that holds the active Tool.
 _Avoid_: Layout, wrapper, chrome
 
+**Home slider**:
+The banners at the top of the home page, one poster per event or Scroll, looping on their own and pausing under the pointer. Each poster keeps its event's own colours in both Theme modes, and its text and pictures are built from the same files as the event's page, so a new round of an event or a new Scroll needs no change to the slider. Order: Monster x3, 5th Anniversary, Libra Scroll, Festa Scroll. They are never hidden by date.
+_Avoid_: Carousel, hero, ad
+
 **Navbar**:
 The bar across the top of the Shell. It stays fixed to the top-left of the screen while the content scrolls, with the Menu toggle at the far left and the Theme mode control at the far right.
 _Avoid_: Header, topbar, sidebar
@@ -77,7 +81,7 @@ The period when the server is down for maintenance, so the player cannot log in.
 _Avoid_: Downtime, server off
 
 **Donate page**:
-The Tool where a player can voluntarily support the developer by transferring money through the bank QR code or account number shown there. It promises no perks and shows no list of donors. It is reached from the Navbar heart button and from the Sidebar.
+The Tool where a player can voluntarily support the developer by transferring money through the bank QR code or account number shown there. It promises no perks and shows no list of donors. Below the account details it lists two Facebook Contact links (the developer and the page หมากัดหมวด) that open in a new tab. It is reached from the Navbar heart button and from the Sidebar.
 _Avoid_: Support page, payment page
 
 **Donor**:
@@ -141,11 +145,15 @@ The map's walkability file, saying for each cell whether a character can stand o
 _Avoid_: Collision map, walk map
 
 **Scroll**:
-A random item draw for one in-game event, such as Festa 2026, with a fixed list of Prizes. Each Row of a Roll draws one Prize from it.
-_Avoid_: Gacha, case, box
+A random item draw for one in-game event, such as Festa 2026, with a fixed list of Prizes. Each Row of a Roll draws one Prize from it. Players call one "ไข่" (egg), and the site offers every Scroll it knows, one at a time, through the Scroll picker.
+_Avoid_: Gacha, case, box, egg (in code and docs; "ไข่" is only the players' word)
+
+**Scroll picker**:
+The dropdown at the top of the Random Scroll page for choosing which Scroll to simulate; the closed button and every row show the Scroll's picture, title and number of Prizes. It is always shown, even while the site holds a single Scroll, and the choice is kept in the page address so a link opens the same Scroll. Choosing another Scroll starts clean: the Roll history, the running Row count and any Announcement are cleared.
+_Avoid_: Scroll menu, egg selector, card row
 
 **Prize**:
-One in-game item that a Scroll can give, with its name, picture, quantity per draw, Tier and drop rate in %. The rates of a Scroll's Prizes add up to 100%.
+One in-game item that a Scroll can give, with its name, picture, quantity per draw, Tier and drop rate in %. The rates are shown as the game publishes them and may not add up to 100%; a draw is weighted by their proportions either way.
 _Avoid_: Reward, loot, drop
 
 **5th Anniversary page**:
@@ -217,7 +225,7 @@ The search box each Reward type has beside its title. It filters that type's Ann
 _Avoid_: Filter, global search
 
 **Tier**:
-The rarity grade of a Prize, from rarest to commonest: SSR, SR, A, B, C, E. Each Tier has its own colour.
+The rarity grade of a Prize, from rarest to commonest: SSR, SR, R, A, B, C, E. Each Tier has its own colour; R is violet because the theme has no spare colour for it.
 _Avoid_: Rank, grade, rarity
 
 **Roll**:

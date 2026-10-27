@@ -2,12 +2,20 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { Check, Copy, Heart } from "lucide-react";
+import { Check, Copy, ExternalLink, Facebook, Heart } from "lucide-react";
 import payme from "../../../public/assets/images/web/Payme-crop.png";
 
 const ACCOUNT_NUMBER = "019-1-78881-8";
 const ACCOUNT_NAME = "นาย สุภณัฐ ธนวรพัฒน์";
 const BANK_NAME = "ธนาคารกสิกรไทย (KBank)";
+
+const CONTACTS = [
+  { label: "ผู้พัฒนา (bboss.spn)", href: "https://www.facebook.com/bboss.spn" },
+  {
+    label: "หมากัดหมวด",
+    href: "https://www.facebook.com/profile.php?id=61579020425764",
+  },
+];
 
 // Faint grid lines drawn from the theme text colour so they follow light/dark.
 const gridLine = "color-mix(in oklab, var(--color-base-content) 7%, transparent)";
@@ -103,6 +111,32 @@ export default function DonatePage() {
                   {copyState === "failed" &&
                     "คัดลอกไม่สำเร็จ กรุณาจดเลขบัญชีด้านบนแทน"}
                 </p>
+              </div>
+
+              <div className="border-t border-base-300 pt-5">
+                <h2 className="text-sm font-semibold text-base-content/70">
+                  ติดต่อผู้พัฒนา
+                </h2>
+                <ul className="mt-3 flex flex-col gap-2">
+                  {CONTACTS.map((contact) => (
+                    <li key={contact.href}>
+                      <a
+                        href={contact.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn btn-outline min-h-11 w-full justify-start gap-2"
+                      >
+                        <Facebook aria-hidden="true" className="h-5 w-5 shrink-0" />
+                        <span className="min-w-0 truncate">{contact.label}</span>
+                        <ExternalLink
+                          aria-hidden="true"
+                          className="ml-auto h-4 w-4 shrink-0 opacity-60"
+                        />
+                        <span className="sr-only">(เปิดในแท็บใหม่)</span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
 

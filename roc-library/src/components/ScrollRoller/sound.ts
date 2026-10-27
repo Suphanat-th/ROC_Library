@@ -46,6 +46,7 @@ export function playWin(tier: Tier) {
   const notes: Record<Tier, number[]> = {
     SSR: [523, 659, 784, 1047, 1319],
     SR: [523, 659, 784, 1047],
+    R: [523, 659, 784, 880],
     A: [523, 659, 784],
     B: [523, 659],
     C: [523],

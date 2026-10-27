@@ -1,0 +1,211 @@
+{
+  "title": "Triple Experience Mons",
+  "multiplier": 3,
+  "from": "2026-10-07T12:00:00+07:00",
+  "to": "2026-11-04T05:59:59+07:00",
+  "monsters": [
+    {
+      "id": 1686,
+      "name": "Orc Baby",
+      "group": "Orc Family",
+      "exp": 315,
+      "job": 354
+    },
+    {
+      "id": 1023,
+      "name": "Orc Warrior",
+      "group": "Orc Family",
+      "exp": 408,
+      "job": 160
+    },
+    {
+      "id": 1273,
+      "name": "Orc Lady",
+      "group": "Orc Family",
+      "exp": 644,
+      "job": 407
+    },
+    {
+      "id": 1189,
+      "name": "Orc Archer",
+      "group": "Orc Family",
+      "exp": 1729,
+      "job": 1787
+    },
+    {
+      "id": 1213,
+      "name": "High Orc",
+      "group": "Orc Family",
+      "exp": 3619,
+      "job": 1639
+    },
+    {
+      "id": 1153,
+      "name": "Orc Zombie",
+      "group": "Orc Family",
+      "exp": 196,
+      "job": 120
+    },
+    {
+      "id": 1152,
+      "name": "Orc Skeleton",
+      "group": "Orc Family",
+      "exp": 315,
+      "job": 194
+    },
+    {
+      "id": 1068,
+      "name": "Hydra",
+      "group": "Undersea Tunnel F1-F6",
+      "exp": 59,
+      "job": 40
+    },
+    {
+      "id": 1144,
+      "name": "Marse",
+      "group": "Undersea Tunnel F1-F6",
+      "exp": 586,
+      "job": 370
+    },
+    {
+      "id": 1067,
+      "name": "Cornutus",
+      "group": "Undersea Tunnel F1-F6",
+      "exp": 240,
+      "job": 149
+    },
+    {
+      "id": 1044,
+      "name": "Obeaune",
+      "group": "Undersea Tunnel F1-F6",
+      "exp": 644,
+      "job": 407
+    },
+    {
+      "id": 1264,
+      "name": "Merman",
+      "group": "Undersea Tunnel F1-F6",
+      "exp": 4500,
+      "job": 3000
+    },
+    {
+      "id": 1158,
+      "name": "Phen",
+      "group": "Undersea Tunnel F1-F6",
+      "exp": 357,
+      "job": 226
+    },
+    {
+      "id": 1045,
+      "name": "Marc",
+      "group": "Undersea Tunnel F1-F6",
+      "exp": 988,
+      "job": 625
+    },
+    {
+      "id": 1069,
+      "name": "Swordfish",
+      "group": "Undersea Tunnel F1-F6",
+      "exp": 1251,
+      "job": 638
+    },
+    {
+      "id": 1142,
+      "name": "Marine Sphere",
+      "group": "Undersea Tunnel F1-F6",
+      "exp": 461,
+      "job": 284
+    },
+    {
+      "id": 1108,
+      "name": "Deviace",
+      "group": "Undersea Tunnel F1-F6",
+      "exp": 9988,
+      "job": 7207
+    },
+    {
+      "id": 1065,
+      "name": "Strouf",
+      "group": "Undersea Tunnel F1-F6",
+      "exp": 3080,
+      "job": 2098
+    },
+    {
+      "id": 2204,
+      "name": "Sedora",
+      "group": "Undersea Tunnel F1-F6",
+      "exp": 9265,
+      "job": 8695
+    },
+    {
+      "id": 2201,
+      "name": "Sropho",
+      "group": "Undersea Tunnel F1-F6",
+      "exp": 9670,
+      "job": 9500
+    },
+    {
+      "id": 1111,
+      "name": "Drainliar",
+      "group": "Sphinx",
+      "exp": 431,
+      "job": 176
+    },
+    {
+      "id": 1146,
+      "name": "Matyr",
+      "group": "Sphinx",
+      "exp": 967,
+      "job": 407
+    },
+    {
+      "id": 1178,
+      "name": "Zerom",
+      "group": "Sphinx",
+      "exp": 240,
+      "job": 149
+    },
+    {
+      "id": 1164,
+      "name": "Requiem",
+      "group": "Sphinx",
+      "exp": 800,
+      "job": 458
+    },
+    {
+      "id": 1191,
+      "name": "Mimic",
+      "group": "Sphinx",
+      "exp": 165,
+      "job": 165
+    },
+    {
+      "id": 1140,
+      "name": "Marduk",
+      "group": "Sphinx",
+      "exp": 1238,
+      "job": 752
+    },
+    {
+      "id": 1154,
+      "name": "Pasana",
+      "group": "Sphinx",
+      "exp": 4087,
+      "job": 2135
+    },
+    {
+      "id": 1149,
+      "name": "Minorous",
+      "group": "Sphinx",
+      "exp": 2750,
+      "job": 1379
+    },
+    {
+      "id": 1037,
+      "name": "Side Winder",
+      "group": "Sphinx",
+      "exp": 1996,
+      "job": 993
+    }
+  ]
+}

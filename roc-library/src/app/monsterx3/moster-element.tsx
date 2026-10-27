@@ -1,49 +1,66 @@
 "use client";
 
-import React, { useState, useMemo } from "react";
+import React, { useState } from "react";
 import MonstersDb from "@/services/mosters/mostersDb";
 import { Monster } from "@/types/monster";
+import type { MonsterX3Event } from "@/types/monsterx3";
 
 const monsters: Monster[] = MonstersDb();
 
-export default function MonsterEcomDatabase() {
-  const DateFrom = new Date(2026, 4, 4, 6, 0, 0);
-  const DateTo = new Date(2026, 5, 1, 6, 0, 0);
+/** Dates are shown in Thailand time whatever the visitor's clock says. */
+const formatDate = (date: Date) =>
+  date.toLocaleDateString("en-GB", {
+    timeZone: "Asia/Bangkok",
+    day: "2-digit",
+    month: "long",
+    year: "numeric",
+  });
+
+export default function MonsterEcomDatabase({ event }: { event: MonsterX3Event }) {
+  const DateFrom = new Date(event.from);
+  const DateTo = new Date(event.to);
   const now = new Date();
   const isEventActive = now >= DateFrom && now <= DateTo;
   const [search, setSearch] = useState("");
   const [selectedRace, setSelectedRace] = useState("All");
-  const [selectedMap, setSelectedMap] = useState("All");
+  const [selectedGroup, setSelectedGroup] = useState("All");
   const [sortBy, setSortBy] = useState("exp");
   const [sortType, setSortType] = useState("desc");
 
-  // รายชื่อ ID ที่ต้องการแสดง
-  const monsterx3Ids = [
-    0
-  ];
+  // รายชื่อ ID และ EXP/JOB ปกติของงาน อยู่ใน src/data/monsterx3/*.json
+  const monsterx3Ids = event.monsters.map((m) => m.id);
+  const rates = new Map(event.monsters.map((m) => [m.id, m]));
+  const exp3 = (m: Monster) =>
+    Math.round((rates.get(m.id)?.exp ?? 0) * event.multiplier);
+  const job3 = (m: Monster) =>
+    Math.round((rates.get(m.id)?.job ?? 0) * event.multiplier);
+  // id ที่อยู่ในงานแต่ยังไม่มีในฐานข้อมูลมอนสเตอร์ จะไม่ถูกแสดง
+  const missingIds = monsterx3Ids.filter((id) => !monsters.some((m) => m.id === id));
 
-  const filteredMonsters = useMemo(() => {
-    if (!isEventActive) return [];
-    return monsters
-      .filter((m) => monsterx3Ids.includes(m.id))
-      .filter((m) => m.name.toLowerCase().includes(search.toLowerCase()))
-      .filter((m) => selectedRace === "All" || m.race === selectedRace)
-      .filter((m) => selectedMap === "All" || m.map.includes(selectedMap))
-      .sort((a, b) => {
-        // asc = 1 (a-b), desc = -1 (b-a) หรือสลับตามความถนัด
-        // ในที่นี้ถ้าเลือก desc ให้เอาค่ามากไว้บน (b-a)
-        const modifier = sortType === "desc" ? 1 : -1;
-        let result = 0;
+  const filteredMonsters = !isEventActive
+    ? []
+    : monsters
+        .filter((m) => monsterx3Ids.includes(m.id))
+        .filter((m) => m.name.toLowerCase().includes(search.toLowerCase()))
+        .filter((m) => selectedRace === "All" || m.race === selectedRace)
+        .filter(
+          (m) =>
+            selectedGroup === "All" || rates.get(m.id)?.group === selectedGroup,
+        )
+        .sort((a, b) => {
+          // asc = 1 (a-b), desc = -1 (b-a) หรือสลับตามความถนัด
+          // ในที่นี้ถ้าเลือก desc ให้เอาค่ามากไว้บน (b-a)
+          const modifier = sortType === "desc" ? 1 : -1;
+          let result = 0;
 
-        if (sortBy === "hp") result = b.hp - a.hp;
-        else if (sortBy === "lv") result = b.lv - a.lv;
-        else if (sortBy === "exp") result = b.expUp - a.expUp;
-        else if (sortBy === "job") result = b.jobUp - a.jobUp;
+          if (sortBy === "hp") result = b.hp - a.hp;
+          else if (sortBy === "lv") result = b.lv - a.lv;
+          else if (sortBy === "exp") result = exp3(b) - exp3(a);
+          else if (sortBy === "job") result = job3(b) - job3(a);
 
-        // สำคัญ: ต้องนำผลต่างมาคูณกับ modifier เพื่อสลับทิศทาง
-        return result * modifier;
-      });
-  }, [search, selectedRace, selectedMap, sortBy, sortType, isEventActive]);
+          // สำคัญ: ต้องนำผลต่างมาคูณกับ modifier เพื่อสลับทิศทาง
+          return result * modifier;
+        });
 
   const races = [
     "All",
@@ -51,16 +68,8 @@ export default function MonsterEcomDatabase() {
       monsters.filter((m) => monsterx3Ids.includes(m.id)).map((m) => m.race),
     ),
   ];
-  const uniqueMaps = [
-    "All",
-    ...new Set(
-      monsters
-        .filter((m) => monsterx3Ids.includes(m.id))
-        .flatMap((m) => m.map.split(","))
-        .map((mapName) => mapName.trim())
-        .filter((name) => name !== ""), // กรองชื่อว่างๆ ออก,
-    ),
-  ];
+  // พื้นที่ตามประกาศของงาน เรียงตามลำดับที่ปรากฏในไฟล์
+  const groups = ["All", ...new Set(event.monsters.map((m) => m.group))];
 
   return (
     <div className="flex min-h-screen bg-gray-950 text-gray-100 font-sans">
@@ -103,20 +112,20 @@ export default function MonsterEcomDatabase() {
           </div>
           <div>
             <label className="text-xs font-semibold text-gray-500 uppercase tracking-widest">
-              เมือง
+              พื้นที่
             </label>
             <div className="mt-3 flex flex-col gap-2">
-              {uniqueMaps.map((map) => (
+              {groups.map((group) => (
                 <button
-                  key={map}
-                  onClick={() => setSelectedMap(map)}
+                  key={group}
+                  onClick={() => setSelectedGroup(group)}
                   className={`text-left px-3 py-2 rounded-md text-sm transition-colors ${
-                    selectedMap.includes(map)
+                    selectedGroup === group
                       ? "bg-cyan-600 text-white shadow-lg shadow-cyan-900/20"
                       : "text-gray-400 hover:bg-gray-800"
                   }`}
                 >
-                  {map}
+                  {group}
                 </button>
               ))}
             </div>
@@ -135,22 +144,8 @@ export default function MonsterEcomDatabase() {
             Monsters
           </div>
           <div className="flex items-center gap-3">
-            เริ่มต้นวันที่{" "}
-            {
-              DateFrom.toLocaleDateString("en-GB", {
-                day: "2-digit",
-                month: "long",
-                year: "numeric",
-              }).replace(/\//g, " ") // เปลี่ยน / เป็นช่องว่าง
-            }{" "}
-            -{" "}
-            {
-              DateTo.toLocaleDateString("en-GB", {
-                day: "2-digit",
-                month: "long",
-                year: "numeric",
-              }).replace(/\//g, " ") // เปลี่ยน / เป็นช่องว่าง
-            }
+            {event.title} · เริ่มต้นวันที่ {formatDate(DateFrom)} -{" "}
+            {formatDate(DateTo)}
           </div>
           <div className="flex items-center gap-3">
             <span className="text-xs text-gray-500 uppercase font-bold">
@@ -178,6 +173,16 @@ export default function MonsterEcomDatabase() {
           </div>
         </div>
 
+        {missingIds.length > 0 && (
+          <p
+            role="alert"
+            className="mb-6 rounded-xl border border-yellow-600/50 bg-yellow-900/20 p-4 text-sm text-yellow-300"
+          >
+            ยังไม่มีข้อมูลสถานะในฐานข้อมูลมอนสเตอร์สำหรับ id:{" "}
+            {missingIds.join(", ")}
+          </p>
+        )}
+
         <div className="flex flex-wrap gap-8 justify-center">
           {!isEventActive ? (
             <div className="flex flex-col items-center justify-center py-24 text-center gap-4">
@@ -186,11 +191,7 @@ export default function MonsterEcomDatabase() {
               </p>
               <p className="text-gray-500 text-sm">
                 Monster x3 EXP/JOB ได้สิ้นสุดลงแล้ว เมื่อวันที่{" "}
-                {DateTo.toLocaleDateString("en-GB", {
-                  day: "2-digit",
-                  month: "long",
-                  year: "numeric",
-                })}
+                {formatDate(DateTo)}
               </p>
             </div>
           ) : (
@@ -257,13 +258,13 @@ export default function MonsterEcomDatabase() {
                   <div className="col-span-1">
                     <p className="text-3xl font-black text-gray-500">EXP</p>
                     <p className="text-2xl font-black text-purple-400 drop-shadow-[0_2px_4px_rgba(239,68,68,0.3)] tabular-nums">
-                      {Number(m.expUp).toLocaleString()}
+                      {exp3(m).toLocaleString()}
                     </p>
                   </div>
                   <div className="col-span-1">
                     <p className="text-3xl font-black text-gray-500">Job</p>
                     <p className="text-2xl font-black text-blue-500 drop-shadow-[0_2px_4px_rgba(239,68,68,0.3)] tabular-nums">
-                      {Number(m.jobUp).toLocaleString()}
+                      {job3(m).toLocaleString()}
                     </p>
                   </div>
                 </div>

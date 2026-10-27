@@ -1,9 +1,9 @@
 "use client";
 
-import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { X } from "lucide-react";
 import type { PrizeAnnouncement } from "@/types/scroll";
+import PrizeImage from "./PrizeImage";
 import { TIER_STYLE } from "./tierStyles";
 
 interface Props {
@@ -49,7 +49,7 @@ export default function Announcements({ items, onDismiss, onDismissAll }: Props)
 
               <div className={`flex items-center gap-4 p-4 ${style.bg}`}>
                 <div className={`grid size-16 shrink-0 place-items-center rounded-xl border-2 bg-base-100 ${style.border}`}>
-                  <Image src={a.prize.image} alt="" width={48} height={48} unoptimized />
+                  <PrizeImage src={a.prize.image} size={48} />
                 </div>
                 <div className="min-w-0 flex-1">
                   <p className="text-xs text-base-content/60">ได้รับไอเท็ม</p>

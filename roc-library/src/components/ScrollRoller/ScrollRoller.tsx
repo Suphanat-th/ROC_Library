@@ -2,11 +2,11 @@
 
 import { useEffect, useRef, useState } from "react";
 import { flushSync } from "react-dom";
-import Image from "next/image";
 import { Volume2, VolumeX } from "lucide-react";
 import type { Prize, PrizeAnnouncement, RollHistoryEntry } from "@/types/scroll";
 import { pickPrize } from "@/utils/scrollRoll";
 import Announcements from "./Announcements";
+import PrizeImage, { preloadPrizeImages } from "./PrizeImage";
 import RateTable from "./RateTable";
 import RollHistory from "./RollHistory";
 import { playTick, playWin, unlockAudio } from "./sound";
@@ -65,6 +65,11 @@ export default function ScrollRoller({ prizes, title, maxRows = 1000 }: Props) {
   const mountedRef = useRef(true);
   const rollNoRef = useRef(0);
   const drawnRef = useRef(0); // Rows drawn so far since the page opened
+
+  // Load every picture up front so the first Roll does not slide past empty cells.
+  useEffect(() => {
+    preloadPrizeImages(prizes);
+  }, [prizes]);
 
   useEffect(() => {
     mountedRef.current = true;
@@ -288,13 +293,7 @@ export default function ScrollRoller({ prizes, title, maxRows = 1000 }: Props) {
                     style={{ width: CELL }}
                     className={`flex h-full shrink-0 flex-col items-center justify-center gap-1 border-b-4 px-1 ${style.border} ${style.bg} ${isWinner ? "ring-2 ring-inset ring-base-content" : ""}`}
                   >
-                    <Image
-                      src={p.image}
-                      alt=""
-                      width={56}
-                      height={56}
-                      unoptimized
-                    />
+                    <PrizeImage src={p.image} size={56} />
                     <span className="line-clamp-2 text-center text-[11px] leading-tight">
                       {p.name}
                     </span>

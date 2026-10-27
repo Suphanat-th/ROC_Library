@@ -1,0 +1,183 @@
+{
+  "title": "Ragnarok Festa 2026 Scroll",
+  "source": "https://roc.gnjoy.in.th/promotion/ragnarok-festa-2026-scroll/",
+  "prizes": [
+    {
+      "id": "wings-thanatos",
+      "name": "Costume Wings of Arrogant Thanatos",
+      "image": "WingsofArrogantThanatos.png",
+      "quantity": 1,
+      "tier": "SSR",
+      "rate": 0.03,
+      "announce": true
+    },
+    {
+      "id": "22829",
+      "name": "Sealed Card Album",
+      "image": null,
+      "quantity": 1,
+      "tier": "SSR",
+      "rate": 0.1
+    },
+    {
+      "id": "23719",
+      "name": "Sealed Card Album II",
+      "image": null,
+      "quantity": 1,
+      "tier": "SSR",
+      "rate": 0.1
+    },
+    {
+      "id": "blue-spirit",
+      "name": "Blue Spirit Effect (Middle)",
+      "image": "blueeffect.png",
+      "quantity": 1,
+      "tier": "SR",
+      "rate": 0.6
+    },
+    {
+      "id": "6314",
+      "name": "[NFS] Enriched Oridecon",
+      "image": null,
+      "quantity": 1,
+      "tier": "A",
+      "rate": 0.8
+    },
+    {
+      "id": "6315",
+      "name": "[NFS] Enriched Elunium",
+      "image": null,
+      "quantity": 1,
+      "tier": "A",
+      "rate": 0.8
+    },
+    {
+      "id": "festa-stone",
+      "name": "Festa Stone Random Box",
+      "image": "festastone.png",
+      "quantity": 1,
+      "tier": "A",
+      "rate": 0.87
+    },
+    {
+      "id": "17066",
+      "name": "Poison Bottle Box",
+      "image": null,
+      "quantity": 1,
+      "tier": "A",
+      "rate": 1
+    },
+    {
+      "id": "12103",
+      "name": "Blood Twing",
+      "image": null,
+      "quantity": 1,
+      "tier": "A",
+      "rate": 1
+    },
+    {
+      "id": "102121",
+      "name": "[Scroll] AGI Biscuit Stick",
+      "image": null,
+      "quantity": 2,
+      "tier": "B",
+      "rate": 6.1
+    },
+    {
+      "id": "101514",
+      "name": "[Scroll] INT Biscuit Stick",
+      "image": null,
+      "quantity": 2,
+      "tier": "B",
+      "rate": 6.1
+    },
+    {
+      "id": "101513",
+      "name": "[Scroll] STR Biscuit Stick",
+      "image": null,
+      "quantity": 2,
+      "tier": "B",
+      "rate": 6.1
+    },
+    {
+      "id": "101337",
+      "name": "[Scroll] VIT Biscuit Stick",
+      "image": null,
+      "quantity": 2,
+      "tier": "B",
+      "rate": 6.1
+    },
+    {
+      "id": "101336",
+      "name": "[Scroll] DEX Biscuit Stick",
+      "image": null,
+      "quantity": 2,
+      "tier": "B",
+      "rate": 6.1
+    },
+    {
+      "id": "102120",
+      "name": "[Scroll] LUK Biscuit Stick",
+      "image": null,
+      "quantity": 2,
+      "tier": "B",
+      "rate": 6.1
+    },
+    {
+      "id": "23714",
+      "name": "Thai Perfume MATK",
+      "image": null,
+      "quantity": 5,
+      "tier": "C",
+      "rate": 8
+    },
+    {
+      "id": "23715",
+      "name": "Thai Perfume ASPD",
+      "image": null,
+      "quantity": 5,
+      "tier": "C",
+      "rate": 8
+    },
+    {
+      "id": "9908",
+      "name": "[Scroll] Mental Potion",
+      "image": null,
+      "quantity": 5,
+      "tier": "B",
+      "rate": 8
+    },
+    {
+      "id": "12645",
+      "name": "Lv.5 Aspersio Scroll",
+      "image": null,
+      "quantity": 5,
+      "tier": "B",
+      "rate": 8
+    },
+    {
+      "id": "23713",
+      "name": "Thai Perfume ATK",
+      "image": null,
+      "quantity": 5,
+      "tier": "C",
+      "rate": 8.1
+    },
+    {
+      "id": "14844",
+      "name": "[Scroll] Kafra Card",
+      "image": null,
+      "quantity": 5,
+      "tier": "E",
+      "rate": 9
+    },
+    {
+      "id": "9909",
+      "name": "[Scroll] Ex Def Potion",
+      "image": null,
+      "quantity": 5,
+      "tier": "E",
+      "rate": 9
+    }
+  ]
+}
