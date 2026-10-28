@@ -16,6 +16,10 @@ _Avoid_: Layout, wrapper, chrome
 The banners at the top of the home page, one poster per event or Scroll, looping on their own and pausing under the pointer. Each poster keeps its event's own colours in both Theme modes, and its text and pictures are built from the same files as the event's page, so a new round of an event or a new Scroll needs no change to the slider. Order: Monster x3, 5th Anniversary, Libra Scroll, Festa Scroll. They are never hidden by date.
 _Avoid_: Carousel, hero, ad
 
+**Bot key page**:
+The owner-only page at /botgeneratekey that issues a License Key for the botRedm Bot from the Machine ID its user sends, with an optional name and number of days (empty means permanent). It is in no menu or link and is kept out of search engines, and what really protects it is an admin password; the signing key never leaves the server. Keys it issues are the same as the desktop key generator's, so the Bot accepts them unchanged. The keys issued in one visit are listed on the page and can be downloaded as a CSV; saving them to Supabase comes later.
+_Avoid_: Keygen page, admin page
+
 **Navbar**:
 The bar across the top of the Shell. It stays fixed to the top-left of the screen while the content scrolls, with the Menu toggle at the far left and the Theme mode control at the far right.
 _Avoid_: Header, topbar, sidebar
