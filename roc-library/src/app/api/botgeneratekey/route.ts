@@ -7,6 +7,7 @@ import {
   logRow,
   parsePrivateKey,
 } from "@/utils/botLicense";
+import { keyRecordConfigured, listKeys, saveKey } from "@/utils/keyRecord";
 
 /**
  * Issues a botRedm licence key. The private key lives only in this server's environment
@@ -57,7 +58,7 @@ function isAdmin(sent: unknown, expected: string) {
 export async function POST(request: Request) {
   const adminPassword = process.env.BOT_KEYGEN_ADMIN_PASSWORD;
   const privateKeyText = process.env.BOT_LICENSE_PRIVATE_KEY;
-  if (!adminPassword || !privateKeyText) {
+  if (!adminPassword || !privateKeyText || !keyRecordConfigured()) {
     return json({ message: "ระบบออกคีย์ยังไม่ได้ตั้งค่าบนเซิร์ฟเวอร์" }, 503);
   }
 
@@ -79,6 +80,12 @@ export async function POST(request: Request) {
   }
   failures.delete(address);
 
+  if (body.action === "list") {
+    const rows = await listKeys();
+    if (!rows) return json({ message: "โหลดประวัติจากฐานข้อมูลไม่สำเร็จ" }, 502);
+    return json({ rows });
+  }
+
   const input = checkInput(body);
   if (!input.ok) return json({ message: input.message }, 400);
 
@@ -93,6 +100,11 @@ export async function POST(request: Request) {
   // Check the key just made before handing it out.
   if (!keyIsSigned(issued.key, privateKey)) {
     return json({ message: "สร้างคีย์ไม่สำเร็จ กรุณาลองอีกครั้ง" }, 500);
+  }
+
+  // The Key record comes first: a key that was not saved is not handed out.
+  if (!(await saveKey(issued, input.days))) {
+    return json({ message: "บันทึกลงฐานข้อมูลไม่สำเร็จ จึงยังไม่ออกคีย์ กรุณาลองสร้างใหม่อีกครั้ง" }, 502);
   }
 
   return json({

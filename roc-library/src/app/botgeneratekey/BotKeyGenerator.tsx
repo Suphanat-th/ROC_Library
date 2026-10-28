@@ -51,6 +51,23 @@ export default function BotKeyGenerator() {
   const [copied, setCopied] = useState(false);
   const [history, setHistory] = useState<LogRow[]>([]);
 
+  /** Reads the whole Key record from the server; needs the admin password. */
+  const loadHistory = async () => {
+    setError("");
+    try {
+      const res = await fetch("/api/botgeneratekey", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ password, action: "list" }),
+      });
+      const data = await res.json();
+      if (!res.ok) setError(data.message ?? "โหลดประวัติไม่สำเร็จ");
+      else setHistory(data.rows);
+    } catch {
+      setError("เชื่อมต่อเซิร์ฟเวอร์ไม่สำเร็จ กรุณาลองอีกครั้ง");
+    }
+  };
+
   const submit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("busy");
@@ -69,7 +86,7 @@ export default function BotKeyGenerator() {
         setError(data.message ?? "ออกคีย์ไม่สำเร็จ");
       } else {
         setResult(data);
-        setHistory((h) => [data.row, ...h]);
+        await loadHistory();
       }
     } catch {
       setResult(null);
@@ -181,6 +198,10 @@ export default function BotKeyGenerator() {
             )}
             {status === "busy" ? "กำลังสร้างคีย์..." : "สร้างคีย์"}
           </button>
+          <button type="button" onClick={loadHistory} disabled={!password} className="btn btn-ghost min-h-11 w-full gap-2">
+            <Download aria-hidden="true" className="h-4 w-4" />
+            โหลดประวัติจากฐานข้อมูล
+          </button>
         </form>
 
         {result && (
@@ -215,7 +236,7 @@ export default function BotKeyGenerator() {
         {history.length > 0 && (
           <section aria-label="ประวัติการออกคีย์" className="space-y-3">
             <div className="flex flex-wrap items-center justify-between gap-2">
-              <h2 className="text-lg font-bold">ที่ออกในหน้านี้ ({history.length})</h2>
+              <h2 className="text-lg font-bold">ประวัติการออกคีย์ ({history.length})</h2>
               <div className="flex gap-2">
                 <button
                   type="button"
@@ -258,7 +279,7 @@ export default function BotKeyGenerator() {
               </table>
             </div>
             <p className="text-xs text-base-content/60">
-              รายการนี้อยู่ในหน้านี้เท่านั้น ปิดหรือรีเฟรชแล้วหาย โหลด CSV เก็บไว้ก่อนปิดหน้า
+              รายการนี้ดึงจากฐานข้อมูล “ล้างรายการ” แค่ซ่อนบนหน้านี้ ไม่ได้ลบข้อมูลจริง
             </p>
           </section>
         )}

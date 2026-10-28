@@ -17,8 +17,12 @@ The banners at the top of the home page, one poster per event or Scroll, looping
 _Avoid_: Carousel, hero, ad
 
 **Bot key page**:
-The owner-only page at /botgeneratekey that issues a License Key for the botRedm Bot from the Machine ID its user sends, with an optional name and number of days (empty means permanent). It is in no menu or link and is kept out of search engines, and what really protects it is an admin password; the signing key never leaves the server. Keys it issues are the same as the desktop key generator's, so the Bot accepts them unchanged. The keys issued in one visit are listed on the page and can be downloaded as a CSV; saving them to Supabase comes later.
+The owner-only page at /botgeneratekey that issues a License Key for the botRedm Bot from the Machine ID its user sends, with an optional name and number of days (empty means permanent). It is in no menu or link and is kept out of search engines, and what really protects it is an admin password; the signing key never leaves the server. Keys it issues are the same as the desktop key generator's, so the Bot accepts them unchanged. Every key it issues is first saved in the **Key record** (Supabase); if the save fails no key is given out, so the record is always complete. The page lists all past keys from the record and can download them as a CSV; "clear list" only hides them on screen.
 _Avoid_: Keygen page, admin page
+
+**Key record**:
+The permanent list of every License Key the Bot key page has issued: when, Machine ID, name, days, the key itself and its expiry. Kept in Supabase and readable only through the Bot key page after the admin password.
+_Avoid_: Log, history, key database
 
 **Navbar**:
 The bar across the top of the Shell. It stays fixed to the top-left of the screen while the content scrolls, with the Menu toggle at the far left and the Theme mode control at the far right.
@@ -35,6 +39,10 @@ _Avoid_: Hamburger, burger, drawer button
 **Item card**:
 One item's tooltip (name, picture, options, description) laid out as a card that the player can download as a PNG to share. It always uses the light look, whichever Theme mode the player has chosen, so the downloaded picture is the same every time.
 _Avoid_: Tooltip, item sheet
+
+**Item card banner**:
+The advertisement picture at the foot of an Item card, which players call "สปอน". Together with the logo before the item name it always comes with the downloaded picture, on every device. It is not a Supporter or a Donor.
+_Avoid_: Sponsor, ad, Supporter
 
 **Costume preview**:
 A window on the Patch Convert page, opened by the "สวมใส่" button (a shirt icon) beside the name of a costume item, that shows the item worn on one standard character (a Novice with one hairstyle), male or female. The player can turn the character through 8 directions, pick one of the two Poses, and pause or resume the motion; the item plays its own effect exactly as its sprite file animates. The button appears only for items that have sprite files. It is on screen only and never appears in the downloaded Item card picture.
