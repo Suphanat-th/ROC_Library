@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { Check, Copy, Download, KeyRound, Loader2, Lock, Trash2 } from "lucide-react";
+import { useRouter } from "next/navigation";
+import { Check, Copy, Download, KeyRound, Loader2, Lock, LogOut, Trash2 } from "lucide-react";
 
 interface LogRow {
   date: string;
@@ -39,8 +40,9 @@ function downloadCsv(rows: LogRow[]) {
   setTimeout(() => URL.revokeObjectURL(url), 60_000);
 }
 
-export default function BotKeyGenerator() {
-  // The password stays in this page's memory only; reloading the page forgets it.
+export default function BotKeyGenerator({ signedIn, rows }: { signedIn: boolean; rows: LogRow[] | null }) {
+  const router = useRouter();
+  // The password is only kept while the sign-in modal is open; the server then remembers the visit in a cookie.
   const [password, setPassword] = useState("");
   const [machineId, setMachineId] = useState("");
   const [name, setName] = useState("");
@@ -49,22 +51,43 @@ export default function BotKeyGenerator() {
   const [error, setError] = useState("");
   const [result, setResult] = useState<Issued | null>(null);
   const [copied, setCopied] = useState(false);
-  const [history, setHistory] = useState<LogRow[]>([]);
+  // "Clear list" only hides the rows on screen; the Key record keeps them.
+  const [hidden, setHidden] = useState(false);
+  const history = hidden ? [] : (rows ?? []);
 
-  /** Reads the whole Key record from the server; needs the admin password. */
-  const loadHistory = async () => {
+  const post = async (payload: Record<string, unknown>) => {
+    const res = await fetch("/api/botgeneratekey", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
+    return { ok: res.ok, data: await res.json() };
+  };
+
+  const signIn = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus("busy");
     setError("");
     try {
-      const res = await fetch("/api/botgeneratekey", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ password, action: "list" }),
-      });
-      const data = await res.json();
-      if (!res.ok) setError(data.message ?? "โหลดประวัติไม่สำเร็จ");
-      else setHistory(data.rows);
+      const { ok, data } = await post({ action: "login", password });
+      if (!ok) setError(data.message ?? "เข้าสู่ระบบไม่สำเร็จ");
+      else {
+        setPassword("");
+        router.refresh();
+      }
     } catch {
       setError("เชื่อมต่อเซิร์ฟเวอร์ไม่สำเร็จ กรุณาลองอีกครั้ง");
+    } finally {
+      setStatus("idle");
+    }
+  };
+
+  const signOut = async () => {
+    try {
+      await post({ action: "logout" });
+    } finally {
+      setResult(null);
+      router.refresh();
     }
   };
 
@@ -75,18 +98,15 @@ export default function BotKeyGenerator() {
     setCopied(false);
 
     try {
-      const res = await fetch("/api/botgeneratekey", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ password, machineId, name, days }),
-      });
-      const data = await res.json();
-      if (!res.ok) {
+      const { ok, data } = await post({ machineId, name, days });
+      if (!ok) {
         setResult(null);
         setError(data.message ?? "ออกคีย์ไม่สำเร็จ");
+        if (data.message?.includes("หมดเวลา")) router.refresh();
       } else {
         setResult(data);
-        await loadHistory();
+        setHidden(false);
+        router.refresh();
       }
     } catch {
       setResult(null);
@@ -107,10 +127,51 @@ export default function BotKeyGenerator() {
     }
   };
 
+  if (!signedIn) {
+    return (
+      <main className="px-4 py-6 sm:px-6">
+        <dialog open aria-labelledby="sign-in-title" className="modal modal-open">
+          <form onSubmit={signIn} className="modal-box space-y-4">
+            <h1 id="sign-in-title" className="flex items-center gap-2 text-lg font-bold">
+              <Lock aria-hidden="true" className="h-5 w-5" />
+              ยืนยันตัวตนผู้ดูแล
+            </h1>
+            <label className="block space-y-1.5">
+              <span className="text-sm font-semibold">รหัสผ่านผู้ดูแล</span>
+              <input
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                autoComplete="off"
+                autoFocus
+                required
+                className="input input-bordered min-h-11 w-full"
+              />
+            </label>
+            {error && (
+              <div role="alert" className="alert alert-error text-sm">
+                {error}
+              </div>
+            )}
+            <button type="submit" disabled={status === "busy"} className="btn btn-primary min-h-11 w-full gap-2">
+              {status === "busy" && <Loader2 aria-hidden="true" className="h-4 w-4 animate-spin" />}
+              เข้าสู่ระบบ
+            </button>
+            <p className="text-xs text-base-content/60">เข้าสู่ระบบแล้วใช้งานได้ 3 ชั่วโมง</p>
+          </form>
+        </dialog>
+      </main>
+    );
+  }
+
   return (
     <main className="px-4 py-6 sm:px-6">
       <div className="mx-auto max-w-3xl space-y-6">
-        <header>
+        <header className="relative">
+          <button type="button" onClick={signOut} className="btn btn-ghost btn-sm absolute right-0 top-0 min-h-11 gap-2">
+            <LogOut aria-hidden="true" className="h-4 w-4" />
+            ออกจากระบบ
+          </button>
           <p className="mb-2 inline-flex items-center gap-1.5 rounded-field bg-primary/10 px-2 py-1 text-xs font-bold tracking-widest text-primary">
             <KeyRound aria-hidden="true" className="h-3.5 w-3.5" />
             BOT LICENSE
@@ -125,21 +186,6 @@ export default function BotKeyGenerator() {
           onSubmit={submit}
           className="space-y-4 rounded-box border border-base-300 bg-base-100 p-4 sm:p-6"
         >
-          <label className="block space-y-1.5">
-            <span className="flex items-center gap-1.5 text-sm font-semibold">
-              <Lock aria-hidden="true" className="h-4 w-4" />
-              รหัสผ่านผู้ดูแล
-            </span>
-            <input
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              autoComplete="off"
-              required
-              className="input input-bordered min-h-11 w-full"
-            />
-          </label>
-
           <label className="block space-y-1.5">
             <span className="text-sm font-semibold">รหัสเครื่อง</span>
             <input
@@ -198,10 +244,6 @@ export default function BotKeyGenerator() {
             )}
             {status === "busy" ? "กำลังสร้างคีย์..." : "สร้างคีย์"}
           </button>
-          <button type="button" onClick={loadHistory} disabled={!password} className="btn btn-ghost min-h-11 w-full gap-2">
-            <Download aria-hidden="true" className="h-4 w-4" />
-            โหลดประวัติจากฐานข้อมูล
-          </button>
         </form>
 
         {result && (
@@ -248,7 +290,7 @@ export default function BotKeyGenerator() {
                 </button>
                 <button
                   type="button"
-                  onClick={() => setHistory([])}
+                  onClick={() => setHidden(true)}
                   className="btn btn-ghost btn-sm min-h-11 gap-2"
                 >
                   <Trash2 aria-hidden="true" className="h-4 w-4" />
@@ -263,7 +305,6 @@ export default function BotKeyGenerator() {
                     <th>วันที่</th>
                     <th>รหัสเครื่อง</th>
                     <th>ชื่อ</th>
-                    <th>อายุ (วัน)</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -272,7 +313,6 @@ export default function BotKeyGenerator() {
                       <td className="whitespace-nowrap">{r.date}</td>
                       <td className="font-mono">{r.machineId}</td>
                       <td>{r.name}</td>
-                      <td>{r.days === "permanent" ? "ถาวร" : r.days}</td>
                     </tr>
                   ))}
                 </tbody>

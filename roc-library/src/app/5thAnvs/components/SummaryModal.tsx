@@ -1,6 +1,8 @@
 import type { PatchItemsDto } from "@/types/patch";
+import WorldFruitInfo from "./WorldFruitInfo";
 import {
   EXCHANGE_COST,
+  WORLD_FRUIT_PER_TICKET,
   REWARD_TYPES,
   rewardTypeOf,
 } from "@/services/anniversary/anniversaryService";
@@ -96,6 +98,15 @@ export default function SummaryModal({
           <div className="flex justify-between">
             <dt>[NFS] Gacha Ticket</dt>
             <dd className="font-bold">{fmt(total * EXCHANGE_COST.gachaTickets)} ใบ</dd>
+          </div>
+          <div className="flex justify-between text-sm text-base-content/70">
+            <dt className="flex items-center gap-1.5">
+              คิดเป็น World Fruit (1 Ticket = {fmt(WORLD_FRUIT_PER_TICKET)})
+              <WorldFruitInfo variant="chip" />
+            </dt>
+            <dd className="font-bold">
+              {fmt(total * EXCHANGE_COST.gachaTickets * WORLD_FRUIT_PER_TICKET)} ชิ้น
+            </dd>
           </div>
           <div className="flex justify-between text-lg">
             <dt className="font-bold">Zeny</dt>

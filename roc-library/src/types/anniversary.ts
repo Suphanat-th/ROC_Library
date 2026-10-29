@@ -19,6 +19,10 @@ export interface AnniversaryInfoEntry {
   tagline?: string;
   /** the Chapter's picture is not revealed yet, so a "?" box stands in */
   mystery?: boolean;
+  /** a picture of the Chapter's key reward; when set it replaces the "?" box and the town emblem */
+  art?: { src: string; alt: string };
+  /** the Chapter's logo, shown in the quest window header and wherever the Chapter is named; every Chapter has one */
+  logo?: { src: string; alt: string };
 }
 
 /** A section of the 5th Anniversary page that explains part of the event. */
@@ -37,6 +41,16 @@ export interface AnniversaryInfoSection {
 
 export type QuestTaskKind = "kill" | "collect" | "quiz" | "find" | "reward";
 
+/** What a reward can be turned into, e.g. Black Soul into World Fruit at 1 : 1. */
+export interface QuestTaskExchange {
+  /** the target item, e.g. "World Fruit" */
+  label: string;
+  /** how much of the target one of this gives, e.g. "1 : 1" */
+  rate: string;
+  /** the target item's picture, like itemImageId */
+  itemImageId?: string | number;
+}
+
 /** One thing a quest asks the player to do. */
 export interface QuestTask {
   kind: QuestTaskKind;
@@ -51,6 +65,10 @@ export interface QuestTask {
   monsterId?: number;
   /** the item's id: its picture is public/assets/images/anvs/items/<itemImageId>.bmp */
   itemImageId?: string | number;
+  /** the reward can be exchanged for something else; shown as a small mark under it */
+  exchange?: QuestTaskExchange;
+  /** the reward can be traded between players; shown as an "Allow Trade" mark */
+  tradable?: boolean;
   /** small extra lines under the task, e.g. what an item can and cannot do */
   details?: string[];
   /** remarks that must not be missed, shown as bold pills, e.g. the days a monster appears */
@@ -84,7 +102,15 @@ export interface ChapterQuest {
   /** short label of what kind of quest it is, e.g. "สังหาร" */
   kind: string;
   intro?: string;
+  /** what the character needs before it can accept the quest, e.g. "LV 99+" */
+  requirements?: string[];
+  /** where to go and whom to talk to, in order; a coordinate in the text becomes a link */
+  steps?: string[];
   tasks: QuestTask[];
+  /** the correct answers of a quiz Chapter, in the order the questions come */
+  quizAnswers?: string[];
+  /** what the quest gives; items are shown like the rewards of the World Quest */
+  rewards?: QuestTask[];
   /** the closing instruction, e.g. to report back */
   outro?: string;
   notes?: string[];
@@ -107,4 +133,31 @@ export interface RecurringQuestGroup {
   title: string;
   note?: string;
   quests: RecurringQuest[];
+  /** what each finished quest of the group gives, shown once under the quests */
+  rewards?: QuestTask[];
+  /** where the NPC who gives the quests stands, e.g. "prt_q 156 195"; a coordinate becomes a map link */
+  acceptAt?: string;
+  /** the Chapter (1 to 6) that must be finished before the quests can be taken */
+  requiresChapter?: number;
+  /** how often the rewards come, e.g. "ได้รับ 1 ครั้ง ต่อเควส" */
+  rewardNote?: string;
+}
+
+/** One job-change stop: the class to become, where the NPC stands. */
+export interface JobChangeStop {
+  job: string;
+  place: string;
+}
+
+/** Facts of the Story Quest that cut across Chapters, shown under the map. */
+export interface StoryGuide {
+  /** the event period, written out for the page */
+  period: string;
+  /** things to know before starting, e.g. the Marin form */
+  notes: string[];
+  /** steps after Chapter II: Hi Novice, then Hi Class */
+  hiNovice: JobChangeStop[];
+  hiClass: string[];
+  /** equipment sets given by the Chapters and what they cost to improve */
+  equipment: { name: string; from: string; detail: string }[];
 }

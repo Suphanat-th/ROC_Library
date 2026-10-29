@@ -24,6 +24,10 @@ _Avoid_: Keygen page, admin page
 The permanent list of every License Key the Bot key page has issued: when, Machine ID, name, days, the key itself and its expiry. Kept in Supabase and readable only through the Bot key page after the admin password.
 _Avoid_: Log, history, key database
 
+**Feedback page**:
+The Tool at /say-something, reached from the Sidebar as "บอกเรา", where any player can send the developer a message: an optional name (or Anonymous, which keeps no name at all) and a message of 5 to 1,000 characters. Each message is saved in Supabase and read by the owner there; the page shows the sender only a thank-you and has no list of messages. It limits each address to 3 messages per 10 minutes.
+_Avoid_: Contact page, suggestion box
+
 **Navbar**:
 The bar across the top of the Shell. It stays fixed to the top-left of the screen while the content scrolls, with the Menu toggle at the far left and the Theme mode control at the far right.
 _Avoid_: Header, topbar, sidebar

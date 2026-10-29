@@ -8,6 +8,7 @@ import { PatchItemsDto } from "@/types/patch";
 import * as htmlToImage from "html-to-image";
 import ImageConvertPage from "./image-convert";
 import ItemCard from "./ItemCard";
+import { InlineImageProvider, loadInlineImages } from "./inlineImages";
 import ItemPicker from "./ItemPicker";
 import {
   CostumePreviewButton,
@@ -20,11 +21,12 @@ const EXPORT_WIDTH = 1024;
 
 type ExportStatus = "idle" | "busy" | "done" | "error";
 
+// decode() also waits until iOS has the pixels ready, which `complete` alone does not.
 const waitForImages = (root: HTMLElement) =>
   Promise.all(
     Array.from(root.querySelectorAll("img")).map((img) =>
-      img.complete
-        ? undefined
+      img.complete && img.naturalWidth > 0
+        ? img.decode().catch(() => undefined)
         : new Promise<void>((resolve) => {
             img.addEventListener("load", () => resolve(), { once: true });
             img.addEventListener("error", () => resolve(), { once: true });
@@ -41,15 +43,16 @@ const isIOS = () =>
  * iOS gets the share sheet (it has "Save Image"). Android's share sheet only lists apps
  * and has no way to save to the gallery, so Android and desktop download the file directly.
  * A share that iOS refuses also falls back to the download.
+ * Only the file is shared: a title makes iOS "Copy" put the text on the clipboard, not the picture.
  */
-async function deliverImage(file: File, title: string) {
+async function deliverImage(file: File) {
   if (
     isIOS() &&
     typeof navigator.canShare === "function" &&
     navigator.canShare({ files: [file] })
   ) {
     try {
-      await navigator.share({ files: [file], title });
+      await navigator.share({ files: [file] });
       return;
     } catch (e) {
       if (e instanceof DOMException && e.name === "AbortError") return;
@@ -80,6 +83,7 @@ function ExportableItem({
 }) {
   const [status, setStatus] = useState<ExportStatus>("idle");
   const [exporting, setExporting] = useState(false);
+  const [inlined, setInlined] = useState<Record<string, string>>({});
   const [previewOpen, setPreviewOpen] = useState(false);
   const canPreview = useCostumeSprite(patchKey, item.costume);
   const exportRef = useRef<HTMLDivElement>(null);
@@ -95,17 +99,19 @@ function ExportableItem({
 
         await Promise.all([document.fonts.ready, waitForImages(node)]);
 
-        const dataUrl = await htmlToImage.toPng(node, {
+        const options = {
           backgroundColor: "transparent",
           pixelRatio: window.innerWidth < 768 ? 2 : 3,
-          cacheBust: true,
-        });
+        };
+        // Safari draws the pictures only from the second render on; the first one is thrown away.
+        await htmlToImage.toPng(node, options).catch(() => undefined);
+        const dataUrl = await htmlToImage.toPng(node, options);
         const blob = await (await fetch(dataUrl)).blob();
         const file = new File([blob], `item-${patchKey}.png`, {
           type: "image/png",
         });
 
-        await deliverImage(file, item.identifiedDisplayName);
+        await deliverImage(file);
         if (!cancelled) setStatus("done");
       } catch {
         if (!cancelled) setStatus("error");
@@ -118,7 +124,12 @@ function ExportableItem({
     return () => {
       cancelled = true;
     };
-  }, [exporting, patchKey, item.identifiedDisplayName]);
+  }, [exporting, patchKey]);
+
+  // Fetch the card's pictures ahead of time so the press has little left to wait for.
+  useEffect(() => {
+    loadInlineImages(patchKey).catch(() => undefined);
+  }, [patchKey]);
 
   // The confirmation fades back to the normal button after a moment.
   useEffect(() => {
@@ -127,9 +138,15 @@ function ExportableItem({
     return () => clearTimeout(timer);
   }, [status]);
 
-  const startExport = () => {
+  const startExport = async () => {
     setStatus("busy");
-    setExporting(true);
+    try {
+      // The export copy only mounts once every picture is embedded in it.
+      setInlined(await loadInlineImages(patchKey));
+      setExporting(true);
+    } catch {
+      setStatus("error");
+    }
   };
 
   return (
@@ -220,12 +237,14 @@ function ExportableItem({
             pointerEvents: "none",
           }}
         >
-          <ItemCard
-            id={`export${patchKey}`}
-            item={item}
-            image={<ImageConvertPage patchKey={patchKey} />}
-            showSponsor
-          />
+          <InlineImageProvider value={inlined}>
+            <ItemCard
+              id={`export${patchKey}`}
+              item={item}
+              image={<ImageConvertPage patchKey={patchKey} />}
+              showSponsor
+            />
+          </InlineImageProvider>
         </div>
       )}
     </section>

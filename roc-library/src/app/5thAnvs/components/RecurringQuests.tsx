@@ -1,5 +1,7 @@
 import { RECURRING_QUESTS } from "@/data/anniversary5thQuests";
 import type { RecurringQuestGroup } from "@/types/anniversary";
+import ChapterRef from "./ChapterRef";
+import { CoordinateText } from "./CoordinateLink";
 import { RewardBox } from "./QuestParts";
 import QuestTaskRow from "./QuestTaskRow";
 import SectionHeading from "./SectionHeading";
@@ -9,9 +11,9 @@ const ART = "/assets/images/anvs/landing";
 
 /** Band colour and picture of each group. */
 const GROUP_STYLES = {
-  daily: { band: "bg-warning text-warning-content", art: "sun.svg" },
-  weekly: { band: "bg-info text-info-content", art: "calendar.svg" },
-  world: { band: "bg-success text-success-content", art: "globe.svg" },
+  daily: { band: "bg-(--anv-orange) text-(--anv-ink)", art: "sun.svg" },
+  weekly: { band: "bg-(--anv-cream) text-(--anv-ink)", art: "calendar.svg" },
+  world: { band: "bg-(--anv-ink) text-(--anv-cream)", art: "globe.svg" },
 } as const;
 
 function GroupCard({ group }: { group: RecurringQuestGroup }) {
@@ -28,13 +30,28 @@ function GroupCard({ group }: { group: RecurringQuestGroup }) {
           <WorldQuest group={group} />
         ) : (
           <>
-            {group.note && <p className="rounded-xl bg-warning/20 px-3 py-2 text-sm">{group.note}</p>}
+            {group.requiresChapter && (
+              <p className="flex flex-wrap items-center gap-2 text-sm font-black">
+                ต้องผ่านเควส
+                <ChapterRef n={group.requiresChapter} />
+                ก่อนรับภารกิจ
+              </p>
+            )}
+            {group.acceptAt && (
+              <p className="flex flex-wrap items-center gap-2 text-sm font-black">
+                รับเควสที่ NPC
+                <span className="rounded-full bg-base-200 px-3 py-1 font-bold">
+                  Invaded Prontera · <CoordinateText text={group.acceptAt} />
+                </span>
+              </p>
+            )}
+            {group.note && <p className="rounded-xl bg-base-200 px-3 py-2 text-sm">{group.note}</p>}
             {group.quests.length === 0 ? (
               <p className="text-sm text-base-content/70">กำลังรวบรวมข้อมูล</p>
             ) : (
               group.quests.map((quest) => (
                 <div key={quest.title} className="space-y-2">
-                  <p className="text-xs font-black uppercase tracking-widest text-(--anv-orange)">{quest.title}</p>
+                  <p className="text-sm font-black uppercase tracking-widest text-(--anv-orange)">{quest.title}</p>
                   <ul className="space-y-2">
                     {quest.tasks
                       .filter((task) => task.kind !== "reward")
@@ -49,12 +66,19 @@ function GroupCard({ group }: { group: RecurringQuestGroup }) {
                     />
                   )}
                   {quest.notes?.map((note) => (
-                    <p key={note} className="rounded-xl bg-warning/20 px-3 py-2 text-sm">
+                    <p key={note} className="rounded-xl bg-(--anv-orange)/15 px-3 py-2 text-sm">
                       {note}
                     </p>
                   ))}
                 </div>
               ))
+            )}
+            {group.rewards && (
+              <RewardBox
+                compact
+                title={`ของรางวัล${group.rewardNote ? ` · ${group.rewardNote}` : ""}`}
+                tasks={group.rewards}
+              />
             )}
           </>
         )}
@@ -68,10 +92,7 @@ export default function RecurringQuests({ index }: { index: string }) {
   const regular = RECURRING_QUESTS.filter((g) => g.id !== "world");
   const world = RECURRING_QUESTS.find((g) => g.id === "world");
   return (
-    <section
-      aria-labelledby="recurring-title"
-      className="space-y-5 rounded-3xl bg-(--anv-orange)/10 p-5 sm:p-8"
-    >
+    <section aria-labelledby="recurring-title" className="space-y-5">
       <SectionHeading index={index} title="Quest · Daily / Weekly / World" id="recurring-title" />
       <div className="grid gap-4 lg:grid-cols-2 lg:items-start">
         {regular.map((group) => (
