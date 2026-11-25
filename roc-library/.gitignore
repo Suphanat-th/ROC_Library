@@ -42,3 +42,6 @@ next-env.d.ts
 
 # bot licence signing key file (never commit)
 environment/license_private.key
+
+# dev-only Comment draws from Facebook comments (people's names; never commit)
+/dev-data/

@@ -4,12 +4,10 @@ import { useEffect, useRef, useState, type ReactNode } from "react";
 import { parseGnd } from "@/utils/gndParser";
 import { parseGat } from "@/utils/gatParser";
 import { parseRsw } from "@/utils/rswParser";
-import { createMapScene, type ColorMode, type MapScene } from "./mapScene";
+import { createMapScene, type ColorMode, type MapPin, type MapRoute, type MapScene } from "./mapScene";
 
 interface MapViewerProps {
-  /** Folder under public/assets/map/ that holds the map's files. */
-  folder: string;
-  /** File name shared by the map's .gnd and .gat files, without extension. */
+  /** Name of the map's files in public/assets/map/ (.gnd, .gat and .rsw), without extension. */
   name: string;
   title: string;
   /**
@@ -21,6 +19,10 @@ interface MapViewerProps {
   markers?: { x: number; y: number }[];
   /** Which pin the camera flies to; left out, the camera takes them all in. */
   focusIndex?: number;
+  /** Pins by kind (warp, chest, boss...) that never move the camera. Keep the array the same between renders. */
+  pins?: MapPin[];
+  /** Lines laid along the ground. Keep the array the same between renders. */
+  routes?: MapRoute[];
   /** Shown instead of the error text when the map's files cannot be loaded. */
   errorContent?: ReactNode;
 }
@@ -44,17 +46,19 @@ async function fetchBuffer(url: string): Promise<ArrayBuffer> {
 }
 
 export default function MapViewer({
-  folder,
   name,
   title,
   embedded = false,
   markers,
   focusIndex,
+  pins,
+  routes,
   errorContent,
 }: MapViewerProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const sceneRef = useRef<MapScene | null>(null);
   const markersRef = useRef({ markers, focusIndex });
+  const extrasRef = useRef({ pins, routes });
   const [status, setStatus] = useState<Status>("loading");
   const [error, setError] = useState("");
   const [mode, setMode] = useState<ColorMode>("map");
@@ -72,11 +76,17 @@ export default function MapViewer({
   }, [markers, focusIndex]);
 
   useEffect(() => {
+    extrasRef.current = { pins, routes };
+    sceneRef.current?.setPins(pins ?? []);
+    sceneRef.current?.setRoutes(routes ?? []);
+  }, [pins, routes]);
+
+  useEffect(() => {
     const container = containerRef.current;
     if (!container) return;
     let cancelled = false;
     let observer: ResizeObserver | null = null;
-    const base = `/assets/map/${folder}`;
+    const base = "/assets/map";
 
     (async () => {
       try {
@@ -97,6 +107,8 @@ export default function MapViewer({
         sceneRef.current = scene;
         scene.setShowWalkable(!embedded);
         scene.setShowEdges(true);
+        scene.setPins(extrasRef.current.pins ?? []);
+        scene.setRoutes(extrasRef.current.routes ?? []);
         if (markersRef.current.markers) scene.setMarkers(markersRef.current.markers, markersRef.current.focusIndex);
         observer = new ResizeObserver(() => scene.resize());
         observer.observe(container);
@@ -127,7 +139,7 @@ export default function MapViewer({
       sceneRef.current?.dispose();
       sceneRef.current = null;
     };
-  }, [folder, name, embedded]);
+  }, [name, embedded]);
 
   const changeMode = (next: ColorMode) => {
     setMode(next);

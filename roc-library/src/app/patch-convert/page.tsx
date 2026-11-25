@@ -16,11 +16,16 @@ export default async function PatchConvertPage({
     ? params.Key[0]
     : params.Key;
     
-  const allowedKeys = "73c6a20d-2583-4a6b-84e7-bd0d8f912722";
+  // Two keys, both set in the environment: the Patch key changes every week, the Member key
+  // never does. With neither set (or a wrong one) the page stays closed outside localhost.
+  const allowedKeys = [
+    process.env.PATCH_CONVERT_KEY,
+    process.env.PATCH_CONVERT_MEMBER_KEY,
+  ].filter((key): key is string => Boolean(key));
 
   if (
     !isLocalhost &&
-    (!allowedKeys || patchMember !== allowedKeys)
+    (!patchMember || !allowedKeys.includes(patchMember))
   ) {
     return (
       <main className="flex min-h-[50vh] items-center justify-center p-6 text-center">

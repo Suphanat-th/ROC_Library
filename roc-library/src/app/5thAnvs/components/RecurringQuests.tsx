@@ -5,6 +5,7 @@ import { CoordinateText } from "./CoordinateLink";
 import { RewardBox } from "./QuestParts";
 import QuestTaskRow from "./QuestTaskRow";
 import SectionHeading from "./SectionHeading";
+import SourceRef from "./SourceRef";
 import WorldQuest from "./WorldQuest";
 
 const ART = "/assets/images/anvs/landing";
@@ -19,7 +20,7 @@ const GROUP_STYLES = {
 function GroupCard({ group }: { group: RecurringQuestGroup }) {
   const style = GROUP_STYLES[group.id];
   return (
-    <div className="overflow-hidden rounded-3xl bg-base-100 shadow-lg">
+    <div id={`quest-${group.id}`} className="scroll-mt-40 overflow-hidden rounded-3xl bg-base-100 shadow-lg">
       <div className={`relative flex items-center justify-between px-5 py-4 ${style.band}`}>
         <h3 className="text-xl font-black">{group.title}</h3>
         {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -100,6 +101,10 @@ export default function RecurringQuests({ index }: { index: string }) {
         ))}
       </div>
       {world && <GroupCard group={world} />}
+      <SourceRef
+        href="https://roc.gnjoy.in.th/event/all-server-5th-anniversary-daily-weekly-quest/"
+        title="5th Anniversary Daily / Weekly Quest"
+      />
     </section>
   );
 }

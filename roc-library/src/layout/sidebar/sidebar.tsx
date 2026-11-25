@@ -8,6 +8,7 @@ import { useLoading } from "@/context/LoadingContext";
 import teteGuild from "../../../public/assets/images/GuildImage/vanCleef.png";
 import dogGuild from "../../../public/assets/images/GuildImage/dog.jpg";
 import rocFunGuild from "../../../public/assets/images/GuildImage/rocfun.png";
+import { tr } from "framer-motion/client";
 
 interface FileTreeItem {
   id: string;
@@ -15,6 +16,7 @@ interface FileTreeItem {
   type: "folder" | "file";
   icon?: string;
   href?: string;
+  link_target?: boolean | null;
   children?: FileTreeItem[];
 }
 
@@ -74,6 +76,27 @@ const fileTree: FileTreeItem[] = [
         icon: "https://api.iconify.design/fluent-emoji-flat/tokyo-tower.svg?color=%23f4fb00",
         href: "/endless-tower",
       },
+      {
+        id: "mvp",
+        name: "MVP Hunter",
+        type: "file",
+        icon: "https://api.iconify.design/fluent-emoji-flat/skull.svg",
+        href: "/mvp",
+      },
+      {
+        id: "aspd",
+        name: "The Flash Calc (ASPD)",
+        type: "file",
+        icon: "https://api.iconify.design/famicons/flash.svg?color=%23f4fb00",
+        href: "/aspd-calc",
+      },
+      // {
+      //   id: "cast-calc",
+      //   name: "Cast Calculator",
+      //   type: "file",
+      //   icon: "https://api.iconify.design/fluent-emoji-flat/hourglass-not-done.svg",
+      //   href: "/cast-calc",
+      // },
     ],
   },
   // {
@@ -155,13 +178,14 @@ const fileTree: FileTreeItem[] = [
     icon: "https://api.iconify.design/fluent-emoji-flat/speech-balloon.svg",
     href: "/say-something",
   },
-  // {
-  //   id: "vct-calc",
-  //   name: "VCT Calculator",
-  //   type: "file",
-  //   icon: "⌛",
-  //   href: "/vct-calc",
-  // },
+  {
+    id: "skin-game",
+    name: "Skin UI",
+    type: "file",
+    icon: "https://api.iconify.design/fxemoji/dog.svg",
+    href: "https://drive.google.com/drive/u/0/folders/1pbN2d8I4M2cYRcuzhxrsn21nrMiX9pPw",
+    link_target: true,
+  },
   // {
   //   id: "aspd",
   //   name: "The Flash Calc (ASPD)",
@@ -226,9 +250,16 @@ function FileTreeNode({
   const isActive = !isFolder && item.href === pathname;
   const isPending = !isFolder && item.href === pendingHref;
 
-  const handleLinkClick = (event: React.MouseEvent) => {
-    startNavigation(item.href || "#", event);
+  const handleLinkClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
     toggleDrawer();
+
+    // External link / Open new tab
+    if (item.link_target) {
+      return;
+    }
+
+    // Normal navigation
+    startNavigation(item.href || "#", event);
   };
 
   const paddingLeft = level * 12;
@@ -249,8 +280,7 @@ function FileTreeNode({
               style={{
                 backgroundImage: `url(https://api.iconify.design/mdi/folder${expanded ? "-open" : ""}.svg?color=%2393c5fd)`,
               }}
-            >
-            </span>
+            ></span>
             <span className="text-sm shrink-0">
               {item.icon && (
                 <span
@@ -285,6 +315,8 @@ function FileTreeNode({
           href={item.href || "#"}
           onClick={handleLinkClick}
           title={item.name}
+          target={item.link_target ? "_blank" : undefined}
+          rel={item.link_target ? "noopener noreferrer" : undefined}
           aria-current={isActive ? "page" : undefined}
           style={{ paddingLeft: `${8 + paddingLeft}px` }}
           className={`flex items-center py-2.5 px-3 rounded-lg transition-colors text-sm w-full gap-2 group ${
@@ -302,11 +334,16 @@ function FileTreeNode({
               />
             )}
           </span>
-          <span className={`truncate font-medium ${isActive || isPending ? "" : "text-base-content/85 group-hover:text-base-content"}`}>
+          <span
+            className={`truncate font-medium ${isActive || isPending ? "" : "text-base-content/85 group-hover:text-base-content"}`}
+          >
             {item.name}
           </span>
           {isPending && (
-            <span className="loading loading-spinner loading-xs ml-auto shrink-0" aria-hidden="true" />
+            <span
+              className="loading loading-spinner loading-xs ml-auto shrink-0"
+              aria-hidden="true"
+            />
           )}
         </Link>
       )}
@@ -343,7 +380,9 @@ export default function SidebarPage() {
         <p className="text-[10px] text-base-content/60 mb-3">
           © 2025 ROC Library. All rights reserved.
         </p>
-        <p className="text-[10px] font-semibold text-base-content/80 mb-2">Supporter</p>
+        <p className="text-[10px] font-semibold text-base-content/80 mb-2">
+          Supporter
+        </p>
         <div className="flex justify-center gap-2">
           {[
             {

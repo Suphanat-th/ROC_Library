@@ -3,13 +3,17 @@ import { useEffect, useRef, useState } from "react";
 import { Check, Download, Loader2 } from "lucide-react";
 import { PageSkeleton } from "@/components/Loader";
 
+import { cardIllustrations } from "@/data/patchCard";
 import { useItemDb } from "@/services/patchData/itemsService";
 import { PatchItemsDto } from "@/types/patch";
 import * as htmlToImage from "html-to-image";
 import ImageConvertPage from "./image-convert";
+import ChangeNote, { descriptionChange, useItemChanges } from "./ChangeNote";
 import ItemCard from "./ItemCard";
+import type { ItemChange } from "@/utils/itemChanges";
 import { InlineImageProvider, loadInlineImages } from "./inlineImages";
-import ItemPicker from "./ItemPicker";
+import ItemPicker, { type ItemKind } from "./ItemPicker";
+import { NewMapsButton, NewMapsModal, useNewMaps } from "./NewMaps";
 import {
   CostumePreviewButton,
   CostumePreviewModal,
@@ -74,18 +78,40 @@ async function deliverImage(file: File) {
   setTimeout(() => URL.revokeObjectURL(url), 60_000);
 }
 
+/** Item id → Card illustration URL for the patch's cards; empty until loaded. */
+function useCardIllustrations() {
+  const [cards, setCards] = useState<Record<string, string>>({});
+  useEffect(() => {
+    let cancelled = false;
+    cardIllustrations().then((all) => {
+      if (!cancelled) setCards(all);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+  return cards;
+}
+
 function ExportableItem({
   patchKey,
   item,
+  illustration,
+  change,
 }: {
   patchKey: string;
   item: PatchItemsDto;
+  /** What the patch changed in this item, if anything. */
+  change?: ItemChange;
+  /** The Card illustration, when the item is a card: it takes the place of the item's picture. */
+  illustration?: string;
 }) {
   const [status, setStatus] = useState<ExportStatus>("idle");
   const [exporting, setExporting] = useState(false);
   const [inlined, setInlined] = useState<Record<string, string>>({});
   const [previewOpen, setPreviewOpen] = useState(false);
-  const canPreview = useCostumeSprite(patchKey, item.costume);
+  const preview = useCostumeSprite(patchKey);
+  const canPreview = preview !== null;
   const exportRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -128,8 +154,8 @@ function ExportableItem({
 
   // Fetch the card's pictures ahead of time so the press has little left to wait for.
   useEffect(() => {
-    loadInlineImages(patchKey).catch(() => undefined);
-  }, [patchKey]);
+    loadInlineImages(patchKey, illustration).catch(() => undefined);
+  }, [patchKey, illustration]);
 
   // The confirmation fades back to the normal button after a moment.
   useEffect(() => {
@@ -142,7 +168,7 @@ function ExportableItem({
     setStatus("busy");
     try {
       // The export copy only mounts once every picture is embedded in it.
-      setInlined(await loadInlineImages(patchKey));
+      setInlined(await loadInlineImages(patchKey, illustration));
       setExporting(true);
     } catch {
       setStatus("error");
@@ -156,6 +182,7 @@ function ExportableItem({
           <p className="text-xs text-base-content/60">
             รหัส {patchKey}
             {item.costume && " · Costume"}
+            {illustration && " · Card"}
           </p>
           <h2
             id={`item-title-${patchKey}`}
@@ -211,15 +238,20 @@ function ExportableItem({
         <ItemCard
           id={`item${patchKey}`}
           item={item}
-          image={<ImageConvertPage patchKey={patchKey} />}
+          image={
+            <ImageConvertPage patchKey={patchKey} illustration={illustration} />
+          }
           showSponsor
+          change={descriptionChange(change)}
         />
       </div>
+      <ChangeNote item={item} change={change} />
 
       {canPreview && previewOpen && (
         <CostumePreviewModal
           patchKey={patchKey}
           name={item.identifiedDisplayName}
+          startWalking={Boolean(preview?.footprint)}
           onClose={() => setPreviewOpen(false)}
         />
       )}
@@ -241,8 +273,11 @@ function ExportableItem({
             <ItemCard
               id={`export${patchKey}`}
               item={item}
-              image={<ImageConvertPage patchKey={patchKey} />}
+              image={
+            <ImageConvertPage patchKey={patchKey} illustration={illustration} />
+          }
               showSponsor
+              change={descriptionChange(change)}
             />
           </InlineImageProvider>
         </div>
@@ -255,8 +290,27 @@ export default function PatchConvertClient() {
   const { items, loading, error } = useItemDb();
   const [query, setQuery] = useState("");
   const [selected, setSelected] = useState<string>();
+  const cards = useCardIllustrations();
+  const maps = useNewMaps();
+  const itemChanges = useItemChanges();
+  const [mapsOpen, setMapsOpen] = useState(false);
 
-  const entries = Object.entries(items || {});
+  const [kind, setKind] = useState<ItemKind>("new");
+
+  const allEntries = Object.entries(items || {});
+  // An item without a patchType counts as New.
+  const isModified = (item: PatchItemsDto) => item.patchType === "modified";
+  const counts: Record<ItemKind, number> = {
+    all: allEntries.length,
+    new: allEntries.filter(([, item]) => !isModified(item)).length,
+    modified: allEntries.filter(([, item]) => isModified(item)).length,
+  };
+  const entries =
+    kind === "all"
+      ? allEntries
+      : allEntries.filter(([, item]) =>
+          kind === "modified" ? isModified(item) : !isModified(item),
+        );
   const needle = query.trim().toLowerCase();
   const visible = needle
     ? entries.filter(([, item]) =>
@@ -280,15 +334,24 @@ export default function PatchConvertClient() {
   return (
     <main className="px-4 py-6 sm:px-6">
       <div className="mx-auto max-w-7xl">
-        <header className="mb-6 max-w-2xl">
-          <h1 className="text-2xl font-bold text-base-content sm:text-3xl">
-            Patch Convert
-          </h1>
-          <p className="mt-1 text-sm text-base-content/70">
-            เลือกไอเทมจากแพตช์ แล้วกดดาวน์โหลดรูป เพื่อบันทึกการ์ดเป็น PNG
-            สำหรับโพสต์
-          </p>
+        <header className="mb-6 flex flex-wrap items-start justify-between gap-3">
+          <div className="max-w-2xl">
+            <h1 className="text-2xl font-bold text-base-content sm:text-3xl">
+              Patch Convert
+            </h1>
+            <p className="mt-1 text-sm text-base-content/70">
+              เลือกไอเทมจากแพตช์ แล้วกดดาวน์โหลดรูป เพื่อบันทึกการ์ดเป็น PNG
+              สำหรับโพสต์
+            </p>
+          </div>
+          {/* Only when the patch brings New maps. */}
+          {maps.length > 0 && (
+            <NewMapsButton count={maps.length} onOpen={() => setMapsOpen(true)} />
+          )}
         </header>
+        {mapsOpen && maps.length > 0 && (
+          <NewMapsModal maps={maps} onClose={() => setMapsOpen(false)} />
+        )}
 
         <div className="grid gap-6 lg:grid-cols-[18rem_minmax(0,1fr)] lg:items-start">
           <ItemPicker
@@ -298,6 +361,10 @@ export default function PatchConvertClient() {
             onSelect={setSelected}
             query={query}
             onQueryChange={setQuery}
+            cards={cards}
+            kind={kind}
+            onKindChange={setKind}
+            counts={counts}
           />
 
           {current ? (
@@ -305,11 +372,13 @@ export default function PatchConvertClient() {
               key={current[0]}
               patchKey={current[0]}
               item={current[1]}
+              illustration={cards[current[0]]}
+              change={itemChanges[current[0]]}
             />
           ) : (
             <p className="rounded-box border border-dashed border-base-300 p-10 text-center text-base-content/70">
               {entries.length === 0
-                ? "ยังไม่มีข้อมูลไอเทมในแพตช์นี้"
+                ? "ไม่มีไอเทมในหมวดนี้"
                 : "ไม่พบไอเทมที่ตรงกับคำค้นหา"}
             </p>
           )}

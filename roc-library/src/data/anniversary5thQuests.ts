@@ -6,8 +6,14 @@ import type { ChapterQuest, QuestTask, RecurringQuestGroup } from "@/types/anniv
  */
 const WORLD_FRUIT: QuestTask = { kind: "reward", label: "World Fruit", count: 100, unit: "ชิ้น", itemImageId: 6435 };
 
-const DAILY_WEEKLY_REWARDS: QuestTask[] = [
+const DAILY_REWARDS: QuestTask[] = [
   { kind: "reward", label: "World Fruit", count: 20, itemImageId: 6435 },
+  { kind: "reward", label: "Jam Pancake", count: 20, itemImageId: 592 },
+];
+
+/** Weekly Quest pays three times the World Fruit from 4 Nov to 2 Dec 2026 (patch of 4 Nov); the rest is unchanged. */
+const WEEKLY_REWARDS: QuestTask[] = [
+  { kind: "reward", label: "World Fruit", count: 60, itemImageId: 6435 },
   { kind: "reward", label: "Jam Pancake", count: 20, itemImageId: 592 },
 ];
 
@@ -66,7 +72,7 @@ export const CHAPTER_QUESTS: ChapterQuest[] = [
     gameTitle: "Chapter III - Free trade : การเปิดเส้นทางการค้า",
     kind: "ตอบคำถาม",
     intro: "เมื่อท่านต้องการการสนับสนุน ท่านก็ต้องผ่านบททดสอบ",
-    requirements: ["Hi Class LV 1 + Job 50 ขึ้นไป หรือ Extend LV 99 + Job 50 ขึ้นไป", "อยู่ในร่าง Marin", "จบ Chapter II แล้ว", "ทำได้ 1 ครั้งต่อตัวละคร"],
+    requirements: ["Hi Class LV 1 + Job 50 ขึ้นไป {{Hi 1 เท่านั้น เช่น Hi Archer ห้ามขึ้น Hi2}} หรือ Extend LV 99 + Job 50 ขึ้นไป", "อยู่ในร่าง Marin", "จบ Chapter II แล้ว", "ทำได้ 1 ครั้งต่อตัวละคร"],
     steps: ["คุยกับ NPC Black Market ใน Alberta แล้วเลือกบทสนทนาตอบคำถาม", "ตอบให้ถูกทั้ง 5 ข้อ ถ้าผิดต้องเริ่มใหม่และรอ 30 วินาที"],
     tasks: [{ kind: "quiz", label: "ตอบคำถามให้ถูกทั้งหมด", count: 5, unit: "ข้อ" }],
     quizAnswers: ["Prontera", "Glast Heim", "Super Novice", "Awakened", "Dracula"],
@@ -109,7 +115,8 @@ export const CHAPTER_QUESTS: ChapterQuest[] = [
     gameTitle: "Chapter V - Break your limits : การทลายขีดจำกัด",
     kind: "รวบรวม",
     intro: "เพื่อให้ได้แหวนเวทย์มนต์",
-    requirements: ["จบ Chapter IV แล้ว", "อยู่ในร่าง Marin", "Hi Class LV 99 Job 1 หรือ Extend LV 99 Job 1"],
+    requirements: ["จบ Chapter IV แล้ว", "อยู่ในร่าง Marin"],
+    notes: ["ตั้งแต่ 4 พ.ย. 2026 ไม่เช็ค LV และ Job ตอนรับเควสแล้ว เช็กเฉพาะว่าผ่าน Chapter IV"],
     steps: [
       "คุยกับ NPC 5th Anniversary Exchange ใน Morroc รับได้พร้อมกันสูงสุด 2 เควส",
       "Shadow Stone: Desert Wolf [Event] ที่ Pyramid 3F / 4F (moc_pryd03 / moc_pryd04) ผ่านมุมซ้ายบนของ Morroc > Morroc Ruins > Pyramid",
@@ -117,7 +124,7 @@ export const CHAPTER_QUESTS: ChapterQuest[] = [
       "กลับไปส่งกับ NPC เดิม",
     ],
     tasks: [
-      { kind: "collect", label: "Shadow Stone", count: 45, unit: "ชิ้น", via: "จากการสังหาร Desert Wolf [Event]", monsterId: 1107, itemImageId: 105675 },
+      { kind: "collect", label: "Shadow Stone", count: 45, unit: "ชิ้น", via: "จากการสังหาร Desert Wolf [Event]", monsterId: 1106, itemImageId: 105675 },
       { kind: "collect", label: "Flame Stone", count: 45, unit: "ชิ้น", via: "จากการสังหาร Jakk [Event]", monsterId: 1130, itemImageId: 105676 },
     ],
     rewards: [
@@ -161,7 +168,7 @@ export const RECURRING_QUESTS: RecurringQuestGroup[] = [
     note: "เควสที่ได้เป็นแบบสุ่ม · เมื่อรายงานสำเร็จแล้ว ต้องรอ 1 วัน",
     requiresChapter: 3,
     acceptAt: "prt_q 156 195",
-    rewards: DAILY_WEEKLY_REWARDS,
+    rewards: DAILY_REWARDS,
     rewardNote: "ส่งเควสสำเร็จ · ได้รับ 1 ครั้ง ต่อเควส",
     quests: [
       {
@@ -181,15 +188,15 @@ export const RECURRING_QUESTS: RecurringQuestGroup[] = [
   {
     id: "weekly",
     title: "Weekly Quest",
-    note: "ทำได้ครบ 3 เควส · รวม World Fruit 60 ต่อสัปดาห์",
+    note: "ทำได้ครบ 3 เควส · รวม World Fruit 180 ต่อสัปดาห์ (โปรโมชัน 3 เท่า 4 พ.ย. – 2 ธ.ค. 2026 · ปกติ 60)",
     requiresChapter: 5,
     acceptAt: "prt_q 156 195",
-    rewards: DAILY_WEEKLY_REWARDS,
-    rewardNote: "ส่งเควสสำเร็จ · ได้รับ 1 ครั้ง ต่อเควส",
+    rewards: WEEKLY_REWARDS,
+    rewardNote: "ส่งเควสสำเร็จ · ได้รับ 1 ครั้ง ต่อเควส · ครบ 3 เควส World Fruit 180",
     quests: [
       {
         title: "Weekly 1",
-        tasks: [{ kind: "collect", label: "Shadow Stone", count: 40, unit: "ชิ้น", via: "จากการสังหาร Desert Wolf [Event]", monsterId: 1107, itemImageId: 105675}],
+        tasks: [{ kind: "collect", label: "Shadow Stone", count: 40, unit: "ชิ้น", via: "จากการสังหาร Desert Wolf [Event]", monsterId: 1106, itemImageId: 105675}],
       },
       {
         title: "Weekly 2",
