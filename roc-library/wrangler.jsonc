@@ -7,6 +7,8 @@
   // Keep the variables and secrets set in the Cloudflare dashboard when a build deploys; without this a
   // deploy removes plain-text variables (such as SUPABASE_URL) that are not written in this file.
   "keep_vars": true,
+  // Workers Logs: lets the dashboard show console.error output from worker/index.ts.
+  "observability": { "enabled": true },
   "assets": {
     "directory": "./out",
     "binding": "ASSETS",

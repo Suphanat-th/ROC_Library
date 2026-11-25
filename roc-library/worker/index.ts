@@ -32,7 +32,9 @@ export default {
     }
     try {
       return await handler(request);
-    } catch {
+    } catch (error) {
+      // Shows in Workers Logs (Cloudflare dashboard), so a bad secret or a crash can be traced.
+      console.error(`api error ${pathname}:`, error instanceof Error ? error.message : String(error));
       return new Response(JSON.stringify({ message: "เกิดข้อผิดพลาดบนเซิร์ฟเวอร์" }), {
         status: 500,
         headers: { "Content-Type": "application/json", "Cache-Control": "no-store" },

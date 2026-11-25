@@ -8,13 +8,15 @@ import { useLoading } from "@/context/LoadingContext";
 import teteGuild from "../../../public/assets/images/GuildImage/vanCleef.png";
 import dogGuild from "../../../public/assets/images/GuildImage/dog.jpg";
 import rocFunGuild from "../../../public/assets/images/GuildImage/rocfun.png";
-import { tr } from "framer-motion/client";
+import { ChevronRight, ExternalLink } from "lucide-react";
+import { SidebarIcon, type SidebarIconName } from "@/components/SidebarIcon";
 
 interface FileTreeItem {
   id: string;
   name: string;
   type: "folder" | "file";
-  icon?: string;
+  icon?: SidebarIconName;
+  tone?: Tone;
   href?: string;
   link_target?: boolean | null;
   children?: FileTreeItem[];
@@ -23,30 +25,33 @@ interface FileTreeItem {
 const fileTree: FileTreeItem[] = [
   {
     id: "home",
+    tone: "primary",
     name: "Home",
     type: "file",
-    icon: "https://api.iconify.design/fluent-color/home-16.svg?color=%23c4b5fd",
+    icon: "home",
     href: "/",
   },
   {
     id: "muad",
+    tone: "info",
     name: "MUAD",
     type: "file",
-    icon: "",
+    icon: "muad",
     href: "/muad",
   },
   {
     id: "5thAnvs",
+    tone: "accent",
     name: "5th Anniversary",
     type: "file",
-    icon: "https://api.iconify.design/flowbite/gift-box-solid.svg?color=%23f4fb00",
+    icon: "gift",
     href: "/5thAnvs",
   },
   {
     id: "features",
+    tone: "primary",
     name: "Features",
     type: "folder",
-    icon: "",
     children: [
       // {
       //   id: "classes",
@@ -57,37 +62,42 @@ const fileTree: FileTreeItem[] = [
       // },
       {
         id: "lab",
+        tone: "success",
         name: "Central Laboratory",
         type: "file",
-        icon: "https://api.iconify.design/picon/lab.svg?color=%23f4fb00",
+        icon: "flask",
         href: "/central-lab",
       },
       {
         id: "monster",
+        tone: "error",
         name: "Monster x3",
         type: "file",
-        icon: "https://api.iconify.design/openmoji/ogre.svg?color=%23f4fb00",
+        icon: "monster",
         href: "/monsterx3",
       },
       {
         id: "endlesstower",
+        tone: "info",
         name: "Endless Tower",
         type: "file",
-        icon: "https://api.iconify.design/fluent-emoji-flat/tokyo-tower.svg?color=%23f4fb00",
+        icon: "tower",
         href: "/endless-tower",
       },
       {
         id: "mvp",
+        tone: "error",
         name: "MVP Hunter",
         type: "file",
-        icon: "https://api.iconify.design/fluent-emoji-flat/skull.svg",
+        icon: "skull",
         href: "/mvp",
       },
       {
         id: "aspd",
+        tone: "accent",
         name: "The Flash Calc (ASPD)",
         type: "file",
-        icon: "https://api.iconify.design/famicons/flash.svg?color=%23f4fb00",
+        icon: "bolt",
         href: "/aspd-calc",
       },
       // {
@@ -108,29 +118,32 @@ const fileTree: FileTreeItem[] = [
   // },
   {
     id: "dungeon",
+    tone: "success",
     name: "Dungeon",
     type: "folder",
-    icon: "",
     children: [
       {
         id: "facewormnest",
+        tone: "success",
         name: "Faceworm Nest Guide",
         type: "file",
-        icon: "https://api.iconify.design/hugeicons/worm.svg?color=%23f4fb00",
+        icon: "nest",
         href: "/facewormnest-guide",
       },
       {
         id: "toyfactory",
+        tone: "accent",
         name: "Toy Factory Guide",
         type: "file",
-        icon: "https://api.iconify.design/flowbite/teddy-bear-solid.svg?color=%23f4fb00",
+        icon: "toy",
         href: "/toyfactory-guide",
       },
       {
         id: "jittlebug",
+        tone: "info",
         name: "Jittlebug",
         type: "file",
-        icon: "https://api.iconify.design/fluent-emoji-flat/world-map.svg",
+        icon: "map",
         href: "/jittlebug",
       },
       // {
@@ -145,16 +158,18 @@ const fileTree: FileTreeItem[] = [
 
   {
     id: "calcbp",
+    tone: "accent",
     name: "Battle Pass Calculator",
     type: "file",
-    icon: "https://api.iconify.design/emojione/ticket.svg?color=%23f4fb00",
+    icon: "ticket",
     href: "/calc-bp",
   },
   {
     id: "randomscroll",
+    tone: "primary",
     name: "Random Scroll",
     type: "file",
-    icon: "https://api.iconify.design/fluent-emoji-flat/scroll.svg",
+    icon: "scroll",
     href: "/random-scroll",
   },
   // {
@@ -166,23 +181,26 @@ const fileTree: FileTreeItem[] = [
   // },
   {
     id: "donate",
+    tone: "error",
     name: "Donate",
     type: "file",
-    icon: "https://api.iconify.design/fluent-emoji-flat/red-heart.svg",
+    icon: "heart",
     href: "/donate",
   },
   {
     id: "say-something",
+    tone: "success",
     name: "บอกเรา",
     type: "file",
-    icon: "https://api.iconify.design/fluent-emoji-flat/speech-balloon.svg",
+    icon: "chat",
     href: "/say-something",
   },
   {
     id: "skin-game",
+    tone: "info",
     name: "Skin UI",
     type: "file",
-    icon: "https://api.iconify.design/fxemoji/dog.svg",
+    icon: "palette",
     href: "https://drive.google.com/drive/u/0/folders/1pbN2d8I4M2cYRcuzhxrsn21nrMiX9pPw",
     link_target: true,
   },
@@ -231,6 +249,17 @@ const fileTree: FileTreeItem[] = [
   // }
 ];
 
+type Tone = "primary" | "info" | "success" | "accent" | "error";
+
+/* A group's theme colour: the dot on its heading and the rail beside its Tools. Classes are spelled out so Tailwind can see them. */
+const toneStyles: Record<Tone, { rail: string; dot: string }> = {
+  primary: { rail: "border-primary/30", dot: "bg-primary" },
+  info: { rail: "border-info/30", dot: "bg-info" },
+  success: { rail: "border-success/30", dot: "bg-success" },
+  accent: { rail: "border-accent/30", dot: "bg-accent" },
+  error: { rail: "border-error/30", dot: "bg-error" },
+};
+
 function FileTreeNode({
   item,
   level = 0,
@@ -249,6 +278,8 @@ function FileTreeNode({
   const isFolder = item.type === "folder";
   const isActive = !isFolder && item.href === pathname;
   const isPending = !isFolder && item.href === pendingHref;
+  const hasActiveChild =
+    isFolder && !!item.children?.some((child) => child.href === pathname);
 
   const handleLinkClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
     toggleDrawer();
@@ -262,154 +293,132 @@ function FileTreeNode({
     startNavigation(item.href || "#", event);
   };
 
-  const paddingLeft = level * 12;
+  if (isFolder) {
+    return (
+      <div className="pt-3">
+        <button
+          type="button"
+          onClick={() => setExpanded(!expanded)}
+          aria-expanded={expanded}
+          className="group flex w-full items-center gap-2 rounded-field px-3 py-1.5 text-left text-xs font-semibold uppercase tracking-wider text-base-content/60 transition-colors hover:text-base-content focus-visible:outline-2 focus-visible:outline-primary"
+        >
+          <span
+            aria-hidden="true"
+            className={`h-2 w-2 shrink-0 rounded-full ${toneStyles[item.tone ?? "primary"].dot}`}
+          />
+          <span className="truncate">{item.name}</span>
+          {hasActiveChild && !expanded && (
+            <span aria-hidden="true" className="h-1.5 w-1.5 rounded-full bg-primary" />
+          )}
+          <span aria-hidden="true" className="h-px flex-1 bg-base-300" />
+          <ChevronRight
+            aria-hidden="true"
+            className={`h-4 w-4 shrink-0 transition-transform duration-200 motion-reduce:transition-none ${expanded ? "rotate-90" : ""}`}
+          />
+        </button>
+        {expanded && (
+          <div className={`mt-1 ml-7 space-y-0.5 border-l-2 pl-2 ${toneStyles[item.tone ?? "primary"].rail}`}>
+            {item.children?.map((child) => (
+              <FileTreeNode
+                key={child.id}
+                item={child}
+                level={level + 1}
+                toggleDrawer={toggleDrawer}
+              />
+            ))}
+          </div>
+        )}
+      </div>
+    );
+  }
 
   return (
-    <div key={item.id}>
-      {isFolder ? (
-        <>
-          <button
-            onClick={() => setExpanded(!expanded)}
-            title={item.name}
-            style={{ paddingLeft: `${8 + paddingLeft}px` }}
-            className="w-full flex items-center py-2.5 px-3 rounded-lg hover:bg-primary/10 transition-colors text-sm font-medium gap-2 group"
-          >
-            <span
-              aria-hidden="true"
-              className="w-5 h-5 shrink-0 bg-center bg-no-repeat bg-contain transition-transform duration-200 group-hover:brightness-125"
-              style={{
-                backgroundImage: `url(https://api.iconify.design/mdi/folder${expanded ? "-open" : ""}.svg?color=%2393c5fd)`,
-              }}
-            ></span>
-            <span className="text-sm shrink-0">
-              {item.icon && (
-                <span
-                  aria-hidden="true"
-                  className="block w-5 h-5 bg-center bg-no-repeat bg-contain"
-                  style={{ backgroundImage: `url(${item.icon})` }}
-                />
-              )}
-            </span>
-            <span className="truncate text-base-content/80 group-hover:text-base-content">
-              {item.name}
-            </span>
-            <span className="ml-auto text-xs text-base-content/50 group-hover:text-primary">
-              {expanded ? "−" : "+"}
-            </span>
-          </button>
-          {expanded && (
-            <div className="border-l-2 border-primary/20 ml-6">
-              {item.children?.map((child) => (
-                <FileTreeNode
-                  key={child.id}
-                  item={child}
-                  level={level + 1}
-                  toggleDrawer={toggleDrawer}
-                />
-              ))}
-            </div>
-          )}
-        </>
-      ) : (
-        <Link
-          href={item.href || "#"}
-          onClick={handleLinkClick}
-          title={item.name}
-          target={item.link_target ? "_blank" : undefined}
-          rel={item.link_target ? "noopener noreferrer" : undefined}
-          aria-current={isActive ? "page" : undefined}
-          style={{ paddingLeft: `${8 + paddingLeft}px` }}
-          className={`flex items-center py-2.5 px-3 rounded-lg transition-colors text-sm w-full gap-2 group ${
-            isActive || isPending
-              ? "bg-primary/15 text-primary font-semibold"
-              : "hover:bg-primary/10"
-          }`}
-        >
-          <span className="w-5 h-5 shrink-0">
-            {item.icon && (
-              <span
-                aria-hidden="true"
-                className="block w-5 h-5 bg-center bg-no-repeat bg-contain"
-                style={{ backgroundImage: `url(${item.icon})` }}
-              />
-            )}
-          </span>
-          <span
-            className={`truncate font-medium ${isActive || isPending ? "" : "text-base-content/85 group-hover:text-base-content"}`}
-          >
-            {item.name}
-          </span>
-          {isPending && (
-            <span
-              className="loading loading-spinner loading-xs ml-auto shrink-0"
-              aria-hidden="true"
-            />
-          )}
-        </Link>
+    <Link
+      href={item.href || "#"}
+      onClick={handleLinkClick}
+      title={item.name}
+      target={item.link_target ? "_blank" : undefined}
+      rel={item.link_target ? "noopener noreferrer" : undefined}
+      aria-current={isActive ? "page" : undefined}
+      className={`group relative flex w-full items-center gap-3 rounded-field py-2 pr-3 pl-3 text-sm transition-colors motion-reduce:transition-none focus-visible:outline-2 focus-visible:outline-primary ${
+        isActive || isPending
+          ? "bg-primary/10 font-semibold text-primary"
+          : "text-base-content/85 hover:bg-base-200 hover:text-base-content"
+      }`}
+    >
+      {(isActive || isPending) && (
+        <span
+          aria-hidden="true"
+          className="absolute top-1.5 bottom-1.5 left-0 w-1 rounded-r-full bg-primary"
+        />
       )}
-    </div>
+      {item.icon && <SidebarIcon name={item.icon} active={isActive || isPending} />}
+      <span className="truncate">{item.name}</span>
+      {isPending && (
+        <span
+          className="loading loading-spinner loading-xs ml-auto shrink-0"
+          aria-hidden="true"
+        />
+      )}
+      {item.link_target && !isPending && (
+        <ExternalLink
+          aria-hidden="true"
+          className="ml-auto h-3.5 w-3.5 shrink-0 text-base-content/40 group-hover:text-base-content/70"
+        />
+      )}
+    </Link>
   );
 }
 
+const supporters = [
+  { img: teteGuild, label: "ลูกคุณหนูใจแตก" },
+  { img: dogGuild, label: "หมากัดหมวด" },
+  { img: rocFunGuild, label: "ROC หรรษา" },
+];
+
 export default function SidebarPage() {
+  const closeDrawer = () => {
+    const checkbox = document.getElementById(
+      "is-drawer-open",
+    ) as HTMLInputElement | null;
+    if (checkbox) checkbox.checked = false;
+  };
+
   return (
     <>
       {/* Spacer: the Navbar (z-40) stays above the Sidebar so the Menu toggle can close it */}
       <div aria-hidden="true" className="h-16 shrink-0" />
 
-      {/* Sidebar Navigation - File Tree */}
-      <nav className="p-4 flex-1 overflow-y-auto">
-        <div className="space-y-2">
+      {/* Sidebar Navigation */}
+      <nav aria-label="เมนูหลัก" className="flex-1 overflow-y-auto px-3 pt-4 pb-4">
+        <div className="space-y-0.5">
           {fileTree.map((item) => (
-            <FileTreeNode
-              key={item.id}
-              item={item}
-              toggleDrawer={() => {
-                const checkbox = document.getElementById(
-                  "is-drawer-open",
-                ) as HTMLInputElement;
-                if (checkbox) checkbox.checked = false;
-              }}
-            />
+            <FileTreeNode key={item.id} item={item} toggleDrawer={closeDrawer} />
           ))}
         </div>
       </nav>
 
       {/* Sidebar Footer */}
-      <div className="p-4 border-t border-base-300 bg-base-200 mt-auto shrink-0">
-        <p className="text-[10px] text-base-content/60 mb-3">
-          © 2025 ROC Library. All rights reserved.
-        </p>
-        <p className="text-[10px] font-semibold text-base-content/80 mb-2">
+      <div className="mt-auto shrink-0 border-t border-base-300 bg-base-200 px-4 py-4">
+        <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-base-content/60">
           Supporter
         </p>
-        <div className="flex justify-center gap-2">
-          {[
-            {
-              img: teteGuild,
-              label: "ลูกคุณหนูใจแตก",
-            },
-            {
-              img: dogGuild,
-              label: "หมากัดหมวด",
-            },
-            {
-              img: rocFunGuild,
-              label: "ROC หรรษา",
-            },
-          ].map((g, i) => (
-            <div key={i} className="relative group">
+        <ul className="flex items-center gap-2">
+          {supporters.map((g) => (
+            <li key={g.label} className="tooltip tooltip-top" data-tip={g.label}>
               <Image
                 src={g.img}
                 alt={g.label}
-                className="w-6.25 h-6.25 rounded border-2 border-base-100 hover:scale-110 transition-transform cursor-pointer"
+                width={32}
+                height={32}
+                className="h-8 w-8 rounded-field border-2 border-base-100 object-cover"
               />
-              <span className="absolute bottom-full mb-1 left-1/2 -translate-x-1/2 px-2 py-1 text-8px text-white bg-gray-800 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-10">
-                {g.label}
-              </span>
-            </div>
+            </li>
           ))}
-        </div>
+        </ul>
+        <p className="mt-3 text-xs text-base-content/60">
+          © 2025 ROC Library. All rights reserved.
+        </p>
       </div>
     </>
   );

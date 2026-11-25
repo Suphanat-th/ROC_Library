@@ -5821,9 +5821,6 @@ export default function MonstersDb(): Monster[] {
       jobCurrent: 0,
       jobUp: 0,
       map: "Endless Tower",
-      mapspawn: [
-        { map: "gef_dun01", cooldown: [60, 70] },
-      ],
       element: {
         neutral: 100,
         water: 25,
