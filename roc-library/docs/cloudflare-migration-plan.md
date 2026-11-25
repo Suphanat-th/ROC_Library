@@ -57,6 +57,7 @@
 **สถานะเฟส 1 (โค้ดเสร็จบน branch `cloudflare-pages`, ยังไม่ deploy):**
 - ทดสอบในสำเนาแยก: `prepare-static` + `next build` ได้ static export 31 หน้า; `wrangler dev` (workerd) ตอบ API ครบ รวมการเซ็นคีย์ Ed25519 ผ่าน `node:crypto`; ขนาด Worker ~980 KiB (gzip 175 KiB) ต่ำกว่าเพดาน 3 MB ของแพ็กเกจฟรีมาก; `npm run build` ปกติผ่าน
 - ยังไม่ได้ทดสอบ: การ deploy จริง, การเชื่อม Supabase จริงจาก Worker, ภาพ/แผนที่ทั้งหมด (สำเนาทดสอบไม่มีภาพใหญ่), secret ใน Cloudflare, `NEXT_PUBLIC_SITE_URL` (ตอนนี้ OG image ใช้ localhost:3000 จนกว่าจะตั้งโดเมน)
+- Cloudflare ตั้ง Production branch เป็น `cloudflare-pages` แล้ว (build แรกบน `main` ล้มตามคาด เพราะ `main` ยังไม่มี `prepare-static.mjs`) รอ build จาก `cloudflare-pages`
 - ต้องทำเองใน Cloudflare: ตั้ง Production branch, ใส่ secret ที่ **Settings > Variables and Secrets (runtime)** (แยกจาก Build variables), กด Deploy
 
 ### เฟส 2: ทดสอบและทดลองใช้จริง
