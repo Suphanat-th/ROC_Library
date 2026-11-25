@@ -4,6 +4,8 @@
 
 > ปรับแผนล่าสุด: เริ่มแบบ **ไม่มีโดเมนและไม่มี R2** ภาพอยู่ใน `public/` บน Pages เหมือนเดิม ทดลองบน `*.pages.dev` แล้วตัดสินใจเรื่อง R2 และโดเมนจากผลจริง ไม่ใช้ Vercel อีก
 
+> **หมายเหตุ (หน้าตั้งค่าของ Cloudflare):** หน้า "Set up your application" ที่ผู้ใช้เห็นเป็นแบบ **Workers + Static Assets** (`npx wrangler deploy`) ไม่ใช่ Pages แบบเดิม จึงอ่าน "Pages / Pages Functions" ในแผนนี้ว่าเป็น **Worker หนึ่งตัวที่เสิร์ฟไฟล์ static (`assets.directory = out`) และมีโค้ดจัดการ `/api/*`** (`assets.run_worker_first: ["/api/*"]` เพื่อให้เฉพาะ API ผ่าน Worker และนับโควตา) ไฟล์ตั้งค่าคือ `wrangler.jsonc`, secret ตั้งด้วย `wrangler secret` หรือ Dashboard (มีผลทันที ไม่ต้อง redeploy ต้องยืนยันตอนทดลองจริง) Repo มีแอปอยู่ในโฟลเดอร์ย่อย `roc-library/` จึงต้องตั้ง **Root directory = `roc-library`** และ **production branch = `cloudflare-pages`** ก่อน deploy ครั้งแรก
+
 ## ที่มา
 - Vercel Hobby ถูกหยุดมา ~3 สัปดาห์ หลังใช้ ~4M requests/เดือน (พุ่งสุดวัน 28 ต.ค. ตรงกับแพตช์)
 - สาเหตุหลัก: `public/` หนัก 306 MB / 2,887 ไฟล์ และหน้าหนึ่งโหลดภาพเล็กจำนวนมาก (`monsterDb` gif 311, `minimap` webp 283, MapViewer ที่โหลด texture/model ทีละไฟล์ ฯลฯ) โดยไม่มี cache header
@@ -51,6 +53,11 @@
 - [ ] แก้ `layout.tsx` ที่เช็ก `VERCEL_ENV` (Google Analytics) ให้ใช้ตัวแปรของ Cloudflare เช่น `CF_PAGES_BRANCH`
 - [ ] ตั้ง secret บน Cloudflare (Supabase URL/service role ฯลฯ)
 - [ ] เชื่อม repo กับ Pages, deploy เป็น `*.pages.dev` ตรวจว่าภาพใน `public/` ขึ้นครบ และขนาด Functions ไม่เกิน 3 MB
+
+**สถานะเฟส 1 (โค้ดเสร็จบน branch `cloudflare-pages`, ยังไม่ deploy):**
+- ทดสอบในสำเนาแยก: `prepare-static` + `next build` ได้ static export 31 หน้า; `wrangler dev` (workerd) ตอบ API ครบ รวมการเซ็นคีย์ Ed25519 ผ่าน `node:crypto`; ขนาด Worker ~980 KiB (gzip 175 KiB) ต่ำกว่าเพดาน 3 MB ของแพ็กเกจฟรีมาก; `npm run build` ปกติผ่าน
+- ยังไม่ได้ทดสอบ: การ deploy จริง, การเชื่อม Supabase จริงจาก Worker, ภาพ/แผนที่ทั้งหมด (สำเนาทดสอบไม่มีภาพใหญ่), secret ใน Cloudflare, `NEXT_PUBLIC_SITE_URL` (ตอนนี้ OG image ใช้ localhost:3000 จนกว่าจะตั้งโดเมน)
+- ต้องทำเองใน Cloudflare: ตั้ง Production branch, ใส่ secret ที่ **Settings > Variables and Secrets (runtime)** (แยกจาก Build variables), กด Deploy
 
 ### เฟส 2: ทดสอบและทดลองใช้จริง
 - [ ] ไล่ทุกเมนูใน sidebar, theme toggle, patch-convert, visual (SPR/ACT), mvp (route + Supabase report), 5thAnvs, MapViewer

@@ -1,27 +1,4 @@
 {
-  "592": {
-    "name": "Jam Pancake",
-    "changes": [
-      {
-        "field": "unidentifiedDescriptionName",
-        "before": [
-          "น้ำหนัก : 15"
-        ],
-        "after": [
-          "น้ำหนัก : 1"
-        ]
-      },
-      {
-        "field": "identifiedDescriptionName",
-        "before": [
-          "น้ำหนัก : 15"
-        ],
-        "after": [
-          "น้ำหนัก : 1"
-        ]
-      }
-    ]
-  },
   "18833": {
     "name": "5th Anniversary Marin Crown",
     "changes": [

@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter } from "next/navigation";
 import { Check, Copy, Download, KeyRound, Loader2, Lock, LogOut, Trash2 } from "lucide-react";
 
 interface LogRow {
@@ -40,8 +39,16 @@ function downloadCsv(rows: LogRow[]) {
   setTimeout(() => URL.revokeObjectURL(url), 60_000);
 }
 
-export default function BotKeyGenerator({ signedIn, rows }: { signedIn: boolean; rows: LogRow[] | null }) {
-  const router = useRouter();
+export default function BotKeyGenerator({
+  signedIn,
+  rows,
+  refresh,
+}: {
+  signedIn: boolean;
+  rows: LogRow[] | null;
+  /** Asks the page to load the sign-in state and the Key record again. */
+  refresh: () => void;
+}) {
   // The password is only kept while the sign-in modal is open; the server then remembers the visit in a cookie.
   const [password, setPassword] = useState("");
   const [machineId, setMachineId] = useState("");
@@ -73,7 +80,7 @@ export default function BotKeyGenerator({ signedIn, rows }: { signedIn: boolean;
       if (!ok) setError(data.message ?? "เข้าสู่ระบบไม่สำเร็จ");
       else {
         setPassword("");
-        router.refresh();
+        refresh();
       }
     } catch {
       setError("เชื่อมต่อเซิร์ฟเวอร์ไม่สำเร็จ กรุณาลองอีกครั้ง");
@@ -87,7 +94,7 @@ export default function BotKeyGenerator({ signedIn, rows }: { signedIn: boolean;
       await post({ action: "logout" });
     } finally {
       setResult(null);
-      router.refresh();
+      refresh();
     }
   };
 
@@ -102,11 +109,11 @@ export default function BotKeyGenerator({ signedIn, rows }: { signedIn: boolean;
       if (!ok) {
         setResult(null);
         setError(data.message ?? "ออกคีย์ไม่สำเร็จ");
-        if (data.message?.includes("หมดเวลา")) router.refresh();
+        if (data.message?.includes("หมดเวลา")) refresh();
       } else {
         setResult(data);
         setHidden(false);
-        router.refresh();
+        refresh();
       }
     } catch {
       setResult(null);

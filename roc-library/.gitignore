@@ -45,3 +45,8 @@ environment/license_private.key
 
 # dev-only Comment draws from Facebook comments (people's names; never commit)
 /dev-data/
+
+# marker left by scripts/prepare-static.mjs (Cloudflare build only)
+/.static-export
+/.wrangler/
+/.dev.vars

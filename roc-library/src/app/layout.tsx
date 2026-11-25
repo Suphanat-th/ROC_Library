@@ -9,15 +9,12 @@ import { themeInitScript } from "@/components/ThemeToggle";
 import { ToTopButton } from "@/components/ToTopButton";
 import { GoogleAnalytics } from "@next/third-parties/google";
 
-// Visit tracking runs only on the live production site: never in `npm run dev`
-// and never on Vercel preview deployments. The ID is public, so it is safe to
+// Visit tracking runs only in a production build, never in `npm run dev`. Preview builds are off on
+// Cloudflare, so only the live site is tracked. The ID is public, so it is safe to
 // default here; set NEXT_PUBLIC_GA_MEASUREMENT_ID to override it.
 const GA_MEASUREMENT_ID =
   process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? "G-HY2J341C5V";
-const trackVisits =
-  process.env.NODE_ENV === "production" &&
-  (process.env.VERCEL_ENV === undefined ||
-    process.env.VERCEL_ENV === "production");
+const trackVisits = process.env.NODE_ENV === "production";
 
 const mali = localFont({
   src: "../../public/font/Mali-Regular.ttf",

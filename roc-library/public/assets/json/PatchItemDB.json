@@ -1,26 +1,4 @@
 {
-    "592": {
-        "unidentifiedDisplayName": "Jam Pancake",
-        "unidentifiedResourceName": "딸기잼팬케이크",
-        "unidentifiedDescriptionName": [
-            "เค้กแยมสตรอเบอรี่ มันจะดูน่ากินกว่านี้ถ้าสตรอเบอรี่สุขงอม",
-            "^000088รักษาสถานะผิดปกติทั้งหมด, ^000088เพิ่ม HP และ SP",
-            "(^ff0000ไอเท็มดังกล่าวจะถูกลบหลังจบกิจกรรม) ",
-            "^ffffff_",
-            "น้ำหนัก : 1"
-        ],
-        "identifiedDisplayName": "Jam Pancake",
-        "identifiedResourceName": "딸기잼팬케이크",
-        "identifiedDescriptionName": [
-            "เค้กแยมสตรอเบอรี่ มันจะดูน่ากินกว่านี้ถ้าสตรอเบอรี่สุขงอม",
-            "^000088รักษาสถานะผิดปกติทั้งหมด, ^000088เพิ่ม HP และ SP",
-            "(^ff0000ไอเท็มดังกล่าวจะถูกลบหลังจบกิจกรรม) ",
-            "น้ำหนัก : 1"
-        ],
-        "slotCount": 0,
-        "ClassNum": 0,
-        "patchType": "modified"
-    },
     "18833": {
         "unidentifiedDisplayName": "Headband",
         "unidentifiedResourceName": "머리띠",
