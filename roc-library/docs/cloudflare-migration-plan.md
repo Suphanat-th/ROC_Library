@@ -20,7 +20,7 @@
 | VIP | ยังไม่ใช้งาน (คอมเมนต์ใน sidebar) จึงตัด `/vip-search` และ `/api/vip` ออกจาก production |
 | patch-convert | **ทาง C:** เช็ก Key ผ่าน Function `/api/patch-key` (Patch key รายสัปดาห์ + Member key ถาวร เก็บเป็น secret ของ Pages) cache ผลใน `sessionStorage` + rate limit; ถ้าหมุนคีย์ด้วย redeploy น่ารำคาญค่อยย้ายคีย์ไปตาราง Supabase (C2) |
 | โครงสร้าง build | `scripts/prepare-static.mjs` ลบ `src/app/api`, `src/app/dev`, `vip-search` ชั่วคราวเฉพาะตอน build บน Cloudflare; `npm run dev` ใช้ route เดิมได้ตามปกติ; `functions/api/*` เป็นตัวห่อบางๆ เรียก utils ชุดเดียวกัน |
-| โดเมน | **ยังไม่ซื้อ** ใช้ `<ชื่อ>.pages.dev` ทดลองก่อน ซื้อ (Cloudflare Registrar) เมื่อพอใจผล |
+| โดเมน | ซื้อแล้ว `roc-library.com` (Cloudflare) **โดเมนหลักคือ `https://www.roc-library.com`**; `roc-library.com` (ไม่มี www) redirect ไปหา www (Redirect Rule + DNS record แบบ proxied); `NEXT_PUBLIC_SITE_URL=https://www.roc-library.com` เป็น Build variable |
 | Vercel | ไม่ใช้อีก เก็บโปรเจกต์ไว้เฉยๆ จนเว็บใหม่เสถียร 1–2 สัปดาห์แล้วลบ |
 | Build/Deploy | Cloudflare Pages ผ่าน Git (ไม่ build บน Windows) |
 | ค่าใช้จ่าย | ฟรีช่วงทดลอง; ~ $1/เดือน (ค่าโดเมน) เมื่อซื้อ |
@@ -62,6 +62,9 @@
 - ต้องทำเองใน Cloudflare: ตั้ง Production branch, ใส่ secret ที่ **Settings > Variables and Secrets (runtime)** (แยกจาก Build variables), กด Deploy
 
 ### เฟส 2: ทดสอบและทดลองใช้จริง
+**เกณฑ์ผ่าน (ทดลอง 7 วันนับจากโดเมนหลัก + API พร้อมครบ):** Worker invocations ต่อวัน < 20,000 (ราว 20% ของโควตาฟรี), error ในแท็บ Metrics < 1%, ไม่มีผู้เล่นรายงานว่าฟอร์มหรือแผนที่ใช้ไม่ได้ ถ้าผ่าน → **ไม่ย้ายภาพไป R2** (build ~1.5 นาที, ไฟล์ 2,886 ไฟล์ยังในขีดจำกัด) และไปเฟส 3
+**ก่อนเริ่มนับ:** ผูก `www.roc-library.com` (ทำแล้ว) + redirect จาก `roc-library.com`; ใส่ secret `BOT_KEYGEN_ADMIN_PASSWORD` และ `BOT_LICENSE_PRIVATE_KEY`; ตั้ง `NEXT_PUBLIC_SITE_URL`; ตั้ง Billing notification และ WAF rate limit `/api/*` (ตัดสินใจแล้วให้ตั้งก่อนประกาศลิงก์)
+
 - [ ] ไล่ทุกเมนูใน sidebar, theme toggle, patch-convert, visual (SPR/ACT), mvp (route + Supabase report), 5thAnvs, MapViewer
 - [ ] ทดสอบ API: `/api/feedback`, `/api/boss-report`, `/api/botgeneratekey`
 - [ ] ตรวจ timezone (GMT+7) และ localStorage
