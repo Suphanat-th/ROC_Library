@@ -86,15 +86,17 @@ export default function MapViewer({
     if (!container) return;
     let cancelled = false;
     let observer: ResizeObserver | null = null;
+    // "@" in a map name (1@jtb) is sent already encoded; otherwise Cloudflare answers with a redirect first.
     const base = "/assets/map";
+    const file = encodeURIComponent(name);
 
     (async () => {
       try {
         const [gndBuffer, gatBuffer, rsw] = await Promise.all([
-          fetchBuffer(`${base}/${name}.gnd`),
-          fetchBuffer(`${base}/${name}.gat`),
+          fetchBuffer(`${base}/${file}.gnd`),
+          fetchBuffer(`${base}/${file}.gat`),
           // the objects are optional: a map without a readable .rsw still opens as terrain
-          fetchBuffer(`${base}/${name}.rsw`).then(parseRsw).catch(() => null),
+          fetchBuffer(`${base}/${file}.rsw`).then(parseRsw).catch(() => null),
         ]);
         if (cancelled) return;
         const scene = createMapScene(

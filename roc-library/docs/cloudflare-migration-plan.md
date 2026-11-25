@@ -58,6 +58,7 @@
 - ทดสอบในสำเนาแยก: `prepare-static` + `next build` ได้ static export 31 หน้า; `wrangler dev` (workerd) ตอบ API ครบ รวมการเซ็นคีย์ Ed25519 ผ่าน `node:crypto`; ขนาด Worker ~980 KiB (gzip 175 KiB) ต่ำกว่าเพดาน 3 MB ของแพ็กเกจฟรีมาก; `npm run build` ปกติผ่าน
 - ยังไม่ได้ทดสอบ: การ deploy จริง, การเชื่อม Supabase จริงจาก Worker, ภาพ/แผนที่ทั้งหมด (สำเนาทดสอบไม่มีภาพใหญ่), secret ใน Cloudflare, `NEXT_PUBLIC_SITE_URL` (ตอนนี้ OG image ใช้ localhost:3000 จนกว่าจะตั้งโดเมน)
 - Cloudflare ตั้ง Production branch เป็น `cloudflare-pages` แล้ว (build แรกบน `main` ล้มตามคาด เพราะ `main` ยังไม่มี `prepare-static.mjs`) รอ build จาก `cloudflare-pages`
+- เว็บขึ้นจริงแล้วที่ `www.roc-library.com` และ `*.workers.dev` (ตรวจ 25 พ.ย. 2026): หน้า, ภาพ, `MapLinks.json` โหลดได้; `/api/patch-key` ตอบถูก; API อื่นตอบ 503 เพราะยังไม่ได้ใส่ secret; `roc-library.com` (ไม่มี www) ยังไม่ผูก; cache ของภาพเป็นค่าเริ่มต้น → เพิ่ม `public/_headers` แล้ว (ทดสอบใน `wrangler dev`: `_next/static` 1 ปี, ภาพ/แผนที่ 1 วัน, ฟอนต์ 7 วัน, `assets/json` ตรวจทุกครั้ง)
 - ต้องทำเองใน Cloudflare: ตั้ง Production branch, ใส่ secret ที่ **Settings > Variables and Secrets (runtime)** (แยกจาก Build variables), กด Deploy
 
 ### เฟส 2: ทดสอบและทดลองใช้จริง

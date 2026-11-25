@@ -107,6 +107,46 @@ body {
   }
 }
 
+/* 404 page: the mascot bobs up and down in a steady beat, and its shadow narrows as it rises.
+   With "reduce motion" on it still bobs, but only a few pixels and slowly. */
+@keyframes not-found-bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+
+@keyframes not-found-bob-soft {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+@keyframes not-found-shadow {
+  0%, 100% { transform: scaleX(1); opacity: 0.25; }
+  50% { transform: scaleX(0.7); opacity: 0.12; }
+}
+
+@keyframes not-found-shadow-soft {
+  0%, 100% { transform: scaleX(1); opacity: 0.25; }
+  50% { transform: scaleX(0.9); opacity: 0.2; }
+}
+
+.not-found-bob {
+  animation: not-found-bob 2s ease-in-out infinite;
+}
+
+.not-found-shadow {
+  animation: not-found-shadow 2s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .not-found-bob {
+    animation: not-found-bob-soft 2s ease-in-out infinite;
+  }
+
+  .not-found-shadow {
+    animation: not-found-shadow-soft 2s ease-in-out infinite;
+  }
+}
+
 /* ASPD calculator: form panels drawn as HUD frames (faint grid, corner brackets, a glow when in use) */
 .aspd-hud {
   position: relative;
