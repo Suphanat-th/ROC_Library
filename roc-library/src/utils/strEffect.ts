@@ -36,8 +36,12 @@ const fetchBuffer = async (url: string) => {
   return res.arrayBuffer()
 }
 
-const fileUrl = (base: string, name: string) =>
-  `${base}/${name.split(/[\\/]/).map(encodeURIComponent).join("/")}`
+/**
+ * `lowercase`: for a host whose file names are all lower case (the Asset host is case-sensitive, while an effect
+ * names its pictures as the game wrote them, e.g. kiki7.TGA).
+ */
+const fileUrl = (base: string, name: string, lowercase = false) =>
+  `${base}/${(lowercase ? name.toLowerCase() : name).split(/[\\/]/).map(encodeURIComponent).join("/")}`
 
 /** Below this a pixel adds too little light to be seen. */
 const FAINT = 16
@@ -89,12 +93,12 @@ async function loadPicture(url: string): Promise<StrPicture | null> {
 }
 
 /** Loads an effect file and every picture it names (they sit beside it). */
-export async function loadStrEffect(folderUrl: string, file: string): Promise<StrEffect> {
-  const str = parseSTR(await fetchBuffer(fileUrl(folderUrl, file)))
+export async function loadStrEffect(folderUrl: string, file: string, lowercase = false): Promise<StrEffect> {
+  const str = parseSTR(await fetchBuffer(fileUrl(folderUrl, file, lowercase)))
   const names = [...new Set(str.layers.flatMap((l) => l.textures))]
   const loaded = new Map(
     await Promise.all(
-      names.map(async (n) => [n, await loadPicture(fileUrl(folderUrl, n))] as const),
+      names.map(async (n) => [n, await loadPicture(fileUrl(folderUrl, n, lowercase))] as const),
     ),
   )
   return {

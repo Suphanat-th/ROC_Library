@@ -1,4 +1,4 @@
-import { ActData, ActLayer, SPRData, SPRFrame } from "@/types/visual"
+import { ActAction, ActData, ActLayer, SPRData, SPRFrame } from "@/types/visual"
 import { parseACT } from "@/utils/actParser"
 import { parseSPR } from "@/utils/sprParser"
 
@@ -17,13 +17,21 @@ export interface SpriteAsset {
 export type Gear =
   | { kind: "headgear"; asset: SpriteAsset }
   | { kind: "robe"; asset: SpriteAsset; behind: Record<string, number[]> }
+  /** An effect made of a sprite and its animation, drawn at the feet, on its own clock. */
+  | { kind: "effect"; asset: SpriteAsset; behind: boolean }
 
 export interface Character {
   body: SpriteAsset
   head: SpriteAsset
   /** Missing for an item that is only an effect. */
   gear?: Gear
+  /** More items worn at once (the Costume simulator). A headgear is drawn in the order given; a robe goes behind or in front. */
+  extras?: Gear[]
 }
+
+/** Everything the character wears, `gear` first. */
+const wornOf = (character: Character): Gear[] =>
+  character.gear ? [character.gear, ...(character.extras ?? [])] : (character.extras ?? [])
 
 export interface Bounds {
   minX: number
@@ -243,7 +251,7 @@ interface Part {
  * frame for frame with the body and is drawn behind it where the game's table says so.
  */
 function placeParts(character: Character, moment: Moment): Part[] {
-  const { body, head, gear } = character
+  const { body, head } = character
   const { action, bodyFrame } = moment
 
   const bodyAnchor = anchorOf(body, action, bodyFrame)
@@ -253,34 +261,46 @@ function placeParts(character: Character, moment: Moment): Part[] {
 
   const bodyPart = { asset: body, action, frame: bodyFrame, x: 0, y: 0 }
   const headPart = { asset: head, action, frame: bodyFrame, x: headX, y: headY }
-  if (!gear) return [bodyPart, headPart]
+  const worn = wornOf(character)
+  if (!worn.length) return [bodyPart, headPart]
 
-  if (gear.kind === "robe") {
-    const robe = { asset: gear.asset, action, frame: bodyFrame, x: 0, y: 0 }
-    return gear.behind[action]?.includes(bodyFrame)
-      ? [robe, bodyPart, headPart]
-      : [bodyPart, headPart, robe]
-  }
+  const behind: Part[] = []
+  const inFront: Part[] = []
+  const onHeadParts: Part[] = []
 
-  const asset = gear.asset
-  const gearAction = gearActionFor(asset, action)
-  const gearFrame = gearFrameFor(asset, body, action, moment)
-  // A frame that names no anchor sits where the head does; only a headgear with no
-  // anchors at all is an effect around the body, placed from the origin.
-  const gearAnchor = anchorOf(asset, gearAction, gearFrame) ?? headAnchor
-  const onHead = hasAnchors(asset)
+  for (const gear of worn) {
+    if (gear.kind === "robe") {
+      const robe = { asset: gear.asset, action, frame: bodyFrame, x: 0, y: 0 }
+      ;(gear.behind[action]?.includes(bodyFrame) ? behind : inFront).push(robe)
+      continue
+    }
 
-  return [
-    bodyPart,
-    headPart,
-    {
+    if (gear.kind === "effect") {
+      const run = gear.asset.act.actions[0]
+      if (!run?.frames.length) continue
+      const part = { asset: gear.asset, action: 0, frame: Math.floor(moment.elapsed / Math.max(run.delay, 1)) % run.frames.length, x: 0, y: 0 }
+      ;(gear.behind ? behind : inFront).push(part)
+      continue
+    }
+
+    const asset = gear.asset
+    const gearAction = gearActionFor(asset, action)
+    const gearFrame = gearFrameFor(asset, body, action, moment)
+    // A frame that names no anchor sits where the head does; only a headgear with no
+    // anchors at all is an effect around the body, placed from the origin.
+    const gearAnchor = anchorOf(asset, gearAction, gearFrame) ?? headAnchor
+    const onHead = hasAnchors(asset)
+
+    onHeadParts.push({
       asset,
       action: gearAction,
       frame: gearFrame,
       x: onHead ? headX + (headAnchor?.x ?? 0) - (gearAnchor?.x ?? 0) : 0,
       y: onHead ? headY + (headAnchor?.y ?? 0) - (gearAnchor?.y ?? 0) : 0,
-    },
-  ]
+    })
+  }
+
+  return [...behind, bodyPart, headPart, ...onHeadParts, ...inFront]
 }
 
 const opaqueBoxCache = new WeakMap<
@@ -326,10 +346,12 @@ export function measureCharacter(
   for (const action of actions) {
     const bodyFrames = character.body.act.actions[action]?.frames.length ?? 0
     // A headgear on its own clock may run longer than the body's frames.
-    const ownClock =
-      character.gear?.kind === "headgear"
-        ? character.gear.asset.act.actions[gearActionFor(character.gear.asset, action)]
-        : undefined
+    let ownClock: ActAction | undefined
+    for (const gear of wornOf(character)) {
+      if (gear.kind !== "headgear") continue
+      const clock = gear.asset.act.actions[gearActionFor(gear.asset, action)]
+      if (clock && clock.frames.length > (ownClock?.frames.length ?? 0)) ownClock = clock
+    }
     const steps = Math.max(bodyFrames, ownClock?.frames.length ?? 0)
 
     for (let step = 0; step < steps; step++) {
@@ -392,13 +414,22 @@ export function isHeldPose(body: SpriteAsset, action: number) {
  * body, it keeps playing in a held pose.
  */
 export function gearLoopMs(character: Character, action: number) {
-  const { gear, body } = character
-  if (!gear || gear.kind !== "headgear") return 0
-  const { frames, delay } = gear.asset.act.actions[gearActionFor(gear.asset, action)]
-  if (!followsPose(gear.asset)) return frames.length > 1 ? frames.length * delay : 0
-  const bodyFrames = body.act.actions[action]?.frames.length || 1
-  const run = Math.floor(frames.length / bodyFrames)
-  return run > 1 ? run * delay : 0
+  const { body } = character
+  let longest = 0
+  for (const gear of wornOf(character)) {
+    if (gear.kind !== "headgear") continue
+    const { frames, delay } = gear.asset.act.actions[gearActionFor(gear.asset, action)]
+    let loop = 0
+    if (!followsPose(gear.asset)) {
+      loop = frames.length > 1 ? frames.length * delay : 0
+    } else {
+      const bodyFrames = body.act.actions[action]?.frames.length || 1
+      const run = Math.floor(frames.length / bodyFrames)
+      loop = run > 1 ? run * delay : 0
+    }
+    longest = Math.max(longest, loop)
+  }
+  return longest
 }
 
 /** Draws body, head and the worn item, in the game's order, for one moment. */

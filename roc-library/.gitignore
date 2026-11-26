@@ -46,6 +46,9 @@ environment/license_private.key
 # dev-only Comment draws from Facebook comments (people's names; never commit)
 /dev-data/
 
+# Costume simulator packs (made by scripts/extract-costume.mjs; they go to the Asset host)
+/public/assets/costume/
+
 # marker left by scripts/prepare-static.mjs (Cloudflare build only)
 /.static-export
 /.wrangler/

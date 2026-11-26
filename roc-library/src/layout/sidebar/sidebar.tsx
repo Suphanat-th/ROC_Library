@@ -52,6 +52,15 @@ const fileTree: FileTreeItem[] = [
     membersOnly: true,
   },
   {
+    id: "costume",
+    tone: "info",
+    name: "Simulator Costume ROC",
+    type: "file",
+    icon: "scroll",
+    href: "/costume",
+    membersOnly: true,
+  },
+  {
     id: "features",
     tone: "primary",
     name: "Features",
@@ -277,7 +286,7 @@ type Tone = "primary" | "info" | "success" | "accent" | "error";
 /* Each section has its own hue (tokens --sec-* in globals.css, tuned for light and dark). Inside a section
    --color-primary is pointed at that hue, so its number, rule, icon sockets, glow and corner ticks all follow it. */
 function hueOf(id: string) {
-  if (id === "patch-convert") return "amber";
+  if (id === "member") return "amber";
   if (id === "features") return "violet";
   if (id === "dungeon") return "green";
   if (id.startsWith("group-")) return "rose";
@@ -292,6 +301,7 @@ const toolDesc: Record<string, string> = {
   muad: "เซ็ตอุปกรณ์ของหมากัดหมวด",
   "5thAnvs": "อีเวนต์ครบรอบ 5 ปี",
   "patch-convert": "แปลงข้อมูลแพตช์ (สำหรับ Member)",
+  costume: "ลองแต่งตัวละคร อาชีพ ผม สี และ Costume (สำหรับ Member)",
   lab: "รหัสเข้าห้องแล็บกลางประจำวัน",
   monster: "มอนสเตอร์ EXP/JOB x3 ของรอบนี้",
   endlesstower: "ข้อมูล Endless Tower",
@@ -309,7 +319,7 @@ const toolDesc: Record<string, string> = {
 
 type Section = { id: string; name: string; tone: Tone; items: FileTreeItem[]; solo?: boolean };
 
-/* A solo Tool (Home), a Member-only Tool (Patch Convert), each folder and each named group (Community) become their own section; the remaining loose Tools gather into "More", in the order listed. */
+/* A solo Tool (Home), the Member-only Tools (Patch Convert, Costume simulator) together as "Member", each folder and each named group (Community) become their own section; the remaining loose Tools gather into "More", in the order listed. */
 function toSections(items: FileTreeItem[]): Section[] {
   const sections: Section[] = [];
   let loose: Section | null = null;
@@ -318,7 +328,13 @@ function toSections(items: FileTreeItem[]): Section[] {
       sections.push({ id: item.id, name: item.name, tone: item.tone ?? "primary", items: item.children ?? [] });
       loose = null;
     } else if (item.membersOnly) {
-      sections.push({ id: item.id, name: "Member", tone: item.tone ?? "info", items: [item] });
+      // Every Member-only Tool sits in the one "Member" section.
+      let member = sections.find((x) => x.id === "member");
+      if (!member) {
+        member = { id: "member", name: "Member", tone: item.tone ?? "info", items: [] };
+        sections.push(member);
+      }
+      member.items.push(item);
       loose = null;
     } else if (item.group) {
       let grouped = sections.find((x) => x.id === `group-${item.group}`);

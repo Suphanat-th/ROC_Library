@@ -80,6 +80,18 @@ _Avoid_: Sponsor, ad, Supporter
 A window on the Patch Convert page, opened by the "สวมใส่" button (a shirt icon) beside the name of a wearable item, that shows the item worn on one standard character (a Novice with one hairstyle), male or female. The player can turn the character through 8 directions, pick one of the three Poses, and pause or resume the motion; the item plays its own effect exactly as its sprite file animates. A headgear sits on the head; a Robe falls in front of or behind the body as the game draws it for that direction; a Hat effect plays around the character; a Footprint is left on the ground as the character walks, at the game's own stride and pace; the stage steps back so the whole trail stays in view, which makes the character smaller than for other items. The button appears for every item the converter found a headgear, a Robe, a Hat effect or a Footprint for, whether or not the game calls it a costume, so an effect item such as Blue Spirit Effect (Middle) or an ordinary headgear can be previewed too. A Footprint item opens in the Walk Pose. It is on screen only and never appears in the downloaded Item card picture.
 _Avoid_: Try-on, 3D preview, fitting room, panel
 
+**Costume simulator**:
+The Tool at /costume, shown to players as "Simulator Costume ROC", where a player dresses one character from scratch: picks a job of the ROC lines (Class 1-2, High, Awakened, Extended, Super Novice), male or female, a hairstyle, a Hair colour and a Body colour, whether the character rides its Mount, and a headgear for each of the Upper, Middle and Lower places plus a Robe. Unlike the Costume preview, which shows one chosen item on a fixed Novice, it combines several items on the job the player picks. For now only a signed-in Member can open it (no `?Key=`); it is meant to open to everyone later. Its items are the game's costume items (those the game itself marks as a costume) that it already has, not those of Patch Convert's unreleased patch. It offers no weapon or shield.
+_Avoid_: Dress-up, Simulator (alone), fitting room
+
+**Mount**:
+The creature a job rides in the Costume simulator: Peco Peco (Knight, Lord Knight, Crusader, Paladin, Rebellion), Poring (Novice, Super Novice, Taekwon) or Toad (Kagerou, Oboro). Only a job that can ride one has the switch; headgear and Robe sit higher while riding, as the game places them.
+_Avoid_: Pet, vehicle, riding
+
+**Hair colour / Body colour**:
+The two dyes of the Costume simulator: Hair colour recolours the hairstyle, and Body colour recolours the clothes of the chosen job, each from the colours the game itself has for it. Headgear has no dye.
+_Avoid_: Skin colour, palette (for the player's choice)
+
 **GIF export**:
 The "บันทึกเป็น GIF" button in the Costume preview, which saves one loop of what the window shows now (the chosen gender, Pose and direction) as a GIF file named after the item and Pose with no spaces (such as Blue_Spirit_Effect_Walk.gif). The loop is the shortest time the walk cycle, the item's effect and a headgear's own animation all repeat together, never over 6 seconds (past that, the longest of them); the stage colour as shown is part of the picture, and the Logo mark sits in its bottom-left corner. It is unavailable only in a Pose where none of those moves; a headgear that animates itself, such as Costume Divine Twinkling, can be saved in Idle and Sit too. The Logo mark is in the file only, not on screen.
 _Avoid_: Record, screenshot, download animation
