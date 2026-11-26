@@ -10,7 +10,19 @@ type IconSheet = CostumeIndex["icons"];
 import { Bounds, Character, loadSpriteFiles, measureCharacter } from "@/utils/spriteComposer";
 import { createStrRenderer, loadStrEffect, measureStr, StrEffect, StrRenderer } from "@/utils/strEffect";
 import { costumeFileUrl } from "@/utils/costumePack";
-import { exportCostumeGif, paintScene, Scene, STAGE_HEIGHT, STAGE_WIDTH } from "@/utils/costumeScene";
+import {
+  exportCostumeGif,
+  GIF_DEFAULTS,
+  GIF_FPS,
+  GIF_SECONDS,
+  GIF_WIDTHS,
+  gifHeight,
+  GifSettings,
+  paintScene,
+  Scene,
+  STAGE_HEIGHT,
+  STAGE_WIDTH,
+} from "@/utils/costumeScene";
 import { LOGO_SRC } from "@/app/patch-convert/inlineImages";
 import { Footprint, loadFootprint } from "@/utils/footprintEffect";
 import { loadBody, loadHead, loadWorn } from "@/utils/costumeCharacter";
@@ -266,6 +278,42 @@ function SlotTab({
   );
 }
 
+/** One setting of the GIF as a row of buttons (one is on). */
+function GifChoice<T extends number>({
+  label,
+  options,
+  value,
+  disabled,
+  onChange,
+}: {
+  label: string;
+  options: { value: T; name: string; detail: string }[];
+  value: T;
+  disabled: boolean;
+  onChange: (value: T) => void;
+}) {
+  return (
+    <div role="group" aria-label={label} className="grid gap-1">
+      <span className="text-xs font-semibold text-base-content/70">{label}</span>
+      <div className="join w-full">
+        {options.map((option) => (
+          <button
+            key={option.value}
+            type="button"
+            disabled={disabled}
+            aria-pressed={value === option.value}
+            onClick={() => onChange(option.value)}
+            className={`btn join-item min-h-12 flex-1 flex-col gap-0 px-1 leading-tight ${value === option.value ? "btn-primary" : ""}`}
+          >
+            <span className="text-sm font-semibold">{option.name}</span>
+            <span className="text-[11px] font-normal opacity-75">{option.detail}</span>
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 /** The effect stones of one place, in a window opened from the stone socket under that place. */
 function StoneDialog({
   label,
@@ -472,6 +520,9 @@ export default function CostumeSimulator() {
   const [backgroundError, setBackgroundError] = useState<string | null>(null);
   const [gifProgress, setGifProgress] = useState<number | null>(null);
   const [gifFailed, setGifFailed] = useState(false);
+  // How the GIF is made, and what the last one saved came to.
+  const [gifSettings, setGifSettings] = useState<GifSettings>(GIF_DEFAULTS);
+  const [gifSaved, setGifSaved] = useState<string | null>(null);
   const nameRef = useRef("");
   const sceneRef = useRef<Scene | null>(null);
   const stageRef = useRef<HTMLDivElement>(null);
@@ -851,12 +902,13 @@ export default function CostumeSimulator() {
     const scene = sceneRef.current;
     if (!scene || gifProgress !== null) return;
     setGifFailed(false);
+    setGifSaved(null);
     setGifProgress(0);
     try {
       const stageColor = stageRef.current ? getComputedStyle(stageRef.current).backgroundColor : "#0a1420";
       const blob = await exportCostumeGif(
         { ...scene, name },
-        { stageColor, background: background?.image ?? null, logoUrl: LOGO_SRC, onProgress: setGifProgress },
+        { ...gifSettings, stageColor, background: background?.image ?? null, logoUrl: LOGO_SRC, onProgress: setGifProgress },
       );
       const url = URL.createObjectURL(blob);
       const link = document.createElement("a");
@@ -865,6 +917,8 @@ export default function CostumeSimulator() {
       link.download = `${base.replace(/[\\/:*?"<>|]/g, "").replace(/\s+/g, "_")}.gif`;
       link.click();
       setTimeout(() => URL.revokeObjectURL(url), 1000);
+      const size = blob.size >= 1e6 ? `${(blob.size / 1e6).toFixed(1)} MB` : `${Math.max(1, Math.round(blob.size / 1e3))} KB`;
+      setGifSaved(`บันทึกแล้ว ${size} · ${gifSettings.width}×${gifHeight(gifSettings.width)}`);
     } catch (error) {
       console.error("Costume simulator: GIF failed", error);
       setGifFailed(true);
@@ -1383,6 +1437,45 @@ export default function CostumeSimulator() {
                   ลากรูปมาวางบนเวทีหรือกล่องนี้ หรือกด Ctrl+V วางรูปที่คัดลอกไว้ รูปอยู่หลังตัวละครและอยู่ใน GIF ด้วย (รูป GIF เคลื่อนไหวใช้เฟรมแรก)
                 </p>
               </div>
+              <div className="grid gap-3 rounded-box border border-base-300 bg-base-100 p-3">
+                <h3 className="text-sm font-bold">ตั้งค่า GIF</h3>
+                <GifChoice
+                  label="ขนาดภาพ"
+                  value={gifSettings.width}
+                  disabled={gifProgress !== null}
+                  onChange={(width) => setGifSettings((now) => ({ ...now, width }))}
+                  options={GIF_WIDTHS.map((width) => ({
+                    value: width,
+                    name: width === 420 ? "เล็ก" : width === 560 ? "ปกติ" : "ชัด",
+                    detail: `${width}×${gifHeight(width)}`,
+                  }))}
+                />
+                <GifChoice
+                  label="ความลื่นไหล"
+                  value={gifSettings.fps}
+                  disabled={gifProgress !== null}
+                  onChange={(fps) => setGifSettings((now) => ({ ...now, fps }))}
+                  options={GIF_FPS.map((fps) => ({
+                    value: fps,
+                    name: fps === 30 ? "ลื่น" : fps === 15 ? "ปกติ" : "ประหยัด",
+                    detail: `${fps} เฟรม/วินาที`,
+                  }))}
+                />
+                <GifChoice
+                  label="ความยาวสูงสุด"
+                  value={gifSettings.seconds}
+                  disabled={gifProgress !== null}
+                  onChange={(seconds) => setGifSettings((now) => ({ ...now, seconds }))}
+                  options={GIF_SECONDS.map((seconds) => ({
+                    value: seconds,
+                    name: `${seconds} วินาที`,
+                    detail: seconds === 6 ? "ครบรอบได้มากกว่า" : "ไฟล์เล็กกว่า",
+                  }))}
+                />
+                <p className="text-xs text-base-content/60">
+                  ภาพใหญ่ ลื่น และยาว ไฟล์จะใหญ่ขึ้นและสร้างนานขึ้น ภาพที่ไม่ขยับได้ภาพเดียว ความยาวคือเวลาที่เอฟเฟกต์ท่าทางและเดินวนครบรอบพอดี
+                </p>
+              </div>
               <div className="grid gap-1.5">
                 <button
                   type="button"
@@ -1405,6 +1498,11 @@ export default function CostumeSimulator() {
                     max={100}
                     aria-hidden="true"
                   />
+                )}
+                {gifSaved && (
+                  <p role="status" className="text-center text-xs text-base-content/70">
+                    {gifSaved}
+                  </p>
                 )}
                 {gifFailed && (
                   <p role="alert" className="text-center text-xs text-error">

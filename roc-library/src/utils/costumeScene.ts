@@ -98,22 +98,38 @@ export function paintScene(
 
 /* ============ GIF ============ */
 
-/** Longest a GIF runs before it loops. */
-const GIF_MAX_MS = 6000
-const GIF_FRAME_MS = 40
-/** The picture of a GIF is this wide (the stage's height follows), so the file stays a sensible size. */
-const GIF_WIDTH = 420
+/** Widths a GIF can be made at (the stage's height follows). The stage itself is STAGE_WIDTH wide. */
+export const GIF_WIDTHS = [420, 560, 840] as const
+/** Frames per second a GIF can be made at. A GIF counts time in hundredths of a second, so 30 is made of frames 3, 3 and 4 hundredths long. */
+export const GIF_FPS = [30, 15, 10] as const
+/** Longest a GIF runs before it loops, in seconds. */
+export const GIF_SECONDS = [6, 3] as const
+
+export interface GifSettings {
+  width: (typeof GIF_WIDTHS)[number]
+  fps: (typeof GIF_FPS)[number]
+  seconds: (typeof GIF_SECONDS)[number]
+}
+
+export const GIF_DEFAULTS: GifSettings = { width: 840, fps: 30, seconds: 6 }
+
+/** The logo is this wide in a GIF of 420 pixels, and grows with the picture. */
 const GIF_LOGO_SIZE = 36
 const GIF_LOGO_MARGIN = 8
+/** Frames looked at to choose the colours of a GIF. */
+const PALETTE_FRAMES = 8
+
+/** The size of a GIF at this width, in pixels. */
+export const gifHeight = (width: number) => Math.round((width * STAGE_HEIGHT) / STAGE_WIDTH)
 
 const gcd = (a: number, b: number): number => (b ? gcd(b, a % b) : a)
 
 /**
  * How long one loop of the scene is, and how long to run before it so the ground is already full of steps: the
- * shortest time the walk cycle, the effects and the headgear's own animation all repeat together; past the limit, the
+ * shortest time the walk cycle, the effects and the headgear's own animation all repeat together; past `maxMs`, the
  * longest of them rounded to whole walk cycles. `still` when nothing moves.
  */
-export function gifLoop(scene: Scene) {
+export function gifLoop(scene: Scene, maxMs: number) {
   const { character, action } = scene
   const bodyAction = character.body.act.actions[action]
   const cycle = !bodyAction || isHeldPose(character.body, action) ? 0 : bodyAction.delay * bodyAction.frames.length
@@ -136,13 +152,13 @@ export function gifLoop(scene: Scene) {
   if (periods.length === 0 && steps.length === 0) return { loopMs: 0, warmupMs: 0, still: true }
 
   let loopMs = periods.reduce((a, b) => (a / gcd(a, b)) * b, 1)
-  if (loopMs > GIF_MAX_MS || periods.length === 0) {
+  if (loopMs > maxMs || periods.length === 0) {
     loopMs = Math.max(...periods, cycle, 1)
     if (cycle > 0) {
       loopMs = Math.ceil(loopMs / cycle) * cycle
-      if (loopMs > GIF_MAX_MS) loopMs = Math.max(cycle, Math.floor(GIF_MAX_MS / cycle) * cycle)
+      if (loopMs > maxMs) loopMs = Math.max(cycle, Math.floor(maxMs / cycle) * cycle)
     } else {
-      loopMs = Math.min(loopMs, GIF_MAX_MS)
+      loopMs = Math.min(loopMs, maxMs)
     }
   }
   const lifetime = Math.max(0, ...steps.flatMap((step) => [...step.top, ...step.bottom]).map((e) => (e ? strDuration(e) : 0)))
@@ -162,33 +178,35 @@ function drawCover(ctx: CanvasRenderingContext2D, image: CanvasImageSource & { w
 
 /**
  * Records one loop of the scene as the stage shows it (stage colour or the imported background, character, effects,
- * name) as a GIF with the site's logo in a corner. A scene where nothing moves gives a one-frame picture.
+ * name) as a GIF with the site's logo in a corner. The scene is painted again at the size of the GIF, not shrunk from
+ * the stage, so the sprites stay sharp. Frames are made twice, a few to choose the colours and then each one to write,
+ * so a big GIF never holds every frame in memory. A scene where nothing moves gives a one-frame picture.
  */
 export async function exportCostumeGif(
   scene: Scene,
-  options: {
+  options: GifSettings & {
     stageColor: string
     background: HTMLImageElement | null
     logoUrl: string
     onProgress: (done: number) => void
   },
 ): Promise<Blob> {
-  const loop = gifLoop(scene)
-  const width = GIF_WIDTH
-  const height = Math.round((GIF_WIDTH * STAGE_HEIGHT) / STAGE_WIDTH)
+  const loop = gifLoop(scene, options.seconds * 1000)
+  const width = options.width
+  const height = gifHeight(width)
+  const k = width / STAGE_WIDTH
+  const sized: Scene = { ...scene, originX: scene.originX * k, originY: scene.originY * k, scale: scene.scale * k }
 
   const make = () => {
     const canvas = document.createElement("canvas")
-    canvas.width = STAGE_WIDTH
-    canvas.height = STAGE_HEIGHT
+    canvas.width = width
+    canvas.height = height
     return canvas
   }
   const characterCanvas = make()
   const backCanvas = make()
   const frontCanvas = make()
-  const composite = document.createElement("canvas")
-  composite.width = width
-  composite.height = height
+  const composite = make()
   const ctx = characterCanvas.getContext("2d")!
   const out = composite.getContext("2d", { willReadFrequently: true })!
   const back = createStrRenderer(backCanvas)
@@ -203,53 +221,71 @@ export async function exportCostumeGif(
     () => false,
   )
 
+  // Frames are spread evenly over the loop, so the last one leads into the first without a jump.
+  const count = loop.still ? 1 : Math.max(1, Math.round((loop.loopMs * options.fps) / 1000))
+  const step = loop.still ? 0 : loop.loopMs / count
+
+  const renderFrame = (i: number) => {
+    paintScene(sized, ctx, hasFront ? front : null, hasBack ? back : null, loop.warmupMs + i * step)
+    // The WebGL canvases are copied in the same task they were drawn in, before they are cleared.
+    out.fillStyle = options.stageColor
+    out.fillRect(0, 0, width, height)
+    if (options.background) drawCover(out, options.background, width, height)
+    if (hasBack) out.drawImage(backCanvas, 0, 0, width, height)
+    out.drawImage(characterCanvas, 0, 0, width, height)
+    if (hasFront) out.drawImage(frontCanvas, 0, 0, width, height)
+    if (logoLoaded) {
+      const size = Math.round((width * GIF_LOGO_SIZE) / 420)
+      const margin = Math.round((width * GIF_LOGO_MARGIN) / 420)
+      const x = margin
+      const y = height - margin - size
+      out.save()
+      out.beginPath()
+      out.arc(x + size / 2, y + size / 2, size / 2, 0, Math.PI * 2)
+      out.clip()
+      out.drawImage(logo, x, y, size, size)
+      out.restore()
+      out.beginPath()
+      out.arc(x + size / 2, y + size / 2, size / 2 - 1, 0, Math.PI * 2)
+      out.lineWidth = Math.max(2, (size / 36) * 2)
+      out.strokeStyle = "#ffffff"
+      out.stroke()
+    }
+    return out.getImageData(0, 0, width, height).data
+  }
+
   try {
-    const count = loop.still ? 1 : Math.max(1, Math.round(loop.loopMs / GIF_FRAME_MS))
-    const frames: Uint8ClampedArray[] = []
-    for (let i = 0; i < count; i++) {
-      paintScene(scene, ctx, hasFront ? front : null, hasBack ? back : null, loop.warmupMs + i * GIF_FRAME_MS)
-      // The WebGL canvases are copied in the same task they were drawn in, before they are cleared.
-      out.fillStyle = options.stageColor
-      out.fillRect(0, 0, width, height)
-      if (options.background) drawCover(out, options.background, width, height)
-      if (hasBack) out.drawImage(backCanvas, 0, 0, width, height)
-      out.drawImage(characterCanvas, 0, 0, width, height)
-      if (hasFront) out.drawImage(frontCanvas, 0, 0, width, height)
-      if (logoLoaded) {
-        const size = GIF_LOGO_SIZE
-        const x = GIF_LOGO_MARGIN
-        const y = height - GIF_LOGO_MARGIN - size
-        out.save()
-        out.beginPath()
-        out.arc(x + size / 2, y + size / 2, size / 2, 0, Math.PI * 2)
-        out.clip()
-        out.drawImage(logo, x, y, size, size)
-        out.restore()
-        out.beginPath()
-        out.arc(x + size / 2, y + size / 2, size / 2 - 1, 0, Math.PI * 2)
-        out.lineWidth = 2
-        out.strokeStyle = "#ffffff"
-        out.stroke()
+    // One palette for the whole loop, taken from a few frames (every other pixel of them), so colours do not flicker.
+    const stride = Math.max(1, Math.floor(count / PALETTE_FRAMES))
+    const picks = Array.from({ length: count }, (_, i) => i).filter((i) => i % stride === 0)
+    const pixels = width * height
+    const joined = new Uint8Array(picks.length * Math.ceil(pixels / 2) * 4)
+    let at = 0
+    const work = picks.length + count
+    for (const [n, i] of picks.entries()) {
+      const data = renderFrame(i)
+      for (let p = 0; p < pixels; p += 2) {
+        joined.set(data.subarray(p * 4, p * 4 + 4), at)
+        at += 4
       }
-      frames.push(out.getImageData(0, 0, width, height).data)
-      options.onProgress((i + 1) / count)
+      options.onProgress((n + 1) / work)
       await nextTask()
     }
-
-    // One palette for the whole loop, taken from every few frames, so colours do not flicker.
-    const stride = Math.max(1, Math.floor(frames.length / 8))
-    const sample = frames.filter((_, i) => i % stride === 0)
-    const joined = new Uint8Array(sample.reduce((n, f) => n + f.length, 0))
-    sample.reduce((at, f) => (joined.set(f, at), at + f.length), 0)
-    const palette = quantize(joined, 256)
+    const palette = quantize(joined.subarray(0, at), 256)
 
     const gif = GIFEncoder()
-    frames.forEach((data, i) => {
-      gif.writeFrame(applyPalette(data, palette), width, height, {
+    let written = 0
+    for (let i = 0; i < count; i++) {
+      // The delay is counted in hundredths of a second, each frame ending where it would at exactly the chosen speed.
+      const hundredths = loop.still ? 100 : Math.round(((i + 1) * step) / 10) - Math.round((i * step) / 10)
+      gif.writeFrame(applyPalette(renderFrame(i), palette), width, height, {
         palette: i === 0 ? palette : undefined,
-        delay: loop.still ? 1000 : GIF_FRAME_MS,
+        delay: Math.max(2, hundredths) * 10,
       })
-    })
+      written++
+      options.onProgress((picks.length + written) / work)
+      await nextTask()
+    }
     gif.finish()
     return new Blob([gif.bytes() as BlobPart], { type: "image/gif" })
   } finally {

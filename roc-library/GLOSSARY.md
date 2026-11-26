@@ -96,6 +96,10 @@ _Avoid_: Skin colour, palette (for the player's choice)
 The "บันทึกเป็น GIF" button in the Costume preview, which saves one loop of what the window shows now (the chosen gender, Pose and direction) as a GIF file named after the item and Pose with no spaces (such as Blue_Spirit_Effect_Walk.gif). The loop is the shortest time the walk cycle, the item's effect and a headgear's own animation all repeat together, never over 6 seconds (past that, the longest of them); the stage colour as shown is part of the picture, and the Logo mark sits in its bottom-left corner. It is unavailable only in a Pose where none of those moves; a headgear that animates itself, such as Costume Divine Twinkling, can be saved in Idle and Sit too. The Logo mark is in the file only, not on screen.
 _Avoid_: Record, screenshot, download animation
 
+**GIF settings**:
+The three choices the Costume simulator gives before a GIF export: picture size (เล็ก / ปกติ / ชัด, the last being the sharpest and the one chosen at first), smoothness (30, 15 or 10 frames a second, 30 chosen at first) and the longest the GIF may run before it loops (6 or 3 seconds, 6 chosen at first). The Costume simulator draws the scene again at the chosen size, so a bigger size is sharper rather than a shrunken stage; a bigger, smoother or longer GIF is a bigger file. The Logo mark is always in the corner, and the GIF is saved at once, with its file size told afterwards.
+_Avoid_: Quality, resolution (for the three together)
+
 **Logo mark**:
 The หมากัดหมวด dog logo, the same one before the item name on an Item card, drawn small and round in the corner of a GIF export so the picture says where it came from.
 _Avoid_: Watermark, sponsor
