@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
+import HumanCheck, { humanCheckEnabled } from "@/components/member/HumanCheck";
 import { checkMember, markSeen, memberAuthConfigured, memberClient } from "@/utils/memberAuth";
 import { normalizeUsername, safeNextPath } from "@/utils/memberRules";
 
@@ -22,6 +23,8 @@ export default function LoginForm() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [busy, setBusy] = useState(false);
+  const [captcha, setCaptcha] = useState("");
+  const [captchaRound, setCaptchaRound] = useState(0);
 
   // A Member who is already signed in has no use for this form.
   useEffect(() => {
@@ -45,11 +48,14 @@ export default function LoginForm() {
       const res = await fetch("/api/member", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ action: "login", username: normalizeUsername(username), password }),
+        body: JSON.stringify({ action: "login", username: normalizeUsername(username), password, captcha }),
       });
       const data = await res.json().catch(() => ({}));
       if (!res.ok || !data.access_token) {
         setError(data.message ?? "เข้าสู่ระบบไม่สำเร็จ กรุณาลองอีกครั้ง");
+        // The Human check token is good for one try only.
+        setCaptcha("");
+        setCaptchaRound((round) => round + 1);
         return;
       }
       const supabase = memberClient();
@@ -120,7 +126,9 @@ export default function LoginForm() {
         </p>
       )}
 
-      <button type="submit" className="btn btn-primary" disabled={busy}>
+      <HumanCheck onToken={setCaptcha} resetKey={captchaRound} />
+
+      <button type="submit" className="btn btn-primary" disabled={busy || (humanCheckEnabled && !captcha)}>
         {busy ? <span className="loading loading-spinner loading-sm" /> : "เข้าสู่ระบบ"}
       </button>
 

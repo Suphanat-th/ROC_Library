@@ -83,8 +83,10 @@ export function sessionTooOld(user: { last_sign_in_at?: string } | null | undefi
 export type MemberCheck = "signed-in" | "expired" | "never";
 
 /**
- * Says whether this browser has a Member who may use Patch Convert. A stored session is checked with Supabase
- * (which also renews it); "expired" means there was a Member here before but the session cannot be renewed.
+ * Says whether this browser has a Member who may use Patch Convert. It asks Supabase nothing itself:
+ * getSession() reads the stored session and renews it only when the access token (JWT) has run out, and a
+ * Member who was suspended or removed fails that renewal. "expired" means there was a Member here before but
+ * the session cannot be renewed.
  */
 export async function checkMember(): Promise<MemberCheck> {
   const supabase = memberClient();
@@ -96,15 +98,6 @@ export async function checkMember(): Promise<MemberCheck> {
     return "expired";
   }
 
-  const { error } = await supabase.auth.getUser();
-  if (error) {
-    // A refused token (suspended, removed, revoked) is an expired session; a network slip is trusted.
-    const status = (error as { status?: number }).status;
-    if (status === 401 || status === 403 || status === 404) {
-      await supabase.auth.signOut({ scope: "local" });
-      return "expired";
-    }
-  }
   markSeen();
   return "signed-in";
 }

@@ -2,31 +2,43 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { memberAuthConfigured, memberClient } from "@/utils/memberAuth";
+import HumanCheck, { humanCheckEnabled } from "@/components/member/HumanCheck";
+import { memberAuthConfigured } from "@/utils/memberAuth";
 
-/** Asks Supabase to email a link for choosing a new password. The answer is the same whether or not the address belongs to a Member. */
+/** Asks the Worker (after the Human check) to email a link for choosing a new password. The answer is the same whether or not the address belongs to a Member. */
 export default function ForgotPasswordPage() {
   const [email, setEmail] = useState("");
   const [sent, setSent] = useState(false);
   const [error, setError] = useState("");
   const [busy, setBusy] = useState(false);
+  const [captcha, setCaptcha] = useState("");
+  const [captchaRound, setCaptchaRound] = useState(0);
 
   async function submit(event: React.FormEvent) {
     event.preventDefault();
-    const supabase = memberClient();
-    if (!supabase || busy) return;
+    if (busy) return;
     setError("");
     setBusy(true);
-    const { error: resetError } = await supabase.auth.resetPasswordForEmail(email.trim(), {
-      redirectTo: `${window.location.origin}/member/set-password`,
-    });
-    setBusy(false);
-    // A rate limit is worth telling; anything else looks like success so addresses cannot be probed.
-    if (resetError && (resetError as { status?: number }).status === 429) {
-      setError("ขอลิงก์บ่อยเกินไป กรุณารอสักครู่แล้วลองใหม่");
-      return;
+    try {
+      const res = await fetch("/api/member", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ action: "forgot", email: email.trim(), captcha }),
+      });
+      if (res.ok) {
+        setSent(true);
+        return;
+      }
+      const data = await res.json().catch(() => ({}));
+      setError(data.message ?? "ส่งลิงก์ไม่สำเร็จ กรุณาลองอีกครั้ง");
+    } catch {
+      setError("เชื่อมต่อไม่ได้ กรุณาลองอีกครั้ง");
+    } finally {
+      // The Human check token is good for one try only.
+      setCaptcha("");
+      setCaptchaRound((round) => round + 1);
+      setBusy(false);
     }
-    setSent(true);
   }
 
   if (!memberAuthConfigured()) return <p className="text-error">ระบบ Member ยังไม่ได้ตั้งค่า</p>;
@@ -70,7 +82,9 @@ export default function ForgotPasswordPage() {
         </p>
       )}
 
-      <button type="submit" className="btn btn-primary" disabled={busy}>
+      <HumanCheck onToken={setCaptcha} resetKey={captchaRound} />
+
+      <button type="submit" className="btn btn-primary" disabled={busy || (humanCheckEnabled && !captcha)}>
         {busy ? <span className="loading loading-spinner loading-sm" /> : "ส่งลิงก์"}
       </button>
 

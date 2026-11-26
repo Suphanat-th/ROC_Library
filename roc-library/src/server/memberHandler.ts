@@ -1,16 +1,19 @@
 import { adminClient } from "@/server/supabaseAdmin";
 import { clientAddress, createLimiter, json } from "@/server/http";
+import { HUMAN_CHECK_MESSAGE, verifyHuman } from "@/server/turnstile";
 import { normalizeUsername, usernameProblem } from "@/utils/memberRules";
 
 /**
- * The two things a Member's browser cannot do for itself (Supabase Auth only signs in by email):
- *  - action "login": finds the email behind a username and signs in with the password, then hands back
- *    the session tokens. The email never leaves the server. Every failure answers the same message.
+ * What a Member's browser cannot do for itself (Supabase Auth only signs in by email), and what a bot must not reach:
+ *  - action "login": after the Human check, finds the email behind a username and signs in with the password,
+ *    then hands back the session tokens. The email never leaves the server. Every failure answers the same message.
+ *  - action "forgot": after the Human check, asks Supabase to email a new-password link.
  *  - action "claim": saves the username a new Member picked when finishing the Invite (needs the Member's
  *    own access token). Without a username it only tells which username the Member already has.
  */
 const failures = createLimiter(8, 15 * 60 * 1000);
 const claims = createLimiter(20, 15 * 60 * 1000);
+const forgots = createLimiter(5, 15 * 60 * 1000);
 
 const BAD_LOGIN = "username หรือรหัสผ่านไม่ถูกต้อง";
 
@@ -37,6 +40,9 @@ export async function handleMember(request: Request): Promise<Response> {
     };
     if (usernameProblem(username) || !password || password.length > 200) return fail();
 
+    // The Human check comes before any database work, so a bot without a token never reaches the database.
+    if ((await verifyHuman(body.captcha, address)) !== "ok") return json({ message: HUMAN_CHECK_MESSAGE }, 400);
+
     const { data: row } = await db.from("members").select("user_id").eq("username", username).maybeSingle();
     if (!row) return fail();
     const { data: found } = await db.auth.admin.getUserById(row.user_id as string);
@@ -54,6 +60,24 @@ export async function handleMember(request: Request): Promise<Response> {
 
     failures.clear(address);
     return json({ ok: true, access_token: session.access_token, refresh_token: session.refresh_token });
+  }
+
+  if (body.action === "forgot") {
+    if (forgots.hit(address)) return json({ message: "ขอลิงก์บ่อยเกินไป กรุณารอสักครู่แล้วลองใหม่" }, 429);
+
+    const email = typeof body.email === "string" ? body.email.trim() : "";
+    if (!email || email.length > 254) return json({ message: "ข้อมูลที่ส่งมาไม่ถูกต้อง" }, 400);
+    if ((await verifyHuman(body.captcha, address)) !== "ok") return json({ message: HUMAN_CHECK_MESSAGE }, 400);
+
+    const redirectTo = `${new URL(request.url).origin}/member/set-password`;
+    const res = await fetch(`${process.env.SUPABASE_URL}/auth/v1/recover?redirect_to=${encodeURIComponent(redirectTo)}`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", apikey: process.env.SUPABASE_SERVICE_ROLE_KEY ?? "" },
+      body: JSON.stringify({ email }),
+    });
+    // A rate limit is worth telling; anything else looks like success so addresses cannot be probed.
+    if (res.status === 429) return json({ message: "ขอลิงก์บ่อยเกินไป กรุณารอสักครู่แล้วลองใหม่" }, 429);
+    return json({ ok: true });
   }
 
   if (body.action === "claim") {
