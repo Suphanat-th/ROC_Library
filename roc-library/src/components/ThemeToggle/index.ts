@@ -1,2 +1,2 @@
-export { default as ThemeToggle } from "./ThemeToggle";
+export { default as ThemeToggle, ThemeSwitch } from "./ThemeToggle";
 export { themeInitScript } from "./theme";

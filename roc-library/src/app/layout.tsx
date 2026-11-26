@@ -50,33 +50,28 @@ export default function RootLayout({
           <NavigationProgress />
           <LoadingOverlay />
           <ToTopButton />
-          <div className="drawer h-screen">
+          {/* Hidden checkbox: checked = the full-screen menu is open. CSS only, so the menu is closed on first paint. */}
+          <div className="shell h-screen">
             <input
-              id="is-drawer-open"
+              id="sidebar-flip"
               type="checkbox"
-              className="drawer-toggle"
+              className="shell-flip sr-only"
+              aria-hidden="true"
+              tabIndex={-1}
             />
 
+            {/* Full-screen menu */}
+            <aside className="shell-side hud-side text-base-content">
+              <SidebarPage />
+            </aside>
+
             {/* Content */}
-            <div className="drawer-content flex flex-col h-full">
-              {/* Navbar */}
+            <div className="flex flex-col h-full overflow-y-auto">
               <NavBarPage />
 
               {/* Page Content */}
               <div className="flex-1 bg-base-200 pt-16">
                 <NavigationContent>{children}</NavigationContent>
-              </div>
-            </div>
-
-            {/* Sidebar */}
-            <div className="drawer-side">
-              <label
-                htmlFor="is-drawer-open"
-                aria-label="close sidebar"
-                className="drawer-overlay"
-              ></label>
-              <div className="bg-base-100 border-r border-base-300 min-h-full w-64 text-base-content flex flex-col">
-                <SidebarPage />
               </div>
             </div>
           </div>

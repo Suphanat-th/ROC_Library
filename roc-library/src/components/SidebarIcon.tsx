@@ -80,16 +80,18 @@ export type SidebarIconName = keyof typeof drawings;
 export function SidebarIcon({
   name,
   active = false,
+  className = "h-6 w-6",
 }: {
   name: SidebarIconName;
   active?: boolean;
+  className?: string;
 }) {
   const { body, details } = drawings[name] as Drawing;
   return (
     <svg
       aria-hidden="true"
       viewBox="0 0 24 24"
-      className="h-6 w-6 shrink-0 overflow-visible"
+      className={`${className} shrink-0 overflow-visible`}
     >
       {/* Colour plate: sits off register, and settles into place on hover or focus. */}
       <g className="translate-x-[1.4px] translate-y-[1.4px] transition-transform duration-200 motion-reduce:transition-none group-hover:translate-x-[0.4px] group-hover:translate-y-[0.4px] group-focus-visible:translate-x-[0.4px] group-focus-visible:translate-y-[0.4px]">

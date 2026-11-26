@@ -1,6 +1,8 @@
 import { handleBossReport } from "@/server/bossReportHandler";
 import { handleBotKey } from "@/server/botKeyHandler";
 import { handleFeedback } from "@/server/feedbackHandler";
+import { handleMember } from "@/server/memberHandler";
+import { handleMemberAdmin } from "@/server/memberAdminHandler";
 import { handlePatchKey } from "@/server/patchKeyHandler";
 
 /**
@@ -17,6 +19,8 @@ const routes: Record<string, (request: Request) => Promise<Response>> = {
   "/api/boss-report": handleBossReport,
   "/api/botgeneratekey": handleBotKey,
   "/api/patch-key": handlePatchKey,
+  "/api/member": handleMember,
+  "/api/admin": handleMemberAdmin,
 };
 
 export default {

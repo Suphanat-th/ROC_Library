@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Heart } from "lucide-react";
 import { useLoading } from "@/context/LoadingContext";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import AccountArea from "./AccountArea";
 import logo from "../../../public/assets/images/web/Logo.png";
 
 export default function NavBarPage() {
@@ -13,11 +14,11 @@ export default function NavBarPage() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-40 flex justify-between items-center px-3 sm:px-6 h-16 bg-base-100/90 backdrop-blur border-b border-primary/25 text-base-content shrink-0">
       <div className="flex items-center gap-1 sm:gap-3">
-        {/* Sidebar Toggle Button */}
+        {/* Menu toggle: opens the full-screen Sidebar */}
         <label
-          htmlFor="is-drawer-open"
+          htmlFor="sidebar-flip"
           className="btn btn-ghost btn-circle cursor-pointer"
-          aria-label="Toggle sidebar"
+          aria-label="Open menu"
         >
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="w-6 h-6 stroke-current stroke-2">
             <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
@@ -38,7 +39,7 @@ export default function NavBarPage() {
             className="object-contain"
             priority
           />
-          <span className="font-semibold text-sm sm:text-lg">
+          <span className="whitespace-nowrap font-semibold text-sm max-[359px]:hidden sm:text-lg">
             ROC <span className="text-primary">Library</span>
           </span>
         </Link>
@@ -56,6 +57,7 @@ export default function NavBarPage() {
           <span className="hidden sm:inline">สนับสนุน</span>
         </Link>
         <ThemeToggle />
+        <AccountArea compact />
       </div>
     </nav>
   );

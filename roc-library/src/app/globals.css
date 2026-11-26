@@ -61,19 +61,170 @@ body {
   color: var(--color-base-content);
 }
 
-/* Speed up drawer closing animation */
-.drawer-toggle:checked ~ .drawer-side .drawer-overlay,
-.drawer-toggle:checked ~ .drawer-side > div {
-  transition: all 0.2s ease-in-out;
+/* Shell: the Sidebar is a full-screen menu opened by the Menu toggle. A hidden checkbox (#sidebar-flip) holds
+   open/closed (checked = open), so the menu is closed on first paint. It sits above the Navbar (z-40). */
+.shell-side {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.03);
+  transition: opacity 0.25s ease, transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), visibility 0s linear 0.25s;
 }
 
-.drawer-side .drawer-overlay {
-  transition: all 0.2s ease-in-out;
+.shell-flip:checked ~ .shell-side {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  transition-delay: 0s;
 }
 
-/* Sidebar sits above page content (sticky bars z-30) but under the Navbar (z-40) so the Menu toggle still works */
-.drawer-side {
-  z-index: 35;
+/* Sidebar section hues. Blue is the brand colour itself; the rest are picked to sit beside it, a notch deeper in
+   light mode (text contrast on white) and brighter in dark mode (glow on navy). */
+:root {
+  --sec-blue: var(--color-primary);
+  --sec-violet: #7c3aed;
+  --sec-green: #15803d;
+  --sec-amber: #b45309;
+  --sec-orange: #c2410c;
+  --sec-rose: #be123c;
+}
+
+[data-theme=roc-dark] {
+  --sec-violet: #a78bfa;
+  --sec-green: #4ade80;
+  --sec-amber: #fbbf24;
+  --sec-orange: #fb923c;
+  --sec-rose: #fb7185;
+}
+
+/* Hi-tech Sidebar: grid backdrop, a slow scan beam and corner brackets.
+   Colours come from theme tokens so it suits roc-light and roc-dark. These effects play even when the
+   system asks to reduce motion, as the site's owner chose (the beam is slow and faint). */
+.hud-side {
+  overflow: hidden;
+  background-color: var(--color-base-100);
+  background-image:
+    radial-gradient(120% 40% at 0% 0%, color-mix(in oklab, var(--color-primary) 16%, transparent), transparent 70%),
+    linear-gradient(color-mix(in oklab, var(--color-primary) 6%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in oklab, var(--color-primary) 6%, transparent) 1px, transparent 1px);
+  background-size: auto, 22px 22px, 22px 22px;
+}
+
+/* A thin scan line with a faint trail, drifting down the screen */
+.hud-side::after {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  top: 0;
+  height: 56px;
+  pointer-events: none;
+  background: linear-gradient(transparent, color-mix(in oklab, var(--color-primary) 9%, transparent));
+  border-bottom: 1px solid color-mix(in oklab, var(--color-primary) 30%, transparent);
+  animation: hud-beam 9s linear infinite;
+}
+
+@keyframes hud-beam {
+  from { transform: translateY(-100%); }
+  to { transform: translateY(100vh); }
+}
+
+.hud-mono {
+  font-family: ui-monospace, "Cascadia Mono", Consolas, monospace;
+}
+
+/* Menu entries flow in one by one (--i is the line number) */
+@keyframes hud-in {
+  from { opacity: 0; transform: translateX(-14px); }
+  to { opacity: 1; transform: none; }
+}
+
+.hud-in {
+  animation: hud-in 0.4s cubic-bezier(0.2, 0.8, 0.2, 1) backwards;
+  animation-delay: calc(var(--i, 0) * 45ms);
+}
+
+/* A Tool module: a visible cell, a corner tick that lights on hover, a light that sweeps across on hover */
+.hud-item {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid color-mix(in oklab, var(--color-primary) 20%, transparent);
+  transition: border-color 0.2s, box-shadow 0.2s, background-color 0.2s, color 0.2s, transform 0.2s;
+}
+
+.hud-item::before {
+  content: "";
+  position: absolute;
+  inset-block: 0;
+  left: 0;
+  width: 40%;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateX(-120%);
+  background: linear-gradient(90deg, transparent, color-mix(in oklab, var(--color-primary) 22%, transparent), transparent);
+}
+
+.hud-item::after {
+  content: "";
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  width: 9px;
+  height: 9px;
+  pointer-events: none;
+  border-right: 2px solid var(--color-primary);
+  border-bottom: 2px solid var(--color-primary);
+  opacity: 0.35;
+  transition: opacity 0.2s;
+}
+
+.hud-item:hover,
+.hud-item:focus-visible,
+.hud-item-first {
+  border-color: color-mix(in oklab, var(--color-primary) 70%, transparent);
+  box-shadow: 0 0 16px color-mix(in oklab, var(--color-primary) 22%, transparent);
+  transform: translateY(-1px);
+}
+
+.hud-item:hover::after,
+.hud-item:focus-visible::after,
+.hud-item-first::after {
+  opacity: 1;
+}
+
+.hud-item:hover::before {
+  opacity: 1;
+  animation: hud-sweep 0.7s ease-out forwards;
+}
+
+@keyframes hud-sweep {
+  from { transform: translateX(-120%); }
+  to { transform: translateX(320%); }
+}
+
+.hud-search {
+  border: 1px solid color-mix(in oklab, var(--color-primary) 40%, transparent);
+  box-shadow: 0 0 18px color-mix(in oklab, var(--color-primary) 14%, transparent);
+}
+
+.hud-search:focus-within {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 22px color-mix(in oklab, var(--color-primary) 35%, transparent);
+  outline: none;
+}
+
+.hud-search input:focus {
+  outline: none;
+}
+
+.hud-item-active {
+  border-color: color-mix(in oklab, var(--color-primary) 65%, transparent);
+  box-shadow:
+    0 0 18px color-mix(in oklab, var(--color-primary) 30%, transparent),
+    inset 0 0 14px color-mix(in oklab, var(--color-primary) 12%, transparent);
 }
 
 /* Navigation feedback: thin progress bar under the navbar */

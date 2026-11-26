@@ -37,15 +37,15 @@ The Tool at /say-something, reached from the Sidebar as "บอกเรา", wh
 _Avoid_: Contact page, suggestion box
 
 **Navbar**:
-The bar across the top of the Shell. It stays fixed to the top-left of the screen while the content scrolls, with the Menu toggle at the far left and the Theme mode control at the far right.
+The bar across the top of the Shell, the full width of the screen. It stays fixed to the top while the content scrolls, with the Menu toggle and the logo at the left, and at the right "by Bozm", the support button, the Theme mode control and, when a Member is signed in, the Account area. The support button, Theme mode control and Account area also appear in the Sidebar's head, so they are reachable from both.
 _Avoid_: Header, topbar, sidebar
 
 **Sidebar**:
-The menu panel listing every Tool. It slides over the content from the left only when the player opens it, stays fixed on screen while the content scrolls, and closes itself once a Tool is chosen.
+The full-screen menu listing every Tool (the screen itself calls them "เมนู" / "menus", since Donate, บอกเรา and Skin UI are links rather than calculators or guides), in a hi-tech look (glowing grid backdrop, a thin scan line, lit corner ticks) whose effects play even when the player's system asks to reduce motion. It is hidden until the player opens it with the Menu toggle, then covers the whole screen: a head with the logo, the support button (to the Donate page), the Theme mode control (light and dark side by side, the current one lit), the Account area when a Member is signed in, and the close button; a title ("เลือกเมนู ที่ต้องการ") with a search box (it filters by name or one-line purpose as the player types, and Enter opens the first match); the Tools as numbered sections (Start, which holds Home alone as one full-width tile; Member, which holds Patch Convert and appears only while a Member is signed in; then Features, Dungeon, More (MUAD and 5th Anniversary come first) and Community (Donate, บอกเรา and Skin UI), each Tool a module with its icon, name, one-line purpose and index code, the current Tool marked "ที่นี่"; and a foot with the Supporters and the copyright line. It closes itself when a Tool is chosen, or on Esc or the close button. Patch Convert is listed only while a Member is signed in on that device; everyone else reaches it by its link and a key.
 _Avoid_: Drawer, side menu, navbar
 
 **Menu toggle**:
-The hamburger button at the far left of the Navbar that opens and closes the Sidebar.
+The hamburger button at the far left of the Navbar that opens the Sidebar (the Sidebar's own close button closes it).
 _Avoid_: Hamburger, burger, drawer button
 
 **Item card**:
@@ -490,3 +490,27 @@ _Avoid_: Loader, spinner, loading screen
 **Asset host**:
 The separate address that serves the site's heavy static files (monster pictures, minimaps, sprites, maps) so the Shell and Tools do not carry them. Every picture of that kind is asked for through it; when none is set, they come from the site itself.
 _Avoid_: CDN, image server, bucket
+
+**Member**:
+A player the owner has invited to use the Members' entrance of Patch Convert. Only the owner can make a Member; nobody can sign up on their own. A Member who has finished setting up (see Invite) has a username, a password, and the email the invite went to.
+_Avoid_: User, account holder, subscriber
+
+**Invite**:
+The owner's act of adding a Member by email. The Member gets an email with a link, opens it, and chooses a username and a password; until then they are not yet a Member who can sign in. The same email link kind is used when a Member forgets the password and asks for a new one.
+_Avoid_: Registration, sign-up
+
+**Member sign-in**:
+The page at /member/login where a Member enters username and password; it also offers "forgot password", which emails a link to choose a new one. A signed-in Member sees Patch Convert's content without any Patch key or Member key; players who have never signed in keep seeing the key gate there. Signing in takes the Member to the home page. A Member who opens Patch Convert after their sign-in has expired is told "Session expired" and sent to the sign-in page, and after signing in again returns to Patch Convert. A Member who is already signed in and opens the sign-in page is sent to the home page. Sign-in is not in the Sidebar and the pages are kept out of search engines.
+_Avoid_: Login page, authentication
+
+**Account area**:
+The username and a sign-out button shown at the far right of the Navbar (compact, with an icon-only sign-out) and in the Sidebar's head (with a labelled sign-out), only on a device where a Member is signed in. Those are the only places a Member sees that they are signed in and can sign out.
+_Avoid_: Profile, account menu, dashboard
+
+**Username**:
+The name a Member chooses when they finish their Invite: lowercase English letters, digits and underscore, 3 to 20 characters, never the same as another Member's name when capitals are ignored, and not changeable by the Member. Signing in uses it together with the password.
+_Avoid_: Nickname, handle, login name
+
+**Member admin page**:
+The owner-only page, in no menu and kept out of search engines, protected by an admin password separate from the Bot key page's, where the owner invites a Member by email, sees the list of Members (email, username, date joined) and removes or suspends one. A Member removed here can no longer sign in; the Member key does not change when this happens.
+_Avoid_: Admin panel, user manager
