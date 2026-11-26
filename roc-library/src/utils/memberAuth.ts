@@ -68,6 +68,18 @@ export const usernameOf = (user: { user_metadata?: Record<string, unknown> } | n
   return typeof name === "string" ? name : null;
 };
 
+/**
+ * A Member's session renews itself while they keep using the site, but never lasts longer than this from the
+ * sign-in. Supabase's own Time-box (Pro plan) is the same rule enforced on its side; this one works on any plan.
+ */
+export const MEMBER_SESSION_MAX_DAYS = 30;
+
+/** Whether the sign-in behind this session is older than the cap. A renewal does not move the sign-in time. */
+export function sessionTooOld(user: { last_sign_in_at?: string } | null | undefined) {
+  const signedInAt = Date.parse(user?.last_sign_in_at ?? "");
+  return Number.isFinite(signedInAt) && Date.now() - signedInAt > MEMBER_SESSION_MAX_DAYS * 24 * 60 * 60 * 1000;
+}
+
 export type MemberCheck = "signed-in" | "expired" | "never";
 
 /**
@@ -79,6 +91,10 @@ export async function checkMember(): Promise<MemberCheck> {
   if (!supabase) return "never";
   const { data } = await supabase.auth.getSession();
   if (!data.session) return hasBeenSignedIn() ? "expired" : "never";
+  if (sessionTooOld(data.session.user)) {
+    await supabase.auth.signOut({ scope: "local" });
+    return "expired";
+  }
 
   const { error } = await supabase.auth.getUser();
   if (error) {

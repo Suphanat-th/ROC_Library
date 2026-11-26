@@ -492,7 +492,7 @@ The separate address that serves the site's heavy static files (monster pictures
 _Avoid_: CDN, image server, bucket
 
 **Member**:
-A player the owner has invited to use the Members' entrance of Patch Convert. Only the owner can make a Member; nobody can sign up on their own. A Member who has finished setting up (see Invite) has a username, a password, and the email the invite went to.
+A player the owner has invited to use the Members' entrance of Patch Convert. Only the owner can make a Member; nobody can sign up on their own. A Member who has finished setting up (see Invite) has a username, a password, and the email the invite went to. A Member stays signed in on a device while they keep using the site, but for at most 30 days from signing in; after that they must sign in again, however recently they visited.
 _Avoid_: User, account holder, subscriber
 
 **Invite**:

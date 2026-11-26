@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { hasBeenSignedIn, MEMBER_SIGNED_IN_EVENT, memberClient, usernameOf } from "@/utils/memberAuth";
+import { hasBeenSignedIn, MEMBER_SIGNED_IN_EVENT, memberClient, sessionTooOld, usernameOf } from "@/utils/memberAuth";
 
 /**
  * Whether a Member is signed in on this device, and their username. Used by the Navbar and the Sidebar,
@@ -19,8 +19,16 @@ export function useMember() {
       const supabase = memberClient();
       if (!supabase) return;
 
-      const apply = (user: Parameters<typeof usernameOf>[0] | undefined) =>
+      const apply = (user: (Parameters<typeof usernameOf>[0] & Parameters<typeof sessionTooOld>[0]) | undefined) => {
+        // A sign-in past the session cap no longer counts; the stored session is dropped (the "seen" mark stays,
+        // so Patch Convert can say "expired" instead of "never signed in").
+        if (user && sessionTooOld(user)) {
+          supabase.auth.signOut({ scope: "local" });
+          setMember({ signedIn: false, name: null });
+          return;
+        }
         setMember({ signedIn: Boolean(user), name: usernameOf(user) });
+      };
       supabase.auth.getSession().then(({ data }) => apply(data.session?.user));
       const { data } = supabase.auth.onAuthStateChange((_event, session) => apply(session?.user));
       unsubscribe = () => data.subscription.unsubscribe();
