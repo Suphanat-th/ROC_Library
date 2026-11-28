@@ -61,6 +61,15 @@ const fileTree: FileTreeItem[] = [
     membersOnly: true,
   },
   {
+    id: "cast-calc",
+    tone: "info",
+    name: "Cast Calculator",
+    type: "file",
+    icon: "hourglass",
+    href: "/cast-calc",
+    membersOnly: true,
+  },
+  {
     id: "features",
     tone: "primary",
     name: "Features",
@@ -302,6 +311,7 @@ const toolDesc: Record<string, string> = {
   "5thAnvs": "อีเวนต์ครบรอบ 5 ปี",
   "patch-convert": "แปลงข้อมูลแพตช์ (สำหรับ Member)",
   costume: "ลองแต่งตัวละคร อาชีพ ผม สี และ Costume (สำหรับ Member)",
+  "cast-calc": "คำนวณเวลาร่ายสกิล Fixed cast / VCT / Delay (สำหรับ Member)",
   lab: "รหัสเข้าห้องแล็บกลางประจำวัน",
   monster: "มอนสเตอร์ EXP/JOB x3 ของรอบนี้",
   endlesstower: "ข้อมูล Endless Tower",

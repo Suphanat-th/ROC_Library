@@ -73,6 +73,10 @@ const drawings = {
     body: "M12 3.8c-4.6 0-8.2 3.4-8.2 7.8s3.6 8.6 8.2 8.6c1.3 0 1.9-.8 1.9-1.6 0-1.4-1-1.6-1-2.8 0-1 .8-1.6 1.8-1.6h2.2c2 0 3.5-1.4 3.5-3.4 0-3.6-3.6-6.6-8.4-6.6Z",
     details: "M7.8 11h.01M10.2 7.6h.01M14.4 7.6h.01M17 10.8h.01",
   },
+  hourglass: {
+    body: "M7 3.8h10v3.2c0 2-2.2 3.4-3.6 5 1.4 1.6 3.6 3 3.6 5v3.2H7v-3.2c0-2 2.2-3.4 3.6-5C9.2 10.4 7 9 7 7Z",
+    details: "M5.6 3.8h12.8M5.6 20.2h12.8M10 18.2h4",
+  },
 } satisfies Record<string, Drawing>;
 
 export type SidebarIconName = keyof typeof drawings;

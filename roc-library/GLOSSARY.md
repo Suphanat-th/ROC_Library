@@ -217,23 +217,27 @@ The Tool at /aspd-calc where a player picks a Main job, then a job under it, a w
 _Avoid_: The Flash Calc, speed calculator
 
 **Cast calculator**:
-The Tool at /cast-calc (it replaces the old VCT calculator) where a player enters a skill's Fixed cast, Base VCT and After-cast delay with their % reductions, plus DEX, INT and ASPD, and sees the Cast bar. It also tells how soon the same skill can be used again.
+The Tool at /cast-calc (it replaces the old VCT calculator) where a player enters one skill's own Base numbers (Fixed cast, VCT, Global CD and Skill CD) in one card, kept apart from what reduces them (the reductions, DEX, INT and ASPD, in a group for each part), and sees how the parts fit together on the Cast bar: when any other skill can be used again and when the same skill can. It shows how far each part still is from reaching 0 (the shortfall). It follows the Renewal rules of the game (not the old Pre-renewal DEX/150 rule), and the ROC patch notes list the same five columns per skill (FCT, VCT, Skill CD, Global CD, Cost SP). For now it is for Members only, like the Costume simulator: its Sidebar tile appears only while a Member is signed in, and the page itself refuses anyone who is not.
 _Avoid_: VCT calculator, cast time calculator
 
 **Fixed cast**:
-The part of a skill's casting time that stats cannot shorten, in seconds. Only its own % reduction lowers it.
-_Avoid_: Fix, FCT
+The part of a skill's casting time that stats cannot shorten, in seconds. Only its own reductions lower it: the seconds reductions (they add up) are taken off first, then the one highest % reduction (% reductions do not add up) is applied to what is left. It never goes below 0.
+_Avoid_: Fix
 
 **VCT**:
-The variable part of a skill's casting time. It starts from the skill's Base VCT and shrinks with DEX (counted double), INT, gear % and skill % reductions.
+The variable part of a skill's casting time. It starts from the skill's Base VCT, loses its seconds reduction first, then shrinks with DEX (counted double) and INT (gone when DEX×2 + INT reaches 530), then with the gear % and the skill % (each the sum of its own group, the two groups multiplied).
 _Avoid_: Cast time (alone), variable cast
 
-**After-cast delay**:
-The skill's own pause after a cast finishes, in seconds, lowered by its % reduction. The pause the player actually waits is the longer of this and the delay set by ASPD. Not the same as the skill's Cooldown, which only limits using that same skill again.
-_Avoid_: Delay (alone), Cast delay
+**Global CD**:
+The pause after a skill's cast finishes during which the player cannot use any skill, in seconds, lowered by its % reduction (the ROC patch notes' name; the same as the older After-cast delay). The wait the player actually has is the longer of this and the delay set by ASPD ((200 − ASPD) / 50 seconds, an estimate from the attack interval that the game does not confirm). It starts at the same moment as the Skill CD.
+_Avoid_: After-cast delay, Delay (alone), Cast delay
+
+**Skill CD**:
+The time after a skill's cast finishes during which the same skill cannot be used again, in seconds; other skills can be used once the Global CD is over. ASPD, DEX and INT do not shorten it; only its own reductions do (the seconds reduction is taken off first, then the % reduction applied to what is left). It starts at the same moment as the Global CD, so it only slows the same skill down when it is longer than the wait.
+_Avoid_: Cooldown (alone), Skill delay
 
 **Cast bar**:
-The single horizontal bar in the Cast calculator with three stretches in time order (Fixed cast, VCT, the wait after the cast), each sized to its real seconds, with the total at the end. The wait after the cast shows whether After-cast delay or ASPD set it. It runs by itself in real time, filling left to right over the calculated seconds with the current stretch named above it, and starts again on its own once the skill can be used again, after resting half a second at the end. A thin Cooldown bar under it runs alongside. Changing any number restarts it with the new values. It keeps running even when the player's device asks for less motion.
+The picture in the Cast calculator, the largest thing on its page, with the time when any other skill can be used again in large type and the time when the same skill can be used again beside it. It has two lanes on one time axis. The cast lane has three stretches in time order (Fixed cast, VCT, the wait after the cast), each sized to its real seconds, and the wait shows whether Global CD or ASPD set it. The Skill CD lane starts exactly where the cast ends, at the same moment as the wait, and a dashed line marks when other skills become usable. It runs by itself in real time, filling left to right with the current part named above it, and starts again at once when it reaches the end (the time the same skill can be used again), with no rest, so one round lasts exactly that many seconds. Each part has its own colour and its own group of fields, and the group ends with the part's result, the steps that led to it and a Shortfall line saying how much of what the player can change (seconds off, DEX×2 + INT points, ASPD) is still missing for it to reach 0. The four groups sit under the bar (in a row on a wide screen, stacked on a phone); once the bar has scrolled out of view, a slim copy of it stays pinned under the Navbar. Changing any number restarts it with the new values. It keeps running even when the player's device asks for less motion.
 _Avoid_: Cast gauge, cast timeline
 
 **Main job**:
@@ -243,6 +247,10 @@ _Avoid_: Base class, job family
 **Class tier**:
 The group a job belongs to in the ASPD calculator, which sets the highest ASPD it can reach, shown to players as **Max**: Class 1-2 and High Class stop at 190; Extended and Awakened stop at 193. A High Class job has the same numbers as the Class 2 job it comes from. Awakened holds the twelve Awakened jobs as the game announced them, with Clown and Gypsy as one entry.
 _Avoid_: Job tier, class group
+
+**Cast rate**:
+How many times a second a player can use the same skill over and over, shown in the Cast calculator under the Cast bar next to what a maxed ASPD (193) would give. It is one divided by the seconds until the same skill can be used again; when nothing but ASPD sets that time (no Fixed cast or VCT, and no Global CD or Skill CD longer than the ASPD wait) it is the attacks per second of the ASPD calculator (ASPD 190 is 5 a second, 193 is 7). In the Cast calculator a "Hit" means one use of the skill, not one instance of damage from a skill that strikes several times.
+_Avoid_: Hit rate, DPS, Hit (alone)
 
 **Weapon factor**:
 How much ASPD one job gains or loses for holding one kind of weapon, as the game's own table lists it for that job. Mostly a loss, sometimes a gain (a Book for an Awakened High Priest is +1). A shield has its own number per job. An Awakened Assassin Cross has a separate, heavier number for a weapon in the left hand; the other Awakened jobs hold only a shield or nothing there.
