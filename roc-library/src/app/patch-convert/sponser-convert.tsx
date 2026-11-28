@@ -1,22 +1,29 @@
 "use client"; // 🔹 บังคับให้เป็น Client Component
 
-import React from "react";
-import { BANNER_SRC, useInlineSrc } from "./inlineImages";
+import { useState } from "react";
+import { BANNERS, useInlineSrc } from "./inlineImages";
+
+/** One Item card banner. One that fails to load is hidden, not swapped for the logo. */
+function Banner({ src, alt }: { src: string; alt: string }) {
+  const bannerSrc = useInlineSrc(src);
+  const [failed, setFailed] = useState(false);
+  if (failed) return null;
+  return (
+    <img
+      className="w-full"
+      src={bannerSrc}
+      alt={alt}
+      onError={() => setFailed(true)}
+    />
+  );
+}
 
 export default function SponserConvert() {
-  const bannerSrc = useInlineSrc(BANNER_SRC);
   return (
-    <div className="w-full">
-      <img
-        className="w-full"
-        src={bannerSrc}
-        alt="item image"
-        width={150}
-        height={300}
-        onError={(e) => {
-          e.currentTarget.src = "/assets/images/GuildImage/dog.jpg";
-        }}
-      />
+    <div className="flex w-full flex-col gap-3">
+      {BANNERS.map((banner) => (
+        <Banner key={banner.src} {...banner} />
+      ))}
     </div>
   );
 }

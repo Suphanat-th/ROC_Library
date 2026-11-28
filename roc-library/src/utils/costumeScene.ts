@@ -28,6 +28,12 @@ export interface Scene {
   originX: number
   originY: number
   scale: number
+  /** The size of the character against its normal size (the Shrink effect makes it smaller); the feet stay where they are. */
+  bodyScale?: number
+  /** A copy of the character stands behind it (the Shadow effect). */
+  shadow?: boolean
+  /** The character is washed white (the White Body effect). */
+  whiten?: boolean
   name: string
 }
 
@@ -48,6 +54,16 @@ function drawNameTag(ctx: CanvasRenderingContext2D, name: string, x: number, y: 
   ctx.restore()
 }
 
+/** Where the copy of the Shadow effect stands, in sprite pixels from the character (right and up), and how it looks. */
+const SHADOW_OFFSET = { x: 24, y: -21 }
+const SHADOW_TINT = "rgba(115, 78, 42, 0.55)"
+const SHADOW_OPACITY = 0.72
+/** How much white the White Body effect mixes into every pixel of the character. */
+const WHITEN_AMOUNT = 0.55
+
+/** The copy is painted here first, so that it can be tinted before it goes behind the character. */
+let shadowCanvas: HTMLCanvasElement | null = null
+
 /**
  * Paints the scene at `elapsed` milliseconds: the character and its name on `ctx`, the effects that play over it on
  * `front`, and what plays under it (Footprints, effects the game draws first) on `back`.
@@ -60,12 +76,49 @@ export function paintScene(
   elapsed: number,
 ) {
   const { character, action, originX, originY, scale } = scene
+  const bodyScale = scene.bodyScale ?? 1
   const bodyAction = character.body.act.actions[action]
   if (!bodyAction) return
   const held = isHeldPose(character.body, action)
   const bodyFrame = held ? 0 : Math.floor(elapsed / bodyAction.delay) % bodyAction.frames.length
 
-  drawCharacter(ctx, character, { action, bodyFrame, elapsed }, originX, originY, scale)
+  drawCharacter(ctx, character, { action, bodyFrame, elapsed }, originX, originY, scale * bodyScale)
+  if (scene.whiten) {
+    // White over the character's own pixels only (source-atop keeps what is see-through see-through), before the copy and the name.
+    ctx.save()
+    ctx.setTransform(1, 0, 0, 1, 0, 0)
+    ctx.globalCompositeOperation = "source-atop"
+    ctx.fillStyle = `rgba(255, 255, 255, ${WHITEN_AMOUNT})`
+    ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height)
+    ctx.restore()
+  }
+  if (scene.shadow) {
+    // A brown, see-through copy of the character, standing behind it up and to the right.
+    shadowCanvas ??= document.createElement("canvas")
+    if (shadowCanvas.width !== ctx.canvas.width || shadowCanvas.height !== ctx.canvas.height) {
+      shadowCanvas.width = ctx.canvas.width
+      shadowCanvas.height = ctx.canvas.height
+    }
+    const copy = shadowCanvas.getContext("2d")!
+    drawCharacter(
+      copy,
+      character,
+      { action, bodyFrame, elapsed },
+      originX + SHADOW_OFFSET.x * scale * bodyScale,
+      originY + SHADOW_OFFSET.y * scale * bodyScale,
+      scale * bodyScale,
+    )
+    copy.save()
+    copy.globalCompositeOperation = "source-atop"
+    copy.fillStyle = SHADOW_TINT
+    copy.fillRect(0, 0, shadowCanvas.width, shadowCanvas.height)
+    copy.restore()
+    ctx.save()
+    ctx.globalCompositeOperation = "destination-over"
+    ctx.globalAlpha = SHADOW_OPACITY
+    ctx.drawImage(shadowCanvas, 0, 0)
+    ctx.restore()
+  }
   if (scene.name) drawNameTag(ctx, scene.name, originX, originY, scale)
 
   // An effect that follows the head moves with the body's anchor (where the head sits on the body).
@@ -75,10 +128,11 @@ export function paintScene(
     if (fx.head) {
       const frame = bodyAction.frames[held ? 0 : Math.floor(elapsed / bodyAction.delay) % bodyAction.frames.length]
       const anchor = frame?.anchors[0]
-      x += (anchor?.x ?? 0) * scale
-      y += (anchor?.y ?? 0) * scale
+      x += (anchor?.x ?? 0) * scale * bodyScale
+      y += (anchor?.y ?? 0) * scale * bodyScale
     }
-    layer.paint(fx.effect, strFrameAt(fx.effect, elapsed), x, y, scale)
+    // Under Shrink the effects get smaller with the character (the game's table has isAdjustSizeWhenShrinkState for them).
+    layer.paint(fx.effect, strFrameAt(fx.effect, elapsed), x, y, scale * bodyScale)
   }
 
   if (front) {

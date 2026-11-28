@@ -104,6 +104,58 @@ const MOUNTS = [
   ["oboro", "toad", "frog_oboro", "frog_oboro"],
 ];
 
+/**
+ * Costumes whose hat effect folder (data/texture/effect/<folder>) was matched to the item by hand, where the game's tables
+ * hold only a number the client draws itself or a file name that is not in the archive. Item id -> folder. Those marked
+ * "guess" are matched by name and look only, and are to be checked against the game.
+ */
+const ITEM_EFFECT_FOLDERS = {
+  5979: "efst_angel_fluttering", // Costume Fluttering Angel's Wing (guess: the name)
+  18742: "efst_happiness_star", // Costume Moon and Stars (guess: moonstar2)
+  31391: "efst_fstone", // Costume Floating Stone Of Int... (guess: the name)
+  410231: "efst_alice_tea", // Costume Wonderland Tea Party (guess: the name)
+};
+/** The same for effect stones, by the stone's effect name (letters and digits only, lower case). */
+const STONE_EFFECT_FOLDERS = {
+  angelblessing: "efst_blessing_of_angels",
+  magicfeather: "efst_magical_feather",
+  ghost: "efst_c_ghost_effect",
+  babycamellia: "efst_flowersmoke", // flowersmoke.str: violet smoke and thin streaks of lightning, as in the game's picture
+};
+
+/**
+ * Effects the game's client draws itself (the table holds only a number, and the code is not in the game's data), which
+ * the page draws with its own code to look like the game's (src/utils/proceduralEffect.ts): effect stone name (letters and
+ * digits, lower case) -> the effect's name there and whether it plays behind the character.
+ */
+const PROCEDURAL_STONES = {
+  electric: { file: "electric", behind: false },
+  crimsonwave: { file: "crimson", behind: false },
+  blueaura: { file: "blueaura", behind: false },
+  pinkglow: { file: "pinkglow", behind: false },
+  twinkle: { file: "twinkle", behind: false },
+  greenfloor: { file: "greenfloor", behind: true },
+};
+/** Stones whose effect is a smaller character: effect stone name -> the size of the character against its normal size. */
+const BODY_SCALE_STONES = {
+  shrink: 0.55,
+};
+/**
+ * Stones whose effect is one the game has in another colour: effect stone name -> the effect's folder and file and the colour
+ * the page paints it in (TINTS in src/utils/costumeEffects.ts). Roaring is the C dragon (red in the game's files).
+ */
+const RECOLORED_STONES = {
+  roaring: { folder: "efst_c_dragon_red_aura", file: "redyoumei.str", tint: "lilac" },
+};
+/** Stones whose effect is one loose .str of data/texture/effect (no folder of its own): effect stone name -> the file and whether it plays behind the character. */
+const STONE_EFFECT_FILES = {
+  redflame: { str: "data/texture/effect/lava_slide.str", behind: true }, // the only effect that is made of nothing but fire_a.bmp and fire_b.bmp
+};
+/** Stones whose effect is a copy of the character standing behind it (Shadow). */
+const SHADOW_STONES = new Set(["shadow"]);
+/** Stones whose effect washes the character white (White Body: HAT_EF_WHITEBODY has no file, the client colours the body itself). */
+const WHITEN_STONES = new Set(["whitebody"]);
+
 /** The main job (the first job of a line) each job belongs to, as in src/data/aspdData.ts. */
 const FAMILY_OF = {
   Novice: ["novice", "super-novice", "expanded-super-novice"],
@@ -465,8 +517,13 @@ async function main() {
     const folder = strPath.slice(0, strPath.lastIndexOf("/") + 1);
     if (fxCopied.has(`${key}|${folder}`)) return;
     fxCopied.add(`${key}|${folder}`);
+    // An effect that sits loose in data/texture/effect shares the folder with thousands of other effects' pictures: only the
+    // file itself and the pictures whose names it holds are copied.
+    const shared = folder === "data/texture/effect/";
+    const names = shared ? grf.read(stored.get(strPath)).toString("latin1").toLowerCase() : "";
     for (const [unicodePath, raw] of stored) {
       if (!unicodePath.startsWith(folder) || unicodePath.slice(folder.length).includes("/") || !/\.(str|tga|bmp|png|jpg)$/.test(unicodePath)) continue;
+      if (shared && unicodePath !== strPath && !names.includes(unicodePath.slice(folder.length).toLowerCase())) continue;
       const target = path.join(FX_DIR, key, unicodePath.slice(folder.length));
       fs.mkdirSync(path.dirname(target), { recursive: true });
       fs.writeFileSync(target, grf.read(raw));
@@ -479,13 +536,30 @@ async function main() {
    * effect the client itself draws: that number is not a key of this table (HAT_EF_Electric holds 254, which is the table's
    * Kung Fu Panda, but the game shows the Roaring effect), so it is not followed.
    */
+  // Every .str under data/texture/effect by its file name, for entries whose folder the table spells differently from the archive.
+  const strsByBase = new Map();
+  for (const unicodePath of stored.keys()) {
+    if (!unicodePath.startsWith("data/texture/effect/") || !unicodePath.endsWith(".str")) continue;
+    const base = unicodePath.slice(unicodePath.lastIndexOf("/") + 1);
+    strsByBase.set(base, [...(strsByBase.get(base) ?? []), unicodePath]);
+  }
   const resolveEffect = (number) => {
     const entry = hatTable[number];
-    if (entry?.resourceFileName && stored.has(effectFile(entry.resourceFileName))) {
-      // isRenderBeforeCharacter: drawn behind the character; isAttachedHead: follows the head.
-      return { str: effectFile(entry.resourceFileName), behind: Boolean(entry.isRenderBeforeCharacter), head: Boolean(entry.isAttachedHead) };
+    if (!entry?.resourceFileName) return undefined;
+    let str = effectFile(entry.resourceFileName);
+    if (!stored.has(str)) {
+      // The table's file is not where it says: take the one file of that name in the archive, or, of several, the one in a
+      // folder named like the table's folder.
+      const base = str.slice(str.lastIndexOf("/") + 1);
+      const wanted = fold(String(entry.resourceFileName).split(/[\\/]/).slice(-2, -1)[0] ?? "");
+      const same = strsByBase.get(base) ?? [];
+      const folderOf = (candidate) => fold(candidate.split("/").slice(-2, -1)[0].replace(/^efst_/, ""));
+      const pick = same.length === 1 ? same[0] : same.find((candidate) => wanted && (folderOf(candidate).includes(wanted.replace(/^efst/, "")) || wanted.replace(/^efst/, "").includes(folderOf(candidate))));
+      if (!pick) return undefined;
+      str = pick;
     }
-    return undefined;
+    // isRenderBeforeCharacter: drawn behind the character; isAttachedHead: follows the head.
+    return { str, behind: Boolean(entry.isRenderBeforeCharacter), head: Boolean(entry.isAttachedHead) };
   };
   // Most hat effects keep their files in a folder named efst_<the item's resource name>; used where no table names one.
   const efstFolders = new Map();
@@ -529,7 +603,10 @@ async function main() {
   for (const item of items) {
     const named = hatNumberByName.get(squash(table[item.id].identifiedResourceName ?? ""));
     const numbers = [...(named === undefined ? [] : [named]), ...(effectOfItem.get(item.id) ?? [])];
-    const folderByName = [`efst_${table[item.id].identifiedResourceName}`, table[item.id].identifiedResourceName]
+    // An item whose effect folder was matched by hand (see ITEM_EFFECT_FOLDERS) beats every guess by name.
+    const forced = ITEM_EFFECT_FOLDERS[item.id] && lower(`data/texture/effect/${ITEM_EFFECT_FOLDERS[item.id]}/`);
+    const folderByName = (forced && efstFolders.has(forced) ? forced : undefined) ??
+      [`efst_${table[item.id].identifiedResourceName}`, table[item.id].identifiedResourceName]
       .map((name) => lower(`data/texture/effect/${name}/`))
       .find((candidate) => efstFolders.has(candidate)) ??
       efstByName.get(fold(table[item.id].identifiedResourceName)) ??
@@ -538,7 +615,11 @@ async function main() {
     const byName = folderByName && efstFolders.get(folderByName);
     // In order of trust: the effect the game names after the item, the effect folder named after it, and last the
     // table of items per effect (which is wrong for some items).
-    const foundNamed = named === undefined ? undefined : resolveEffect(named);
+    // Failing both, the effect the game names after the display name ("Costume Angel Stairs" -> HAT_EF_Angel_Stairs).
+    const viaDisplay = named !== undefined || byName
+      ? undefined
+      : hatNumberByName.get(squash(String(table[item.id].identifiedDisplayName ?? "").replace(/^(\[[^\]]*\]\s*)?costume:?\s*/i, "")));
+    const foundNamed = forced ? undefined : (named ?? viaDisplay) === undefined ? undefined : resolveEffect(named ?? viaDisplay);
     const found = foundNamed ?? (byName ? undefined : (effectOfItem.get(item.id) ?? []).map(resolveEffect).find(Boolean));
     if (found?.str) {
       const key = shortKey(found.str.slice(0, found.str.lastIndexOf("/") + 1));
@@ -622,7 +703,34 @@ async function main() {
     const number = exact ?? partial;
     const found = number === undefined ? undefined : resolveEffect(number);
     const stone = { id: Number(idText), name: item.identifiedDisplayName.trim(), slot: m[2].toLowerCase() };
-    if (found?.str) {
+    // A stone whose effect folder was matched by hand (see STONE_EFFECT_FOLDERS) beats a guess by name.
+    const handFolder = STONE_EFFECT_FOLDERS[base] && lower(`data/texture/effect/${STONE_EFFECT_FOLDERS[base]}/`);
+    const procedural = PROCEDURAL_STONES[base];
+    if (BODY_SCALE_STONES[base]) {
+      stone.bodyScale = BODY_SCALE_STONES[base];
+    } else if (SHADOW_STONES.has(base)) {
+      stone.shadow = true;
+    } else if (WHITEN_STONES.has(base)) {
+      stone.whiten = true;
+    } else if (STONE_EFFECT_FILES[base] && stored.has(STONE_EFFECT_FILES[base].str)) {
+      const { str, behind } = STONE_EFFECT_FILES[base];
+      const key = shortKey(str.slice(0, str.lastIndexOf("/") + 1));
+      copyEffectFolder(str, key);
+      stone.effects = [{ key, file: str.slice(str.lastIndexOf("/") + 1), behind, head: false }];
+    } else if (RECOLORED_STONES[base]) {
+      const { folder, file, tint } = RECOLORED_STONES[base];
+      const strPath = lower(`data/texture/effect/${folder}/${file}`);
+      const key = shortKey(strPath.slice(0, strPath.lastIndexOf("/") + 1));
+      copyEffectFolder(strPath, key);
+      stone.effects = [{ key, file, behind: false, head: false, tint }];
+    } else if (procedural) {
+      stone.effects = [{ key: "proc", file: procedural.file, behind: procedural.behind }];
+    } else if (handFolder && efstFolders.has(handFolder)) {
+      const files = efstFolders.get(handFolder);
+      const key = shortKey(handFolder);
+      copyEffectFolder(`${handFolder}${files[0]}`, key);
+      stone.effects = files.slice(0, 6).map((file) => ({ key, file, behind: true }));
+    } else if (found?.str) {
       const key = shortKey(found.str.slice(0, found.str.lastIndexOf("/") + 1));
       copyEffectFolder(found.str, key);
       stone.effects = [{ key, file: found.str.slice(found.str.lastIndexOf("/") + 1), behind: found.behind, head: found.head }];
@@ -672,9 +780,28 @@ async function main() {
   console.log(`${hatCount} hat effects and ${footprintCount} Footprints copied; ${unsupported} items have an effect that cannot be shown; ${items.filter((item) => item.noSprite).length} items are only an effect`);
 
   // ---- Icons: item/<resource>.bmp of every item, in one picture.
-  const rows = Math.ceil(items.length / ICON_COLUMNS);
+  // After the items come two more: the pictures of an effect stone and of a Footprint (every stone and every Footprint
+  // item of the game shares one), which the sockets under the places show.
+  const SOCKET_PICTURES = { stone: "블루크리스탈조각", footprint: "발자국이펙트" };
+  const rows = Math.ceil((items.length + Object.keys(SOCKET_PICTURES).length) / ICON_COLUMNS);
   const tiles = [];
   let missingIcons = 0;
+  const socketIcons = {};
+  for (const [offset, [kind, resource]] of Object.entries(SOCKET_PICTURES).entries()) {
+    const icon = read(`data/texture/유저인터페이스/item/${resource}.bmp`);
+    if (!icon) {
+      problems.push(`No picture for the ${kind} socket (${resource})`);
+      continue;
+    }
+    const { rgba, width, height } = bmpToRgba(icon);
+    const picture = await sharp(rgba, { raw: { width, height, channels: 4 } })
+      .resize(ICON_SIZE, ICON_SIZE, { fit: "contain", background: { r: 0, g: 0, b: 0, alpha: 0 } })
+      .png()
+      .toBuffer();
+    const at = items.length + offset;
+    tiles.push({ input: picture, left: (at % ICON_COLUMNS) * ICON_SIZE, top: Math.floor(at / ICON_COLUMNS) * ICON_SIZE });
+    socketIcons[kind] = at;
+  }
   for (const [at, item] of items.entries()) {
     const icon = read(`data/texture/유저인터페이스/item/${table[item.id].identifiedResourceName}.bmp`);
     if (!icon) {
@@ -699,7 +826,7 @@ async function main() {
   fs.writeFileSync(MANIFEST, JSON.stringify(manifest, null, 1));
   fs.writeFileSync(
     INDEX_OUT,
-    JSON.stringify({ jobs, hairstyles, hairSwatches, bodyOutfits, items, footprints, stones, icons: { url: ICON_URL, size: ICON_SIZE, columns: ICON_COLUMNS }, packs: { body: ["body_m.rcp", "body_f.rcp"], head: ["head_m.rcp", "head_f.rcp"] } }),
+    JSON.stringify({ jobs, hairstyles, hairSwatches, bodyOutfits, items, footprints, stones, icons: { url: ICON_URL, size: ICON_SIZE, columns: ICON_COLUMNS, ...socketIcons }, packs: { body: ["body_m.rcp", "body_f.rcp"], head: ["head_m.rcp", "head_f.rcp"] } }),
   );
 
   const total = Object.values(manifest).reduce((sum, entry) => sum + entry.size, 0);

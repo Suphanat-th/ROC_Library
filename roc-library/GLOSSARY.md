@@ -73,7 +73,7 @@ The second key that opens Patch Convert, given to Members. It never changes, so 
 _Avoid_: Bypass key, master key
 
 **Item card banner**:
-The advertisement picture at the foot of an Item card, which players call "สปอน". Together with the logo before the item name it always comes with the downloaded picture, on every device. It is not a Supporter or a Donor.
+An advertisement picture at the foot of an Item card, which players call "สปอน". The card shows every banner in the current list, one under another in a fixed order, so the picture a player downloads always matches the screen. The ad-space picture ("พื้นที่สำหรับโฆษณา") is always the last one, and a new banner goes above it. Together with the logo before the item name it always comes with the downloaded picture, on every device. It is not a Supporter or a Donor. A banner that fails to load is left out rather than stopping the download.
 _Avoid_: Sponsor, ad, Supporter
 
 **Costume preview**:
@@ -112,9 +112,17 @@ _Avoid_: Cape (for the whole kind), wing sprite
 A looping light effect (an STR file) that a costume item plays around its wearer, such as Whisper's Blessing's ghosts or a magic circle under the feet. Some play behind the character, others over it. It adds light onto the scene, so the Costume preview shows it on a dark stage, at the character's in-game size even when the effect spreads past the window.
 _Avoid_: Aura (only some are auras), particle, STR
 
+**Drawn effect**:
+A Hat effect or effect stone whose look the game's client works out itself: the game's tables hold only a number for it, with no STR file, so the Costume simulator draws a likeness of it from the game's own pictures of the effect (such as Electric, Pink Glow or Green Floor). Its size against the character is kept as in those pictures. It is not exact, so each is checked against the game's pictures.
+_Avoid_: Procedural effect, fake effect
+
 **Footprint**:
 An effect item, such as Blue Butterfly Footprint or Flower Garden, that plays a small effect at each step its wearer takes while walking, and may also leave a mark on the ground. It is not a Hat effect: it shows only in the Walk Pose of the Costume preview.
 _Avoid_: Footstep effect, Hat effect (for this kind)
+
+**Socket**:
+The round button at the corner of a place in the Costume simulator's slot bar. Under Upper, Middle and Lower it takes an effect stone; under Garment it takes a Footprint. Empty, it is dashed with a faded picture; filled, it is solid with the full picture, a dot, and the effect's name under the place.
+_Avoid_: Enchant slot, gem
 
 **Pose**:
 One of the three motions the Costume preview offers: Idle, Sit or Walk. Idle and Sit are held still (their frames only turn the head); Walk moves the legs, and the character walks on the spot. An item with one effect of its own, such as Cons of Poison, keeps playing that effect whatever the direction or Pose.
@@ -240,6 +248,10 @@ _Avoid_: Cooldown (alone), Skill delay
 The picture in the Cast calculator, the largest thing on its page, with the time when any other skill can be used again in large type and the time when the same skill can be used again beside it. It has two lanes on one time axis. The cast lane has three stretches in time order (Fixed cast, VCT, the wait after the cast), each sized to its real seconds, and the wait shows whether Global CD or ASPD set it. The Skill CD lane starts exactly where the cast ends, at the same moment as the wait, and a dashed line marks when other skills become usable. It runs by itself in real time, filling left to right with the current part named above it, and starts again at once when it reaches the end (the time the same skill can be used again), with no rest, so one round lasts exactly that many seconds. Each part has its own colour and its own group of fields, and the group ends with the part's result, the steps that led to it and a Shortfall line saying how much of what the player can change (seconds off, DEX×2 + INT points, ASPD) is still missing for it to reach 0. The four groups sit under the bar (in a row on a wide screen, stacked on a phone); once the bar has scrolled out of view, a slim copy of it stays pinned under the Navbar. Changing any number restarts it with the new values. It keeps running even when the player's device asks for less motion.
 _Avoid_: Cast gauge, cast timeline
 
+**Cast rate**:
+How many times a second a player can use the same skill over and over, shown in the Cast calculator under the Cast bar next to what a maxed ASPD (193) would give. It is one divided by the seconds until the same skill can be used again; when nothing but ASPD sets that time (no Fixed cast or VCT, and no Global CD or Skill CD longer than the ASPD wait) it is the attacks per second of the ASPD calculator (ASPD 190 is 5 a second, 193 is 7). In the Cast calculator a "Hit" means one use of the skill, not one instance of damage from a skill that strikes several times.
+_Avoid_: Hit rate, DPS, Hit (alone)
+
 **Main job**:
 The first job of a line (Novice, Swordman, Acolyte, Magician, Merchant, Archer, Thief, Taekwon, Ninja, Gunslinger), used in the ASPD calculator to narrow the list of jobs to that line.
 _Avoid_: Base class, job family
@@ -247,10 +259,6 @@ _Avoid_: Base class, job family
 **Class tier**:
 The group a job belongs to in the ASPD calculator, which sets the highest ASPD it can reach, shown to players as **Max**: Class 1-2 and High Class stop at 190; Extended and Awakened stop at 193. A High Class job has the same numbers as the Class 2 job it comes from. Awakened holds the twelve Awakened jobs as the game announced them, with Clown and Gypsy as one entry.
 _Avoid_: Job tier, class group
-
-**Cast rate**:
-How many times a second a player can use the same skill over and over, shown in the Cast calculator under the Cast bar next to what a maxed ASPD (193) would give. It is one divided by the seconds until the same skill can be used again; when nothing but ASPD sets that time (no Fixed cast or VCT, and no Global CD or Skill CD longer than the ASPD wait) it is the attacks per second of the ASPD calculator (ASPD 190 is 5 a second, 193 is 7). In the Cast calculator a "Hit" means one use of the skill, not one instance of damage from a skill that strikes several times.
-_Avoid_: Hit rate, DPS, Hit (alone)
 
 **Weapon factor**:
 How much ASPD one job gains or loses for holding one kind of weapon, as the game's own table lists it for that job. Mostly a loss, sometimes a gain (a Book for an Awakened High Priest is +1). A shield has its own number per job. An Awakened Assassin Cross has a separate, heavier number for a weapon in the left hand; the other Awakened jobs hold only a shield or nothing there.

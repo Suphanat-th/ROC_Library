@@ -66,8 +66,13 @@ function visibleBox(image: ImageData): StrPicture["visible"] {
   return x1 < 0 ? null : [x0 / width, y0 / height, (x1 + 1) / width, (y1 + 1) / height]
 }
 
+/** A picture of an effect made from pixels the page drew itself. */
+export async function pictureFromImage(image: ImageData): Promise<StrPicture> {
+  return { source: await createImageBitmap(image), visible: visibleBox(image) }
+}
+
 /** Loads a picture of an effect; in a BMP the pure magenta stands for "see through". */
-async function loadPicture(url: string): Promise<StrPicture | null> {
+export async function loadPicture(url: string, recolor?: (image: ImageData) => void): Promise<StrPicture | null> {
   try {
     const buffer = await fetchBuffer(url)
     let image: ImageData
@@ -86,6 +91,7 @@ async function loadPicture(url: string): Promise<StrPicture | null> {
         if (px[i] > 230 && px[i + 1] < 40 && px[i + 2] > 230) px[i + 3] = 0
       }
     }
+    recolor?.(image)
     return { source: await createImageBitmap(image), visible: visibleBox(image) }
   } catch {
     return null
@@ -93,12 +99,17 @@ async function loadPicture(url: string): Promise<StrPicture | null> {
 }
 
 /** Loads an effect file and every picture it names (they sit beside it). */
-export async function loadStrEffect(folderUrl: string, file: string, lowercase = false): Promise<StrEffect> {
+export async function loadStrEffect(
+  folderUrl: string,
+  file: string,
+  lowercase = false,
+  recolor?: (image: ImageData) => void,
+): Promise<StrEffect> {
   const str = parseSTR(await fetchBuffer(fileUrl(folderUrl, file, lowercase)))
   const names = [...new Set(str.layers.flatMap((l) => l.textures))]
   const loaded = new Map(
     await Promise.all(
-      names.map(async (n) => [n, await loadPicture(fileUrl(folderUrl, n, lowercase))] as const),
+      names.map(async (n) => [n, await loadPicture(fileUrl(folderUrl, n, lowercase), recolor)] as const),
     ),
   )
   return {

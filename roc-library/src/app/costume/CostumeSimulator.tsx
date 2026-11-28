@@ -8,8 +8,9 @@ import SpriteThumb from "./SpriteThumb";
 
 type IconSheet = CostumeIndex["icons"];
 import { Bounds, Character, loadSpriteFiles, measureCharacter } from "@/utils/spriteComposer";
-import { createStrRenderer, loadStrEffect, measureStr, StrEffect, StrRenderer } from "@/utils/strEffect";
+import { createStrRenderer, measureStr, StrEffect, StrRenderer } from "@/utils/strEffect";
 import { costumeFileUrl } from "@/utils/costumePack";
+import { loadCostumeEffect, loadCostumeFootprint } from "@/utils/costumeEffects";
 import {
   exportCostumeGif,
   GIF_DEFAULTS,
@@ -24,13 +25,17 @@ import {
   STAGE_WIDTH,
 } from "@/utils/costumeScene";
 import { LOGO_SRC } from "@/app/patch-convert/inlineImages";
-import { Footprint, loadFootprint } from "@/utils/footprintEffect";
+import { Footprint } from "@/utils/footprintEffect";
 import { loadBody, loadHead, loadWorn } from "@/utils/costumeCharacter";
 
 const CANVAS_WIDTH = STAGE_WIDTH;
 const CANVAS_HEIGHT = STAGE_HEIGHT;
 const PADDING = 16;
 const MAX_SCALE = 2;
+/** How long a choice waits for the next one before the character is built for it. */
+const BUILD_DELAY_MS = 250;
+/** How long "ยืนยันรีเซ็ต?" stays before the button goes back to "เริ่มใหม่". */
+const RESET_CONFIRM_MS = 4000;
 /** Where the character's middle sits, as a share of the stage height: low, so the name fits under the feet and there is room above for wings and auras. */
 const STAGE_CENTRE_Y = 0.75;
 /** The zoom the player can set, as a share of the usual size. */
@@ -54,9 +59,38 @@ const PLACES = [
 ] as const;
 
 type Place = (typeof PLACES)[number]["slot"];
+
+/** Each place has its own colour wherever it is named (slot bar, list, notes), so which places an item takes reads at a glance. */
+const PLACE_TONE: Record<Place, { chip: string; tab: string }> = {
+  upper: { chip: "bg-info text-info-content", tab: "border-info/70 bg-info/10 hover:border-info" },
+  middle: { chip: "bg-success text-success-content", tab: "border-success/70 bg-success/10 hover:border-success" },
+  lower: { chip: "bg-warning text-warning-content", tab: "border-warning/70 bg-warning/10 hover:border-warning" },
+  garment: { chip: "bg-accent text-accent-content", tab: "border-accent/70 bg-accent/10 hover:border-accent" },
+};
+const PLACE_LABEL: Record<Place, string> = { upper: "บน", middle: "กลาง", lower: "ล่าง", garment: "ผ้าคลุม" };
+
+/** The places an item takes, one coloured tag each, in the order of the slot bar. */
+function PlaceChips({ slots, size = "sm" }: { slots: readonly Place[]; size?: "sm" | "md" }) {
+  const ordered = PLACES.map((place) => place.slot).filter((slot) => slots.includes(slot));
+  return (
+    <span className="inline-flex max-w-full items-center justify-center gap-0.5">
+      {ordered.map((slot) => (
+        <span
+          key={slot}
+          className={`rounded px-1 font-bold ${size === "md" ? "text-[11px] leading-4" : "text-[10px] leading-[14px]"} ${PLACE_TONE[slot].chip}`}
+        >
+          {PLACE_LABEL[slot]}
+        </span>
+      ))}
+    </span>
+  );
+}
 type Picks = Record<Place, number | null>;
 
 const NONE: Picks = { upper: null, middle: null, lower: null, garment: null };
+
+/** The height of every place in the slot bar, whatever it holds (name, icon, two lines, room for the socket button). */
+const SLOT_HEIGHT = "h-[5.75rem]";
 
 const MOUNT_NAMES: Record<string, string> = { peco: "Peco Peco", poring: "Poring", toad: "Toad" };
 
@@ -191,9 +225,37 @@ function ItemIcon({ item, sheet, size = 32 }: { item?: CostumeItem; sheet: IconS
   );
 }
 
-/** One equipment place, like the slots of the game's own window: its name, the worn item's icon, a remove button. */
+/** The picture the sockets show: the effect stone's (every stone of the game shares one) or the Footprint's, cut out of the icon picture. */
+function SocketPicture({ sheet, cell, on }: { sheet: IconSheet; cell?: number; on: boolean }) {
+  if (cell === undefined)
+    return (
+      <span aria-hidden="true" className="text-base font-bold">
+        {on ? "✦" : "◇"}
+      </span>
+    );
+  return (
+    <span
+      aria-hidden="true"
+      className={`inline-block shrink-0 ${on ? "" : "opacity-40 grayscale"}`}
+      style={{
+        width: sheet.size,
+        height: sheet.size,
+        backgroundImage: `url(${sheet.url})`,
+        backgroundSize: `${sheet.columns * sheet.size}px auto`,
+        backgroundPosition: `-${(cell % sheet.columns) * sheet.size}px -${Math.floor(cell / sheet.columns) * sheet.size}px`,
+        backgroundRepeat: "no-repeat",
+        imageRendering: "pixelated",
+      }}
+    />
+  );
+}
+
+/**
+ * One equipment place, like the slots of the game's own window. Its size never depends on what it holds: the name, the icon
+ * and two lines under it are always there (empty or not), so wearing, removing or covering several places moves nothing.
+ */
 function SlotTab({
-  label,
+  slot,
   english,
   active,
   worn,
@@ -201,12 +263,11 @@ function SlotTab({
   pending,
   unavailable,
   covers,
-  compact = false,
-  stone = false,
+  socketName,
   onSelect,
   onRemove,
 }: {
-  label: string;
+  slot: Place;
   english: string;
   active: boolean;
   worn?: CostumeItem;
@@ -216,60 +277,50 @@ function SlotTab({
   unavailable: boolean;
   /** How many places the worn item takes; more than one means it fills several at once. */
   covers: number;
-  /** The small form used in the bar that stays under the stage. */
-  compact?: boolean;
-  /** An effect stone is set for this place. */
-  stone?: boolean;
+  /** The name of the effect (or Footprint) set for this place, written on the second line under the icon. */
+  socketName?: string;
   onSelect: () => void;
   onRemove: () => void;
 }) {
+  // First line under the icon: what is true of the item, or that the place is empty.
+  const note = unavailable
+    ? { text: "ไม่มีของเพศนี้", tone: "text-warning" }
+    : !worn
+      ? { text: "ว่าง", tone: "text-base-content/55" }
+      : null;
   return (
-    <div className="relative">
+    <div className={`relative flex w-full ${SLOT_HEIGHT}`}>
       <button
         type="button"
         role="tab"
         aria-selected={active}
         onClick={onSelect}
         title={worn ? `${english}: ${worn.name}` : english}
-        className={`${covers > 1 ? "ring-2 ring-accent ring-offset-2 ring-offset-base-100 " : ""}flex ${compact ? "min-h-[3.9rem] gap-0.5 pt-1" : "min-h-32 gap-1 pt-2"} w-full flex-col items-center justify-start rounded-box border-2 px-1 pb-1.5 transition-colors focus-visible:outline-2 focus-visible:outline-primary ${
-          active ? "border-primary bg-primary/10" : "border-base-300 bg-base-100 hover:border-primary/50"
+        className={`flex h-full w-full flex-col items-center justify-start gap-0.5 rounded-box border-2 px-1 pb-1 pt-1 transition-colors focus-visible:outline-2 focus-visible:outline-primary ${
+          active ? "border-primary bg-primary/10" : worn ? PLACE_TONE[slot].tab : "border-base-300 bg-base-100 hover:border-primary/50"
         }`}
       >
-        <span className={`font-bold leading-none ${compact ? "text-[11px]" : "text-xs"}`}>{label}</span>
+        <PlaceChips slots={[slot]} size="md" />
         <span className="relative">
-          <ItemIcon item={worn} sheet={sheet} size={compact ? 32 : 48} />
+          <ItemIcon item={worn} sheet={sheet} size={32} />
           {pending && (
             <span className="absolute inset-0 flex items-center justify-center rounded-field bg-base-100/70">
               <span className="loading loading-spinner loading-xs text-primary" role="status" aria-label={`กำลังโหลด ${worn?.name ?? ""}`} />
             </span>
           )}
         </span>
-        {compact ? (
-          !worn && <span className="text-[10px] leading-none text-base-content/55">ว่าง</span>
-        ) : (
-          <span className={`line-clamp-2 w-full text-center text-xs leading-tight ${worn ? "" : "text-base-content/55"}`}>
-            {worn ? worn.name : "ไม่ใส่"}
-          </span>
-        )}
-        {stone && (
-          <span
-            className="absolute -left-1 -top-1 rounded-full bg-secondary px-1.5 text-[10px] font-bold leading-4 text-secondary-content"
-            title="มีหินเอฟเฟกต์"
-          >
-            ✦
-          </span>
-        )}
-        {covers > 1 && (
-          <span className="rounded bg-accent px-1.5 text-[10px] font-bold leading-4 text-accent-content">ครอบ {covers} ช่อง</span>
-        )}
-        {unavailable && <span className="text-[10px] leading-none text-warning">ไม่มีของเพศนี้</span>}
+        <span className={`flex h-[14px] w-full items-center justify-center overflow-hidden text-center text-[10px] leading-[14px] ${note?.tone ?? ""}`}>
+          {covers > 1 && worn ? <PlaceChips slots={worn.slots as Place[]} /> : note?.text}
+        </span>
+        {/* Leaves the corner free for the socket button. */}
+        <span className="h-[11px] w-full truncate pr-9 text-left text-[10px] leading-[11px] text-secondary">{socketName}</span>
       </button>
       {worn && (
         <button
           type="button"
           aria-label={`ถอด ${worn.name}${covers > 1 ? ` (ครอบ ${covers} ช่อง)` : ""}`}
           onClick={onRemove}
-          className={`btn btn-circle absolute border-base-300 bg-base-100 shadow ${compact ? "btn-xs -right-1.5 -top-1.5 min-h-7 min-w-7" : "btn-sm -right-2 -top-2 min-h-8 min-w-8"}`}
+          className="btn btn-circle btn-xs absolute -right-1.5 -top-1.5 min-h-7 min-w-7 border-base-300 bg-base-100 shadow"
         >
           <X aria-hidden="true" className="h-4 w-4" />
         </button>
@@ -385,7 +436,7 @@ function StoneDialog({
               >
                 <span>{stone.name.replace(/\s*Effect\s*\(.*\)\s*$/i, "").replace(/\s*Footprints?$/i, "")}</span>
                 {"unsupported" in stone && stone.unsupported && (
-                  <span className="shrink-0 text-[11px] text-base-content/55">ยังแสดงไม่ได้</span>
+                  <span className="shrink-0 text-[11px] text-base-content/55">แสดงเอฟเฟกต์ไม่ได้</span>
                 )}
               </button>
             </li>
@@ -439,7 +490,7 @@ function ItemGrid({
           {shown.map((item) => {
             const on = item.id === value;
             return (
-              <li key={item.id}>
+              <li key={item.id} className="h-[8.5rem]">
                 <button
                   type="button"
                   aria-pressed={on}
@@ -458,10 +509,14 @@ function ItemGrid({
                     </span>
                   )}
                   <ItemIcon item={item} sheet={sheet} size={48} />
-                  <span className="line-clamp-2 text-xs leading-tight">{item.name}</span>
-                  {item.slots.length > 1 && (
-                    <span className="text-[10px] uppercase leading-none text-base-content/60">{item.slots.length} ช่อง</span>
-                  )}
+                  <span className="line-clamp-2 h-8 text-xs leading-4">{item.name}</span>
+                  {/* One line that is always there, so a tile is the same size whatever the item is. */}
+                  <span className="flex h-[14px] w-full items-center justify-center gap-1 overflow-hidden text-[10px] leading-[14px] text-base-content/70">
+                    {item.slots.length > 1 && <PlaceChips slots={item.slots as Place[]} />}
+                    {item.effectUnsupported && (
+                      <span className="truncate">{item.slots.length > 1 ? "⚠" : `⚠ ${item.noSprite ? "ไม่มีภาพให้ดู" : "แสดงเอฟเฟกต์ไม่ได้"}`}</span>
+                    )}
+                  </span>
                 </button>
               </li>
             );
@@ -492,6 +547,11 @@ export default function CostumeSimulator() {
 
   const [character, setCharacter] = useState<Character | null>(null);
   const [notes, setNotes] = useState<string[]>([]);
+  // A build that failed (the choices it was for, and why), and how many times "ลองใหม่" has been pressed since.
+  const [buildError, setBuildError] = useState<{ wanted: string; message: string } | null>(null);
+  const [attempt, setAttempt] = useState(0);
+  // The "เริ่มใหม่" button asks once more before it clears everything; it goes back by itself after a few seconds.
+  const [confirmReset, setConfirmReset] = useState(false);
   // The choices the shown character was built for; the stage dims while it differs from the current ones.
   const [builtFor, setBuiltFor] = useState<string | null>(null);
   // The items the shown character wears, so a slot can show a spinner while its item is still coming.
@@ -505,6 +565,12 @@ export default function CostumeSimulator() {
   // The place whose stone window is open.
   const [stoneSlot, setStoneSlot] = useState<Place | null>(null);
   const [effects, setEffects] = useState<{ effect: StrEffect; bounds: Bounds | null; behind: boolean; head: boolean }[]>([]);
+  /** The size of the character against its normal size, when a stone makes it smaller (Shrink). */
+  const [bodyScale, setBodyScale] = useState(1);
+  /** A stone makes a copy of the character stand behind it (Shadow). */
+  const [shadow, setShadow] = useState(false);
+  /** A stone washes the character white (White Body). */
+  const [whiten, setWhiten] = useState(false);
   const frontRef = useRef<HTMLCanvasElement>(null);
   const rendererRef = useRef<StrRenderer | null>(null);
   // Footprints of worn items (left on the ground while walking, under the character) and where to draw.
@@ -582,6 +648,14 @@ export default function CostumeSimulator() {
   const bodyColours = Math.max(bodySamples?.length ?? 0, 1);
   const wanted = JSON.stringify([gender, bodyName, style, hairColour, bodyColour, outfitNow, picks, effectOn, footprintId, stonePicks]);
   const loading = builtFor !== wanted;
+  // The shown character is not the one asked for because its files did not come.
+  const stale = !loading && buildError?.wanted === wanted;
+
+  useEffect(() => {
+    if (!confirmReset) return;
+    const timer = setTimeout(() => setConfirmReset(false), RESET_CONFIRM_MS);
+    return () => clearTimeout(timer);
+  }, [confirmReset]);
 
   // Builds the character whenever a choice changes.
   useEffect(() => {
@@ -589,6 +663,9 @@ export default function CostumeSimulator() {
     let cancelled = false;
 
     (async () => {
+      // Taps in quick succession (a hair colour, the next style) start one build, for the last choice.
+      await new Promise<void>((resolve) => setTimeout(resolve, BUILD_DELAY_MS));
+      if (cancelled) return;
       const found: string[] = [];
       const colour = Math.min(bodyColour, bodyColours - 1);
       const [body, head] = await Promise.all([
@@ -608,7 +685,7 @@ export default function CostumeSimulator() {
       const worn = await Promise.all(
         [...headgear, ...robes].map(async (item) => {
           const gear = await loadWorn(item, gender, bodyName, body);
-          if (!gear) found.push(`${item.name}: ไม่มีไฟล์สำหรับอาชีพ/เพศนี้`);
+          if (!gear) found.push(`${item.name}: โหลดไฟล์ของชิ้นนี้ไม่สำเร็จ`);
           return gear;
         }),
       );
@@ -632,16 +709,19 @@ export default function CostumeSimulator() {
       // Effects, only while /effect is on: hat effects, and the Footprint left while walking.
       const shown: { effect: StrEffect; bounds: Bounds | null; behind: boolean; head: boolean }[] = [];
       const steps: Footprint[] = [];
+      let smallest = 1;
+      let copy = false;
+      let white = false;
       if (effectOn) {
         for (const item of unique) {
           if (item.effectUnsupported) found.push(`${item.name}: เอฟเฟกต์ของชิ้นนี้ยังแสดงไม่ได้`);
           try {
             for (const part of item.effects ?? []) {
-              const effect = await loadStrEffect(costumeFileUrl(`fx/${part.key}`), part.file, true);
+              const effect = await loadCostumeEffect(part.key, part.file);
               shown.push({ effect, bounds: measureStr(effect), behind: Boolean(part.behind), head: Boolean(part.head) });
             }
             if (item.footprint) {
-              const step = await loadFootprint(costumeFileUrl(`fx/${item.footprint.key}`), item.footprint.info, true);
+              const step = await loadCostumeFootprint(item.footprint.key, item.footprint.info);
               if (step) steps.push(step);
             }
           } catch {
@@ -651,13 +731,25 @@ export default function CostumeSimulator() {
         for (const place of Object.keys(stonePicks) as Place[]) {
           const stone = index.stones?.find((entry) => entry.id === stonePicks[place]);
           if (!stone) continue;
+          if (stone.bodyScale) {
+            smallest = Math.min(smallest, stone.bodyScale);
+            continue;
+          }
+          if (stone.shadow) {
+            copy = true;
+            continue;
+          }
+          if (stone.whiten) {
+            white = true;
+            continue;
+          }
           if (stone.unsupported || !stone.effects) {
             found.push(`${stone.name}: เอฟเฟกต์ของหินนี้ยังแสดงไม่ได้`);
             continue;
           }
           try {
             for (const part of stone.effects) {
-              const effect = await loadStrEffect(costumeFileUrl(`fx/${part.key}`), part.file, true);
+              const effect = await loadCostumeEffect(part.key, part.file, part.tint);
               shown.push({ effect, bounds: measureStr(effect), behind: Boolean(part.behind), head: Boolean(part.head) });
             }
           } catch {
@@ -667,7 +759,7 @@ export default function CostumeSimulator() {
         const chosenStep = index.footprints?.find((entry) => entry.id === footprintId);
         if (chosenStep) {
           try {
-            const step = await loadFootprint(costumeFileUrl(`fx/${chosenStep.key}`), chosenStep.info, true);
+            const step = await loadCostumeFootprint(chosenStep.key, chosenStep.info);
             if (step) steps.push(step);
           } catch {
             found.push(`${chosenStep.name}: โหลดเอฟเฟกต์ไม่สำเร็จ`);
@@ -682,16 +774,21 @@ export default function CostumeSimulator() {
 
       if (!cancelled) {
         setEffects(shown);
+        setBodyScale(smallest);
+        setShadow(copy);
+        setWhiten(white);
         setFootprints(steps);
         setView(framed);
         setCharacter(built);
         setBuiltIds(unique.map((item) => item.id));
         setNotes(found);
+        setBuildError(null);
         setBuiltFor(wanted);
       }
     })()
       .catch((error: unknown) => {
-        if (!cancelled) setNotes([error instanceof Error ? error.message : "โหลดไม่สำเร็จ"]);
+        // The character on the stage stays (dimmed) and says it is not the one asked for, with a way to ask again.
+        if (!cancelled) setBuildError({ wanted, message: error instanceof Error ? error.message : "โหลดไม่สำเร็จ" });
       })
       .finally(() => {
         if (!cancelled) setBuiltFor(wanted);
@@ -715,10 +812,10 @@ export default function CostumeSimulator() {
     footprintId,
     stonePicks,
     wanted,
+    attempt,
   ]);
 
   // The WebGL layers that effects play on (over the character) and Footprints (under it), made while one is on screen.
-  const hasFx = effects.length > 0;
   const hasFront = effects.some((fx) => !fx.behind);
   // Under the character: Footprints and the effects the game draws before it.
   const hasBack = footprints.length > 0 || effects.some((fx) => fx.behind);
@@ -762,6 +859,9 @@ export default function CostumeSimulator() {
       footprints,
       action,
       scale,
+      bodyScale,
+      shadow,
+      whiten,
       originX: CANVAS_WIDTH / 2 - scale * view.centreX,
       originY: CANVAS_HEIGHT * STAGE_CENTRE_Y - scale * view.centreY,
       name: "",
@@ -786,7 +886,7 @@ export default function CostumeSimulator() {
     };
     raf = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(raf);
-  }, [character, effects, footprints, view, zoom, pose, direction]);
+  }, [character, effects, footprints, bodyScale, shadow, whiten, view, zoom, pose, direction]);
 
   if (failed) {
     return (
@@ -939,6 +1039,21 @@ export default function CostumeSimulator() {
     if (covered.includes("garment")) setFootprintId(null);
   };
 
+  // Asks again before clearing everything: the first press arms the button, the second one (within a few seconds) resets.
+  const askReset = () => {
+    if (!confirmReset) {
+      setConfirmReset(true);
+      return;
+    }
+    setConfirmReset(false);
+    reset();
+  };
+  const retry = () => {
+    setBuildError(null);
+    setBuiltFor(null);
+    setAttempt((n) => n + 1);
+  };
+
   const reset = () => {
     setPicks(NONE);
     setMounted(false);
@@ -967,9 +1082,9 @@ export default function CostumeSimulator() {
           <h1 className="text-xl font-bold sm:text-2xl">Simulator Costume ROC</h1>
           <p className="text-sm text-base-content/70">เลือกอาชีพ ผม สี และ Costume แล้วดูตัวละครสวมใส่</p>
         </div>
-        <button type="button" onClick={reset} className="btn btn-ghost btn-sm gap-2">
+        <button type="button" onClick={askReset} className={`btn btn-sm gap-2 ${confirmReset ? "btn-error" : "btn-ghost"}`}>
           <RotateCcw aria-hidden="true" className="h-4 w-4" />
-          เริ่มใหม่
+          {confirmReset ? "ยืนยันรีเซ็ต?" : "เริ่มใหม่"}
         </button>
       </header>
 
@@ -979,7 +1094,7 @@ export default function CostumeSimulator() {
           ref={stageRef}
           {...dropTarget}
           style={{ height: `min(clamp(180px, ${stageDvh}dvh, 520px), calc((100vw - 1rem) * 1.0313))`, aspectRatio: "640 / 660" }}
-          className={`mx-auto relative overflow-hidden rounded-box border border-base-300 ${hasFx || hasFoot || character?.extras?.some((gear) => gear.kind === "effect") ? "bg-neutral text-neutral-content" : "bg-base-200"} ${STAGE_GRID}`}
+          className={`mx-auto relative overflow-hidden rounded-box border border-base-300 bg-neutral text-neutral-content ${STAGE_GRID}`}
         >
           {/* Corner ticks echo the Sidebar's tiles. */}
           <span aria-hidden="true" className="absolute left-2 top-2 h-3 w-3 border-l-2 border-t-2 border-primary" />
@@ -989,7 +1104,7 @@ export default function CostumeSimulator() {
 
           <div className="absolute left-4 top-4 z-10 leading-tight">
             <span className="block text-sm font-bold text-primary">{job?.label}</span>
-            <span className={`block text-xs ${hasFx || hasFoot ? "text-neutral-content/80" : "text-base-content/70"}`}>
+            <span className="block text-xs text-neutral-content/80">
               {gender === "m" ? "ชาย" : "หญิง"}
               {mounted && mountKind ? ` · ${MOUNT_NAMES[mountKind] ?? mountKind}` : ""}
             </span>
@@ -1033,7 +1148,7 @@ export default function CostumeSimulator() {
               ref={canvasRef}
               width={CANVAS_WIDTH}
               height={CANVAS_HEIGHT}
-              className={`relative block h-full w-full transition-opacity duration-150 ${loading ? "opacity-60" : ""}`}
+              className={`relative block h-full w-full transition-opacity duration-150 ${loading || stale ? "opacity-60" : ""}`}
             />
             {/* Effects add light onto the scene, as in the game, so they play on a dark stage over the character. */}
             {hasFront && (
@@ -1083,6 +1198,45 @@ export default function CostumeSimulator() {
               <span className="text-xs font-bold">{effectOn ? "เปิด" : "ปิด"}</span>
             </button>
           </div>
+
+          {/* What the page has to say (a failed draw or load, an effect it cannot show) is written over the bottom of the stage, which has a fixed size, so no message ever pushes the bar and the list below it. */}
+          <div className="pointer-events-none absolute inset-x-2 bottom-2 z-20 flex max-h-[45%] flex-col justify-end gap-1 overflow-y-auto">
+            {drawError && drawError.character === character && drawError.action === pose * 8 + direction && (
+              <p
+                role="alert"
+                className="pointer-events-auto rounded-field border border-error/60 bg-base-100/95 px-2 py-1 text-xs text-base-content"
+              >
+                วาดไม่สำเร็จ: {drawError.message}
+              </p>
+            )}
+            {stale && buildError && (
+              <div
+                role="alert"
+                className="pointer-events-auto flex items-center gap-2 rounded-field border border-error/60 bg-base-100/95 px-2 py-1 text-xs text-base-content"
+              >
+                <span className="min-w-0 grow">
+                  โหลดตัวละครไม่สำเร็จ (ที่เห็นคือชุดก่อนหน้า) <span className="break-all opacity-70">{buildError.message}</span>
+                </span>
+                <button type="button" onClick={retry} className="btn btn-error btn-xs shrink-0">
+                  ลองใหม่
+                </button>
+              </div>
+            )}
+            {notes.map((note) => (
+              <p
+                key={note}
+                role="status"
+                className="pointer-events-auto flex items-center gap-2 rounded-field border border-warning/60 bg-base-100/95 px-2 py-1 text-xs text-base-content"
+              >
+                <span className="min-w-0 grow">{note}</span>
+                {note.includes("ไม่สำเร็จ") && (
+                  <button type="button" onClick={retry} className="btn btn-warning btn-xs shrink-0">
+                    ลองใหม่
+                  </button>
+                )}
+              </p>
+            ))}
+          </div>
         </div>
         <div className="mt-2 flex items-center gap-2">
           <div role="group" aria-label="ท่าทาง" className="join">
@@ -1111,23 +1265,23 @@ export default function CostumeSimulator() {
           </div>
           <button
             type="button"
-            onClick={reset}
-            aria-label="เริ่มใหม่"
-            title="เริ่มใหม่"
-            className="btn btn-ghost btn-square min-h-11 min-w-11 sm:hidden"
+            onClick={askReset}
+            aria-label={confirmReset ? "ยืนยันรีเซ็ต" : "เริ่มใหม่"}
+            title={confirmReset ? "ยืนยันรีเซ็ต" : "เริ่มใหม่"}
+            className={`btn min-h-11 min-w-11 sm:hidden ${confirmReset ? "btn-error gap-1 px-2 text-xs" : "btn-ghost btn-square"}`}
           >
             <RotateCcw aria-hidden="true" className="h-5 w-5" />
+            {confirmReset && "ยืนยัน?"}
           </button>
         </div>
         {tab === "costume" && (
-          <div role="tablist" aria-label="ตำแหน่งที่สวมใส่" className="mx-auto mt-2 grid max-w-[40rem] grid-cols-4 gap-2 pb-2">
-            {PLACES.map(({ slot, label, english }) => {
+          <div role="tablist" aria-label="ตำแหน่งที่สวมใส่" className="mx-auto mt-2 grid max-w-[40rem] grid-cols-4 gap-2 pb-4">
+            {PLACES.map(({ slot, english }) => {
               const worn = itemOf(picks[slot]);
               return (
-                <div key={slot} className="relative">
+                <div key={slot} className="relative flex">
                   <SlotTab
-                    compact
-                    label={label}
+                    slot={slot}
                     english={english}
                     active={activeSlot === slot}
                     worn={worn}
@@ -1135,6 +1289,7 @@ export default function CostumeSimulator() {
                     pending={loading && picks[slot] !== null && !builtIds.includes(picks[slot])}
                     unavailable={Boolean(worn && !worn.genders.includes(gender))}
                     covers={worn?.slots.length ?? 0}
+                    socketName={worn && socketValue(slot) !== null ? socketName(slot) : undefined}
                     onSelect={() => setActiveSlot(slot)}
                     onRemove={() => takeOff(slot)}
                   />
@@ -1152,13 +1307,23 @@ export default function CostumeSimulator() {
                             : "ใส่หินเอฟเฟกต์"
                           : "ใส่ Costume ก่อนจึงใส่หินได้"
                     }
-                    className={`absolute -bottom-2 -right-1 z-10 flex h-8 w-8 items-center justify-center rounded-full border-2 border-dashed bg-base-100 text-sm font-bold shadow-sm transition-colors disabled:opacity-40 ${
+                    className={`absolute -bottom-3 -right-2 z-10 flex h-10 w-10 items-center justify-center rounded-full border-2 bg-base-100 shadow transition-colors disabled:opacity-40 ${
                       socketValue(slot) !== null
-                        ? "border-secondary bg-secondary text-secondary-content"
-                        : "border-base-content/40 hover:border-secondary"
+                        ? "border-secondary bg-secondary/25 ring-2 ring-secondary/40"
+                        : "border-dashed border-base-content/40 hover:border-secondary"
                     }`}
                   >
-                    {socketValue(slot) !== null ? "✦" : "◇"}
+                    <SocketPicture
+                      sheet={index.icons}
+                      cell={slot === "garment" ? index.icons.footprint : index.icons.stone}
+                      on={socketValue(slot) !== null}
+                    />
+                    {socketValue(slot) !== null && (
+                      <span
+                        aria-hidden="true"
+                        className="absolute -right-0.5 -top-0.5 h-3 w-3 rounded-full border-2 border-base-100 bg-secondary"
+                      />
+                    )}
                   </button>
                 </div>
               );
@@ -1166,18 +1331,6 @@ export default function CostumeSimulator() {
           </div>
         )}
       </div>
-
-      {drawError && drawError.character === character && drawError.action === pose * 8 + direction && (
-        <p role="alert" className="shrink-0 rounded-box border border-error/50 bg-error/10 px-3 py-1.5 text-xs">
-          วาดไม่สำเร็จ: {drawError.message}
-        </p>
-      )}
-
-      {notes.map((note) => (
-        <p key={note} role="status" className="shrink-0 rounded-box border border-warning/50 bg-warning/10 px-3 py-1.5 text-xs">
-          {note}
-        </p>
-      ))}
 
       <div role="tablist" aria-label="หมวดตัวเลือก" className="tabs tabs-box grid shrink-0 grid-cols-3 bg-base-200 p-1">
         {(
@@ -1356,7 +1509,7 @@ export default function CostumeSimulator() {
                 {covering ? (
                   <div className="flex items-center justify-between gap-3 rounded-box border border-base-300 bg-base-200 px-3 py-3 text-sm">
                     <span>
-                      ช่องนี้ถูก <b>{covering.name}</b> ครอบอยู่ ({covering.slots.join(" + ")}) ถอดชิ้นนี้ก่อนจึงเลือกอย่างอื่นได้
+                      ช่องนี้ถูก <b>{covering.name}</b> ครอบอยู่ <PlaceChips slots={covering.slots as Place[]} /> ถอดชิ้นนี้ก่อนจึงเลือกอย่างอื่นได้
                     </span>
                     <button type="button" className="btn btn-sm btn-outline shrink-0" onClick={() => takeOff(activeSlot)}>
                       ถอดออก
@@ -1480,7 +1633,7 @@ export default function CostumeSimulator() {
                 <button
                   type="button"
                   onClick={saveGif}
-                  disabled={gifProgress !== null || loading || !character}
+                  disabled={gifProgress !== null || loading || stale || !character}
                   aria-busy={gifProgress !== null}
                   className="btn btn-primary min-h-12 w-full gap-2"
                 >

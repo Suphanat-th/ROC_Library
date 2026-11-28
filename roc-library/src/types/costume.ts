@@ -60,7 +60,14 @@ export interface CostumeStone {
   id: number;
   name: string;
   slot: "upper" | "middle" | "lower" | "garment";
-  effects?: { key: string; file: string; behind?: boolean; head?: boolean }[];
+  /** `tint`: the effect is another effect painted in a new colour (see costumeEffects.ts): Roaring is the red C dragon in lilac. */
+  effects?: { key: string; file: string; behind?: boolean; head?: boolean; tint?: string }[];
+  /** The effect is a smaller character: its size against the normal size (Shrink). */
+  bodyScale?: number;
+  /** The effect is a copy of the character standing behind it, a little to the side (Shadow). */
+  shadow?: boolean;
+  /** The effect washes the character white (White Body). */
+  whiten?: boolean;
   /** The game plays this effect in a way this page cannot show. */
   unsupported?: boolean;
 }
@@ -79,7 +86,7 @@ export interface CostumeIndex {
   items: CostumeItem[];
   footprints?: CostumeFootprintChoice[];
   stones?: CostumeStone[];
-  /** One picture holding every item's icon, `columns` to a row. */
-  icons: { url: string; size: number; columns: number };
+  /** One picture holding every item's icon, `columns` to a row; `stone` and `footprint` are the cells of the effect stone's and the Footprint's pictures. */
+  icons: { url: string; size: number; columns: number; stone?: number; footprint?: number };
   packs: { body: string[]; head: string[] };
 }
